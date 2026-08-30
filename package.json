@@ -1,0 +1,9 @@
+{
+  "name": "siet-mern",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=18 <23"},
+  "scripts": {"dev":"concurrently --kill-others-on-fail \"npm:server\" \"npm:client\"","client":"vite --host 127.0.0.1","server":"node server/index.js","server:watch":"node --watch-path=server server/index.js","build":"vite build","start":"node server/index.js"},
+  "dependencies": {"cors":"2.8.5","dotenv":"16.4.7","express":"4.21.2","mongoose":"8.9.5"},
+  "devDependencies": {"concurrently":"8.2.2","vite":"5.4.21"}
+}

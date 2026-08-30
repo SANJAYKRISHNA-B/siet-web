@@ -1,0 +1,324 @@
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))n(t);new MutationObserver(t=>{for(const s of t)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&n(l)}).observe(document,{childList:!0,subtree:!0});function a(t){const s={};return t.integrity&&(s.integrity=t.integrity),t.referrerPolicy&&(s.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?s.credentials="include":t.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(t){if(t.ep)return;t.ep=!0;const s=a(t);fetch(t.href,s)}})();const c=(e,i=document)=>i.querySelector(e),r=(e,i=document)=>[...i.querySelectorAll(e)],o=e=>`<span class="ui-icon" aria-hidden="true">${{home:"⌂",users:"♙",book:"▤",grad:"◇",building:"▥",quality:"✓",brief:"▣",compass:"◉",arrow:"→",down:"⌄",menu:"☰",close:"×",trophy:"♛",trend:"↗",gift:"◇",play:"▶",phone:"☎"}[e]||"◆"}</span>`,m=[{label:"About",icon:"users",items:[["vision-mission","Vision & Mission"],["chairman","Chairman’s Desk"],["principal","Principal’s Desk"]]},{label:"Academics",icon:"book",items:[["academics","Academic Overview"],["departments","Departments"],["curriculum","Curriculum"],["academic-calendar","Academic Calendar"],["library","Library"]]},{label:"Admissions",icon:"grad",items:[["programmes","UG & PG Programmes"],["eligibility","Eligibility"],["scholarships","Scholarships"],["fees","Fee Information"],["admission-enquiry","Admission Enquiry"]]},{label:"Campus",icon:"building",items:[["campus-life","Campus Life"],["facilities","Facilities"],["hostel","Hostel"],["transport","Transport"],["sports","Sports"],["clubs","Student Clubs"],["ncc","NCC & NSS"]]},{label:"Quality & Excellence",icon:"quality",items:[["centres-of-excellence","Centres of Excellence"],["accreditations","NBA & NAAC"],["examinations","Examinations"],["iqac","IQAC"]]},{label:"Explore",icon:"compass",items:[["training","Career Development"],["research","Research & Development"],["innovation","Innovation & Incubation"],["alumni","Alumni"],["contact","Contact Us"]]}],S={academics:["Academic Overview","Knowledge designed for application.","Flexible learning, strong fundamentals, laboratories, projects and industry exposure form the core of the Sri Shakthi academic experience."],departments:["Departments","Ten disciplines. One culture of discovery.","Explore engineering and technology departments offering focused learning, laboratories, research and industry engagement."],curriculum:["Curriculum","Current, connected and outcome-driven.","The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning."],"academic-calendar":["Academic Calendar","Plan the academic year.","Semester schedules bring together instruction, assessment, events, examinations and academic milestones."],library:["Central Library","A connected knowledge centre.","Print and digital resources, journals, databases and focused study environments support teaching, learning and research."],examinations:["Examinations","Clear processes. Fair assessment.","The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes."],programmes:["UG & PG Programmes","Choose the field you want to shape.","Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice."],eligibility:["Eligibility","Your pathway to Sri Shakthi.","Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms."],scholarships:["Scholarships","Talent deserves opportunity.","Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education."],fees:["Fee Information","Clear guidance for applicants.","Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance."],"campus-life":["Campus Life","Learn. Build. Belong.","A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community."],facilities:["Facilities","Spaces made for exploration.","Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities."],hostel:["Hostel","A welcoming campus home.","Student residences support safe, comfortable living, shared learning and a strong sense of community."],transport:["Transport","Connected to Coimbatore.","College transport supports convenient travel across major routes in and around the city."],sports:["Sports","Energy beyond academics.","With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership."],clubs:["Student Clubs","Find your people. Build your voice.","Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience."],ncc:["NCC & NSS","Unity, discipline and service.","Student service programmes develop character, citizenship, teamwork and responsibility."],placements:["Placements","Preparing talent for meaningful careers.","Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment."],training:["Career Development","Skills that move careers forward.","Dedicated training helps students build technical confidence, professional communication and placement readiness."],research:["Research & Development","Ideas engineered into impact.","Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration."],innovation:["Innovation & Incubation","From problem to prototype.","Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures."],"centres-of-excellence":["Centres of Excellence","Advanced tools. Industry contexts.","Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges."],accreditations:["Approvals & Accreditations","Quality recognised. Standards sustained.","An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA."],alumni:["Alumni","Shakthians around the world.","A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection."],iqac:["IQAC & NAAC","Quality as a continuous practice.","The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience."],contact:["Contact Us","We are here to help.","Visit the campus, speak with admissions, or connect with the institute office using the details below."]},E=[["Agricultural Engineering","Smart farming, irrigation, machinery and sustainable food systems.","/assets/images/category/cat1.jpg"],["Biomedical Engineering","Diagnostic, therapeutic and healthcare technologies.","/assets/images/category/cat2.jpg"],["Biotechnology","Bioprocessing, molecular science and industrial biotechnology.","/assets/images/category/cat3.jpg"],["Civil Engineering","Resilient infrastructure, structures and sustainable cities.","/assets/images/category/cat4.jpg"],["Computer Science & Engineering","Intelligent software, data systems and AI-powered solutions.","/assets/images/category/cat5.jpg"],["Electrical & Electronics","Power systems, renewable energy and industrial automation.","/assets/images/category/cat6.jpg"],["Electronics & Communication","Connected systems, embedded design and signal processing.","/assets/images/category/cat7.jpg"],["Food Technology","Food processing, quality, safety and product development.","/assets/images/category/cat8.jpg"],["Information Technology","Secure digital products, cloud platforms and networks.","/assets/images/course/3.jpg"],["Mechanical Engineering","Design, manufacturing, machines and mobility systems.","/assets/images/course/6.jpg"],["Artificial Intelligence & Data Science","AI, analytics and data-driven engineering.","/assets/images/course/3.jpg"],["Artificial Intelligence & Machine Learning","Intelligent automation and applied AI.","/assets/images/category/cat5.jpg"],["CSE (Cyber Security)","Secure computing and resilient networks.","/assets/images/course/3.jpg"],["VLSI Design","Semiconductor design and embedded systems.","/assets/images/category/cat7.jpg"]];function A(){return`<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
+<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><a class="institution-home" href="#/" aria-label="Home">${o("home")}</a><button class="institution-mobile-toggle" aria-label="Open menu">${o("menu")}</button><div class="institution-menu">${m.map((e,i)=>`${i===5?'<a class="institution-nav-link" href="#/placements">Placements</a>':""}<div class="institution-nav-group"><button type="button">${e.label}${o("down")}</button><div>${e.items.map(([a,n])=>`<a href="#/${a}">${n}</a>`).join("")}</div></div>`).join("")}<a class="institution-nav-link" href="#/careers">Careers</a></div></nav></div></header>
+<div class="mobile-nav"><a class="mobile-apply-link" href="#/apply">Apply Now</a><a href="#/placements">Placements</a><a href="#/careers">Careers @ SIET</a>${m.flatMap(e=>e.items.slice(0,2)).map(([e,i])=>`<a href="#/${e}">${i}</a>`).join("")}</div>`}function I(){return`<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${m.map(e=>`<div class="footer-link-group"><b>${e.label}</b>${e.items.map(([i,a])=>`<a href="#/${i}"><span>›</span>${a}</a>`).join("")}</div>`).join("")}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>`}const p=(e,i="")=>`<span class="js-counter" data-to="${e}" data-suffix="${i}">0${i}</span>`;function k(){return`<main><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero"><div class="placement-v2-container">
+ <div class="placement-v2-copy reveal"><div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div><div class="placement-v2-pill">CLASS OF 2027</div><h1>Powering the Youth.<em>Empowering the Nation.</em></h1><p>Focused training, industry-led preparation and a strong placement ecosystem that transforms engineering potential into meaningful careers.</p><div class="placement-v2-actions"><a href="#/placements" class="placement-v2-btn primary">Explore placements ${o("arrow")}</a><button class="placement-v2-btn secondary js-video">${o("play")} Watch placement journey</button></div></div>
+ <div class="placement-v2-panel reveal"><div class="placement-v2-panel-head">2026–27 PLACEMENT HIGHLIGHTS (TILL 31ST JULY 2026)</div><div class="placement-v2-highest"><span>${o("trophy")}</span><div><small>HIGHEST PLACED PACKAGE</small><strong>₹${p(33)} LPA</strong></div><i></i><div class="placement-v2-record"><large>PLACEMENT RECORD</large><strong>CLASS OF 2027</strong></div></div><div class="placement-v2-stats">${[[16,"₹10 LPA+","gift"],[37,"₹8 LPA+","trend"],[82,"₹5.5 LPA+","brief"]].map(([e,i,a])=>`<article><span class="placement-v2-icon">${o(a)}</span><strong>${p(e,e===82?"+":"")}</strong><h3>Students Placed</h3><i></i><b>${i}</b></article>`).join("")}</div></div>
+</div></div></section>
+<section class="about-premium"><div class="about-container"><div class="about-label reveal"><span>01</span><p>WHO WE ARE</p></div><div class="about-main"><div class="about-heading reveal"><h2>A campus where <span class="highlight-word">curiosity</span> becomes <span>capability.</span></h2></div><div class="about-content reveal"><span class="about-small-title">OUR PURPOSE</span><p>Sri Shakthi Institute of Engineering and Technology is an autonomous institution in Coimbatore, approved by AICTE and affiliated to Anna University.</p><p>Our industry-driven ecosystem brings engineering out of textbooks and into the real world.</p><a href="#/vision-mission" class="discover-link">Discover our vision ${o("arrow")}</a></div></div><div class="stats-grid">${[[4263,"Job offers","Last 5 Years"],[657,"Offers in 2026","Growing Every Year"],[10273,"Alumni Worldwide","Connected Globally"],[4452,"Students on Campus","Learning & Innovating"]].map(([e,i,a],n)=>`<article class="stat-box reveal"><span class="stat-index">0${n+1}</span><h3>${p(e,"+")}</h3><p>${i}</p><span class="stat-subtitle">${a}</span></article>`).join("")}</div></div></section>
+<section class="programmes-showcase programmes-section"><div class="programmes-container"><div class="section-kicker"><span>02</span><i></i><span>FIND YOUR FIELD</span></div><div class="programmes-hero reveal"><div class="programmes-heading"><h2>Programmes built for a <em>changing</em> world.</h2></div><div class="programmes-info"><p>Foundational rigour, advanced technology labs, industry collaboration and project-led learning.</p><div class="programme-toggle"><button class="toggle-btn active" data-level="UG">UG Programmes</button><button class="toggle-btn" data-level="PG">PG Programmes</button></div></div></div><div class="programme-area"><div class="programme-header"><div><small>EXPLORE</small><h3><span id="level-name">UG</span> Programmes</h3></div></div><div id="programme-grid" class="programme-grid">${b(E)}</div></div></div></section>
+<section class="campus-section"><div class="campus-container"><aside class="campus-left reveal"><div class="section-kicker"><span>03</span><i></i><span>LIFE AT SRI SHAKTHI</span></div><h1>Campus Moments.<em>Student stories.</em></h1><p>Explore learning, innovation, celebrations and everyday campus experiences from the Sri Shakthi community.</p><a class="button" href="#/campus-life">Explore campus ${o("arrow")}</a></aside><main class="campus-content"><div class="campus-gallery">${[["placements.png","A campus that inspires every day."],["student-life.png","Victory is a habit here."],["cultural.png","Culture. Tradition. Every performance."],["innovation.png","Ideas that create impact."]].map(([e,i])=>`<a class="gallery-card reveal" href="#/campus-life"><img src="/brand/campus-life/${e}" alt="${i}"><div class="gallery-content"><h3>${i}</h3><span>→</span></div></a>`).join("")}</div></main></div></section></main>`}function b(e){return e.map(([i,a])=>`<a class="programme-card programme-card-simple reveal" href="#/department/${u(i)}"><span class="programme-icon">◆</span><h4>${i}</h4><span class="arrow-btn">→</span></a>`).join("")}const u=e=>e.toLowerCase().replaceAll(" ","-").replaceAll("&","and").replaceAll("/","-");function C(){return`<style>
+    .vision-sidebar { border-top: 6px solid var(--coral); background: var(--paper); padding: 28px; }
+    .vision-sidebar span { font-size: 9px; font-weight: 700; color: #44705a; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
+    .vision-tab-btn { display: flex; justify-content: space-between; align-items: center; padding: 15px 12px; border-bottom: 1px solid #d6e3da; font-weight: 600; cursor: pointer; color: var(--navy); transition: all 0.2s ease; margin-bottom: 5px; }
+    .vision-tab-btn:hover { background: #f0f7f3; }
+    .vision-tab-btn.active { border: 2px solid var(--navy); background: var(--mint); border-radius: 6px; padding: 13px 12px; }
+    .vision-tab-btn span { color: var(--coral); font-weight: bold; }
+    .vision-content-pane { display: none; }
+    .vision-content-pane.active { display: block; }
+    .outcome-list { display: flex; flex-direction: column; gap: 20px; }
+    .outcome-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid var(--navy); box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .outcome-badge { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 14px; }
+    .outcome-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
+    .outcome-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
+    .values-list { display: flex; flex-direction: column; gap: 20px; }
+    .value-card { display: flex; gap: 20px; align-items: flex-start; padding: 24px; background: white; border-radius: 8px; border-left: 4px solid var(--coral); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .value-icon { font-size: 24px; color: var(--navy); line-height: 1; }
+    .value-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
+    .value-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
+    .philosophy-section h3 { font-size: 22px; color: var(--navy); margin-bottom: 25px; }
+    .milestone { display: flex; gap: 24px; align-items: flex-start; padding: 24px; background: var(--mint); border-radius: 8px; margin-bottom: 20px; border-left: 6px solid var(--coral); }
+    .milestone-num { font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; }
+    .milestone-content h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; text-transform: uppercase; font-weight: 700; }
+    .milestone-content p { margin: 0; line-height: 1.6; color: #173226; font-size: 16px; }
+    @media(max-width: 900px) {
+      .vision-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+  </style>
+  <main class="vision-page">
+    <section class="vision-chairman-section">
+      <div class="vision-chairman-wrap">
+        <div class="vision-chairman-photo reveal">
+          <img src="/brand/chairman-transparent-cropped.png" alt="Dr. S. Thangavelu">
+          <div class="chairman-name-card">
+            <strong>Dr. S. Thangavelu</strong>
+            <span>Chairman</span>
+            <span>Sri Shakthi Group of Institutions</span>
+          </div>
+        </div>
+        <div class="vision-chairman-copy reveal">
+          <small>SRI SHAKTHI</small>
+          <h1>Vision &amp; Mission</h1>
+          <h2>Engineering education with purpose.</h2>
+          <p>We are committed to building a brighter future through quality education, innovation, research and ethical values.</p>
+          <a class="button" href="#/chairman">Read Full Message ${o("arrow")}</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="page-content vision-grid" style="grid-template-columns: 320px 1fr; gap: 5vw; background: white;">
+      <aside class="vision-sidebar">
+         <span>VISION AND MISSION</span>
+         <a href="javascript:void(0)" class="vision-tab-btn active" data-tab="vision-mission">Vision and Mission <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="program-outcomes">Program Outcomes of the Institution <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="core-values">Core Values of the Institution <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="philosophy">Philosophy <span>→</span></a>
+      </aside>
+      
+      <div class="vision-tab-container reveal">
+         <!-- Pane 1: Vision & Mission -->
+         <div class="vision-content-pane active" data-pane="vision-mission">
+            <div class="section-no">OUR VISION</div>
+            <h2>Recognised for excellence.</h2>
+            <p>To make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p>
+            <br><br>
+            <div class="section-no">OUR MISSION</div>
+            <h2>Developing capability and creativity.</h2>
+            <p>To Provide an encouraging environment to develop the intellectual capacity, critical thinking, creativity and problem solving ability of the students.</p>
+         </div>
+         
+         <!-- Pane 2: Program Outcomes -->
+         <div class="vision-content-pane" data-pane="program-outcomes">
+            <div class="section-no">PROGRAM OUTCOMES</div>
+            <h2>Program Outcomes of the Institution</h2>
+            <div class="outcome-list">
+               <div class="outcome-card">
+                  <div class="outcome-badge">a</div>
+                  <div class="outcome-info">
+                     <h4>Engineering Knowledge</h4>
+                     <p>Apply the Knowledge of Mathematics science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">b</div>
+                  <div class="outcome-info">
+                     <h4>Problem Analysis</h4>
+                     <p>Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusion using first principles of mathematics, natural sciences, and engineering sciences.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">c</div>
+                  <div class="outcome-info">
+                     <h4>Design / Development of Solutions</h4>
+                     <p>Solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">d</div>
+                  <div class="outcome-info">
+                     <h4>Conduct Investigations of Complex Problems</h4>
+                     <p>Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data and synthesis of the information to provide valid conclusions.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">e</div>
+                  <div class="outcome-info">
+                     <h4>Modern Tool Usage</h4>
+                     <p>Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modelling to complex engineering activities with an understanding of the limitations.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">f</div>
+                  <div class="outcome-info">
+                     <h4>The Engineer and Society</h4>
+                     <p>Apply reasoning informed by the contextual knowledge to access societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">g</div>
+                  <div class="outcome-info">
+                     <h4>Environment and Sustainability</h4>
+                     <p>Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">h</div>
+                  <div class="outcome-info">
+                     <h4>Ethics</h4>
+                     <p>Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">i</div>
+                  <div class="outcome-info">
+                     <h4>Individual and Team Work</h4>
+                     <p>Function effectively as an individual, and as a member or leader in diverse teams and the multidisciplinary settings.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">j</div>
+                  <div class="outcome-info">
+                     <h4>Communication</h4>
+                     <p>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations and give and receive clear instructions.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">k</div>
+                  <div class="outcome-info">
+                     <h4>Project Management and Finance</h4>
+                     <p>Demonstrate knowledge and understanding of engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and multidisciplinary environments.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">l</div>
+                  <div class="outcome-info">
+                     <h4>Lifelong Learning</h4>
+                     <p>Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Pane 3: Core Values -->
+         <div class="vision-content-pane" data-pane="core-values">
+            <div class="section-no">CORE VALUES</div>
+            <h2>Core Values of the Institution</h2>
+            <div class="values-list">
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Quality Education and Integrity</h4>
+                     <p>Providing quality, global education that allows the student to achieve their career goals and aspirations with ethical values; preparing responsible citizens through systematic education.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Excellence in every area</h4>
+                     <p>Imparting career-focused educational programs with the highest level of academic to prepare the students with real-world experience.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Bringing the best</h4>
+                     <p>Encouraging critical thinking, quantitative, ethical decision making, effective communication and social responsibility in students.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Focusing on research activities</h4>
+                     <p>Creating excellent infrastructural amenities to undertake research activities, publish quality research articles and patenting the products/ technologies essential for the society.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Pane 4: Philosophy -->
+         <div class="vision-content-pane" data-pane="philosophy">
+            <div class="section-no">PHILOSOPHY</div>
+            <h2>Philosophy</h2>
+            <div class="philosophy-section">
+               <h3>We strongly believe...</h3>
+               <div class="milestone">
+                  <div class="milestone-num">01</div>
+                  <div class="milestone-content">
+                     <h4>GATEWAY to success</h4>
+                     <p>Achieving 100% pass is only the GATEWAY to success.</p>
+                  </div>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-num">02</div>
+                  <div class="milestone-content">
+                     <h4>First MILESTONE</h4>
+                     <p>Breeding 100% employable / entrepreneurial engineers is the first MILESTONE.</p>
+                  </div>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-num">03</div>
+                  <div class="milestone-content">
+                     <h4>Our DESTINATION</h4>
+                     <p>Creating 100% confident, contributing and self-realising citizens who will uphold the pride and cultural ethos of our great nation is our DESTINATION.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+  </main>`}function T(){return`<style>
+    .leadership-page { background: #fff; min-height: 80vh; padding: 40px 6vw 80px; }
+    .leadership-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2ece5; padding-bottom: 18px; margin-bottom: 45px; }
+    .leadership-header h1 { font-size: 26px; font-weight: 800; color: #075b36; margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+    .leadership-breadcrumb { font-size: 13px; color: #526b5c; }
+    .leadership-breadcrumb a { color: #075b36; font-weight: 600; }
+    .leadership-layout { display: grid; grid-template-columns: minmax(300px, 38%) 1fr; gap: 6vw; align-items: start; }
+    .leadership-portrait { text-align: center; background: #f7faf8; padding: 25px; border-radius: 12px; border: 1px solid #e0ece4; position: sticky; top: 120px; }
+    .leadership-portrait img { width: 100%; max-height: 520px; object-fit: contain; object-position: center; border-radius: 8px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08)); }
+    .leadership-portrait h2 { margin: 20px 0 4px; color: #075b36; font-size: 26px; font-weight: 800; }
+    .leadership-portrait b { color: #b58200; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; display: block; }
+    .leadership-portrait p { color: #526b5c; font-size: 14px; margin: 4px 0 0; }
+    .leadership-message { color: #2d4438; font-size: 16px; line-height: 1.85; }
+    .leadership-message p { margin: 0 0 20px; }
+    .leadership-message blockquote { margin: 25px 0; padding: 22px 28px; background: var(--mint); border-left: 5px solid var(--coral); border-radius: 6px; font-style: italic; color: #0c4328; font-size: 17px; line-height: 1.7; }
+    .leadership-signoff { margin-top: 30px; font-size: 18px; font-weight: 800; color: #075b36; }
+    @media(max-width: 900px) {
+      .leadership-layout { grid-template-columns: 1fr; gap: 35px; }
+      .leadership-portrait { position: static; }
+      .leadership-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+  </style>
+  <main class="leadership-page">
+    <div class="leadership-header">
+      <h1>THE CHAIRMAN'S DESK</h1>
+      <div class="leadership-breadcrumb"><a href="#/">Home</a> / The Chairman's desk</div>
+    </div>
+    <div class="leadership-layout">
+      <aside class="leadership-portrait">
+        <img src="/brand/chairman-transparent-cropped.png" alt="Dr. S. Thangavelu">
+        <h2>Dr. S. Thangavelu</h2>
+        <b>Chairman</b>
+        <p>Sri Shakthi Group of Institutions</p>
+      </aside>
+      <article class="leadership-message">
+        <p>I have always been inspired by Dr. Martin Luther King's statement, 'I have a dream' - a dream I believe will come true - a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character'. This need for tolerance - to create an equal society with no discrimination in Caste, Creed or Colour was best exemplified in the words of Mahatma Gandhi.</p>
+        <blockquote>"I do not want my institution to be walled off on all sides, I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them. Mine is not a religion of the prison house. It has room for the least among God's creations but it is proof against insolent pride of race, religion or colour."</blockquote>
+        <p>And this I believe will be the watchword of each and every Shakthian.</p>
+        <p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p>
+        <div class="leadership-signoff">Dr. S. Thangavelu, Chairman</div>
+      </article>
+    </div>
+  </main>`}function P(){return`<style>
+    .leadership-page { background: #fff; min-height: 80vh; padding: 40px 6vw 80px; }
+    .leadership-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e2ece5; padding-bottom: 18px; margin-bottom: 45px; }
+    .leadership-header h1 { font-size: 26px; font-weight: 800; color: #075b36; margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+    .leadership-breadcrumb { font-size: 13px; color: #526b5c; }
+    .leadership-breadcrumb a { color: #075b36; font-weight: 600; }
+    .leadership-layout { display: grid; grid-template-columns: minmax(300px, 38%) 1fr; gap: 6vw; align-items: start; }
+    .leadership-portrait { text-align: center; background: #f7faf8; padding: 25px; border-radius: 12px; border: 1px solid #e0ece4; position: sticky; top: 120px; }
+    .leadership-portrait img { width: 100%; max-height: 520px; object-fit: contain; object-position: center; border-radius: 8px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08)); }
+    .leadership-portrait h2 { margin: 20px 0 4px; color: #075b36; font-size: 26px; font-weight: 800; }
+    .leadership-portrait b { color: #b58200; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; display: block; }
+    .leadership-portrait p { color: #526b5c; font-size: 14px; margin: 4px 0 0; }
+    .leadership-message { color: #2d4438; font-size: 16px; line-height: 1.85; }
+    .leadership-message p { margin: 0 0 20px; }
+    .leadership-message blockquote { margin: 25px 0; padding: 22px 28px; background: var(--mint); border-left: 5px solid var(--coral); border-radius: 6px; font-style: italic; color: #0c4328; font-size: 17px; line-height: 1.7; }
+    .leadership-signoff { margin-top: 30px; font-size: 18px; font-weight: 800; color: #075b36; }
+    @media(max-width: 900px) {
+      .leadership-layout { grid-template-columns: 1fr; gap: 35px; }
+      .leadership-portrait { position: static; }
+      .leadership-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+  </style>
+  <main class="leadership-page">
+    <div class="leadership-header">
+      <h1>THE PRINCIPAL'S DESK</h1>
+      <div class="leadership-breadcrumb"><a href="#/">Home</a> / The Principal's desk</div>
+    </div>
+    <div class="leadership-layout">
+      <aside class="leadership-portrait">
+        <img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar">
+        <h2>Dr. N. M. Saravana Kumar</h2>
+        <b>Principal</b>
+        <p>Sri Shakthi Institute of Engineering and Technology</p>
+      </aside>
+      <article class="leadership-message">
+        <p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p>
+        <p>At our institution, we are committed to providing a vibrant learning environment that empowers students with knowledge, technical expertise, and essential life skills. We believe that education is not merely the acquisition of information but a transformative process that nurtures critical thinking, creativity, ethical values, and leadership qualities.</p>
+        <p>Our dedicated faculty members continuously strive to deliver quality education through innovative teaching methodologies, industry collaborations, research initiatives, and experiential learning opportunities. We encourage our students to explore emerging technologies, engage in interdisciplinary learning, participate in research and innovation, and contribute meaningfully to society.</p>
+        <p>In today's rapidly evolving world, adaptability, lifelong learning, and a commitment to excellence are essential. We are proud to foster a culture that inspires students to embrace challenges with confidence, cultivate an entrepreneurial mindset, and uphold the highest standards of integrity and professionalism.</p>
+        <p>As we continue our pursuit of academic excellence, we remain committed to strengthening industry partnerships, promoting global perspectives, and creating opportunities that prepare our graduates to become competent professionals, responsible citizens, and future leaders.</p>
+        <p>I warmly invite students, parents, alumni, industry partners, and all stakeholders to join us in our shared vision of building a brighter future through quality education, innovation, and societal contribution.</p>
+        <div class="leadership-signoff">Dr. N. M. SARAVANA KUMAR, M.E., Ph.D.,<br><span style="font-size:15px;color:#526b5c;font-weight:600;">Principal, SIET</span></div>
+      </article>
+    </div>
+  </main>`}function $(e){let i="",a="Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.";if(e.startsWith("department/")){const t=e.slice(11),s=[...ugPrograms,...pgPrograms].find(([l])=>u(l)===t);s?(i=s[0],a=s[1]):i=y(t.replaceAll("-"," ")).replaceAll(" And "," & ")}const n=i?[i,`Department of ${i}`,a]:S[e]||["Sri Shakthi","Institutional information","Explore Sri Shakthi Institute of Engineering and Technology."];return`<main class="internal-page"><section class="page-hero"><img class="page-crest" src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1 class="reveal">${n[0]}</h1><p>${n[1]}</p></section><section class="page-content"><div class="reveal"><div class="section-no">OVERVIEW</div><h2>${n[1]}</h2><p>${n[2]}</p>${e==="contact"?'<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore – 641062</p><p>+91 422 2369900 · info@siet.ac.in</p></div>':""}<a class="button" href="#/admission-enquiry">Enquire now ${o("arrow")}</a></div></section>${["departments","programmes"].includes(e)?`<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${[...ugPrograms,...pgPrograms].map(([t,s,l])=>`<a class="flip-card" href="#/department/${u(t)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${t}</b><p>${s}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${l}')"><b>${t}</b></span></span></a>`).join("")}</div></section>`:""}</main>`}const y=e=>e.replace(/\b\w/g,i=>i.toUpperCase());function L(e=!1){return`<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${e?"Apply for Sri Shakthi":"Admission Enquiry"}</h1><h2>Let’s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${d("Full Name","name","text","Enter your full name")}${d("Mobile Number","phone","tel","Enter 10 digit mobile number")}${d("Email Address","email","email","Enter your email address")}${g("Course Level","level",["UG","PG"])}${g("Preferred Department","course",[...ugPrograms,...pgPrograms].map(i=>i[0]))}${d("Academic Qualification / Marks","qualification","text","Qualification and marks")}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${e?"Submit Application":"Send Enquiry"} →</button><p class="status" aria-live="polite"></p></form></section></main>`}const d=(e,i,a,n)=>`<label>${e} <b>*</b><input type="${a}" name="${i}" placeholder="${n}" required></label>`,g=(e,i,a)=>`<label>${e} <b>*</b><select name="${i}" required><option value="">Select ${e}</option>${a.map(n=>`<option>${n}</option>`).join("")}</select></label>`;function N(){const e=[["Leadership Positions",["Principal / Dean","Head of Department","Academic Administrator"]],["College Teaching Positions",["Professor","Associate Professor","Assistant Professor"]],["School Teaching Positions",["PGT / TGT Teachers","Primary Teachers","Academic Coordinators"]],["Food Testing Lab",["Food Analyst","Laboratory Technician","Quality Manager"]],["Career Oriented Specialists",["Aptitude Trainer","Programming Trainer","Machine Learning Trainer"]],["Managerial Positions",["HR and Administration","Admissions and Outreach"]],["Creative Positions",["Content and Communications","Graphic Designer"]]];return`<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active">Engineering College</button><button>CBSE School</button><button>Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>AUTONOMOUS INSTITUTION</small><h2>Sri Shakthi Institute of Engineering and Technology</h2><p>We invite passionate educators, researchers and industry professionals to join an institution focused on applied research, innovation and industry-relevant engineering education.</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${d("Full Name","name","text","Enter your full name")}${d("Mobile Number","phone","tel","Enter mobile number")}${d("Email Address","email","email","Enter email")}${g("Application Category","category",e.map(i=>i[0]))}${d("Position","position","text","Position you would like to apply")}${d("Highest Qualification","qualification","text","Enter highest degree")}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit">Submit Application →</button><p class="status"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>Application Categories</h2></div>${e.map((i,a)=>`<details ${a===0?"open":""}><summary>${i[0]} ${o("down")}</summary><div>${i[1].map(n=>`<span>→ ${n}</span>`).join("")}</div></details>`).join("")}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`}function O(){return'<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>'}function j(){return decodeURIComponent(location.hash.replace(/^#\/?/,"")).replace(/\/$/,"")}function x(){const e=j();let i=e?e==="vision-mission"||e==="about"?C():e==="chairman"?T():e==="principal"?P():e==="admission-enquiry"||e==="apply"?L(e==="apply"):e==="careers"?N():$(e):k();c("#app").innerHTML=A()+i+I(),document.title=`${e?y(e.replaceAll("-"," ")):"Sri Shakthi"} | SIET`,M(),scrollTo(0,0)}function M(){const e=c(".mobile-nav"),i=c(".institution-mobile-toggle");i==null||i.addEventListener("click",()=>{e.classList.toggle("open"),i.innerHTML=e.classList.contains("open")?o("close"):o("menu")}),r(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>e.classList.remove("open"))),r(".institution-nav-group>button").forEach(a=>a.addEventListener("click",n=>{n.stopPropagation();const t=a.parentElement;r(".institution-nav-group").filter(s=>s!==t).forEach(s=>s.classList.remove("open")),t.classList.toggle("open")})),document.addEventListener("click",()=>r(".institution-nav-group").forEach(a=>a.classList.remove("open")),{once:!0}),r(".js-video").forEach(a=>a.addEventListener("click",()=>{document.body.insertAdjacentHTML("beforeend",O()),document.body.style.overflow="hidden";const n=c(".video-modal"),t=()=>{n.remove(),document.body.style.overflow=""};n.addEventListener("click",s=>s.target===n&&t()),c(".video-close",n).addEventListener("click",t)})),r(".toggle-btn").forEach(a=>a.addEventListener("click",()=>{r(".toggle-btn").forEach(n=>n.classList.toggle("active",n===a)),c("#level-name").textContent=a.dataset.level,c("#programme-grid").innerHTML=b(a.dataset.level==="UG"?ugPrograms:pgPrograms),v()})),r(".vision-tab-btn").forEach(a=>a.addEventListener("click",()=>{r(".vision-tab-btn").forEach(n=>n.classList.toggle("active",n===a)),r(".vision-content-pane").forEach(n=>n.classList.toggle("active",n.dataset.pane===a.dataset.tab))})),r(".js-form").forEach(a=>a.addEventListener("submit",D)),v()}async function D(e){e.preventDefault();const i=c(".status",e.currentTarget);i.textContent="Sending…";const a=Object.fromEntries(new FormData(e.currentTarget));try{const n=await fetch("/api/enquiries",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(a)}),t=await n.json();i.textContent=t.message||"Thank you. Your details have been received.",n.ok&&e.currentTarget.reset()}catch{i.textContent="Form is ready. Start the API server to accept enquiries."}}function v(){const e=matchMedia("(prefers-reduced-motion:reduce)").matches,i=new IntersectionObserver(a=>a.forEach(n=>{n.isIntersecting&&(n.target.classList.add("is-visible"),n.target.classList.contains("js-counter")&&f(n.target),i.unobserve(n.target))}),{threshold:.01});r(".reveal,.js-counter").forEach(a=>{const n=a.getBoundingClientRect();e||n.top<window.innerHeight&&n.bottom>0?(a.classList.add("is-visible"),a.classList.contains("js-counter")&&f(a)):i.observe(a)})}function f(e){const i=Number(e.dataset.to),a=e.dataset.suffix||"",n=performance.now(),t=1500;function s(l){const h=Math.min((l-n)/t,1),w=Math.round(i*(1-(1-h)**3));e.textContent=w.toLocaleString("en-IN")+a,h<1&&requestAnimationFrame(s)}requestAnimationFrame(s)}addEventListener("hashchange",x);addEventListener("keydown",e=>{var i;e.key==="Escape"&&((i=c(".video-close"))==null||i.click())});x();

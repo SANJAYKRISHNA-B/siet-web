@@ -1,6 +1,27 @@
 # SIET MERN Website
 
-A modern MERN rebuild for Sri Shakthi Institute of Engineering & Technology.
+A MERN application for Sri Shakthi Institute of Engineering & Technology.
+
+## Project structure
+
+```text
+SIET_WEB/
+├── client/                 # React + Vite frontend
+│   ├── public/             # Brand, media and template assets
+│   └── src/
+│       ├── App.jsx         # React application shell
+│       ├── main.jsx        # React entry point
+│       ├── styles.css      # Site styles
+│       └── legacy/site.js  # Existing routes and page renderer
+├── server/                 # Node.js + Express API
+│   ├── config/             # MongoDB connection
+│   ├── controllers/        # Request handlers
+│   ├── middleware/         # API middleware
+│   ├── models/             # Mongoose models
+│   └── routes/             # Express routes
+├── legacy/template-pages/  # Archived source template pages
+└── package.json            # Root development orchestration
+```
 
 ## Run locally
 
@@ -8,6 +29,7 @@ Requires Node.js 18 or newer. The dependencies are pinned to versions compatible
 
 ```bash
 npm install
+npm run install:all
 cp .env.example .env
 npm run dev
 ```
@@ -20,7 +42,7 @@ If MongoDB is not installed locally, leave `MONGODB_URI` blank in `.env`. The si
 
 ```bash
 npm run build
-npm start
+NODE_ENV=production npm start
 ```
 
 Current institutional facts and outbound links were checked against the official website at https://www.siet.ac.in/ in August 2026. The brand mark is implemented as a replaceable text/SVG lockup because the live origin blocks direct asset retrieval.

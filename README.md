@@ -45,4 +45,12 @@ npm run build
 NODE_ENV=production npm start
 ```
 
+## Vercel
+
+The repository is configured as an npm workspace. Vercel installs the React,
+Vite, Express and Mongoose workspace dependencies from the root lockfile, builds
+the client, publishes `client/dist`, and exposes the Express app through the
+`api/` serverless entry points. Add `MONGODB_URI` and `CLIENT_URL` in the Vercel
+project environment settings when persistent enquiry submissions are required.
+
 Current institutional facts and outbound links were checked against the official website at https://www.siet.ac.in/ in August 2026. The brand mark is implemented as a replaceable text/SVG lockup because the live origin blocks direct asset retrieval.

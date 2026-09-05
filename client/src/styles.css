@@ -2024,9 +2024,7 @@ header nav .nav-group>a{
   header .counselling-code strong{font-size:23px}
   header .menu{position:relative;z-index:62;flex:0 0 42px;width:42px;height:42px;display:grid!important;place-items:center;padding:0;border:1px solid #cfe0d5;border-radius:6px;background:#f4f8f3;color:#075b36}
   header .menu svg{width:24px;height:24px}
-  .mobile-nav{position:fixed!important;z-index:59;left:0;right:0;top:134px;bottom:0;height:auto!important;padding:24px clamp(20px,6vw,55px) 36px;display:flex!important;flex-direction:column;align-items:stretch;gap:0;overflow-y:auto;background:rgba(3,55,37,.98);box-shadow:0 20px 50px rgba(0,0,0,.24)}
-  .mobile-nav a{display:flex;align-items:center;min-height:58px;padding:15px;border-bottom:1px solid rgba(255,255,255,.14);color:#fff;font:800 18px 'Manrope',sans-serif}
-  .mobile-nav .mobile-apply-link{margin-bottom:10px;justify-content:center;border:1px solid #f3c515;background:#f3c515;color:#073d29}
+  .mobile-nav{display:none}
 }
 @media(max-width:560px){
   header{height:82px;min-height:82px;padding:0 12px;gap:8px}
@@ -2039,7 +2037,7 @@ header nav .nav-group>a{
   header .counselling-code small{font-size:4.5px}
   header .counselling-code strong{font-size:20px}
   header .menu{flex-basis:38px;width:38px;height:38px}
-  .mobile-nav{top:126px;padding:18px 14px 28px}
+  .mobile-nav{display:none}
 }
 
 /* Definitive desktop header and placement layout. Keep last in the cascade. */
@@ -3088,59 +3086,7 @@ header nav .nav-group>a{
 .siet-header .siet-header-actions>.button{
   font-family:'Manrope','DM Sans',sans-serif!important;
 }
-@media(max-width:1100px){
-  .mobile-nav{
-    position:fixed!important;
-    z-index:1000!important;
-    top:92px!important;
-    right:0!important;
-    bottom:0!important;
-    left:auto!important;
-    width:min(88vw,400px)!important;
-    max-width:400px!important;
-    height:calc(100dvh - 92px)!important;
-    max-height:none!important;
-    padding:20px 24px 34px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    overflow-x:hidden!important;
-    overflow-y:auto!important;
-    visibility:visible!important;
-    transform:none!important;
-    background:linear-gradient(180deg,#006542 0%,#004a31 52%,#003824 100%)!important;
-    box-shadow:-100vmax 0 0 100vmax rgba(0,25,16,.58),-20px 0 45px rgba(0,0,0,.24)!important;
-  }
-  .mobile-nav a{
-    width:100%!important;
-    min-height:54px!important;
-    padding:14px 8px!important;
-    display:flex!important;
-    align-items:center!important;
-    flex:0 0 auto!important;
-    border-bottom:1px solid rgba(255,255,255,.17)!important;
-    color:#fff!important;
-    font:800 16px/1.3 'Manrope','DM Sans',sans-serif!important;
-    opacity:1!important;
-    visibility:visible!important;
-  }
-  .mobile-nav .mobile-apply-link{
-    margin:0 0 10px!important;
-    justify-content:center!important;
-    border:1px solid #f3c515!important;
-    border-radius:7px!important;
-    background:#f3c515!important;
-    color:#073d29!important;
-  }
-}
-@media(max-width:760px){
-  .mobile-nav{
-    top:82px!important;
-    height:calc(100dvh - 82px)!important;
-    width:min(90vw,380px)!important;
-    padding:18px 18px 28px!important;
-  }
-}
+/* Legacy mobile-nav rules cleared */
 
 /* Institutional header adapted from the supplied reference. */
 .institution-header-v4{position:relative;z-index:50;padding:26px 2vw 0;border-top:10px solid #06422f;background:linear-gradient(180deg,#fff 0%,#fff 76%,#f1f6f2 100%);font-family:'Manrope','DM Sans',sans-serif}.institution-header-shell{width:min(100%,1900px);margin:auto}.institution-identity-card{min-height:250px;padding:12px;display:grid;grid-template-columns:190px 1px 145px minmax(510px,1fr) 1px 160px 1px 185px;align-items:center;border:1px solid #e4ebe6;border-radius:22px;background:#fff;box-shadow:0 14px 36px rgba(0,62,40,.1);overflow:hidden}.institution-divider{width:1px;height:86%;justify-self:center;background:linear-gradient(transparent,#bdc9c1 15%,#bdc9c1 85%,transparent)}
@@ -3318,17 +3264,423 @@ header nav .nav-group>a{
   margin:0!important;
   border-radius:0!important;
 }
-@media(max-width:1100px){
-  .institution-header-v4.exact-image-header{min-height:0!important;padding:0!important;background:transparent!important}
-  .institution-header-v4.exact-image-header .siet-header-image img{min-height:0!important;object-fit:contain!important}
-  .institution-header-v4.exact-image-header .institution-navbar{height:60px!important;min-height:60px!important;margin:0!important}
-  .institution-header-v4.exact-image-header .institution-home,
-  .institution-header-v4.exact-image-header .institution-mobile-toggle{width:60px!important;min-width:60px!important}
-  .mobile-nav{top:auto!important;height:calc(100dvh - 60px)!important}
+/* ==========================================================================
+   Comprehensive Desktop & Mobile Responsive Navigation
+   ========================================================================== */
+
+/* Mobile-only elements hidden by default on all screens */
+.institution-mobile-toggle,
+.institution-mobile-logo,
+.mobile-nav-backdrop,
+.mobile-nav {
+  display: none;
 }
-@media(max-width:620px){
-  .institution-header-v4.exact-image-header{min-height:0!important;padding:0!important}
-  .institution-header-v4.exact-image-header .institution-navbar{height:54px!important;min-height:54px!important;margin:0!important;border-radius:0!important}
-  .institution-header-v4.exact-image-header .institution-home,
-  .institution-header-v4.exact-image-header .institution-mobile-toggle{width:54px!important;min-width:54px!important}
+
+/* Desktop View (min-width: 1101px) */
+@media (min-width: 1101px) {
+  .institution-navbar {
+    display: flex !important;
+    align-items: stretch !important;
+    position: relative !important;
+  }
+  .institution-home {
+    display: grid !important;
+    place-items: center !important;
+  }
+  .institution-menu {
+    display: flex !important;
+    align-items: stretch !important;
+    flex: 1 1 auto !important;
+  }
+  .institution-nav-apply {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-width: 160px !important;
+    height: 48px !important;
+    margin: auto 12px auto auto !important;
+    padding: 0 18px !important;
+    border-radius: 8px !important;
+    background: linear-gradient(135deg, #0b754e, #005137) !important;
+    color: #fff !important;
+    font: 800 13px 'Manrope', sans-serif !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(0, 50, 30, 0.25) !important;
+    transition: transform .2s ease, background .2s ease !important;
+  }
+  .institution-nav-apply:hover {
+    transform: translateY(-2px) !important;
+    background: linear-gradient(135deg, #0d8a5c, #006041) !important;
+    color: #fff !important;
+  }
+  .institution-mobile-toggle,
+  .institution-mobile-logo,
+  .mobile-nav,
+  .mobile-nav-backdrop {
+    display: none !important;
+  }
+}
+
+/* Mobile & Tablet View (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .institution-header-v4.exact-image-header {
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .institution-header-v4.exact-image-header .siet-header-image img {
+    min-height: 0 !important;
+    object-fit: contain !important;
+  }
+
+  /* Hide desktop menu, desktop Apply Now button, and desktop home icon in header bar */
+  .institution-menu,
+  .institution-nav-apply,
+  .institution-home {
+    display: none !important;
+  }
+
+  /* Mobile Navbar Bar: [☰] [Logo] */
+  .institution-header-v4.exact-image-header .institution-navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    background: #003f2c !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* ☰ Hamburger Button on the LEFT */
+  .institution-mobile-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    margin: 0 6px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: #ffd865 !important;
+    font-size: 26px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    transition: background .2s, color .2s !important;
+  }
+  .institution-mobile-toggle:hover,
+  .institution-mobile-toggle:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+  }
+  .institution-mobile-toggle .ui-icon {
+    font-size: 26px !important;
+    line-height: 1 !important;
+  }
+
+  /* Mobile Logo next to Hamburger: [☰] [Logo] */
+  .institution-mobile-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+  .institution-mobile-logo img.mobile-logo-img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+  }
+  .institution-mobile-logo .mobile-logo-text {
+    display: flex !important;
+    flex-direction: column !important;
+    line-height: 1.15 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+  .institution-mobile-logo .mobile-logo-text b {
+    font: 800 clamp(13px, 3.8vw, 16px) 'League Spartan', 'Manrope', sans-serif !important;
+    letter-spacing: .05em !important;
+    color: #fff !important;
+    white-space: nowrap !important;
+  }
+  .institution-mobile-logo .mobile-logo-text small {
+    font: 600 clamp(8px, 2.2vw, 10px) 'Manrope', sans-serif !important;
+    letter-spacing: .08em !important;
+    color: #ffd865 !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+  }
+
+  /* Backdrop Overlay */
+  .mobile-nav-backdrop {
+    display: block !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 20, 12, 0.65) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 9998 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity .3s ease, visibility .3s ease !important;
+  }
+  .mobile-nav-backdrop.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Mobile Navigation Drawer: OFF-SCREEN BY DEFAULT */
+  .mobile-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    width: min(84vw, 360px) !important;
+    max-width: 360px !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    padding: 0 !important;
+    background: #023824 !important;
+    box-shadow: 10px 0 35px rgba(0, 0, 0, 0.4) !important;
+    z-index: 9999 !important;
+    transform: translateX(-100%) !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: transform .32s cubic-bezier(0.16, 1, 0.3, 1), visibility .32s ease !important;
+    overflow: hidden !important;
+  }
+
+  /* Drawer OPEN state */
+  .mobile-nav.open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Drawer Header */
+  .mobile-nav-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 18px !important;
+    background: #012b1c !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-shrink: 0 !important;
+  }
+  .mobile-nav-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+  .mobile-nav-brand img {
+    width: 34px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+  }
+  .mobile-nav-brand strong {
+    display: block !important;
+    font: 800 15px 'League Spartan', 'Manrope', sans-serif !important;
+    letter-spacing: .06em !important;
+    color: #fff !important;
+    line-height: 1.1 !important;
+  }
+  .mobile-nav-brand small {
+    display: block !important;
+    font: 600 9px 'Manrope', sans-serif !important;
+    color: #ffd865 !important;
+    letter-spacing: .08em !important;
+    text-transform: uppercase !important;
+  }
+  .mobile-nav-close {
+    width: 36px !important;
+    height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    transition: background .2s !important;
+  }
+  .mobile-nav-close:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  /* Drawer Scrollable Body */
+  .mobile-nav-body {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 10px 0 16px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Drawer Navigation Links & Accordions */
+  .mobile-nav-link {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 48px !important;
+    padding: 12px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+    color: #edf7f1 !important;
+    font: 700 15px/1.3 'Manrope', sans-serif !important;
+    text-decoration: none !important;
+    transition: background .2s, color .2s !important;
+  }
+  .mobile-nav-link:hover,
+  .mobile-nav-link:active {
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: #ffd865 !important;
+  }
+  .mobile-nav-home {
+    gap: 10px !important;
+    color: #ffd865 !important;
+    font-weight: 800 !important;
+  }
+  .mobile-nav-home .ui-icon {
+    font-size: 18px !important;
+  }
+
+  /* Accordion Groups */
+  .mobile-nav-group {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  }
+  .mobile-nav-group-toggle {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 13px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font: 700 15px 'Manrope', sans-serif !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    transition: background .2s, color .2s !important;
+  }
+  .mobile-nav-group-toggle:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffd865 !important;
+  }
+  .mobile-nav-group.open .mobile-nav-group-toggle {
+    color: #ffd865 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  .mobile-nav-group-toggle .ui-icon {
+    font-size: 13px !important;
+    transition: transform .25s ease !important;
+  }
+  .mobile-nav-group.open .mobile-nav-group-toggle .ui-icon {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Subitems inside group */
+  .mobile-nav-subitems {
+    display: none !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    padding: 4px 0 6px !important;
+  }
+  .mobile-nav-group.open .mobile-nav-subitems {
+    display: block !important;
+  }
+  .mobile-nav-sublink {
+    display: block !important;
+    min-height: 42px !important;
+    padding: 10px 22px 10px 36px !important;
+    color: #cde4d8 !important;
+    font: 600 13.5px 'Manrope', sans-serif !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    transition: background .2s, color .2s, padding-left .2s !important;
+  }
+  .mobile-nav-sublink:last-child {
+    border-bottom: 0 !important;
+  }
+  .mobile-nav-sublink:hover,
+  .mobile-nav-sublink:active {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    padding-left: 40px !important;
+  }
+
+  /* Drawer Footer with GREEN Apply Now button */
+  .mobile-nav-footer {
+    flex-shrink: 0 !important;
+    padding: 14px 18px 20px !important;
+    background: #012b1c !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .mobile-nav .mobile-apply-link {
+    width: 100% !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+    padding: 13px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    border-radius: 8px !important;
+    border: 1px solid #1ba570 !important;
+    background: linear-gradient(135deg, #0b7a4f 0%, #035235 100%) !important;
+    color: #ffffff !important;
+    font: 800 16px 'Manrope', sans-serif !important;
+    letter-spacing: .02em !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    box-shadow: 0 6px 18px rgba(0, 40, 25, 0.45) !important;
+    transition: transform .2s, background .2s !important;
+  }
+  .mobile-nav .mobile-apply-link:hover {
+    background: linear-gradient(135deg, #0e8f5c 0%, #046541 100%) !important;
+    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+  }
+}
+
+/* Narrow screens adjustments (320px - 430px) */
+@media (max-width: 430px) {
+  .institution-header-v4.exact-image-header .institution-navbar {
+    height: 50px !important;
+    min-height: 50px !important;
+    padding: 0 8px !important;
+  }
+  .institution-mobile-toggle {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    margin-right: 6px !important;
+  }
+  .institution-mobile-logo img.mobile-logo-img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .mobile-nav {
+    width: min(88vw, 320px) !important;
+    max-width: 320px !important;
+  }
 }

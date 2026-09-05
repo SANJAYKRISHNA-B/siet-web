@@ -3139,12 +3139,14 @@ header nav .nav-group>a{
 .institution-header-v4 .institution-naac img{width:185px!important;height:185px!important}
 .institution-header-v4 .institution-code>strong{font-size:70px!important}.institution-header-v4 .institution-code>b{font-size:16px!important}
 .institution-header-v4 .institution-code>a{width:190px!important;min-height:65px!important;font-size:17px!important}
-.institution-header-v4 .institution-navbar{width:100%!important;min-height:85px!important;height:85px!important;margin:30px 0 0!important;display:flex!important;border-radius:18px!important}
-.institution-header-v4 .institution-home{width:95px!important;min-width:95px!important}.institution-header-v4 .institution-home svg{width:30px!important;height:30px!important}
-.institution-header-v4 .institution-menu{display:flex!important;padding:0 15px!important}
-.institution-header-v4 .institution-nav-group>button,.institution-header-v4 .institution-nav-link{min-height:85px!important;height:85px!important;padding:0 9px!important;font-size:15px!important}
-.institution-header-v4 .institution-nav-apply{min-width:205px!important;height:65px!important;margin:auto 10px auto 0!important;font-size:17px!important}
-.institution-header-v4 .institution-mobile-toggle{display:none!important}
+@media(min-width:1101px){
+  .institution-header-v4 .institution-navbar{width:100%!important;min-height:85px!important;height:85px!important;margin:30px 0 0!important;display:flex!important;border-radius:18px!important}
+  .institution-header-v4 .institution-home{width:95px!important;min-width:95px!important}.institution-header-v4 .institution-home svg{width:30px!important;height:30px!important}
+  .institution-header-v4 .institution-menu{display:flex!important;padding:0 15px!important}
+  .institution-header-v4 .institution-nav-group>button,.institution-header-v4 .institution-nav-link{min-height:85px!important;height:85px!important;padding:0 9px!important;font-size:15px!important}
+  .institution-header-v4 .institution-nav-apply{min-width:205px!important;height:65px!important;margin:auto 10px auto 0!important;font-size:17px!important}
+  .institution-header-v4 .institution-mobile-toggle{display:none!important}
+}
 @media(max-width:1550px) and (min-width:1101px){
  .institution-header-v4{min-height:465px!important;padding-top:38px!important}
  .institution-header-v4 .institution-identity-card{grid-template-columns:185px 1px 170px minmax(520px,1fr) 1px 165px 1px 185px!important;min-height:275px!important}
@@ -3340,23 +3342,28 @@ header nav .nav-group>a{
     display: none !important;
   }
 
-  /* Mobile Navbar Bar: [☰] [Logo] */
-  .institution-header-v4.exact-image-header .institution-navbar {
+  /* Mobile Navbar Bar: [☰ Three-line tab] on the left, [Logo] next to it */
+  .institution-header-v4.exact-image-header .institution-navbar,
+  .institution-header-v4 .institution-navbar {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
+    gap: 12px !important;
     position: relative !important;
-    height: 56px !important;
-    min-height: 56px !important;
+    height: 58px !important;
+    min-height: 58px !important;
     margin: 0 !important;
-    padding: 0 12px !important;
+    padding: 0 clamp(10px, 3vw, 16px) !important;
     background: #003f2c !important;
     border-radius: 0 !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    overflow: visible !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
   }
 
-  /* ☰ Hamburger Button on the LEFT */
+  /* ☰ Three-line Hamburger Button on the LEFT */
+  .institution-header-v4 .institution-mobile-toggle,
+  .exact-image-header .institution-mobile-toggle,
+  .institution-navbar .institution-mobile-toggle,
   .institution-mobile-toggle {
     display: inline-flex !important;
     align-items: center !important;
@@ -3364,36 +3371,62 @@ header nav .nav-group>a{
     width: 44px !important;
     min-width: 44px !important;
     height: 44px !important;
-    margin: 0 6px 0 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding: 0 !important;
-    border: 0 !important;
+    border: 1.5px solid rgba(255, 216, 101, 0.5) !important;
     border-radius: 8px !important;
-    background: transparent !important;
+    background: rgba(0, 24, 15, 0.65) !important;
     color: #ffd865 !important;
-    font-size: 26px !important;
-    line-height: 1 !important;
     cursor: pointer !important;
-    transition: background .2s, color .2s !important;
+    flex-shrink: 0 !important;
+    order: 1 !important;
+    z-index: 20 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    transition: background .2s, border-color .2s, color .2s, transform .15s !important;
   }
-  .institution-mobile-toggle:hover,
-  .institution-mobile-toggle:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important;
+  .institution-header-v4 .institution-mobile-toggle:hover,
+  .institution-header-v4 .institution-mobile-toggle:focus,
+  .institution-header-v4 .institution-mobile-toggle:active {
+    background: rgba(255, 216, 101, 0.2) !important;
+    border-color: #ffd865 !important;
+    color: #ffffff !important;
+    transform: scale(1.04) !important;
+  }
+  .institution-mobile-toggle .menu-svg,
+  .institution-mobile-toggle .close-svg,
+  .institution-mobile-toggle .ui-icon-svg {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    stroke: #ffd865 !important;
+    stroke-width: 2.5 !important;
+  }
+  .institution-mobile-toggle:hover .menu-svg,
+  .institution-mobile-toggle:hover .close-svg,
+  .institution-mobile-toggle:hover .ui-icon-svg {
+    stroke: #ffffff !important;
   }
   .institution-mobile-toggle .ui-icon {
     font-size: 26px !important;
     line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  /* Mobile Logo next to Hamburger: [☰] [Logo] */
+  /* Mobile Logo next to Hamburger (on the RIGHT of hamburger) */
+  .institution-header-v4 .institution-mobile-logo,
+  .exact-image-header .institution-mobile-logo,
   .institution-mobile-logo {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 9px !important;
+    gap: 10px !important;
     color: #fff !important;
     text-decoration: none !important;
     min-width: 0 !important;
     flex: 1 1 auto !important;
+    order: 2 !important;
   }
   .institution-mobile-logo img.mobile-logo-img {
     width: 32px !important;
@@ -3663,16 +3696,26 @@ header nav .nav-group>a{
 
 /* Narrow screens adjustments (320px - 430px) */
 @media (max-width: 430px) {
-  .institution-header-v4.exact-image-header .institution-navbar {
-    height: 50px !important;
-    min-height: 50px !important;
+  .institution-header-v4.exact-image-header .institution-navbar,
+  .institution-header-v4 .institution-navbar {
+    height: 52px !important;
+    min-height: 52px !important;
     padding: 0 8px !important;
+    gap: 8px !important;
   }
+  .institution-header-v4 .institution-mobile-toggle,
   .institution-mobile-toggle {
-    width: 38px !important;
-    min-width: 38px !important;
-    height: 38px !important;
-    margin-right: 6px !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .institution-mobile-toggle .menu-svg,
+  .institution-mobile-toggle .close-svg,
+  .institution-mobile-toggle .ui-icon-svg {
+    width: 22px !important;
+    height: 22px !important;
   }
   .institution-mobile-logo img.mobile-logo-img {
     width: 28px !important;

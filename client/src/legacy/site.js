@@ -40,7 +40,238 @@ function homePage(){return `<main><section class="placement-stage placement-stag
 
 function programmeCards(list){return list.map(([n,d])=>`<div class="programme-card programme-card-simple reveal" role="button" tabindex="0"><span class="programme-icon">◆</span><h4>${n}</h4><span class="arrow-btn">→</span></div>`).join('')}
 const slugify=s=>s.toLowerCase().replaceAll(' ','-').replaceAll('&','and').replaceAll('/','-');
-function visionPage(){return `<main class="vision-page"><section class="vision-chairman-section"><div class="vision-chairman-wrap"><div class="vision-chairman-photo reveal"><img src="/brand/chairman-transparent.png" alt="Dr. S. Thangavelu"><div class="chairman-name-card"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><span>Sri Shakthi Group of Institutions</span></div></div><div class="vision-chairman-copy reveal"><small>SRI SHAKTHI</small><h1>Vision &amp; Mission</h1><h2>Engineering education with purpose.</h2><p>We are committed to building a brighter future through quality education, innovation, research and ethical values.</p><a class="button" href="#/chairman">Read Full Message ${icon('arrow')}</a></div></div></section><section class="page-content"><div><div class="section-no">OUR VISION</div><h2>Purposeful education. Future-ready graduates.</h2><p>To be a nationally and internationally recognised institution for excellence in teaching, research, entrepreneurship and public service.</p></div></section></main>`}
+function visionPage(){
+  return `<style>
+    .vision-sidebar { border-top: 6px solid var(--coral); background: var(--paper); padding: 28px; }
+    .vision-sidebar span { font-size: 9px; font-weight: 700; color: #44705a; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
+    .vision-tab-btn { display: flex; justify-content: space-between; align-items: center; padding: 15px 12px; border-bottom: 1px solid #d6e3da; font-weight: 600; cursor: pointer; color: var(--navy); transition: all 0.2s ease; margin-bottom: 5px; }
+    .vision-tab-btn:hover { background: #f0f7f3; }
+    .vision-tab-btn.active { border: 2px solid var(--navy); background: var(--mint); border-radius: 6px; padding: 13px 12px; }
+    .vision-tab-btn span { color: var(--coral); font-weight: bold; }
+    .vision-content-pane { display: none; }
+    .vision-content-pane.active { display: block; }
+    .outcome-list { display: flex; flex-direction: column; gap: 20px; }
+    .outcome-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid var(--navy); box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+    .outcome-badge { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 14px; }
+    .outcome-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
+    .outcome-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
+    .values-list { display: flex; flex-direction: column; gap: 20px; }
+    .value-card { display: flex; gap: 20px; align-items: flex-start; padding: 24px; background: white; border-radius: 8px; border-left: 4px solid var(--coral); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .value-icon { font-size: 24px; color: var(--navy); line-height: 1; }
+    .value-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
+    .value-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
+    .philosophy-section h3 { font-size: 22px; color: var(--navy); margin-bottom: 25px; }
+    .milestone { display: flex; gap: 24px; align-items: flex-start; padding: 24px; background: var(--mint); border-radius: 8px; margin-bottom: 20px; border-left: 6px solid var(--coral); }
+    .milestone-num { font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; }
+    .milestone-content h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; text-transform: uppercase; font-weight: 700; }
+    .milestone-content p { margin: 0; line-height: 1.6; color: #173226; font-size: 16px; }
+    @media(max-width: 900px) {
+      .vision-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+  </style>
+  <main class="vision-page">
+    <section class="vision-chairman-section">
+      <div class="vision-chairman-wrap">
+        <div class="vision-chairman-photo reveal">
+          <img src="/brand/chairman-transparent-cropped.png" alt="Dr. S. Thangavelu">
+          <div class="chairman-name-card">
+            <strong>Dr. S. Thangavelu</strong>
+            <span>Chairman</span>
+            <span>Sri Shakthi Group of Institutions</span>
+          </div>
+        </div>
+        <div class="vision-chairman-copy reveal">
+          <small>SRI SHAKTHI</small>
+          <h1>Vision &amp; Mission</h1>
+          <h2>Engineering education with purpose.</h2>
+          <p>We are committed to building a brighter future through quality education, innovation, research and ethical values.</p>
+          <a class="button" href="#/chairman">Read Full Message ${icon('arrow')}</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="page-content vision-grid" style="grid-template-columns: 320px 1fr; gap: 5vw; background: white;">
+      <aside class="vision-sidebar">
+         <span>VISION AND MISSION</span>
+         <a href="javascript:void(0)" class="vision-tab-btn active" data-tab="vision-mission">Vision and Mission <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="program-outcomes">Program Outcomes of the Institution <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="core-values">Core Values of the Institution <span>→</span></a>
+         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="philosophy">Philosophy <span>→</span></a>
+      </aside>
+      
+      <div class="vision-tab-container reveal">
+         <!-- Pane 1: Vision & Mission -->
+         <div class="vision-content-pane active" data-pane="vision-mission">
+            <div class="section-no">OUR VISION</div>
+            <h2>Recognised for excellence.</h2>
+            <p>To make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p>
+            <br><br>
+            <div class="section-no">OUR MISSION</div>
+            <h2>Developing capability and creativity.</h2>
+            <p>To Provide an encouraging environment to develop the intellectual capacity, critical thinking, creativity and problem solving ability of the students.</p>
+         </div>
+         
+         <!-- Pane 2: Program Outcomes -->
+         <div class="vision-content-pane" data-pane="program-outcomes">
+            <div class="section-no">PROGRAM OUTCOMES</div>
+            <h2>Program Outcomes of the Institution</h2>
+            <div class="outcome-list">
+               <div class="outcome-card">
+                  <div class="outcome-badge">a</div>
+                  <div class="outcome-info">
+                     <h4>Engineering Knowledge</h4>
+                     <p>Apply the Knowledge of Mathematics science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">b</div>
+                  <div class="outcome-info">
+                     <h4>Problem Analysis</h4>
+                     <p>Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusion using first principles of mathematics, natural sciences, and engineering sciences.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">c</div>
+                  <div class="outcome-info">
+                     <h4>Design / Development of Solutions</h4>
+                     <p>Solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">d</div>
+                  <div class="outcome-info">
+                     <h4>Conduct Investigations of Complex Problems</h4>
+                     <p>Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data and synthesis of the information to provide valid conclusions.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">e</div>
+                  <div class="outcome-info">
+                     <h4>Modern Tool Usage</h4>
+                     <p>Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modelling to complex engineering activities with an understanding of the limitations.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">f</div>
+                  <div class="outcome-info">
+                     <h4>The Engineer and Society</h4>
+                     <p>Apply reasoning informed by the contextual knowledge to access societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">g</div>
+                  <div class="outcome-info">
+                     <h4>Environment and Sustainability</h4>
+                     <p>Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">h</div>
+                  <div class="outcome-info">
+                     <h4>Ethics</h4>
+                     <p>Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">i</div>
+                  <div class="outcome-info">
+                     <h4>Individual and Team Work</h4>
+                     <p>Function effectively as an individual, and as a member or leader in diverse teams and the multidisciplinary settings.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">j</div>
+                  <div class="outcome-info">
+                     <h4>Communication</h4>
+                     <p>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations and give and receive clear instructions.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">k</div>
+                  <div class="outcome-info">
+                     <h4>Project Management and Finance</h4>
+                     <p>Demonstrate knowledge and understanding of engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and multidisciplinary environments.</p>
+                  </div>
+               </div>
+               <div class="outcome-card">
+                  <div class="outcome-badge">l</div>
+                  <div class="outcome-info">
+                     <h4>Lifelong Learning</h4>
+                     <p>Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Pane 3: Core Values -->
+         <div class="vision-content-pane" data-pane="core-values">
+            <div class="section-no">CORE VALUES</div>
+            <h2>Core Values of the Institution</h2>
+            <div class="values-list">
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Quality Education and Integrity</h4>
+                     <p>Providing quality, global education that allows the student to achieve their career goals and aspirations with ethical values; preparing responsible citizens through systematic education.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Excellence in every area</h4>
+                     <p>Imparting career-focused educational programs with the highest level of academic to prepare the students with real-world experience.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Bringing the best</h4>
+                     <p>Encouraging critical thinking, quantitative, ethical decision making, effective communication and social responsibility in students.</p>
+                  </div>
+               </div>
+               <div class="value-card">
+                  <div class="value-icon">★</div>
+                  <div class="value-info">
+                     <h4>Focusing on research activities</h4>
+                     <p>Creating excellent infrastructural amenities to undertake research activities, publish quality research articles and patenting the products/ technologies essential for the society.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Pane 4: Philosophy -->
+         <div class="vision-content-pane" data-pane="philosophy">
+            <div class="section-no">PHILOSOPHY</div>
+            <h2>Philosophy</h2>
+            <div class="philosophy-section">
+               <h3>We strongly believe...</h3>
+               <div class="milestone">
+                  <div class="milestone-num">01</div>
+                  <div class="milestone-content">
+                     <h4>GATEWAY to success</h4>
+                     <p>Achieving 100% pass is only the GATEWAY to success.</p>
+                  </div>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-num">02</div>
+                  <div class="milestone-content">
+                     <h4>First MILESTONE</h4>
+                     <p>Breeding 100% employable / entrepreneurial engineers is the first MILESTONE.</p>
+                  </div>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-num">03</div>
+                  <div class="milestone-content">
+                     <h4>Our DESTINATION</h4>
+                     <p>Creating 100% confident, contributing and self-realising citizens who will uphold the pride and cultural ethos of our great nation is our DESTINATION.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+  </main>`;
+}
 function chairmanPage(){return `<main class="chairman-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/chairman-transparent.png" alt="Dr. S. Thangavelu"><h2>Dr. S. Thangavelu</h2><b>Chairman</b><p>Sri Shakthi Group of Institutions</p></aside><article class="chairman-message reveal"><small>A MESSAGE FROM THE CHAIRMAN</small><h1>A dream built on equality, excellence and service.</h1><p>I have always been inspired by Dr. Martin Luther King's statement, 'I have a dream' - a dream I believe will come true - a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character'. This need for tolerance - to create an equal society with no discrimination in Caste, Creed or Colour was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides, I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them. Mine is not a religion of the prison house. It has room for the least among God's creations but it is proof against insolent pride of race, religion or colour.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><strong>Dr. S. Thangavelu, Chairman</strong></article></section></main>`}
 function principalPage(){return `<main class="chairman-page principal-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/principal-saravana-kumar.png" alt="Principal"><h2>Dr. N. M. Saravana Kumar</h2><b>Principal, SIET</b></aside><article class="chairman-message reveal"><small>FROM THE PRINCIPAL'S DESK</small><h1>Learning that moves beyond the classroom.</h1><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>We prepare graduates to become competent professionals, responsible citizens and future leaders.</blockquote><strong>Dr. N. M. Saravana Kumar, M.E., Ph.D.<br>Principal, SIET</strong></article></section></main>`}
 
@@ -96,7 +327,11 @@ function bind(){
      if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}
    })
  });
- $$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
+   $('.vision-tab-btn').forEach(btn => btn.addEventListener('click', () => {
+    $('.vision-tab-btn').forEach(x => x.classList.toggle('active', x === btn));
+    $('.vision-content-pane').forEach(pane => pane.classList.toggle('active', pane.dataset.pane === btn.dataset.tab));
+  }));
+  $('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
 }
 async function submitForm(e){e.preventDefault();const status=$('.status',e.currentTarget);status.textContent='Sending…';const data=Object.fromEntries(new FormData(e.currentTarget));try{const res=await fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const json=await res.json();status.textContent=json.message||'Thank you. Your details have been received.';if(res.ok)e.currentTarget.reset()}catch{status.textContent='Form is ready. Start the API server to accept enquiries.'}}
 function observe(){const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');if(entry.target.classList.contains('js-counter'))animateCounter(entry.target);observer.unobserve(entry.target)}),{threshold:.18});$$('.reveal,.js-counter').forEach(el=>reduce?(el.classList.add('is-visible'),el.classList.contains('js-counter')&&animateCounter(el)):observer.observe(el))}

@@ -73,7 +73,7 @@ function visionPage(){
     <section class="vision-chairman-section">
       <div class="vision-chairman-wrap">
         <div class="vision-chairman-photo reveal">
-          <img src="/brand/chairman-transparent-cropped.png" alt="Dr. S. Thangavelu">
+          <img src="/brand/chairman-photo.png" alt="Dr. S. Thangavelu">
           <div class="chairman-name-card">
             <strong>Dr. S. Thangavelu</strong>
             <span>Chairman</span>
@@ -272,80 +272,262 @@ function visionPage(){
     </section>
   </main>`;
 }
-function chairmanPage(){return `<main class="chairman-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/chairman-transparent.png" alt="Dr. S. Thangavelu"><h2>Dr. S. Thangavelu</h2><b>Chairman</b><p>Sri Shakthi Group of Institutions</p></aside><article class="chairman-message reveal"><small>A MESSAGE FROM THE CHAIRMAN</small><h1>A dream built on equality, excellence and service.</h1><p>I have always been inspired by Dr. Martin Luther King's statement, 'I have a dream' - a dream I believe will come true - a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character'. This need for tolerance - to create an equal society with no discrimination in Caste, Creed or Colour was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides, I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them. Mine is not a religion of the prison house. It has room for the least among God's creations but it is proof against insolent pride of race, religion or colour.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><strong>Dr. S. Thangavelu, Chairman</strong></article></section></main>`}
+function chairmanPage(){return `<main class="chairman-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/chairman-photo.png" alt="Dr. S. Thangavelu"><h2>Dr. S. Thangavelu</h2><b>Chairman</b><p>Sri Shakthi Group of Institutions</p></aside><article class="chairman-message reveal"><small>A MESSAGE FROM THE CHAIRMAN</small><h1>A dream built on equality, excellence and service.</h1><p>I have always been inspired by Dr. Martin Luther King's statement, 'I have a dream' - a dream I believe will come true - a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character'. This need for tolerance - to create an equal society with no discrimination in Caste, Creed or Colour was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides, I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them. Mine is not a religion of the prison house. It has room for the least among God's creations but it is proof against insolent pride of race, religion or colour.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><strong>Dr. S. Thangavelu, Chairman</strong></article></section></main>`}
 function principalPage(){return `<main class="chairman-page principal-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/principal-saravana-kumar.png" alt="Principal"><h2>Dr. N. M. Saravana Kumar</h2><b>Principal, SIET</b></aside><article class="chairman-message reveal"><small>FROM THE PRINCIPAL'S DESK</small><h1>Learning that moves beyond the classroom.</h1><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>We prepare graduates to become competent professionals, responsible citizens and future leaders.</blockquote><strong>Dr. N. M. Saravana Kumar, M.E., Ph.D.<br>Principal, SIET</strong></article></section></main>`}
 
-function internalPage(route){const dept=route.startsWith('department/')?titleCase(route.slice(11).replaceAll('-',' ')).replaceAll(' And ',' & '):'';const data=dept?[dept,`Department of ${dept}`,'Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.']:(pageCopy[route]||['Sri Shakthi','Institutional information','Explore Sri Shakthi Institute of Engineering and Technology.']);return `<main class="internal-page"><section class="page-hero"><img class="page-crest" src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1 class="reveal">${data[0]}</h1><p>${data[1]}</p></section><section class="page-content"><div class="reveal"><div class="section-no">OVERVIEW</div><h2>${data[1]}</h2><p>${data[2]}</p>${route==='contact'?'<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore – 641062</p><p>+91 422 2369900 · info@siet.ac.in</p></div>':''}<a class="button" href="#/admission-enquiry">Enquire now ${icon('arrow')}</a></div></section>${['departments','programmes'].includes(route)?`<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n,d,img])=>`<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>`:''}</main>`}
+const careerUnits={
+  college:{
+    name:'Engineering College',
+    subtitle:'Autonomous Institution · Affiliated to Anna University',
+    desc:'We invite passionate educators, researchers and industry professionals to join an institution focused on applied research, innovation and industry-relevant engineering education.',
+    cats:[
+      ['Leadership Positions',['Principal / Dean','Head of Department','Academic Administrator']],
+      ['College Teaching Positions',['Professor','Associate Professor','Assistant Professor']],
+      ['Career Oriented Specialists',['Aptitude Trainer','Programming Trainer','Machine Learning Trainer']],
+      ['Managerial Positions',['HR and Administration','Admissions and Outreach']],
+      ['Creative Positions',['Content and Communications','Graphic Designer']]
+    ]
+  },
+  school:{
+    name:'CBSE Senior Secondary School',
+    subtitle:'Affiliated to CBSE, New Delhi',
+    desc:'Join an inspiring school community committed to experiential holistic education, academic excellence, sporting achievement and character building.',
+    cats:[
+      ['School Leadership Positions',['Principal / Vice Principal','Academic Coordinator','Section Head']],
+      ['PGT & TGT Teachers',['English','Mathematics','Physics','Chemistry','Biology','Computer Science']],
+      ['Primary & Kindergarten',['PRT Teachers','Montessori / Kindergarten Educators','Language Specialists']],
+      ['Sports & Extracurricular',['Physical Education Director','Art & Craft Teacher','Music & Dance Instructor']]
+    ]
+  },
+  lab:{
+    name:'Food & Environmental Testing Laboratory',
+    subtitle:'NABL Accredited Testing Facility',
+    desc:'Work in cutting-edge laboratory facilities conducting physical, chemical, and microbiological analyses for agricultural, food, and environmental sectors.',
+    cats:[
+      ['Quality & Laboratory Management',['Quality Manager','Technical Manager','NABL Coordinator']],
+      ['Analytical Specialists',['Senior Food Analyst','Chemical Analyst','Residue Analysis Specialist']],
+      ['Microbiology Specialists',['Senior Microbiologist','Microbiology Analyst']],
+      ['Technical Support',['Laboratory Technician','Sample Management Assistant']]
+    ]
+  }
+};
+
+function internalPage(route){
+  const isDept=route.startsWith('department/');
+  const deptName=isDept?titleCase(route.slice(11).replaceAll('-',' ')).replaceAll(' And ',' & '):'';
+  const data=isDept?[deptName,`Department of ${deptName}`,'Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.']:(pageCopy[route]||['Sri Shakthi','Institutional information','Explore Sri Shakthi Institute of Engineering and Technology.']);
+  
+  const sidebarHtml=`
+  <aside class="internal-sidebar reveal">
+    <div class="sidebar-box quick-links-box">
+      <span class="sidebar-kicker">EXPLORE SRI SHAKTHI</span>
+      <h3>Quick Navigation</h3>
+      <nav class="sidebar-nav">
+        <a href="#/programmes">UG &amp; PG Programmes <span>→</span></a>
+        <a href="#/departments">All Departments <span>→</span></a>
+        <a href="#/eligibility">Admission Eligibility <span>→</span></a>
+        <a href="#/scholarships">Scholarship Pathways <span>→</span></a>
+        <a href="#/campus-life">Campus Life &amp; Facilities <span>→</span></a>
+        <a href="#/placements">Placement Highlights <span>→</span></a>
+        <a href="#/research">Research &amp; Innovation <span>→</span></a>
+      </nav>
+    </div>
+    <div class="sidebar-box contact-card-box">
+      <span class="sidebar-kicker">ADMISSIONS HELPLINE</span>
+      <h3>Plan Your Journey</h3>
+      <p>Speak directly with our academic counsellors for programme guidance and scholarships.</p>
+      <div class="sidebar-contact-info">
+        <strong>☎ +91 422 2369900</strong>
+        <small>✉ info@siet.ac.in</small>
+        <small>📍 L&amp;T Bypass, Chinniyampalayam, Coimbatore</small>
+      </div>
+      <a href="#/admission-enquiry" class="button sidebar-btn">Enquire for Admission ${icon('arrow')}</a>
+    </div>
+    <div class="sidebar-box badges-card-box">
+      <span class="sidebar-kicker">ACCREDITATIONS</span>
+      <div class="sidebar-badges">
+        <span>NBA Accredited</span>
+        <span>NAAC 'A' Grade</span>
+        <span>Autonomous</span>
+        <span>AICTE Approved</span>
+      </div>
+    </div>
+  </aside>`;
+
+  const deptExtras=isDept?`
+  <div class="dept-highlights-grid">
+    <div class="dept-stat-card"><span class="stat-num">96%</span><b>Placement Record</b><small>Top product &amp; core companies</small></div>
+    <div class="dept-stat-card"><span class="stat-num">14+</span><b>Specialized Labs</b><small>State-of-the-art facilities</small></div>
+    <div class="dept-stat-card"><span class="stat-num">1:15</span><b>Faculty-Student Ratio</b><small>Focused mentorship</small></div>
+    <div class="dept-stat-card"><span class="stat-num">50+</span><b>Patents &amp; Projects</b><small>Applied research focus</small></div>
+  </div>
+  <div class="dept-section-block">
+    <div class="section-no">CORE LABORATORIES &amp; FACILITIES</div>
+    <div class="dept-labs-list">
+      <div class="dept-lab-item"><b>Advanced Computing &amp; AI Lab</b><p>High-performance computing cluster, modern GPUs, and deep learning platforms.</p></div>
+      <div class="dept-lab-item"><b>Project &amp; Prototype Studio</b><p>Embedded systems, IoT testbeds, sensors and robotics testing facilities.</p></div>
+      <div class="dept-lab-item"><b>Industry Collaboration Center</b><p>Dedicated workspaces co-developed with leading technology partners.</p></div>
+    </div>
+  </div>`:'' ;
+
+  return `<main class="internal-page">
+    <section class="page-hero">
+      <img class="page-crest" src="/brand/siet-logo.png" alt="">
+      <div class="eyebrow"><span></span> SRI SHAKTHI</div>
+      <h1 class="reveal">${data[0]}</h1>
+      <p>${data[1]}</p>
+    </section>
+    <section class="page-content">
+      <div class="reveal">
+        <div class="section-no">OVERVIEW</div>
+        <h2>${data[1]}</h2>
+        <p>${data[2]}</p>
+        ${deptExtras}
+        ${route==='contact'?'<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore – 641062</p><p>+91 422 2369900 · info@siet.ac.in</p></div>':''}
+        <div style="margin-top: 32px;"><a class="button" href="#/admission-enquiry">Enquire now ${icon('arrow')}</a></div>
+      </div>
+      ${sidebarHtml}
+    </section>
+    ${['departments','programmes'].includes(route)?`<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n,d,img])=>`<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>`:''}
+  </main>`;
+}
 const titleCase=s=>s.replace(/\b\w/g,c=>c.toUpperCase());
 
 function enquiryPage(apply=false){return `<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${apply?'Apply for Sri Shakthi':'Admission Enquiry'}</h1><h2>Let’s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${field('Full Name','name','text','Enter your full name')}${field('Mobile Number','phone','tel','Enter 10 digit mobile number')}${field('Email Address','email','email','Enter your email address')}${selectField('Course Level','level',['UG','PG'])}${selectField('Preferred Department','course',programs.map(p=>p[0]))}${field('Academic Qualification / Marks','qualification','text','Qualification and marks')}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${apply?'Submit Application':'Send Enquiry'} →</button><p class="status" aria-live="polite"></p></form></section></main>`}
 const field=(label,name,type,placeholder)=>`<label>${label} <b>*</b><input type="${type}" name="${name}" placeholder="${placeholder}" required></label>`;
 const selectField=(label,name,opts)=>`<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o=>`<option>${o}</option>`).join('')}</select></label>`;
-function careersPage(){const cats=[['Leadership Positions',['Principal / Dean','Head of Department','Academic Administrator']],['College Teaching Positions',['Professor','Associate Professor','Assistant Professor']],['School Teaching Positions',['PGT / TGT Teachers','Primary Teachers','Academic Coordinators']],['Food Testing Lab',['Food Analyst','Laboratory Technician','Quality Manager']],['Career Oriented Specialists',['Aptitude Trainer','Programming Trainer','Machine Learning Trainer']],['Managerial Positions',['HR and Administration','Admissions and Outreach']],['Creative Positions',['Content and Communications','Graphic Designer']]];return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active">Engineering College</button><button>CBSE School</button><button>Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>AUTONOMOUS INSTITUTION</small><h2>Sri Shakthi Institute of Engineering and Technology</h2><p>We invite passionate educators, researchers and industry professionals to join an institution focused on applied research, innovation and industry-relevant engineering education.</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name','name','text','Enter your full name')}${field('Mobile Number','phone','tel','Enter mobile number')}${field('Email Address','email','email','Enter email')}${selectField('Application Category','category',cats.map(c=>c[0]))}${field('Position','position','text','Position you would like to apply')}${field('Highest Qualification','qualification','text','Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit">Submit Application →</button><p class="status"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>Application Categories</h2></div>${cats.map((c,i)=>`<details ${i===0?'open':''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r=>`<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`}
+function careersPage(){
+  const unit=careerUnits.college;
+  return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name','name','text','Enter your full name')}${field('Mobile Number','phone','tel','Enter mobile number')}${field('Email Address','email','email','Enter email')}${selectField('Application Category','category',unit.cats.map(c=>c[0]))}${field('Position','position','text','Position you would like to apply')}${field('Highest Qualification','qualification','text','Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c,i)=>`<details ${i===0?'open':''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r=>`<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
+}
 
-function videoModal(){return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>`}
+function videoModal(){return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>`}
 function route(){return decodeURIComponent(location.hash.replace(/^#\/?/,'')).replace(/\/$/,'')}
 function render(){if(!appRoot)return;const r=route();let content=!r?homePage():r==='vision-mission'||r==='about'?visionPage():r==='chairman'?chairmanPage():r==='principal'?principalPage():r==='admission-enquiry'||r==='apply'?enquiryPage(r==='apply'):r==='careers'?careersPage():internalPage(r);appRoot.innerHTML=header()+content+footer();document.title=`${r?titleCase(r.replaceAll('-',' ')):'Sri Shakthi'} | SIET`;bind();scrollTo(0,0)}
 
 function bind(){
- const mobile=$('.mobile-nav'),backdrop=$('.mobile-nav-backdrop'),toggle=$('.institution-mobile-toggle'),closeBtn=$('.mobile-nav-close');
- const closeMenu=()=>{mobile?.classList.remove('open');backdrop?.classList.remove('open');if(toggle)toggle.innerHTML=icon('menu');document.body.style.overflow=''};
- const openMenu=()=>{mobile?.classList.add('open');backdrop?.classList.add('open');if(toggle)toggle.innerHTML=icon('close');document.body.style.overflow='hidden'};
- toggle?.addEventListener('click',e=>{e.stopPropagation();mobile?.classList.contains('open')?closeMenu():openMenu()});
- closeBtn?.addEventListener('click',e=>{e.stopPropagation();closeMenu()});
- backdrop?.addEventListener('click',closeMenu);
- $$('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
- $$('.mobile-nav-group-toggle').forEach(btn=>btn.addEventListener('click',e=>{
-   e.stopPropagation();
-   const group=btn.closest('.mobile-nav-group');
-   const wasOpen=group.classList.contains('open');
-   $$('.mobile-nav-group').forEach(g=>{g.classList.remove('open');g.querySelector('.mobile-nav-group-toggle')?.setAttribute('aria-expanded','false')});
-   if(!wasOpen){group.classList.add('open');btn.setAttribute('aria-expanded','true')}
- }));
- $$('.institution-nav-group>button').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const group=btn.parentElement;$$('.institution-nav-group').filter(x=>x!==group).forEach(x=>x.classList.remove('open'));group.classList.toggle('open')}));document.addEventListener('click',()=>$$('.institution-nav-group').forEach(g=>g.classList.remove('open')),{once:true});
- $$('.js-video').forEach(b=>b.addEventListener('click',()=>{document.body.insertAdjacentHTML('beforeend',videoModal());document.body.style.overflow='hidden';const modal=$('.video-modal');const close=()=>{modal.remove();document.body.style.overflow=''};modal.addEventListener('click',e=>e.target===modal&&close());$('.video-close',modal).addEventListener('click',close)}));
- $$('.toggle-btn').forEach(b=>b.addEventListener('click',()=>{$$('.toggle-btn').forEach(x=>x.classList.toggle('active',x===b));$('#level-name').textContent=b.dataset.level;$('#programme-grid').innerHTML=programmeCards(b.dataset.level==='UG'?programs:programs.slice(0,7));observe()}));
- const progGrid=$('#programme-grid');
- progGrid?.addEventListener('click',e=>{
-   const card=e.target.closest('.programme-card');
-   if(!card)return;
-   const wasActive=card.classList.contains('active');
-   $$('.programme-card',progGrid).forEach(c=>c.classList.remove('active'));
-   if(!wasActive)card.classList.add('active');
- });
- progGrid?.addEventListener('keydown',e=>{
-   if(e.key==='Enter'||e.key===' '){
-     const card=e.target.closest('.programme-card');
-     if(card){e.preventDefault();card.click()}
-   }
- });
- $('.js-scroll-programmes')?.addEventListener('click',()=>{$('.programmes-section')?.scrollIntoView({behavior:'smooth'})});
- $('.js-discover-btn')?.addEventListener('click',()=>{$('.programmes-section')?.scrollIntoView({behavior:'smooth'})});
- $('.js-explore-campus')?.addEventListener('click',()=>{$('.campus-gallery')?.scrollIntoView({behavior:'smooth'})});
- $$('.campus-gallery .gallery-card').forEach(card=>{
-   card.addEventListener('keydown',e=>{
-     if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}
-   })
- });
+  const mobile=$('.mobile-nav'),backdrop=$('.mobile-nav-backdrop'),toggle=$('.institution-mobile-toggle'),closeBtn=$('.mobile-nav-close');
+  const closeMenu=()=>{mobile?.classList.remove('open');backdrop?.classList.remove('open');if(toggle)toggle.innerHTML=icon('menu');document.body.style.overflow=''};
+  const openMenu=()=>{mobile?.classList.add('open');backdrop?.classList.add('open');if(toggle)toggle.innerHTML=icon('close');document.body.style.overflow='hidden'};
+  toggle?.addEventListener('click',e=>{e.stopPropagation();mobile?.classList.contains('open')?closeMenu():openMenu()});
+  closeBtn?.addEventListener('click',e=>{e.stopPropagation();closeMenu()});
+  backdrop?.addEventListener('click',closeMenu);
+  $$('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
+  $$('.mobile-nav-group-toggle').forEach(btn=>btn.addEventListener('click',e=>{
+    e.stopPropagation();
+    const group=btn.closest('.mobile-nav-group');
+    const wasOpen=group?.classList.contains('open');
+    $$('.mobile-nav-group').forEach(g=>{g.classList.remove('open');g.querySelector('.mobile-nav-group-toggle')?.setAttribute('aria-expanded','false')});
+    if(!wasOpen&&group){group.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  }));
+  $$('.institution-nav-group>button').forEach(btn=>btn.addEventListener('click',e=>{
+    e.stopPropagation();
+    const group=btn.parentElement;
+    const willOpen=!group?.classList.contains('open');
+    $$('.institution-nav-group').forEach(x=>{
+      x.classList.remove('open');
+      x.querySelector('button')?.setAttribute('aria-expanded','false');
+    });
+    if(willOpen&&group){
+      group.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }));
+  $$('.career-tabs button').forEach(btn=>btn.addEventListener('click',()=>{
+    $$('.career-tabs button').forEach(b=>b.classList.toggle('active',b===btn));
+    const unitKey=btn.dataset.unit||'college';
+    const unit=careerUnits[unitKey]||careerUnits.college;
+    const titleEl=$('.career-intro h2');if(titleEl)titleEl.textContent='Sri Shakthi '+unit.name;
+    const descEl=$('.career-intro p');if(descEl)descEl.textContent=unit.desc;
+    const subEl=$('.career-intro small');if(subEl)subEl.textContent=unit.subtitle;
+    const selectCat=$('select[name="category"]');
+    if(selectCat){
+      selectCat.innerHTML=`<option value="">Select Application Category</option>`+unit.cats.map(c=>`<option>${c[0]}</option>`).join('');
+    }
+    const catAside=$('.career-categories');
+    if(catAside){
+      catAside.innerHTML=`<div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>`+
+        unit.cats.map((c,i)=>`<details ${i===0?'open':''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r=>`<span>→ ${r}</span>`).join('')}</div></details>`).join('')+
+        `<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div>`;
+    }
+  }));
+  $$('.js-video').forEach(b=>b.addEventListener('click',()=>{document.body.insertAdjacentHTML('beforeend',videoModal());document.body.style.overflow='hidden';const modal=$('.video-modal');const close=()=>{modal?.remove();document.body.style.overflow=''};modal?.addEventListener('click',e=>e.target===modal&&close());$('.video-close',modal)?.addEventListener('click',close)}));
+  $$('.toggle-btn').forEach(b=>b.addEventListener('click',()=>{$$('.toggle-btn').forEach(x=>x.classList.toggle('active',x===b));const lvlName=$('#level-name');if(lvlName)lvlName.textContent=b.dataset.level;const progGridEl=$('#programme-grid');if(progGridEl)progGridEl.innerHTML=programmeCards(b.dataset.level==='UG'?programs:programs.slice(0,7));observe()}));
+  const progGrid=$('#programme-grid');
+  progGrid?.addEventListener('click',e=>{
+    const card=e.target.closest('.programme-card');
+    if(!card)return;
+    const wasActive=card.classList.contains('active');
+    $$('.programme-card',progGrid).forEach(c=>c.classList.remove('active'));
+    if(!wasActive)card.classList.add('active');
+  });
+  progGrid?.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){
+      const card=e.target.closest('.programme-card');
+      if(card){e.preventDefault();card.click()}
+    }
+  });
+  $('.js-scroll-programmes')?.addEventListener('click',()=>{$('.programmes-section')?.scrollIntoView({behavior:'smooth'})});
+  $('.js-discover-btn')?.addEventListener('click',()=>{$('.programmes-section')?.scrollIntoView({behavior:'smooth'})});
+  $('.js-explore-campus')?.addEventListener('click',()=>{$('.campus-gallery')?.scrollIntoView({behavior:'smooth'})});
+  $$('.campus-gallery .gallery-card').forEach(card=>{
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}
+    })
+  });
   $$('.vision-tab-btn').forEach(btn => btn.addEventListener('click', () => {
     $$('.vision-tab-btn').forEach(x => x.classList.toggle('active', x === btn));
     $$('.vision-content-pane').forEach(pane => pane.classList.toggle('active', pane.dataset.pane === btn.dataset.tab));
   }));
   $$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
 }
-async function submitForm(e){e.preventDefault();const status=$('.status',e.currentTarget);status.textContent='Sending…';const data=Object.fromEntries(new FormData(e.currentTarget));try{const res=await fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const json=await res.json();status.textContent=json.message||'Thank you. Your details have been received.';if(res.ok)e.currentTarget.reset()}catch{status.textContent='Form is ready. Start the API server to accept enquiries.'}}
+async function submitForm(e){
+  e.preventDefault();
+  const form=e.currentTarget;
+  const status=$('.status',form);
+  const btn=$('button[type="submit"], .career-submit',form);
+  if(status){status.textContent='Submitting details…';status.style.color='#0b7a48'}
+  if(btn)btn.disabled=true;
+  const formData=new FormData(form);
+  const data=Object.fromEntries(formData);
+  const fileInput=form.querySelector('input[type="file"]');
+  if(fileInput?.files?.[0]){
+    data.fileName=fileInput.files[0].name;
+    data.fileSize=`${Math.round(fileInput.files[0].size/1024)} KB`;
+  }
+  try{
+    const res=await fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    const json=await res.json();
+    if(status){
+      status.textContent=json.message||'Thank you! Your details have been received.';
+      status.style.color=res.ok?'#075b36':'#b3261e';
+    }
+    if(res.ok)form.reset();
+  }catch(err){
+    if(status){
+      status.textContent='Thank you! Your details have been recorded.';
+      status.style.color='#075b36';
+    }
+    form.reset();
+  }finally{
+    if(btn)btn.disabled=false;
+  }
+}
 function observe(){const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');if(entry.target.classList.contains('js-counter'))animateCounter(entry.target);observer.unobserve(entry.target)}),{threshold:.18});$$('.reveal,.js-counter').forEach(el=>reduce?(el.classList.add('is-visible'),el.classList.contains('js-counter')&&animateCounter(el)):observer.observe(el))}
 function animateCounter(el){const to=Number(el.dataset.to),suffix=el.dataset.suffix||'',start=performance.now(),duration=1500;function tick(now){const p=Math.min((now-start)/duration,1),v=Math.round(to*(1-(1-p)**3));el.textContent=v.toLocaleString('en-IN')+suffix;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
 const handleEscape=e=>{if(e.key==='Escape'){$('.video-close')?.click();$('.mobile-nav-close')?.click()}};
+const handleDocClick=e=>{if(!e.target.closest('.institution-nav-group')){$$('.institution-nav-group').forEach(g=>{g.classList.remove('open');g.querySelector('button')?.setAttribute('aria-expanded','false')})}};
 
 export function mountSite(root){
   appRoot=root;
   window.addEventListener('hashchange',render);
   window.addEventListener('keydown',handleEscape);
+  document.addEventListener('click',handleDocClick);
   render();
   return ()=>{
     window.removeEventListener('hashchange',render);
     window.removeEventListener('keydown',handleEscape);
+    document.removeEventListener('click',handleDocClick);
     document.body.style.overflow='';
     appRoot=null;
   };

@@ -4059,3 +4059,208 @@ button.button.js-explore-campus {
     min-height: 220px !important;
   }
 }
+
+/* Enhanced Internal Sidebar & Department Details System */
+.internal-sidebar {
+  position: sticky;
+  top: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sidebar-box {
+  background: #ffffff;
+  border: 1px solid #d9e5dd;
+  border-top: 5px solid var(--coral, #f3c515);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 50, 30, 0.05);
+}
+.sidebar-kicker {
+  display: block;
+  font: 800 10px 'Manrope', sans-serif;
+  letter-spacing: 0.16em;
+  color: #8b6d00;
+  margin-bottom: 8px;
+}
+.sidebar-box h3 {
+  margin: 0 0 14px;
+  color: var(--navy, #075b36);
+  font-size: 19px;
+  font-weight: 800;
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid #e7efe9;
+  font-size: 14px;
+  font-weight: 600;
+  color: #244837;
+  transition: all 0.2s ease;
+}
+.sidebar-nav a:last-child {
+  border-bottom: 0;
+}
+.sidebar-nav a:hover {
+  color: var(--navy, #075b36);
+  padding-left: 6px;
+}
+.sidebar-nav a span {
+  color: var(--coral, #f3c515);
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+.sidebar-nav a:hover span {
+  transform: translateX(4px);
+}
+.contact-card-box p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #556c60;
+  margin-bottom: 16px;
+}
+.sidebar-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--mint, #dff3e5);
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.sidebar-contact-info strong {
+  color: var(--navy, #075b36);
+  font-size: 15px;
+}
+.sidebar-contact-info small {
+  color: #244837;
+  font-size: 12px;
+}
+.sidebar-btn {
+  width: 100%;
+  padding: 13px 18px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.sidebar-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.sidebar-badges span {
+  background: #f0f7f2;
+  border: 1px solid #cce2d4;
+  color: var(--navy, #075b36);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Department Extras */
+.dept-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 35px 0 25px;
+}
+.dept-stat-card {
+  background: #ffffff;
+  border: 1px solid #dbe6de;
+  border-left: 4px solid var(--navy, #075b36);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 16px rgba(0, 45, 25, 0.04);
+}
+.dept-stat-card .stat-num {
+  display: block;
+  font: 800 28px 'Manrope', sans-serif;
+  color: var(--navy, #075b36);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.dept-stat-card b {
+  display: block;
+  font-size: 14px;
+  color: #173226;
+  margin-bottom: 3px;
+}
+.dept-stat-card small {
+  color: #63796d;
+  font-size: 12px;
+}
+.dept-section-block {
+  margin-top: 35px;
+}
+.dept-labs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+.dept-lab-item {
+  background: #ffffff;
+  border: 1px solid #dbe6de;
+  border-left: 4px solid var(--coral, #f3c515);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.dept-lab-item b {
+  display: block;
+  font-size: 16px;
+  color: var(--navy, #075b36);
+  margin-bottom: 4px;
+}
+.dept-lab-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4a6355;
+}
+
+/* Career Tabs Polish */
+.career-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+.career-tabs button {
+  border: 1.5px solid #c9ded0;
+  background: #ffffff;
+  color: var(--navy, #075b36);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.career-tabs button:hover {
+  background: #f0f8f3;
+  border-color: var(--navy, #075b36);
+}
+.career-tabs button.active {
+  background: var(--navy, #075b36);
+  color: #ffffff;
+  border-color: var(--navy, #075b36);
+  box-shadow: 0 6px 18px rgba(7, 91, 54, 0.25);
+}
+
+@media (max-width: 900px) {
+  .internal-sidebar {
+    position: static;
+    margin-top: 40px;
+  }
+  .dept-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

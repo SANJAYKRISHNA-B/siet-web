@@ -1934,14 +1934,126 @@ header nav .nav-group>a{
   .vision-detail-title h2{font-size:17px}
 }
 
-/* Chairman's Desk */
-.chairman-page{background:#f8faf7;color:#173226}.chairman-hero{position:relative;min-height:220px;padding:42px clamp(24px,7vw,120px);display:flex;align-items:center;overflow:hidden;background:linear-gradient(115deg,#043f27,#087047);color:#fff}.chairman-hero>img{position:absolute;right:7%;width:190px;height:190px;object-fit:contain;opacity:.1}.chairman-hero>div{position:relative;z-index:1}.chairman-hero .eyebrow{color:#f3c515}.chairman-hero h1{margin:14px 0 8px;font:800 clamp(42px,5vw,68px)/.95 'Manrope';letter-spacing:-.055em}.chairman-hero p{max-width:670px;margin:0;color:#d8ece0;font-size:16px;line-height:1.5}.chairman-message{max-width:1500px;margin:auto;padding:70px clamp(24px,6vw,90px) 90px;display:grid;grid-template-columns:minmax(290px,390px) minmax(0,1fr);gap:clamp(50px,7vw,110px);align-items:start}.chairman-message aside{position:sticky;top:25px;text-align:center}.chairman-photo{height:390px;overflow:hidden;border-bottom:7px solid #f3c515;background:#e7f1ec;box-shadow:0 18px 45px rgba(0,58,37,.1)}.chairman-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center center}.chairman-message aside h2{margin:24px 0 5px;color:#075b39;font:800 27px 'Manrope'}.chairman-message aside b,.chairman-message aside span{display:block}.chairman-message aside b{color:#a98100}.chairman-message aside span{margin-top:4px;color:#62756a;font-size:13px}.chairman-message article{padding-top:8px}.chairman-message article>small{color:#b78b00;font-size:10px;font-weight:900;letter-spacing:.18em}.chairman-message article>h2{max-width:850px;margin:15px 0 28px;color:#075b39;font:800 clamp(34px,3.5vw,54px)/1.08 'Manrope';letter-spacing:-.04em}.chairman-message article>p{margin:0 0 22px;color:#40584b;font-size:16px;line-height:1.85}.chairman-message blockquote{position:relative;margin:32px 0;padding:30px 34px;border-left:6px solid #f3c515;background:#fff;color:#1f4937;font:650 clamp(18px,1.7vw,24px)/1.65 'Manrope';box-shadow:0 12px 35px rgba(0,58,37,.07)}.chairman-message blockquote cite{display:block;margin-top:16px;color:#7a8b81;font-size:12px;font-style:normal;font-weight:700}.chairman-message article footer{padding:24px 0 0;display:block;background:transparent;color:#075b39;border:0}.chairman-message article footer strong,.chairman-message article footer span{display:block}.chairman-message article footer strong{font:800 20px 'Manrope'}.chairman-message article footer span{margin-top:5px;color:#708178;font-size:12px}.chairman-message article footer{grid-column:auto}
-@media(max-width:850px){.chairman-message{grid-template-columns:1fr;padding-top:42px}.chairman-message aside{position:static}.chairman-photo{height:min(520px,115vw)}.chairman-message article>h2{font-size:clamp(32px,8vw,46px)}}
-@media(max-width:520px){.chairman-hero{min-height:190px;padding-block:34px}.chairman-hero h1{font-size:40px}.chairman-hero p{font-size:14px}.chairman-message{padding-inline:16px;gap:38px}.chairman-message blockquote{padding:23px 20px}.chairman-message article>p{font-size:14px}}
-
-/* Principal's Desk shares the leadership system with the Chairman's Desk. */
-.principal-page .chairman-photo{height:480px;background:#7d2018}.principal-page .chairman-photo img{object-fit:cover;object-position:center top}.principal-page .chairman-message aside h2{font-size:24px}.principal-page .principal-message blockquote{font-size:clamp(17px,1.45vw,22px)}
-@media(max-width:850px){.principal-page .chairman-photo{height:min(650px,125vw)}}
+/* Chairman's Desk and Principal's Desk */
+.chairman-page{background:#f8faf7;color:#173226;min-height:80vh}
+.chairman-content{
+  width:min(1380px,92%) !important;
+  margin:0 auto !important;
+  padding:clamp(40px,5vw,80px) 0 clamp(60px,6vw,100px) !important;
+  display:grid !important;
+  grid-template-columns:minmax(280px,360px) minmax(0,1fr) !important;
+  gap:clamp(40px,5vw,80px) !important;
+  align-items:start !important;
+}
+.chairman-portrait{
+  position:sticky !important;
+  top:25px !important;
+  text-align:center !important;
+  background:#ffffff !important;
+  border-radius:16px !important;
+  padding:24px !important;
+  box-shadow:0 10px 30px rgba(0,50,30,0.07) !important;
+  border:1px solid #e2ede6 !important;
+}
+.chairman-portrait img{
+  width:100% !important;
+  max-height:480px !important;
+  object-fit:contain !important;
+  object-position:bottom center !important;
+  border-radius:12px !important;
+  background:linear-gradient(180deg,#f0f7f3 0%,#e3efe8 100%) !important;
+  border-bottom:5px solid #f5bd00 !important;
+}
+.chairman-portrait h2{
+  margin:18px 0 4px !important;
+  color:#00663f !important;
+  font-size:clamp(22px,2.2vw,30px) !important;
+  font-weight:800 !important;
+  line-height:1.2 !important;
+}
+.chairman-portrait b{
+  display:block !important;
+  color:#b58200 !important;
+  font-size:16px !important;
+  font-weight:700 !important;
+}
+.chairman-portrait p{
+  margin:4px 0 0 !important;
+  color:#557263 !important;
+  font-size:14px !important;
+}
+article.chairman-message,
+.chairman-content .chairman-message{
+  display:block !important;
+  max-width:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+.chairman-message small{
+  display:inline-block !important;
+  color:#b58200 !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  margin-bottom:12px !important;
+}
+.chairman-message h1{
+  margin:0 0 24px !important;
+  font-size:clamp(30px,3.5vw,50px) !important;
+  line-height:1.2 !important;
+  color:#005c38 !important;
+  font-weight:850 !important;
+  letter-spacing:-0.02em !important;
+}
+.chairman-message p{
+  font-size:clamp(15px,1.08vw,17px) !important;
+  line-height:1.85 !important;
+  color:#354e42 !important;
+  margin:0 0 20px !important;
+}
+.chairman-message blockquote{
+  margin:28px 0 !important;
+  padding:24px 30px !important;
+  border-left:5px solid #f5bd00 !important;
+  background:#ffffff !important;
+  border-radius:0 12px 12px 0 !important;
+  box-shadow:0 8px 24px rgba(0,45,25,0.06) !important;
+  font-size:clamp(16px,1.25vw,20px) !important;
+  line-height:1.7 !important;
+  color:#0f4430 !important;
+  font-style:italic !important;
+}
+.chairman-message strong{
+  display:block !important;
+  margin-top:28px !important;
+  font-size:18px !important;
+  color:#005c38 !important;
+  font-weight:800 !important;
+  line-height:1.5 !important;
+}
+.principal-page .chairman-portrait img{
+  background:linear-gradient(180deg,#fbf2f2 0%,#f4dedd 100%) !important;
+  border-bottom:5px solid #a8241b !important;
+}
+.principal-page .chairman-portrait b{
+  color:#a8241b !important;
+}
+@media (max-width:900px){
+  .chairman-content{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+    padding-top:30px !important;
+  }
+  .chairman-portrait{
+    position:static !important;
+    max-width:440px !important;
+    margin:0 auto !important;
+  }
+  .chairman-portrait img{
+    max-height:380px !important;
+  }
+}
 
 /* Vision hero refinement based on the supplied composition. */
 .vision-hero{background:radial-gradient(circle at 24% 54%,rgba(13,119,81,.38),transparent 38%),radial-gradient(circle at 72% 30%,rgba(7,102,70,.24),transparent 30%),linear-gradient(110deg,#003b29 0%,#005b40 54%,#003825 100%)}.vision-hero .chairman-panel:before{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.025),transparent 70%)}.vision-hero .chairman-photo{left:-7%;bottom:-3px;width:100%;max-width:680px}.vision-hero .quote-box{right:1%;top:72px}.vision-hero .chairman-name-card{left:8%;bottom:17px}.vision-copy{padding-right:clamp(28px,4vw,70px)}

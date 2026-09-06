@@ -1,5 +1,5 @@
-const $=(selector,root=document)=>root.querySelector(selector);
-const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
+const $=(selector,root=document)=>root?.querySelector?.(selector)||null;
+const $$=(selector,root=document)=>root?.querySelectorAll?[...root.querySelectorAll(selector)]:[];
 let appRoot;
 const icon=(name)=>{
   if(name==='menu') return `<svg class="ui-icon-svg menu-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3.5" y1="6" x2="20.5" y2="6"></line><line x1="3.5" y1="12" x2="20.5" y2="12"></line><line x1="3.5" y1="18" x2="20.5" y2="18"></line></svg>`;
@@ -327,11 +327,11 @@ function bind(){
      if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click()}
    })
  });
-   $('.vision-tab-btn').forEach(btn => btn.addEventListener('click', () => {
-    $('.vision-tab-btn').forEach(x => x.classList.toggle('active', x === btn));
-    $('.vision-content-pane').forEach(pane => pane.classList.toggle('active', pane.dataset.pane === btn.dataset.tab));
+  $$('.vision-tab-btn').forEach(btn => btn.addEventListener('click', () => {
+    $$('.vision-tab-btn').forEach(x => x.classList.toggle('active', x === btn));
+    $$('.vision-content-pane').forEach(pane => pane.classList.toggle('active', pane.dataset.pane === btn.dataset.tab));
   }));
-  $('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
+  $$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
 }
 async function submitForm(e){e.preventDefault();const status=$('.status',e.currentTarget);status.textContent='Sending…';const data=Object.fromEntries(new FormData(e.currentTarget));try{const res=await fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const json=await res.json();status.textContent=json.message||'Thank you. Your details have been received.';if(res.ok)e.currentTarget.reset()}catch{status.textContent='Form is ready. Start the API server to accept enquiries.'}}
 function observe(){const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.classList.add('is-visible');if(entry.target.classList.contains('js-counter'))animateCounter(entry.target);observer.unobserve(entry.target)}),{threshold:.18});$$('.reveal,.js-counter').forEach(el=>reduce?(el.classList.add('is-visible'),el.classList.contains('js-counter')&&animateCounter(el)):observer.observe(el))}

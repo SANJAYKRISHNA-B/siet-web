@@ -32932,10 +32932,10 @@ button.button.js-explore-campus {
 }
 
 .siet-cd-prose>p {
-  margin: 0 0 16px;
-  color: #526d5e;
-  font-size: 15.5px;
-  line-height: 1.75
+  margin: 0 0 22px;
+  color: #174531;
+  font: 600 clamp(16.5px, 1.65vw, 21px)/1.55 'Playfair Display', serif;
+  letter-spacing: -.005em
 }
 
 .siet-cd-prose blockquote {
@@ -32946,7 +32946,7 @@ button.button.js-explore-campus {
   border-radius: 0 12px 12px 0;
   background: linear-gradient(120deg, #fffdf3, #f9fcf8);
   color: #174531;
-  font: 600 clamp(16.5px, 1.65vw, 21px)/1.5 'Playfair Display', serif
+  font: 600 clamp(16.5px, 1.65vw, 21px)/1.55 'Playfair Display', serif
 }
 
 .siet-cd-prose blockquote:before {
@@ -33130,14 +33130,16 @@ button.button.js-explore-campus {
   }
 
   .siet-cd-prose>p {
-    font-size: 14px;
-    line-height: 1.65
+    margin-bottom: 18px;
+    font-size: clamp(16px, 4.4vw, 18px);
+    line-height: 1.6
   }
 
   .siet-cd-prose blockquote {
     margin: 16px 0;
     padding: 14px 14px 14px 18px;
-    font-size: 15.5px
+    font-size: clamp(16px, 4.4vw, 18px);
+    line-height: 1.6
   }
 
   .siet-cd-signoff {

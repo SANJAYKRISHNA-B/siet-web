@@ -1394,7 +1394,7 @@ const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase());
 function sietPageHeader(title, subtitle = '', kicker = 'SRI SHAKTHI') {
   return `<section class="page-hero"><img class="page-crest" src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><div class="eyebrow"><span></span> ${kicker}</div><h1 class="reveal">${title.toUpperCase()}</h1>${subtitle ? `<p>${subtitle}</p>` : ''}</section>`;
 }
-function sietHudHeader(title, breadcrumbName = title) {
+function sietHudHeader(title, breadcrumbName = title, showDepartments = true) {
   return `<section class="department-detail-header siet-hud-header">
     <div class="department-detail-title">
       <div class="hud-title-group">
@@ -1402,7 +1402,7 @@ function sietHudHeader(title, breadcrumbName = title) {
         <h1>${title.toUpperCase()}</h1>
       </div>
       <div class="department-breadcrumb">
-        <a href="#/">Home</a><span>/</span><a href="#/departments">Departments</a><span>/</span><b>${breadcrumbName}</b>
+        <a href="#/">Home</a><span>/</span>${showDepartments ? '<a href="#/departments">Departments</a><span>/</span>' : ''}<b>${breadcrumbName}</b>
       </div>
     </div>
   </section>`;
@@ -2493,9 +2493,46 @@ function applyPortalPage(activeTab = 'enquiry') {
 function enquiryPage(apply = false) { return applyPortalPage(apply ? 'enquiry' : 'enquiry'); }
 const field = (label, name, type, placeholder) => `<label>${label} <b>*</b><input type="${type}" name="${name}" placeholder="${placeholder}" required></label>`;
 const selectField = (label, name, opts) => `<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o => `<option>${o}</option>`).join('')}</select></label>`;
+const careerUnits = {
+  college: {
+    name: 'Engineering College',
+    subtitle: 'Autonomous Institution · Affiliated to Anna University',
+    desc: 'We invite passionate educators, researchers and industry professionals to join an institution focused on applied research, innovation and industry-relevant engineering education.',
+    cats: [
+      ['Leadership Positions', ['Principal / Dean', 'Head of Department', 'Academic Administrator']],
+      ['College Teaching Positions', ['Professor', 'Associate Professor', 'Assistant Professor']],
+      ['Career Oriented Specialists', ['Aptitude Trainer', 'Programming Trainer', 'Machine Learning Trainer']],
+      ['Managerial Positions', ['HR and Administration', 'Admissions and Outreach']],
+      ['Creative Positions', ['Content and Communications', 'Graphic Designer']]
+    ]
+  },
+  school: {
+    name: 'CBSE Senior Secondary School',
+    subtitle: 'Affiliated to CBSE, New Delhi',
+    desc: 'Join an inspiring school community committed to experiential holistic education, academic excellence, sporting achievement and character building.',
+    cats: [
+      ['School Leadership Positions', ['Principal / Vice Principal', 'Academic Coordinator', 'Section Head']],
+      ['PGT & TGT Teachers', ['English', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']],
+      ['Primary & Kindergarten', ['PRT Teachers', 'Montessori / Kindergarten Educators', 'Language Specialists']],
+      ['Sports & Extracurricular', ['Physical Education Director', 'Art & Craft Teacher', 'Music & Dance Instructor']]
+    ]
+  },
+  lab: {
+    name: 'Food & Environmental Testing Laboratory',
+    subtitle: 'NABL Accredited Testing Facility',
+    desc: 'Work in cutting-edge laboratory facilities conducting physical, chemical, and microbiological analyses for agricultural, food, and environmental sectors.',
+    cats: [
+      ['Quality & Laboratory Management', ['Quality Manager', 'Technical Manager', 'NABL Coordinator']],
+      ['Analytical Specialists', ['Senior Food Analyst', 'Chemical Analyst', 'Residue Analysis Specialist']],
+      ['Microbiology Specialists', ['Senior Microbiologist', 'Microbiology Analyst']],
+      ['Technical Support', ['Laboratory Technician', 'Sample Management Assistant']]
+    ]
+  }
+};
+
 function careersPage() {
   const unit = careerUnits.college;
-  return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
+  return `<main class="careers-page">${sietHudHeader('Careers', 'Careers', false)}<section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
 }
 
 function videoModal() { return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>` }

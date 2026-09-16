@@ -38398,10 +38398,13 @@ a.siet-curr-navlink {
 .curr-center-title,
 .siet-sem-card-head h3,
 .siet-lib-feature-item h3,
-.siet-lib-section-head h2,
+.siet-lib-section-head h2 {
+  text-transform: uppercase !important;
+}
+
 .institution-nav-group > div a,
 .mobile-nav-sublink {
-  text-transform: uppercase !important;
+  text-transform: capitalize !important;
 }
 
 /* Campus background behind the Departments grid */

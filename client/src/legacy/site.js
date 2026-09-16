@@ -50,8 +50,7 @@ const icon = (name) => {
 
 const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
-  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['departments', 'Departments'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
-  { label: 'Admissions', icon: 'grad', items: [['programmes', 'UG & PG Programmes'], ['admission-enquiry', 'Admission Enquiry'], ['admission-referral', 'Admission Referral']] },
+  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['departments', 'Departments'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
   { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
   { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
@@ -143,9 +142,13 @@ const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class
 
 function header() {
   return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
-<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map((g, i) => `${i === 5 ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
+<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
 <div class="mobile-nav-backdrop"></div>
-<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map((g, i) => `${i === 5 ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`
+<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`;
+}
+
+function applyHeader(activeTab = 'enquiry') {
+  return `<header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><div class="apply-portal-bar"><div class="apply-portal-bar-inner"><a href="#/" class="apply-back-home-btn" aria-label="Back to home page"><svg class="ui-icon-svg back-arrow-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg><span>Back to Home</span></a><div class="apply-portal-tabs" role="tablist" aria-label="Admissions Form Type"><button type="button" class="apply-portal-tab-btn ${activeTab === 'enquiry' ? 'is-active' : ''}" data-portal-tab="enquiry" role="tab" aria-selected="${activeTab === 'enquiry'}"><svg class="tab-icon-svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg><span>Admission Enquiry</span></button><button type="button" class="apply-portal-tab-btn ${activeTab === 'referral' ? 'is-active' : ''}" data-portal-tab="referral" role="tab" aria-selected="${activeTab === 'referral'}"><svg class="tab-icon-svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Admission Referral</span></button></div></div></div></div></header>`;
 }
 
 function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
@@ -2331,7 +2334,163 @@ function academicCalendarPage() {
 </main>`;
 }
 
-function enquiryPage(apply = false) { return `<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${apply ? 'Apply for Sri Shakthi' : 'Admission Enquiry'}</h1><h2>Let’s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter 10 digit mobile number')}${field('Email Address', 'email', 'email', 'Enter your email address')}${selectField('Course Level', 'level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'course')}${field('Academic Qualification / Marks', 'qualification', 'text', 'Qualification and marks')}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${apply ? 'Submit Application' : 'Send Enquiry'} →</button><p class="status" aria-live="polite"></p></form></section></main>` }
+function applyPortalPage(activeTab = 'enquiry') {
+  return `<main class="enquiry-page-v3 apply-portal-page">
+    <div id="apply-pane-enquiry" class="apply-portal-pane ${activeTab === 'enquiry' ? 'is-active' : ''}">
+      <section class="enquiry-hero-v3">
+        <img src="/brand/siet-logo.png" alt="Sri Shakthi Emblem">
+        <div class="eyebrow"><span></span> SRI SHAKTHI ADMISSIONS</div>
+        <h1>Apply for Sri Shakthi</h1>
+        <h2>Let’s plan your <em>next step.</em></h2>
+        <p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p>
+      </section>
+
+      <section class="apply-main-container">
+        <div class="apply-form-center-wrap">
+          <div class="apply-card-header">
+            <div class="card-kicker"><span class="kicker-line"></span> ONLINE ADMISSION ENQUIRY</div>
+            <h2>Start Your Engineering Journey With SIET</h2>
+            <p>Complete this brief form to schedule your dedicated academic counseling session and receive programme details.</p>
+          </div>
+
+          <form class="enquiry-form-v3 apply-form-v3 js-form">
+            <!-- STEP 1: PERSONAL CONTACT -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">1</span> Personal Information</div>
+              <div class="enquiry-fields-v3">
+                ${field('Full Name', 'name', 'text', 'Enter your full name')}
+                <label>Mobile Number <b>*</b>
+                  <div class="phone-input-wrap">
+                    <span class="phone-prefix">+91</span>
+                    <input type="tel" name="phone" placeholder="10 digit mobile" pattern="[0-9]{10}" maxlength="10" required>
+                  </div>
+                </label>
+                ${field('Email Address', 'email', 'email', 'Enter your email address')}
+              </div>
+            </div>
+
+            <!-- STEP 2: ACADEMIC INTEREST -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">2</span> Academic Preferences</div>
+              <div class="enquiry-fields-v3">
+                ${selectField('Course Level', 'level', ['UG', 'PG'])}
+                ${programSelectHtml('Preferred Department', 'course')}
+                ${field('Academic Qualification / Marks', 'qualification', 'text', 'Class 12 % / Diploma / Degree CGPA')}
+              </div>
+            </div>
+
+            <!-- STEP 3: SPECIFIC QUERY & QUICK CHIPS -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">3</span> Queries &amp; Guidance Needed</div>
+              <div class="quick-chips-wrapper">
+                <div class="quick-chips-label">Quick topics you’d like details on:</div>
+                <div class="quick-chips-group">
+                  <button type="button" class="quick-chip-btn" data-topic="Fee structure and scholarship criteria">💰 Fee Structure</button>
+                  <button type="button" class="quick-chip-btn" data-topic="Campus hostel accommodation and mess facilities">🏠 Hostel &amp; Mess</button>
+                  <button type="button" class="quick-chip-btn" data-topic="College bus routes covering major destinations">🚌 Bus Routes</button>
+                  <button type="button" class="quick-chip-btn" data-topic="Merit and sports scholarship opportunities">🌟 Scholarships</button>
+                  <button type="button" class="quick-chip-btn" data-topic="Admission and counselling guidance">📋 Admission Guidance</button>
+                </div>
+              </div>
+
+              <label>Message / Any Specific Query <b>*</b>
+                <textarea name="message" id="enquiry-message-area" rows="4" required minlength="5" placeholder="Share any specific queries regarding courses, eligibility, or admissions..."></textarea>
+              </label>
+            </div>
+
+            <div class="form-submit-footer">
+              <div class="confidential-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Official SIET Admissions · 100% Confidential</span>
+              </div>
+              <button class="button apply-submit-btn" type="submit">Submit Application →</button>
+            </div>
+            <p class="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- REFERRAL PANE -->
+    <div id="apply-pane-referral" class="apply-portal-pane ${activeTab === 'referral' ? 'is-active' : ''}">
+      <section class="enquiry-hero-v3 referral-hero-v3">
+        <img src="/brand/siet-logo.png" alt="Sri Shakthi Crest">
+        <div class="eyebrow"><span></span> SRI SHAKTHI &bull; REFERRAL PROGRAMME</div>
+        <h1>Student Admission Referral</h1>
+        <h2>Recommend an aspiring <em>student.</em></h2>
+        <p>Alumni, students, parents, faculty, and well-wishers can connect talented students directly with our admissions team.</p>
+      </section>
+
+      <section class="apply-main-container">
+        <div class="apply-form-center-wrap">
+          <div class="apply-card-header">
+            <div class="card-kicker"><span class="kicker-line"></span> RECOMMEND A STUDENT</div>
+            <h2>Candidate Referral Form</h2>
+            <p>Please provide your information along with the aspiring candidate's contact details.</p>
+          </div>
+
+          <form class="enquiry-form-v3 apply-form-v3 js-form">
+            <!-- REFERRER DETAILS -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">1</span> Referrer Details (Your Information)</div>
+              <div class="enquiry-fields-v3">
+                ${field('Your Full Name', 'referrer_name', 'text', 'Enter your full name')}
+                <label>Your Mobile Number <b>*</b>
+                  <div class="phone-input-wrap">
+                    <span class="phone-prefix">+91</span>
+                    <input type="tel" name="referrer_phone" placeholder="10 digit mobile" pattern="[0-9]{10}" maxlength="10" required>
+                  </div>
+                </label>
+                ${field('Your Email Address', 'referrer_email', 'email', 'Enter your email address')}
+                ${selectField('Your Relationship with SIET', 'referrer_relation', ['Alumni', 'Current Student', 'Faculty / Staff', 'Parent', 'Industry Partner', 'Well-wisher'])}
+                <label id="referrer-reg-no-wrapper" class="referral-reg-no-field" style="display:none">Current Student Register Number <b>*</b>
+                  <input type="text" name="referrer_reg_no" id="referrer_reg_no" placeholder="Enter register number (e.g. 714022...)" autocomplete="off">
+                </label>
+              </div>
+            </div>
+
+            <!-- CANDIDATE DETAILS -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">2</span> Candidate Details (Student Being Referred)</div>
+              <div class="enquiry-fields-v3">
+                ${field('Candidate Full Name', 'candidate_name', 'text', 'Enter candidate\'s full name')}
+                <label>Candidate Mobile Number <b>*</b>
+                  <div class="phone-input-wrap">
+                    <span class="phone-prefix">+91</span>
+                    <input type="tel" name="candidate_phone" placeholder="10 digit mobile" pattern="[0-9]{10}" maxlength="10" required>
+                  </div>
+                </label>
+                ${field('Candidate Email Address', 'candidate_email', 'email', 'Enter candidate\'s email')}
+                ${selectField('Preferred Course Level', 'candidate_level', ['UG', 'PG'])}
+                ${programSelectHtml('Preferred Department', 'candidate_course')}
+                ${field('Current Qualification / School', 'candidate_qualification', 'text', 'Class 12 / Diploma / Degree')}
+              </div>
+            </div>
+
+            <!-- RECOMMENDATION NOTES -->
+            <div class="form-step-section">
+              <div class="form-step-title"><span class="step-num">3</span> Recommendation Notes</div>
+              <label>Message / Reason for Referral
+                <textarea name="remarks" rows="3" placeholder="Tell us about the candidate's academic interests, sports/cultural achievements, or any specific scholarship guidance needed..."></textarea>
+              </label>
+            </div>
+
+            <div class="form-submit-footer">
+              <div class="confidential-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Direct Referral to Admissions Committee</span>
+              </div>
+              <button class="button apply-submit-btn" type="submit">Submit Referral →</button>
+            </div>
+            <p class="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>`;
+}
+
+function enquiryPage(apply = false) { return applyPortalPage(apply ? 'enquiry' : 'enquiry'); }
 const field = (label, name, type, placeholder) => `<label>${label} <b>*</b><input type="${type}" name="${name}" placeholder="${placeholder}" required></label>`;
 const selectField = (label, name, opts) => `<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o => `<option>${o}</option>`).join('')}</select></label>`;
 function careersPage() {
@@ -2350,7 +2509,44 @@ function routeParams() {
   if (qIndex === -1) return new URLSearchParams();
   return new URLSearchParams(raw.slice(qIndex + 1));
 }
-function render() { if (!appRoot) return; const r = route(); let content = !r ? homePage() : r === 'vision-mission' || r === 'about' ? visionPage() : r === 'core-beliefs' ? coreBeliefsPage() : r === 'program-outcomes' ? programOutcomesPage() : r === 'core-values' ? coreValuesPage() : r === 'philosophy' ? philosophyPage() : r === 'chairman' ? chairmanPage() : r === 'principal' ? principalPage() : r === 'admission-enquiry' || r === 'apply' ? enquiryPage(r === 'apply') : r === 'admission-referral' || r === 'referral' ? referralPage() : r === 'programmes' ? programmesPage() : r === 'departments' ? departmentsPage() : r === 'careers' ? careersPage() : r === 'library' ? libraryPage() : r === 'curriculum' ? curriculumPage() : r === 'academic-calendar' ? academicCalendarPage() : internalPage(r); appRoot.innerHTML = header() + content + footer(); document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`; bind(); scrollTo(0, 0) }
+function render() {
+  if (!appRoot) return;
+  const r = route();
+  const isApply = (r === 'apply' || r === 'admission-enquiry' || r === 'admission-referral' || r === 'referral');
+
+  if (isApply) {
+    const isReferral = (r === 'admission-referral' || r === 'referral' || routeParams().get('tab') === 'referral');
+    const activeTab = isReferral ? 'referral' : 'enquiry';
+    appRoot.innerHTML = applyHeader(activeTab) + applyPortalPage(activeTab) + footer();
+    document.title = isReferral
+      ? 'Admission Referral | Sri Shakthi Institute of Engineering & Technology'
+      : 'Apply for Sri Shakthi | SIET';
+    bind();
+    scrollTo(0, 0);
+    return;
+  }
+
+  let content = !r ? homePage() :
+    r === 'vision-mission' || r === 'about' ? visionPage() :
+    r === 'core-beliefs' ? coreBeliefsPage() :
+    r === 'program-outcomes' ? programOutcomesPage() :
+    r === 'core-values' ? coreValuesPage() :
+    r === 'philosophy' ? philosophyPage() :
+    r === 'chairman' ? chairmanPage() :
+    r === 'principal' ? principalPage() :
+    r === 'programmes' ? programmesPage() :
+    r === 'departments' ? departmentsPage() :
+    r === 'careers' ? careersPage() :
+    r === 'library' ? libraryPage() :
+    r === 'curriculum' ? curriculumPage() :
+    r === 'academic-calendar' ? academicCalendarPage() :
+    internalPage(r);
+
+  appRoot.innerHTML = header() + content + footer();
+  document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`;
+  bind();
+  scrollTo(0, 0);
+}
 
 function bind() {
   if (route() === 'chairman') {
@@ -2379,6 +2575,52 @@ function bind() {
   if (route() === 'programmes') {
     document.title = "UG & PG Programmes | Sri Shakthi Institute of Engineering & Technology";
   }
+
+  // Apply Portal tab switching
+  $$('.apply-portal-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.portalTab;
+      if (!tab) return;
+      $$('.apply-portal-tab-btn').forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      const enquiryPane = $('#apply-pane-enquiry');
+      const referralPane = $('#apply-pane-referral');
+      if (enquiryPane && referralPane) {
+        enquiryPane.classList.toggle('is-active', tab === 'enquiry');
+        referralPane.classList.toggle('is-active', tab === 'referral');
+      }
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', tab === 'referral' ? '#/admission-referral' : '#/apply');
+      }
+      document.title = tab === 'referral'
+        ? 'Admission Referral | Sri Shakthi Institute of Engineering & Technology'
+        : 'Apply for Sri Shakthi | SIET';
+    });
+  });
+
+  // Quick query chips interaction
+  $$('.quick-chip-btn').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const topic = chip.dataset.topic;
+      const textarea = $('#enquiry-message-area');
+      if (!textarea || !topic) return;
+      chip.classList.toggle('is-selected');
+      const isSelected = chip.classList.contains('is-selected');
+      if (isSelected) {
+        if (!textarea.value.includes(topic)) {
+          textarea.value = textarea.value.trim() 
+            ? `${textarea.value.trim()}\n• ${topic}` 
+            : `Please provide details regarding:\n• ${topic}`;
+        }
+      } else {
+        textarea.value = textarea.value.replace(`\n• ${topic}`, '').replace(`• ${topic}`, '').replace('Please provide details regarding:\n', '').trim();
+      }
+      textarea.dispatchEvent(new Event('input'));
+    });
+  });
 
   // Filter tabs on Programmes page
   $$('.siet-prog-filter-btn').forEach(btn => {

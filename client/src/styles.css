@@ -17938,7 +17938,7 @@ header nav,
   position: absolute;
   inset: 0;
   background: url('/brand/techpark-local.png') 65% 30% / cover no-repeat;
-  opacity: 0.85;
+  opacity: 0.2;
   pointer-events: none;
   filter: saturate(1.15) brightness(1.02);
 }
@@ -33184,7 +33184,7 @@ button.button.js-explore-campus {
 }
 
 .home-page .placement-v2-building-photo {
-  opacity: 1;
+  opacity: 0.2;
   filter: none;
   background-image: url('/brand/techpark-local.png');
   background-position: center top;

@@ -910,7 +910,7 @@ function homePage() {
 
       <!-- Right Column: Large Featured Event Card -->
       <div class="events-featured-card reveal">
-        <div class="featured-bg-photo" style="background-image: url('/brand/events/featured-technovate.jpg');"></div>
+        <div class="featured-bg-photo" style="background-image: url('/brand/events/featured-technovate-hd.jpg');"></div>
         <div class="featured-overlay-content">
           <div class="featured-left-info">
             <span class="featured-gold-badge">★ Featured Event</span>
@@ -966,7 +966,7 @@ function homePage() {
             <strong class="date-num">15</strong>
             <span class="date-month">SEP</span>
           </div>
-          <img src="/brand/events/event-sangamam.jpg" alt="Sangamam 2026 Cultural Event" loading="lazy">
+          <img src="/brand/events/event-sangamam-hd.jpg" alt="Sangamam 2026 Cultural Event" width="1672" height="941" loading="lazy" decoding="async">
         </div>
         <div class="event-card-body">
           <span class="event-cat-tag tag-orange">CULTURAL EVENT</span>
@@ -989,7 +989,7 @@ function homePage() {
             <strong class="date-num">22</strong>
             <span class="date-month">SEP</span>
           </div>
-          <img src="/brand/events/event-industry-connect.jpg" alt="Industry Connect & Career Day" loading="lazy">
+          <img src="/brand/events/event-industry-connect-hd.jpg" alt="Industry Connect & Career Day" width="1672" height="941" loading="lazy" decoding="async">
         </div>
         <div class="event-card-body">
           <span class="event-cat-tag tag-gold">CAREER EVENT</span>
@@ -1012,7 +1012,7 @@ function homePage() {
             <strong class="date-num">03</strong>
             <span class="date-month">OCT</span>
           </div>
-          <img src="/brand/events/event-sports-meet.jpg" alt="Inter-Department Sports Meet" loading="lazy">
+          <img src="/brand/events/event-sports-meet-hd.jpg" alt="Inter-Department Sports Meet" width="1672" height="941" loading="lazy" decoding="async">
         </div>
         <div class="event-card-body">
           <span class="event-cat-tag tag-orange">SPORTS EVENT</span>
@@ -3140,7 +3140,7 @@ function bind() {
       date: '28 Aug 2026',
       loc: 'Main Auditorium',
       time: '09:00 AM - 05:00 PM',
-      bg: '/brand/events/featured-technovate.jpg'
+      bg: '/brand/events/featured-technovate-hd.jpg'
     },
     {
       title: 'Hack-A-Shakthi 2026',
@@ -3158,7 +3158,7 @@ function bind() {
       date: '16 Sep 2026',
       loc: 'Open Air Theatre',
       time: '05:00 PM - 10:30 PM',
-      bg: '/brand/events/event-sangamam.jpg'
+      bg: '/brand/events/event-sangamam-hd.jpg'
     }
   ];
   let featIdx = 0;

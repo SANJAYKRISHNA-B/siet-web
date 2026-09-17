@@ -147,8 +147,8 @@ function header() {
 <aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`;
 }
 
-function applyHeader(activeTab = 'enquiry') {
-  return `<header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><div class="apply-portal-bar"><div class="apply-portal-bar-inner"><a href="#/" class="apply-back-home-btn" aria-label="Back to home page"><svg class="ui-icon-svg back-arrow-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg><span>Back to Home</span></a><div class="apply-portal-tabs" role="tablist" aria-label="Admissions Form Type"><button type="button" class="apply-portal-tab-btn ${activeTab === 'enquiry' ? 'is-active' : ''}" data-portal-tab="enquiry" role="tab" aria-selected="${activeTab === 'enquiry'}"><svg class="tab-icon-svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg><span>Admission Enquiry</span></button><button type="button" class="apply-portal-tab-btn ${activeTab === 'referral' ? 'is-active' : ''}" data-portal-tab="referral" role="tab" aria-selected="${activeTab === 'referral'}"><svg class="tab-icon-svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Admission Referral</span></button></div></div></div></div></header>`;
+function applyHeader() {
+  return `<header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a></div></header>`;
 }
 
 function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
@@ -2335,11 +2335,28 @@ function academicCalendarPage() {
 }
 
 function applyPortalPage(activeTab = 'enquiry') {
+  const isRef = (activeTab === 'referral');
   return `<main class="enquiry-page-v3 apply-portal-page">
-    <div id="apply-pane-enquiry" class="apply-portal-pane ${activeTab === 'enquiry' ? 'is-active' : ''}">
-      ${sietHudHeader('Apply for Sri Shakthi', 'Apply', false)}
+    <section class="department-detail-header siet-hud-header">
+      <div class="department-detail-title">
+        <div class="hud-title-group">
+          <span class="hud-diamond" aria-hidden="true">◈</span>
+          <h1 id="apply-hud-title">${isRef ? 'STUDENT ADMISSION REFERRAL' : 'APPLY FOR SRI SHAKTHI'}</h1>
+        </div>
+        <div class="department-breadcrumb">
+          <a href="#/">← Back to Home</a><span>/</span><b id="apply-hud-breadcrumb">${isRef ? 'Referral' : 'Apply'}</b>
+        </div>
+      </div>
+    </section>
 
-      <section class="apply-main-container">
+    <section class="apply-main-container">
+      <div class="career-tabs apply-tabs" role="tablist">
+        <button type="button" class="apply-portal-tab-btn ${!isRef ? 'active' : ''}" data-portal-tab="enquiry" role="tab" aria-selected="${!isRef}">Admission Enquiry</button>
+        <button type="button" class="apply-portal-tab-btn ${isRef ? 'active' : ''}" data-portal-tab="referral" role="tab" aria-selected="${isRef}">Admission Referral</button>
+      </div>
+
+      <!-- ENQUIRY PANE -->
+      <div id="apply-pane-enquiry" class="apply-portal-pane ${!isRef ? 'is-active' : ''}">
         <div class="apply-form-center-wrap">
           <div class="apply-card-header">
             <div class="card-kicker"><span class="kicker-line"></span> ONLINE ADMISSION ENQUIRY</div>
@@ -2402,14 +2419,10 @@ function applyPortalPage(activeTab = 'enquiry') {
             <p class="status" aria-live="polite"></p>
           </form>
         </div>
-      </section>
-    </div>
+      </div>
 
-    <!-- REFERRAL PANE -->
-    <div id="apply-pane-referral" class="apply-portal-pane ${activeTab === 'referral' ? 'is-active' : ''}">
-      ${sietHudHeader('Student Admission Referral', 'Referral', false)}
-
-      <section class="apply-main-container">
+      <!-- REFERRAL PANE -->
+      <div id="apply-pane-referral" class="apply-portal-pane ${isRef ? 'is-active' : ''}">
         <div class="apply-form-center-wrap">
           <div class="apply-card-header">
             <div class="card-kicker"><span class="kicker-line"></span> RECOMMEND A STUDENT</div>
@@ -2473,8 +2486,8 @@ function applyPortalPage(activeTab = 'enquiry') {
             <p class="status" aria-live="polite"></p>
           </form>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>`;
 }
 
@@ -2608,6 +2621,7 @@ function bind() {
       if (!tab) return;
       $$('.apply-portal-tab-btn').forEach(b => {
         const active = b === btn;
+        b.classList.toggle('active', active);
         b.classList.toggle('is-active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       });
@@ -2616,6 +2630,14 @@ function bind() {
       if (enquiryPane && referralPane) {
         enquiryPane.classList.toggle('is-active', tab === 'enquiry');
         referralPane.classList.toggle('is-active', tab === 'referral');
+      }
+      const titleEl = $('#apply-hud-title');
+      const breadcrumbEl = $('#apply-hud-breadcrumb');
+      if (titleEl) {
+        titleEl.textContent = tab === 'referral' ? 'STUDENT ADMISSION REFERRAL' : 'APPLY FOR SRI SHAKTHI';
+      }
+      if (breadcrumbEl) {
+        breadcrumbEl.textContent = tab === 'referral' ? 'Referral' : 'Apply';
       }
       if (window.history && window.history.replaceState) {
         window.history.replaceState(null, '', tab === 'referral' ? '#/admission-referral' : '#/apply');

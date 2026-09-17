@@ -51,7 +51,7 @@ const icon = (name) => {
 
 const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
-  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['departments', 'Departments'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
+  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
   { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
   { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
@@ -59,7 +59,7 @@ const pageGroups = [
 const pageCopy = {
   'admission-referral': ['Admission Referral', 'Recommend an aspiring student to Sri Shakthi.', 'Support prospective engineers by connecting them with our admissions team through the institutional referral programme.'],
   'core-beliefs': ['Core Beliefs', 'Enduring principles that guide our mission.', 'Achieving academic success is our gateway, employability is our milestone, confident citizenship is our destination, discipline provides willpower, and education is our weapon to change the world.'],
-  academics: ['Academic Overview', 'Knowledge designed for application.', 'Flexible learning, strong fundamentals, laboratories, projects and industry exposure form the core of the Sri Shakthi academic experience.'], departments: ['Departments', '21 Specialized UG & PG Disciplines. One culture of discovery.', 'Explore our 14 undergraduate and 7 postgraduate engineering and technology departments offering focused learning, world-class laboratories, research and industry engagement.'], curriculum: ['Curriculum', 'Current, connected and outcome-driven.', 'The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'], 'academic-calendar': ['Academic Calendar', 'Plan the academic year.', 'Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'], library: ['Central Library', 'A connected knowledge centre.', 'Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'], examinations: ['Examinations', 'Clear processes. Fair assessment.', 'The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'], programmes: ['UG & PG Programmes', 'Choose the field you want to shape.', 'Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'], eligibility: ['Eligibility', 'Your pathway to Sri Shakthi.', 'Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'], scholarships: ['Scholarships', 'Talent deserves opportunity.', 'Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'], fees: ['Fee Information', 'Clear guidance for applicants.', 'Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'], 'campus-life': ['Campus Life', 'Learn. Build. Belong.', 'A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'], facilities: ['Facilities', 'Spaces made for exploration.', 'Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'], hostel: ['Hostel', 'A welcoming campus home.', 'Student residences support safe, comfortable living, shared learning and a strong sense of community.'], transport: ['Transport', 'Connected to Coimbatore.', 'College transport supports convenient travel across major routes in and around the city.'], sports: ['Sports', 'Energy beyond academics.', 'With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'], clubs: ['Student Clubs', 'Find your people. Build your voice.', 'Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'], ncc: ['NCC & NSS', 'Unity, discipline and service.', 'Student service programmes develop character, citizenship, teamwork and responsibility.'], placements: ['Placements', 'Preparing talent for meaningful careers.', 'Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'], training: ['Career Development', 'Skills that move careers forward.', 'Dedicated training helps students build technical confidence, professional communication and placement readiness.'], research: ['Research & Development', 'Ideas engineered into impact.', 'Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'], innovation: ['Innovation & Incubation', 'From problem to prototype.', 'Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'], 'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'], accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'], alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'], iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'], contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
+  academics: ['Academic Overview', 'Autonomous Engineering Education · Anna University Affiliated', 'Explore our 21 specialized undergraduate and postgraduate programmes, innovative Regulations 2024 (R2024) 168-credit framework, state-of-the-art laboratories, and experiential learning ecosystem.'], departments: ['Departments', '21 Specialized UG & PG Disciplines. One culture of discovery.', 'Explore our 14 undergraduate and 7 postgraduate engineering and technology departments offering focused learning, world-class laboratories, research and industry engagement.'], curriculum: ['Curriculum', 'Current, connected and outcome-driven.', 'The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'], 'academic-calendar': ['Academic Calendar', 'Plan the academic year.', 'Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'], library: ['Central Library', 'A connected knowledge centre.', 'Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'], examinations: ['Examinations', 'Clear processes. Fair assessment.', 'The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'], programmes: ['UG & PG Programmes', 'Choose the field you want to shape.', 'Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'], eligibility: ['Eligibility', 'Your pathway to Sri Shakthi.', 'Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'], scholarships: ['Scholarships', 'Talent deserves opportunity.', 'Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'], fees: ['Fee Information', 'Clear guidance for applicants.', 'Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'], 'campus-life': ['Campus Life', 'Learn. Build. Belong.', 'A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'], facilities: ['Facilities', 'Spaces made for exploration.', 'Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'], hostel: ['Hostel', 'A welcoming campus home.', 'Student residences support safe, comfortable living, shared learning and a strong sense of community.'], transport: ['Transport', 'Connected to Coimbatore.', 'College transport supports convenient travel across major routes in and around the city.'], sports: ['Sports', 'Energy beyond academics.', 'With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'], clubs: ['Student Clubs', 'Find your people. Build your voice.', 'Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'], ncc: ['NCC & NSS', 'Unity, discipline and service.', 'Student service programmes develop character, citizenship, teamwork and responsibility.'], placements: ['Placements', 'Preparing talent for meaningful careers.', 'Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'], training: ['Career Development', 'Skills that move careers forward.', 'Dedicated training helps students build technical confidence, professional communication and placement readiness.'], research: ['Research & Development', 'Ideas engineered into impact.', 'Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'], innovation: ['Innovation & Incubation', 'From problem to prototype.', 'Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'], 'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'], accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'], alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'], iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'], contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
 };
 const deptIcon = (k) => {
   const s = {
@@ -1422,6 +1422,259 @@ function programSelectHtml(label, name) {
   `;
 }
 
+function academicOverviewPage() {
+  return `<main class="siet-acad-overview">
+    <!-- ACADEMIC OVERVIEW HERO -->
+    <section class="acad-ov-hero">
+      <div class="acad-ov-shell">
+        <div class="acad-ov-hero-grid">
+          <div class="acad-ov-hero-content reveal">
+            <div class="acad-ov-badge-row">
+              <span class="acad-ov-kicker"><span class="kicker-dot" aria-hidden="true"></span> ACADEMICS</span>
+              <span class="acad-ov-pill">Autonomous R2024</span>
+            </div>
+            <h1 class="acad-ov-hero-title">
+              Autonomous Engineering Education Built on <em>Purpose, Innovation &amp; Practice</em>
+            </h1>
+            <p class="acad-ov-hero-lead">
+              At Sri Shakthi Institute of Engineering and Technology, academic learning is anchored in the Autonomous Regulations 2024 (R2024) 168-credit framework. Through an Outcome-Based Education model, foundational sciences seamlessly integrate with continuous laboratory practice, multidisciplinary electives, and real-world engineering challenges.
+            </p>
+            <div class="acad-ov-credentials-bar" aria-label="Institutional accreditations">
+              <span class="cred-item"><strong class="cred-gold">CODE 2727</strong> TNEA Counselling</span>
+              <span class="cred-sep" aria-hidden="true">&bull;</span>
+              <span class="cred-item">Anna University Affiliated</span>
+              <span class="cred-sep" aria-hidden="true">&bull;</span>
+              <span class="cred-item">NAAC &lsquo;A&rsquo; Grade</span>
+              <span class="cred-sep" aria-hidden="true">&bull;</span>
+              <span class="cred-item">NBA Accredited</span>
+            </div>
+            <div class="acad-ov-hero-actions">
+              <a href="#/curriculum" class="acad-ov-btn-primary">
+                <span>View 8-Semester Curriculum (R2024)</span>
+                ${icon('arrow')}
+              </a>
+              <a href="mailto:academics@siet.ac.in" class="acad-ov-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Academic Office Contact</span>
+              </a>
+            </div>
+          </div>
+          <div class="acad-ov-hero-media reveal">
+            <div class="acad-ov-media-card">
+              <div class="acad-ov-media-frame">
+                <img src="/brand/techpark-local.png" alt="Sri Shakthi Tech Park & Academic Campus" class="acad-ov-hero-img" loading="eager" decoding="async">
+                <div class="acad-ov-media-overlay" aria-hidden="true"></div>
+              </div>
+              <div class="acad-ov-media-caption">
+                <div class="caption-icon" aria-hidden="true">
+                  <img src="/brand/siet-logo.png" alt="" class="caption-crest">
+                </div>
+                <div class="caption-text">
+                  <strong>Sri Shakthi Tech Park</strong>
+                  <span>Autonomous Academic Ecosystem &bull; 45-Acre Eco-Friendly Campus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01: ACADEMIC APPROACH -->
+    <section class="acad-ov-approach-section">
+      <div class="acad-ov-shell">
+        <div class="acad-ov-section-head reveal">
+          <span class="acad-ov-section-tag">01 / ACADEMIC APPROACH</span>
+          <h2 class="acad-ov-section-title">An Academic Ecosystem Built for <em>Depth and Application</em></h2>
+          <p class="acad-ov-section-desc">
+            Our academic model moves beyond conventional instruction. By synthesizing theoretical rigor with continuous experimental validation, students develop the analytical depth and practical mastery needed to engineer real solutions.
+          </p>
+        </div>
+
+        <div class="acad-ov-approach-grid">
+          <div class="acad-ov-approach-narrative reveal">
+            <div class="acad-ov-pillar-item">
+              <div class="pillar-marker">01</div>
+              <div class="pillar-body">
+                <h3>Strong Academic Foundations</h3>
+                <p>Every engineering discipline is grounded in comprehensive mathematical sciences, computational logic, and physical principles. Curricula are systematically aligned with Bloom’s Revised Taxonomy, establishing progressive cognitive development from conceptual understanding to complex system design.</p>
+              </div>
+            </div>
+
+            <div class="acad-ov-pillar-item">
+              <div class="pillar-marker">02</div>
+              <div class="pillar-body">
+                <h3>Practical &amp; Laboratory Integration</h3>
+                <p>Theoretical lectures are directly coupled with hands-on laboratory sessions, experimentation, and design studios. Students test and validate theoretical hypotheses on industry-grade equipment, simulation suites, and specialized R&amp;D testbeds.</p>
+              </div>
+            </div>
+
+            <div class="acad-ov-pillar-item">
+              <div class="pillar-marker">03</div>
+              <div class="pillar-body">
+                <h3>Autonomous Regulations 2024 (R2024)</h3>
+                <p>The 168-credit autonomous curriculum gives students agility: combining disciplinary specialization with open multidisciplinary electives, minor degree tracks, continuous internal evaluations (40%), and fast-track capstone pathways.</p>
+              </div>
+            </div>
+
+            <div class="acad-ov-pillar-item">
+              <div class="pillar-marker">04</div>
+              <div class="pillar-body">
+                <h3>Industry Exposure &amp; Applied Innovation</h3>
+                <p>Through industry-partnered coursework, design thinking challenges, hackathons, and research mentorship, students learn to bridge academic concepts with contemporary global engineering practices and emerging technologies.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acad-ov-approach-visual reveal">
+            <div class="acad-ov-visual-stack">
+              <div class="visual-photo-wrap">
+                <img src="/brand/departments-campus.jpg" alt="Engineering Laboratory and Collaborative Learning" loading="lazy" decoding="async">
+              </div>
+              <div class="visual-highlight-card">
+                <div class="highlight-stat">
+                  <span class="stat-num">168</span>
+                  <span class="stat-label">Credits Autonomous Framework</span>
+                </div>
+                <p class="highlight-text">
+                  Structured to build core disciplinary competence, multidisciplinary breadth, and professional ethics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: THE LEARNING EXPERIENCE -->
+    <section class="acad-ov-experience-section">
+      <div class="acad-ov-shell">
+        <div class="acad-ov-section-head reveal">
+          <span class="acad-ov-section-tag">02 / LEARNING EXPERIENCE</span>
+          <h2 class="acad-ov-section-title">The Student Journey: <em>From Fundamentals to Capstone Mastery</em></h2>
+          <p class="acad-ov-section-desc">
+            How students experience academics at Sri Shakthi: a progressive, guided trajectory designed to cultivate independent inquiry, technical proficiency, and professional confidence.
+          </p>
+        </div>
+
+        <div class="acad-ov-journey-grid">
+          <!-- Stage 1 -->
+          <article class="acad-ov-journey-card reveal">
+            <div class="journey-card-top">
+              <span class="journey-badge">STAGE 1 &bull; YEAR 1</span>
+              <span class="journey-step-num">01</span>
+            </div>
+            <h3 class="journey-card-title">Foundational Sciences &amp; Engineering Practices</h3>
+            <p class="journey-card-desc">
+              First-year students build rigorous fundamentals in matrices, calculus, engineering physics, chemistry, computational problem solving in Python and C, engineering graphics, and professional communication laboratory.
+            </p>
+            <div class="journey-card-meta">
+              <span class="meta-tag">Mathematical Rigor</span>
+              <span class="meta-tag">Programming Labs</span>
+              <span class="meta-tag">Engineering Graphics</span>
+            </div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="acad-ov-journey-card reveal">
+            <div class="journey-card-top">
+              <span class="journey-badge">STAGE 2 &bull; YEARS 2 &amp; 3</span>
+              <span class="journey-step-num">02</span>
+            </div>
+            <h3 class="journey-card-title">Disciplinary Depth &amp; Laboratory Immersion</h3>
+            <p class="journey-card-desc">
+              Students immerse in advanced core subjects coupled with continuous laboratory experiments, Design Thinking &amp; Innovation coursework, professional development modules, and faculty-mentored mini-projects.
+            </p>
+            <div class="journey-card-meta">
+              <span class="meta-tag">Core Specialization</span>
+              <span class="meta-tag">Design Thinking</span>
+              <span class="meta-tag">Continuous Labs</span>
+            </div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="acad-ov-journey-card reveal">
+            <div class="journey-card-top">
+              <span class="journey-badge">STAGE 3 &bull; YEAR 4</span>
+              <span class="journey-step-num">03</span>
+            </div>
+            <h3 class="journey-card-title">Multidisciplinary Electives &amp; Capstone Innovation</h3>
+            <p class="journey-card-desc">
+              Senior learners personalize their pathways through emerging technology electives, fast-track industry capstone projects, full-semester corporate internships, and applied research publications.
+            </p>
+            <div class="journey-card-meta">
+              <span class="meta-tag">Advanced Electives</span>
+              <span class="meta-tag">Industry Internship</span>
+              <span class="meta-tag">Capstone Projects</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Supporting Editorial Quote Banner -->
+        <div class="acad-ov-experience-quote reveal">
+          <div class="quote-content">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="quote-text">
+              Education should do more than prepare students for a profession. It must inspire them to question, create, collaborate, and use their capabilities to make a meaningful difference.
+            </p>
+            <div class="quote-author">
+              <strong>Sri Shakthi Academic Philosophy</strong>
+              <span>Autonomous Regulations 2024 &bull; Outcome-Based Education</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES -->
+    <section class="acad-ov-philosophy-section">
+      <div class="acad-ov-shell">
+        <div class="acad-ov-section-head reveal">
+          <span class="acad-ov-section-tag">03 / PHILOSOPHY &amp; OUTCOMES</span>
+          <h2 class="acad-ov-section-title">Knowledge in Action. <em>Character in Leadership.</em></h2>
+          <p class="acad-ov-section-desc">
+            Rooted in our enduring institutional beliefs, the academic experience develops four complementary dimensions of graduate capability.
+          </p>
+        </div>
+
+        <div class="acad-ov-outcomes-grid">
+          <article class="acad-ov-outcome-card reveal">
+            <div class="outcome-icon-wrap" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Deep Conceptual Mastery</h3>
+            <p>Academic excellence is our gateway. We empower learners with strong theoretical comprehension, mathematical modeling capacity, and deep domain principles.</p>
+          </article>
+
+          <article class="acad-ov-outcome-card reveal">
+            <div class="outcome-icon-wrap" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3>Applied Problem Solving</h3>
+            <p>Learning becomes lasting when ideas are tested in action. Students develop the skill to analyze complex real-world challenges and design robust engineering solutions.</p>
+          </article>
+
+          <article class="acad-ov-outcome-card reveal">
+            <div class="outcome-icon-wrap" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6v2a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5v-2c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7zm-2 19a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5h-4v.5z"></path></svg>
+            </div>
+            <h3>Innovation &amp; Public Good</h3>
+            <p>Knowledge carries responsibility. We cultivate creativity and ethical awareness, preparing engineers to build sustainable, human-centric technologies that serve society.</p>
+          </article>
+
+          <article class="acad-ov-outcome-card reveal">
+            <div class="outcome-icon-wrap" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Professional Readiness</h3>
+            <p>Employability is our milestone; confident citizenship is our destination. Graduates emerge with multidisciplinary teamwork, communication skills, and lifelong adaptability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>`;
+}
+
 function programmesPage() {
   return `<main class="siet-programmes-page">
     ${sietHudHeader('UG & PG Programmes', 'UG & PG Programmes', false)}
@@ -2557,6 +2810,7 @@ function render() {
     r === 'library' ? libraryPage() :
     r === 'curriculum' ? curriculumPage() :
     r === 'academic-calendar' ? academicCalendarPage() :
+    r === 'academics' ? academicOverviewPage() :
     internalPage(r);
 
   appRoot.innerHTML = header() + content + (r ? bottomDecor() : '') + footer();
@@ -2566,6 +2820,9 @@ function render() {
 }
 
 function bind() {
+  if (route() === 'academics') {
+    document.title = "Academic Overview | Sri Shakthi Institute of Engineering & Technology";
+  }
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";

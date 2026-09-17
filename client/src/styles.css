@@ -38265,36 +38265,291 @@ a.siet-curr-navlink {
 }
 
 @media (max-width: 900px) {
+  /* ==========================================================================
+     MOBILE CENTERING FOR HUD HEADER, ACADEMICS, APPLY NOW, AND CAREERS
+     Aligns with Home and About mobile presentation (center aligned)
+     ========================================================================== */
   .siet-hud-header,
   .department-detail-header {
     min-height: auto !important;
-    padding: 34px 20px 22px !important;
+    padding: 38px 20px 24px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
   }
 
   .siet-hud-header:before,
   .department-detail-header:before {
-    left: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 
   .siet-hud-header .department-detail-title,
   .department-detail-header .department-detail-title {
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 14px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .siet-hud-header .hud-title-group,
+  .department-detail-header .hud-title-group {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+    display: inline-flex !important;
   }
 
   .siet-hud-header h1,
   .department-detail-header .department-detail-title h1 {
     white-space: normal !important;
-    font-size: clamp(20px, 5.5vw, 30px) !important;
+    font-size: clamp(22px, 6vw, 32px) !important;
+    text-align: center !important;
+    margin-inline: auto !important;
   }
 
   .siet-hud-header .department-breadcrumb,
   .department-detail-header .department-breadcrumb {
     font-size: 12px !important;
-    padding: 7px 14px !important;
+    padding: 7px 16px !important;
     white-space: normal !important;
     flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    display: inline-flex !important;
+  }
+
+  /* --- 1. ACADEMICS PAGES MOBILE CENTERING --- */
+  .siet-prog-controls {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .siet-prog-filter-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .siet-prog-info {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-prog-search {
+    margin-inline: auto !important;
+    width: 100% !important;
+    max-width: 440px !important;
+  }
+
+  .dept-hub-intro {
+    text-align: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  .dept-filter-row {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .curr-degree-toggle,
+  .curr-selector {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .curr-center-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .curr-section-header {
+    text-align: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-calendar-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .siet-cal-kicker {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .cal-academic-badge {
+    margin-inline: auto !important;
+  }
+
+  .siet-lib-section-head,
+  .siet-lib-intro {
+    text-align: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-lib-section-head h2,
+  .siet-lib-section-head p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* --- 2. APPLY NOW PORTAL MOBILE CENTERING --- */
+  .apply-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .apply-card-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .apply-card-header .card-kicker {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .apply-card-header h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .apply-card-header p {
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 680px !important;
+  }
+
+  .apply-form-v3 .form-step-title {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .quick-chips-wrapper {
+    text-align: center !important;
+  }
+
+  .quick-chips-label {
+    text-align: center !important;
+  }
+
+  .quick-chips-group {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .apply-form-v3 .form-submit-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .confidential-badge {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .apply-submit-btn {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* --- 3. CAREERS PAGE MOBILE CENTERING --- */
+  .career-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .career-intro {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 28px 20px !important;
+    gap: 20px !important;
+  }
+
+  .career-intro img {
+    margin-inline: auto !important;
+    max-width: 160px !important;
+  }
+
+  .career-intro div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .career-intro small,
+  .career-intro h2,
+  .career-intro p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .career-form-head {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .career-form-head small,
+  .career-form-head h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .career-submit {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  .career-side-title {
+    text-align: center !important;
+  }
+
+  .career-side-title small,
+  .career-side-title h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .career-contact {
+    text-align: center !important;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
 

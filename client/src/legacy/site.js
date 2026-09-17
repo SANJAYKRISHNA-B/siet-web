@@ -51,7 +51,7 @@ const icon = (name) => {
 
 const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
-  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
+  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
   { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
   { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
@@ -59,7 +59,7 @@ const pageGroups = [
 const pageCopy = {
   'admission-referral': ['Admission Referral', 'Recommend an aspiring student to Sri Shakthi.', 'Support prospective engineers by connecting them with our admissions team through the institutional referral programme.'],
   'core-beliefs': ['Core Beliefs', 'Enduring principles that guide our mission.', 'Achieving academic success is our gateway, employability is our milestone, confident citizenship is our destination, discipline provides willpower, and education is our weapon to change the world.'],
-  academics: ['Academic Overview', 'Autonomous Engineering Education · Anna University Affiliated', 'Explore our 21 specialized undergraduate and postgraduate programmes, innovative Regulations 2024 (R2024) 168-credit framework, state-of-the-art laboratories, and experiential learning ecosystem.'], departments: ['Departments', '21 Specialized UG & PG Disciplines. One culture of discovery.', 'Explore our 14 undergraduate and 7 postgraduate engineering and technology departments offering focused learning, world-class laboratories, research and industry engagement.'], curriculum: ['Curriculum', 'Current, connected and outcome-driven.', 'The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'], 'academic-calendar': ['Academic Calendar', 'Plan the academic year.', 'Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'], library: ['Central Library', 'A connected knowledge centre.', 'Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'], examinations: ['Examinations', 'Clear processes. Fair assessment.', 'The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'], programmes: ['UG & PG Programmes', 'Choose the field you want to shape.', 'Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'], eligibility: ['Eligibility', 'Your pathway to Sri Shakthi.', 'Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'], scholarships: ['Scholarships', 'Talent deserves opportunity.', 'Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'], fees: ['Fee Information', 'Clear guidance for applicants.', 'Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'], 'campus-life': ['Campus Life', 'Learn. Build. Belong.', 'A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'], facilities: ['Facilities', 'Spaces made for exploration.', 'Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'], hostel: ['Hostel', 'A welcoming campus home.', 'Student residences support safe, comfortable living, shared learning and a strong sense of community.'], transport: ['Transport', 'Connected to Coimbatore.', 'College transport supports convenient travel across major routes in and around the city.'], sports: ['Sports', 'Energy beyond academics.', 'With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'], clubs: ['Student Clubs', 'Find your people. Build your voice.', 'Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'], ncc: ['NCC & NSS', 'Unity, discipline and service.', 'Student service programmes develop character, citizenship, teamwork and responsibility.'], placements: ['Placements', 'Preparing talent for meaningful careers.', 'Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'], training: ['Career Development', 'Skills that move careers forward.', 'Dedicated training helps students build technical confidence, professional communication and placement readiness.'], research: ['Research & Development', 'Ideas engineered into impact.', 'Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'], innovation: ['Innovation & Incubation', 'From problem to prototype.', 'Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'], 'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'], accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'], alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'], iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'], contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
+  academics: ['Academic Overview', 'Autonomous Engineering Education · Anna University Affiliated', 'Explore our 21 specialized undergraduate and postgraduate programmes, innovative Regulations 2025 (R2025) 168-credit framework, state-of-the-art laboratories, and experiential learning ecosystem.'], departments: ['Departments', '21 Specialized UG & PG Disciplines. One culture of discovery.', 'Explore our 14 undergraduate and 7 postgraduate engineering and technology departments offering focused learning, world-class laboratories, research and industry engagement.'], curriculum: ['Curriculum', 'Current, connected and outcome-driven.', 'The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'], 'academic-calendar': ['Academic Calendar', 'Plan the academic year.', 'Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'], library: ['Central Library', 'A connected knowledge centre.', 'Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'], examinations: ['Examinations', 'Clear processes. Fair assessment.', 'The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'], programmes: ['UG & PG Programmes', 'Choose the field you want to shape.', 'Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'], eligibility: ['Eligibility', 'Your pathway to Sri Shakthi.', 'Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'], scholarships: ['Scholarships', 'Talent deserves opportunity.', 'Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'], fees: ['Fee Information', 'Clear guidance for applicants.', 'Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'], 'campus-life': ['Campus Life', 'Learn. Build. Belong.', 'A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'], facilities: ['Facilities', 'Spaces made for exploration.', 'Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'], hostel: ['Hostel', 'A welcoming campus home.', 'Student residences support safe, comfortable living, shared learning and a strong sense of community.'], transport: ['Transport', 'Connected to Coimbatore.', 'College transport supports convenient travel across major routes in and around the city.'], sports: ['Sports', 'Energy beyond academics.', 'With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'], clubs: ['Student Clubs', 'Find your people. Build your voice.', 'Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'], ncc: ['NCC & NSS', 'Unity, discipline and service.', 'Student service programmes develop character, citizenship, teamwork and responsibility.'], placements: ['Placements', 'Preparing talent for meaningful careers.', 'Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'], training: ['Career Development', 'Skills that move careers forward.', 'Dedicated training helps students build technical confidence, professional communication and placement readiness.'], research: ['Research & Development', 'Ideas engineered into impact.', 'Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'], innovation: ['Innovation & Incubation', 'From problem to prototype.', 'Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'], 'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'], accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'], alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'], iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'], contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
 };
 const deptIcon = (k) => {
   const s = {
@@ -1726,9 +1726,9 @@ const departmentDetails = {
     courses: [['B.E - Biomedical Engineering', '60']],
     overview: `<p>Welcome to the Department of Biomedical Engineering at Sri Shakthi Institute of Engineering and Technology! Biomedical Engineering is an interdisciplinary field that integrates the principles of engineering with biological and medical sciences to improve healthcare systems and enhance the quality of human life.</p>`,
     sectionsList: [
-      'Vision & Mission',
       'About the Department',
       'Why Biomedical Engineering at SIET',
+      'Vision & Mission',
       'Laboratory Facility',
       'List of Laboratories',
       'Faculty Profile',
@@ -3307,10 +3307,33 @@ departmentDetails['Vlsi Design'] = departmentDetails['VLSI Design'];
 departmentDetails['Electronics Engineering (VLSI Design & Technology)'] = departmentDetails['VLSI Design'];
 departmentDetails['Electronics Engineering ( VLSI Design & Technology)'] = departmentDetails['VLSI Design'];
 
+departmentDetails['Management Studies'] = {
+  courses: [['MBA - Master of Business Administration', '60']],
+  overview: '<p>The Department of Management Studies (MBA) at Sri Shakthi Institute of Engineering and Technology is dedicated to developing ethical business leaders, strategic managers, and entrepreneurial visionaries. Offering an autonomous two-year MBA programme affiliated to Anna University and approved by AICTE, the curriculum integrates case-based learning, business simulations, executive guest lectures, and corporate internships across Finance, Marketing, Human Resources, Systems, Business Analytics, and Operations Management.</p><p>Backed by extensive industry partnerships, startup incubation support, and corporate mentoring, our MBA graduates consistently secure prestigious career opportunities with leading multinational enterprises, financial institutions, and global consulting firms.</p>'
+};
+departmentDetails['MBA'] = departmentDetails['Management Studies'];
+departmentDetails['Mba'] = departmentDetails['Management Studies'];
+departmentDetails['Master of Business Administration'] = departmentDetails['Management Studies'];
+departmentDetails['Master of Business Administration (MBA)'] = departmentDetails['Management Studies'];
+departmentDetails['Master Of Business Administration (Mba)'] = departmentDetails['Management Studies'];
+
+departmentDetails['Computer Applications'] = {
+  courses: [['MCA - Master of Computer Applications', '60']],
+  overview: '<p>The Department of Computer Applications (MCA) at Sri Shakthi Institute of Engineering and Technology offers an advanced postgraduate programme designed to develop high-calibre software architects, full-stack engineers, cloud specialists, and technology leaders. Affiliated to Anna University and approved by AICTE, the curriculum provides deep expertise in modern software engineering, cloud platforms, enterprise database systems, mobile development, data intelligence, and cybersecurity.</p><p>With dedicated high-performance computing laboratories, software incubation centres, and active industry collaborations with premier IT corporations, students gain intensive hands-on experience that leads to outstanding campus placements and impactful technology careers.</p>'
+};
+departmentDetails['MCA'] = departmentDetails['Computer Applications'];
+departmentDetails['Mca'] = departmentDetails['Computer Applications'];
+departmentDetails['Master of Computer Applications'] = departmentDetails['Computer Applications'];
+departmentDetails['Master of Computer Applications (MCA)'] = departmentDetails['Computer Applications'];
+departmentDetails['Master Of Computer Applications (Mca)'] = departmentDetails['Computer Applications'];
+
 programs.forEach(([name, description]) => { if (!departmentDetails[name]) departmentDetails[name] = { courses: [['B.E - ' + name, '60']], overview: 'The ' + name + ' department at Sri Shakthi Institute of Engineering and Technology develops practical expertise through laboratory learning, industry exposure, projects and research. ' + description } });
 
 function departmentPage(dept) {
-  const detailKey = Object.keys(departmentDetails).find(k => k.toLowerCase() === dept.toLowerCase()) || dept;
+  const cleanDept = (dept || '').trim().toLowerCase();
+  const detailKey = Object.keys(departmentDetails).find(k => k.toLowerCase() === cleanDept)
+    || Object.keys(departmentDetails).find(k => k.toLowerCase().replace(/[^a-z0-9]/g, '') === cleanDept.replace(/[^a-z0-9]/g, ''))
+    || dept;
   const detail = departmentDetails[detailKey] || departmentDetails.default;
   const courses = detail.courses && detail.courses.length ? detail.courses : [['B.E - ' + dept, '60']];
   const sections = detail.sectionsList || [
@@ -3329,7 +3352,25 @@ function departmentPage(dept) {
     const sectionId = `department-section-${index}`;
     const isOpen = index === 0 ? ' is-open' : '';
     if (section === 'Curriculum') {
-      return `<section id="${sectionId}" class="department-copy department-curriculum-section${isOpen}"><h2>Curriculum</h2><div class="dept-curriculum-banner"><div><span class="curr-badge">AUTONOMOUS R2024</span><h2>${dept} Curriculum Structure</h2><p>Explore the full 8-semester course curriculum, subject codes, lecture/practical hours and credits designed for ${dept}.</p></div><a href="#/curriculum?dept=${deptCurriculum.id}" class="dept-curriculum-action">Open Full 8-Semester Interactive Curriculum →</a></div><div class="curr-table-wrapper">${renderCurriculumTable(deptCurriculum.id, 1)}</div></section>`;
+      return `<section id="${sectionId}" class="department-copy department-curriculum-section${isOpen}"><h2>Curriculum</h2><div class="dept-curriculum-banner"><div><span class="curr-badge">AUTONOMOUS R2025</span><h2>${dept} Curriculum Structure</h2><p>Explore the full 8-semester course curriculum, subject codes, lecture/practical hours and credits designed for ${dept}.</p></div><a href="#/curriculum?dept=${deptCurriculum.id}" class="dept-curriculum-action">Open Full 8-Semester Interactive Curriculum →</a></div><div class="curr-table-wrapper">${renderCurriculumTable(deptCurriculum.id, 1)}</div></section>`;
+    }
+    if (section === 'About the Department') {
+      let overviewText = detail.overview || '';
+      if (detail.sections && (detail.sections['About the Department'] || detail.sections['About The Department'])) {
+        const raw = detail.sections['About the Department'] || detail.sections['About The Department'];
+        const stripped = raw
+          .replace(/<div[\s\S]*?<\/table>\s*<\/div>\s*<\/div>/gi, '')
+          .replace(/<h2[\s\S]*?<\/h2>/gi, '')
+          .trim();
+        if (stripped.length > (overviewText.length || 0)) {
+          overviewText = stripped;
+        }
+      }
+      overviewText = overviewText.replace(/style="[^"]*text-align:\s*center[^"]*"/gi, '');
+      if (!overviewText.startsWith('<p>')) {
+        overviewText = `<p>${overviewText}</p>`;
+      }
+      return `<section id="${sectionId}" class="department-copy${isOpen}"><div class="department-intake"><table><thead><tr><th>Courses Offered</th><th>Intake</th></tr></thead><tbody>${courses.map(([course, intake]) => `<tr><td>${course}</td><td>${intake}</td></tr>`).join('')}</tbody></table></div><h2>About the Department</h2>${overviewText}</section>`;
     }
     const customContent = detail.sections && (
       detail.sections[section] ||
@@ -3339,9 +3380,6 @@ function departmentPage(dept) {
     );
     if (customContent) {
       return `<section id="${sectionId}" class="department-copy${isOpen}">${customContent}</section>`;
-    }
-    if (section === 'About the Department') {
-      return `<section id="${sectionId}" class="department-copy${isOpen}"><div class="department-intake"><table><thead><tr><th>Courses Offered</th><th>Intake</th></tr></thead><tbody>${courses.map(([course, intake]) => `<tr><td>${course}</td><td>${intake}</td></tr>`).join('')}</tbody></table></div><h2>About the Department</h2>${detail.overview && detail.overview.startsWith('<p>') ? detail.overview : `<p>${detail.overview || ''}</p>`}</section>`;
     }
     return `<section id="${sectionId}" class="department-copy department-placeholder${isOpen}"><h2>${section}</h2><p>${section} information for ${dept} will be updated by the department office.</p></section>`;
   }).join('')}</article></div></main>`;
@@ -3479,254 +3517,439 @@ function programSelectHtml(label, name) {
 }
 
 function academicOverviewPage() {
+  // Dynamic metrics directly derived from existing project data
+  const totalCredits = departmentCurricula['cse']
+    ? Object.values(departmentCurricula['cse'].semesters).reduce((sum, s) => sum + (s.credits || 0), 0)
+    : 168;
+  const totalDisciplines = ugProgramsDetailed.length + pgProgramsDetailed.length;
+  const ugCount = ugProgramsDetailed.length;
+  const pgCount = pgProgramsDetailed.length;
+
   return `<main class="siet-acad-overview">
-    <!-- ACADEMIC OVERVIEW HERO -->
-    <section class="acad-ov-hero">
-      <div class="acad-ov-shell">
-        <div class="acad-ov-hero-grid">
-          <div class="acad-ov-hero-content reveal">
-            <div class="acad-ov-badge-row">
-              <span class="acad-ov-kicker"><span class="kicker-dot" aria-hidden="true"></span> ACADEMICS</span>
-              <span class="acad-ov-pill">Autonomous R2024</span>
-            </div>
-            <h1 class="acad-ov-hero-title">
-              Autonomous Engineering Education Built on <em>Purpose, Innovation &amp; Practice</em>
-            </h1>
-            <p class="acad-ov-hero-lead">
-              At Sri Shakthi Institute of Engineering and Technology, academic learning is anchored in the Autonomous Regulations 2024 (R2024) 168-credit framework. Through an Outcome-Based Education model, foundational sciences seamlessly integrate with continuous laboratory practice, multidisciplinary electives, and real-world engineering challenges.
-            </p>
-            <div class="acad-ov-credentials-bar" aria-label="Institutional accreditations">
-              <span class="cred-item"><strong class="cred-gold">CODE 2727</strong> TNEA Counselling</span>
-              <span class="cred-sep" aria-hidden="true">&bull;</span>
-              <span class="cred-item">Anna University Affiliated</span>
-              <span class="cred-sep" aria-hidden="true">&bull;</span>
-              <span class="cred-item">NAAC &lsquo;A&rsquo; Grade</span>
-              <span class="cred-sep" aria-hidden="true">&bull;</span>
-              <span class="cred-item">NBA Accredited</span>
-            </div>
-            <div class="acad-ov-hero-actions">
-              <a href="#/curriculum" class="acad-ov-btn-primary">
-                <span>View 8-Semester Curriculum (R2024)</span>
-                ${icon('arrow')}
-              </a>
-              <a href="mailto:academics@siet.ac.in" class="acad-ov-btn-secondary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Academic Office Contact</span>
-              </a>
-            </div>
-          </div>
-          <div class="acad-ov-hero-media reveal">
-            <div class="acad-ov-media-card">
-              <div class="acad-ov-media-frame">
-                <img src="/brand/techpark-local.png" alt="Sri Shakthi Tech Park & Academic Campus" class="acad-ov-hero-img" loading="eager" decoding="async">
-                <div class="acad-ov-media-overlay" aria-hidden="true"></div>
+    <section class="acad-ov-unified-section" aria-label="Academic Overview">
+      
+      <!-- Top Decorative Accent Rings & Ambient Glow -->
+      <div class="acad-ov-ambient-decor" aria-hidden="true">
+        <div class="acad-ov-decor-glow"></div>
+        <div class="acad-ov-decor-ring ring-1"></div>
+        <div class="acad-ov-decor-ring ring-2"></div>
+      </div>
+
+      <!-- TOP HERO COMPOSITION (Deep Green #003F32) -->
+      <div class="acad-ov-hero-container">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-hero-grid">
+            
+            <!-- LEFT COLUMN -->
+            <div class="acad-ov-hero-left reveal">
+              <div class="acad-ov-kicker-wrap">
+                <span class="acad-ov-kicker">ACADEMIC OVERVIEW</span>
+                <span class="acad-ov-kicker-line" aria-hidden="true"></span>
               </div>
-              <div class="acad-ov-media-caption">
-                <div class="caption-icon" aria-hidden="true">
-                  <img src="/brand/siet-logo.png" alt="" class="caption-crest">
+
+              <h1 class="acad-ov-main-heading">
+                Outcome-Driven <span class="acad-ov-accent-text">Engineering Education</span> Grounded in Excellence.
+              </h1>
+
+              <p class="acad-ov-hero-desc">
+                Sri Shakthi Institute of Engineering and Technology delivers an agile, forward-looking academic ecosystem anchored in our Autonomous Regulations 2025 (R2025) ${totalCredits}-credit framework. Spanning ${totalDisciplines} undergraduate and postgraduate engineering disciplines, our outcome-based model seamlessly integrates foundational sciences with continuous laboratory immersion, multidisciplinary electives, and industry-partnered capstone innovation.
+              </p>
+
+              <!-- INSTITUTIONAL BADGE ROW -->
+              <div class="acad-ov-inst-badges" aria-label="Institutional credentials and affiliations">
+                <div class="inst-badge-item">
+                  <span class="inst-badge-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </span>
+                  <div class="inst-badge-text">
+                    <strong>Autonomous Institution</strong>
+                    <span>Regulations 2025 (R2025)</span>
+                  </div>
                 </div>
-                <div class="caption-text">
-                  <strong>Sri Shakthi Tech Park</strong>
-                  <span>Autonomous Academic Ecosystem &bull; 45-Acre Eco-Friendly Campus</span>
+
+                <div class="inst-badge-divider" aria-hidden="true"></div>
+
+                <div class="inst-badge-item">
+                  <span class="inst-badge-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  </span>
+                  <div class="inst-badge-text">
+                    <strong>Affiliated to</strong>
+                    <span>Anna University, Chennai</span>
+                  </div>
+                </div>
+
+                <div class="inst-badge-divider" aria-hidden="true"></div>
+
+                <div class="inst-badge-item">
+                  <span class="inst-badge-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+                  </span>
+                  <div class="inst-badge-text">
+                    <strong>TNEA Code 2727</strong>
+                    <span>Autonomous Counselling</span>
+                  </div>
+                </div>
+
+                <div class="inst-badge-divider" aria-hidden="true"></div>
+
+                <div class="inst-badge-item">
+                  <span class="inst-badge-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </span>
+                  <div class="inst-badge-text">
+                    <strong>NAAC &lsquo;A&rsquo; Grade</strong>
+                    <span>NBA Accredited Programmes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: CAMPUS / ACADEMIC IMAGE -->
+            <div class="acad-ov-hero-right reveal">
+              <div class="acad-ov-campus-frame">
+                <img src="/brand/techpark-local.png" alt="Sri Shakthi Campus &amp; Academic Innovation Hub" class="acad-ov-campus-img" loading="eager" decoding="async">
+                <div class="acad-ov-image-glare" aria-hidden="true"></div>
+                <div class="acad-ov-campus-badge">
+                  <span class="badge-crest" aria-hidden="true">
+                    <img src="/brand/siet-logo.png" alt="" class="badge-crest-img">
+                  </span>
+                  <div class="badge-content">
+                    <span class="badge-kicker">SRI SHAKTHI CAMPUS</span>
+                    <strong class="badge-title">ACADEMIC EXCELLENCE</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ORGANIC CURVED TRANSITION (From Deep Green into Cream #FFF8DF) -->
+      <div class="acad-ov-curved-transition" aria-hidden="true">
+        <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+          <path d="M0,45 C320,115 680,15 1060,85 C1240,115 1360,95 1440,75 L1440,120 L0,120 Z" fill="#FFC928" opacity="0.45"/>
+          <path d="M0,65 C300,125 700,35 1080,95 C1250,120 1370,105 1440,90 L1440,120 L0,120 Z" fill="#FFF8DF"/>
+        </svg>
+      </div>
+
+      <!-- FOUR ACADEMIC HIGHLIGHTS AREA (Cream #FFF8DF) -->
+      <div class="acad-ov-cream-area">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-highlights-grid">
+            
+            <!-- CARD 1: CREDITS -->
+            <article class="acad-ov-card reveal">
+              <div class="acad-ov-card-icon-area" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  <line x1="9" y1="7" x2="15" y2="7"/>
+                  <line x1="9" y1="11" x2="13" y2="11"/>
+                </svg>
+              </div>
+              <div class="acad-ov-card-value">${totalCredits}</div>
+              <div class="acad-ov-card-label">CREDITS</div>
+              <p class="acad-ov-card-desc">Autonomous R2025 Curriculum Framework</p>
+            </article>
+
+            <!-- CARD 2: DISCIPLINES -->
+            <article class="acad-ov-card reveal">
+              <div class="acad-ov-card-icon-area" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                  <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                </svg>
+              </div>
+              <div class="acad-ov-card-value">${totalDisciplines}</div>
+              <div class="acad-ov-card-label">DISCIPLINES</div>
+              <p class="acad-ov-card-desc">${ugCount} UG &amp; ${pgCount} PG Academic Programmes</p>
+            </article>
+
+            <!-- CARD 3: OUTCOME BASED -->
+            <article class="acad-ov-card reveal">
+              <div class="acad-ov-card-icon-area" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div class="acad-ov-card-value">100%</div>
+              <div class="acad-ov-card-label">OUTCOME BASED</div>
+              <p class="acad-ov-card-desc">Bloom’s Taxonomy &amp; Experiential Learning Model</p>
+            </article>
+
+            <!-- CARD 4: ACCREDITATION -->
+            <article class="acad-ov-card reveal">
+              <div class="acad-ov-card-icon-area" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div class="acad-ov-card-value">NAAC &lsquo;A&rsquo;</div>
+              <div class="acad-ov-card-label">ACCREDITED</div>
+              <p class="acad-ov-card-desc">Eligible Engineering Programmes NBA Accredited</p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ORGANIC CURVED TRANSITION (Cream into Deep Forest Green) -->
+      <div class="acad-ov-curved-transition to-dark" aria-hidden="true">
+        <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+          <path d="M0,45 C380,110 740,20 1100,85 C1260,110 1370,95 1440,80 L1440,120 L0,120 Z" fill="#FFC928" opacity="0.4"/>
+          <path d="M0,65 C340,120 760,40 1120,95 C1270,115 1380,105 1440,92 L1440,120 L0,120 Z" fill="#002D24"/>
+        </svg>
+      </div>
+
+      <!-- SECTION 01: ACADEMIC APPROACH (Deep Forest Green) -->
+      <div class="acad-ov-approach-wrapper">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-section-head reveal">
+            <span class="acad-ov-section-tag">01 / ACADEMIC APPROACH</span>
+            <h2 class="acad-ov-section-title light">An Academic Ecosystem Built for <em>Depth and Application</em></h2>
+            <p class="acad-ov-section-desc light">
+              Our academic model moves beyond conventional instruction. By synthesizing theoretical rigor with continuous experimental validation, students develop the analytical depth and practical mastery needed to engineer real solutions.
+            </p>
+          </div>
+
+          <div class="acad-ov-approach-grid">
+            <div class="acad-ov-approach-narrative reveal">
+              <div class="acad-ov-pillar-item">
+                <div class="pillar-marker">01</div>
+                <div class="pillar-body">
+                  <h3>Strong Academic Foundations</h3>
+                  <p>Every engineering discipline is grounded in comprehensive mathematical sciences, computational logic, and physical principles. Curricula are systematically aligned with Bloom’s Revised Taxonomy, establishing progressive cognitive development from conceptual understanding to complex system design.</p>
+                </div>
+              </div>
+
+              <div class="acad-ov-pillar-item">
+                <div class="pillar-marker">02</div>
+                <div class="pillar-body">
+                  <h3>Practical &amp; Laboratory Integration</h3>
+                  <p>Theoretical lectures are directly coupled with hands-on laboratory sessions, experimentation, and design studios. Students test and validate theoretical hypotheses on industry-grade equipment, simulation suites, and specialized R&amp;D testbeds.</p>
+                </div>
+              </div>
+
+              <div class="acad-ov-pillar-item">
+                <div class="pillar-marker">03</div>
+                <div class="pillar-body">
+                  <h3>Autonomous Regulations 2025 (R2025)</h3>
+                  <p>The 168-credit autonomous curriculum gives students agility: combining disciplinary specialization with open multidisciplinary electives, minor degree tracks, continuous internal evaluations (40%), and fast-track capstone pathways.</p>
+                </div>
+              </div>
+
+              <div class="acad-ov-pillar-item">
+                <div class="pillar-marker">04</div>
+                <div class="pillar-body">
+                  <h3>Industry Exposure &amp; Applied Innovation</h3>
+                  <p>Through industry-partnered coursework, design thinking challenges, hackathons, and research mentorship, students learn to bridge academic concepts with contemporary global engineering practices and emerging technologies.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="acad-ov-approach-visual reveal">
+              <div class="acad-ov-visual-stack">
+                <div class="visual-photo-wrap">
+                  <img src="/brand/departments-campus.jpg" alt="Engineering Laboratory and Collaborative Learning" loading="lazy" decoding="async">
+                  <div class="visual-photo-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="visual-highlight-card">
+                  <div class="highlight-stat">
+                    <span class="stat-num">${totalCredits}</span>
+                    <span class="stat-label">Credits Autonomous Framework</span>
+                  </div>
+                  <p class="highlight-text">
+                    Structured to build core disciplinary competence, multidisciplinary breadth, and professional ethics.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION 01: ACADEMIC APPROACH -->
-    <section class="acad-ov-approach-section">
-      <div class="acad-ov-shell">
-        <div class="acad-ov-section-head reveal">
-          <span class="acad-ov-section-tag">01 / ACADEMIC APPROACH</span>
-          <h2 class="acad-ov-section-title">An Academic Ecosystem Built for <em>Depth and Application</em></h2>
-          <p class="acad-ov-section-desc">
-            Our academic model moves beyond conventional instruction. By synthesizing theoretical rigor with continuous experimental validation, students develop the analytical depth and practical mastery needed to engineer real solutions.
-          </p>
-        </div>
-
-        <div class="acad-ov-approach-grid">
-          <div class="acad-ov-approach-narrative reveal">
-            <div class="acad-ov-pillar-item">
-              <div class="pillar-marker">01</div>
-              <div class="pillar-body">
-                <h3>Strong Academic Foundations</h3>
-                <p>Every engineering discipline is grounded in comprehensive mathematical sciences, computational logic, and physical principles. Curricula are systematically aligned with Bloom’s Revised Taxonomy, establishing progressive cognitive development from conceptual understanding to complex system design.</p>
-              </div>
-            </div>
-
-            <div class="acad-ov-pillar-item">
-              <div class="pillar-marker">02</div>
-              <div class="pillar-body">
-                <h3>Practical &amp; Laboratory Integration</h3>
-                <p>Theoretical lectures are directly coupled with hands-on laboratory sessions, experimentation, and design studios. Students test and validate theoretical hypotheses on industry-grade equipment, simulation suites, and specialized R&amp;D testbeds.</p>
-              </div>
-            </div>
-
-            <div class="acad-ov-pillar-item">
-              <div class="pillar-marker">03</div>
-              <div class="pillar-body">
-                <h3>Autonomous Regulations 2024 (R2024)</h3>
-                <p>The 168-credit autonomous curriculum gives students agility: combining disciplinary specialization with open multidisciplinary electives, minor degree tracks, continuous internal evaluations (40%), and fast-track capstone pathways.</p>
-              </div>
-            </div>
-
-            <div class="acad-ov-pillar-item">
-              <div class="pillar-marker">04</div>
-              <div class="pillar-body">
-                <h3>Industry Exposure &amp; Applied Innovation</h3>
-                <p>Through industry-partnered coursework, design thinking challenges, hackathons, and research mentorship, students learn to bridge academic concepts with contemporary global engineering practices and emerging technologies.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="acad-ov-approach-visual reveal">
-            <div class="acad-ov-visual-stack">
-              <div class="visual-photo-wrap">
-                <img src="/brand/departments-campus.jpg" alt="Engineering Laboratory and Collaborative Learning" loading="lazy" decoding="async">
-              </div>
-              <div class="visual-highlight-card">
-                <div class="highlight-stat">
-                  <span class="stat-num">168</span>
-                  <span class="stat-label">Credits Autonomous Framework</span>
-                </div>
-                <p class="highlight-text">
-                  Structured to build core disciplinary competence, multidisciplinary breadth, and professional ethics.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- ORGANIC CURVED TRANSITION (Deep Green into Cream #FFF8DF) -->
+      <div class="acad-ov-curved-transition to-cream" aria-hidden="true">
+        <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+          <path d="M0,45 C320,115 680,15 1060,85 C1240,115 1360,95 1440,75 L1440,120 L0,120 Z" fill="#FFC928" opacity="0.45"/>
+          <path d="M0,65 C300,125 700,35 1080,95 C1250,120 1370,105 1440,90 L1440,120 L0,120 Z" fill="#FFF8DF"/>
+        </svg>
       </div>
-    </section>
 
-    <!-- SECTION 02: THE LEARNING EXPERIENCE -->
-    <section class="acad-ov-experience-section">
-      <div class="acad-ov-shell">
-        <div class="acad-ov-section-head reveal">
-          <span class="acad-ov-section-tag">02 / LEARNING EXPERIENCE</span>
-          <h2 class="acad-ov-section-title">The Student Journey: <em>From Fundamentals to Capstone Mastery</em></h2>
-          <p class="acad-ov-section-desc">
-            How students experience academics at Sri Shakthi: a progressive, guided trajectory designed to cultivate independent inquiry, technical proficiency, and professional confidence.
-          </p>
-        </div>
-
-        <div class="acad-ov-journey-grid">
-          <!-- Stage 1 -->
-          <article class="acad-ov-journey-card reveal">
-            <div class="journey-card-top">
-              <span class="journey-badge">STAGE 1 &bull; YEAR 1</span>
-              <span class="journey-step-num">01</span>
-            </div>
-            <h3 class="journey-card-title">Foundational Sciences &amp; Engineering Practices</h3>
-            <p class="journey-card-desc">
-              First-year students build rigorous fundamentals in matrices, calculus, engineering physics, chemistry, computational problem solving in Python and C, engineering graphics, and professional communication laboratory.
+      <!-- SECTION 02: THE LEARNING EXPERIENCE (Cream #FFF8DF) -->
+      <div class="acad-ov-experience-wrapper">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-section-head reveal">
+            <span class="acad-ov-section-tag dark">02 / LEARNING EXPERIENCE</span>
+            <h2 class="acad-ov-section-title dark">The Student Journey: <em>From Fundamentals to Capstone Mastery</em></h2>
+            <p class="acad-ov-section-desc dark">
+              How students experience academics at Sri Shakthi: a progressive, guided trajectory designed to cultivate independent inquiry, technical proficiency, and professional confidence.
             </p>
-            <div class="journey-card-meta">
-              <span class="meta-tag">Mathematical Rigor</span>
-              <span class="meta-tag">Programming Labs</span>
-              <span class="meta-tag">Engineering Graphics</span>
-            </div>
-          </article>
+          </div>
 
-          <!-- Stage 2 -->
-          <article class="acad-ov-journey-card reveal">
-            <div class="journey-card-top">
-              <span class="journey-badge">STAGE 2 &bull; YEARS 2 &amp; 3</span>
-              <span class="journey-step-num">02</span>
-            </div>
-            <h3 class="journey-card-title">Disciplinary Depth &amp; Laboratory Immersion</h3>
-            <p class="journey-card-desc">
-              Students immerse in advanced core subjects coupled with continuous laboratory experiments, Design Thinking &amp; Innovation coursework, professional development modules, and faculty-mentored mini-projects.
-            </p>
-            <div class="journey-card-meta">
-              <span class="meta-tag">Core Specialization</span>
-              <span class="meta-tag">Design Thinking</span>
-              <span class="meta-tag">Continuous Labs</span>
-            </div>
-          </article>
+          <div class="acad-ov-journey-grid">
+            <!-- Stage 1 -->
+            <article class="acad-ov-journey-card reveal">
+              <div class="journey-card-top">
+                <span class="journey-badge">STAGE 1 &bull; YEAR 1</span>
+                <span class="journey-step-num">01</span>
+              </div>
+              <h3 class="journey-card-title">Foundational Sciences &amp; Engineering Practices</h3>
+              <p class="journey-card-desc">
+                First-year students build rigorous fundamentals in matrices, calculus, engineering physics, chemistry, computational problem solving in Python and C, engineering graphics, and professional communication laboratory.
+              </p>
+              <div class="journey-card-meta">
+                <span class="meta-tag">Mathematical Rigor</span>
+                <span class="meta-tag">Programming Labs</span>
+                <span class="meta-tag">Engineering Graphics</span>
+              </div>
+            </article>
 
-          <!-- Stage 3 -->
-          <article class="acad-ov-journey-card reveal">
-            <div class="journey-card-top">
-              <span class="journey-badge">STAGE 3 &bull; YEAR 4</span>
-              <span class="journey-step-num">03</span>
-            </div>
-            <h3 class="journey-card-title">Multidisciplinary Electives &amp; Capstone Innovation</h3>
-            <p class="journey-card-desc">
-              Senior learners personalize their pathways through emerging technology electives, fast-track industry capstone projects, full-semester corporate internships, and applied research publications.
-            </p>
-            <div class="journey-card-meta">
-              <span class="meta-tag">Advanced Electives</span>
-              <span class="meta-tag">Industry Internship</span>
-              <span class="meta-tag">Capstone Projects</span>
-            </div>
-          </article>
-        </div>
+            <!-- Stage 2 -->
+            <article class="acad-ov-journey-card reveal">
+              <div class="journey-card-top">
+                <span class="journey-badge">STAGE 2 &bull; YEARS 2 &amp; 3</span>
+                <span class="journey-step-num">02</span>
+              </div>
+              <h3 class="journey-card-title">Disciplinary Depth &amp; Laboratory Immersion</h3>
+              <p class="journey-card-desc">
+                Students immerse in advanced core subjects coupled with continuous laboratory experiments, Design Thinking &amp; Innovation coursework, professional development modules, and faculty-mentored mini-projects.
+              </p>
+              <div class="journey-card-meta">
+                <span class="meta-tag">Core Specialization</span>
+                <span class="meta-tag">Design Thinking</span>
+                <span class="meta-tag">Continuous Labs</span>
+              </div>
+            </article>
 
-        <!-- Supporting Editorial Quote Banner -->
-        <div class="acad-ov-experience-quote reveal">
-          <div class="quote-content">
-            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-            <p class="quote-text">
-              Education should do more than prepare students for a profession. It must inspire them to question, create, collaborate, and use their capabilities to make a meaningful difference.
-            </p>
-            <div class="quote-author">
-              <strong>Sri Shakthi Academic Philosophy</strong>
-              <span>Autonomous Regulations 2024 &bull; Outcome-Based Education</span>
+            <!-- Stage 3 -->
+            <article class="acad-ov-journey-card reveal">
+              <div class="journey-card-top">
+                <span class="journey-badge">STAGE 3 &bull; YEAR 4</span>
+                <span class="journey-step-num">03</span>
+              </div>
+              <h3 class="journey-card-title">Multidisciplinary Electives &amp; Capstone Innovation</h3>
+              <p class="journey-card-desc">
+                Senior learners personalize their pathways through emerging technology electives, fast-track industry capstone projects, full-semester corporate internships, and applied research publications.
+              </p>
+              <div class="journey-card-meta">
+                <span class="meta-tag">Advanced Electives</span>
+                <span class="meta-tag">Industry Internship</span>
+                <span class="meta-tag">Capstone Projects</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Editorial Quote Banner -->
+          <div class="acad-ov-experience-quote reveal">
+            <div class="quote-content">
+              <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+              <p class="quote-text">
+                Education should do more than prepare students for a profession. It must inspire them to question, create, collaborate, and use their capabilities to make a meaningful difference.
+              </p>
+              <div class="quote-author">
+                <strong>Sri Shakthi Academic Philosophy</strong>
+                <span>Autonomous Regulations 2025 &bull; Outcome-Based Education</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES -->
-    <section class="acad-ov-philosophy-section">
-      <div class="acad-ov-shell">
-        <div class="acad-ov-section-head reveal">
-          <span class="acad-ov-section-tag">03 / PHILOSOPHY &amp; OUTCOMES</span>
-          <h2 class="acad-ov-section-title">Knowledge in Action. <em>Character in Leadership.</em></h2>
-          <p class="acad-ov-section-desc">
-            Rooted in our enduring institutional beliefs, the academic experience develops four complementary dimensions of graduate capability.
-          </p>
-        </div>
+      <!-- ORGANIC CURVED TRANSITION (Cream into Deep Green #003F32) -->
+      <div class="acad-ov-curved-transition to-dark" aria-hidden="true">
+        <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+          <path d="M0,45 C380,110 740,20 1100,85 C1260,110 1370,95 1440,80 L1440,120 L0,120 Z" fill="#FFC928" opacity="0.4"/>
+          <path d="M0,65 C340,120 760,40 1120,95 C1270,115 1380,105 1440,92 L1440,120 L0,120 Z" fill="#003F32"/>
+        </svg>
+      </div>
 
-        <div class="acad-ov-outcomes-grid">
-          <article class="acad-ov-outcome-card reveal">
-            <div class="outcome-icon-wrap" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      <!-- SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES (Deep Green #003F32) -->
+      <div class="acad-ov-philosophy-wrapper">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-section-head reveal">
+            <span class="acad-ov-section-tag">03 / PHILOSOPHY &amp; OUTCOMES</span>
+            <h2 class="acad-ov-section-title light">Knowledge in Action. <em>Character in Leadership.</em></h2>
+            <p class="acad-ov-section-desc light">
+              Rooted in our enduring institutional beliefs, the academic experience develops four complementary dimensions of graduate capability.
+            </p>
+          </div>
+
+          <div class="acad-ov-outcomes-grid">
+            <article class="acad-ov-outcome-card reveal">
+              <div class="outcome-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+              </div>
+              <h3>Deep Conceptual Mastery</h3>
+              <p>Academic excellence is our gateway. We empower learners with strong theoretical comprehension, mathematical modeling capacity, and deep domain principles.</p>
+            </article>
+
+            <article class="acad-ov-outcome-card reveal">
+              <div class="outcome-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3>Applied Problem Solving</h3>
+              <p>Learning becomes lasting when ideas are tested in action. Students develop the skill to analyze complex real-world challenges and design robust engineering solutions.</p>
+            </article>
+
+            <article class="acad-ov-outcome-card reveal">
+              <div class="outcome-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6v2a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5v-2c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7zm-2 19a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5h-4v.5z"></path></svg>
+              </div>
+              <h3>Innovation &amp; Public Good</h3>
+              <p>Knowledge carries responsibility. We cultivate creativity and ethical awareness, preparing engineers to build sustainable, human-centric technologies that serve society.</p>
+            </article>
+
+            <article class="acad-ov-outcome-card reveal">
+              <div class="outcome-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3>Professional Readiness</h3>
+              <p>Employability is our milestone; confident citizenship is our destination. Graduates emerge with multidisciplinary teamwork, communication skills, and lifelong adaptability.</p>
+            </article>
+          </div>
+
+          <!-- CENTERED CURRICULUM ACTION BANNER -->
+          <div class="acad-ov-action-banner reveal">
+            <div class="action-banner-text">
+              <h3>Ready to explore the full academic structure?</h3>
+              <p>Review semester-wise course syllabi, credit distribution, elective tracks, and autonomous regulations.</p>
             </div>
-            <h3>Deep Conceptual Mastery</h3>
-            <p>Academic excellence is our gateway. We empower learners with strong theoretical comprehension, mathematical modeling capacity, and deep domain principles.</p>
-          </article>
+            <a href="#/curriculum" class="acad-ov-curriculum-btn">
+              <span>View Autonomous Curriculum Structure</span>
+              <span class="acad-ov-btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
 
-          <article class="acad-ov-outcome-card reveal">
-            <div class="outcome-icon-wrap" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-            </div>
-            <h3>Applied Problem Solving</h3>
-            <p>Learning becomes lasting when ideas are tested in action. Students develop the skill to analyze complex real-world challenges and design robust engineering solutions.</p>
-          </article>
-
-          <article class="acad-ov-outcome-card reveal">
-            <div class="outcome-icon-wrap" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6v2a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5v-2c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7zm-2 19a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5h-4v.5z"></path></svg>
-            </div>
-            <h3>Innovation &amp; Public Good</h3>
-            <p>Knowledge carries responsibility. We cultivate creativity and ethical awareness, preparing engineers to build sustainable, human-centric technologies that serve society.</p>
-          </article>
-
-          <article class="acad-ov-outcome-card reveal">
-            <div class="outcome-icon-wrap" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h3>Professional Readiness</h3>
-            <p>Employability is our milestone; confident citizenship is our destination. Graduates emerge with multidisciplinary teamwork, communication skills, and lifelong adaptability.</p>
-          </article>
         </div>
       </div>
+
+      <!-- BOTTOM DECORATIVE AREA (Smooth curved ending inside same section) -->
+      <div class="acad-ov-bottom-ending" aria-hidden="true">
+        <svg class="acad-ov-bottom-wave-svg" viewBox="0 0 1440 90" preserveAspectRatio="none" fill="none">
+          <path d="M0,0 C360,70 820,10 1440,65 L1440,90 L0,90 Z" fill="#00221A"/>
+        </svg>
+        <div class="acad-ov-bottom-footer-bar">
+          <div class="acad-ov-shell">
+            <div class="acad-ov-motto-row">
+              <span class="motto-word">KNOWLEDGE</span>
+              <span class="motto-sep">&bull;</span>
+              <span class="motto-word">SKILLS</span>
+              <span class="motto-sep">&bull;</span>
+              <span class="motto-word">VALUES</span>
+              <span class="motto-sep">&bull;</span>
+              <span class="motto-word">IMPACT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>`;
 }
@@ -3735,20 +3958,20 @@ function programmesPage() {
   return `<main class="siet-programmes-page">
     ${sietHudHeader('UG & PG Programmes', 'UG & PG Programmes', false)}
     <section class="siet-prog-container">
-      <div class="siet-prog-controls reveal">
+      <div class="siet-prog-controls">
         <div class="siet-prog-filter-tabs" role="tablist" aria-label="Programmes filter">
           <button type="button" class="siet-prog-filter-btn is-active" data-filter="all">All Programmes <span class="count-pill">21</span></button>
           <button type="button" class="siet-prog-filter-btn" data-filter="ug">Undergraduate (UG) <span class="count-pill">14</span></button>
           <button type="button" class="siet-prog-filter-btn" data-filter="pg">Postgraduate (PG) <span class="count-pill">7</span></button>
         </div>
         <div class="siet-prog-meta-badges">
-          <span class="meta-pill"><i></i> Anna University Autonomous R2024</span>
+          <span class="meta-pill"><i></i> Anna University Autonomous R2025</span>
           <span class="meta-pill"><i></i> AICTE Approved &amp; NBA Accredited</span>
         </div>
       </div>
 
       <!-- UG CATEGORY SECTION -->
-      <section id="ug-programmes-section" class="siet-prog-category-section reveal" data-category="ug">
+      <section id="ug-programmes-section" class="siet-prog-category-section" data-category="ug">
         <div class="siet-prog-section-header">
           <div class="siet-prog-kicker">
             <span class="badge-accent">UG</span>
@@ -3759,7 +3982,7 @@ function programmesPage() {
         </div>
         <div class="siet-prog-grid">
           ${ugProgramsDetailed.map(p => `
-            <article class="siet-prog-card reveal">
+            <article class="siet-prog-card">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">4 Years &bull; Full Time</span>
@@ -3768,7 +3991,7 @@ function programmesPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2024</span>
+                  <span>Autonomous R2025</span>
                   <span>Industry CoEs</span>
                   <span>Placement Focus</span>
                 </div>
@@ -3783,7 +4006,7 @@ function programmesPage() {
       </section>
 
       <!-- PG CATEGORY SECTION -->
-      <section id="pg-programmes-section" class="siet-prog-category-section reveal" data-category="pg">
+      <section id="pg-programmes-section" class="siet-prog-category-section" data-category="pg">
         <div class="siet-prog-section-header">
           <div class="siet-prog-kicker">
             <span class="badge-accent pg">PG</span>
@@ -3794,7 +4017,7 @@ function programmesPage() {
         </div>
         <div class="siet-prog-grid">
           ${pgProgramsDetailed.map(p => `
-            <article class="siet-prog-card pg-card reveal">
+            <article class="siet-prog-card pg-card">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge pg ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">2 Years &bull; Full Time</span>
@@ -3803,7 +4026,7 @@ function programmesPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2024</span>
+                  <span>Autonomous R2025</span>
                   <span>R&amp;D Publication</span>
                   <span>Specialized Labs</span>
                 </div>
@@ -3818,7 +4041,7 @@ function programmesPage() {
       </section>
 
       <!-- ADMISSIONS CTA BANNER -->
-      <section class="siet-prog-cta-banner reveal">
+      <section class="siet-prog-cta-banner">
         <div>
           <small>ADMISSIONS 2026–27</small>
           <h2>Begin your engineering journey at Sri Shakthi</h2>
@@ -3837,20 +4060,20 @@ function departmentsPage() {
   return `<main class="siet-programmes-page">
     ${sietHudHeader('Departments', 'Departments', false)}
     <section class="siet-prog-container">
-      <div class="siet-prog-controls reveal">
+      <div class="siet-prog-controls">
         <div class="siet-prog-filter-tabs" role="tablist" aria-label="Departments filter">
           <button type="button" class="siet-prog-filter-btn depts-filter-btn is-active" data-dept-filter="all">All Departments <span class="count-pill">21</span></button>
           <button type="button" class="siet-prog-filter-btn depts-filter-btn" data-dept-filter="ug">Undergraduate (UG) <span class="count-pill">14</span></button>
           <button type="button" class="siet-prog-filter-btn depts-filter-btn" data-dept-filter="pg">Postgraduate (PG) <span class="count-pill">7</span></button>
         </div>
         <div class="siet-prog-meta-badges">
-          <span class="meta-pill"><i></i> Anna University Autonomous R2024</span>
+          <span class="meta-pill"><i></i> Anna University Autonomous R2025</span>
           <span class="meta-pill"><i></i> AICTE Approved &amp; NBA Accredited</span>
         </div>
       </div>
 
       <!-- UG CATEGORY SECTION -->
-      <section id="ug-depts-section" class="siet-prog-category-section reveal" data-category="ug">
+      <section id="ug-depts-section" class="siet-prog-category-section" data-category="ug">
         <div class="siet-prog-section-header">
           <div class="siet-prog-kicker">
             <span class="badge-accent">UG</span>
@@ -3861,7 +4084,7 @@ function departmentsPage() {
         </div>
         <div class="siet-prog-grid">
           ${ugProgramsDetailed.map(p => `
-            <article class="siet-prog-card reveal">
+            <article class="siet-prog-card">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">4 Years &bull; Full Time</span>
@@ -3870,7 +4093,7 @@ function departmentsPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2024</span>
+                  <span>Autonomous R2025</span>
                   <span>Industry CoEs</span>
                   <span>Placement Focus</span>
                 </div>
@@ -3885,7 +4108,7 @@ function departmentsPage() {
       </section>
 
       <!-- PG CATEGORY SECTION -->
-      <section id="pg-depts-section" class="siet-prog-category-section reveal" data-category="pg">
+      <section id="pg-depts-section" class="siet-prog-category-section" data-category="pg">
         <div class="siet-prog-section-header">
           <div class="siet-prog-kicker">
             <span class="badge-accent pg">PG</span>
@@ -3896,7 +4119,7 @@ function departmentsPage() {
         </div>
         <div class="siet-prog-grid">
           ${pgProgramsDetailed.map(p => `
-            <article class="siet-prog-card pg-card reveal">
+            <article class="siet-prog-card pg-card">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge pg ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">2 Years &bull; Full Time</span>
@@ -3905,7 +4128,7 @@ function departmentsPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2024</span>
+                  <span>Autonomous R2025</span>
                   <span>Research Labs</span>
                   <span>Industry CoEs</span>
                 </div>
@@ -3920,7 +4143,7 @@ function departmentsPage() {
       </section>
 
       <!-- ADMISSIONS CTA BANNER -->
-      <div class="siet-prog-cta-banner reveal">
+      <div class="siet-prog-cta-banner">
         <div>
           <small>ADMISSIONS 2026–27</small>
           <h2>Ready to Choose Your Department?</h2>
@@ -4145,6 +4368,53 @@ const currIcons = {
   headphone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>`
 };
 
+function lockModalScroll() {
+  document.documentElement.classList.add('modal-open');
+  document.body.classList.add('modal-open');
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+}
+
+function unlockModalScroll() {
+  document.documentElement.classList.remove('modal-open');
+  document.body.classList.remove('modal-open');
+  document.documentElement.style.overflow = '';
+  document.body.style.overflow = '';
+}
+
+function attachModalScrollTrap(modalEl) {
+  if (!modalEl || modalEl.dataset.scrollTrapAttached) return;
+  modalEl.dataset.scrollTrapAttached = 'true';
+
+  modalEl.addEventListener('wheel', (e) => {
+    const box = modalEl.querySelector('.siet-lib-modal-box');
+    if (!box || !box.contains(e.target) || e.target === modalEl) {
+      e.preventDefault();
+      return;
+    }
+
+    const canScroll = box.scrollHeight > box.clientHeight + 1;
+    if (!canScroll) {
+      e.preventDefault();
+      return;
+    }
+
+    const delta = e.deltaY;
+    const atTop = box.scrollTop <= 0 && delta < 0;
+    const atBottom = box.scrollTop + box.clientHeight >= box.scrollHeight - 1 && delta > 0;
+    if (atTop || atBottom) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  modalEl.addEventListener('touchmove', (e) => {
+    const box = modalEl.querySelector('.siet-lib-modal-box');
+    if (!box || !box.contains(e.target) || e.target === modalEl) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+}
+
 let currActiveDept = 'cse';
 let currActiveSem = 1;
 
@@ -4152,11 +4422,11 @@ function getCurrModalData(target, deptId = 'cse') {
   const dept = getDeptCurriculum(deptId);
   const deptFullName = `${dept.degree} ${dept.name}`;
 
-  if (target === 'curriculum-r2024') {
+  if (target === 'curriculum-r2025') {
     return {
-      title: `${deptFullName} — Autonomous Curriculum (R2024)`,
+      title: `${deptFullName} — Autonomous Curriculum (R2025)`,
       content: `
-        <p>The Autonomous Curriculum (Regulations 2024) for <b>${deptFullName}</b> of Sri Shakthi Institute of Engineering and Technology is outcome-driven and structured across <b>168 total credits</b>.</p>
+        <p>The Autonomous Curriculum (Regulations 2025) for <b>${deptFullName}</b> of Sri Shakthi Institute of Engineering and Technology is outcome-driven and structured across <b>168 total credits</b>.</p>
         <h4>Credit Distribution Across Categories</h4>
         <ul>
           <li><span class="siet-lib-resource-badge">HSMC</span> Humanities and Social Sciences (12 Credits)</li>
@@ -4172,9 +4442,9 @@ function getCurrModalData(target, deptId = 'cse') {
     };
   }
 
-  if (target === 'syllabus-r2024') {
+  if (target === 'syllabus-r2025') {
     return {
-      title: `${deptFullName} — Detailed Syllabus (R2024)`,
+      title: `${deptFullName} — Detailed Syllabus (R2025)`,
       content: `
         <p>Each syllabus outlines course educational objectives, unit-wise topic descriptions, laboratory experiments, modern tool requirements, textbooks, and reference volumes for <b>${deptFullName}</b>.</p>
         <h4>Specialization Focus</h4>
@@ -4190,9 +4460,9 @@ function getCurrModalData(target, deptId = 'cse') {
     };
   }
 
-  if (target === 'regulations-r2024') {
+  if (target === 'regulations-r2025') {
     return {
-      title: 'Academic Regulations (Autonomous R2024)',
+      title: 'Academic Regulations (Autonomous R2025)',
       content: `
         <h4>Key Academic Highlights</h4>
         <ul>
@@ -4307,6 +4577,70 @@ const currSemestersList = [
   [8, 'Semester VIII']
 ];
 
+function renderAcademicsSidebar(activeItem = 'curriculum') {
+  return `<aside class="siet-curr-sidebar">
+    <div class="siet-curr-sidecard">
+      <div class="siet-curr-sidehead">
+        <span class="sidehead-icon" aria-hidden="true">${currIcons.gradCap}</span>
+        <div class="sidehead-text">
+          <h3>Academics</h3>
+          <p>Your learning journey, our priority.</p>
+        </div>
+      </div>
+      <nav class="siet-curr-nav" aria-label="Academic navigation">
+        <a href="#/curriculum" class="siet-curr-navlink ${activeItem === 'curriculum' ? 'is-active' : ''}">
+          <span class="navlink-content">
+            <span class="navlink-icon">${libIcons.book}</span>
+            <span>Curriculum</span>
+          </span>
+          <span class="navlink-arrow">›</span>
+        </a>
+        <a href="#/academic-calendar" class="siet-curr-navlink ${activeItem === 'academic-calendar' ? 'is-active' : ''}">
+          <span class="navlink-content">
+            <span class="navlink-icon">${currIcons.calendar}</span>
+            <span>Academic Calendar</span>
+          </span>
+          <span class="navlink-arrow">›</span>
+        </a>
+        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'syllabus' ? 'is-active' : ''}" data-target="syllabus-r2025">
+          <span class="navlink-content">
+            <span class="navlink-icon">${libIcons.document}</span>
+            <span>Syllabus</span>
+          </span>
+          <span class="navlink-arrow">›</span>
+        </button>
+        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'regulations' ? 'is-active' : ''}" data-target="regulations-r2025">
+          <span class="navlink-content">
+            <span class="navlink-icon">${currIcons.shield}</span>
+            <span>Regulations</span>
+          </span>
+          <span class="navlink-arrow">›</span>
+        </button>
+        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'academic-resources' || activeItem === 'resources' ? 'is-active' : ''}" data-target="curriculum-r2025">
+          <span class="navlink-content">
+            <span class="navlink-icon">${currIcons.database}</span>
+            <span>Academic Resources</span>
+          </span>
+          <span class="navlink-arrow">›</span>
+        </button>
+      </nav>
+    </div>
+  </aside>`;
+}
+
+function renderAcademicsModal() {
+  return `<!-- Curriculum / Academic Modal Dialog -->
+  <div class="siet-lib-modal js-curr-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="siet-lib-modal-box">
+      <div class="siet-lib-modal-header">
+        <h3 class="js-curr-modal-title">Academic Document</h3>
+        <button type="button" class="siet-lib-modal-close js-curr-modal-close" aria-label="Close modal">×</button>
+      </div>
+      <div class="siet-lib-modal-body js-curr-modal-body"></div>
+    </div>
+  </div>`;
+}
+
 function curriculumPage() {
   const params = routeParams();
   const queryDept = params.get('dept');
@@ -4323,57 +4657,10 @@ function curriculumPage() {
     <div class="siet-curr-container">
       <div class="siet-curr-grid">
         <!-- Left Sidebar: Academics Nav -->
-        <aside class="siet-curr-sidebar reveal">
-          <div class="siet-curr-sidecard">
-            <div class="siet-curr-sidehead">
-              <span class="sidehead-icon" aria-hidden="true">${currIcons.gradCap}</span>
-              <div class="sidehead-text">
-                <h3>Academics</h3>
-                <p>Your learning journey, our priority.</p>
-              </div>
-            </div>
-            <nav class="siet-curr-nav" aria-label="Academic navigation">
-              <a href="#/curriculum" class="siet-curr-navlink is-active">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${libIcons.book}</span>
-                  <span>Curriculum</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </a>
-              <a href="#/academic-calendar" class="siet-curr-navlink">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${currIcons.calendar}</span>
-                  <span>Academic Calendar</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </a>
-              <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="syllabus-r2024">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${libIcons.document}</span>
-                  <span>Syllabus</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </button>
-              <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="regulations-r2024">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${currIcons.shield}</span>
-                  <span>Regulations</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </button>
-              <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="curriculum-r2024">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${currIcons.database}</span>
-                  <span>Academic Resources</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </button>
-            </nav>
-          </div>
-        </aside>
+        ${renderAcademicsSidebar('curriculum')}
 
         <!-- Center: Interactive Curriculum Viewer -->
-        <main class="siet-curr-center reveal">
+        <main class="siet-curr-center">
           <!-- Department Tabs (Alphabetical order) -->
           <div class="curr-dept-tabs" role="tablist" aria-label="Select Engineering Department">
             ${[...allDepartments].sort((a, b) => a.code.localeCompare(b.code)).map(d => `
@@ -4414,16 +4701,7 @@ function curriculumPage() {
     </div>
   </section>
 
-  <!-- Curriculum Modal Dialog -->
-  <div class="siet-lib-modal js-curr-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="siet-lib-modal-box">
-      <div class="siet-lib-modal-header">
-        <h3 class="js-curr-modal-title">Academic Document</h3>
-        <button type="button" class="siet-lib-modal-close js-curr-modal-close" aria-label="Close modal">×</button>
-      </div>
-      <div class="siet-lib-modal-body js-curr-modal-body"></div>
-    </div>
-  </div>
+  ${renderAcademicsModal()}
 </main>`;
 }
 
@@ -4435,51 +4713,11 @@ function academicCalendarPage() {
     <div class="siet-curr-container">
       <div class="siet-curr-grid">
         <!-- Left Sidebar: Academics Nav -->
-        <aside class="siet-curr-sidebar reveal">
-          <div class="siet-curr-sidecard">
-            <div class="siet-curr-sidehead">
-              <span class="sidehead-icon" aria-hidden="true">${currIcons.gradCap}</span>
-              <div class="sidehead-text">
-                <h3>Academics</h3>
-                <p>Your learning journey, our priority.</p>
-              </div>
-            </div>
-            <nav class="siet-curr-nav" aria-label="Academic navigation">
-              <a href="#/curriculum" class="siet-curr-navlink">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${libIcons.book}</span>
-                  <span>Curriculum</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </a>
-              <a href="#/academic-calendar" class="siet-curr-navlink is-active">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${currIcons.calendar}</span>
-                  <span>Academic Calendar</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </a>
-              <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="syllabus-r2024">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${libIcons.document}</span>
-                  <span>Syllabus</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </button>
-              <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="regulations-r2024">
-                <span class="navlink-content">
-                  <span class="navlink-icon">${currIcons.shield}</span>
-                  <span>Regulations</span>
-                </span>
-                <span class="navlink-arrow">›</span>
-              </button>
-            </nav>
-          </div>
-        </aside>
+        ${renderAcademicsSidebar('academic-calendar')}
 
         <!-- Main Content -->
         <article class="siet-curr-main">
-          <div class="siet-calendar-card reveal">
+          <div class="siet-calendar-card">
             <div class="siet-calendar-header">
               <div>
                 <span class="curr-badge">AUTONOMOUS 2025–2026</span>
@@ -4602,6 +4840,7 @@ function academicCalendarPage() {
     </div>
   </section>
 
+  ${renderAcademicsModal()}
 </main>`;
 }
 
@@ -4836,6 +5075,7 @@ function routeParams() {
   return new URLSearchParams(raw.slice(qIndex + 1));
 }
 function render() {
+  unlockModalScroll();
   if (!appRoot) return;
   const r = route();
   const isApply = (r === 'apply' || r === 'admission-enquiry' || r === 'admission-referral' || r === 'referral');
@@ -5053,7 +5293,8 @@ function bind() {
       bodyEl.innerHTML = data.content;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      lockModalScroll();
+      attachModalScrollTrap(modal);
     });
   });
 
@@ -5062,7 +5303,7 @@ function bind() {
     if (modal) {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      unlockModalScroll();
     }
   });
 
@@ -5070,7 +5311,7 @@ function bind() {
     if (e.target.classList.contains('js-lib-modal')) {
       e.target.classList.remove('open');
       e.target.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      unlockModalScroll();
     }
   });
 
@@ -5097,7 +5338,8 @@ function bind() {
     `;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    lockModalScroll();
+    attachModalScrollTrap(modal);
   });
 
   // Department switcher helper
@@ -5170,7 +5412,8 @@ function bind() {
       bodyEl.innerHTML = data.content;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      lockModalScroll();
+      attachModalScrollTrap(modal);
     });
   });
 
@@ -5179,7 +5422,7 @@ function bind() {
     if (modal) {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      unlockModalScroll();
     }
   });
 
@@ -5187,7 +5430,7 @@ function bind() {
     if (e.target.classList.contains('js-curr-modal')) {
       e.target.classList.remove('open');
       e.target.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
+      unlockModalScroll();
     }
   });
 
@@ -5584,7 +5827,7 @@ function bind() {
     handleRelationChange();
   }
 
-  $$('.js-form').forEach(form => form.addEventListener('submit', submitForm)); observe();
+  $$('.js-form').forEach(form => form.addEventListener('submit', submitForm)); observe(); requestAnimationFrame(observe); setTimeout(observe, 100);
 }
 async function submitForm(e) {
   e.preventDefault();
@@ -5622,7 +5865,7 @@ async function submitForm(e) {
     if (btn) btn.disabled = false;
   }
 }
-function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .18 }); $$('.reveal,.js-counter').forEach(el => reduce ? (el.classList.add('is-visible'), el.classList.contains('js-counter') && animateCounter(el)) : observer.observe(el)) }
+function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .01, rootMargin: '120px 0px 60px 0px' }); $$('.reveal,.js-counter').forEach(el => { const rect = el.getBoundingClientRect(); if (reduce || (rect.top < window.innerHeight + 100 && rect.bottom > -100)) { el.classList.add('is-visible'); if (el.classList.contains('js-counter')) animateCounter(el); } else { observer.observe(el); } }); }
 function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
 const handleEscape = e => {
   if (e.key === 'Escape') {
@@ -5631,6 +5874,7 @@ const handleEscape = e => {
     $('.placement-modal-close')?.click();
     $('.js-lib-modal-close')?.click();
     $('.js-curr-modal-close')?.click();
+    unlockModalScroll();
     $$('.institution-nav-group').forEach(g => {
       g.classList.remove('open');
       g.querySelector('button')?.setAttribute('aria-expanded', 'false');
@@ -5656,7 +5900,7 @@ export function mountSite(root) {
     window.removeEventListener('hashchange', render);
     window.removeEventListener('keydown', handleEscape);
     document.removeEventListener('click', handleDocClick);
-    document.body.style.overflow = '';
+    unlockModalScroll();
     appRoot = null;
   };
 }

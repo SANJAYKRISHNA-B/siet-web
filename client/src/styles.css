@@ -25,6 +25,12 @@ body {
   font-family: 'DM Sans', sans-serif
 }
 
+html.modal-open,
+body.modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+}
+
 a {
   color: inherit;
   text-decoration: none
@@ -37446,6 +37452,8 @@ button.button.js-explore-campus {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease, visibility 0.25s ease;
+  overscroll-behavior: contain;
+  touch-action: none;
 }
 
 .siet-lib-modal.open {
@@ -37460,6 +37468,7 @@ button.button.js-explore-campus {
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
   box-shadow: 0 24px 60px rgba(0, 30, 15, 0.35);
   position: relative;
   transform: translateY(16px) scale(0.97);
@@ -38888,6 +38897,22 @@ a.siet-curr-navlink {
   min-height: 100vh;
 }
 
+.siet-programmes-page .reveal,
+.siet-prog-container,
+.siet-prog-controls,
+.siet-prog-category-section,
+.siet-prog-grid,
+.siet-prog-card,
+.siet-prog-cta-banner {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.siet-prog-card:hover {
+  transform: translateY(-6px) !important;
+}
+
 .siet-prog-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -40134,41 +40159,95 @@ a.siet-curr-navlink {
   .careers-page .career-institution-copy p { font-size: 14px; text-align: left; }
 }
 /* ==========================================================================
-   ACADEMIC OVERVIEW DEDICATED EDITORIAL STYLES (.siet-acad-overview)
-   Sri Shakthi Institute of Engineering and Technology
+   ACADEMIC OVERVIEW — GREEN & YELLOW PREMIUM INSTITUTIONAL TEMPLATE
+   Sri Shakthi Institute of Engineering and Technology (Autonomous R2025)
    ========================================================================== */
 
 .siet-acad-overview {
-  background-color: #FAFAF7;
-  color: #1A3329;
+  background-color: #003F32;
+  color: #FFFFFF;
   overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  position: relative;
+  width: 100%;
+}
+
+/* Suppress redundant global wave when on Academic Overview */
+.siet-acad-overview + .siet-curr-bottom-decor {
+  display: none !important;
 }
 
 .acad-ov-shell {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 36px;
+  position: relative;
+  z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
-   HERO SECTION
+   UNIFIED SINGLE-SECTION WRAPPER & AMBIENT DECOR
    -------------------------------------------------------------------------- */
-.acad-ov-hero {
-  padding: 80px 0 90px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAF7 100%);
-  border-bottom: 1px solid rgba(0, 63, 50, 0.08);
+.acad-ov-unified-section {
   position: relative;
+  width: 100%;
+  background: linear-gradient(168deg, #002B22 0%, #003F32 38%, #00483A 100%);
+  overflow: hidden;
 }
 
-.acad-ov-hero::before {
-  content: "";
+.acad-ov-ambient-decor {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #003F32 0%, #D9A800 40%, #FFC928 80%, #003F32 100%);
+  height: 650px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.acad-ov-decor-glow {
+  position: absolute;
+  top: -120px;
+  right: 15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 201, 40, 0.08) 0%, rgba(0, 63, 50, 0) 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.acad-ov-decor-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 201, 40, 0.12);
+  pointer-events: none;
+}
+
+.acad-ov-decor-ring.ring-1 {
+  width: 680px;
+  height: 680px;
+  top: -160px;
+  right: -120px;
+}
+
+.acad-ov-decor-ring.ring-2 {
+  width: 440px;
+  height: 440px;
+  top: 60px;
+  left: -140px;
+  border-style: solid;
+  border-color: rgba(255, 201, 40, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   TOP HERO COMPOSITION (Deep Green Dominant)
+   -------------------------------------------------------------------------- */
+.acad-ov-hero-container {
+  padding: 72px 0 36px;
+  position: relative;
+  z-index: 2;
 }
 
 .acad-ov-hero-grid {
@@ -40178,238 +40257,549 @@ a.siet-curr-navlink {
   align-items: center;
 }
 
-.acad-ov-badge-row {
+/* Left Hero Column */
+.acad-ov-hero-left {
   display: flex;
+  flex-direction: column;
+}
+
+.acad-ov-kicker-wrap {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 22px;
-  flex-wrap: wrap;
 }
 
 .acad-ov-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #003F32;
-  background: #FFF8DF;
-  border: 1px solid rgba(217, 168, 0, 0.4);
-  padding: 6px 14px;
-  border-radius: 50px;
+  color: #FFC928;
 }
 
-.acad-ov-kicker .kicker-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #D9A800;
+.acad-ov-kicker-line {
+  display: inline-block;
+  height: 2px;
+  width: 72px;
+  background: linear-gradient(90deg, #FFC928 0%, rgba(255, 201, 40, 0.15) 100%);
+  border-radius: 2px;
 }
 
-.acad-ov-pill {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #003F32;
-  background: rgba(0, 63, 50, 0.07);
-  padding: 5px 12px;
-  border-radius: 50px;
-}
-
-.acad-ov-hero-title {
-  font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: clamp(34px, 4.2vw, 52px);
+.acad-ov-main-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
   font-weight: 800;
-  color: #003F32;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  margin: 0 0 20px 0;
+  color: #FFFFFF;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 24px 0;
 }
 
-.acad-ov-hero-title em {
-  font-family: 'Playfair Display', serif;
+.acad-ov-main-heading .acad-ov-accent-text {
+  color: #FFC928;
   font-style: italic;
-  font-weight: 600;
-  color: #D9A800;
+  font-weight: 700;
 }
 
-.acad-ov-hero-lead {
-  font-size: 17px;
-  line-height: 1.7;
-  color: #3B5A4D;
-  margin: 0 0 28px 0;
-  max-width: 680px;
+.acad-ov-hero-desc {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 34px 0;
+  max-width: 660px;
+  font-weight: 400;
 }
 
-.acad-ov-credentials-bar {
+/* Institutional Badge Row */
+.acad-ov-inst-badges {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 12px 18px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 63, 50, 0.1);
-  border-radius: 12px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 14px rgba(0, 63, 50, 0.03);
+  gap: 14px 20px;
+  background: rgba(0, 24, 18, 0.65);
+  border: 1px solid rgba(255, 201, 40, 0.32);
+  border-radius: 14px;
+  padding: 14px 22px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
 }
 
-.acad-ov-credentials-bar .cred-item {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #2E4E40;
+.inst-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
 
-.acad-ov-credentials-bar .cred-gold {
-  color: #003F32;
-  background: #FFC928;
-  padding: 2px 7px;
-  border-radius: 4px;
+.inst-badge-icon {
+  color: #FFC928;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 201, 40, 0.14);
+  border: 1px solid rgba(255, 201, 40, 0.3);
+  flex-shrink: 0;
+}
+
+.inst-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.inst-badge-text strong {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+}
+
+.inst-badge-text span {
   font-size: 11.5px;
-  letter-spacing: 0.04em;
-  margin-right: 4px;
+  color: rgba(255, 248, 223, 0.78);
+  font-weight: 500;
 }
 
-.acad-ov-credentials-bar .cred-sep {
-  color: #D9A800;
-  opacity: 0.6;
+.inst-badge-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 201, 40, 0.35);
 }
 
-.acad-ov-hero-actions {
+/* Right Hero Column: Campus Image Frame */
+.acad-ov-hero-right {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.acad-ov-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #003F32;
-  color: #FFFFFF !important;
-  padding: 14px 26px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 14.5px;
-  text-decoration: none;
-  transition: all 0.24s ease;
-  box-shadow: 0 8px 22px rgba(0, 63, 50, 0.18);
-}
-
-.acad-ov-btn-primary:hover {
-  background: #065443;
-  color: #FFC928 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 63, 50, 0.25);
-}
-
-.acad-ov-btn-primary svg {
-  transition: transform 0.2s ease;
-}
-
-.acad-ov-btn-primary:hover svg {
-  transform: translateX(4px);
-}
-
-.acad-ov-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #FFFFFF;
-  color: #003F32 !important;
-  padding: 13px 22px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  border: 1px solid rgba(0, 63, 50, 0.2);
-  transition: all 0.22s ease;
-}
-
-.acad-ov-btn-secondary:hover {
-  border-color: #D9A800;
-  background: #FFF8DF;
-  color: #003F32 !important;
-  transform: translateY(-2px);
-}
-
-/* Hero Media Card */
-.acad-ov-media-card {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  background: #FFFFFF;
-  box-shadow: 0 24px 50px rgba(0, 63, 50, 0.12);
-  border: 1px solid rgba(217, 168, 0, 0.25);
-}
-
-.acad-ov-media-frame {
+.acad-ov-campus-frame {
   position: relative;
   width: 100%;
-  height: 380px;
+  max-width: 540px;
+  height: 430px;
+  border-radius: 26px;
   overflow: hidden;
-  background: #003F32;
+  border: 2.5px solid #FFC928;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
+  background: #00221A;
 }
 
-.acad-ov-hero-img {
+.acad-ov-campus-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
   display: block;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.acad-ov-media-card:hover .acad-ov-hero-img {
-  transform: scale(1.03);
+.acad-ov-campus-frame:hover .acad-ov-campus-img {
+  transform: scale(1.04);
 }
 
-.acad-ov-media-overlay {
+.acad-ov-image-glare {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 63, 50, 0.1) 0%, rgba(0, 63, 50, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(0, 63, 50, 0) 55%, rgba(0, 36, 28, 0.88) 100%);
   pointer-events: none;
 }
 
-.acad-ov-media-caption {
+.acad-ov-campus-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  background: #FFFFFF;
-  border-top: 1px solid rgba(0, 63, 50, 0.08);
+  gap: 12px;
+  background: #FFF8DF;
+  border: 1.5px solid #D9A800;
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
-.acad-ov-media-caption .caption-crest {
-  width: 38px;
-  height: 38px;
+.badge-crest-img {
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  display: block;
 }
 
-.acad-ov-media-caption .caption-text strong {
-  display: block;
+.badge-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-kicker {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #7A5B00;
+  text-transform: uppercase;
+}
+
+.badge-title {
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 800;
   color: #003F32;
-  margin-bottom: 2px;
-}
-
-.acad-ov-media-caption .caption-text span {
-  font-size: 12px;
-  color: #4F705F;
-  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 /* --------------------------------------------------------------------------
-   SECTION HEADINGS & COMMON STYLES
+   ORGANIC CURVED TRANSITION (Deep Green into Cream #FFF8DF)
+   -------------------------------------------------------------------------- */
+.acad-ov-curved-transition {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: 36px;
+  margin-bottom: -1px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.acad-ov-wave-svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+/* --------------------------------------------------------------------------
+   ACADEMIC HIGHLIGHTS AREA (Cream #FFF8DF)
+   -------------------------------------------------------------------------- */
+.acad-ov-cream-area {
+  background-color: #FFF8DF;
+  padding: 30px 0 64px;
+  position: relative;
+  z-index: 3;
+}
+
+.acad-ov-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* High-level Academic Summary Card */
+.acad-ov-card {
+  background: #FFFFFF;
+  border: 1.5px solid #D9A800;
+  border-radius: 20px;
+  padding: 32px 22px 28px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 63, 50, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.acad-ov-card:hover {
+  transform: translateY(-6px);
+  border-color: #FFC928;
+  box-shadow: 0 18px 36px rgba(0, 63, 50, 0.14);
+}
+
+.acad-ov-card-icon-area {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #003F32;
+  color: #FFC928;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0, 63, 50, 0.22);
+  border: 2px solid rgba(217, 168, 0, 0.4);
+}
+
+.acad-ov-card-icon-area svg {
+  stroke: #FFC928;
+}
+
+.acad-ov-card-value {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #003F32;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.acad-ov-card-label {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #9E7400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.acad-ov-card-desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #244437;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   CURRICULUM ACTION LINK
+   -------------------------------------------------------------------------- */
+.acad-ov-action-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right Hero Column: Campus Image Frame */
+.acad-ov-hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.acad-ov-campus-frame {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  height: 430px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 2.5px solid #FFC928;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
+  background: #00221A;
+}
+
+.acad-ov-campus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.acad-ov-campus-frame:hover .acad-ov-campus-img {
+  transform: scale(1.04);
+}
+
+.acad-ov-image-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 63, 50, 0) 55%, rgba(0, 36, 28, 0.88) 100%);
+  pointer-events: none;
+}
+
+.acad-ov-campus-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFF8DF;
+  border: 1.5px solid #D9A800;
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.badge-crest-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.badge-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-kicker {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #7A5B00;
+  text-transform: uppercase;
+}
+
+.badge-title {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #003F32;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   ORGANIC CURVED TRANSITION (Deep Green into Cream #FFF8DF)
+   -------------------------------------------------------------------------- */
+.acad-ov-curved-transition {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: 36px;
+  margin-bottom: -1px;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.acad-ov-wave-svg {
+  display: block;
+  width: 100%;
+  height: 90px;
+}
+
+/* --------------------------------------------------------------------------
+   ACADEMIC HIGHLIGHTS AREA (Cream #FFF8DF)
+   -------------------------------------------------------------------------- */
+.acad-ov-cream-area {
+  background-color: #FFF8DF;
+  padding: 30px 0 64px;
+  position: relative;
+  z-index: 3;
+}
+
+.acad-ov-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* High-level Academic Summary Card */
+.acad-ov-card {
+  background: #FFFFFF;
+  border: 1.5px solid #D9A800;
+  border-radius: 20px;
+  padding: 32px 22px 28px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 63, 50, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.acad-ov-card:hover {
+  transform: translateY(-6px);
+  border-color: #FFC928;
+  box-shadow: 0 18px 36px rgba(0, 63, 50, 0.14);
+}
+
+.acad-ov-card-icon-area {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #003F32;
+  color: #FFC928;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0, 63, 50, 0.22);
+  border: 2px solid rgba(217, 168, 0, 0.4);
+}
+
+.acad-ov-card-icon-area svg {
+  stroke: #FFC928;
+}
+
+.acad-ov-card-value {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #003F32;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.acad-ov-card-label {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #9E7400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.acad-ov-card-desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #244437;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   CURRICULUM ACTION LINK
+   -------------------------------------------------------------------------- */
+.acad-ov-action-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acad-ov-curriculum-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #003F32;
+  color: #FFFFFF !important;
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 16px 38px;
+  border-radius: 9999px;
+  border: 2px solid #FFC928;
+  box-shadow: 0 12px 28px rgba(0, 63, 50, 0.25);
+  transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.acad-ov-curriculum-btn:hover {
+  background: #065443;
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(0, 63, 50, 0.32);
+  border-color: #FFE175;
+}
+
+.acad-ov-btn-arrow {
+  color: #FFC928;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.22s ease;
+}
+
+.acad-ov-curriculum-btn:hover .acad-ov-btn-arrow {
+  transform: translateX(6px);
+}
+
+/* --------------------------------------------------------------------------
+   SHARED SECTION HEADINGS FOR UNIFIED SECTIONS
    -------------------------------------------------------------------------- */
 .acad-ov-section-head {
-  margin-bottom: 48px;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 52px;
 }
 
 .acad-ov-section-tag {
@@ -40417,74 +40807,107 @@ a.siet-curr-navlink {
   font-family: 'League Spartan', -apple-system, sans-serif;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #D9A800;
-  margin-bottom: 10px;
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.acad-ov-section-tag:not(.dark) {
+  color: #FFC928;
+  background: rgba(255, 201, 40, 0.12);
+  border: 1px solid rgba(255, 201, 40, 0.35);
+}
+
+.acad-ov-section-tag.dark {
+  color: #003F32;
+  background: #FFF3CC;
+  border: 1px solid rgba(217, 168, 0, 0.45);
 }
 
 .acad-ov-section-title {
-  font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: clamp(28px, 3.6vw, 42px);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 3.4vw, 42px);
   font-weight: 800;
-  color: #003F32;
   line-height: 1.18;
-  letter-spacing: -0.01em;
-  margin: 0 0 14px 0;
+  letter-spacing: -0.015em;
+  margin: 0 0 16px 0;
+}
+
+.acad-ov-section-title.light {
+  color: #FFFFFF;
+}
+
+.acad-ov-section-title.dark {
+  color: #003F32;
 }
 
 .acad-ov-section-title em {
   font-family: 'Playfair Display', serif;
   font-style: italic;
+  font-weight: 700;
+  color: #FFC928;
+}
+
+.acad-ov-section-title.dark em {
   color: #D9A800;
-  font-weight: 600;
 }
 
 .acad-ov-section-desc {
-  max-width: 720px;
-  font-size: 16.5px;
-  line-height: 1.68;
-  color: #446454;
+  font-size: 16px;
+  line-height: 1.7;
   margin: 0;
 }
 
+.acad-ov-section-desc.light {
+  color: rgba(255, 248, 223, 0.85);
+}
+
+.acad-ov-section-desc.dark {
+  color: #375647;
+}
+
 /* --------------------------------------------------------------------------
-   SECTION 01: ACADEMIC APPROACH
+   SECTION 01: ACADEMIC APPROACH (Deep Forest Green #002D24)
    -------------------------------------------------------------------------- */
-.acad-ov-approach-section {
-  padding: 96px 0;
-  background: #FFFFFF;
-  border-bottom: 1px solid rgba(0, 63, 50, 0.08);
+.acad-ov-approach-wrapper {
+  background: #002D24;
+  padding: 40px 0 70px;
+  position: relative;
+  z-index: 3;
 }
 
 .acad-ov-approach-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 48px;
   align-items: flex-start;
 }
 
 .acad-ov-approach-narrative {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
 }
 
 .acad-ov-pillar-item {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
-  padding: 24px;
-  background: #FAFAF7;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 63, 50, 0.07);
-  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  padding: 24px 26px;
+  background: rgba(0, 52, 42, 0.75);
+  border: 1.5px solid rgba(255, 201, 40, 0.18);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .acad-ov-pillar-item:hover {
-  transform: translateX(4px);
-  border-color: rgba(217, 168, 0, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 63, 50, 0.05);
-  background: #FFFFFF;
+  transform: translateX(6px);
+  border-color: #FFC928;
+  background: rgba(0, 60, 48, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .pillar-marker {
@@ -40492,30 +40915,33 @@ a.siet-curr-navlink {
   height: 44px;
   min-width: 44px;
   border-radius: 12px;
-  background: #003F32;
+  background: #00241C;
+  border: 1.5px solid #FFC928;
   color: #FFC928;
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .pillar-body h3 {
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 19px;
+  font-size: 18.5px;
   font-weight: 800;
-  color: #003F32;
+  color: #FFFFFF;
   margin: 0 0 8px 0;
   line-height: 1.25;
+  letter-spacing: 0.01em;
 }
 
 .pillar-body p {
   margin: 0;
-  font-size: 14.5px;
-  line-height: 1.62;
-  color: #496858;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 248, 223, 0.82);
 }
 
 /* Approach Visual Stack */
@@ -40528,12 +40954,13 @@ a.siet-curr-navlink {
 }
 
 .visual-photo-wrap {
-  border-radius: 20px;
+  position: relative;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 20px 42px rgba(0, 63, 50, 0.1);
-  border: 1px solid rgba(0, 63, 50, 0.1);
-  background: #003F32;
-  max-height: 360px;
+  border: 2px solid #FFC928;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  background: #00221A;
+  max-height: 320px;
 }
 
 .visual-photo-wrap img {
@@ -40541,15 +40968,26 @@ a.siet-curr-navlink {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.visual-photo-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.visual-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 45, 36, 0.1) 0%, rgba(0, 34, 26, 0.75) 100%);
+  pointer-events: none;
 }
 
 .visual-highlight-card {
-  background: linear-gradient(135deg, #003F32 0%, #044F3F 100%);
-  color: #FFFFFF;
-  padding: 28px;
+  background: linear-gradient(135deg, #003F32 0%, #002B22 100%);
+  border: 1.5px solid #FFC928;
   border-radius: 18px;
-  box-shadow: 0 16px 36px rgba(0, 63, 50, 0.15);
-  border-left: 5px solid #FFC928;
+  padding: 26px 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
 .highlight-stat {
@@ -40561,59 +40999,61 @@ a.siet-curr-navlink {
 
 .highlight-stat .stat-num {
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 800;
   color: #FFC928;
   line-height: 1;
 }
 
 .highlight-stat .stat-label {
+  font-family: 'League Spartan', -apple-system, sans-serif;
   font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #FFF8DF;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 
 .highlight-text {
   margin: 0;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 248, 223, 0.85);
 }
 
 /* --------------------------------------------------------------------------
-   SECTION 02: THE LEARNING EXPERIENCE
+   SECTION 02: THE LEARNING EXPERIENCE (Cream #FFF8DF)
    -------------------------------------------------------------------------- */
-.acad-ov-experience-section {
-  padding: 96px 0;
-  background: #FAFAF7;
-  border-bottom: 1px solid rgba(0, 63, 50, 0.08);
+.acad-ov-experience-wrapper {
+  background: #FFF8DF;
+  padding: 40px 0 70px;
+  position: relative;
+  z-index: 3;
 }
 
 .acad-ov-journey-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 26px;
   margin-bottom: 48px;
 }
 
 .acad-ov-journey-card {
   background: #FFFFFF;
-  border-radius: 18px;
-  padding: 32px 28px;
-  border: 1px solid rgba(0, 63, 50, 0.08);
-  box-shadow: 0 6px 20px rgba(0, 63, 50, 0.03);
+  border-radius: 20px;
+  padding: 32px 26px;
+  border: 1.5px solid #D9A800;
+  box-shadow: 0 10px 28px rgba(0, 63, 50, 0.06);
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
 }
 
 .acad-ov-journey-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 63, 50, 0.08);
-  border-color: #D9A800;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 63, 50, 0.12);
+  border-color: #FFC928;
 }
 
 .journey-card-top {
@@ -40624,20 +41064,21 @@ a.siet-curr-navlink {
 }
 
 .journey-badge {
+  font-family: 'League Spartan', -apple-system, sans-serif;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #003F32;
-  background: #FFF8DF;
-  border: 1px solid rgba(217, 168, 0, 0.3);
+  background: #FFF3CC;
+  border: 1px solid rgba(217, 168, 0, 0.4);
   padding: 4px 10px;
-  border-radius: 50px;
+  border-radius: 6px;
 }
 
 .journey-step-num {
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 800;
   color: #D9A800;
   line-height: 1;
@@ -40645,7 +41086,7 @@ a.siet-curr-navlink {
 
 .journey-card-title {
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
   color: #003F32;
   line-height: 1.25;
@@ -40653,9 +41094,9 @@ a.siet-curr-navlink {
 }
 
 .journey-card-desc {
-  font-size: 14.5px;
-  line-height: 1.64;
-  color: #4A6A5A;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #385648;
   margin: 0 0 22px 0;
   flex: 1;
 }
@@ -40665,25 +41106,27 @@ a.siet-curr-navlink {
   flex-wrap: wrap;
   gap: 6px;
   padding-top: 16px;
-  border-top: 1px solid rgba(0, 63, 50, 0.06);
+  border-top: 1px solid rgba(0, 63, 50, 0.08);
 }
 
 .journey-card-meta .meta-tag {
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #003F32;
-  background: #F0F7F2;
-  padding: 4px 9px;
+  background: #FFF0BD;
+  border: 1px solid rgba(217, 168, 0, 0.35);
+  padding: 4px 10px;
   border-radius: 5px;
 }
 
-/* Quote banner */
+/* Quote Banner */
 .acad-ov-experience-quote {
-  background: #FFFFFF;
+  background: #003F32;
+  color: #FFFFFF;
   border-radius: 20px;
   padding: 38px 48px;
-  border: 1px solid rgba(217, 168, 0, 0.35);
-  box-shadow: 0 10px 30px rgba(0, 63, 50, 0.04);
+  border: 2px solid #FFC928;
+  box-shadow: 0 16px 40px rgba(0, 63, 50, 0.18);
   position: relative;
   overflow: hidden;
 }
@@ -40692,27 +41135,32 @@ a.siet-curr-navlink {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   width: 6px;
-  background: linear-gradient(180deg, #FFC928 0%, #D9A800 100%);
+  height: 100%;
+  background: #FFC928;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 1;
 }
 
 .quote-mark {
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  line-height: 1;
-  color: #D9A800;
+  font-size: 60px;
+  color: #FFC928;
+  line-height: 0.8;
   display: block;
-  margin-bottom: -10px;
+  margin-bottom: 8px;
 }
 
 .quote-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
   font-style: italic;
-  font-size: 21px;
   line-height: 1.6;
-  color: #003F32;
+  color: #FFFDF5;
   margin: 0 0 16px 0;
   max-width: 960px;
 }
@@ -40720,24 +41168,26 @@ a.siet-curr-navlink {
 .quote-author strong {
   display: block;
   font-family: 'League Spartan', -apple-system, sans-serif;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 800;
-  color: #003F32;
+  color: #FFC928;
   letter-spacing: 0.04em;
 }
 
 .quote-author span {
+  display: block;
   font-size: 12px;
-  color: #557565;
-  font-weight: 600;
+  color: rgba(255, 248, 223, 0.75);
 }
 
 /* --------------------------------------------------------------------------
-   SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES
+   SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES (Deep Green #003F32)
    -------------------------------------------------------------------------- */
-.acad-ov-philosophy-section {
-  padding: 96px 0 108px;
-  background: #FFFFFF;
+.acad-ov-philosophy-wrapper {
+  background: #003F32;
+  padding: 40px 0 80px;
+  position: relative;
+  z-index: 3;
 }
 
 .acad-ov-outcomes-grid {
@@ -40748,42 +41198,43 @@ a.siet-curr-navlink {
 }
 
 .acad-ov-outcome-card {
-  background: #FAFAF7;
-  border-radius: 16px;
-  padding: 28px 22px;
-  border: 1px solid rgba(0, 63, 50, 0.07);
-  transition: all 0.22s ease;
+  background: rgba(0, 36, 28, 0.75);
+  border-radius: 18px;
+  padding: 30px 22px;
+  border: 1.5px solid rgba(255, 201, 40, 0.22);
+  backdrop-filter: blur(8px);
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
 .acad-ov-outcome-card:hover {
-  transform: translateY(-4px);
-  background: #FFFFFF;
-  border-color: rgba(217, 168, 0, 0.4);
-  box-shadow: 0 12px 28px rgba(0, 63, 50, 0.06);
+  transform: translateY(-5px);
+  border-color: #FFC928;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
 }
 
 .outcome-icon-wrap {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: #FFF8DF;
-  color: #003F32;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #00221A;
+  color: #FFC928;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  border: 1px solid rgba(217, 168, 0, 0.3);
+  border: 1.5px solid rgba(255, 201, 40, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .outcome-icon-wrap svg {
-  stroke: #003F32;
+  stroke: #FFC928;
 }
 
 .acad-ov-outcome-card h3 {
   font-family: 'League Spartan', -apple-system, sans-serif;
   font-size: 18px;
   font-weight: 800;
-  color: #003F32;
+  color: #FFFFFF;
   line-height: 1.25;
   margin: 0 0 10px 0;
 }
@@ -40791,28 +41242,113 @@ a.siet-curr-navlink {
 .acad-ov-outcome-card p {
   margin: 0;
   font-size: 13.5px;
-  line-height: 1.6;
-  color: #4C6A5A;
+  line-height: 1.62;
+  color: rgba(255, 248, 223, 0.82);
+}
+
+/* Action Banner */
+.acad-ov-action-banner {
+  background: linear-gradient(135deg, #002B22 0%, #00221A 100%);
+  border: 2px solid #FFC928;
+  border-radius: 22px;
+  padding: 36px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.action-banner-text h3 {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+}
+
+.action-banner-text p {
+  margin: 0;
+  font-size: 14.5px;
+  color: rgba(255, 248, 223, 0.82);
 }
 
 /* --------------------------------------------------------------------------
-   RESPONSIVE DESIGN
-   Tested Breakpoints: 1440px, 1024px, 768px, 414px, 390px
+   BOTTOM DECORATIVE AREA (Deep Green Curved Ending)
    -------------------------------------------------------------------------- */
+.acad-ov-bottom-ending {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  margin-top: -1px;
+  z-index: 3;
+}
+
+.acad-ov-bottom-wave-svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+.acad-ov-bottom-footer-bar {
+  background: #00221A;
+  padding: 14px 0 28px;
+  text-align: center;
+}
+
+.acad-ov-motto-row {
+  font-family: 'League Spartan', -apple-system, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 223, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.acad-ov-motto-row .motto-sep {
+  color: #FFC928;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (1440px, 1024px, 768px, 414px, 390px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .acad-ov-hero-grid {
+    gap: 40px;
+  }
+  .acad-ov-campus-frame {
+    height: 380px;
+  }
+  .acad-ov-approach-grid {
+    gap: 36px;
+  }
+}
 
 @media (max-width: 1024px) {
   .acad-ov-shell {
-    padding: 0 24px;
+    padding: 0 28px;
   }
-  .acad-ov-hero {
-    padding: 60px 0 70px;
+  .acad-ov-hero-container {
+    padding: 56px 0 24px;
   }
   .acad-ov-hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
-  .acad-ov-media-frame {
-    height: 320px;
+  .acad-ov-campus-frame {
+    max-width: 600px;
+    height: 350px;
+  }
+  .acad-ov-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .acad-ov-approach-grid {
     grid-template-columns: 1fr;
@@ -40827,7 +41363,12 @@ a.siet-curr-navlink {
   }
   .acad-ov-outcomes-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 20px;
+  }
+  .acad-ov-action-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
   }
 }
 
@@ -40835,35 +41376,90 @@ a.siet-curr-navlink {
   .acad-ov-shell {
     padding: 0 20px;
   }
-  .acad-ov-hero {
-    padding: 48px 0 56px;
+  .acad-ov-hero-container {
+    padding: 44px 0 20px;
   }
-  .acad-ov-approach-section,
-  .acad-ov-experience-section,
-  .acad-ov-philosophy-section {
-    padding: 64px 0;
+  .acad-ov-main-heading {
+    font-size: 32px;
+  }
+  .acad-ov-hero-desc {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  .acad-ov-inst-badges {
+    padding: 12px 16px;
+    gap: 12px 16px;
+  }
+  .inst-badge-divider {
+    display: none;
+  }
+  .acad-ov-campus-frame {
+    height: 290px;
+    border-radius: 20px;
+  }
+  .acad-ov-campus-badge {
+    bottom: 14px;
+    left: 14px;
+    padding: 8px 12px;
+  }
+  .badge-crest-img {
+    width: 26px;
+    height: 26px;
+  }
+  .badge-title {
+    font-size: 12px;
+  }
+  .acad-ov-curved-transition .acad-ov-wave-svg {
+    height: 60px;
+  }
+  .acad-ov-cream-area {
+    padding: 24px 0 48px;
+  }
+  .acad-ov-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .acad-ov-card {
+    padding: 24px 16px 20px;
+    border-radius: 16px;
+  }
+  .acad-ov-card-value {
+    font-size: 32px;
+  }
+  .acad-ov-card-icon-area {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+  .acad-ov-approach-wrapper,
+  .acad-ov-experience-wrapper,
+  .acad-ov-philosophy-wrapper {
+    padding: 36px 0 54px;
   }
   .acad-ov-section-head {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
-  .acad-ov-hero-lead {
-    font-size: 15.5px;
-  }
-  .acad-ov-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .acad-ov-btn-primary,
-  .acad-ov-btn-secondary {
-    justify-content: center;
-    width: 100%;
-    text-align: center;
+  .acad-ov-pillar-item {
+    padding: 20px 18px;
   }
   .acad-ov-experience-quote {
-    padding: 28px 22px;
+    padding: 28px 24px;
   }
   .quote-text {
     font-size: 17px;
+  }
+  .acad-ov-curriculum-btn {
+    width: 100%;
+    max-width: 420px;
+    justify-content: center;
+    padding: 15px 24px;
+    font-size: 15px;
+  }
+  .acad-ov-motto-row {
+    font-size: 11px;
+    gap: 10px;
+    letter-spacing: 0.22em;
   }
 }
 
@@ -40871,41 +41467,53 @@ a.siet-curr-navlink {
   .acad-ov-shell {
     padding: 0 16px;
   }
-  .acad-ov-hero {
-    padding: 36px 0 44px;
+  .acad-ov-hero-container {
+    padding: 36px 0 16px;
   }
-  .acad-ov-hero-title {
-    font-size: 30px;
+  .acad-ov-main-heading {
+    font-size: 27px;
+    line-height: 1.2;
   }
-  .acad-ov-media-frame {
-    height: 240px;
+  .acad-ov-campus-frame {
+    height: 230px;
   }
-  .acad-ov-credentials-bar {
-    padding: 10px 14px;
-    gap: 8px;
+  .acad-ov-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
-  .acad-ov-credentials-bar .cred-item {
-    font-size: 11.5px;
+  .acad-ov-card {
+    padding: 20px 12px 18px;
   }
-  .acad-ov-pillar-item {
-    flex-direction: column;
-    padding: 18px 16px;
-    gap: 14px;
+  .acad-ov-card-value {
+    font-size: 26px;
   }
-  .pillar-marker {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    font-size: 14px;
+  .acad-ov-card-label {
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
   }
-  .highlight-stat .stat-num {
-    font-size: 32px;
-  }
-  .acad-ov-journey-card {
-    padding: 24px 20px;
+  .acad-ov-card-desc {
+    font-size: 12px;
+    line-height: 1.35;
   }
   .acad-ov-outcomes-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .acad-ov-pillar-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .acad-ov-curriculum-btn {
+    font-size: 14px;
+    padding: 14px 18px;
+    gap: 10px;
+  }
+  .acad-ov-bottom-wave-svg {
+    height: 45px;
+  }
+  .acad-ov-motto-row {
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    gap: 8px;
   }
 }

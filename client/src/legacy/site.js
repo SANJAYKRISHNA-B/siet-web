@@ -161,46 +161,46 @@ const placementTierData = {
   '10': {
     tier: '₹10 LPA+',
     name: 'Super Dream Offers',
-    count: 18,
+    count: '26+',
     badge: 'Tier 1 • Super Dream Category',
-    highlight: 'Highest offer of ₹24 LPA with an average of ₹12.4 LPA',
+    highlight: 'Highest offer of ₹33 LPA with 26+ offers in the ₹10–33 LPA bracket',
     desc: 'Elite product engineering, AI systems, cloud architecture, and mission-critical cybersecurity roles.',
     roles: ['Cloud Solutions Architect', 'AI/ML Research Engineer', 'Senior Full Stack Specialist', 'Core Security Analyst'],
     companies: ['Zoho', 'Presidio', 'ConverSight', 'Cognizant', 'Zentron Labs', 'Auriseg'],
-    statBox: { label: 'Highest Package', value: '₹24 LPA' }
-  },
-  '8': {
-    tier: '₹8 LPA+',
-    name: 'Marquee Offers',
-    count: 42,
-    badge: 'Tier 2 • Marquee Category',
-    highlight: 'Average package of ₹8.6 LPA across engineering disciplines',
-    desc: 'Specialized enterprise technology, data engineering, full stack development, and embedded systems.',
-    roles: ['DevOps & Cloud Engineer', 'Enterprise Application Developer', 'Data Platform Engineer', 'Firmware Engineer'],
-    companies: ['Presidio', 'Cognizant', 'Auriseg', 'nference', 'ZyNerd', 'Retail AI'],
-    statBox: { label: 'Average Package', value: '₹8.6 LPA' }
+    statBox: { label: 'Highest Package', value: '₹33 LPA' }
   },
   '6': {
     tier: '₹6 LPA+',
-    name: 'Premier Offers',
-    count: 76,
-    badge: 'Tier 3 • Premier Category',
-    highlight: 'Average package of ₹6.4 LPA with over 76 confirmed placements',
-    desc: 'Core software engineering, robotics automation, smart infrastructure, and digital transformation.',
-    roles: ['Software Development Engineer', 'Embedded Systems Specialist', 'Automation & QA Engineer', 'Digital Solutions Analyst'],
-    companies: ['Cognizant', 'Zoho', 'Nallas', 'Retail AI', 'ITC Limited', 'Vendasta'],
-    statBox: { label: 'Average Package', value: '₹6.4 LPA' }
+    name: 'Marquee Offers',
+    count: '98+',
+    badge: 'Tier 2 • Marquee Category',
+    highlight: '98+ offers in the ₹6–10 LPA package range across engineering disciplines',
+    desc: 'Specialized enterprise technology, data engineering, full stack development, and embedded systems.',
+    roles: ['DevOps & Cloud Engineer', 'Enterprise Application Developer', 'Data Platform Engineer', 'Firmware Engineer'],
+    companies: ['Presidio', 'Cognizant', 'Auriseg', 'nference', 'ZyNerd', 'Retail AI'],
+    statBox: { label: 'Offers in Range', value: '98+' }
   },
   '4': {
     tier: '₹4 LPA+',
+    name: 'Premier Offers',
+    count: '226+',
+    badge: 'Tier 3 • Premier Category',
+    highlight: '226+ confirmed placements in the ₹4–6 LPA package range',
+    desc: 'Core software engineering, robotics automation, smart infrastructure, and digital transformation.',
+    roles: ['Software Development Engineer', 'Embedded Systems Specialist', 'Automation & QA Engineer', 'Digital Solutions Analyst'],
+    companies: ['Cognizant', 'Zoho', 'Nallas', 'Retail AI', 'ITC Limited', 'Vendasta'],
+    statBox: { label: 'Offers in Range', value: '226+' }
+  },
+  '3': {
+    tier: '₹3 LPA+',
     name: 'Core & IT Offers',
-    count: 128,
+    count: '272+',
     badge: 'Tier 4 • Core & IT Category',
-    highlight: 'Over 128 career starts with 100% industry placement track record',
+    highlight: '272+ career starts in the ₹3–4 LPA foundation category',
     desc: 'Fundamental engineering roles spanning software engineering, hardware validation, and IoT development.',
     roles: ['Associate Software Engineer', 'IoT Solutions Associate', 'VLSI Design Trainee', 'Process Engineering Analyst'],
     companies: ['Abluva', 'Adya', 'Conserve', 'Mr. Copper', 'Vakilsearch', 'ServiceNow'],
-    statBox: { label: 'Placement Success', value: '100%' }
+    statBox: { label: 'Offers in Range', value: '272+' }
   }
 };
 
@@ -285,11 +285,11 @@ function placementDetailsModal(tierKey = '10') {
 
         <div class="pm-footer">
           <div class="pm-footer-stats">
-            <span>Batch Placement: <b>98.4%</b></span>
+            <span>Total Offers: <b>663</b></span>
             <span class="pm-footer-sep" aria-hidden="true">|</span>
-            <span>Highest Offer: <b>₹24 LPA</b></span>
+            <span>Recruiting Companies: <b>213</b></span>
             <span class="pm-footer-sep" aria-hidden="true">|</span>
-            <span>Median Package: <b>₹6.8 LPA</b></span>
+            <span>Highest Offer: <b>₹33 LPA</b></span>
           </div>
           <div class="pm-footer-actions">
             <a href="#/admission-enquiry" class="pm-cta-btn primary">Enquire For Admissions ${icon('arrow')}</a>
@@ -320,13 +320,13 @@ function placementHighlightsCardInner() {
     <!-- 4 Standalone Interactive Statistic Cards in one row -->
     <div class="ps-standalone-cards-row" role="region" aria-label="Placement statistics by salary tier">
       <!-- Card 01 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="10" aria-haspopup="dialog" aria-label="₹10 LPA+ Tier: 18 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="10" aria-haspopup="dialog" aria-label="₹10 LPA+ Tier: 26+ Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-users')}
         </div>
         <div class="ps-stat-pill">₹10 LPA+</div>
-        <strong class="ps-stat-count">${counter(18)}</strong>
+        <strong class="ps-stat-count">${counter(26, '+')}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
           <span>Explore Tier</span>
@@ -335,13 +335,13 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 02 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="8" aria-haspopup="dialog" aria-label="₹8 LPA+ Tier: 42 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="6" aria-haspopup="dialog" aria-label="₹6 LPA+ Tier: 98+ Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-chart')}
         </div>
-        <div class="ps-stat-pill">₹8 LPA+</div>
-        <strong class="ps-stat-count">${counter(42)}</strong>
+        <div class="ps-stat-pill">₹6 LPA+</div>
+        <strong class="ps-stat-count">${counter(98, '+')}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
           <span>Explore Tier</span>
@@ -350,13 +350,13 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 03 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="6" aria-haspopup="dialog" aria-label="₹6 LPA+ Tier: 76 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="4" aria-haspopup="dialog" aria-label="₹4 LPA+ Tier: 226+ Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-diploma')}
         </div>
-        <div class="ps-stat-pill">₹6 LPA+</div>
-        <strong class="ps-stat-count">${counter(76)}</strong>
+        <div class="ps-stat-pill">₹4 LPA+</div>
+        <strong class="ps-stat-count">${counter(226, '+')}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
           <span>Explore Tier</span>
@@ -365,13 +365,13 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 04 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="4" aria-haspopup="dialog" aria-label="₹4 LPA+ Tier: 128 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="3" aria-haspopup="dialog" aria-label="₹3 LPA+ Tier: 272+ Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-briefcase')}
         </div>
-        <div class="ps-stat-pill">₹4 LPA+</div>
-        <strong class="ps-stat-count">${counter(128)}</strong>
+        <div class="ps-stat-pill">₹3 LPA+</div>
+        <strong class="ps-stat-count">${counter(272, '+')}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
           <span>Explore Tier</span>
@@ -527,7 +527,7 @@ function homePage() {
       </div>
     </div>
     <div class="stats-grid">
-      ${[[4263, 'Job offers', 'Last 5 Years', 'chart'], [657, 'Offers in 2026', 'Growing Every Year', 'trend'], [10273, 'Alumni Worldwide', 'Connected Globally', 'connect'], [5984, 'Students on Campus', 'Learning & Innovating', 'grad']].map(([n, t, s, ic], i) => `
+      ${[[663, 'Total Placement Offers', 'Batch of 2025–2026', 'chart'], [213, 'Companies', 'Recruiting Partners', 'trend'], [10273, 'Alumni Worldwide', 'Connected Globally', 'connect'], [5984, 'Students on Campus', 'Learning & Innovating', 'grad']].map(([n, t, s, ic], i) => `
         <article class="stat-box reveal">
           <span class="stat-index">0${i + 1}</span>
           <span class="stat-icon" aria-hidden="true">${icon(ic)}</span>

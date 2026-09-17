@@ -1,3 +1,4 @@
+import { careerFormFields, bindCareerForm } from './careerForm.js';
 import { allDepartments, departmentCurricula, getDeptCurriculum } from './curriculumData.js';
 const $ = (selector, root = document) => root?.querySelector?.(selector) || null;
 const $$ = (selector, root = document) => root?.querySelectorAll ? [...root.querySelectorAll(selector)] : [];
@@ -148,10 +149,12 @@ function header() {
 }
 
 function applyHeader() {
-  return `<header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a></div></header>`;
+  return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div><header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a></div></header>`;
 }
 
 function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
+
+function bottomDecor() { return `<div class="siet-curr-bottom-decor" aria-hidden="true"><div class="siet-curr-bottom-wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none"><path d="M0,100 L0,25 C200,85 450,95 720,60 C980,25 1200,35 1440,0 L1440,100 Z" fill="#073b21"/><path d="M0,100 L0,45 C240,92 480,102 760,70 C1020,38 1240,48 1440,20 L1440,100 Z" fill="#0b522f"/><path d="M0,100 L0,70 C280,105 520,108 800,82 C1060,56 1280,68 1440,45 L1440,100 Z" fill="#eab308"/></svg></div></div>` }
 const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
 const placementTierData = {
@@ -1369,12 +1372,7 @@ function internalPage(route) {
   </div>`: '';
 
   return `<main class="internal-page ${isDepts ? 'departments-page departments-index-page' : ''}">
-    ${route === 'placements' ? `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}` : (isDepts ? sietHudHeader('Departments', 'Departments') : `<section class="page-hero">
-      <img class="page-crest" src="/brand/siet-logo.png" alt="">
-      <div class="eyebrow"><span></span> SRI SHAKTHI</div>
-      <h1 class="reveal">${data[0]}</h1>
-      <p>${data[1]}</p>
-    </section>`)}
+    ${route === 'placements' ? `${sietHudHeader('Placements', 'Placements', false)}<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}` : sietHudHeader(data[0], data[0], false)}
     <section class="page-content">
       <div class="reveal">
         <div class="section-no">OVERVIEW</div>
@@ -1426,7 +1424,7 @@ function programSelectHtml(label, name) {
 
 function programmesPage() {
   return `<main class="siet-programmes-page">
-    ${sietPageHeader('UG & PG Programmes', 'Explore our distinguished undergraduate and postgraduate engineering & technology programmes.', 'SRI SHAKTHI &bull; ADMISSION PROGRAMMES')}
+    ${sietHudHeader('UG & PG Programmes', 'UG & PG Programmes', false)}
     <section class="siet-prog-container">
       <div class="siet-prog-controls reveal">
         <div class="siet-prog-filter-tabs" role="tablist" aria-label="Programmes filter">
@@ -1528,7 +1526,7 @@ function programmesPage() {
 
 function departmentsPage() {
   return `<main class="siet-programmes-page">
-    ${sietPageHeader('Departments', 'SRI SHAKTHI &bull; DEPARTMENTS')}
+    ${sietHudHeader('Departments', 'Departments', false)}
     <section class="siet-prog-container">
       <div class="siet-prog-controls reveal">
         <div class="siet-prog-filter-tabs" role="tablist" aria-label="Departments filter">
@@ -1744,7 +1742,7 @@ const libModalData = {
 
 function libraryPage() {
   return `<main class="siet-library-page">
-  ${sietHudHeader('Library', 'Library')}
+  ${sietHudHeader('Library', 'Library', false)}
 
   <section class="siet-lib-features-strip" aria-label="Key library features">
     <div class="siet-lib-features-container">
@@ -2010,7 +2008,7 @@ function curriculumPage() {
   const activeDept = getDeptCurriculum(currActiveDept);
 
   return `<main class="siet-curr-page">
-  ${sietHudHeader('Curriculum', 'Curriculum')}
+  ${sietHudHeader('Curriculum', 'Curriculum', false)}
 
   <section class="siet-curr-body">
     <div class="siet-curr-container">
@@ -2107,32 +2105,6 @@ function curriculumPage() {
     </div>
   </section>
 
-  <!-- Ambient Bottom Wave and Watermark -->
-  <div class="siet-curr-bottom-decor" aria-hidden="true">
-    <div class="siet-curr-watermark">
-      <svg viewBox="0 0 280 120" fill="none" stroke="#256e48" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10 110h260M25 110V45l45-22 45 22v65M115 110V32l35-18 35 18v78M185 110V45l40-20 40 20v65" />
-        <line x1="45" y1="58" x2="45" y2="110" />
-        <line x1="60" y1="58" x2="60" y2="110" />
-        <line x1="85" y1="58" x2="85" y2="110" />
-        <line x1="100" y1="58" x2="100" y2="110" />
-        <rect x="135" y="48" width="16" height="22" />
-        <rect x="160" y="48" width="16" height="22" />
-        <rect x="145" y="80" width="20" height="30" rx="6" />
-        <line x1="205" y1="58" x2="205" y2="110" />
-        <line x1="220" y1="58" x2="220" y2="110" />
-        <line x1="245" y1="58" x2="245" y2="110" />
-      </svg>
-    </div>
-    <div class="siet-curr-bottom-wave">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
-        <path d="M0,100 L0,25 C200,85 450,95 720,60 C980,25 1200,35 1440,0 L1440,100 Z" fill="#073b21" />
-        <path d="M0,100 L0,45 C240,92 480,102 760,70 C1020,38 1240,48 1440,20 L1440,100 Z" fill="#0b522f" />
-        <path d="M0,100 L0,70 C280,105 520,108 800,82 C1060,56 1280,68 1440,45 L1440,100 Z" fill="#eab308" />
-      </svg>
-    </div>
-  </div>
-
   <!-- Curriculum Modal Dialog -->
   <div class="siet-lib-modal js-curr-modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="siet-lib-modal-box">
@@ -2148,7 +2120,7 @@ function curriculumPage() {
 
 function academicCalendarPage() {
   return `<main class="siet-curr-page siet-calendar-page">
-  ${sietHudHeader('Academic Calendar', 'Academic Calendar')}
+  ${sietHudHeader('Academic Calendar', 'Academic Calendar', false)}
 
   <section class="siet-curr-body">
     <div class="siet-curr-container">
@@ -2321,16 +2293,6 @@ function academicCalendarPage() {
     </div>
   </section>
 
-  <!-- Wave transition -->
-  <div class="siet-curr-waves-zone" aria-hidden="true">
-    <div class="siet-curr-bottom-wave">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none">
-        <path d="M0,100 L0,25 C200,85 450,95 720,60 C980,25 1200,35 1440,0 L1440,100 Z" fill="#073b21" />
-        <path d="M0,100 L0,45 C240,92 480,102 760,70 C1020,38 1240,48 1440,20 L1440,100 Z" fill="#0b522f" />
-        <path d="M0,100 L0,70 C280,105 520,108 800,82 C1060,56 1280,68 1440,45 L1440,100 Z" fill="#eab308" />
-      </svg>
-    </div>
-  </div>
 </main>`;
 }
 
@@ -2496,21 +2458,33 @@ const field = (label, name, type, placeholder) => `<label>${label} <b>*</b><inpu
 const selectField = (label, name, opts) => `<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o => `<option>${o}</option>`).join('')}</select></label>`;
 const careerUnits = {
   college: {
-    name: 'Engineering College',
+    name: 'Institute of Engineering and Technology',
+    logo: '/brand/siet-logo.png',
+    heading: 'Sri Shakthi Institute of Engineering and Technology',
+    departments: [...allDepartments.map(d => d.name), 'Administration', 'Training and Placement', 'Physical Education', 'Library', 'IT Support', 'Other'],
     subtitle: 'Autonomous Institution · Affiliated to Anna University',
-    desc: 'We invite passionate educators, researchers and industry professionals to join an institution focused on applied research, innovation and industry-relevant engineering education.',
+    desc: 'Aims to focus our attention towards research and industry need based education, we invite applications from the candidates who have a natural flair for research and would like to join our mission for the following positions.',
     cats: [
-      ['Leadership Positions', ['Principal / Dean', 'Head of Department', 'Academic Administrator']],
+      ['Leadership Position', ['Principal', 'Director of Research']],
       ['College Teaching Positions', ['Professor', 'Associate Professor', 'Assistant Professor']],
-      ['Career Oriented Specialists', ['Aptitude Trainer', 'Programming Trainer', 'Machine Learning Trainer']],
-      ['Managerial Positions', ['HR and Administration', 'Admissions and Outreach']],
-      ['Creative Positions', ['Content and Communications', 'Graphic Designer']]
+      ['School Teaching Positions', ['English PGT', 'English TGT', 'Tamil TGT', 'Hindi TGT', 'French TGT', 'Maths PGT', 'Science PGT', 'Commerce PGT', 'Economics PGT'], 'CBSE school requires motivated teachers for the following positions.'],
+      ['Food Testing Lab', ['Manager Operations (Authorized Signatory)', 'Manager Marketing', 'Marketing Executives', 'Food Analyst I', 'Food Analyst II', 'Lab Technician', 'Receptionist'], 'Invites applications for our newly established state-of-the-art food testing laboratory with imported equipment including ICP-OES, GC-MS, HPLC and FTIR. The lab is established at a cost of Rs. 3 crores, partly funded by the Ministry of Food Processing Industries, Government of India.'],
+      ['Career Oriented Specialists', ['Quantitative Aptitude Trainer', 'Verbal Aptitude Trainer', 'BEC Certification Trainer', 'GATE Exam Trainer', 'IES Exam Trainer', 'GRE Exam Trainer', 'Bioinformatics Trainer', 'CAT Exam Trainer', 'C Trainer', 'Java Trainer', 'Machine Learning Trainer', 'LabVIEW Trainer', 'Entrepreneurship Lead', 'Embedded Trainer', 'VLSI Trainer'], 'We offer support for a diverse range of career opportunities, from placement and higher-education preparation to entrepreneurial venture launch. Applicants with 3+ years of experience in a coaching centre are preferred.'],
+      ['Managerial Positions', ['Placement Officer', 'Placement Coordinator', 'Vigilance Officer', 'Operations and Infrastructure Lead', 'HR Manager', 'Admissions Manager', 'Social Media Manager', 'Brand Manager', 'Librarian']],
+      ['Creative Positions', ['Graphic Designer', '2D & 3D Animator', 'Video Editor', 'Website Designer'], 'Join our creative team to develop original brand collateral, brochures, posters, event-promotion materials, websites and compelling videos.'],
+      ['Sports Coach Positions', ['Cricket Coach', 'Tennis Coach', 'Hockey Coach', 'Football Coach', 'Volleyball Coach', 'Handball Coach', 'Swimming Coach (for Girls)', 'Kabaddi Coach', 'Gym Instructor', 'Yoga Trainer', 'Archery Coach'], 'We are looking for part-time and full-time coaches for the following sports.'],
+      ['Special Positions', ['System Administration', 'Computer Lab Technicians', 'Tele Calling Executive']]
     ]
   },
   school: {
     name: 'CBSE Senior Secondary School',
+    logo: '/brand/sri-shakthi-school-logo.webp',
+    heading: 'Sri Shakthi International School',
+    website: 'www.srishakthi.ac.in',
+    websiteUrl: 'https://www.srishakthi.ac.in',
+    departments: ['English', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Tamil', 'Hindi', 'Social Science', 'Primary Education', 'Kindergarten', 'Physical Education', 'Arts and Music', 'Administration', 'Other'],
     subtitle: 'Affiliated to CBSE, New Delhi',
-    desc: 'Join an inspiring school community committed to experiential holistic education, academic excellence, sporting achievement and character building.',
+    desc: 'Sri Shakthi International School is a premier residential institution built across a 25 eco-friendly acre campus located precisely between the two industrial districts of Coimbatore and Tiruppur. The school is home to a myriad number of flora and fauna. We are affiliated to CBSE and offer classes from Pre KG to Standard 12. We are committed to the cause of Powering the Youth to Empower the Nation.',
     cats: [
       ['School Leadership Positions', ['Principal / Vice Principal', 'Academic Coordinator', 'Section Head']],
       ['PGT & TGT Teachers', ['English', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']],
@@ -2520,8 +2494,13 @@ const careerUnits = {
   },
   lab: {
     name: 'Food & Environmental Testing Laboratory',
+    logo: '/brand/sri-shakthi-food-lab-logo.png',
+    heading: 'Sri Shakthi Food Testing Laboratory',
+    website: 'www.foodtestinglab.in',
+    websiteUrl: 'https://www.foodtestinglab.in',
+    departments: ['Food Testing', 'Chemical Analysis', 'Microbiology', 'Quality Assurance', 'Sample Management', 'Administration', 'Other'],
     subtitle: 'NABL Accredited Testing Facility',
-    desc: 'Work in cutting-edge laboratory facilities conducting physical, chemical, and microbiological analyses for agricultural, food, and environmental sectors.',
+    desc: 'Invites Applications for our newly established state of the art food testing laboratory with imported equipments like ICP-OES, GC-MS, HPLC, & FTIR. The Lab is established at a cost of Rs. 3 crores partly funded by Ministry of Food Processing Industries, Government of India.',
     cats: [
       ['Quality & Laboratory Management', ['Quality Manager', 'Technical Manager', 'NABL Coordinator']],
       ['Analytical Specialists', ['Senior Food Analyst', 'Chemical Analyst', 'Residue Analysis Specialist']],
@@ -2533,7 +2512,7 @@ const careerUnits = {
 
 function careersPage() {
   const unit = careerUnits.college;
-  return `<main class="careers-page">${sietHudHeader('Careers', 'Careers', false)}<section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
+  return `<main class="careers-page">${sietHudHeader('Careers', 'Careers', false)}<section class="career-main"><div class="career-switcher"><div class="career-switcher-caption"><span>FIND YOUR PLACE</span><p>Three pathways. One shared purpose.</p></div><div class="career-tabs career-toggle" role="group" aria-label="Choose your career institution" style="--career-index: 0"><span class="career-toggle-track" aria-hidden="true"></span>${[['college', 'Engineering College', 'Inspire innovators', 'grad'], ['school', 'CBSE School', 'Shape young minds', 'industry'], ['lab', 'Food Testing Lab', 'Advance discovery', 'lab']].map(([key, label, caption, symbol], index) => `<button class="${index === 0 ? 'active' : ''}" data-unit="${key}" type="button" aria-pressed="${index === 0}"><span class="career-toggle-icon" aria-hidden="true">${symbol === 'lab' ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v7l-6 9a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2l-6-9V3M7 15h10"/><path d="M10 18h.01M14 17h.01"/></svg>' : icon(symbol)}</span><span class="career-toggle-copy"><strong>${label}</strong><small>${caption}</small></span><span class="career-toggle-dot" aria-hidden="true"></span></button>`).join('')}</div></div><div class="career-intro career-institution-banner"><div class="career-institution-logo"><img src="${unit.logo}" alt="${unit.heading} logo"></div><div class="career-institution-copy"><h2>${unit.heading}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${careerFormFields(unit)}</div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>Application Categories</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[2] ? `<p>${c[2]}</p>` : ''}${c[1].map(r => `<span>⇒ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
 }
 
 function videoModal() { return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>` }
@@ -2555,7 +2534,7 @@ function render() {
   if (isApply) {
     const isReferral = (r === 'admission-referral' || r === 'referral' || routeParams().get('tab') === 'referral');
     const activeTab = isReferral ? 'referral' : 'enquiry';
-    appRoot.innerHTML = applyHeader(activeTab) + applyPortalPage(activeTab) + footer();
+    appRoot.innerHTML = applyHeader(activeTab) + applyPortalPage(activeTab) + bottomDecor() + footer();
     document.title = isReferral
       ? 'Admission Referral | Sri Shakthi Institute of Engineering & Technology'
       : 'Apply for Sri Shakthi | SIET';
@@ -2580,7 +2559,7 @@ function render() {
     r === 'academic-calendar' ? academicCalendarPage() :
     internalPage(r);
 
-  appRoot.innerHTML = header() + content + footer();
+  appRoot.innerHTML = header() + content + (r ? bottomDecor() : '') + footer();
   document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`;
   bind();
   scrollTo(0, 0);
@@ -3000,24 +2979,45 @@ function bind() {
       closeAllNavGroups();
     });
   });
-  $$('.career-tabs button').forEach(btn => btn.addEventListener('click', () => {
-    $$('.career-tabs button').forEach(b => b.classList.toggle('active', b === btn));
-    const unitKey = btn.dataset.unit || 'college';
-    const unit = careerUnits[unitKey] || careerUnits.college;
-    const titleEl = $('.career-intro h2'); if (titleEl) titleEl.textContent = 'Sri Shakthi ' + unit.name;
-    const descEl = $('.career-intro p'); if (descEl) descEl.textContent = unit.desc;
-    const subEl = $('.career-intro small'); if (subEl) subEl.textContent = unit.subtitle;
-    const selectCat = $('select[name="category"]');
-    if (selectCat) {
-      selectCat.innerHTML = `<option value="">Select Application Category</option>` + unit.cats.map(c => `<option>${c[0]}</option>`).join('');
+  const careerForm = $('.career-form');
+  const updateCareerUnit = unitKey => {
+    const unit = careerUnits[unitKey];
+    if (!unit || !careerForm) return;
+    const careerButtons = $$('.career-tabs button');
+    careerButtons.forEach(button => {
+      const active = button.dataset.unit === unitKey;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    $('.career-toggle')?.style.setProperty('--career-index', careerButtons.findIndex(button => button.dataset.unit === unitKey));
+    $('.career-intro h2').textContent = unit.heading;
+    $('.career-intro p').textContent = unit.desc;
+    const logo = $('.career-intro img');
+    logo.src = unit.logo;
+    logo.alt = unit.heading + ' banner';
+    careerForm.elements.institution.value = unitKey;
+    careerForm.elements.category.innerHTML = '<option value="">Select a Category</option>' + unit.cats.map(c => `<option>${c[0]}</option>`).join('');
+    for (const name of ['position', 'department']) {
+      const control = careerForm.elements[name];
+      control.innerHTML = `<option value="">Select a ${name === 'position' ? 'Position' : 'Department'}</option>`;
+      control.disabled = true;
     }
-    const catAside = $('.career-categories');
-    if (catAside) {
-      catAside.innerHTML = `<div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>` +
-        unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('') +
-        `<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div>`;
-    }
+    $('.career-categories').innerHTML = `<div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>Application Categories</h2></div>` +
+      unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[2] ? `<p>${c[2]}</p>` : ''}${c[1].map(r => `<span>⇒ ${r}</span>`).join('')}</div></details>`).join('') +
+      `<div class="career-contact"><small>CONTACT FOR QUERIES</small><h3>Let’s build the future together.</h3><a href="tel:04222369900">0422-2369900 (Ext 103)</a><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div>`;
+  };
+  $$('.career-tabs button').forEach(button => button.addEventListener('click', () => {
+    if (careerForm?.elements.institution.value !== button.dataset.unit) updateCareerUnit(button.dataset.unit);
   }));
+  $('.career-categories')?.addEventListener('toggle', event => {
+    const openedCategory = event.target;
+    if (!(openedCategory instanceof HTMLDetailsElement) || !openedCategory.open) return;
+    $$('.career-categories details').forEach(category => {
+      if (category !== openedCategory) category.open = false;
+    });
+  }, true);
+  bindCareerForm(careerForm, careerUnits, updateCareerUnit);
+  if (careerForm) updateCareerUnit('college');
   $$('.js-video').forEach(b => b.addEventListener('click', () => { document.body.insertAdjacentHTML('beforeend', videoModal()); document.body.style.overflow = 'hidden'; const modal = $('.video-modal'); const close = () => { modal?.remove(); document.body.style.overflow = '' }; modal?.addEventListener('click', e => e.target === modal && close()); $('.video-close', modal)?.addEventListener('click', close) }));
   $$('.toggle-btn').forEach(b => b.addEventListener('click', () => {
     $$('.toggle-btn').forEach(x => x.classList.toggle('active', x === b));

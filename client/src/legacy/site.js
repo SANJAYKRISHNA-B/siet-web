@@ -2337,13 +2337,7 @@ function academicCalendarPage() {
 function applyPortalPage(activeTab = 'enquiry') {
   return `<main class="enquiry-page-v3 apply-portal-page">
     <div id="apply-pane-enquiry" class="apply-portal-pane ${activeTab === 'enquiry' ? 'is-active' : ''}">
-      <section class="enquiry-hero-v3">
-        <img src="/brand/siet-logo.png" alt="Sri Shakthi Emblem">
-        <div class="eyebrow"><span></span> SRI SHAKTHI ADMISSIONS</div>
-        <h1>Apply for Sri Shakthi</h1>
-        <h2>Let’s plan your <em>next step.</em></h2>
-        <p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p>
-      </section>
+      ${sietHudHeader('Apply for Sri Shakthi', 'Apply', false)}
 
       <section class="apply-main-container">
         <div class="apply-form-center-wrap">
@@ -2413,13 +2407,7 @@ function applyPortalPage(activeTab = 'enquiry') {
 
     <!-- REFERRAL PANE -->
     <div id="apply-pane-referral" class="apply-portal-pane ${activeTab === 'referral' ? 'is-active' : ''}">
-      <section class="enquiry-hero-v3 referral-hero-v3">
-        <img src="/brand/siet-logo.png" alt="Sri Shakthi Crest">
-        <div class="eyebrow"><span></span> SRI SHAKTHI &bull; REFERRAL PROGRAMME</div>
-        <h1>Student Admission Referral</h1>
-        <h2>Recommend an aspiring <em>student.</em></h2>
-        <p>Alumni, students, parents, faculty, and well-wishers can connect talented students directly with our admissions team.</p>
-      </section>
+      ${sietHudHeader('Student Admission Referral', 'Referral', false)}
 
       <section class="apply-main-container">
         <div class="apply-form-center-wrap">

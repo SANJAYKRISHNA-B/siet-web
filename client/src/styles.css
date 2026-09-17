@@ -39059,29 +39059,28 @@ a.siet-curr-navlink {
 }
 
 /* ==========================================================================
-   2-COLUMN CONCIERGE LAYOUT
+   APPLY PORTAL - HUD HEADER & FULL-WIDTH EXPANSIVE LAYOUT
    ========================================================================== */
+.apply-portal-page .siet-hud-header:before {
+  content: 'SYSTEM ONLINE / ADMISSIONS / SIET-OS' !important;
+}
+
 .apply-main-container {
-  padding: 44px clamp(20px, 4vw, 56px) 60px;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: clamp(28px, 3vw, 44px) clamp(20px, 4vw, 64px) 70px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .apply-form-center-wrap {
-  max-width: 900px;
-  margin: 0 auto;
   width: 100%;
-}
-
-.apply-grid-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.85fr) minmax(320px, 1fr);
-  gap: 36px;
-  align-items: start;
+  max-width: 100%;
+  margin: 0;
 }
 
 .apply-card-header {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+  width: 100%;
 }
 
 .apply-card-header .card-kicker {
@@ -39114,19 +39113,54 @@ a.siet-curr-navlink {
   margin: 0;
 }
 
-/* FORM ENHANCEMENTS */
+/* FULL-WIDTH FORM ENHANCEMENTS */
 .apply-form-v3 {
+  width: 100%;
+  box-sizing: border-box;
   background: #ffffff;
   border: 1px solid #dce8e0;
   border-top: 4px solid #e7b600;
   border-radius: 12px;
-  padding: clamp(24px, 3vw, 36px);
+  padding: clamp(26px, 3.2vw, 44px);
   box-shadow: 0 10px 30px rgba(7, 91, 54, 0.07);
 }
 
+.apply-form-v3 .enquiry-fields-v3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(16px, 2.5vw, 32px);
+  width: 100%;
+}
+
+.apply-form-v3 label {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #173f30 !important;
+  display: block;
+}
+
+.apply-form-v3 input,
+.apply-form-v3 select,
+.apply-form-v3 textarea {
+  font-size: 13.5px !important;
+  padding: 12px 14px !important;
+  border: 1px solid #cfe0d7 !important;
+  border-radius: 7px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.apply-form-v3 input:focus,
+.apply-form-v3 select:focus,
+.apply-form-v3 textarea:focus {
+  border-color: #075b36 !important;
+  box-shadow: 0 0 0 3px rgba(7, 91, 54, 0.12) !important;
+  outline: none;
+}
+
 .form-step-section {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
   border-bottom: 1px dashed #e2ede6;
 }
 

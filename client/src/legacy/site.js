@@ -1,5 +1,17 @@
 import { careerFormFields, bindCareerForm } from './careerForm.js';
 import { allDepartments, departmentCurricula, getDeptCurriculum } from './curriculumData.js';
+import { coePortalPage, coeResultPage, coeTranscriptPage, bindCoeEvents } from './coeData.js';
+import {
+  governancePage,
+  mandatoryDisclosurePage,
+  statutoryDeclarationPage,
+  nirfPage,
+  naacPage,
+  nbaPage,
+  iqacPage,
+  ariiaPage,
+  accreditationsOverviewPage
+} from './accreditationData.js';
 const $ = (selector, root = document) => root?.querySelector?.(selector) || null;
 const $$ = (selector, root = document) => root?.querySelectorAll ? [...root.querySelectorAll(selector)] : [];
 let appRoot;
@@ -53,10 +65,37 @@ const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
   { label: 'Academics', icon: 'book', items: [['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
-  { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
-  { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
+  { label: 'COE', icon: 'quality', items: [['coe', 'COE Portal'], ['coe-result', 'Result'], ['coe-transcript', 'Transcript']] },
+  {
+    label: 'Accreditation',
+    icon: 'quality',
+    items: [
+      ['governance', 'Governance / Committees'],
+      ['mandatory-disclosure', 'Mandatory Disclosure'],
+      ['statutory-declaration', 'Statutory Declaration'],
+      ['nirf', 'NIRF'],
+      ['naac', 'NAAC'],
+      ['nba', 'NBA'],
+      ['iqac', 'IQAC'],
+      ['ariia', 'ARIIA Report']
+    ]
+  },
+  { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['centres-of-excellence', 'Centres of Excellence'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
 ];
 const pageCopy = {
+  governance: ['Governance & Committees', 'Statutory Councils & Administrative Committees', 'Governing Council, Academic Council, Anti-Ragging Committee, Internal Complaints Committee and administrative bodies overseeing institutional governance.'],
+  committees: ['Governance & Committees', 'Statutory Councils & Administrative Committees', 'Governing Council, Academic Council, Anti-Ragging Committee, Internal Complaints Committee and administrative bodies overseeing institutional governance.'],
+  'mandatory-disclosure': ['AICTE Mandatory Disclosure', 'Official Public Compliance & Institutional Information', 'Public disclosure of governance, faculty profiles, sanctioned student intake, infrastructure assets, and financial audit disclosures.'],
+  'statutory-declaration': ['Statutory Declaration', 'Right to Information (RTI) Act 2005 · Section 4(1)(b)', 'Official statutory declaration in compliance with Section 4(1)(b) of the Right to Information Act 2005.'],
+  nirf: ['NIRF Submissions', 'National Institutional Ranking Framework', 'Ministry of Education certified institutional data submissions across Engineering, Innovation, and Overall categories.'],
+  naac: ['NAAC Accreditation', 'Grade ‘A’ Institutional Accreditation', 'Evaluated and accredited with Grade ‘A’ by the National Assessment and Accreditation Council.'],
+  nba: ['NBA Accreditation', 'Tier-I Washington Accord Programmes', 'Eight eligible undergraduate engineering disciplines accredited under the prestigious Washington Accord Tier-I standard.'],
+  iqac: ['Internal Quality Assurance Cell', 'Sustaining Quality & Academic Excellence', 'Nodal quality engine driving academic audits, outcome-based education benchmarks, and AQAR reports.'],
+  ariia: ['ARIIA & Innovation', 'Atal Ranking of Institutions on Innovation Achievements', 'Institutional ranking disclosures under ARIIA and Ministry of Education Innovation Cell (MIC).'],
+  'ariia-report': ['ARIIA & Innovation', 'Atal Ranking of Institutions on Innovation Achievements', 'Institutional ranking disclosures under ARIIA and Ministry of Education Innovation Cell (MIC).'],
+  coe: ['Office of the Controller of Examinations', 'Autonomous Academic Assessment & Examination Cell', 'The Office of the Controller of Examinations (COE) oversees all internal evaluations, autonomous semester examinations, result processing, grade cards, and official transcripts.'],
+  'coe-result': ['COE Result Portal', 'Autonomous Semester Examination Results', 'Access your autonomous semester examination marks and results securely by entering your Register Number and Date of Birth.'],
+  'coe-transcript': ['Official Transcripts', 'Academic Transcripts for Higher Studies & Global Evaluation', 'Official procedure and online requisition for certified academic transcripts, WES verification, and credential evaluation.'],
   'admission-referral': ['Admission Referral', 'Recommend an aspiring student to Sri Shakthi.', 'Support prospective engineers by connecting them with our admissions team through the institutional referral programme.'],
   'core-beliefs': ['Core Beliefs', 'Enduring principles that guide our mission.', 'Achieving academic success is our gateway, employability is our milestone, confident citizenship is our destination, discipline provides willpower, and education is our weapon to change the world.'],
   academics: ['Academic Overview', 'Autonomous Engineering Education · Anna University Affiliated', 'Explore our 21 specialized undergraduate and postgraduate programmes, innovative Regulations 2025 (R2025) 168-credit framework, state-of-the-art laboratories, and experiential learning ecosystem.'], departments: ['Departments', '21 Specialized UG & PG Disciplines. One culture of discovery.', 'Explore our 14 undergraduate and 7 postgraduate engineering and technology departments offering focused learning, world-class laboratories, research and industry engagement.'], curriculum: ['Curriculum', 'Current, connected and outcome-driven.', 'The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'], 'academic-calendar': ['Academic Calendar', 'Plan the academic year.', 'Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'], library: ['Central Library', 'A connected knowledge centre.', 'Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'], examinations: ['Examinations', 'Clear processes. Fair assessment.', 'The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'], programmes: ['UG & PG Programmes', 'Choose the field you want to shape.', 'Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'], eligibility: ['Eligibility', 'Your pathway to Sri Shakthi.', 'Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'], scholarships: ['Scholarships', 'Talent deserves opportunity.', 'Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'], fees: ['Fee Information', 'Clear guidance for applicants.', 'Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'], 'campus-life': ['Campus Life', 'Learn. Build. Belong.', 'A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'], facilities: ['Facilities', 'Spaces made for exploration.', 'Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'], hostel: ['Hostel', 'A welcoming campus home.', 'Student residences support safe, comfortable living, shared learning and a strong sense of community.'], transport: ['Transport', 'Connected to Coimbatore.', 'College transport supports convenient travel across major routes in and around the city.'], sports: ['Sports', 'Energy beyond academics.', 'With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'], clubs: ['Student Clubs', 'Find your people. Build your voice.', 'Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'], ncc: ['NCC & NSS', 'Unity, discipline and service.', 'Student service programmes develop character, citizenship, teamwork and responsibility.'], placements: ['Placements', 'Preparing talent for meaningful careers.', 'Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'], training: ['Career Development', 'Skills that move careers forward.', 'Dedicated training helps students build technical confidence, professional communication and placement readiness.'], research: ['Research & Development', 'Ideas engineered into impact.', 'Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'], innovation: ['Innovation & Incubation', 'From problem to prototype.', 'Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'], 'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'], accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'], alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'], iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'], contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
@@ -142,8 +181,12 @@ const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class
 
 
 function header() {
+  const currentRoute = route();
   return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
-<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
+<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map(g => {
+  const isGroupActive = g.items.some(([s]) => s === currentRoute || (s === 'governance' && currentRoute === 'committees') || (s === 'ariia' && currentRoute === 'ariia-report') || (g.label === 'Accreditation' && currentRoute === 'accreditations'));
+  return `${g.label === 'Explore' ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button" class="${isGroupActive ? 'is-active-nav' : ''}">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`;
+}).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
 <div class="mobile-nav-backdrop"></div>
 <aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`;
 }
@@ -5370,6 +5413,18 @@ function render() {
     r === 'curriculum' ? curriculumPage() :
     r === 'academic-calendar' ? academicCalendarPage() :
     r === 'academics' ? academicOverviewPage() :
+    r === 'coe' || r === 'coe-portal' || r === 'examinations' ? coePortalPage() :
+    r === 'coe-result' || r === 'result' ? coeResultPage() :
+    r === 'coe-transcript' || r === 'transcript' ? coeTranscriptPage() :
+    r === 'governance' || r === 'committees' ? governancePage() :
+    r === 'mandatory-disclosure' || r === 'disclosure' ? mandatoryDisclosurePage() :
+    r === 'statutory-declaration' || r === 'rti' ? statutoryDeclarationPage() :
+    r === 'nirf' ? nirfPage() :
+    r === 'naac' ? naacPage() :
+    r === 'nba' ? nbaPage() :
+    r === 'iqac' ? iqacPage() :
+    r === 'ariia' || r === 'ariia-report' ? ariiaPage() :
+    r === 'accreditations' ? accreditationsOverviewPage() :
     internalPage(r);
 
   appRoot.innerHTML = header() + content + (r ? bottomDecor() : '') + footer();
@@ -5382,6 +5437,43 @@ function bind() {
   if (route() === 'academics') {
     document.title = "Academic Overview | Sri Shakthi Institute of Engineering & Technology";
   }
+  if (route() === 'coe' || route() === 'coe-portal' || route() === 'examinations') {
+    document.title = "Office of the Controller of Examinations | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'coe-result' || route() === 'result') {
+    document.title = "Autonomous Examination Results Portal | Office of the COE | SIET";
+  }
+  if (route() === 'coe-transcript' || route() === 'transcript') {
+    document.title = "Official Academic Transcripts | Office of the COE | SIET";
+  }
+  if (route() === 'governance' || route() === 'committees') {
+    document.title = "Governance & Statutory Committees | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'mandatory-disclosure' || route() === 'disclosure') {
+    document.title = "AICTE Mandatory Disclosure | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'statutory-declaration' || route() === 'rti') {
+    document.title = "Statutory Declaration (RTI Act) | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'nirf') {
+    document.title = "NIRF Institutional Submissions | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'naac') {
+    document.title = "NAAC Grade ‘A’ Accreditation | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'nba') {
+    document.title = "NBA Tier-I Accredited Programmes | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'iqac') {
+    document.title = "Internal Quality Assurance Cell (IQAC) | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'ariia' || route() === 'ariia-report') {
+    document.title = "ARIIA Ranking & Innovation Cell | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'accreditations') {
+    document.title = "Approvals & Accreditations | Sri Shakthi Institute of Engineering & Technology";
+  }
+  bindCoeEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";

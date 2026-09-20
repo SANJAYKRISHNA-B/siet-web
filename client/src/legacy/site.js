@@ -51,7 +51,7 @@ const icon = (name) => {
 
 const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
-  { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['library', 'Library']] },
+  { label: 'Academics', icon: 'book', items: [['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
   { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
   { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
@@ -86,15 +86,15 @@ const deptIcon = (k) => {
 
 const ugPrograms = [
   ['Agricultural Engineering', 'Sustainable solutions for a better tomorrow', 'agri'],
-  ['Artificial Intelligence & Data Science', 'From data to real-world impact', 'aids'],
-  ['Artificial Intelligence & Machine Learning', 'Building intelligent systems', 'aiml'],
+  ['Artificial Intelligence and Data Science', 'From data to real-world impact', 'aids'],
+  ['Artificial Intelligence and Machine Learning', 'Building intelligent systems', 'aiml'],
   ['Biomedical Engineering', 'Technology for healthier lives', 'biomed'],
   ['Biotechnology', 'Innovating for a brighter future', 'biotech'],
   ['Civil Engineering', 'Building resilient infrastructure', 'civil'],
-  ['Computer Science & Engineering', 'Driving the digital transformation', 'cse'],
+  ['Computer Science and Engineering', 'Driving the digital transformation', 'cse'],
   ['CSE (Cyber Security)', 'Securing the digital tomorrow', 'cyber'],
-  ['Electrical & Electronics', 'Powering the future', 'eee'],
-  ['Electronics & Communication', 'Connecting ideas to possibilities', 'ece'],
+  ['Electrical and Electronics', 'Powering the future', 'eee'],
+  ['Electronics and Communication', 'Connecting ideas to possibilities', 'ece'],
   ['Food Technology', 'Innovating for healthy tomorrow', 'food'],
   ['Information Technology', 'Shaping a smarter world', 'it'],
   ['Mechanical Engineering', 'Engineering what moves the world', 'mech'],
@@ -102,7 +102,7 @@ const ugPrograms = [
 ];
 const pgPrograms = [
   ['M.E. CAD / CAM', 'Automated digital manufacturing & robotics', 'mech'],
-  ['M.E. Computer Science & Engineering', 'Advanced computing & machine intelligence', 'cse'],
+  ['M.E. Computer Science and Engineering', 'Advanced computing and machine intelligence', 'cse'],
   ['M.E. Embedded Systems', 'Smart edge devices & connected IoT', 'aiml'],
   ['M.E. Structural Engineering', 'Resilient modern infrastructure design', 'civil'],
   ['M.E. VLSI Design', 'Next-generation semiconductor architectures', 'vlsi'],
@@ -113,8 +113,8 @@ const programs = ugPrograms;
 
 const ugProgramsDetailed = [
   { code: 'AGRI', degree: 'B.Tech', name: 'Agricultural Engineering', fullName: 'B.Tech - Agricultural Engineering', desc: 'Smart farming, precision irrigation, agro-machinery automation and sustainable food systems.', duration: '4 Years', img: '/assets/images/category/cat1.jpg', deptSlug: 'agricultural-engineering' },
-  { code: 'AI&DS', degree: 'B.Tech', name: 'Artificial Intelligence and Data Science', fullName: 'B.Tech - Artificial Intelligence and Data Science', desc: 'Mathematical foundations, predictive modeling, big data analytics, neural computing and data engineering.', duration: '4 Years', img: '/assets/images/course/3.jpg', deptSlug: 'artificial-intelligence-and-data-science' },
-  { code: 'AI&ML', degree: 'B.Tech', name: 'Artificial Intelligence and Machine Learning', fullName: 'B.Tech - Artificial Intelligence and Machine Learning', desc: 'Deep learning architectures, computer vision, generative AI algorithms, NLP and intelligent robotics.', duration: '4 Years', img: '/assets/images/category/cat5.jpg', deptSlug: 'artificial-intelligence-and-machine-learning' },
+  { code: 'AI and DS', degree: 'B.Tech', name: 'Artificial Intelligence and Data Science', fullName: 'B.Tech - Artificial Intelligence and Data Science', desc: 'Mathematical foundations, predictive modeling, big data analytics, neural computing and data engineering.', duration: '4 Years', img: '/assets/images/course/3.jpg', deptSlug: 'artificial-intelligence-and-data-science' },
+  { code: 'AI and ML', degree: 'B.Tech', name: 'Artificial Intelligence and Machine Learning', fullName: 'B.Tech - Artificial Intelligence and Machine Learning', desc: 'Deep learning architectures, computer vision, generative AI algorithms, NLP and intelligent robotics.', duration: '4 Years', img: '/assets/images/category/cat5.jpg', deptSlug: 'artificial-intelligence-and-machine-learning' },
   { code: 'BME', degree: 'B.E', name: 'Biomedical Engineering', fullName: 'B.E - Biomedical Engineering', desc: 'Medical instrumentation, physiological monitoring, biomaterials, diagnostic imaging and assistive healthcare robotics.', duration: '4 Years', img: '/assets/images/category/cat2.jpg', deptSlug: 'biomedical-engineering' },
   { code: 'BIOTECH', degree: 'B.Tech', name: 'Biotechnology', fullName: 'B.Tech - Biotechnology', desc: 'Molecular science, bioprocessing, genetic engineering, industrial microbiology, downstream separation and bioinformatics.', duration: '4 Years', img: '/assets/images/category/cat3.jpg', deptSlug: 'biotechnology' },
   { code: 'CIVIL', degree: 'B.E', name: 'Civil Engineering', fullName: 'B.E - Civil Engineering', desc: 'Smart structural analysis, geotechnical design, green building technology, BIM and environmental hydraulics.', duration: '4 Years', img: '/assets/images/category/cat4.jpg', deptSlug: 'civil-engineering' },
@@ -125,7 +125,7 @@ const ugProgramsDetailed = [
   { code: 'FOOD', degree: 'B.Tech', name: 'Food Technology', fullName: 'B.Tech - Food Technology', desc: 'Food preservation, dairy processing, industrial packaging, safety certifications and precision nutrition formulation.', duration: '4 Years', img: '/assets/images/category/cat8.jpg', deptSlug: 'food-technology' },
   { code: 'IT', degree: 'B.Tech', name: 'Information Technology', fullName: 'B.Tech - Information Technology', desc: 'Full-stack software engineering, cloud networking, DevOps automation, enterprise database systems and cyber infrastructure.', duration: '4 Years', img: '/assets/images/course/3.jpg', deptSlug: 'information-technology' },
   { code: 'MECH', degree: 'B.E', name: 'Mechanical Engineering', fullName: 'B.E - Mechanical Engineering', desc: 'Computational mechanics, thermodynamics, additive manufacturing, automotive engineering and advanced robotics.', duration: '4 Years', img: '/assets/images/course/6.jpg', deptSlug: 'mechanical-engineering' },
-  { code: 'VLSI', degree: 'B.E', name: 'Electronics Engineering ( VLSI Design & Technology)', fullName: 'B.E - Electronics Engineering ( VLSI Design & Technology)', desc: 'Semiconductor design, CMOS digital/analog ICs, FPGA synthesis, physical design verification and System-on-Chip (SoC).', duration: '4 Years', img: '/assets/images/category/cat7.jpg', deptSlug: 'vlsi-design' }
+  { code: 'VLSI', degree: 'B.E', name: 'Electronics Engineering (VLSI Design and Technology)', fullName: 'B.E - Electronics Engineering (VLSI Design and Technology)', desc: 'Semiconductor design, CMOS digital/analog ICs, FPGA synthesis, physical design verification and System-on-Chip (SoC).', duration: '4 Years', img: '/assets/images/category/cat7.jpg', deptSlug: 'vlsi-design' }
 ];
 
 const pgProgramsDetailed = [
@@ -1349,8 +1349,8 @@ const departmentDetails = {
           <li>Industry oriented rich curriculum, supported with subject wise industrial visits, engineering exploration labs, skills development courses and internships</li>
         </ol>
       `,
-      'Why Artificial Intelligence & Data Science at SIET': `
-        <h2>Why Artificial Intelligence & Data Science at SIET</h2>
+      'Why Artificial Intelligence and Data Science at SIET': `
+        <h2>Why Artificial Intelligence and Data Science at SIET</h2>
         <ol class="dept-custom-list">
           <li>100% Placement every year</li>
           <li>Industry oriented rich curriculum, supported with subject wise industrial visits, engineering exploration labs, skills development courses and internships</li>
@@ -1505,8 +1505,8 @@ const departmentDetails = {
           <li>Industry oriented rich curriculum, supported with subject wise industrial visits, engineering exploration labs, skills development courses and internships</li>
         </ol>
       `,
-      'Why Artificial Intelligence & Machine Learning at SIET': `
-        <h2>Why Artificial Intelligence & Machine Learning at SIET</h2>
+      'Why Artificial Intelligence and Machine Learning at SIET': `
+        <h2>Why Artificial Intelligence and Machine Learning at SIET</h2>
         <ol class="dept-custom-list">
           <li>100% Placement every year</li>
           <li>Industry oriented rich curriculum, supported with subject wise industrial visits, engineering exploration labs, skills development courses and internships</li>
@@ -3147,8 +3147,8 @@ const departmentDetails = {
     }
 },
   'VLSI Design': {
-    courses: [['B.E - Electronics Engineering ( VLSI Design & Technology)', '60'], ['M.E - VLSI Design', '18']],
-    overview: '<p>The Department of VLSI Design & Technology specializes in semiconductor microelectronics, analog/digital CMOS integrated circuit design, FPGA synthesis, physical verification and System-on-Chip (SoC) architectures in state-of-the-art Advanced VLSI and Freescale laboratories.</p>',
+    courses: [['B.E - Electronics Engineering (VLSI Design and Technology)', '60'], ['M.E - VLSI Design', '18']],
+    overview: '<p>The Department of VLSI Design and Technology specializes in semiconductor microelectronics, analog/digital CMOS integrated circuit design, FPGA synthesis, physical verification and System-on-Chip (SoC) architectures in state-of-the-art Advanced VLSI and Freescale laboratories.</p>',
     sectionsList: [
       'About the Department',
       'Why VLSI Design at SIET',
@@ -3171,7 +3171,7 @@ const departmentDetails = {
               </thead>
               <tbody>
                 <tr style="background: #fff;">
-                  <td style="padding: 8px 16px; font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; text-align: center;">B.E - Electronics Engineering ( VLSI Design &amp; Technology)</td>
+                  <td style="padding: 8px 16px; font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; text-align: center;">B.E - Electronics Engineering (VLSI Design and Technology)</td>
                   <td style="padding: 8px 16px; font-size: 14px; font-weight: 600; text-align: center;">60</td>
                 </tr>
                 <tr style="background: #fff;">
@@ -3238,7 +3238,7 @@ const departmentDetails = {
           <ul class="dept-mission-list">
             <li>
               <span class="dept-mission-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
-              <div><strong>B.E. Electronics Engineering (VLSI Design &amp; Technology):</strong> Autonomous Regulations 2021.</div>
+              <div><strong>B.E. Electronics Engineering (VLSI Design and Technology):</strong> Autonomous Regulations 2021.</div>
             </li>
             <li>
               <span class="dept-mission-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
@@ -3290,9 +3290,9 @@ const departmentDetails = {
 
 departmentDetails['Electrical & Electronics'] = departmentDetails['Electrical and Electronics Engineering'];
 departmentDetails['Electronics & Communication'] = departmentDetails['Electronics and Communication Engineering'];
-departmentDetails['Artificial Intelligence & Data Science'] = departmentDetails['Artificial Intelligence and Data Science'];
-departmentDetails['Artificial Intelligence & Machine Learning'] = departmentDetails['Artificial Intelligence and Machine Learning'];
-departmentDetails['Computer Science & Engineering'] = departmentDetails['Computer Science and Engineering'];
+departmentDetails['Artificial Intelligence and Data Science'] = departmentDetails['Artificial Intelligence and Data Science'];
+departmentDetails['Artificial Intelligence and Machine Learning'] = departmentDetails['Artificial Intelligence and Machine Learning'];
+departmentDetails['Computer Science and Engineering'] = departmentDetails['Computer Science and Engineering'];
 departmentDetails['CSE (Cyber Security)'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
 departmentDetails['Cyber Security'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
 departmentDetails['Computer Science (Cyber Security)'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
@@ -3383,6 +3383,68 @@ function departmentPage(dept) {
     }
     return `<section id="${sectionId}" class="department-copy department-placeholder${isOpen}"><h2>${section}</h2><p>${section} information for ${dept} will be updated by the department office.</p></section>`;
   }).join('')}</article></div></main>`;
+}
+
+function contactPage() {
+  const contactIcon = (type) => ({
+    phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
+  }[type]);
+
+  return `<main class="contact-pro-page">
+    <section class="contact-pro-hero">
+      <div class="contact-pro-shell contact-pro-hero-grid">
+        <div class="contact-pro-hero-copy reveal">
+          <p class="contact-pro-kicker"><span></span> CONTACT SRI SHAKTHI</p>
+          <h1>Let’s start a meaningful <em>conversation.</em></h1>
+          <p>Whether you are planning your studies, visiting our campus or seeking institutional support, the right team is ready to help.</p>
+        </div>
+        <div class="contact-pro-hero-meta reveal">
+          <span>INSTITUTION CODE</span><strong>2727</strong><small>Autonomous Institution<br>Affiliated to Anna University</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-pro-overlap">
+      <div class="contact-pro-shell contact-pro-cards">
+        <article class="contact-pro-card reveal"><i>${contactIcon('phone')}</i><span>CALL US</span><h2><a href="tel:+914222369900">+91 422 2369900</a></h2><p>Admissions and institute office</p></article>
+        <article class="contact-pro-card reveal"><i>${contactIcon('mail')}</i><span>EMAIL US</span><h2><a href="mailto:info@siet.ac.in">info@siet.ac.in</a></h2><p>General enquiries and support</p></article>
+        <article class="contact-pro-card reveal"><i>${contactIcon('clock')}</i><span>OFFICE HOURS</span><h2>Monday - Saturday</h2><p>9:00 AM to 5:00 PM</p></article>
+      </div>
+    </section>
+
+    <section class="contact-pro-main">
+      <div class="contact-pro-shell contact-pro-layout">
+        <div class="contact-pro-form-wrap reveal">
+          <div class="contact-pro-heading"><span>WRITE TO US</span><h2>How can we help?</h2><p>Send your enquiry and the appropriate institutional team will respond.</p></div>
+          <form class="contact-pro-form js-form">
+            <div class="contact-pro-field-row">
+              <label>Full name <b>*</b><input type="text" name="name" placeholder="Enter your full name" required></label>
+              <label>Email address <b>*</b><input type="email" name="email" placeholder="name@example.com" required></label>
+            </div>
+            <div class="contact-pro-field-row">
+              <label>Phone number <b>*</b><input type="tel" name="phone" placeholder="+91 98765 43210" required></label>
+              <label>Enquiry category <b>*</b><select name="course" required><option value="">Select a category</option><option>Admissions</option><option>Academic Office</option><option>Examinations</option><option>Placements</option><option>Research and Industry</option><option>Campus and Transport</option><option>General Enquiry</option></select></label>
+            </div>
+            <label>Message <b>*</b><textarea name="message" rows="5" placeholder="Tell us how we can assist you" required></textarea></label>
+            <div class="contact-pro-form-footer"><p>We usually respond during the next working day.</p><button type="submit">Send enquiry <span>→</span></button></div>
+            <p class="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-pro-location reveal">
+          <div class="contact-pro-location-photo"><img src="/brand/techpark-local.png" alt="Sri Shakthi campus in Coimbatore"><span>CAMPUS LOCATION</span></div>
+          <div class="contact-pro-address">
+            <i>${contactIcon('pin')}</i>
+            <div><h3>Visit Sri Shakthi</h3><p>Sri Shakthi Nagar, L&amp;T By-Pass,<br>Chinniyampalayam Post,<br>Coimbatore - 641062, Tamil Nadu.</p><a href="https://www.google.com/maps/search/?api=1&query=Sri+Shakthi+Institute+of+Engineering+and+Technology+Coimbatore" target="_blank" rel="noopener noreferrer">Get directions <span>↗</span></a></div>
+          </div>
+          <div class="contact-pro-departments"><span>DIRECT CONTACTS</span><div><p>Admission Office</p><a href="mailto:admissions@siet.ac.in">admissions@siet.ac.in</a></div><div><p>Academic Office</p><a href="mailto:academics@siet.ac.in">academics@siet.ac.in</a></div><div><p>Career Services</p><a href="mailto:placements@siet.ac.in">placements@siet.ac.in</a></div></div>
+        </aside>
+      </div>
+    </section>
+  </main>`;
 }
 
 function internalPage(route) {
@@ -3516,7 +3578,7 @@ function programSelectHtml(label, name) {
   `;
 }
 
-function academicOverviewPage() {
+function academicOverviewPageLegacy() {
   // Dynamic metrics directly derived from existing project data
   const totalCredits = departmentCurricula['cse']
     ? Object.values(departmentCurricula['cse'].semesters).reduce((sum, s) => sum + (s.credits || 0), 0)
@@ -3950,6 +4012,117 @@ function academicOverviewPage() {
         </div>
       </div>
 
+    </section>
+  </main>`;
+}
+
+function academicOverviewPage() {
+  const totalCredits = departmentCurricula['cse']
+    ? Object.values(departmentCurricula['cse'].semesters).reduce((sum, semester) => sum + (semester.credits || 0), 0)
+    : 168;
+  const ugCount = ugProgramsDetailed.length;
+  const pgCount = pgProgramsDetailed.length;
+  const totalDisciplines = ugCount + pgCount;
+
+  const metrics = [
+    [totalCredits, '', 'Curriculum credits', 'Autonomous R2025 framework'],
+    [totalDisciplines, '', 'Specialised disciplines', `${ugCount} UG and ${pgCount} PG programmes`],
+    [40, '%', 'Continuous assessment', 'Feedback-led learning and evaluation'],
+    [8, '', 'NBA-accredited programmes', 'Alongside institutional NAAC A accreditation']
+  ];
+
+  const pillars = [
+    ['01', 'Learn the principles', 'Build mathematical, scientific and computational foundations through connected classroom instruction.'],
+    ['02', 'Test every idea', 'Move continuously between theory, laboratories, design studios and industry-grade simulation environments.'],
+    ['03', 'Choose your direction', 'Shape a distinctive pathway through minors, multidisciplinary electives and emerging technology tracks.'],
+    ['04', 'Build for the world', 'Turn knowledge into prototypes, research, internships and an industry-partnered capstone project.']
+  ];
+
+  const journey = [
+    ['Year 01', 'Discover', 'Foundational sciences, engineering practices, programming and communication.'],
+    ['Years 02–03', 'Deepen', 'Core specialisation, continuous labs, mini-projects and design thinking.'],
+    ['Year 04', 'Deliver', 'Advanced electives, industry internship, research and capstone innovation.']
+  ];
+
+  const outcomes = [
+    ['01', 'Conceptual mastery', 'Understand systems from first principles and reason with confidence.'],
+    ['02', 'Applied intelligence', 'Translate complex challenges into practical engineering responses.'],
+    ['03', 'Creative responsibility', 'Design ethical, sustainable and human-centred technology.'],
+    ['04', 'Professional readiness', 'Communicate, collaborate and adapt in a changing global workplace.']
+  ];
+
+  return `<main class="academic-new">
+    <section class="academic-new-hero">
+      <div class="academic-new-shell academic-new-hero-grid">
+        <div class="academic-new-hero-copy reveal">
+          <p class="academic-new-kicker"><span></span> ACADEMIC OVERVIEW</p>
+          <h1>Where knowledge becomes <em>capability.</em></h1>
+          <p class="academic-new-intro">An autonomous engineering education built around strong foundations, purposeful experimentation and the confidence to solve real problems.</p>
+          <div class="academic-new-actions">
+            <a class="academic-new-primary" href="#/programmes">Explore programmes <span>↗</span></a>
+            <a class="academic-new-text-link" href="#/curriculum">View R2025 curriculum <span>→</span></a>
+          </div>
+          <div class="academic-new-credentials">
+            <span>Autonomous Institution</span><i></i><span>Anna University</span><i></i><span>TNEA 2727</span>
+          </div>
+        </div>
+        <div class="academic-new-hero-media reveal">
+          <div class="academic-new-photo-main"><img src="/brand/techpark-local.png" alt="Sri Shakthi academic campus"></div>
+          <div class="academic-new-photo-small"><img src="/brand/departments-campus.jpg" alt="Students learning in a collaborative engineering environment"></div>
+          <div class="academic-new-seal"><strong>R2025</strong><span>Autonomous<br>Curriculum</span></div>
+          <p class="academic-new-image-note">Learning designed for<br><strong>depth + application</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="academic-new-metrics" aria-label="Academic highlights">
+      <div class="academic-new-shell academic-new-metrics-grid">
+        ${metrics.map(([value, suffix, label, note], index) => `<article class="academic-new-metric reveal"><span class="academic-new-metric-index">0${index + 1}</span><strong><span class="js-counter" data-to="${value}" data-suffix="${suffix}">0${suffix}</span></strong><h2>${label}</h2><p>${note}</p><i class="academic-new-metric-rule"></i></article>`).join('')}
+      </div>
+    </section>
+
+    <section class="academic-new-model">
+      <div class="academic-new-shell">
+        <div class="academic-new-section-intro reveal">
+          <p class="academic-new-kicker dark"><span></span> THE SRI SHAKTHI MODEL</p>
+          <div><h2>Education is not a straight line.</h2><p>It is a cycle of understanding, experimenting, choosing and creating. Every part of our academic model is designed to keep that cycle moving.</p></div>
+        </div>
+        <div class="academic-new-model-layout">
+          <div class="academic-new-model-visual reveal">
+            <img src="/brand/departments-campus.jpg" alt="Engineering laboratory learning at Sri Shakthi">
+            <div class="academic-new-vertical-word">EXPERIENCE</div>
+          </div>
+          <div class="academic-new-pillars">
+            ${pillars.map(([number, title, text]) => `<article class="academic-new-pillar reveal"><span>${number}</span><div><h3>${title}</h3><p>${text}</p></div><b>↗</b></article>`).join('')}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="academic-new-journey">
+      <div class="academic-new-shell">
+        <div class="academic-new-journey-head reveal"><p>YOUR FOUR-YEAR JOURNEY</p><h2>From curious learner<br>to confident engineer.</h2></div>
+        <div class="academic-new-timeline reveal">
+          ${journey.map(([year, title, text], index) => `<article class="academic-new-stage reveal"><div class="academic-new-stage-dot"><span>${index + 1}</span></div><p>${year}</p><h3>${title}</h3><div>${text}</div></article>`).join('')}
+        </div>
+        <blockquote class="academic-new-quote reveal"><span>“</span><p>Education should inspire students to question, create, collaborate and use their capabilities to make a meaningful difference.</p><footer>Sri Shakthi Academic Philosophy</footer></blockquote>
+      </div>
+    </section>
+
+    <section class="academic-new-outcomes">
+      <div class="academic-new-shell academic-new-outcomes-layout">
+        <div class="academic-new-outcomes-copy reveal"><p class="academic-new-kicker"><span></span> GRADUATE OUTCOMES</p><h2>Ready for work.<br>Ready for life.</h2><p>Our graduates leave with more than a degree. They carry four complementary capabilities into every challenge.</p></div>
+        <div class="academic-new-outcomes-grid">
+          ${outcomes.map(([number, title, text]) => `<article class="academic-new-outcome reveal"><span>${number}</span><h3>${title}</h3><p>${text}</p></article>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <section class="academic-new-cta">
+      <div class="academic-new-shell academic-new-cta-inner reveal">
+        <div><p>THE COMPLETE ACADEMIC BLUEPRINT</p><h2>See how every semester builds momentum.</h2></div>
+        <a href="#/curriculum">Explore the curriculum <span>→</span></a>
+      </div>
     </section>
   </main>`;
 }
@@ -4415,10 +4588,10 @@ function attachModalScrollTrap(modalEl) {
   }, { passive: false });
 }
 
-let currActiveDept = 'cse';
+let currActiveDept = 'agri';
 let currActiveSem = 1;
 
-function getCurrModalData(target, deptId = 'cse') {
+function getCurrModalData(target, deptId = 'agri') {
   const dept = getDeptCurriculum(deptId);
   const deptFullName = `${dept.degree} ${dept.name}`;
 
@@ -4509,7 +4682,7 @@ function getCurrModalData(target, deptId = 'cse') {
   return { title: 'Academic Document', content: '<p>Details will be updated shortly.</p>' };
 }
 
-function renderCurriculumTable(deptId = 'cse', semNum = 1) {
+function renderCurriculumTable(deptId = 'agri', semNum = 1) {
   const dept = getDeptCurriculum(deptId);
   const data = dept?.semesters?.[semNum] || dept?.semesters?.[1] || {
     name: `Semester ${semNum}`,
@@ -4524,7 +4697,13 @@ function renderCurriculumTable(deptId = 'cse', semNum = 1) {
         <span class="curr-sem-icon">${libIcons.book}</span>
         <h3 id="active-sem-name">${data.name}</h3>
       </div>
-      <span class="curr-credits-pill">Total Credits: <b id="active-sem-credits">${data.credits}</b></span>
+      <div class="curr-sem-actions">
+        <span class="curr-credits-pill">Total Credits: <b id="active-sem-credits">${data.credits}</b></span>
+        <a class="curr-download-btn curr-download-sem" href="/downloads/sample-syllabus.pdf" download="${dept.id}-semester-${semNum}-syllabus-sample.pdf" aria-label="Download sample syllabus for ${dept.name}, ${data.name}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+          <span>Semester Syllabus</span>
+        </a>
+      </div>
     </div>
     <div class="curr-table-wrapper">
       <table class="curr-table" aria-label="Course curriculum table for ${dept.degree} ${dept.name} ${data.name}">
@@ -4537,6 +4716,7 @@ function renderCurriculumTable(deptId = 'cse', semNum = 1) {
             <th class="th-credit">T</th>
             <th class="th-credit">P</th>
             <th class="th-credit">C</th>
+            <th class="th-download">Syllabus</th>
           </tr>
         </thead>
         <tbody>
@@ -4549,6 +4729,7 @@ function renderCurriculumTable(deptId = 'cse', semNum = 1) {
               <td class="td-credit">${c.t}</td>
               <td class="td-credit">${c.p}</td>
               <td class="td-credit"><b>${c.c}</b></td>
+              <td class="td-download"><a class="curr-download-btn curr-download-course" href="/downloads/sample-syllabus.pdf" download="${dept.id}-${c.code}-syllabus-sample.pdf" aria-label="Download sample syllabus for ${c.code} ${c.title}" title="Download ${c.code} sample syllabus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg><span>PDF</span></a></td>
             </tr>
           `).join('')}
         </tbody>
@@ -4559,6 +4740,7 @@ function renderCurriculumTable(deptId = 'cse', semNum = 1) {
             <td class="td-credit">${data.totals.t}</td>
             <td class="td-credit">${data.totals.p}</td>
             <td class="td-credit">${data.totals.c}</td>
+            <td></td>
           </tr>
         </tfoot>
       </table>
@@ -4602,24 +4784,10 @@ function renderAcademicsSidebar(activeItem = 'curriculum') {
           </span>
           <span class="navlink-arrow">›</span>
         </a>
-        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'syllabus' ? 'is-active' : ''}" data-target="syllabus-r2025">
-          <span class="navlink-content">
-            <span class="navlink-icon">${libIcons.document}</span>
-            <span>Syllabus</span>
-          </span>
-          <span class="navlink-arrow">›</span>
-        </button>
         <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'regulations' ? 'is-active' : ''}" data-target="regulations-r2025">
           <span class="navlink-content">
             <span class="navlink-icon">${currIcons.shield}</span>
             <span>Regulations</span>
-          </span>
-          <span class="navlink-arrow">›</span>
-        </button>
-        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'academic-resources' || activeItem === 'resources' ? 'is-active' : ''}" data-target="curriculum-r2025">
-          <span class="navlink-content">
-            <span class="navlink-icon">${currIcons.database}</span>
-            <span>Academic Resources</span>
           </span>
           <span class="navlink-arrow">›</span>
         </button>
@@ -4647,6 +4815,9 @@ function curriculumPage() {
   if (queryDept) {
     const matched = getDeptCurriculum(queryDept);
     if (matched) currActiveDept = matched.id;
+  } else {
+    currActiveDept = 'agri';
+    currActiveSem = 1;
   }
   const activeDept = getDeptCurriculum(currActiveDept);
 
@@ -4705,7 +4876,7 @@ function curriculumPage() {
 </main>`;
 }
 
-function academicCalendarPage() {
+function academicCalendarPageLegacy() {
   return `<main class="siet-curr-page siet-calendar-page">
   ${sietHudHeader('Academic Calendar', 'Academic Calendar', false)}
 
@@ -4842,6 +5013,93 @@ function academicCalendarPage() {
 
   ${renderAcademicsModal()}
 </main>`;
+}
+
+const oddSemesterCalendar = [
+  {
+    semester: 'Semester III',
+    caption: 'Second Year',
+    accent: 'semester-three',
+    events: [
+      ['Commencement of Classes', '21 July 2025', 'Completed'],
+      ['Continuous Internal Assessment - I', '01 Sep 2025 - 06 Sep 2025', 'Completed'],
+      ['Continuous Internal Assessment - II', '13 Oct 2025 - 18 Oct 2025', 'Completed'],
+      ['Last Working Day', '14 Nov 2025', 'Scheduled'],
+      ['End Semester Practical Examinations', '17 Nov 2025 - 22 Nov 2025', 'Scheduled'],
+      ['End Semester Theory Examinations', '01 Dec 2025 - 19 Dec 2025', 'Scheduled']
+    ]
+  },
+  {
+    semester: 'Semester V',
+    caption: 'Third Year',
+    accent: 'semester-five',
+    events: [
+      ['Commencement of Classes', '14 July 2025', 'Completed'],
+      ['Continuous Internal Assessment - I', '25 Aug 2025 - 30 Aug 2025', 'Completed'],
+      ['Continuous Internal Assessment - II', '06 Oct 2025 - 11 Oct 2025', 'Completed'],
+      ['Last Working Day', '07 Nov 2025', 'Scheduled'],
+      ['End Semester Practical Examinations', '10 Nov 2025 - 15 Nov 2025', 'Scheduled'],
+      ['End Semester Theory Examinations', '24 Nov 2025 - 15 Dec 2025', 'Scheduled']
+    ]
+  },
+  {
+    semester: 'Semester VII',
+    caption: 'Final Year',
+    accent: 'semester-seven',
+    events: [
+      ['Commencement of Classes', '07 July 2025', 'Completed'],
+      ['Continuous Internal Assessment - I', '18 Aug 2025 - 23 Aug 2025', 'Completed'],
+      ['Continuous Internal Assessment - II', '29 Sep 2025 - 04 Oct 2025', 'Completed'],
+      ['Last Working Day', '31 Oct 2025', 'Scheduled'],
+      ['End Semester Practical Examinations', '03 Nov 2025 - 08 Nov 2025', 'Scheduled'],
+      ['End Semester Theory Examinations', '17 Nov 2025 - 08 Dec 2025', 'Scheduled']
+    ]
+  }
+];
+
+function renderOddSemesterCalendar({ semester, caption, accent, events }) {
+  return `<section class="calendar-semester-block ${accent}">
+    <div class="calendar-semester-heading">
+      <div><span>${caption}</span><h3>${semester}</h3></div>
+      <span class="calendar-semester-type">ODD SEMESTER</span>
+    </div>
+    <div class="curr-table-wrapper">
+      <table class="curr-table calendar-table" aria-label="Academic calendar for ${semester}">
+        <thead><tr><th style="width:70px">S.No</th><th>Academic Milestone / Event</th><th style="width:220px">Date / Duration</th><th style="width:130px">Status</th></tr></thead>
+        <tbody>${events.map(([event, date, status], index) => `<tr><td class="td-num">${index + 1}</td><td class="td-title">${event}</td><td class="td-code">${date}</td><td><span class="cal-status ${status === 'Completed' ? 'cal-open' : ''}">${status}</span></td></tr>`).join('')}</tbody>
+      </table>
+    </div>
+  </section>`;
+}
+
+function academicCalendarPage() {
+  return `<main class="siet-curr-page siet-calendar-page">
+    ${sietHudHeader('Academic Calendar', 'Academic Calendar', false)}
+    <section class="siet-curr-body">
+      <div class="siet-curr-container">
+        <div class="siet-curr-grid">
+          ${renderAcademicsSidebar('academic-calendar')}
+          <article class="siet-curr-main">
+            <div class="siet-calendar-card">
+              <div class="siet-calendar-header">
+                <div>
+                  <span class="curr-badge">AUTONOMOUS 2025-2026</span>
+                  <h2>Odd Semester Academic Calendar</h2>
+                  <p>Semester-specific schedules for III, V and VII semesters. Each timeline reflects its respective commencement, assessment and examination dates.</p>
+                </div>
+                <div class="calendar-actions"><a href="#/curriculum" class="dept-curriculum-action">View Full Curriculum →</a></div>
+              </div>
+              <div class="calendar-schedule-note"><strong>Separate semester schedules</strong><span>Dates are displayed independently because instructional and examination timelines vary by semester.</span></div>
+              <div class="calendar-schedule-tables calendar-odd-specific">
+                ${oddSemesterCalendar.map(renderOddSemesterCalendar).join('')}
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    ${renderAcademicsModal()}
+  </main>`;
 }
 
 function applyPortalPage(activeTab = 'enquiry') {
@@ -5078,6 +5336,10 @@ function render() {
   unlockModalScroll();
   if (!appRoot) return;
   const r = route();
+  if (r === 'academics') {
+    location.replace('#/curriculum');
+    return;
+  }
   const isApply = (r === 'apply' || r === 'admission-enquiry' || r === 'admission-referral' || r === 'referral');
 
   if (isApply) {
@@ -5104,6 +5366,7 @@ function render() {
     r === 'departments' ? departmentsPage() :
     r === 'careers' ? careersPage() :
     r === 'library' ? libraryPage() :
+    r === 'contact' ? contactPage() :
     r === 'curriculum' ? curriculumPage() :
     r === 'academic-calendar' ? academicCalendarPage() :
     r === 'academics' ? academicOverviewPage() :
@@ -5865,8 +6128,8 @@ async function submitForm(e) {
     if (btn) btn.disabled = false;
   }
 }
-function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .01, rootMargin: '120px 0px 60px 0px' }); $$('.reveal,.js-counter').forEach(el => { const rect = el.getBoundingClientRect(); if (reduce || (rect.top < window.innerHeight + 100 && rect.bottom > -100)) { el.classList.add('is-visible'); if (el.classList.contains('js-counter')) animateCounter(el); } else { observer.observe(el); } }); }
-function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
+function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target, reduce); observer.unobserve(entry.target) }), { threshold: .01, rootMargin: '120px 0px 60px 0px' }); $$('.reveal,.js-counter').forEach(el => { const rect = el.getBoundingClientRect(); if (reduce || (rect.top < window.innerHeight + 100 && rect.bottom > -100)) { el.classList.add('is-visible'); if (el.classList.contains('js-counter')) animateCounter(el, reduce); } else { observer.observe(el); } }); }
+function animateCounter(el, instant = false) { if (el.dataset.counted === 'true') return; el.dataset.counted = 'true'; const to = Number(el.dataset.to), suffix = el.dataset.suffix || ''; if (instant) { el.textContent = to.toLocaleString('en-IN') + suffix; return; } const start = performance.now(), duration = 1650; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
 const handleEscape = e => {
   if (e.key === 'Escape') {
     $('.video-close')?.click();

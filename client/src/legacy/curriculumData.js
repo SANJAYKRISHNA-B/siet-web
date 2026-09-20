@@ -3,12 +3,12 @@
 
 export const allDepartments = [
   { id: 'cse', code: 'CSE', degree: 'B.E.', name: 'Computer Science and Engineering', desc: 'A well-structured curriculum designed to develop strong technical skills, problem-solving ability and industry readiness in intelligent software systems.' },
-  { id: 'aids', code: 'AI & DS', degree: 'B.Tech.', name: 'Artificial Intelligence & Data Science', desc: 'Cutting-edge curriculum fusing mathematical foundations, predictive analytics, deep neural models, big data computing and applied intelligence.' },
-  { id: 'aiml', code: 'AI & ML', degree: 'B.E.', name: 'Artificial Intelligence & Machine Learning', desc: 'Specialized syllabus centered on autonomous intelligence, computer vision, generative AI, natural language processing and robotics.' },
+  { id: 'aids', code: 'AI and DS', degree: 'B.Tech.', name: 'Artificial Intelligence and Data Science', desc: 'Cutting-edge curriculum fusing mathematical foundations, predictive analytics, deep neural models, big data computing and applied intelligence.' },
+  { id: 'aiml', code: 'AI and ML', degree: 'B.E.', name: 'Artificial Intelligence and Machine Learning', desc: 'Specialized syllabus centered on autonomous intelligence, computer vision, generative AI, natural language processing and robotics.' },
   { id: 'it', code: 'IT', degree: 'B.Tech.', name: 'Information Technology', desc: 'Industry-aligned programme emphasizing enterprise full-stack development, cloud architecture, DevOps, network engineering and cyber infrastructure.' },
   { id: 'cyber', code: 'Cyber Security', degree: 'B.E.', name: 'CSE (Cyber Security)', desc: 'Rigorous cybersecurity curriculum encompassing digital forensics, ethical hacking, cryptographic protocols, cloud security and SOC threat response.' },
-  { id: 'ece', code: 'ECE', degree: 'B.E.', name: 'Electronics & Communication Engineering', desc: 'Core engineering curriculum connecting semiconductor microelectronics, 5G RF communications, embedded IoT systems and signal processing.' },
-  { id: 'eee', code: 'EEE', degree: 'B.E.', name: 'Electrical & Electronics Engineering', desc: 'Progressive syllabus focused on smart grid architectures, electric mobility (EVs), renewable energy conversion and high-efficiency power electronics.' },
+  { id: 'ece', code: 'ECE', degree: 'B.E.', name: 'Electronics and Communication Engineering', desc: 'Core engineering curriculum connecting semiconductor microelectronics, 5G RF communications, embedded IoT systems and signal processing.' },
+  { id: 'eee', code: 'EEE', degree: 'B.E.', name: 'Electrical and Electronics Engineering', desc: 'Progressive syllabus focused on smart grid architectures, electric mobility (EVs), renewable energy conversion and high-efficiency power electronics.' },
   { id: 'mech', code: 'MECH', degree: 'B.E.', name: 'Mechanical Engineering', desc: 'Broad-based curriculum covering thermodynamics, finite element analysis, computational fluid dynamics, robotics, additive manufacturing and smart materials.' },
   { id: 'civil', code: 'CIVIL', degree: 'B.E.', name: 'Civil Engineering', desc: 'Future-ready curriculum emphasizing smart structural analysis, geotechnical design, building information modeling (BIM), environmental hydraulics and resilient cities.' },
   { id: 'biotech', code: 'BIOTECH', degree: 'B.Tech.', name: 'Biotechnology', desc: 'Interdisciplinary curriculum integrating genetic engineering, molecular bioprocessing, immunology, downstream separation and bioinformatics.' },
@@ -56,7 +56,7 @@ function getSem2(coreCode, coreTitle, domainPhysics = 'Physics for Information S
 }
 
 export const departmentCurricula = {
-  // 1. Computer Science & Engineering
+  // 1. Computer Science and Engineering
   'cse': {
     ...allDepartments[0],
     semesters: {

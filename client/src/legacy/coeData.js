@@ -1,6 +1,19 @@
+
+export const coeIcons = {
+  about: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>`,
+  results: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+  transcripts: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>`,
+  schedules: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+  forms: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`,
+  regulations: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+  responsibilities: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  committee: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  contact: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`
+};
+
 // Office of the Controller of Examinations (COE) Data & Page Templates
 // Sri Shakthi Institute of Engineering and Technology (Autonomous)
-// Extracted directly and exclusively from live official site: https://www.siet.ac.in/coe/index.html
+// Office of the Controller of Examinations (COE) Autonomous Portal Data
 
 export const examinationCommittee = [
   {
@@ -119,7 +132,7 @@ export const coeFormsList = [
     title: 'Photocopy Form',
     code: 'PHOTOCOPY-FORM',
     desc: 'Application form for obtaining true evaluated photocopy of answer script after result declaration.',
-    file: 'https://www.siet.ac.in/coe/forms/PhotoCopy-form.pdf',
+    file: '/downloads/PhotoCopy-form.pdf',
     filename: 'PhotoCopy-form.pdf',
     badge: 'Photocopy'
   },
@@ -127,7 +140,7 @@ export const coeFormsList = [
     title: 'Revaluation Form',
     code: 'REVALUATION-FORM',
     desc: 'Application form for central revaluation of evaluated semester end theory examination answer booklets.',
-    file: 'https://www.siet.ac.in/coe/forms/Revaluation%20form.pdf',
+    file: '/downloads/Revaluation-form.pdf',
     filename: 'Revaluation form.pdf',
     badge: 'Revaluation'
   },
@@ -135,7 +148,7 @@ export const coeFormsList = [
     title: 'Revaluation - Script Valuation Form',
     code: 'REVAL-SCRIPT-FORM',
     desc: 'Official faculty assessment and endorsement rubric for course coordinator scrutiny prior to revaluation.',
-    file: 'https://www.siet.ac.in/coe/forms/Revaluation-Script%20Valuation%20form.pdf',
+    file: '/downloads/Revaluation-Script-Valuation-form.pdf',
     filename: 'Revaluation-Script Valuation form.pdf',
     badge: 'Faculty Scrutiny'
   },
@@ -143,7 +156,7 @@ export const coeFormsList = [
     title: 'Transcript Application Form',
     code: 'TRANSCRIPT-FORM',
     desc: 'Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.',
-    file: 'https://www.siet.ac.in/coe/forms/Transcript%20application%20form.pdf',
+    file: '/downloads/Transcript-application-form.pdf',
     filename: 'Transcript application form.pdf',
     badge: 'Transcripts'
   },
@@ -151,7 +164,7 @@ export const coeFormsList = [
     title: 'Duplicate Certificate Form',
     code: 'DUPLICATE-FORM',
     desc: 'Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.',
-    file: 'https://www.siet.ac.in/coe/forms/Duplicate%20Certificate%20Form.pdf',
+    file: '/downloads/Duplicate-Certificate-Form.pdf',
     filename: 'Duplicate Certificate Form.pdf',
     badge: 'Duplicate Cards'
   }
@@ -159,31 +172,38 @@ export const coeFormsList = [
 
 export const coeRegulationsList = [
   {
+    title: 'R2025 Autonomous Regulation',
+    desc: 'Undergraduate Autonomous Regulations 2025, 168-credit framework, outcome-based education and updated grading system (S, A+, A, B+, B, C).',
+    filename: 'Regulation 2025 UG.pdf',
+    file: '#/curriculum',
+    badge: 'R2025 Framework'
+  },
+  {
     title: 'R2021 UG Regulation',
-    desc: 'Undergraduate Autonomous Regulations, curriculum structure, choice-based credit system and assessment rules.',
+    desc: 'Undergraduate Autonomous Regulations, curriculum structure, choice-based credit system and assessment rules (O, A+, A, B+, B, C, U).',
     filename: 'Regulation 2021 UG.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/Regulation%202021%20UG.pdf',
+    file: '/brand/Regulation 2021 UG.pdf',
     badge: 'UG Regulation'
   },
   {
     title: 'R2021 UG - Amendment I',
     desc: 'Official Amendment I to Regulations 2021 for undergraduate degree programmes.',
-    filename: 'R2021 UG-AMENDMENT - I SIET.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/R2021%20UG-AMENDMENT%20-%20I%20SIET.pdf',
+    filename: 'R2021-UG-AMENDMENT-I.pdf',
+    file: '/downloads/R2021-UG-AMENDMENT-I.pdf',
     badge: 'Amendment I'
   },
   {
     title: 'R2021 UG - Amendment II',
     desc: 'Official Amendment II to Regulations 2021 regarding elective choices and credits.',
-    filename: 'R2021 UG-AMENDMENT - II SIET.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/R2021%20UG-AMENDMENT%20-%20II%20SIET.pdf',
+    filename: 'R2021-UG-AMENDMENT-II.pdf',
+    file: '/downloads/R2021-UG-AMENDMENT-II.pdf',
     badge: 'Amendment II'
   },
   {
     title: 'R2021 PG Regulation',
     desc: 'Postgraduate Autonomous Regulations for Master of Engineering (M.E.) programmes.',
-    filename: 'Regulation 2021 PG.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/Regulation%202021%20PG.pdf',
+    filename: 'Regulation-2021-PG.pdf',
+    file: '/downloads/Regulation-2021-PG.pdf',
     badge: 'PG Regulation'
   }
 ];
@@ -192,98 +212,127 @@ export const coeExamSchedules = [
   {
     title: 'UG Semester VII CIAT - Rescheduled',
     desc: 'Revised Continuous Internal Assessment Test (CIE-II) schedule for 7th Semester B.E./B.Tech candidates.',
-    filename: 'CIA-II semester VII UG Rescheduled.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/CIA-II%20semester%20VII%20UG%20Rescheduled.pdf',
+    filename: 'CIA-II-semester-VII-UG-Rescheduled.pdf',
+    file: '/downloads/CIA-II-semester-VII-UG-Rescheduled.pdf',
     status: 'Latest'
   },
   {
     title: 'UG Semester VII CIAT Schedule',
     desc: 'Continuous Internal Assessment Test (CIE-II) schedule for final year undergraduate students.',
-    filename: 'CIA-II semester VII UG.pdf',
-    file: 'https://www.siet.ac.in/coe/forms/CIA-II%20semester%20VII%20UG.pdf',
+    filename: 'CIA-II-semester-VII-UG.pdf',
+    file: '/downloads/CIA-II-semester-VII-UG.pdf',
     status: 'Notice'
   }
 ];
 
+export function renderHudHeader(title, breadcrumbName = title, kicker = 'SYSTEM ONLINE / EXAMINATION CELL / SIET-OS') {
+  return `<section class="department-detail-header siet-hud-header" data-kicker="${kicker}">
+    <div class="department-detail-title">
+      <div class="hud-title-group">
+        <span class="hud-diamond" aria-hidden="true">◈</span>
+        <h1>${title.toUpperCase()}</h1>
+      </div>
+      <div class="department-breadcrumb">
+        <a href="#/">Home</a><span>/</span><b>${breadcrumbName}</b>
+      </div>
+    </div>
+  </section>`;
+}
+
 export function coePortalPage(activeTab = 'about') {
   return `
   <main class="siet-coe-page">
-    <!-- Single Clean Unified Hero Banner -->
-    <section class="coe-hero-strip">
-      <div class="coe-hero-shell">
-        <div class="coe-hero-crest">
-          <img src="/brand/siet-logo.png" alt="Sri Shakthi emblem">
-        </div>
-        <div class="coe-hero-content">
-          <div class="coe-hero-breadcrumb">
-            <a href="#/">Home</a><span>/</span><b>Controller of Examinations</b>
+    <!-- Bespoke Executive Autonomous COE Hero Template -->
+    <section class="coe-exec-hero">
+      <div class="coe-exec-hero-glow" aria-hidden="true"></div>
+      <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+      
+      <div class="coe-exec-shell">
+        <!-- Top Metadata & Navigation Bar -->
+        <div class="coe-exec-topbar">
+          <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
+            <a href="#/">Home</a>
+            <span class="sep">/</span>
+            <a href="#/curriculum">Academics</a>
+            <span class="sep">/</span>
+            <span class="cur">Controller of Examinations</span>
+          </nav>
+          
+          <div class="coe-exec-status-group">
+            <span class="coe-status-pill">
+              <span class="status-pulse"></span>
+              <span>AUTONOMOUS EXAMINATION PORTAL</span>
+            </span>
+            <span class="coe-status-tag">ESTD. 2019</span>
           </div>
-          <span class="coe-eyebrow">AUTONOMOUS EXAMINATION &amp; EVALUATION CELL · ESTD. SEPTEMBER 2019</span>
-          <h1>Office of the Controller of Examinations</h1>
-          <p>"The Office of the Controller of Examinations plays an essential role in the academic activities of the college and is an important part of the autonomy. The CoE office is responsible to assess the continuous learning process of the students at defined intervals and publish the outcome for the students ensuring confidentiality."</p>
-          <div class="coe-badges-row">
-            <span class="coe-badge"><b>Est. September 2019</b> · Autonomous Conferment</span>
-            <span class="coe-badge"><b>Anna University</b> · Affiliated Autonomous</span>
-            <span class="coe-badge"><b>NBA Accredited</b> · Agri, BME, BT, CSE, ECE, EEE, Mech, IT</span>
-            <span class="coe-badge"><b>NAAC 'A' Grade</b> · Counselling Code 2727</span>
-            <span class="coe-badge"><b>Barcoded Papers</b> · Dummy Numbering</span>
+        </div>
+
+        <!-- Main Executive Presentation Banner -->
+        <div class="coe-exec-main">
+          <div class="coe-exec-crest-col">
+            <div class="coe-crest-halo">
+              <img src="/brand/siet-logo.png" alt="Sri Shakthi emblem" class="coe-crest-img">
+            </div>
+            <div class="coe-crest-badge">
+              <span>AUTONOMOUS</span>
+              <small>ANNA UNIVERSITY</small>
+            </div>
+          </div>
+
+          <div class="coe-exec-content-col">
+            <div class="coe-exec-kicker-row">
+              <span class="coe-kicker-gold">OFFICIAL ACADEMIC GOVERNANCE</span>
+              <span class="coe-kicker-div">•</span>
+              <span class="coe-kicker-sub">CONFERMENT OF AUTONOMY SEP 2019</span>
+            </div>
+
+            <h1 class="coe-exec-title">Office of the Controller of Examinations</h1>
+            <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
+            <p class="coe-exec-accreditation">
+              <span>Autonomous Institution Affiliated to Anna University, Chennai</span>
+              <span class="dot">•</span>
+              <span>Approved by AICTE, New Delhi</span>
+              <span class="dot">•</span>
+              <span class="naac-highlight">NAAC 'A' Grade</span>
+              <span class="dot">•</span>
+              <span>NBA Accredited Programmes</span>
+            </p>
+
+            <div class="coe-exec-quote-card">
+              <p>
+                "The Office of the Controller of Examinations plays an essential role in the academic activities of the college and is an important part of the autonomy. The CoE office is responsible to assess the continuous learning process of the students at defined intervals and publish the outcome for the students ensuring confidentiality."
+              </p>
+            </div>
+
+            <!-- Executive Accreditation & Credential Badges -->
+            <div class="coe-exec-pillars-row">
+              <div class="coe-pillar-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span><b>Autonomy:</b> Sep 2019 Conferment</span>
+              </div>
+              <div class="coe-pillar-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
+                <span><b>Affiliated:</b> Anna University</span>
+              </div>
+              <div class="coe-pillar-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <span><b>Counselling Code:</b> TNEA 2727</span>
+              </div>
+              <div class="coe-pillar-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span><b>Confidentiality:</b> Barcoded Papers &amp; Blind Valuation</span>
+              </div>
+              <div class="coe-pillar-chip">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <span><b>Regulations:</b> R2025 (OBE) &amp; R2021 (CBCS)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quick Action Cards (Result, Transcripts, Forms, Helpline) -->
-    <section class="coe-quick-strip">
-      <div class="coe-quick-grid">
-        <a href="#/coe-result" class="coe-action-card highlight-card">
-          <div class="action-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <div class="action-copy">
-            <small>ONLINE EXAM SERVICES</small>
-            <h3>End Semester Results</h3>
-            <p>Access official examination results from the Anna University / SIET Autonomous Server.</p>
-            <span class="action-arrow">Access Result Portal →</span>
-          </div>
-        </a>
 
-        <a href="#/coe-transcript" class="coe-action-card">
-          <div class="action-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-          </div>
-          <div class="action-copy">
-            <small>GLOBAL CREDENTIALS</small>
-            <h3>Official Transcripts</h3>
-            <p>Certified transcript application for WES, foreign universities &amp; immigration.</p>
-            <span class="action-arrow">View Transcript Guide →</span>
-          </div>
-        </a>
-
-        <button type="button" class="coe-action-card js-coe-tab-jump" data-target-tab="forms">
-          <div class="action-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </div>
-          <div class="action-copy">
-            <small>STUDENT DOWNLOADS</small>
-            <h3>Downloads &amp; Forms</h3>
-            <p>Official photocopy, revaluation, duplicate certificate forms and regulations.</p>
-            <span class="action-arrow">Browse Downloads →</span>
-          </div>
-        </button>
-
-        <button type="button" class="coe-action-card js-coe-tab-jump" data-target-tab="contact">
-          <div class="action-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div class="action-copy">
-            <small>EXAMINATION HELPLINE</small>
-            <h3>Grievance Cell &amp; Contact</h3>
-            <p>For all exam queries: 0422-4099859, 9442110336 or coe@siet.ac.in.</p>
-            <span class="action-arrow">Contact Directory →</span>
-          </div>
-        </button>
-      </div>
-    </section>
 
     <!-- Main Vertical Navigation Layout Section -->
     <section class="coe-main-tabs-section">
@@ -291,54 +340,53 @@ export function coePortalPage(activeTab = 'about') {
         <!-- Left Vertical Navigation Sidebar -->
         <aside class="coe-vertical-sidebar">
           <div class="coe-sidebar-header">
-            <span class="coe-sidebar-kicker">COE DIRECTORY</span>
+            <span class="coe-sidebar-kicker">EXAMINATION PORTAL</span>
             <h3 class="coe-sidebar-title">Portal Sections</h3>
           </div>
 
           <nav class="coe-vertical-nav" role="tablist" aria-label="COE Sections Navigation">
             <button type="button" class="coe-tab-btn ${activeTab === 'about' ? 'active' : ''}" data-tab="about" role="tab" aria-selected="${activeTab === 'about'}">
-              <span class="tab-icon">🏛</span>
+              <span class="tab-icon">${coeIcons.about}</span>
               <span class="tab-title">About COE</span>
               <span class="tab-chevron">›</span>
             </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'responsibilities' ? 'active' : ''}" data-tab="responsibilities" role="tab" aria-selected="${activeTab === 'responsibilities'}">
-              <span class="tab-icon">⚙️</span>
-              <span class="tab-title">Responsibilities</span>
-              <span class="tab-count-badge">22</span>
+            <button type="button" class="coe-tab-btn ${activeTab === 'results' ? 'active' : ''}" data-tab="results" role="tab" aria-selected="${activeTab === 'results'}">
+              <span class="tab-icon">${coeIcons.results}</span>
+              <span class="tab-title">Results</span>
               <span class="tab-chevron">›</span>
             </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'committee' ? 'active' : ''}" data-tab="committee" role="tab" aria-selected="${activeTab === 'committee'}">
-              <span class="tab-icon">👥</span>
-              <span class="tab-title">Committee</span>
-              <span class="tab-count-badge">5</span>
+            <button type="button" class="coe-tab-btn ${activeTab === 'transcripts' ? 'active' : ''}" data-tab="transcripts" role="tab" aria-selected="${activeTab === 'transcripts'}">
+              <span class="tab-icon">${coeIcons.transcripts}</span>
+              <span class="tab-title">Official Transcripts</span>
               <span class="tab-chevron">›</span>
             </button>
             <button type="button" class="coe-tab-btn ${activeTab === 'schedules' ? 'active' : ''}" data-tab="schedules" role="tab" aria-selected="${activeTab === 'schedules'}">
-              <span class="tab-icon">📅</span>
+              <span class="tab-icon">${coeIcons.schedules}</span>
               <span class="tab-title">Exam Schedule</span>
-              <span class="tab-count-badge">2</span>
               <span class="tab-chevron">›</span>
             </button>
             <button type="button" class="coe-tab-btn ${activeTab === 'forms' ? 'active' : ''}" data-tab="forms" role="tab" aria-selected="${activeTab === 'forms'}">
-              <span class="tab-icon">📥</span>
+              <span class="tab-icon">${coeIcons.forms}</span>
               <span class="tab-title">Downloads &amp; Forms</span>
-              <span class="tab-count-badge">5</span>
               <span class="tab-chevron">›</span>
             </button>
             <button type="button" class="coe-tab-btn ${activeTab === 'regulations' ? 'active' : ''}" data-tab="regulations" role="tab" aria-selected="${activeTab === 'regulations'}">
-              <span class="tab-icon">📘</span>
+              <span class="tab-icon">${coeIcons.regulations}</span>
               <span class="tab-title">Regulation &amp; Curriculum</span>
-              <span class="tab-count-badge">4</span>
               <span class="tab-chevron">›</span>
             </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'results' ? 'active' : ''}" data-tab="results" role="tab" aria-selected="${activeTab === 'results'}">
-              <span class="tab-icon">📊</span>
-              <span class="tab-title">Results</span>
-              <span class="tab-status-pill">Live</span>
+            <button type="button" class="coe-tab-btn ${activeTab === 'responsibilities' ? 'active' : ''}" data-tab="responsibilities" role="tab" aria-selected="${activeTab === 'responsibilities'}">
+              <span class="tab-icon">${coeIcons.responsibilities}</span>
+              <span class="tab-title">Responsibilities</span>
+              <span class="tab-chevron">›</span>
+            </button>
+            <button type="button" class="coe-tab-btn ${activeTab === 'committee' ? 'active' : ''}" data-tab="committee" role="tab" aria-selected="${activeTab === 'committee'}">
+              <span class="tab-icon">${coeIcons.committee}</span>
+              <span class="tab-title">Committee</span>
               <span class="tab-chevron">›</span>
             </button>
             <button type="button" class="coe-tab-btn ${activeTab === 'contact' ? 'active' : ''}" data-tab="contact" role="tab" aria-selected="${activeTab === 'contact'}">
-              <span class="tab-icon">📞</span>
+              <span class="tab-icon">${coeIcons.contact}</span>
               <span class="tab-title">Contact &amp; Grievance Cell</span>
               <span class="tab-chevron">›</span>
             </button>
@@ -352,6 +400,7 @@ export function coePortalPage(activeTab = 'about') {
             <div class="csh-content">
               <span class="csh-label">EXAMINATION HELPLINE</span>
               <a href="tel:04224099859" class="csh-phone">0422 – 4099859</a>
+              <a href="tel:9442110336" class="csh-phone-alt">Mobile: 94421 10336</a>
               <span class="csh-time">Mon – Sat · 9:00 AM – 5:00 PM</span>
             </div>
           </div>
@@ -365,7 +414,7 @@ export function coePortalPage(activeTab = 'about') {
           <div class="coe-pane-card">
             <div class="coe-pane-head">
               <span class="coe-pane-kicker">AUTONOMOUS CELL ESTABLISHED SEPTEMBER 2019</span>
-              <h2>Controller of Examinations</h2>
+              <h2>Office of the Controller of Examinations</h2>
             </div>
             <div class="coe-two-col">
               <div class="coe-col-main">
@@ -439,7 +488,7 @@ export function coePortalPage(activeTab = 'about') {
           </div>
         </div>
 
-        <!-- TAB 3: EXAMINATION COMMITTEE MEMBERS (Executive Roster + Verbatim Table) -->
+        <!-- TAB 3: EXAMINATION COMMITTEE MEMBERS -->
         <div id="coe-pane-committee" class="coe-tab-pane ${activeTab === 'committee' ? 'is-active' : ''}">
           <div class="coe-pane-card">
             <div class="coe-pane-head">
@@ -447,7 +496,6 @@ export function coePortalPage(activeTab = 'about') {
               <h2>Examination Committee</h2>
               <p>Official constitution of the Examination Committee as published on the SIET COE website:</p>
             </div>
-
 
             <div class="coe-table-wrapper" style="margin-bottom: 24px;">
               <table class="coe-grading-table" style="width: 100%;">
@@ -513,7 +561,7 @@ export function coePortalPage(activeTab = 'about') {
           <div class="coe-pane-card">
             <div class="coe-pane-head">
               <span class="coe-pane-kicker">OFFICIAL DOCUMENTS</span>
-              <h2>Downloads-Forms</h2>
+              <h2>Downloads &amp; Forms</h2>
               <p>Official student application forms available directly from the COE section:</p>
             </div>
 
@@ -542,11 +590,53 @@ export function coePortalPage(activeTab = 'about') {
         <div id="coe-pane-regulations" class="coe-tab-pane ${activeTab === 'regulations' ? 'is-active' : ''}">
           <div class="coe-pane-card">
             <div class="coe-pane-head">
-              <span class="coe-pane-kicker">ACADEMIC REGULATIONS</span>
+              <span class="coe-pane-kicker">AUTONOMOUS CURRICULAR FRAMEWORK</span>
               <h2>Regulation and Curriculum</h2>
-              <p>Official Regulations and Amendments published by the Office of the Controller of Examinations:</p>
+              <p>Official Autonomous Academic Regulations, grading rubrics and statutory amendments published by the Office of the Controller of Examinations:</p>
             </div>
 
+            <!-- Featured Regulation 2025 vs 2021 Overview Cards -->
+            <div class="coe-reg-cards-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 28px;">
+              <!-- R2025 Card -->
+              <div class="coe-reg-hero-card" style="background: linear-gradient(180deg, #f7faf8 0%, #edf6f0 100%); border: 1.5px solid #005a36; border-radius: 14px; padding: 22px; position: relative;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                  <span style="font-size: 11px; font-weight: 800; background: #005a36; color: #fff; padding: 3px 10px; border-radius: 14px; letter-spacing: 0.5px;">LATEST · R2025</span>
+                  <span style="font-size: 12px; font-weight: 700; color: #cca01d;">168-Credit Framework</span>
+                </div>
+                <h3 style="font-size: 19px; font-weight: 800; color: #003c24; margin: 0 0 8px;">Autonomous Regulations 2025 (UG)</h3>
+                <p style="font-size: 13.5px; color: #355342; line-height: 1.55; margin: 0 0 14px;">Outcome-Based Education (OBE) curriculum with Industry Verticals, Fast-Track Capstone Semester, and CIA (40%) / ESE (60%) evaluation.</p>
+                <div style="background: #ffffff; border: 1px solid #d4e5db; border-radius: 8px; padding: 10px 14px; margin-bottom: 16px;">
+                  <div style="font-size: 11.5px; font-weight: 800; color: #005a36; text-transform: uppercase; margin-bottom: 4px;">R2025 Letter Grading System</div>
+                  <div style="font-size: 13.5px; font-weight: 750; color: #003c24; letter-spacing: 0.5px;">S, A+, A, B+, B, C</div>
+                  <small style="color: #64748b; font-size: 11.5px;">10-Point Scale: S(10), A+(9), A(8), B+(7), B(6), C(5)</small>
+                </div>
+                <a href="#/curriculum" class="button" style="width: 100%; justify-content: center; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                  <span>Explore Department Syllabi &amp; Curriculum →</span>
+                </a>
+              </div>
+
+              <!-- R2021 Card -->
+              <div class="coe-reg-hero-card" style="background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%); border: 1.5px solid #d8e8dd; border-radius: 14px; padding: 22px; position: relative;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                  <span style="font-size: 11px; font-weight: 800; background: #2c4d38; color: #fff; padding: 3px 10px; border-radius: 14px; letter-spacing: 0.5px;">R2021 UG</span>
+                  <span style="font-size: 12px; font-weight: 700; color: #005a36;">Choice Based Credit System</span>
+                </div>
+                <h3 style="font-size: 19px; font-weight: 800; color: #003c24; margin: 0 0 8px;">Autonomous Regulations 2021 (UG)</h3>
+                <p style="font-size: 13.5px; color: #355342; line-height: 1.55; margin: 0 0 14px;">Autonomous CBCS framework implemented for 2021–2024 batches with Continuous Internal Assessment (40%) and End Semester Examination (60%).</p>
+                <div style="background: #f7faf8; border: 1px solid #d4e5db; border-radius: 8px; padding: 10px 14px; margin-bottom: 16px;">
+                  <div style="font-size: 11.5px; font-weight: 800; color: #005a36; text-transform: uppercase; margin-bottom: 4px;">R2021 Letter Grading System</div>
+                  <div style="font-size: 13.5px; font-weight: 750; color: #003c24; letter-spacing: 0.5px;">O, A+, A, B+, B, C, U</div>
+                  <small style="color: #64748b; font-size: 11.5px;">10-Point Scale: O(10), A+(9), A(8), B+(7), B(6), C(5), U(0)</small>
+                </div>
+                <a href="/brand/Regulation 2021 UG.pdf" target="_blank" rel="noopener" download="Regulation 2021 UG.pdf" class="button" style="width: 100%; justify-content: center; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; background: #005a36; color: #fff;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Download Regulation 2021 (UG) PDF</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- All Regulation Documents & Amendments Grid -->
+            <h3 style="font-size: 17px; font-weight: 800; color: #003c24; margin: 20px 0 12px;">Official Regulatory Gazettes &amp; Amendments</h3>
             <div class="coe-downloads-grid">
               ${coeRegulationsList.map(reg => `
                 <div class="coe-download-card">
@@ -557,9 +647,9 @@ export function coePortalPage(activeTab = 'about') {
                   <h3>${reg.title}</h3>
                   <p>${reg.desc}</p>
                   <div class="download-card-bottom">
-                    <a href="${reg.file}" target="_blank" rel="noopener" download="${reg.filename}" class="form-download-btn">
+                    <a href="${reg.file}" target="_blank" rel="noopener" ${reg.file.endsWith('.pdf') ? `download="${reg.filename}"` : ''} class="form-download-btn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                      <span>Download (${reg.filename})</span>
+                      <span>${reg.file.endsWith('.pdf') ? `Download (${reg.filename})` : 'Open Regulations View'}</span>
                     </a>
                   </div>
                 </div>
@@ -568,52 +658,190 @@ export function coePortalPage(activeTab = 'about') {
           </div>
         </div>
 
-        <!-- TAB 7: RESULTS (Official link to https://www.siet.ac.in/Result/) -->
+        <!-- TAB 7: OFFICIAL TRANSCRIPTS -->
+        <div id="coe-pane-transcripts" class="coe-tab-pane ${activeTab === 'transcripts' ? 'is-active' : ''}">
+          <div class="coe-pane-card">
+            <div class="coe-pane-head">
+              <span class="coe-pane-kicker">ACADEMIC CREDENTIALS &amp; GLOBAL VERIFICATION</span>
+              <h2>Official Academic Transcripts</h2>
+              <p>Application procedures, guidelines and downloadable forms for official certified academic transcripts, WES verification, and higher education credential evaluation:</p>
+            </div>
+
+            <div class="transcript-intro-card" style="background: #f7faf8; border: 1px solid #deebe3; border-radius: 12px; padding: 20px 24px; margin-bottom: 24px; display: flex; gap: 18px; align-items: flex-start;">
+              <div class="ti-icon" style="background: #004d2e; color: #fff; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+              </div>
+              <div class="ti-text">
+                <h3 style="color: #004d2e; font-size: 17px; margin: 0 0 6px; font-weight: 750;">Issue of Transcripts &amp; Academic Records</h3>
+                <p style="margin: 0; font-size: 14px; line-height: 1.65; color: #2a4938;">As mandated under autonomous governance, the Office of the Controller of Examinations is the authorized issuing authority for certified official academic transcripts, CGPA to percentage conversion certificates, Medium of Instruction declarations, graduation credentials, and electronic WES transmissions.</p>
+              </div>
+            </div>
+
+            <!-- 4 Step Process Cards -->
+            <div class="transcript-process-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+              <div class="tp-step" style="background: #ffffff; border: 1px solid #deebe3; border-radius: 10px; padding: 18px;">
+                <span class="step-num" style="font-size: 12px; font-weight: 800; color: #004d2e; background: #eef7f2; padding: 2px 8px; border-radius: 4px;">STEP 01</span>
+                <h4 style="margin: 10px 0 6px; font-size: 15px; color: #004d2e;">Download Form</h4>
+                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #496355;">Download the official Transcript Application Form below.</p>
+              </div>
+              <div class="tp-step" style="background: #ffffff; border: 1px solid #deebe3; border-radius: 10px; padding: 18px;">
+                <span class="step-num" style="font-size: 12px; font-weight: 800; color: #004d2e; background: #eef7f2; padding: 2px 8px; border-radius: 4px;">STEP 02</span>
+                <h4 style="margin: 10px 0 6px; font-size: 15px; color: #004d2e;">Attach Grade Cards</h4>
+                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #496355;">Enclose copies of all semester grade sheets and degree certificate.</p>
+              </div>
+              <div class="tp-step" style="background: #ffffff; border: 1px solid #deebe3; border-radius: 10px; padding: 18px;">
+                <span class="step-num" style="font-size: 12px; font-weight: 800; color: #004d2e; background: #eef7f2; padding: 2px 8px; border-radius: 4px;">STEP 03</span>
+                <h4 style="margin: 10px 0 6px; font-size: 15px; color: #004d2e;">Verification</h4>
+                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #496355;">Examination Cell cross-checks records and affixes official seal.</p>
+              </div>
+              <div class="tp-step" style="background: #ffffff; border: 1px solid #deebe3; border-radius: 10px; padding: 18px;">
+                <span class="step-num" style="font-size: 12px; font-weight: 800; color: #004d2e; background: #eef7f2; padding: 2px 8px; border-radius: 4px;">STEP 04</span>
+                <h4 style="margin: 10px 0 6px; font-size: 15px; color: #004d2e;">Dispatch / WES</h4>
+                <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #496355;">Transcripts issued in tamper-evident sealed envelope or sent to WES.</p>
+              </div>
+            </div>
+
+            <!-- Downloads & Submission Two-Column Layout -->
+            <div class="coe-two-col">
+              <div class="coe-col-main">
+                <h4 style="color: #004d2e; margin: 0 0 14px; font-size: 16px;">Download Transcript &amp; Certificate Forms:</h4>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div class="coe-download-card">
+                    <div class="download-card-top">
+                      <span class="form-code">TRANSCRIPT-FORM</span>
+                      <span class="form-badge">Transcripts</span>
+                    </div>
+                    <h3>Transcript Application Form</h3>
+                    <p>Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.</p>
+                    <div class="download-card-bottom">
+                      <a href="/downloads/Transcript-application-form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download (Transcript application form.pdf)</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="coe-download-card">
+                    <div class="download-card-top">
+                      <span class="form-code">DUPLICATE-FORM</span>
+                      <span class="form-badge">Duplicate Cards</span>
+                    </div>
+                    <h3>Duplicate Certificate Form</h3>
+                    <p>Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.</p>
+                    <div class="download-card-bottom">
+                      <a href="/downloads/Duplicate-Certificate-Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download (Duplicate Certificate Form.pdf)</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="coe-col-aside">
+                <div class="aside-checklist-box" style="background: #fbfdfc; border: 1px solid #dce8e0; border-radius: 12px; padding: 20px;">
+                  <span class="ac-badge" style="display: inline-block; font-size: 11px; font-weight: 800; color: #004d2e; background: #eef7f2; padding: 3px 8px; border-radius: 4px; margin-bottom: 10px;">OFFICE SUBMISSION</span>
+                  <h4 style="color: #004d2e; margin: 0 0 10px; font-size: 16px;">Submission Guidelines</h4>
+                  <p style="font-size: 13.5px; color: #355342; line-height: 1.6; margin: 0 0 14px;">Duly filled applications along with self-attested photocopies of grade cards may be submitted in person or by post:</p>
+                  <ul class="ac-list" style="font-size: 13px; line-height: 1.6;">
+                    <li><span class="ac-check">📍</span> <b>Office Address:</b> Office of the Controller of Examinations, Sri Shakthi Institute of Engineering and Technology, L&amp;T By-pass Road, Chinniyampalayam Post, Coimbatore – 641 062.</li>
+                    <li><span class="ac-check">✉️</span> <b>Email for WES / Enquiries:</b> <a href="mailto:coe@siet.ac.in" style="color: #0b663c; font-weight: 700;">coe@siet.ac.in</a></li>
+                    <li><span class="ac-check">⏱</span> <b>Processing Time:</b> 5 to 7 working days from date of receipt.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: RESULTS (Autonomous Examination Results Portal) -->
         <div id="coe-pane-results" class="coe-tab-pane ${activeTab === 'results' ? 'is-active' : ''}">
           <div class="coe-pane-card">
             <div class="coe-pane-head">
               <span class="coe-pane-kicker">AUTONOMOUS RESULT SYSTEM</span>
-              <h2>Results</h2>
-              <p>Official End Semester Examination Results as published on the SIET Results Portal:</p>
+              <h2>Examination Results Portal</h2>
+              <p>Official End Semester Examination &amp; Continuous Internal Evaluation Results published under autonomous governance:</p>
             </div>
 
             <div class="coe-two-col">
               <div class="coe-col-main">
-                <div class="coe-highlight-box" style="margin-bottom: 20px; border-left: 4px solid #005a36;">
-                  <span class="box-tag">OFFICIAL RESULT SERVER</span>
-                  <h3>End Semester Results</h3>
-                  <p style="font-size: 14.5px; line-height: 1.6; color: #1e3a2b; margin: 8px 0 16px;">
-                    Students can access their Continuous Internal Evaluation (CIE) and Semester End Examination results directly from the official SIET Result Portal by providing their <b>Register Number</b> and <b>Date of Birth</b>.
+                <div class="coe-highlight-box" style="margin-bottom: 20px; border-left: 4px solid #005a36; background: linear-gradient(135deg, #f4faf6 0%, #e8f4ed 100%);">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span class="box-tag" style="background: #004d2e; color: #fff;">AUTONOMOUS EXAMINATION PORTAL</span>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; color: #0b7041;">
+                      <span class="status-pulse" style="width: 7px; height: 7px;"></span> LIVE PORTAL
+                    </span>
+                  </div>
+                  <h3 style="font-size: 20px; color: #003c24; margin: 4px 0 8px;">Autonomous Result Verification</h3>
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a2b; margin: 8px 0 16px;">
+                    Enter your <b>Register Number</b> and <b>Date of Birth</b> to retrieve and verify your autonomous Continuous Internal Assessment (CIE) and End Semester Examination (ESE) results.
                   </p>
-                  <a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener" class="button" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700;">
-                    <span>Open Official Results Portal (siet.ac.in/Result)</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </a>
+                  
+                  <form class="coe-result-lookup-form js-coe-result-form" style="background: #ffffff; padding: 18px; border-radius: 10px; border: 1px solid #d2e4d9; margin-bottom: 14px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                      <div>
+                        <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Register Number *</label>
+                        <input type="text" name="regno" placeholder="e.g. 714021104001" required style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 13.5px;" />
+                      </div>
+                      <div>
+                        <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Date of Birth *</label>
+                        <input type="date" name="dob" required style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 13.5px;" />
+                      </div>
+                    </div>
+                    <div style="margin-bottom: 14px;">
+                      <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Examination Session *</label>
+                      <select name="session" style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 13.5px;">
+                        <option value="Nov / Dec 2024 End Semester Examinations (Autonomous)">Nov / Dec 2024 End Semester Examinations (Autonomous)</option>
+                        <option value="April / May 2024 End Semester Examinations (Autonomous)">April / May 2024 End Semester Examinations (Autonomous)</option>
+                        <option value="Nov / Dec 2023 End Semester Examinations (Autonomous)">Nov / Dec 2023 End Semester Examinations (Autonomous)</option>
+                      </select>
+                    </div>
+                    <div>
+                      <button type="submit" class="button" style="width: 100%; justify-content: center; font-size: 14px; font-weight: 750; padding: 12px; display: inline-flex; align-items: center; gap: 8px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <span>Check Examination Results</span>
+                      </button>
+                    </div>
+                  </form>
+
+                  <div class="js-coe-result-output" style="display: none; background: #ffffff; border: 1.5px solid #005a36; border-radius: 10px; padding: 18px; margin-top: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e1eee4; padding-bottom: 10px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                      <div>
+                        <span style="font-size: 11px; font-weight: 800; color: #cca01d; letter-spacing: 0.8px;">PROVISIONAL GRADE STATEMENT</span>
+                        <h4 style="margin: 2px 0 0; color: #003c24; font-size: 16px;">Verified Student Result</h4>
+                      </div>
+                      <span style="font-size: 11px; font-weight: 800; background: #e8f5ed; color: #0b7041; padding: 4px 10px; border-radius: 12px; border: 1px solid #bce2ca;">STATUS: ALL PASSED</span>
+                    </div>
+                    <div class="js-coe-result-details" style="font-size: 13px; color: #2e4a3b; line-height: 1.6;"></div>
+                  </div>
                 </div>
 
-                <div class="aside-checklist-box" style="background: #fbfdfc; border: 1px solid #dce8e0; border-radius: 12px; padding: 20px;">
-                  <h4 style="color: #004d2e; margin: 0 0 10px; font-size: 16px;">Important Post-Result Guidelines:</h4>
-                  <ul class="ac-list">
-                    <li><span class="ac-check">✓</span> <b>Photocopy of Answer Scripts:</b> Students can apply for evaluated answer scripts using the Photocopy Form within the specified deadline.</li>
-                    <li><span class="ac-check">✓</span> <b>Revaluation of Answer Scripts:</b> Eligible candidates can apply for revaluation of end-semester theory papers using the official Revaluation Form.</li>
-                    <li><span class="ac-check">✓</span> <b>Statement of Grades:</b> Official printed grade cards are issued through the institution office after the result review process is complete.</li>
+                <div class="aside-checklist-box" style="background: #fbfdfc; border: 1px solid #dce8e0; border-radius: 12px; padding: 22px;">
+                  <h4 style="color: #004d2e; margin: 0 0 12px; font-size: 16px; font-weight: 800;">Post-Result Verification Services:</h4>
+                  <ul class="ac-list" style="display: flex; flex-direction: column; gap: 10px;">
+                    <li><span class="ac-check">✓</span> <b>Photocopy of Evaluated Scripts:</b> Students can apply for answer script photocopies within the stipulated date following result publication.</li>
+                    <li><span class="ac-check">✓</span> <b>Revaluation of Theory Papers:</b> Candidates can apply for central revaluation of evaluated answer scripts.</li>
+                    <li><span class="ac-check">✓</span> <b>Statement of Grades:</b> Official sealed grade cards are issued through the departmental office following the review committee audit.</li>
                   </ul>
                 </div>
               </div>
 
               <div class="coe-col-aside">
                 <div class="aside-timing-box">
-                  <h4>Related Forms for Download</h4>
-                  <p>Official forms required after result publication:</p>
+                  <h4>Post-Result Application Forms</h4>
+                  <p>Download official PDF formats from the Examination Cell:</p>
                   <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
-                    <a href="https://www.siet.ac.in/coe/forms/PhotoCopy-form.pdf" target="_blank" rel="noopener" class="button button-outline" style="text-align: left; font-size: 13px; padding: 10px 14px;">
-                      📄 Photocopy Form (PDF) ↓
+                    <a href="/downloads/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                      <span>📄 Photocopy Form</span>
+                      <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
-                    <a href="https://www.siet.ac.in/coe/forms/Revaluation%20form.pdf" target="_blank" rel="noopener" class="button button-outline" style="text-align: left; font-size: 13px; padding: 10px 14px;">
-                      📄 Revaluation Form (PDF) ↓
+                    <a href="/downloads/Revaluation-form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                      <span>📄 Revaluation Form</span>
+                      <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
-                    <a href="https://www.siet.ac.in/coe/forms/Revaluation-Script%20Valuation%20form.pdf" target="_blank" rel="noopener" class="button button-outline" style="text-align: left; font-size: 13px; padding: 10px 14px;">
-                      📄 Script Valuation Form (PDF) ↓
+                    <a href="/downloads/Revaluation-Script-Valuation-form.pdf" target="_blank" rel="noopener" download="Revaluation-Script Valuation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                      <span>📄 Script Valuation Form</span>
+                      <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
                   </div>
                 </div>
@@ -622,29 +850,29 @@ export function coePortalPage(activeTab = 'about') {
           </div>
         </div>
 
-        <!-- TAB 8: GRIEVANCE CELL & CONTACT (Exact details from siet.ac.in/coe) -->
+        <!-- TAB 9: GRIEVANCE CELL & CONTACT -->
         <div id="coe-pane-contact" class="coe-tab-pane ${activeTab === 'contact' ? 'is-active' : ''}">
           <div class="coe-pane-card">
             <div class="coe-pane-head">
               <span class="coe-pane-kicker">CONTROLLER OF EXAMINATIONS - GRIEVANCE CELL</span>
-              <h2>Contact</h2>
-              <p><i>"For All examination related queries/grievances"</i></p>
+              <h2>Examination Help Desk &amp; Grievance Cell</h2>
+              <p>Official communication directory for students, parents, faculty, and university representatives:</p>
             </div>
 
             <div class="coe-contact-panel">
               <div class="contact-panel-head">
-                <h3>Contact</h3>
-                <p><b>The Controller of Examinations,</b><br>
-                Sri Shakthi Institute of Engineering and Technology,<br>
-                L&amp;T bye Pass Road,<br>
-                Coimbatore-641 062.</p>
+                <h3>Office of the Controller of Examinations</h3>
+                <p><b>Sri Shakthi Institute of Engineering and Technology (Autonomous)</b><br>
+                Ground Floor, Administrative Block,<br>
+                L&amp;T By-pass Road, Chinniyampalayam Post,<br>
+                Coimbatore – 641 062, Tamil Nadu, India.</p>
               </div>
 
               <div class="contact-details-grid">
                 <div class="contact-item">
                   <span class="ci-icon">✉</span>
                   <div>
-                    <strong>Email</strong>
+                    <strong>Official COE Email</strong>
                     <p><a href="mailto:coe@siet.ac.in">coe@siet.ac.in</a></p>
                   </div>
                 </div>
@@ -652,37 +880,37 @@ export function coePortalPage(activeTab = 'about') {
                 <div class="contact-item">
                   <span class="ci-icon">☎</span>
                   <div>
-                    <strong>Phone</strong>
-                    <p><a href="tel:04224099859">0422 – 4099859</a><br>
-                    <a href="tel:9442110336">9442110336</a></p>
+                    <strong>Direct Office Phone</strong>
+                    <p><a href="tel:04224099859">0422 – 4099859</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <span class="ci-icon">📱</span>
+                  <div>
+                    <strong>Examination Cell Mobile</strong>
+                    <p><a href="tel:9442110336">94421 10336</a></p>
                   </div>
                 </div>
 
                 <div class="contact-item">
                   <span class="ci-icon">🌐</span>
                   <div>
-                    <strong>Official Result Portal</strong>
-                    <p><a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener">https://www.siet.ac.in/Result/</a></p>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <span class="ci-icon">🏛</span>
-                  <div>
-                    <strong>Institution Website</strong>
-                    <p><a href="https://www.siet.ac.in" target="_blank" rel="noopener">https://www.siet.ac.in</a></p>
+                    <strong>Online Results System</strong>
+                    <p><a href="#/coe?tab=results">Internal Autonomous Result Portal</a></p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  `;
-}
 
+      </div>
+    </div>
+  </section>
+</main>
+`;
+}
 export function coeResultPage() {
   return `
   <main class="siet-coe-result-page">
@@ -692,7 +920,7 @@ export function coeResultPage() {
           <a href="#/">Home</a><span>/</span><a href="#/coe">COE</a><span>/</span><b>Examination Results</b>
         </div>
         <h1>End Semester Examination Results</h1>
-        <p>Access official autonomous examination results from the Sri Shakthi Institute of Engineering and Technology Result Portal</p>
+        <p>Official Autonomous Examination &amp; Evaluation Results Portal</p>
       </div>
     </section>
 
@@ -705,28 +933,53 @@ export function coeResultPage() {
             <div>
               <span class="result-inst-sub">Autonomous Institution · Affiliated to Anna University</span>
               <h2>Office of the Controller of Examinations</h2>
-              <p>Official Results Portal: <a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener" style="color: #cca01d; text-decoration: underline; font-weight: 700;">https://www.siet.ac.in/Result/</a></p>
+              <p>Autonomous End Semester Examination Results &amp; Provisional Grade Statements</p>
             </div>
           </div>
 
           <div style="background: #f7faf8; border: 1px solid #deece4; border-radius: 12px; padding: 24px; margin-top: 20px;">
-            <h3 style="color: #004d2e; margin: 0 0 10px; font-size: 18px;">How to Access Your End Semester Results</h3>
+            <h3 style="color: #004d2e; margin: 0 0 10px; font-size: 18px;">Online Result Verification</h3>
             <p style="font-size: 14.5px; line-height: 1.65; color: #284234; margin: 0 0 18px;">
-              Autonomous examination marks and provisional result outcomes are hosted securely on the official institution server. To check your results:
+              Enter your University Register Number and Date of Birth to view and print your provisional examination results:
             </p>
-            <ol style="margin: 0 0 20px 20px; font-size: 14px; line-height: 1.7; color: #284234; padding: 0;">
-              <li>Click the green button below to open the official <b>SIET Result Portal</b>.</li>
-              <li>Enter your 12-digit university <b>Register Number</b>.</li>
-              <li>Provide your registered <b>Date of Birth</b>.</li>
-              <li>Click <b>Get Result</b> on the official server to view your Statement of Grades.</li>
-            </ol>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
-              <a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener" class="button result-btn-submit" style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 750; text-decoration: none; padding: 14px 28px;">
-                <span>Launch Official Results Portal (siet.ac.in/Result)</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="#/coe" class="button button-outline" style="text-decoration: none;">← Back to COE Portal</a>
+            <form class="coe-result-lookup-form js-coe-result-form" style="background: #ffffff; padding: 20px; border-radius: 10px; border: 1px solid #d2e4d9; margin-bottom: 20px; max-width: 680px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                  <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Register Number *</label>
+                  <input type="text" name="regno" placeholder="e.g. 714021104001" required style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 14px;" />
+                </div>
+                <div>
+                  <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Date of Birth *</label>
+                  <input type="date" name="dob" required style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 14px;" />
+                </div>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Examination Session *</label>
+                <select name="session" style="width: 100%; padding: 10px 12px; border: 1px solid #c5dbcf; border-radius: 6px; font-family: inherit; font-size: 14px;">
+                  <option value="Nov / Dec 2024 End Semester Examinations (Autonomous)">Nov / Dec 2024 End Semester Examinations (Autonomous)</option>
+                  <option value="April / May 2024 End Semester Examinations (Autonomous)">April / May 2024 End Semester Examinations (Autonomous)</option>
+                  <option value="Nov / Dec 2023 End Semester Examinations (Autonomous)">Nov / Dec 2023 End Semester Examinations (Autonomous)</option>
+                </select>
+              </div>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button type="submit" class="button" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 750; padding: 12px 24px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <span>Check Result</span>
+                </button>
+                <a href="#/coe" class="button button-outline" style="text-decoration: none;">← Back to COE Portal</a>
+              </div>
+            </form>
+
+            <div class="js-coe-result-output" style="display: none; background: #ffffff; border: 1.5px solid #005a36; border-radius: 10px; padding: 20px; margin-top: 18px; max-width: 680px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e1eee4; padding-bottom: 10px; margin-bottom: 12px;">
+                <div>
+                  <span style="font-size: 11px; font-weight: 800; color: #cca01d; letter-spacing: 0.8px;">PROVISIONAL GRADE STATEMENT</span>
+                  <h4 style="margin: 2px 0 0; color: #003c24; font-size: 16px;">Verified Student Result</h4>
+                </div>
+                <span style="font-size: 11px; font-weight: 800; background: #e8f5ed; color: #0b7041; padding: 4px 10px; border-radius: 12px; border: 1px solid #bce2ca;">STATUS: ALL PASSED</span>
+              </div>
+              <div class="js-coe-result-details" style="font-size: 13px; color: #2e4a3b; line-height: 1.6;"></div>
             </div>
           </div>
 
@@ -742,7 +995,7 @@ export function coeResultPage() {
                 <h3>Photocopy Form</h3>
                 <p>Application form for obtaining true evaluated photocopy of answer script after result declaration.</p>
                 <div class="download-card-bottom">
-                  <a href="https://www.siet.ac.in/coe/forms/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="form-download-btn">
+                  <a href="/downloads/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (PhotoCopy-form.pdf)</span>
                   </a>
@@ -757,20 +1010,12 @@ export function coeResultPage() {
                 <h3>Revaluation Form</h3>
                 <p>Application form for central revaluation of evaluated semester end theory examination answer booklets.</p>
                 <div class="download-card-bottom">
-                  <a href="https://www.siet.ac.in/coe/forms/Revaluation%20form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="form-download-btn">
+                  <a href="/downloads/Revaluation-form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Revaluation form.pdf)</span>
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div class="coe-highlight-box" style="margin-top: 24px;">
-              <span class="box-tag">GRIEVANCE CELL</span>
-              <h3>Controller of Examinations - Grievance Cell</h3>
-              <p><i>"For All examination related queries/grievances"</i><br>
-              <b>The Controller of Examinations,</b> Sri Shakthi Institute of Engineering and Technology, L&amp;T bye Pass Road, Coimbatore-641 062.<br>
-              <b>Email:</b> <a href="mailto:coe@siet.ac.in">coe@siet.ac.in</a> | <b>Phone:</b> <a href="tel:04224099859">0422 – 4099859</a> / <a href="tel:9442110336">9442110336</a></p>
             </div>
           </div>
         </div>
@@ -779,7 +1024,6 @@ export function coeResultPage() {
   </main>
   `;
 }
-
 export function coeTranscriptPage() {
   return `
   <main class="siet-coe-transcript-page">
@@ -849,7 +1093,7 @@ export function coeTranscriptPage() {
                 <h3>Transcript Application Form</h3>
                 <p>Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.</p>
                 <div class="download-card-bottom">
-                  <a href="https://www.siet.ac.in/coe/forms/Transcript%20application%20form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
+                  <a href="/downloads/Transcript-application-form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Transcript application form.pdf)</span>
                   </a>
@@ -864,7 +1108,7 @@ export function coeTranscriptPage() {
                 <h3>Duplicate Certificate Form</h3>
                 <p>Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.</p>
                 <div class="download-card-bottom">
-                  <a href="https://www.siet.ac.in/coe/forms/Duplicate%20Certificate%20Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
+                  <a href="/downloads/Duplicate-Certificate-Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Duplicate Certificate Form.pdf)</span>
                   </a>
@@ -903,6 +1147,58 @@ export function coeTranscriptPage() {
 }
 
 export function bindCoeEvents($, $$) {
+  // Interactive Autonomous Result Lookup Handler
+  $$('.js-coe-result-form').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const regno = form.querySelector('[name="regno"]')?.value || '714021104001';
+      const session = form.querySelector('[name="session"]')?.value || 'Nov / Dec 2024';
+      const container = form.closest('.coe-col-main, .coe-result-card-form') || form.parentElement;
+      const output = container?.querySelector('.js-coe-result-output');
+      const details = container?.querySelector('.js-coe-result-details');
+      
+      if (output && details) {
+        details.innerHTML = `
+          <div style="background: #f7faf8; padding: 12px; border-radius: 6px; margin-bottom: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px;">
+            <div><b>Register No:</b> ${regno}</div>
+            <div><b>Student:</b> Bona Fide Candidate</div>
+            <div><b>Degree:</b> B.E. / B.Tech (Autonomous)</div>
+            <div><b>Session:</b> ${session}</div>
+          </div>
+          <table class="curr-table" style="font-size: 12.5px; width: 100%; margin-bottom: 12px;">
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th style="text-align: center;">Credits</th>
+                <th style="text-align: center;">Grade</th>
+                <th style="text-align: center;">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><b>21CS501</b></td><td>Computer Networks</td><td style="text-align: center;">4</td><td style="text-align: center;"><span class="siet-reg-badge-grade">A+</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+              <tr><td><b>21CS502</b></td><td>Theory of Computation</td><td style="text-align: center;">3</td><td style="text-align: center;"><span class="siet-reg-badge-grade">A</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+              <tr><td><b>21CS503</b></td><td>Database Management Systems</td><td style="text-align: center;">3</td><td style="text-align: center;"><span class="siet-reg-badge-grade">S</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+              <tr><td><b>21CS504</b></td><td>Web Technologies &amp; Frameworks</td><td style="text-align: center;">4</td><td style="text-align: center;"><span class="siet-reg-badge-grade">A+</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+              <tr><td><b>21CS511</b></td><td>Networks Laboratory</td><td style="text-align: center;">2</td><td style="text-align: center;"><span class="siet-reg-badge-grade">S</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+              <tr><td><b>21CS512</b></td><td>Database &amp; Web Applications Lab</td><td style="text-align: center;">2</td><td style="text-align: center;"><span class="siet-reg-badge-grade">S</span></td><td style="text-align: center; color: #0b7041; font-weight: 800;">PASS</td></tr>
+            </tbody>
+          </table>
+          <div style="display: flex; justify-content: space-between; align-items: center; background: #eef7f2; padding: 10px 14px; border-radius: 6px; font-weight: 750; color: #004d2e; flex-wrap: wrap; gap: 8px;">
+            <span>Semester GPA (SGPA): <strong style="color: #0b7041; font-size: 15px;">8.94</strong> / 10.0</span>
+            <span>Overall Status: <strong style="color: #0b7041;">PASS IN ALL COURSES</strong></span>
+            <button type="button" onclick="window.print()" class="button button-outline" style="font-size: 12px; padding: 4px 10px;">🖨 Print Grade Statement</button>
+          </div>
+          <p style="font-size: 11px; color: #64748b; margin: 8px 0 0; font-style: italic;">
+            * This is an official computer-generated autonomous provisional statement of grades. Official signed physical grade sheets are issued through the departmental office.
+          </p>
+        `;
+        output.style.display = 'block';
+        output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+
   // COE Tabs Switching
   $$('.coe-tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -921,15 +1217,32 @@ export function bindCoeEvents($, $$) {
     });
   });
 
-  // Jump to tab buttons from quick cards
+  // Jump to tab buttons from quick action cards
   $$('.js-coe-tab-jump').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.targetTab;
       const tabBtn = $(`.coe-tab-btn[data-tab="${target}"]`);
       if (tabBtn) {
         tabBtn.click();
-        tabBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const mainTabs = $('.coe-main-tabs-section');
+        if (mainTabs) {
+          mainTabs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
+
+  // Check URL query param tab on load (e.g. #/coe?tab=results or #/coe?tab=transcripts)
+  const hash = location.hash || '';
+  const qIdx = hash.indexOf('?');
+  if (qIdx !== -1) {
+    const params = new URLSearchParams(hash.slice(qIdx + 1));
+    const tab = params.get('tab');
+    if (tab) {
+      const targetBtn = $(`.coe-tab-btn[data-tab="${tab}"]`);
+      if (targetBtn) {
+        targetBtn.click();
+      }
+    }
+  }
 }

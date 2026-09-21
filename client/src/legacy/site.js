@@ -1,6 +1,7 @@
 import { careerFormFields, bindCareerForm } from './careerForm.js';
 import { allDepartments, departmentCurricula, getDeptCurriculum } from './curriculumData.js';
 import { coePortalPage, coeResultPage, coeTranscriptPage, bindCoeEvents } from './coeData.js';
+import { placementsPortalPage, bindPlacementEvents } from './placementPortal.js';
 import {
   governancePage,
   mandatoryDisclosurePage,
@@ -65,7 +66,6 @@ const pageGroups = [
   { label: 'About', icon: 'users', items: [['vision-mission', 'Vision And Mission'], ['chairman', "The Chairman's desk"], ['principal', "From the Principal"]] },
   { label: 'Academics', icon: 'book', items: [['programmes', 'UG & PG Programmes'], ['curriculum', 'Curriculum'], ['library', 'Library']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
-  { label: 'COE', icon: 'quality', items: [['coe', 'COE Portal'], ['coe-result', 'Result'], ['coe-transcript', 'Transcript']] },
   {
     label: 'Accreditation',
     icon: 'quality',
@@ -182,20 +182,21 @@ const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class
 
 function header() {
   const currentRoute = route();
+  const isCoeActive = currentRoute === 'coe' || currentRoute === 'coe-portal' || currentRoute === 'examinations' || currentRoute === 'coe-result' || currentRoute === 'result' || currentRoute === 'coe-transcript' || currentRoute === 'transcript';
   return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
 <header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map(g => {
   const isGroupActive = g.items.some(([s]) => s === currentRoute || (s === 'governance' && currentRoute === 'committees') || (s === 'ariia' && currentRoute === 'ariia-report') || (g.label === 'Accreditation' && currentRoute === 'accreditations'));
-  return `${g.label === 'Explore' ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button" class="${isGroupActive ? 'is-active-nav' : ''}">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`;
+  return `${g.label === 'Accreditation' ? `<a class="institution-nav-link ${isCoeActive ? 'is-active-nav' : ''}" href="#/coe">COE</a>` : ''}${g.label === 'Explore' ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button" class="${isGroupActive ? 'is-active-nav' : ''}">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`;
 }).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
 <div class="mobile-nav-backdrop"></div>
-<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map(g => `${g.label === 'Explore' ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`;
+<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map(g => `${g.label === 'Accreditation' ? `<a class="mobile-nav-link ${isCoeActive ? 'is-active-nav' : ''}" href="#/coe">COE</a>` : ''}${g.label === 'Explore' ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`;
 }
 
 function applyHeader() {
   return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div><header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a></div></header>`;
 }
 
-function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
+function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}<div class="footer-link-group"><b>COE</b><a href="#/coe"><span>›</span>COE Portal</a><a href="#/coe?tab=results"><span>›</span>Results</a><a href="#/coe?tab=transcripts"><span>›</span>Transcripts</a><a href="#/coe?tab=schedules"><span>›</span>Exam Schedules</a></div></div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
 
 function bottomDecor() { return `<div class="siet-curr-bottom-decor" aria-hidden="true"><div class="siet-curr-bottom-wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none"><path d="M0,100 L0,25 C200,85 450,95 720,60 C980,25 1200,35 1440,0 L1440,100 Z" fill="#073b21"/><path d="M0,100 L0,45 C240,92 480,102 760,70 C1020,38 1240,48 1440,20 L1440,100 Z" fill="#0b522f"/><path d="M0,100 L0,70 C280,105 520,108 800,82 C1060,56 1280,68 1440,45 L1440,100 Z" fill="#eab308"/></svg></div></div>` }
 const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
@@ -346,18 +347,36 @@ function placementDetailsModal(tierKey = '10') {
 
 function placementHighlightsCardInner() {
   return `
-    <!-- Centered Heading Group -->
+    <!-- Centered Heading Group (Referencing COE Template Architecture) -->
     <div class="placement-heading-group">
+      <div class="coe-exec-kicker-row" style="justify-content: center; margin-bottom: 6px;">
+        <span class="coe-kicker-gold">CENTRE FOR CAREER DEVELOPMENT</span>
+        <span class="coe-kicker-div">•</span>
+        <span class="coe-kicker-sub">OFFICIAL RECRUITMENT CELL</span>
+      </div>
+      
+      <div class="coe-exec-status-group" style="justify-content: center; margin-bottom: 12px;">
+        <span class="coe-status-pill">
+          <span class="status-pulse"></span>
+          <span>CORPORATE RELATIONS CELL</span>
+        </span>
+        <span class="coe-status-tag">BATCH 2025–2026</span>
+      </div>
+
       <h2 class="placement-main-heading">
-        <span class="heading-green">Placement</span> <span class="heading-gold">Highlights</span>
+        <span class="heading-white">Placement</span> <span class="heading-gold">Highlights</span>
       </h2>
+
       <div class="placement-subheading-row">
         <span class="subheading-gold-line" aria-hidden="true"></span>
         <span class="subheading-batch">2025 – 2026</span>
         <span class="subheading-batch-tag">( BATCH 2025–2026 )</span>
         <span class="subheading-gold-line" aria-hidden="true"></span>
       </div>
-      <div class="placement-heading-motto">TODAY. IMPACT TOMORROW.</div>
+
+      <div class="placement-heading-motto">
+        <span class="motto-accent">★</span> TODAY. IMPACT TOMORROW. <span class="motto-accent">★</span>
+      </div>
     </div>
 
     <!-- 4 Standalone Interactive Statistic Cards in one row -->
@@ -4771,7 +4790,97 @@ function internalPage(route) {
 
   function getPageHeaderHtml() {
     if (route === 'placements') {
-      return `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}`;
+      return `
+      <!-- Executive Placement Hero Header (Referencing COE Template) -->
+      <section class="coe-exec-hero placement-exec-hero">
+        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
+        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+        
+        <div class="coe-exec-shell">
+          <!-- Top Metadata & Navigation Bar -->
+          <div class="coe-exec-topbar">
+            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
+              <a href="#/">Home</a>
+              <span class="sep">/</span>
+              <span>Career Services</span>
+              <span class="sep">/</span>
+              <span class="cur">Training &amp; Placements</span>
+            </nav>
+            
+            <div class="coe-exec-status-group">
+              <span class="coe-status-pill">
+                <span class="status-pulse"></span>
+                <span>CORPORATE RELATIONS &amp; RECRUITMENT CELL</span>
+              </span>
+              <span class="coe-status-tag">BATCH 2025–2026</span>
+            </div>
+          </div>
+
+          <!-- Main Executive Presentation Banner -->
+          <div class="coe-exec-main">
+            <div class="coe-exec-crest-col">
+              <div class="coe-crest-halo">
+                <img src="/brand/siet-logo.png" alt="Sri Shakthi emblem" class="coe-crest-img">
+              </div>
+              <div class="coe-crest-badge">
+                <span>CAREER EXCELLENCE</span>
+                <small>200+ RECRUITERS</small>
+              </div>
+            </div>
+
+            <div class="coe-exec-content-col">
+              <div class="coe-exec-kicker-row">
+                <span class="coe-kicker-gold">CENTRE FOR CAREER DEVELOPMENT</span>
+                <span class="coe-kicker-div">•</span>
+                <span class="coe-kicker-sub">INDUSTRY-ALIGNED IMMERSION</span>
+              </div>
+
+              <h1 class="coe-exec-title">Training &amp; Placement Cell</h1>
+              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
+              <p class="coe-exec-accreditation">
+                <span>Autonomous Institution Affiliated to Anna University, Chennai</span>
+                <span class="dot">•</span>
+                <span>Approved by AICTE, New Delhi</span>
+                <span class="dot">•</span>
+                <span class="naac-highlight">NAAC 'A' Grade</span>
+                <span class="dot">•</span>
+                <span>NBA Accredited Programmes</span>
+              </p>
+
+              <div class="coe-exec-quote-card">
+                <p>
+                  "Empowering young innovators with industry-aligned skillsets, hands-on experiential learning, and premier career opportunities across global technology leaders, multinationals, and Fortune 500 enterprises."
+                </p>
+              </div>
+
+              <!-- Executive Placement Pillar Chips -->
+              <div class="coe-exec-pillars-row">
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  <span><b>Highest CTC:</b> ₹24+ LPA Top Offer</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span><b>Recruiters:</b> 200+ Global Partners</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  <span><b>Tiers:</b> ₹10 LPA+, ₹6 LPA+, ₹4 LPA+, ₹3 LPA+</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span><b>Sectors:</b> Product, IT, AI &amp; Core</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <span><b>Placement Rate:</b> 90%+ Consistent Record</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
     }
     if (isAcademics) {
       return sietHudHeader(data[0], data[0], 'Academics', '#/academics', 'SYSTEM ONLINE / ACADEMIC PROFILE / SIET-OS');
@@ -6186,13 +6295,93 @@ function getCurrModalData(target, deptId = 'agri') {
     return {
       title: 'Academic Regulations (Autonomous R2025)',
       content: `
+        <div class="siet-reg-switch-tabs" role="tablist" aria-label="Academic Regulations Switcher">
+          <button type="button" class="siet-reg-tab-btn js-reg-tab-btn is-active" data-target="regulations-r2025">Regulations 2025 (R2025)</button>
+          <button type="button" class="siet-reg-tab-btn js-reg-tab-btn" data-target="regulations-r2021">Regulations 2021 (R2021)</button>
+        </div>
+        <div class="siet-reg-banner">
+          <span class="reg-pill">AUTONOMOUS R2025</span>
+          <p>Effective from Academic Year 2025–26 under outcome-based education (OBE) and 168-credit curriculum framework.</p>
+        </div>
         <h4>Key Academic Highlights</h4>
         <ul>
           <li><b>Attendance:</b> A candidate must secure a minimum of <b>75% attendance</b> in each course to be eligible for End Semester Examinations.</li>
-          <li><b>Evaluation System:</b> Continuous Internal Assessment (CIA) carries 40% and End Semester Examination (ESE) carries 60%.</li>
-          <li><b>Relative Grading:</b> Performance is evaluated on a 10-point letter grading system (O, A+, A, B+, B, C, U).</li>
+          <li><b>Evaluation System:</b> Continuous Internal Assessment (CIA) carries <b>40%</b> and End Semester Examination (ESE) carries <b>60%</b>.</li>
+          <li><b>Letter Grading System:</b> Performance is evaluated on a 10-point letter grading system: <b>S, A+, A, B+, B, C</b>.</li>
           <li><b>Fast-Track Semester:</b> High-performing students (CGPA ≥ 8.5) may complete electives in semesters 5–7 and undertake full-time industry capstone in semester 8.</li>
+          <li><b>168-Credit Framework:</b> Agile structure comprising Basic Sciences, Engineering Sciences, Professional Cores, Industry Verticals, and Experiential Learning.</li>
         </ul>
+        <h4>R2025 Letter Grading &amp; Grade Points</h4>
+        <div class="curr-table-wrapper" style="margin: 12px 0 16px;">
+          <table class="curr-table" style="font-size: 13.5px;">
+            <thead>
+              <tr>
+                <th style="width: 120px;">Letter Grade</th>
+                <th>Performance Level</th>
+                <th style="width: 120px; text-align: center;">Grade Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="siet-reg-badge-grade">S</span></td><td>Superior / Outstanding</td><td style="text-align: center;"><b>10</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">A+</span></td><td>Excellent</td><td style="text-align: center;"><b>9</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">A</span></td><td>Very Good</td><td style="text-align: center;"><b>8</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">B+</span></td><td>Good</td><td style="text-align: center;"><b>7</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">B</span></td><td>Average</td><td style="text-align: center;"><b>6</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">C</span></td><td>Pass / Satisfactory</td><td style="text-align: center;"><b>5</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      `
+    };
+  }
+
+  if (target === 'regulations-r2021') {
+    return {
+      title: 'Academic Regulations (Autonomous R2021)',
+      content: `
+        <div class="siet-reg-switch-tabs" role="tablist" aria-label="Academic Regulations Switcher">
+          <button type="button" class="siet-reg-tab-btn js-reg-tab-btn" data-target="regulations-r2025">Regulations 2025 (R2025)</button>
+          <button type="button" class="siet-reg-tab-btn js-reg-tab-btn is-active" data-target="regulations-r2021">Regulations 2021 (R2021)</button>
+        </div>
+        <div class="siet-reg-banner">
+          <span class="reg-pill">AUTONOMOUS R2021</span>
+          <p>Autonomous Choice Based Credit System (CBCS) Regulations implemented for 2021–2024 batches.</p>
+        </div>
+        <h4>Key Academic Highlights</h4>
+        <ul>
+          <li><b>Attendance:</b> A candidate must secure a minimum of <b>75% attendance</b> in each course to be eligible for End Semester Examinations.</li>
+          <li><b>Evaluation System:</b> Continuous Internal Assessment (CIA) carries <b>40%</b> and End Semester Examination (ESE) carries <b>60%</b>.</li>
+          <li><b>Letter Grading System:</b> Performance is evaluated on a 10-point letter grading system: <b>O, A+, A, B+, B, C, U</b>.</li>
+          <li><b>Choice Based Credit System (CBCS):</b> Semester-based flexible course choices, professional electives, and open electives.</li>
+        </ul>
+        <h4>R2021 Letter Grading &amp; Grade Points</h4>
+        <div class="curr-table-wrapper" style="margin: 12px 0 16px;">
+          <table class="curr-table" style="font-size: 13.5px;">
+            <thead>
+              <tr>
+                <th style="width: 120px;">Letter Grade</th>
+                <th>Performance Level</th>
+                <th style="width: 120px; text-align: center;">Grade Point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="siet-reg-badge-grade">O</span></td><td>Outstanding</td><td style="text-align: center;"><b>10</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">A+</span></td><td>Excellent</td><td style="text-align: center;"><b>9</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">A</span></td><td>Very Good</td><td style="text-align: center;"><b>8</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">B+</span></td><td>Good</td><td style="text-align: center;"><b>7</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">B</span></td><td>Average</td><td style="text-align: center;"><b>6</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">C</span></td><td>Satisfactory</td><td style="text-align: center;"><b>5</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade grade-fail">U</span></td><td>Reappearance (Fail)</td><td style="text-align: center;"><b style="color:#c0392b">0</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h4>Official Regulation Document</h4>
+        <div style="margin-top: 10px;">
+          <a href="/brand/Regulation 2021 UG.pdf" target="_blank" rel="noopener" download="Regulation 2021 UG.pdf" class="curr-download-btn" style="padding: 10px 18px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Regulation 2021 (UG) PDF</span>
+          </a>
+        </div>
       `
     };
   }
@@ -6333,7 +6522,7 @@ function renderAcademicsSidebar(activeItem = 'curriculum') {
           </span>
           <span class="navlink-arrow">›</span>
         </a>
-        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'regulations' ? 'is-active' : ''}" data-target="regulations-r2025">
+        <button type="button" class="siet-curr-navlink js-curr-modal-trigger ${activeItem === 'regulations' || activeItem === 'regulations-2025' || activeItem === 'regulations-2021' ? 'is-active' : ''}" data-target="regulations-r2025">
           <span class="navlink-content">
             <span class="navlink-icon">${currIcons.shield}</span>
             <span>Regulations</span>
@@ -6919,9 +7108,9 @@ function render() {
     r === 'curriculum' ? curriculumPage() :
     r === 'academic-calendar' ? academicCalendarPage() :
     r === 'academics' ? academicOverviewPage() :
-    r === 'coe' || r === 'coe-portal' || r === 'examinations' ? coePortalPage() :
-    r === 'coe-result' || r === 'result' ? coeResultPage() :
-    r === 'coe-transcript' || r === 'transcript' ? coeTranscriptPage() :
+    r === 'coe' || r === 'coe-portal' || r === 'examinations' ? coePortalPage(routeParams().get('tab') || 'about') :
+    r === 'coe-result' || r === 'result' ? coePortalPage('results') :
+    r === 'coe-transcript' || r === 'transcript' ? coePortalPage('transcripts') :
     r === 'governance' || r === 'committees' ? governancePage() :
     r === 'mandatory-disclosure' || r === 'disclosure' ? mandatoryDisclosurePage() :
     r === 'statutory-declaration' || r === 'rti' ? statutoryDeclarationPage() :
@@ -6931,6 +7120,7 @@ function render() {
     r === 'iqac' ? iqacPage() :
     r === 'ariia' || r === 'ariia-report' ? ariiaPage() :
     r === 'accreditations' ? accreditationsOverviewPage() :
+    r === 'placements' || r === 'placement' ? placementsPortalPage(routeParams().get('tab') || 'highlights') :
     internalPage(r);
 
   appRoot.innerHTML = header() + content + (r ? bottomDecor() : '') + footer();
@@ -6979,7 +7169,11 @@ function bind() {
   if (route() === 'accreditations') {
     document.title = "Approvals & Accreditations | Sri Shakthi Institute of Engineering & Technology";
   }
+  if (route() === 'placements' || route() === 'placement') {
+    document.title = "Training & Placement Cell | Sri Shakthi Institute of Engineering & Technology";
+  }
   bindCoeEvents($, $$);
+  bindPlacementEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";
@@ -7288,6 +7482,18 @@ function bind() {
   });
 
   $('.js-curr-modal')?.addEventListener('click', e => {
+    const tabBtn = e.target.closest('.js-reg-tab-btn');
+    if (tabBtn) {
+      const target = tabBtn.dataset.target;
+      const titleEl = $('.js-curr-modal-title');
+      const bodyEl = $('.js-curr-modal-body');
+      if (titleEl && bodyEl && target) {
+        const data = getCurrModalData(target, currActiveDept);
+        titleEl.textContent = data.title;
+        bodyEl.innerHTML = data.content;
+      }
+      return;
+    }
     if (e.target.classList.contains('js-curr-modal')) {
       e.target.classList.remove('open');
       e.target.setAttribute('aria-hidden', 'true');

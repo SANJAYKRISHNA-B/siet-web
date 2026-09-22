@@ -132,7 +132,7 @@ export const coeFormsList = [
     title: 'Photocopy Form',
     code: 'PHOTOCOPY-FORM',
     desc: 'Application form for obtaining true evaluated photocopy of answer script after result declaration.',
-    file: '/downloads/PhotoCopy-form.pdf',
+    file: '/download/PhotoCopy-form.pdf',
     filename: 'PhotoCopy-form.pdf',
     badge: 'Photocopy'
   },
@@ -140,7 +140,7 @@ export const coeFormsList = [
     title: 'Revaluation Form',
     code: 'REVALUATION-FORM',
     desc: 'Application form for central revaluation of evaluated semester end theory examination answer booklets.',
-    file: '/downloads/Revaluation-form.pdf',
+    file: '/download/Revaluation form.pdf',
     filename: 'Revaluation form.pdf',
     badge: 'Revaluation'
   },
@@ -148,7 +148,7 @@ export const coeFormsList = [
     title: 'Revaluation - Script Valuation Form',
     code: 'REVAL-SCRIPT-FORM',
     desc: 'Official faculty assessment and endorsement rubric for course coordinator scrutiny prior to revaluation.',
-    file: '/downloads/Revaluation-Script-Valuation-form.pdf',
+    file: '/download/Revaluation-Script Valuation form.pdf',
     filename: 'Revaluation-Script Valuation form.pdf',
     badge: 'Faculty Scrutiny'
   },
@@ -156,7 +156,7 @@ export const coeFormsList = [
     title: 'Transcript Application Form',
     code: 'TRANSCRIPT-FORM',
     desc: 'Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.',
-    file: '/downloads/Transcript-application-form.pdf',
+    file: '/download/Transcript application form.pdf',
     filename: 'Transcript application form.pdf',
     badge: 'Transcripts'
   },
@@ -164,7 +164,7 @@ export const coeFormsList = [
     title: 'Duplicate Certificate Form',
     code: 'DUPLICATE-FORM',
     desc: 'Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.',
-    file: '/downloads/Duplicate-Certificate-Form.pdf',
+    file: '/download/Duplicate Certificate Form.pdf',
     filename: 'Duplicate Certificate Form.pdf',
     badge: 'Duplicate Cards'
   }
@@ -182,28 +182,28 @@ export const coeRegulationsList = [
     title: 'R2021 UG Regulation',
     desc: 'Undergraduate Autonomous Regulations, curriculum structure, choice-based credit system and assessment rules (O, A+, A, B+, B, C, U).',
     filename: 'Regulation 2021 UG.pdf',
-    file: '/brand/Regulation 2021 UG.pdf',
+    file: '/download/Regulation 2021 UG.pdf',
     badge: 'UG Regulation'
   },
   {
     title: 'R2021 UG - Amendment I',
     desc: 'Official Amendment I to Regulations 2021 for undergraduate degree programmes.',
-    filename: 'R2021-UG-AMENDMENT-I.pdf',
-    file: '/downloads/R2021-UG-AMENDMENT-I.pdf',
+    filename: 'R2021 UG-AMENDMENT - I SIET.pdf',
+    file: '/download/R2021 UG-AMENDMENT - I SIET.pdf',
     badge: 'Amendment I'
   },
   {
     title: 'R2021 UG - Amendment II',
     desc: 'Official Amendment II to Regulations 2021 regarding elective choices and credits.',
-    filename: 'R2021-UG-AMENDMENT-II.pdf',
-    file: '/downloads/R2021-UG-AMENDMENT-II.pdf',
+    filename: 'R2021 UG-AMENDMENT - II SIET.pdf',
+    file: '/download/R2021 UG-AMENDMENT - II SIET.pdf',
     badge: 'Amendment II'
   },
   {
     title: 'R2021 PG Regulation',
     desc: 'Postgraduate Autonomous Regulations for Master of Engineering (M.E.) programmes.',
-    filename: 'Regulation-2021-PG.pdf',
-    file: '/downloads/Regulation-2021-PG.pdf',
+    filename: 'Regulation 2021 PG.pdf',
+    file: '/download/Regulation 2021 PG.pdf',
     badge: 'PG Regulation'
   }
 ];
@@ -246,12 +246,57 @@ export function coePortalPage(activeTab = 'about') {
     <section class="coe-exec-hero">
       <div class="coe-exec-hero-glow" aria-hidden="true"></div>
       <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+
+      <!-- Flowing Decorative Ribbon Vectors & Dot Grids -->
+      <svg class="coe-hero-deco-svg" viewBox="0 0 1440 460" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="coeGoldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#cca01d" stop-opacity="0.6"/>
+            <stop offset="50%" stop-color="#10b981" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#f6ce62" stop-opacity="0.7"/>
+          </linearGradient>
+          <linearGradient id="coeGreenRibbon" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#059669" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#cca01d" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Top Left Ribbon Accents -->
+        <path d="M-80,180 C40,120 80,40 160,-20" stroke="url(#coeGoldRibbon)" stroke-width="26" stroke-linecap="round" opacity="0.4" />
+        <path d="M-60,220 C60,160 120,60 220,-20" stroke="url(#coeGreenRibbon)" stroke-width="12" stroke-linecap="round" opacity="0.3" />
+
+        <!-- Bottom Right Flowing Ribbons -->
+        <path d="M1020,480 C1140,400 1220,280 1480,140" stroke="url(#coeGoldRibbon)" stroke-width="32" stroke-linecap="round" opacity="0.5" />
+        <path d="M1080,490 C1200,420 1290,320 1490,210" stroke="url(#coeGreenRibbon)" stroke-width="16" stroke-linecap="round" opacity="0.4" />
+        <path d="M1160,490 C1260,450 1340,360 1490,290" stroke="url(#coeGoldRibbon)" stroke-width="8" stroke-linecap="round" opacity="0.3" />
+
+        <!-- Left Dot Matrix Grid (5x4) -->
+        <g class="coe-deco-dots" fill="#22c55e" opacity="0.4">
+          <circle cx="50" cy="90" r="2.5"/><circle cx="65" cy="90" r="2.5"/><circle cx="80" cy="90" r="2.5"/><circle cx="95" cy="90" r="2.5"/>
+          <circle cx="50" cy="105" r="2.5"/><circle cx="65" cy="105" r="2.5"/><circle cx="80" cy="105" r="2.5"/><circle cx="95" cy="105" r="2.5"/>
+          <circle cx="50" cy="120" r="2.5"/><circle cx="65" cy="120" r="2.5"/><circle cx="80" cy="120" r="2.5"/><circle cx="95" cy="120" r="2.5"/>
+          <circle cx="50" cy="135" r="2.5"/><circle cx="65" cy="135" r="2.5"/><circle cx="80" cy="135" r="2.5"/><circle cx="95" cy="135" r="2.5"/>
+          <circle cx="50" cy="150" r="2.5"/><circle cx="65" cy="150" r="2.5"/><circle cx="80" cy="150" r="2.5"/><circle cx="95" cy="150" r="2.5"/>
+        </g>
+
+        <!-- Right Dot Matrix Grid (5x4) -->
+        <g class="coe-deco-dots" fill="#22c55e" opacity="0.35">
+          <circle cx="1380" cy="160" r="2.5"/><circle cx="1395" cy="160" r="2.5"/><circle cx="1410" cy="160" r="2.5"/><circle cx="1425" cy="160" r="2.5"/>
+          <circle cx="1380" cy="175" r="2.5"/><circle cx="1395" cy="175" r="2.5"/><circle cx="1410" cy="175" r="2.5"/><circle cx="1425" cy="175" r="2.5"/>
+          <circle cx="1380" cy="190" r="2.5"/><circle cx="1395" cy="190" r="2.5"/><circle cx="1410" cy="190" r="2.5"/><circle cx="1425" cy="190" r="2.5"/>
+          <circle cx="1380" cy="205" r="2.5"/><circle cx="1395" cy="205" r="2.5"/><circle cx="1410" cy="205" r="2.5"/><circle cx="1425" cy="205" r="2.5"/>
+          <circle cx="1380" cy="220" r="2.5"/><circle cx="1395" cy="220" r="2.5"/><circle cx="1410" cy="220" r="2.5"/><circle cx="1425" cy="220" r="2.5"/>
+        </g>
+      </svg>
       
       <div class="coe-exec-shell">
         <!-- Top Metadata & Navigation Bar -->
         <div class="coe-exec-topbar">
           <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
-            <a href="#/">Home</a>
+            <a href="#/" class="coe-breadcrumb-home">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span>Home</span>
+            </a>
             <span class="sep">/</span>
             <a href="#/curriculum">Academics</a>
             <span class="sep">/</span>
@@ -263,58 +308,139 @@ export function coePortalPage(activeTab = 'about') {
               <span class="status-pulse"></span>
               <span>AUTONOMOUS EXAMINATION PORTAL</span>
             </span>
-            <span class="coe-status-tag">ESTD. 2019</span>
+            <span class="coe-status-tag coe-tag-gold">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>ESTD. 2019</span>
+            </span>
           </div>
         </div>
 
         <!-- Main Executive Presentation Banner -->
         <div class="coe-exec-main">
           <div class="coe-exec-content-col">
+            <!-- Kicker with horizontal accent bar -->
             <div class="coe-exec-kicker-row">
+              <span class="coe-kicker-bar"></span>
               <span class="coe-kicker-gold">OFFICIAL ACADEMIC GOVERNANCE</span>
               <span class="coe-kicker-div">•</span>
-              <span class="coe-kicker-sub">CONFERMENT OF AUTONOMY SEP 2019</span>
+              <span class="coe-kicker-gold">CONFERMENT OF AUTONOMY SEP 2019</span>
             </div>
 
-            <h1 class="coe-exec-title">Office of the Controller of Examinations</h1>
+            <!-- Two-tone stacked Title -->
+            <h1 class="coe-exec-title">
+              <span class="coe-title-main">Office of the Controller</span>
+              <span class="coe-title-gold">of Examinations</span>
+            </h1>
+
+            <!-- Subtitle Institution -->
             <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
-            <p class="coe-exec-accreditation">
-              <span>Autonomous Institution Affiliated to Anna University, Chennai</span>
-              <span class="dot">•</span>
-              <span>Approved by AICTE, New Delhi</span>
-              <span class="dot">•</span>
-              <span class="naac-highlight">NAAC 'A' Grade</span>
-              <span class="dot">•</span>
-              <span>NBA Accredited Programmes</span>
-            </p>
 
-            <div class="coe-exec-quote-card">
-              <p>
-                "The Office of the Controller of Examinations plays an essential role in the academic activities of the college and is an important part of the autonomy. The CoE office is responsible to assess the continuous learning process of the students at defined intervals and publish the outcome for the students ensuring confidentiality."
-              </p>
+            <!-- 4-Column Accreditation Badges Strip -->
+            <div class="coe-exec-accred-strip">
+              <div class="coe-accred-item">
+                <div class="coe-accred-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
+                </div>
+                <div class="coe-accred-text">
+                  <span class="coe-accred-title">Autonomous Institution</span>
+                  <span class="coe-accred-sub">Affiliated to Anna University, Chennai</span>
+                </div>
+              </div>
+
+              <div class="coe-accred-divider" aria-hidden="true"></div>
+
+              <div class="coe-accred-item">
+                <div class="coe-accred-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </div>
+                <div class="coe-accred-text">
+                  <span class="coe-accred-title">Approved by AICTE</span>
+                  <span class="coe-accred-sub">New Delhi</span>
+                </div>
+              </div>
+
+              <div class="coe-accred-divider" aria-hidden="true"></div>
+
+              <div class="coe-accred-item">
+                <div class="coe-accred-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+                </div>
+                <div class="coe-accred-text">
+                  <span class="coe-accred-title coe-naac-highlight">NAAC 'A' Grade</span>
+                </div>
+              </div>
+
+              <div class="coe-accred-divider" aria-hidden="true"></div>
+
+              <div class="coe-accred-item">
+                <div class="coe-accred-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div class="coe-accred-text">
+                  <span class="coe-accred-title">NBA Accredited Programmes</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Executive Accreditation & Credential Badges -->
+            <!-- Quote & CTA Button Row -->
+            <div class="coe-exec-quote-cta-row">
+              <div class="coe-exec-quote-card">
+                <div class="coe-quote-mark" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="#cca01d"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                </div>
+                <p>
+                  "The Office of the Controller of Examinations plays an essential role in the academic activities of the college and is an important part of the autonomy. The CoE office is responsible to assess the continuous learning process of the students at defined intervals and publish the outcome for the students ensuring confidentiality."
+                </p>
+              </div>
+
+              <div class="coe-exec-cta-col">
+                <button type="button" class="coe-exec-cta-btn js-coe-tab-jump" data-target-tab="results" id="coeHeroPortalBtn">
+                  <span>Open Examination Portal</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- 5 Executive Accreditation & Credential Badges -->
             <div class="coe-exec-pillars-row">
               <div class="coe-pillar-chip">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span><b>Autonomy:</b> Sep 2019 Conferment</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <div class="coe-chip-meta">
+                  <span class="coe-chip-label">Autonomy:</span>
+                  <span class="coe-chip-val">Sep 2019 Conferment</span>
+                </div>
               </div>
+
               <div class="coe-pillar-chip">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
-                <span><b>Affiliated:</b> Anna University</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
+                <div class="coe-chip-meta">
+                  <span class="coe-chip-label">Affiliated:</span>
+                  <span class="coe-chip-val">Anna University</span>
+                </div>
               </div>
+
               <div class="coe-pillar-chip">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                <span><b>Counselling Code:</b> TNEA 2727</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                <div class="coe-chip-meta">
+                  <span class="coe-chip-label">Counselling Code:</span>
+                  <span class="coe-chip-val">TNEA 2727</span>
+                </div>
               </div>
+
               <div class="coe-pillar-chip">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span><b>Confidentiality:</b> Barcoded Papers &amp; Blind Valuation</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div class="coe-chip-meta">
+                  <span class="coe-chip-label">Confidentiality:</span>
+                  <span class="coe-chip-val">Barcoded Papers &amp; Blind Valuation</span>
+                </div>
               </div>
+
               <div class="coe-pillar-chip">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                <span><b>Regulations:</b> R2025 (OBE) &amp; R2021 (CBCS)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <div class="coe-chip-meta">
+                  <span class="coe-chip-label">Regulations:</span>
+                  <span class="coe-chip-val">R2025 (OBE) &amp; R2021 (CBCS)</span>
+                </div>
               </div>
             </div>
           </div>
@@ -704,7 +830,7 @@ export function coePortalPage(activeTab = 'about') {
                     <h3>Transcript Application Form</h3>
                     <p>Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.</p>
                     <div class="download-card-bottom">
-                      <a href="/downloads/Transcript-application-form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
+                      <a href="/download/Transcript application form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>Download (Transcript application form.pdf)</span>
                       </a>
@@ -719,7 +845,7 @@ export function coePortalPage(activeTab = 'about') {
                     <h3>Duplicate Certificate Form</h3>
                     <p>Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.</p>
                     <div class="download-card-bottom">
-                      <a href="/downloads/Duplicate-Certificate-Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
+                      <a href="/download/Duplicate Certificate Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         <span>Download (Duplicate Certificate Form.pdf)</span>
                       </a>
@@ -821,15 +947,15 @@ export function coePortalPage(activeTab = 'about') {
                   <h4>Post-Result Application Forms</h4>
                   <p>Download official PDF formats from the Examination Cell:</p>
                   <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
-                    <a href="/downloads/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                    <a href="/download/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
                       <span>📄 Photocopy Form</span>
                       <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
-                    <a href="/downloads/Revaluation-form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                    <a href="/download/Revaluation form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
                       <span>📄 Revaluation Form</span>
                       <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
-                    <a href="/downloads/Revaluation-Script-Valuation-form.pdf" target="_blank" rel="noopener" download="Revaluation-Script Valuation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
+                    <a href="/download/Revaluation-Script Valuation form.pdf" target="_blank" rel="noopener" download="Revaluation-Script Valuation form.pdf" class="button button-outline" style="text-align: left; font-size: 13px; padding: 11px 14px; display: flex; align-items: center; justify-content: space-between;">
                       <span>📄 Script Valuation Form</span>
                       <span style="font-weight: 800; color: #005a36;">PDF ↓</span>
                     </a>
@@ -985,7 +1111,7 @@ export function coeResultPage() {
                 <h3>Photocopy Form</h3>
                 <p>Application form for obtaining true evaluated photocopy of answer script after result declaration.</p>
                 <div class="download-card-bottom">
-                  <a href="/downloads/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="form-download-btn">
+                  <a href="/download/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (PhotoCopy-form.pdf)</span>
                   </a>
@@ -1000,7 +1126,7 @@ export function coeResultPage() {
                 <h3>Revaluation Form</h3>
                 <p>Application form for central revaluation of evaluated semester end theory examination answer booklets.</p>
                 <div class="download-card-bottom">
-                  <a href="/downloads/Revaluation-form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="form-download-btn">
+                  <a href="/download/Revaluation form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Revaluation form.pdf)</span>
                   </a>
@@ -1083,7 +1209,7 @@ export function coeTranscriptPage() {
                 <h3>Transcript Application Form</h3>
                 <p>Requisition form for issuing certified official transcripts, WES verification, medium of instruction and CGPA conversion.</p>
                 <div class="download-card-bottom">
-                  <a href="/downloads/Transcript-application-form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
+                  <a href="/download/Transcript application form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Transcript application form.pdf)</span>
                   </a>
@@ -1098,7 +1224,7 @@ export function coeTranscriptPage() {
                 <h3>Duplicate Certificate Form</h3>
                 <p>Formal application format and affidavit for obtaining duplicate grade sheet or degree certificate.</p>
                 <div class="download-card-bottom">
-                  <a href="/downloads/Duplicate-Certificate-Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
+                  <a href="/download/Duplicate Certificate Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <span>Download (Duplicate Certificate Form.pdf)</span>
                   </a>

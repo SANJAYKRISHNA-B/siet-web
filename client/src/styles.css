@@ -47742,11 +47742,20 @@ button.coe-action-card {
    ============================================================ */
 .coe-exec-hero {
   position: relative;
-  background: linear-gradient(145deg, #012415 0%, #023821 45%, #054d2e 80%, #032b1a 100%);
+  background: radial-gradient(circle at 82% 28%, #064d32 0%, #032b1a 45%, #011c10 100%);
   color: #ffffff;
-  padding: 36px 24px 44px;
+  padding: 34px 32px 42px;
   overflow: hidden;
   border-bottom: 3px solid #cca01d;
+}
+
+.coe-hero-deco-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .coe-exec-hero-glow {
@@ -47764,16 +47773,16 @@ button.coe-action-card {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: 1;
 }
 
 .coe-exec-shell {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -47784,9 +47793,9 @@ button.coe-action-card {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding-bottom: 22px;
-  margin-bottom: 26px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
 }
 
@@ -47794,20 +47803,34 @@ button.coe-action-card {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  color: #9fe2bf;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #e2f5ec;
 }
 
-.coe-exec-breadcrumbs a {
-  color: #e2f5ec;
+.coe-breadcrumb-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
+.coe-breadcrumb-home:hover {
+  color: #f6ce62;
+}
+
+.coe-exec-breadcrumbs a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
 .coe-exec-breadcrumbs a:hover {
-  color: #cca01d;
-  text-decoration: underline;
+  color: #f6ce62;
 }
 
 .coe-exec-breadcrumbs .sep {
@@ -47815,28 +47838,28 @@ button.coe-action-card {
 }
 
 .coe-exec-breadcrumbs .cur {
-  color: #cca01d;
+  color: #f6ce62;
   font-weight: 700;
 }
 
 .coe-exec-status-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .coe-status-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(167, 243, 208, 0.3);
-  padding: 5px 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.8px;
-  color: #a7f3d0;
+  letter-spacing: 0.6px;
+  color: #e2f5ec;
   text-transform: uppercase;
 }
 
@@ -47855,15 +47878,18 @@ button.coe-action-card {
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-.coe-status-tag {
+.coe-tag-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #cca01d;
+  padding: 6px 14px;
+  border-radius: 20px;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
   color: #f6ce62;
-  background: rgba(204, 160, 29, 0.18);
-  border: 1px solid rgba(246, 206, 98, 0.35);
-  padding: 5px 12px;
-  border-radius: 20px;
 }
 
 .coe-exec-main {
@@ -47871,184 +47897,234 @@ button.coe-action-card {
   width: 100%;
 }
 
-.coe-exec-crest-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.coe-crest-halo {
-  width: 116px;
-  height: 116px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(204, 160, 29, 0.45);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(204, 160, 29, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.coe-crest-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-}
-
-.coe-crest-badge {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 4px 10px;
-}
-
-.coe-crest-badge span {
-  display: block;
-  font-size: 11px;
-  font-weight: 800;
-  color: #cca01d;
-  letter-spacing: 0.8px;
-}
-
-.coe-crest-badge small {
-  display: block;
-  font-size: 9.5px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.5px;
-}
-
 .coe-exec-content-col {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .coe-exec-kicker-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.coe-kicker-bar {
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: #cca01d;
+  border-radius: 1px;
 }
 
 .coe-kicker-gold {
   font-size: 11.5px;
   font-weight: 800;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   color: #f6ce62;
   text-transform: uppercase;
 }
 
 .coe-kicker-div {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 12px;
-}
-
-.coe-kicker-sub {
-  font-size: 11px;
-  font-weight: 700;
-  color: #a7f3d0;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  color: #f6ce62;
+  font-size: 11.5px;
 }
 
 .coe-exec-title {
-  font-size: clamp(26px, 3.8vw, 40px);
+  font-size: clamp(34px, 4.4vw, 50px);
   font-weight: 850;
-  line-height: 1.2;
-  color: #ffffff;
-  margin: 4px 0 2px;
+  line-height: 1.12;
+  margin: 4px 0 8px;
   letter-spacing: -0.6px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.coe-title-main {
+  display: block;
+  color: #ffffff;
+}
+
+.coe-title-gold {
+  display: block;
+  color: #f6ce62;
 }
 
 .coe-exec-institution {
-  font-size: 17px;
+  font-size: clamp(16px, 1.8vw, 19px);
   font-weight: 700;
   color: #a7f3d0;
-  margin: 0;
+  margin: 0 0 20px;
   letter-spacing: -0.2px;
 }
 
-.coe-exec-accreditation {
+.coe-exec-accred-strip {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.78);
-  margin: 4px 0 14px;
-  line-height: 1.5;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
 }
 
-.coe-exec-accreditation .dot {
-  color: rgba(255, 255, 255, 0.3);
+.coe-accred-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.coe-exec-accreditation .naac-highlight {
-  color: #f6ce62;
+.coe-accred-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.coe-accred-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coe-accred-title {
+  font-size: 13.5px;
   font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.coe-accred-sub {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.25;
+}
+
+.coe-naac-highlight {
+  color: #f6ce62 !important;
+}
+
+.coe-accred-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.22);
+  flex-shrink: 0;
+}
+
+.coe-exec-quote-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 26px;
 }
 
 .coe-exec-quote-card {
-  position: relative;
-  background: rgba(0, 0, 0, 0.25);
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-left: 4px solid #cca01d;
-  border-radius: 0 12px 12px 0;
-  padding: 14px 20px;
-  margin-bottom: 16px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  border-radius: 4px 14px 14px 4px;
+  padding: 16px 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.coe-quote-mark {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .coe-exec-quote-card p {
   margin: 0;
   font-size: 13.5px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #e2f5ec;
   font-style: italic;
 }
 
+.coe-exec-cta-col {
+  flex-shrink: 0;
+}
+
+.coe-exec-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: #062b19;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 13px 26px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.coe-exec-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, #fbbf24 0%, #fde047 100%);
+}
+
+.coe-exec-cta-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
 .coe-exec-pillars-row {
   display: flex;
+  align-items: stretch;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .coe-pillar-chip {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 7px 13px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #d1fae5;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 9px 18px;
+  border-radius: 26px;
   transition: all 0.2s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .coe-pillar-chip:hover {
-  background: rgba(255, 255, 255, 0.14);
   border-color: #cca01d;
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
 .coe-pillar-chip svg {
-  color: #f6ce62;
   flex-shrink: 0;
 }
 
-.coe-pillar-chip b {
+.coe-chip-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.coe-chip-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  line-height: 1.2;
+}
+
+.coe-chip-val {
+  font-size: 12.5px;
+  font-weight: 700;
   color: #ffffff;
+  line-height: 1.2;
 }
 
 .csh-phone-alt {
@@ -48110,31 +48186,8 @@ button.coe-action-card {
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    gap: 18px !important;
+    gap: 16px !important;
     width: 100% !important;
-  }
-
-  .coe-exec-crest-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-    gap: 10px !important;
-    width: 100% !important;
-  }
-
-  .coe-crest-halo {
-    width: 90px !important;
-    height: 90px !important;
-    margin: 0 auto !important;
-    border-radius: 18px !important;
-  }
-
-  .coe-crest-badge {
-    text-align: center !important;
-    margin: 0 auto !important;
   }
 
   .coe-exec-content-col {
@@ -48155,14 +48208,17 @@ button.coe-action-card {
     font-size: 11px !important;
   }
 
-  .coe-kicker-gold,
-  .coe-kicker-sub {
+  .coe-kicker-bar {
+    display: none !important;
+  }
+
+  .coe-kicker-gold {
     text-align: center !important;
   }
 
   .coe-exec-title {
     text-align: center !important;
-    font-size: clamp(21px, 6.2vw, 30px) !important;
+    font-size: clamp(23px, 6.4vw, 32px) !important;
     margin: 4px auto !important;
     line-height: 1.25 !important;
   }
@@ -48173,18 +48229,31 @@ button.coe-action-card {
     font-size: 15px !important;
   }
 
-  .coe-exec-accreditation {
+  .coe-exec-accred-strip {
     justify-content: center !important;
     text-align: center !important;
-    margin: 4px auto 14px !important;
-    font-size: 12px !important;
-    gap: 6px !important;
-    line-height: 1.6 !important;
+    margin: 6px auto 14px !important;
+    gap: 12px 18px !important;
+  }
+
+  .coe-accred-item {
+    justify-content: center !important;
+  }
+
+  .coe-accred-divider {
+    display: none !important;
+  }
+
+  .coe-exec-quote-cta-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+    margin-bottom: 20px !important;
   }
 
   .coe-exec-quote-card {
     text-align: center !important;
-    margin: 0 auto 16px !important;
+    margin: 0 auto !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -48192,11 +48261,27 @@ button.coe-action-card {
     border-top: 3px solid #cca01d !important;
     border-radius: 12px !important;
     padding: 14px 16px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .coe-quote-mark {
+    margin: 0 auto 6px !important;
   }
 
   .coe-exec-quote-card p {
     text-align: center !important;
     font-size: 13px !important;
+  }
+
+  .coe-exec-cta-col {
+    width: 100% !important;
+  }
+
+  .coe-exec-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
   }
 
   .coe-exec-pillars-row {
@@ -48208,10 +48293,12 @@ button.coe-action-card {
   }
 
   .coe-pillar-chip {
-    justify-content: center !important;
-    text-align: center !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     font-size: 11.5px !important;
-    padding: 6px 11px !important;
+    padding: 8px 14px !important;
   }
 
   /* ============================================================

@@ -173,7 +173,7 @@ export const coeFormsList = [
 export const coeRegulationsList = [
   {
     title: 'R2025 Autonomous Regulation',
-    desc: 'Undergraduate Autonomous Regulations 2025, 168-credit framework, outcome-based education and updated grading system (S, A+, A, B+, B, C).',
+    desc: 'Undergraduate Autonomous Regulations 2025, 168-credit framework, outcome-based education and updated grading system (S, A+, A, B+, B, C+, C).',
     filename: 'Regulation 2025 UG.pdf',
     file: '#/curriculum',
     badge: 'R2025 Framework'
@@ -723,8 +723,8 @@ export function coePortalPage(activeTab = 'about') {
                 <p style="font-size: 13.5px; color: #355342; line-height: 1.55; margin: 0 0 14px;">Outcome-Based Education (OBE) curriculum with Industry Verticals, Fast-Track Capstone Semester, and CIA (40%) / ESE (60%) evaluation.</p>
                 <div style="background: #ffffff; border: 1px solid #d4e5db; border-radius: 8px; padding: 10px 14px; margin-bottom: 16px;">
                   <div style="font-size: 11.5px; font-weight: 800; color: #005a36; text-transform: uppercase; margin-bottom: 4px;">R2025 Letter Grading System</div>
-                  <div style="font-size: 13.5px; font-weight: 750; color: #003c24; letter-spacing: 0.5px;">S, A+, A, B+, B, C</div>
-                  <small style="color: #64748b; font-size: 11.5px;">10-Point Scale: S(10), A+(9), A(8), B+(7), B(6), C(5)</small>
+                  <div style="font-size: 13.5px; font-weight: 750; color: #003c24; letter-spacing: 0.5px;">S, A+, A, B+, B, C+, C</div>
+                  <small style="color: #64748b; font-size: 11.5px;">10-Point Scale: S(10), A+(9), A(8), B+(7), B(6.5), C+(6), C(5)</small>
                 </div>
                 <a href="#/curriculum" class="button" style="width: 100%; justify-content: center; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
                   <span>Explore Department Syllabi &amp; Curriculum →</span>

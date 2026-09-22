@@ -1,5 +1,6 @@
-// Comprehensive Curriculum Dataset for all 14 Departments (Regulations 2024)
-// Anna University Autonomous R2024 Framework (168 Total Credits)
+// Comprehensive Curriculum Dataset for all 14 Departments.
+// The source data below is the R2021 framework. R2025 views are derived at the
+// end of this file so both regulations stay in sync as departments are updated.
 
 export const allDepartments = [
   { id: 'cse', code: 'CSE', degree: 'B.E.', name: 'Computer Science and Engineering', desc: 'A well-structured curriculum designed to develop strong technical skills, problem-solving ability and industry readiness in intelligent software systems.' },
@@ -1293,23 +1294,66 @@ export const departmentCurricula = {
   }
 };
 
-export function getDeptCurriculum(idOrName = 'cse') {
-  if (!idOrName) return departmentCurricula['cse'];
+const r2025FocusSubjects = {
+  cse: ['Computational Thinking and Python', 'Object Oriented Programming', 'Data Structures and Algorithmic Thinking', 'Cloud-Native Application Development', 'Applied Artificial Intelligence', 'Secure DevOps and Platform Engineering', 'Generative AI Systems', 'Industry Capstone Project'],
+  aids: ['Python for Data Science', 'Data Analytics Foundations', 'Data Structures for AI', 'Machine Learning and Pattern Recognition', 'Deep Learning and Computer Vision', 'Big Data Engineering', 'Generative AI and Responsible Intelligence', 'Industry AI Capstone Project'],
+  aiml: ['Programming for Intelligent Systems', 'Mathematics for AI', 'Data Structures and Algorithms', 'Machine Learning Systems', 'Deep Learning and Computer Vision', 'Natural Language Processing', 'Generative AI and Autonomous Agents', 'Intelligent Systems Capstone Project'],
+  it: ['Computational Problem Solving', 'Web Programming Foundations', 'Data Structures and Algorithms', 'Full Stack Application Engineering', 'Cloud Computing and DevOps', 'Enterprise Data Platforms', 'Cybersecurity and Site Reliability', 'Industry Software Capstone'],
+  cyber: ['Programming and Cyber Hygiene', 'Computer Systems Foundations', 'Network and System Security', 'Applied Cryptography', 'Ethical Hacking and Digital Forensics', 'Cloud and Application Security', 'Threat Intelligence and SOC Operations', 'Cybersecurity Capstone Project'],
+  ece: ['Engineering Design and Programming', 'Electronic Devices and Circuits', 'Signals and Digital Systems', 'Embedded Systems and IoT', 'Wireless and 5G Communication', 'VLSI and Edge Computing', 'AI for Communication Systems', 'Electronics Industry Capstone'],
+  eee: ['Engineering Design and Programming', 'Circuit Analysis and Simulation', 'Electrical Machines and Drives', 'Power Electronics and Control', 'Renewable Energy Systems', 'Smart Grid and Electric Mobility', 'Industrial Automation and Digital Twins', 'Electrical Engineering Capstone'],
+  mech: ['Engineering Design and CAD', 'Materials and Manufacturing', 'Thermal and Fluid Engineering', 'Computer Aided Machine Design', 'Robotics and Industrial Automation', 'Additive Manufacturing and Simulation', 'Digital Manufacturing Systems', 'Mechanical Engineering Capstone'],
+  civil: ['Engineering Drawing and Surveying', 'Construction Materials and Practice', 'Structural Analysis and Design', 'Geotechnical and Foundation Engineering', 'Building Information Modelling', 'Sustainable Infrastructure Systems', 'Smart Cities and Disaster Resilience', 'Civil Engineering Capstone'],
+  biotech: ['Biology for Engineers', 'Biochemistry and Cell Biology', 'Molecular Biology and Genetics', 'Bioprocess Engineering', 'Genetic Engineering and Bioinformatics', 'Industrial Biotechnology', 'Computational and Precision Biotechnology', 'Biotechnology Capstone Project'],
+  bme: ['Biology and Engineering Design', 'Human Anatomy and Physiology', 'Biomedical Sensors and Measurements', 'Medical Imaging Systems', 'Biomedical Signal Processing', 'Healthcare IoT and Instrumentation', 'AI in Medical Diagnostics', 'Biomedical Engineering Capstone'],
+  agri: ['Engineering for Sustainable Agriculture', 'Soil and Water Engineering', 'Farm Machinery and Power', 'Irrigation and Drainage Systems', 'Precision Agriculture and Drone Technology', 'Post-Harvest Process Engineering', 'Smart Farming and Agricultural IoT', 'Agricultural Engineering Capstone'],
+  food: ['Food Science and Nutrition', 'Food Chemistry and Microbiology', 'Food Process Engineering', 'Food Preservation Technology', 'Food Quality and Safety Systems', 'Smart Food Packaging and Supply Chain', 'Sustainable Food Product Development', 'Food Technology Capstone'],
+  vlsi: ['Digital Design Foundations', 'Electronic Devices and Circuits', 'CMOS Digital Design', 'Analog and Mixed Signal Design', 'FPGA Architecture and Verification', 'System-on-Chip Design', 'Semiconductor AI Accelerators', 'VLSI Tape-Out Capstone']
+};
+
+function createR2025Curriculum(dept) {
+  const focus = r2025FocusSubjects[dept.id] || [];
+  return {
+    ...dept,
+    desc: `${dept.desc} Updated under the R2025 outcome-based framework with emerging-technology courses and industry-led experiential learning.`,
+    semesters: Object.fromEntries(Object.entries(dept.semesters).map(([semesterNumber, semester]) => {
+      const semIndex = Number(semesterNumber) - 1;
+      const replacementIndex = semester.courses.findIndex(course => Number(course.c) > 0 && Number(course.l) > 0);
+      const courses = semester.courses.map((course, courseIndex) => {
+        const prefix = dept.id.toUpperCase().slice(0, 3).padEnd(2, 'X');
+        return {
+          ...course,
+          code: `25${prefix}${semesterNumber}${String(courseIndex + 1).padStart(2, '0')}`,
+          title: courseIndex === replacementIndex && focus[semIndex] ? focus[semIndex] : course.title
+        };
+      });
+      return [semesterNumber, { ...semester, courses }];
+    }))
+  };
+}
+
+export const r2025DepartmentCurricula = Object.fromEntries(
+  Object.entries(departmentCurricula).map(([id, dept]) => [id, createR2025Curriculum(dept)])
+);
+
+export function getDeptCurriculum(idOrName = 'cse', regulation = 'r2021') {
+  const curricula = String(regulation).toLowerCase() === 'r2025' ? r2025DepartmentCurricula : departmentCurricula;
+  if (!idOrName) return curricula['cse'];
   const key = idOrName.toLowerCase().replace(/[^a-z0-9]/g, '');
-  if (departmentCurricula[key]) return departmentCurricula[key];
-  if (key.includes('cyber')) return departmentCurricula['cyber'];
-  if (key.includes('data') || key.includes('aids')) return departmentCurricula['aids'];
-  if (key.includes('machine') || key.includes('aiml')) return departmentCurricula['aiml'];
-  if (key.includes('info') || key === 'it') return departmentCurricula['it'];
-  if (key.includes('comp') || key.includes('cse')) return departmentCurricula['cse'];
-  if (key.includes('comm') || key.includes('ece')) return departmentCurricula['ece'];
-  if (key.includes('elect') || key.includes('eee')) return departmentCurricula['eee'];
-  if (key.includes('mech')) return departmentCurricula['mech'];
-  if (key.includes('civil')) return departmentCurricula['civil'];
-  if (key.includes('biomed') || key.includes('bme')) return departmentCurricula['bme'];
-  if (key.includes('biotech')) return departmentCurricula['biotech'];
-  if (key.includes('agri')) return departmentCurricula['agri'];
-  if (key.includes('food')) return departmentCurricula['food'];
-  if (key.includes('vlsi')) return departmentCurricula['vlsi'];
-  return departmentCurricula['cse'];
+  if (curricula[key]) return curricula[key];
+  if (key.includes('cyber')) return curricula['cyber'];
+  if (key.includes('data') || key.includes('aids')) return curricula['aids'];
+  if (key.includes('machine') || key.includes('aiml')) return curricula['aiml'];
+  if (key.includes('info') || key === 'it') return curricula['it'];
+  if (key.includes('comp') || key.includes('cse')) return curricula['cse'];
+  if (key.includes('comm') || key.includes('ece')) return curricula['ece'];
+  if (key.includes('elect') || key.includes('eee')) return curricula['eee'];
+  if (key.includes('mech')) return curricula['mech'];
+  if (key.includes('civil')) return curricula['civil'];
+  if (key.includes('biomed') || key.includes('bme')) return curricula['bme'];
+  if (key.includes('biotech')) return curricula['biotech'];
+  if (key.includes('agri')) return curricula['agri'];
+  if (key.includes('food')) return curricula['food'];
+  if (key.includes('vlsi')) return curricula['vlsi'];
+  return curricula['cse'];
 }

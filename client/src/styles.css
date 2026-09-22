@@ -38264,6 +38264,78 @@ a.siet-curr-navlink {
   margin: 0 0 18px;
 }
 
+.curr-regulation-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 14px 12px 16px;
+  margin: 4px 0 18px;
+  border: 1px solid #dbece1;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #f4faf6 0%, #ffffff 72%);
+}
+
+.curr-regulation-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.curr-regulation-copy span {
+  color: #123d28;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.curr-regulation-copy small {
+  color: #658071;
+  font-size: 11.5px;
+}
+
+.curr-regulation-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(82px, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d6e5db;
+  border-radius: 10px;
+  background: #eaf2ed;
+}
+
+.curr-regulation-btn {
+  appearance: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 14px;
+  background: transparent;
+  color: #496858;
+  font: 800 12px/1.2 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.curr-regulation-btn:hover {
+  color: #0c5836;
+}
+
+.curr-regulation-btn.is-active {
+  color: #fff;
+  background: #0c5836;
+  box-shadow: 0 3px 9px rgba(12, 88, 54, .22);
+}
+
+#curr-table-area.is-switching {
+  animation: curriculumRegulationIn .34s ease both;
+}
+
+@keyframes curriculumRegulationIn {
+  from { opacity: .25; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Department page curriculum preview integration */
 .department-curriculum-section {
   display: none;
@@ -38682,6 +38754,16 @@ a.siet-curr-navlink {
     margin: 0 auto 16px !important;
     padding-bottom: 14px !important;
     width: 100% !important;
+  }
+
+  .curr-regulation-switch {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .curr-regulation-toggle {
+    width: 100%;
   }
 
   .curr-dept-tab {

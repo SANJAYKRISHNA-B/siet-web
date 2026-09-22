@@ -528,7 +528,7 @@ function homePage() {
         <span class="title-second-part">EMPOWERING</span>
         <span class="title-second-part">THE NATION</span>
       </h1>
-      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a <br> vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
+      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a <br> vibrant placement ecosystem that transforms <br> engineering potential into meaningful careers.</p>
       <div class="placement-v2-actions-area">
         <div class="placement-v2-actions">
           <button type="button" class="placement-v2-btn primary js-explore-placements">Explore Placements ${icon('arrow')}</button>
@@ -6238,6 +6238,7 @@ function attachModalScrollTrap(modalEl) {
 
 let currActiveDept = 'agri';
 let currActiveSem = 1;
+let currActiveRegulation = 'r2025';
 
 function getCurrModalData(target, deptId = 'agri') {
   const dept = getDeptCurriculum(deptId);
@@ -6297,7 +6298,7 @@ function getCurrModalData(target, deptId = 'agri') {
         <ul>
           <li><b>Attendance:</b> A candidate must secure a minimum of <b>75% attendance</b> in each course to be eligible for End Semester Examinations.</li>
           <li><b>Evaluation System:</b> Continuous Internal Assessment (CIA) carries <b>40%</b> and End Semester Examination (ESE) carries <b>60%</b>.</li>
-          <li><b>Letter Grading System:</b> Performance is evaluated on a 10-point letter grading system: <b>S, A+, A, B+, B, C</b>.</li>
+          <li><b>Letter Grading System:</b> Performance is evaluated on a 10-point letter grading system: <b>S, A+, A, B+, B, C+, C</b>.</li>
           <li><b>Fast-Track Semester:</b> High-performing students (CGPA ≥ 8.5) may complete electives in semesters 5–7 and undertake full-time industry capstone in semester 8.</li>
           <li><b>168-Credit Framework:</b> Agile structure comprising Basic Sciences, Engineering Sciences, Professional Cores, Industry Verticals, and Experiential Learning.</li>
         </ul>
@@ -6316,7 +6317,8 @@ function getCurrModalData(target, deptId = 'agri') {
               <tr><td><span class="siet-reg-badge-grade">A+</span></td><td>Excellent</td><td style="text-align: center;"><b>9</b></td></tr>
               <tr><td><span class="siet-reg-badge-grade">A</span></td><td>Very Good</td><td style="text-align: center;"><b>8</b></td></tr>
               <tr><td><span class="siet-reg-badge-grade">B+</span></td><td>Good</td><td style="text-align: center;"><b>7</b></td></tr>
-              <tr><td><span class="siet-reg-badge-grade">B</span></td><td>Average</td><td style="text-align: center;"><b>6</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">B</span></td><td>Above Average</td><td style="text-align: center;"><b>6.5</b></td></tr>
+              <tr><td><span class="siet-reg-badge-grade">C+</span></td><td>Average</td><td style="text-align: center;"><b>6</b></td></tr>
               <tr><td><span class="siet-reg-badge-grade">C</span></td><td>Pass / Satisfactory</td><td style="text-align: center;"><b>5</b></td></tr>
             </tbody>
           </table>
@@ -6410,8 +6412,8 @@ function getCurrModalData(target, deptId = 'agri') {
   return { title: 'Academic Document', content: '<p>Details will be updated shortly.</p>' };
 }
 
-function renderCurriculumTable(deptId = 'agri', semNum = 1) {
-  const dept = getDeptCurriculum(deptId);
+function renderCurriculumTable(deptId = 'agri', semNum = 1, regulation = 'r2021') {
+  const dept = getDeptCurriculum(deptId, regulation);
   const data = dept?.semesters?.[semNum] || dept?.semesters?.[1] || {
     name: `Semester ${semNum}`,
     credits: 0,
@@ -6427,7 +6429,7 @@ function renderCurriculumTable(deptId = 'agri', semNum = 1) {
       </div>
       <div class="curr-sem-actions">
         <span class="curr-credits-pill">Total Credits: <b id="active-sem-credits">${data.credits}</b></span>
-        <a class="curr-download-btn curr-download-sem" href="/downloads/sample-syllabus.pdf" download="${dept.id}-semester-${semNum}-syllabus-sample.pdf" aria-label="Download sample syllabus for ${dept.name}, ${data.name}">
+        <a class="curr-download-btn curr-download-sem" href="/downloads/sample-syllabus.pdf" download="${dept.id}-${regulation}-semester-${semNum}-syllabus-sample.pdf" aria-label="Download ${regulation.toUpperCase()} sample syllabus for ${dept.name}, ${data.name}">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
           <span>Semester Syllabus</span>
         </a>
@@ -6457,7 +6459,7 @@ function renderCurriculumTable(deptId = 'agri', semNum = 1) {
               <td class="td-credit">${c.t}</td>
               <td class="td-credit">${c.p}</td>
               <td class="td-credit"><b>${c.c}</b></td>
-              <td class="td-download"><a class="curr-download-btn curr-download-course" href="/downloads/sample-syllabus.pdf" download="${dept.id}-${c.code}-syllabus-sample.pdf" aria-label="Download sample syllabus for ${c.code} ${c.title}" title="Download ${c.code} sample syllabus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg><span>PDF</span></a></td>
+              <td class="td-download"><a class="curr-download-btn curr-download-course" href="/downloads/sample-syllabus.pdf" download="${dept.id}-${regulation}-${c.code}-syllabus-sample.pdf" aria-label="Download ${regulation.toUpperCase()} sample syllabus for ${c.code} ${c.title}" title="Download ${c.code} sample syllabus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg><span>PDF</span></a></td>
             </tr>
           `).join('')}
         </tbody>
@@ -6540,14 +6542,16 @@ function renderAcademicsModal() {
 function curriculumPage() {
   const params = routeParams();
   const queryDept = params.get('dept');
+  const queryRegulation = params.get('regulation');
+  currActiveRegulation = queryRegulation === 'r2021' ? 'r2021' : 'r2025';
   if (queryDept) {
-    const matched = getDeptCurriculum(queryDept);
+    const matched = getDeptCurriculum(queryDept, currActiveRegulation);
     if (matched) currActiveDept = matched.id;
   } else {
     currActiveDept = 'agri';
     currActiveSem = 1;
   }
-  const activeDept = getDeptCurriculum(currActiveDept);
+  const activeDept = getDeptCurriculum(currActiveDept, currActiveRegulation);
 
   return `<main class="siet-curr-page">
   ${sietHudHeader('Curriculum', 'Curriculum', false)}
@@ -6578,6 +6582,20 @@ function curriculumPage() {
           <h2 class="curr-center-title" id="curr-dept-title">${activeDept.degree} ${activeDept.name}</h2>
           <p class="curr-center-desc" id="curr-dept-desc">${activeDept.desc}</p>
 
+          <div class="curr-regulation-switch" aria-label="Select curriculum regulation">
+            <div class="curr-regulation-copy">
+              <span>Regulation</span>
+              <small>Choose the applicable batch syllabus</small>
+            </div>
+            <div class="curr-regulation-toggle" role="tablist">
+              ${['r2021', 'r2025'].map(regulation => `
+                <button type="button" class="curr-regulation-btn ${regulation === currActiveRegulation ? 'is-active' : ''}"
+                        role="tab" aria-selected="${regulation === currActiveRegulation ? 'true' : 'false'}"
+                        data-regulation="${regulation}">${regulation.toUpperCase()}</button>
+              `).join('')}
+            </div>
+          </div>
+
           <!-- Semester Tabs (Image 2 style) -->
           <div class="curr-sem-tabs" role="tablist" aria-label="Select Semester">
             ${currSemestersList.map(([num, name]) => `
@@ -6593,7 +6611,7 @@ function curriculumPage() {
 
           <!-- Dynamic Semester Table Area -->
           <div id="curr-table-area">
-            ${renderCurriculumTable(activeDept.id, currActiveSem)}
+            ${renderCurriculumTable(activeDept.id, currActiveSem, currActiveRegulation)}
           </div>
         </main>
       </div>
@@ -6860,7 +6878,7 @@ function applyPortalPage(activeTab = 'enquiry') {
             <p>Complete this brief form to schedule your dedicated academic counseling session and receive programme details.</p>
           </div>
 
-          <form class="enquiry-form-v3 apply-form-v3 js-form">
+          <form class="enquiry-form-v3 apply-form-v3 js-form" data-api-endpoint="/api/admission-enquiries" data-form-type="admission-enquiry">
             <!-- STEP 1: PERSONAL CONTACT -->
             <div class="form-step-section">
               <div class="form-step-title"><span class="step-num">1</span> Personal Information</div>
@@ -7391,7 +7409,7 @@ function bind() {
 
   // Department switcher helper
   const updateActiveDept = (deptId) => {
-    const dept = getDeptCurriculum(deptId);
+    const dept = getDeptCurriculum(deptId, currActiveRegulation);
     if (!dept) return;
     currActiveDept = dept.id;
 
@@ -7408,12 +7426,12 @@ function bind() {
 
     const tableArea = $('#curr-table-area');
     if (tableArea) {
-      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem);
+      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
     }
 
     document.title = `${dept.degree} ${dept.name} Curriculum | SIET`;
     if (window.history && window.history.replaceState) {
-      window.history.replaceState(null, '', `#/curriculum?dept=${dept.id}`);
+      window.history.replaceState(null, '', `#/curriculum?dept=${dept.id}&regulation=${currActiveRegulation}`);
     }
   };
 
@@ -7436,7 +7454,7 @@ function bind() {
 
     const tableArea = $('#curr-table-area');
     if (tableArea) {
-      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem);
+      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
     }
   };
 
@@ -7444,6 +7462,34 @@ function bind() {
     tab.addEventListener('click', () => {
       const sem = Number(tab.dataset.sem);
       if (sem) updateActiveSem(sem);
+    });
+  });
+
+  $$('.curr-regulation-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const regulation = button.dataset.regulation;
+      if (!['r2021', 'r2025'].includes(regulation) || regulation === currActiveRegulation) return;
+      currActiveRegulation = regulation;
+
+      $$('.curr-regulation-btn').forEach(item => {
+        const isSelected = item.dataset.regulation === regulation;
+        item.classList.toggle('is-active', isSelected);
+        item.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+      });
+
+      const dept = getDeptCurriculum(currActiveDept, currActiveRegulation);
+      const descEl = $('#curr-dept-desc');
+      const tableArea = $('#curr-table-area');
+      if (descEl) descEl.textContent = dept.desc;
+      if (tableArea) {
+        tableArea.classList.remove('is-switching');
+        void tableArea.offsetWidth;
+        tableArea.classList.add('is-switching');
+        tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
+      }
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', `#/curriculum?dept=${currActiveDept}&regulation=${currActiveRegulation}`);
+      }
     });
   });
 
@@ -7891,10 +7937,14 @@ function bind() {
 async function submitForm(e) {
   e.preventDefault();
   const form = e.currentTarget;
+  if (form.dataset.submitting === 'true') return;
   const status = $('.status', form);
   const btn = $('button[type="submit"], .career-submit', form);
-  if (status) { status.textContent = 'Submitting details…'; status.style.color = '#0b7a48' }
-  if (btn) btn.disabled = true;
+  const originalButtonContent = btn?.innerHTML;
+  const isAdmissionEnquiry = form.dataset.formType === 'admission-enquiry';
+  form.dataset.submitting = 'true';
+  if (status) { status.textContent = isAdmissionEnquiry ? 'Saving…' : 'Submitting details…'; status.style.color = '#0b7a48' }
+  if (btn) { btn.disabled = true; btn.textContent = isAdmissionEnquiry ? 'Saving…' : 'Submitting…'; }
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
   if (!data.name && data.referrer_name) data.name = `${data.referrer_name} (Ref for: ${data.candidate_name || 'Candidate'})`;
@@ -7907,21 +7957,32 @@ async function submitForm(e) {
     data.fileSize = `${Math.round(fileInput.files[0].size / 1024)} KB`;
   }
   try {
-    const res = await fetch('/api/enquiries', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-    const json = await res.json();
+    const endpoint = form.dataset.apiEndpoint || '/api/enquiries';
+    const payload = isAdmissionEnquiry ? {
+      studentName: data.name,
+      mobileNumber: data.phone,
+      email: data.email,
+      course: data.level,
+      department: data.course,
+      city: data.city || '',
+      source: 'Website',
+      remarks: data.message
+    } : data;
+    const res = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+    const json = await res.json().catch(() => ({ message: 'The server returned an invalid response.' }));
     if (status) {
-      status.textContent = json.message || 'Thank you! Your details have been received.';
+      status.textContent = json.message || (res.ok ? 'Admission enquiry saved successfully' : 'Unable to save your enquiry.');
       status.style.color = res.ok ? '#075b36' : '#b3261e';
     }
     if (res.ok) form.reset();
   } catch (err) {
     if (status) {
-      status.textContent = 'Thank you! Your details have been recorded.';
-      status.style.color = '#075b36';
+      status.textContent = 'Unable to save your enquiry. Please check your connection and try again.';
+      status.style.color = '#b3261e';
     }
-    form.reset();
   } finally {
-    if (btn) btn.disabled = false;
+    form.dataset.submitting = 'false';
+    if (btn) { btn.disabled = false; btn.innerHTML = originalButtonContent || 'Submit'; }
   }
 }
 function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target, reduce); observer.unobserve(entry.target) }), { threshold: .01, rootMargin: '120px 0px 60px 0px' }); $$('.reveal,.js-counter').forEach(el => { const rect = el.getBoundingClientRect(); if (reduce || (rect.top < window.innerHeight + 100 && rect.bottom > -100)) { el.classList.add('is-visible'); if (el.classList.contains('js-counter')) animateCounter(el, reduce); } else { observer.observe(el); } }); }

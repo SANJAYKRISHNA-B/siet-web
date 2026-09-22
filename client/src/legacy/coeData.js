@@ -269,16 +269,6 @@ export function coePortalPage(activeTab = 'about') {
 
         <!-- Main Executive Presentation Banner -->
         <div class="coe-exec-main">
-          <div class="coe-exec-crest-col">
-            <div class="coe-crest-halo">
-              <img src="/brand/siet-logo.png" alt="Sri Shakthi emblem" class="coe-crest-img">
-            </div>
-            <div class="coe-crest-badge">
-              <span>AUTONOMOUS</span>
-              <small>ANNA UNIVERSITY</small>
-            </div>
-          </div>
-
           <div class="coe-exec-content-col">
             <div class="coe-exec-kicker-row">
               <span class="coe-kicker-gold">OFFICIAL ACADEMIC GOVERNANCE</span>

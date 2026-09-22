@@ -30579,90 +30579,199 @@ button.button.js-explore-campus {
 
 @media(max-width:900px) {
   .department-detail-header:before {
-    margin-bottom: 9px
+    margin-bottom: 9px;
   }
 
   .department-detail-layout {
-    display: block;
-    padding: 24px 5vw 55px
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px 14px 48px !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .department-detail-nav {
-    position: relative;
-    top: auto;
-    margin-bottom: 24px;
-    padding: 8px
+    position: relative !important;
+    top: auto !important;
+    margin: 0 auto 16px !important;
+    padding: 16px 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .department-detail-nav:before {
-    padding: 8px 10px 10px
+    display: block !important;
+    text-align: center !important;
+    margin: 0 auto 12px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    letter-spacing: .2em !important;
   }
 
   .department-detail-nav button {
-    padding: 13px 38px 13px 13px
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+    gap: 8px !important;
+  }
+
+  .department-detail-nav button:before {
+    display: inline-block !important;
+    margin-right: 4px !important;
+  }
+
+  .department-detail-nav button.active:after {
+    display: none !important;
   }
 
   .department-detail-content {
-    max-width: none
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
 
   .department-copy {
-    min-height: 250px
+    padding: 24px 16px !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  .department-copy:before {
+    display: none !important;
   }
 
   .department-copy h2 {
-    font-size: 27px
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    line-height: 1.25 !important;
+    margin: 0 auto 18px !important;
+  }
+
+  .department-copy h2:before {
+    height: 24px !important;
+    width: 6px !important;
+    display: inline-block !important;
   }
 
   .department-copy p {
-    line-height: 1.7
-  }
-}
-
-@media(max-width:560px) {
-  .department-detail-header {
-    padding: 20px 5vw
+    text-align: center !important;
+    margin: 0 auto 16px !important;
+    font-size: 14.5px !important;
+    line-height: 1.7 !important;
+    max-width: 100% !important;
   }
 
-  .department-detail-title h1 {
-    font-size: 23px
+  .department-copy .dept-custom-list {
+    text-align: center !important;
+    list-style-position: inside !important;
+    padding-left: 0 !important;
+    margin: 0 auto !important;
   }
 
-  .department-detail-title {
-    gap: 10px
+  .department-copy .dept-custom-list li {
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
   }
 
-  .department-breadcrumb {
-    font-size: 11px
+  .department-copy .dept-mission-list {
+    text-align: center !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+    margin: 16px auto 0 !important;
+  }
+
+  .department-copy .dept-mission-list li {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  .department-copy .dept-mission-badge {
+    margin: 0 auto !important;
+  }
+
+  .department-copy .dept-objectives-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .department-copy .dept-obj-card {
+    text-align: center !important;
+    align-items: center !important;
+    padding: 18px 14px !important;
+  }
+
+  .department-intake {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 auto 20px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .department-intake table {
-    font-size: 12px
+    margin: 0 auto !important;
+    font-size: 12.5px !important;
+    min-width: 280px !important;
+    max-width: 100% !important;
   }
 
   .department-intake th,
   .department-intake td {
-    padding: 11px 10px
+    padding: 9px 10px !important;
+    text-align: center !important;
   }
 
-  .department-copy {
-    padding: 24px 20px;
-    border-radius: 14px
+  .dept-curriculum-banner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding: 20px 14px !important;
   }
 
-  .department-copy h2 {
-    align-items: flex-start;
-    font-size: 24px;
-    line-height: 1.15
+  .dept-curriculum-banner div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
-  .department-copy h2:before {
-    height: 28px
+  .dept-curriculum-banner .curr-badge {
+    margin: 0 auto 8px !important;
   }
 
-  .department-copy p {
-    font-size: 14px;
-    line-height: 1.7
+  .dept-curriculum-banner h2 {
+    text-align: center !important;
+  }
+
+  .dept-curriculum-banner p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .dept-curriculum-action {
+    margin: 0 auto !important;
+    text-align: center !important;
   }
 }
 
@@ -38475,40 +38584,209 @@ a.siet-curr-navlink {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .siet-curr-body {
-    padding: 24px 14px 50px;
+    padding: 20px 12px 48px;
+    overflow-x: hidden;
   }
   
+  .siet-curr-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  
+  .siet-curr-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .siet-curr-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .siet-curr-sidecard {
+    width: 100% !important;
+    text-align: center !important;
+    box-shadow: 0 4px 14px rgba(10, 40, 25, 0.05) !important;
+  }
+
+  .siet-curr-sidehead {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 16px 14px !important;
+  }
+
+  .sidehead-text h3,
+  .sidehead-text p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-curr-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  button.siet-curr-navlink,
+  a.siet-curr-navlink {
+    justify-content: center !important;
+    text-align: center !important;
+    border-left: none !important;
+    border-bottom: 1px solid #f0f4f1 !important;
+    padding: 12px 16px !important;
+  }
+
+  .navlink-content {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .navlink-arrow {
+    display: none !important;
+  }
+
+  .siet-curr-navlink.is-active {
+    border-left: none !important;
+    border-bottom: 3px solid #0c5836 !important;
+    background: #e1f0e7 !important;
+  }
+
   .siet-curr-center {
-    padding: 20px 16px;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 22px 14px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    text-align: center !important;
   }
-  
-  .siet-curr-hero {
-    padding: 28px 18px;
+
+  .curr-dept-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 auto 16px !important;
+    padding-bottom: 14px !important;
+    width: 100% !important;
   }
-  
-  .curr-dept-tabs,
+
+  .curr-dept-tab {
+    padding: 6.5px 12px !important;
+    font-size: 11.5px !important;
+    text-align: center !important;
+  }
+
+  .curr-center-eyebrow {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .curr-center-title {
+    text-align: center !important;
+    font-size: clamp(20px, 5.5vw, 26px) !important;
+    margin: 0 auto 8px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.25 !important;
+  }
+
+  .curr-center-desc {
+    text-align: center !important;
+    margin: 0 auto 18px !important;
+    font-size: 13px !important;
+    max-width: 100% !important;
+  }
+
   .curr-sem-tabs {
-    gap: 6px;
-    margin-bottom: 16px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 auto 18px !important;
+    width: 100% !important;
   }
-  
-  .curr-dept-tab,
+
   .curr-sem-tab {
-    padding: 6.5px 11px;
-    font-size: 11.5px;
+    padding: 6.5px 12px !important;
+    font-size: 11.5px !important;
+    text-align: center !important;
   }
 
   .curr-sem-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+
+  .curr-sem-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .curr-sem-title {
+    text-align: center !important;
+    margin: 0 auto 4px !important;
+  }
+
+  .curr-sem-count {
+    text-align: center !important;
+    margin: 0 auto !important;
   }
 
   .curr-sem-actions {
-    width: 100%;
-    justify-content: space-between;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 8px !important;
+    margin: 0 auto !important;
+  }
+
+  .curr-download-sem {
+    width: auto !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .curr-table-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 16px !important;
+  }
+
+  .curr-table {
+    min-width: 520px !important;
+    width: 100% !important;
   }
 }
 
@@ -39588,28 +39866,154 @@ a.siet-curr-navlink {
   }
   .siet-prog-cta-banner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     padding: 32px 24px;
   }
 }
 
-@media(max-width: 600px) {
-  .siet-prog-grid {
-    grid-template-columns: 1fr;
+@media(max-width: 768px) {
+  .siet-prog-container {
+    padding: 24px 14px 60px !important;
   }
+
   .siet-prog-controls {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
   }
+
   .siet-prog-filter-tabs {
-    width: 100%;
-    justify-content: space-between;
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
   }
+
   .siet-prog-filter-btn {
-    flex: 1;
-    justify-content: center;
-    padding: 9px 8px;
-    font-size: 12px;
+    padding: 9px 16px !important;
+    font-size: 12.5px !important;
+    justify-content: center !important;
+  }
+
+  .siet-prog-meta-badges {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .siet-prog-category-section {
+    margin-bottom: 48px !important;
+    text-align: center !important;
+  }
+
+  .siet-prog-section-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+  }
+
+  .siet-prog-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto 8px !important;
+  }
+
+  .siet-prog-section-header h2 {
+    text-align: center !important;
+    font-size: clamp(24px, 6.5vw, 30px) !important;
+    margin: 0 auto 10px !important;
+  }
+
+  .siet-prog-section-header p {
+    text-align: center !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+    max-width: 600px !important;
+  }
+
+  .siet-prog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .siet-prog-card {
+    text-align: center !important;
+    align-items: center !important;
+    padding: 22px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .siet-prog-card-top {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .siet-prog-card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .siet-prog-card-body h3 {
+    text-align: center !important;
+    margin: 0 auto 8px !important;
+    font-size: 17px !important;
+  }
+
+  .siet-prog-card-body p {
+    text-align: center !important;
+    margin: 0 auto 14px !important;
+    font-size: 13px !important;
+  }
+
+  .siet-prog-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 auto 18px !important;
+    width: 100% !important;
+  }
+
+  .siet-prog-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding-top: 16px !important;
+  }
+
+  .siet-prog-link {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .siet-prog-btn-apply {
+    width: 100% !important;
+    max-width: 220px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -42231,35 +42635,45 @@ a.siet-curr-navlink {
   .academic-new-outcomes-copy { position: static; }
 }
 @media (max-width: 700px) {
-  .academic-new-shell { width: calc(100% - 36px); }
-  .academic-new-hero { padding: 58px 0 92px; }
-  .academic-new-hero h1 { font-size: 47px; }
-  .academic-new-actions, .academic-new-credentials { align-items: flex-start; flex-direction: column; }
-  .academic-new-credentials { gap: 7px; }
+  .academic-new-shell { width: calc(100% - 32px); }
+  .academic-new-hero { padding: 48px 0 72px; text-align: center; }
+  .academic-new-hero-copy { text-align: center; align-items: center; display: flex; flex-direction: column; }
+  .academic-new-kicker { justify-content: center; margin: 0 auto 20px; }
+  .academic-new-hero h1 { font-size: clamp(30px, 8.5vw, 44px); text-align: center; margin: 0 auto; }
+  .academic-new-intro { text-align: center; margin: 20px auto 0; font-size: 16px; }
+  .academic-new-actions, .academic-new-credentials { align-items: center; justify-content: center; flex-direction: column; width: 100%; margin-inline: auto; }
+  .academic-new-primary { width: 100%; max-width: 280px; justify-content: center; text-align: center; }
+  .academic-new-credentials { gap: 7px; text-align: center; justify-content: center; }
   .academic-new-credentials i { display: none; }
-  .academic-new-hero-media { min-height: 400px; }
-  .academic-new-photo-main { width: 90%; height: 320px; }
-  .academic-new-photo-small { height: 150px; }
-  .academic-new-seal { width: 110px; height: 110px; right: 0; bottom: 6px; }
+  .academic-new-hero-media { min-height: 360px; max-width: 100%; }
+  .academic-new-photo-main { width: 90%; height: 280px; }
+  .academic-new-photo-small { height: 130px; }
+  .academic-new-seal { width: 100px; height: 100px; right: 0; bottom: 6px; }
   .academic-new-image-note { display: none; }
-  .academic-new-metrics-grid { grid-template-columns: 1fr; }
-  .academic-new-metric { min-height: 170px; border-right: 0; border-bottom: 1px solid #e6e8e1; }
-  .academic-new-section-intro { grid-template-columns: 1fr; gap: 14px; }
-  .academic-new-model { padding: 90px 0; }
-  .academic-new-model-visual { height: 360px; }
-  .academic-new-pillar { grid-template-columns: 36px 1fr; }
+  .academic-new-metrics-grid { grid-template-columns: 1fr; text-align: center; }
+  .academic-new-metric { min-height: 160px; border-right: 0; border-bottom: 1px solid #e6e8e1; text-align: center; align-items: center; }
+  .academic-new-section-intro { grid-template-columns: 1fr; gap: 14px; text-align: center; }
+  .academic-new-section-intro p { margin-inline: auto; text-align: center; }
+  .academic-new-section-intro h2 { text-align: center; margin-inline: auto; }
+  .academic-new-model { padding: 60px 0; }
+  .academic-new-model-visual { height: 300px; }
+  .academic-new-pillar { grid-template-columns: 36px 1fr; text-align: left; }
   .academic-new-pillar b { display: none; }
-  .academic-new-journey-head { display: block; }
-  .academic-new-journey-head h2 { text-align: left; margin-top: 20px; }
-  .academic-new-timeline { grid-template-columns: 1fr; gap: 42px; }
+  .academic-new-journey-head { display: block; text-align: center; }
+  .academic-new-journey-head h2 { text-align: center; margin-top: 14px; }
+  .academic-new-timeline { grid-template-columns: 1fr; gap: 36px; }
   .academic-new-timeline::before { top: 0; bottom: 0; left: 24px; right: auto; width: 2px; height: auto; }
   .academic-new-stage { padding: 0 0 0 76px; text-align: left; }
   .academic-new-stage-dot { position: absolute; left: 0; top: 0; }
-  .academic-new-quote { padding-left: 52px; }
-  .academic-new-quote > span { font-size: 76px; }
-  .academic-new-outcomes-grid { grid-template-columns: 1fr; }
-  .academic-new-outcome { min-height: 230px; }
-  .academic-new-cta-inner { align-items: flex-start; flex-direction: column; }
+  .academic-new-quote { padding-left: 20px; padding-right: 20px; text-align: center; }
+  .academic-new-quote > span { display: none; }
+  .academic-new-outcomes-layout { text-align: center; }
+  .academic-new-outcomes-copy { text-align: center; margin-inline: auto; }
+  .academic-new-outcomes-copy h2, .academic-new-outcomes-copy p { text-align: center; margin-inline: auto; }
+  .academic-new-outcomes-grid { grid-template-columns: 1fr; text-align: center; }
+  .academic-new-outcome { min-height: 200px; text-align: center; }
+  .academic-new-cta-inner { align-items: center; justify-content: center; text-align: center; flex-direction: column; gap: 18px; }
+  .academic-new-cta-inner h2 { text-align: center; }
 }
 @media (max-width: 430px) {
   .academic-new-hero h1 { font-size: 39px; }
@@ -45839,6 +46253,7 @@ button.coe-action-card {
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -47452,10 +47867,8 @@ button.coe-action-card {
 }
 
 .coe-exec-main {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 36px;
-  align-items: start;
+  display: block;
+  width: 100%;
 }
 
 .coe-exec-crest-col {
@@ -47652,17 +48065,615 @@ button.coe-action-card {
   color: #cca01d;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  /* ============================================================
+     COE & PLACEMENT EXECUTIVE HERO MOBILE CENTERING & RESPONSIVENESS
+     Matches Home and About pages mobile layout
+     ============================================================ */
+  .coe-exec-hero {
+    padding: 24px 14px 34px !important;
+    text-align: center !important;
+  }
+
+  .coe-exec-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .coe-exec-topbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .coe-exec-breadcrumbs {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+    font-size: 12px !important;
+  }
+
+  .coe-exec-status-group {
+    justify-content: center !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
   .coe-exec-main {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+    width: 100% !important;
   }
+
   .coe-exec-crest-col {
-    flex-direction: row;
-    justify-content: flex-start;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
+
   .coe-crest-halo {
-    width: 80px;
-    height: 80px;
+    width: 90px !important;
+    height: 90px !important;
+    margin: 0 auto !important;
+    border-radius: 18px !important;
+  }
+
+  .coe-crest-badge {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .coe-exec-content-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .coe-exec-kicker-row {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    gap: 6px !important;
+    font-size: 11px !important;
+  }
+
+  .coe-kicker-gold,
+  .coe-kicker-sub {
+    text-align: center !important;
+  }
+
+  .coe-exec-title {
+    text-align: center !important;
+    font-size: clamp(21px, 6.2vw, 30px) !important;
+    margin: 4px auto !important;
+    line-height: 1.25 !important;
+  }
+
+  .coe-exec-institution {
+    text-align: center !important;
+    margin: 0 auto !important;
+    font-size: 15px !important;
+  }
+
+  .coe-exec-accreditation {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 4px auto 14px !important;
+    font-size: 12px !important;
+    gap: 6px !important;
+    line-height: 1.6 !important;
+  }
+
+  .coe-exec-quote-card {
+    text-align: center !important;
+    margin: 0 auto 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-left: none !important;
+    border-top: 3px solid #cca01d !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+  }
+
+  .coe-exec-quote-card p {
+    text-align: center !important;
+    font-size: 13px !important;
+  }
+
+  .coe-exec-pillars-row {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .coe-pillar-chip {
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 11.5px !important;
+    padding: 6px 11px !important;
+  }
+
+  /* ============================================================
+     COE PORTAL BODY, SIDEBAR & CONTENT PANES MOBILE CENTERING
+     ============================================================ */
+  .coe-main-tabs-section {
+    padding: 0 12px !important;
+    margin: 20px auto 48px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .coe-portal-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .coe-vertical-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 16px 12px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .coe-sidebar-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-bottom: 12px !important;
+  }
+
+  .coe-sidebar-kicker,
+  .coe-sidebar-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .coe-vertical-nav {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 6px !important;
+  }
+
+  .coe-tab-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 11px 14px !important;
+  }
+
+  .coe-tab-btn .tab-title {
+    text-align: center !important;
+    flex: unset !important;
+    margin: 0 4px !important;
+  }
+
+  .coe-tab-btn .tab-chevron {
+    display: none !important;
+  }
+
+  .coe-tab-btn.active::before {
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 3px !important;
+    border-radius: 0 0 12px 12px !important;
+  }
+
+  .coe-sidebar-helpline {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .coe-sidebar-helpline .csh-content {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .coe-portal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .coe-pane-card {
+    padding: 22px 14px !important;
+    border-radius: 14px !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .coe-pane-head {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .coe-pane-kicker,
+  .coe-pane-head h2,
+  .coe-pane-head p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .coe-pane-head h2 {
+    font-size: clamp(20px, 5.5vw, 25px) !important;
+  }
+
+  .coe-two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .coe-col-main {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .coe-col-main blockquote {
+    text-align: center !important;
+    border-left: none !important;
+    border-top: 3px solid #cca01d !important;
+    border-radius: 10px !important;
+    padding: 14px 16px !important;
+    margin: 0 0 16px !important;
+  }
+
+  .coe-col-main p {
+    text-align: center !important;
+  }
+
+  .coe-col-aside {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .coe-highlight-box {
+    text-align: center !important;
+    border-left: none !important;
+    border-top: 3px solid #cca01d !important;
+    border-radius: 12px !important;
+    padding: 18px 16px !important;
+  }
+
+  .coe-highlight-box .box-tag,
+  .coe-highlight-box h3,
+  .coe-highlight-box p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .coe-stat-card-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+
+  .result-card-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .result-crest {
+    margin: 0 auto !important;
+  }
+
+  .result-card-header h2,
+  .result-card-header p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .result-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    text-align: center !important;
+  }
+
+  .result-form-row label {
+    text-align: center !important;
+  }
+
+  .result-form-row input,
+  .result-form-row select {
+    text-align: center !important;
+  }
+
+  .result-form-actions {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .result-btn-submit {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+  }
+
+  .result-form-hint {
+    text-align: center !important;
+  }
+
+  .coe-marksheet-card {
+    padding: 20px 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .marksheet-top-banner {
+    text-align: center !important;
+  }
+
+  .ms-brand-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .ms-student-details {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    padding: 14px !important;
+    gap: 12px !important;
+  }
+
+  .ms-detail-item {
+    text-align: center !important;
+  }
+
+  .ms-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 8px !important;
+    border: 1px solid #dde9e2 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .ms-grades-table {
+    min-width: 520px !important;
+    width: 100% !important;
+  }
+
+  .ms-footer-actions {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .workflow-step {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .workflow-step .step-badge {
+    margin: 0 auto !important;
+  }
+
+  .workflow-step .step-card {
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 16px 14px !important;
+  }
+
+  .workflow-step .step-card h4,
+  .workflow-step .step-card p {
+    text-align: center !important;
+  }
+
+  .workflow-step .step-card ul {
+    text-align: left !important;
+    display: inline-block !important;
+    margin: 0 auto !important;
+  }
+
+  .coe-downloads-grid,
+  .coe-reval-process-grid,
+  .committee-roster-grid,
+  .coe-officials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .coe-download-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .download-card-top {
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .coe-download-card h3,
+  .coe-download-card p {
+    text-align: center !important;
+  }
+
+  .download-card-bottom {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .form-download-btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    justify-content: center !important;
+  }
+
+  .reval-box {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .reval-step {
+    margin: 0 auto 8px !important;
+  }
+
+  .reval-box h3,
+  .reval-box p {
+    text-align: center !important;
+  }
+
+  .committee-member-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .cm-header {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .committee-member-card h4,
+  .cm-desig {
+    text-align: center !important;
+  }
+
+  .coe-official-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .official-icon {
+    margin: 0 auto 10px !important;
+  }
+
+  .coe-official-card h3,
+  .official-qual,
+  .coe-official-card p {
+    text-align: center !important;
+  }
+
+  .coe-contact-panel {
+    text-align: center !important;
+    padding: 22px 14px !important;
+  }
+
+  .contact-panel-head h3,
+  .contact-panel-head p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .contact-details-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  .contact-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .contact-item strong,
+  .contact-item p {
+    text-align: center !important;
+  }
+
+  .coe-phase-block {
+    text-align: center !important;
+    padding: 20px 14px !important;
+  }
+
+  .coe-phase-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  .coe-phase-duties-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .coe-duty-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  .coe-duty-num {
+    margin: 0 auto !important;
+  }
+
+  .coe-duty-card p {
+    text-align: center !important;
+  }
+
+  .coe-table-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .coe-grading-table {
+    min-width: 500px !important;
+    width: 100% !important;
   }
 }

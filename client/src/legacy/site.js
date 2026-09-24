@@ -3517,31 +3517,31 @@ const internalPageData = {
     breadcrumbs: ['Campus', 'Campus Life'],
     heroPills: [
       { icon: 'leaf', label: '45-Acre Eco Campus' },
-      { icon: 'runner', label: '26+ Sports & Clubs' },
-      { icon: 'wifi', label: 'High-Speed Wi-Fi' },
-      { icon: 'grad', label: 'Autonomous Hub' }
+      { icon: 'users', label: 'Multicultural Community' },
+      { icon: 'masks', label: 'Cultural Traditions & Fests' },
+      { icon: 'heart', label: 'Student Wellness & Care' }
     ],
     title: 'Student Life & Campus Community',
     subtitle: 'A vibrant 45-acre eco-friendly smart campus empowering holistic leadership, cultural dynamism, and engineering breakthroughs.',
-    overviewLead: 'At Sri Shakthi, campus life is an enriching journey that extends far beyond lecture halls and laboratories. Our vibrant 45-acre eco-friendly campus in Coimbatore fosters a multidisciplinary environment where academic rigor meets cultural creativity, competitive athletics, maker culture, and strong community bonds.',
+    overviewLead: 'At Sri Shakthi, campus life is an enriching journey that extends far beyond lecture halls and laboratories. Our vibrant 45-acre eco-friendly campus in Coimbatore fosters a multidisciplinary environment where academic rigor meets cultural creativity, active student societies, holistic wellness, and strong community bonds.',
     featuredImage: '/brand/campus-life/student-life.png',
     featuredBadge: '45-Acre Green Campus',
     featuredStat: '5,000+ Engaged Learners',
     pillars: [
-      { icon: 'masks', tag: 'VIBRANT COMMUNITY', title: 'Student Life & Cultural Guilds', desc: 'Over 26 student-led clubs, cultural fests, music ensembles, drama troupes, and hackathons create an active atmosphere for personal expression, leadership, and lifelong friendships.' },
+      { icon: 'users', tag: 'VIBRANT COMMUNITY', title: 'Multicultural Student Life', desc: 'Welcoming learners from across India, creating an open, inclusive atmosphere for personal expression, peer mentorship, cultural exchange, and lifelong camaraderie.' },
       { icon: 'leaf', tag: 'SUSTAINABLE LIVING', title: '45-Acre Eco-Conscious Campus', desc: 'Designed with extensive botanical gardens, solar energy installations, rainwater harvesting lakes, and pedestrian-first walkways promoting wellness and environmental mindfulness.' },
-      { icon: 'runner', tag: 'CHAMPIONSHIP ATHLETICS', title: 'Sports & Recreational Arena', desc: 'Olympic-dimension outdoor stadium, 400m synthetic running track, floodlit basketball and tennis courts, plus indoor badminton arenas cultivating peak physical fitness and team spirit.' },
-      { icon: 'cube', tag: 'MAKER CULTURE', title: '24/7 Innovation & Ideation Hubs', desc: 'Collaborative maker spaces, student startup incubators, and high-performance computing studios where bold engineering concepts transform into tangible prototypes.' }
+      { icon: 'masks', tag: 'SIGNATURE CELEBRATIONS', title: 'Landmark Fests & Cultural Traditions', desc: 'Celebrated annual carnivals like DHRUVA, traditional Pongal Vizha, open amphitheater music concerts, and theatrical arts that energize collegiate life throughout the year.' },
+      { icon: 'heart', tag: 'STUDENT WELLNESS', title: 'Holistic Well-being & Social Spaces', desc: 'Green shaded study courtyards, community lounges, healthy multi-cuisine cafeterias, and dedicated counseling mentoring networks supporting student health.' }
     ],
     gallery: [
       { img: '/brand/campus-life/student-life.png', title: 'Dynamic Student Commons', caption: 'Lively community lounges and collaborative open-air study areas.' },
       { img: '/brand/campus-life/cultural.png', title: 'Cultural Celebrations & Fests', caption: 'Annual mega fests featuring national music artists and performing arts ensembles.' },
-      { img: '/brand/campus-life/innovation.png', title: 'Maker Spaces & Labs', caption: 'Round-the-clock technical incubation workspaces and prototype hardware suites.' },
+      { img: '/brand/campus-life/campus-generated.png', title: 'Eco-Friendly Campus Walkways', caption: 'Tree-lined pedestrian avenues and landscaped gardens promoting daily student well-being.' },
       { img: '/brand/campus-life/learning-growth.png', title: 'Collaborative Learning Hub', caption: 'Interactive study commons and multidisciplinary peer mentoring forums.' }
     ],
     metrics: [
       { val: '45', suffix: '+', label: 'Acres of Green Campus' },
-      { val: '26', suffix: '+', label: 'Active Student Clubs' },
+      { val: '5000', suffix: '+', label: 'Vibrant Student Community' },
       { val: '100', suffix: '+', label: 'Annual Campus Events' },
       { val: '100', suffix: '%', label: 'Ragging-Free Safe Haven' }
     ],
@@ -3616,7 +3616,7 @@ const internalPageData = {
     title: 'Hostel Accommodation & Student Residences',
     subtitle: 'Secure, clean, and comfortable residential blocks providing a serene study atmosphere, nutritious dining, and round-the-clock security.',
     overviewLead: 'Our campus hostels are a genuine home away from home. Designed for safety, camaraderie, and peaceful study, residences feature spacious rooms, modern hygienic dining halls, dedicated recreation corners, and 24/7 healthcare support.',
-    featuredImage: '/brand/campus-arch.jpg',
+    featuredImage: '/brand/campus-life/hostel-room.jpg',
     featuredBadge: 'Separate Boys & Girls Blocks',
     featuredStat: '2,500+ Resident Scholars',
     pillars: [
@@ -3626,10 +3626,10 @@ const internalPageData = {
       { icon: 'shield', tag: 'SECURITY', title: 'Safety & Health Protocol', desc: 'Round-the-clock resident wardens, female security staff for girls blocks, and on-call medical doctors.' }
     ],
     gallery: [
-      { img: '/brand/campus-arch.jpg', title: 'Residential Complex & Courtyard', caption: 'Lush residential avenues with quiet courtyards for relaxation.' },
-      { img: '/brand/campus-life/student-life.png', title: 'Student Community Lounges', caption: 'Dedicated areas for peer study, group discussions, and unwinding.' },
-      { img: '/brand/library-study-hall.jpg', title: 'Late Evening Study Hall', caption: 'Quiet air-conditioned reading halls open late for resident boarders.' },
-      { img: '/brand/campus-life/cultural.png', title: 'Hostel Day & Cultural Dinners', caption: 'Annual hostel night with traditional banquets and musical entertainment.' }
+      { img: '/brand/campus-life/hostel-room.jpg', title: 'Furnished Resident Bedroom', caption: 'Spacious 2 and 3-sharing rooms with individual wooden study desks, wardrobes, and bright natural lighting.' },
+      { img: '/brand/campus-life/hostel-dining.jpg', title: 'FSSAI-Certified Dining Hall', caption: 'Hygienic stainless-steel dining facility serving four balanced, nutritious meals daily.' },
+      { img: '/brand/campus-life/sports-gym.jpg', title: 'Resident Fitness Gym', caption: 'Dedicated morning and late-evening fitness gym exclusively accessible to hostel boarders.' },
+      { img: '/brand/campus-life/campus-generated.png', title: 'Serene Residential Enclave', caption: 'Lush, quiet residential courtyard ensuring a safe and distraction-free study environment.' }
     ],
     metrics: [
       { val: '2500', suffix: '+', label: 'Resident Capacity' },
@@ -3673,9 +3673,9 @@ const internalPageData = {
     ],
     gallery: [
       { img: '/brand/campus-life/transport-fleet.jpg', title: 'Sri Shakthi Dedicated Bus Fleet', caption: 'Modern, well-maintained bus fleet parked at the central boarding depot.' },
-      { img: '/brand/campus-arch.jpg', title: 'Main Terminal & Boarding Bay', caption: 'Orderly, dedicated bays facilitating easy morning and evening transit.' },
       { img: '/brand/campus-life/campus-generated.png', title: 'Arrival & Departure Avenue', caption: 'Wide, tree-lined roads providing smooth entry and exit for buses.' },
-      { img: '/brand/techpark-hd.jpg', title: 'Campus Road Network', caption: 'Connected internal roadways linking academic complexes and transit points.' }
+      { img: '/brand/campus-life/transport-fleet.jpg', title: 'Safety-Inspected Transit Fleet', caption: 'Regularly serviced GPS-tracked vehicles equipped with speed governors and emergency exits.' },
+      { img: '/brand/campus-life/campus-generated.png', title: 'Internal Campus Transit Corridors', caption: 'Dedicated vehicular bays ensuring safe student movement separated from pedestrian walkways.' }
     ],
     metrics: [
       { val: '60', suffix: '+', label: 'GPS-Tracked Buses' },
@@ -3720,14 +3720,14 @@ const internalPageData = {
     gallery: [
       { img: '/brand/campus-life/sports-team.png', title: 'Varsity Champions & Squads', caption: 'Our victorious university championship teams across cricket, athletics, and basketball.' },
       { img: '/brand/campus-life/sports.png', title: 'Athletic Track & Field Grounds', caption: 'Olympic standard 400-meter track surrounded by green campus vistas.' },
-      { img: '/brand/campus-life/student-life.png', title: 'Active Student Recreation', caption: 'Daily evening recreational sports matches fostering collegiate camaraderie.' },
-      { img: '/brand/campus-life/cultural.png', title: 'Annual Sports Day Celebrations', caption: 'Intense inter-department sports tournaments and track awards ceremony.' }
+      { img: '/brand/campus-life/sports-gym.jpg', title: 'High-Performance Conditioning Gym', caption: 'Commercial power racks, Olympic barbells, cardio treadmills, and dedicated trainers.' },
+      { img: '/brand/campus-life/sports.png', title: 'Multi-Sport Outdoor Arena', caption: 'Regulation sports grounds equipped with high-intensity LED floodlighting for evening practice.' }
     ],
     metrics: [
       { val: '10', suffix: '+', label: 'Acres Sports Arena' },
       { val: '45', suffix: '+', label: 'State & Zonal Trophies' },
       { val: '15', suffix: '+', label: 'Sport Disciplines' },
-      { val: '100', suffix: '%', label: 'Sports Scholarships' }
+      { val: '100', suffix: '%', label: 'Merit Fee Waivers' }
     ],
     highlights: [
       { title: 'Annual Inter-College Sports Fest', desc: 'Welcomes 80+ collegiate teams from across southern states for high-stakes athletic showdowns.' },
@@ -3810,10 +3810,10 @@ const internalPageData = {
       { icon: 'compass', tag: 'CAREERS', title: 'Armed Forces Mentorship', desc: 'Direct guidance from defense veterans for CDS, AFCAT, and SSB interview preparation.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/ncc-cadets.jpg', title: 'NCC Cadets Ceremonial Parade', caption: 'Impeccable squad drill and saluting guard presented on campus.' },
-      { img: '/brand/campus-life/sports-team.png', title: 'Physical Endurance & Drill Regimen', caption: 'Early morning conditioning runs and obstacle course training.' },
-      { img: '/brand/campus-life/cultural.png', title: 'NSS Community Service Drive', caption: 'Cadets and volunteers organizing rural sanitation and medical awareness camps.' },
-      { img: '/brand/campus-arch.jpg', title: 'Independence Day Honors', caption: 'Patriotic ceremonial assembly at the main institutional flag mast.' }
+      { img: '/brand/campus-life/ncc-cadets.jpg', title: 'NCC 4(TN) BN Ceremonial Guard', caption: 'Impeccable squad drill and saluting guard presented during institutional ceremonies.' },
+      { img: '/brand/campus-life/ncc-cadets.jpg', title: 'Military Drill & Obstacle Course', caption: 'Cadets undergoing rigorous parade inspection, weapon handling, and obstacle course training.' },
+      { img: '/brand/campus-life/learning-growth.png', title: 'NSS Community Health & Literacy Drive', caption: 'Student volunteers conducting rural health surveys, sanitation education, and medical camps.' },
+      { img: '/brand/campus-life/campus-generated.png', title: 'Eco-Protection & Green Belt Drives', caption: 'Cadets and NSS volunteers planting native trees and championing environmental conservation.' }
     ],
     metrics: [
       { val: '160', suffix: '+', label: 'Enrolled Cadets & Volunteers' },
@@ -4092,6 +4092,37 @@ const campusMarqueeItems = [
   { img: '/brand/campus-life/cultural.png', tag: 'Festivals', title: 'Dhruva Mega Cultural Showcase', desc: 'Annual arts, choreography, and musical celebration.' },
 ];
 
+function renderCampusQuickNav(activeRoute) {
+  const tabs = [
+    { key: 'campus-life', label: 'Campus Life', icon: '🌿' },
+    { key: 'facilities', label: 'Facilities', icon: '🏛️' },
+    { key: 'hostel', label: 'Hostel', icon: '🛏️' },
+    { key: 'transport', label: 'Transport', icon: '🚌' },
+    { key: 'sports', label: 'Sports', icon: '🏆' },
+    { key: 'clubs', label: 'Student Clubs', icon: '🎭' },
+    { key: 'ncc', label: 'NCC & NSS', icon: '🎖️' }
+  ];
+
+  return `
+    <nav class="siet-campus-quick-nav-strip" aria-label="Campus Navigation">
+      <div class="siet-campus-quick-nav-inner">
+        <span class="siet-campus-quick-nav-label">
+          <span class="sc-pulse-dot"></span>
+          CAMPUS SUITE
+        </span>
+        <div class="siet-campus-quick-nav-pills">
+          ${tabs.map(t => `
+            <a href="#/${t.key}" class="siet-campus-nav-pill ${activeRoute === t.key ? 'is-active' : ''}">
+              <span class="scnp-icon">${t.icon}</span>
+              <span class="scnp-text">${t.label}</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    </nav>
+  `;
+}
+
 function renderSubdivisionUniqueContent(route) {
   if (route === 'campus-life') {
     return `
@@ -4101,7 +4132,7 @@ function renderSubdivisionUniqueContent(route) {
           <span class="tag-dot"></span>
           <span>DAY IN THE LIFE AT SRI SHAKTHI</span>
         </div>
-        <h3 class="section-subheading">From Morning Assembly to Sunset Sparks</h3>
+        <h3 class="section-subheading">From Morning Immersion to Evening Sparks</h3>
         <div class="campus-life-timeline-grid">
           <div class="cl-time-card">
             <div class="cl-time-badge">08:30 AM</div>
@@ -4186,15 +4217,35 @@ function renderSubdivisionUniqueContent(route) {
 
   if (route === 'facilities') {
     return `
-      <!-- UNIQUE: World-Class Specialized Labs & Facilities Directory -->
+      <!-- UNIQUE: World-Class Specialized Labs & Facilities Directory with Category Filtering -->
       <div class="template-section-block subdivision-feature-block subdivision-facilities">
         <div class="section-tag-pill">
           <span class="tag-dot"></span>
           <span>INFRASTRUCTURE &amp; R&amp;D DIRECTORY</span>
         </div>
         <h3 class="section-subheading">World-Class Specialized Spaces &amp; Centers</h3>
+
+        <!-- Interactive Category Switcher -->
+        <div class="interactive-filter-strip facility-filter-tabs">
+          <button type="button" class="interactive-filter-pill facility-filter-pill is-active" data-facility-cat="all">
+            All Spaces (6 Hubs)
+          </button>
+          <button type="button" class="interactive-filter-pill facility-filter-pill" data-facility-cat="ai">
+            AI &amp; Compute
+          </button>
+          <button type="button" class="interactive-filter-pill facility-filter-pill" data-facility-cat="robotics">
+            Robotics &amp; Hardware
+          </button>
+          <button type="button" class="interactive-filter-pill facility-filter-pill" data-facility-cat="library">
+            Library &amp; Auditoriums
+          </button>
+          <button type="button" class="interactive-filter-pill facility-filter-pill" data-facility-cat="green">
+            Green Eco Campus
+          </button>
+        </div>
+
         <div class="facilities-interactive-grid">
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="ai">
             <div class="fsc-media">
               <img src="/brand/special-labs/lab-ai-hd.jpg" alt="Artificial Intelligence Lab" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">NVIDIA GPU CLUSTER</span>
@@ -4210,7 +4261,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="robotics">
             <div class="fsc-media">
               <img src="/brand/special-labs/lab-robotics-hd.jpg" alt="Robotics & Automation Suite" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">INDUSTRIAL MECHATRONICS</span>
@@ -4226,7 +4277,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="robotics">
             <div class="fsc-media">
               <img src="/brand/special-labs/lab-iot-hd.jpg" alt="IoT & Embedded Sandbox" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">HARDWARE SANDBOX</span>
@@ -4242,7 +4293,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="library">
             <div class="fsc-media">
               <img src="/brand/library-study-hall.jpg" alt="Central Digital Library" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">KNOWLEDGE COMMONS</span>
@@ -4258,7 +4309,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="library">
             <div class="fsc-media">
               <img src="/brand/techpark-hd.jpg" alt="Convention Center & Auditoriums" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">1,200 SEAT AUDITORIUM</span>
@@ -4274,7 +4325,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="facility-showcase-card">
+          <div class="facility-showcase-card" data-facility-cat="green">
             <div class="fsc-media">
               <img src="/brand/campus-arch.jpg" alt="Green Energy Microgrid" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">100% ECO CAMPUS</span>
@@ -4289,6 +4340,14 @@ function renderSubdivisionUniqueContent(route) {
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="facility-access-banner" style="margin-top:30px; background:#f4f9f5; border:1px solid #c8e4d2; border-radius:12px; padding:20px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+          <div>
+            <strong style="color:#004b2c; font-size:15px; display:block; margin-bottom:4px;">Research Lab Open Access Policy</strong>
+            <span style="color:#4a6b57; font-size:13.5px;">Advanced computing and prototype fabrication labs remain open until 08:30 PM for student researchers with valid institutional ID and project registration.</span>
+          </div>
+          <a href="#/curriculum" class="siet-tmpl-btn-outline" style="white-space:nowrap; padding:8px 18px; font-size:13px;">View Curriculum &amp; Labs →</a>
         </div>
       </div>
     `;
@@ -4387,6 +4446,128 @@ function renderSubdivisionUniqueContent(route) {
             <span>Air-conditioned study lounges open past midnight during exams</span>
           </div>
         </div>
+
+        <!-- NEW: Interactive 7-Day Revolving Dining Menu Preview -->
+        <div class="hostel-menu-showcase" style="margin-top:36px; background:#ffffff; border:1px solid #dce8e0; border-radius:16px; padding:28px 24px; box-shadow:0 4px 18px rgba(0,40,27,0.04);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; margin-bottom:20px;">
+            <div>
+              <span style="font-size:11px; font-weight:800; letter-spacing:0.12em; color:#007a40; text-transform:uppercase; display:block; margin-bottom:4px;">NUTRITION &amp; TASTE</span>
+              <h4 style="font-size:20px; font-weight:800; color:#002b1d; margin:0 0 6px;">7-Day Revolving Dining Menu Preview</h4>
+              <p style="font-size:13.5px; color:#4a6556; margin:0;">Cooked in 100% steam mechanized kitchens with certified RO mineral water.</p>
+            </div>
+            <div class="hostel-menu-day-tabs" style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button type="button" class="hostel-menu-day-btn is-active" data-day="mon">Mon</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="tue">Tue</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="wed">Wed</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="thu">Thu</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="fri">Fri</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="sat">Sat</button>
+              <button type="button" class="hostel-menu-day-btn" data-day="sun">Sun</button>
+            </div>
+          </div>
+
+          <div class="hostel-menu-panes-wrap">
+            <div class="hostel-menu-pane is-active" data-day="mon">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Hot Idli &amp; Medu Vada</h5><p>Madurai sambar, fresh coconut chutney, tomato kara chutney, tea &amp; filter coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Chettinad Veg Meals</h5><p>Steamed Ponni rice, drumstick sambar, pepper rasam, cabbage kootu, curd, appalam.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Crispy Onion Pakoda</h5><p>Fresh ginger cardamom tea, coffee, banana, roasted peanuts.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Phulka &amp; Paneer Butter Masala</h5><p>Fresh wheat chapatis, vegetable fried rice, tomato soup, curd, fresh fruits.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="tue">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Ven Pongal &amp; Crispy Vada</h5><p>Ghee ven pongal with cashew, tiffin sambar, coriander chutney, coffee/tea.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Homestyle South &amp; North Spread</h5><p>Steamed rice, poori, potato peas masala, mor kulambu, beans poriyal, curd.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Masala Sundal</h5><p>Boiled nutritious white peas sundal, filter coffee, milk, biscuits.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Vegetable Biryani &amp; Raita</h5><p>Fragrant jeera samba biryani, onion cucumber raita, chapati with dal tadka, gulab jamun.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="wed">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Crispy Ghee Roast Dosa</h5><p>Golden roast dosas, potato sagu, red chilli chutney, mint chutney, tea/coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Traditional Thali Special</h5><p>Steamed rice, keerai kootu, garlic pepper rasam, ladyfinger fry, buttermilk, pickle.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Vegetable Cutlet</h5><p>Crispy breaded veggie cutlets, green mint dip, hot masala chai.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Parotta &amp; Veg Salna / Chana Masala</h5><p>Layered soft parottas, flavorful spicy salna, curd rice, pomegranate seeds.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="thu">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Rava Kichadi &amp; Poori Masala</h5><p>Fluffy wheat pooris, aloo bhaji, vegetable rava kichadi, coconut chutney, tea/coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Bisibelebath &amp; Boondi</h5><p>Traditional Mysore bisibelebath with ghee, potato chips, curd rice, carrot kosumalli.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Sweet Corn Sundal</h5><p>Steamed butter sweet corn, hot South Indian filter coffee, tea.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Idiyappam &amp; Veg Kurma / Chapati</h5><p>Soft steamed rice string hoppers, rich coconut milk veg kurma, hot chapatis, milk.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="fri">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Semiya Upma &amp; Chutney / Idli</h5><p>Vegetable vermicelli upma, steamed idli, tomato onion chutney, tea/coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Friday Special Sambhar Sadham</h5><p>Steamed rice, Kovilpatti sambar, vazhakkai varuval, jeera rasam, sweet payasam, curd.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Mirchi / Banana Bajji</h5><p>Crispy hot bajjis with peanut chutney, masala chai, green tea.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Soft Phulkas &amp; Kadai Paneer</h5><p>Tawa phulkas, kadai paneer gravy, Kashmiri pulao, curd, fresh cut fruits.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="sat">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 07:30 - 08:45 AM</span><h5>Ragi Dosa &amp; Podi Idli</h5><p>Nutritious ragi dosas, gun powder tossed mini idlis, ginger chutney, tea/coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:00 PM</span><h5>Variety Rice Feast</h5><p>Lemon rice, tamarind puliyodharai, curd rice, fried potato roast, appalam.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Veg Puff / Samosa</h5><p>Flaky oven-fresh vegetable puffs with sweet spicy chutney, filter coffee.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Naan &amp; Dal Makhani</h5><p>Butter naan, slow-cooked dal makhani, jeera rice, onion salad, ice cream cup.</p></div>
+              </div>
+            </div>
+
+            <div class="hostel-menu-pane" data-day="sun">
+              <div class="hostel-menu-grid">
+                <div class="hm-slot"><span class="hm-time">BREAKFAST · 08:00 - 09:30 AM</span><h5>Sunday Grand Breakfast</h5><p>Poori masala, mini masala dosas, filter coffee, fresh watermelon juice.</p></div>
+                <div class="hm-slot"><span class="hm-time">LUNCH · 12:30 - 02:30 PM</span><h5>Weekend Grand Banquet</h5><p>Hyderabadi Dum Biryani, paneer tikka / egg curry, onion raita, sweet rasgulla, curd.</p></div>
+                <div class="hm-slot"><span class="hm-time">EVENING SNACKS · 04:30 - 05:30 PM</span><h5>Mysore Bonda</h5><p>Crispy golden urad bondas, coconut chutney, hot masala chai.</p></div>
+                <div class="hm-slot"><span class="hm-time">DINNER · 07:30 - 09:00 PM</span><h5>Light Continental Dinner</h5><p>Veg noodles, vegetable manchurian gravy, soft chapatis, fresh warm milk.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW: Room Specifications Table -->
+        <div class="hostel-rooms-spec-block" style="margin-top:30px;">
+          <h4 style="font-size:18px; font-weight:800; color:#002b1d; margin:0 0 14px;">Resident Room Accommodations</h4>
+          <div class="hostel-rooms-table-wrap" style="overflow-x:auto;">
+            <table class="hostel-rooms-table" style="width:100%; border-collapse:collapse; background:#ffffff; border:1px solid #dce8e0; border-radius:12px; font-size:13.5px;">
+              <thead>
+                <tr style="background:#f1f8f3; color:#004b2c; font-weight:800; text-align:left; border-bottom:2px solid #cbe3d3;">
+                  <th style="padding:14px 16px;">Room Category</th>
+                  <th style="padding:14px 16px;">Occupancy</th>
+                  <th style="padding:14px 16px;">Key Inclusions</th>
+                  <th style="padding:14px 16px;">Amenities</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #edf4ef;">
+                  <td style="padding:14px 16px; font-weight:800; color:#00281b;">Deluxe Double (AC / Non-AC)</td>
+                  <td style="padding:14px 16px;"><span class="room-pill">2 Sharing</span></td>
+                  <td style="padding:14px 16px;">Attached western bathroom, individual teakwood study tables &amp; ergonomic chairs, full-height wardrobes.</td>
+                  <td style="padding:14px 16px; color:#007a40; font-weight:700;">Solar hot water, high-speed Wi-Fi, balcony view</td>
+                </tr>
+                <tr style="border-bottom:1px solid #edf4ef;">
+                  <td style="padding:14px 16px; font-weight:800; color:#00281b;">Classic Triple</td>
+                  <td style="padding:14px 16px;"><span class="room-pill">3 Sharing</span></td>
+                  <td style="padding:14px 16px;">Spacious airy layout, private book cubbies, personal pin-up notice boards, bright natural daylight.</td>
+                  <td style="padding:14px 16px; color:#007a40; font-weight:700;">Corridor water coolers, daily housekeeping</td>
+                </tr>
+                <tr>
+                  <td style="padding:14px 16px; font-weight:800; color:#00281b;">Executive Single (Scholars)</td>
+                  <td style="padding:14px 16px;"><span class="room-pill">Single</span></td>
+                  <td style="padding:14px 16px;">Reserved for postgraduate scholars &amp; final year students; quiet study ambiance and extra power points.</td>
+                  <td style="padding:14px 16px; color:#007a40; font-weight:700;">Personal LAN port, laundry express priority</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     `;
   }
@@ -4400,8 +4581,19 @@ function renderSubdivisionUniqueContent(route) {
           <span>REGIONAL TRANSIT NETWORK</span>
         </div>
         <h3 class="section-subheading">Connected Across Western Tamil Nadu (60+ Bus Routes)</h3>
+
+        <!-- Interactive Boarding Stop Search Box -->
+        <div class="transport-search-bar-wrap" style="margin:24px 0 32px; background:#ffffff; border:1.5px solid #00854a; border-radius:14px; padding:16px 20px; box-shadow:0 6px 22px rgba(0,133,74,0.08); display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+          <div style="font-size:22px; line-height:1; color:#00854a;">🔍</div>
+          <div style="flex:1; min-width:260px;">
+            <label for="transport-stop-search" style="display:block; font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#005a36; margin-bottom:4px;">Live Boarding Point Quick Search</label>
+            <input type="text" id="transport-stop-search" placeholder="Type your area or bus stop (e.g., Gandhipuram, Avinashi, Pollachi, Tirupur, Singanallur, Hope College, Saravanampatti...)" style="width:100%; border:none; outline:none; font-family:'Plus Jakarta Sans',sans-serif; font-size:14.5px; color:#0f2b1d; background:transparent;">
+          </div>
+          <span id="stop-search-count" style="font-size:12px; font-weight:700; color:#005a36; background:#eef8f1; padding:6px 12px; border-radius:20px; border:1px solid #cbe9d4; display:none;"></span>
+        </div>
+
         <div class="transport-routes-grid">
-          <div class="route-zone-card">
+          <div class="route-zone-card" data-zone="1">
             <div class="rzc-top">
               <span class="rzc-code">ZONE 01</span>
               <span class="rzc-badge">METRO CORRIDOR</span>
@@ -4419,7 +4611,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="route-zone-card">
+          <div class="route-zone-card" data-zone="2">
             <div class="rzc-top">
               <span class="rzc-code">ZONE 02</span>
               <span class="rzc-badge">HIGHWAY EXPRESS</span>
@@ -4436,7 +4628,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="route-zone-card">
+          <div class="route-zone-card" data-zone="3">
             <div class="rzc-top">
               <span class="rzc-code">ZONE 03</span>
               <span class="rzc-badge">SOUTH SECTOR</span>
@@ -4453,7 +4645,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="route-zone-card">
+          <div class="route-zone-card" data-zone="4">
             <div class="rzc-top">
               <span class="rzc-code">ZONE 04</span>
               <span class="rzc-badge">EAST CORRIDOR</span>
@@ -4469,7 +4661,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="route-zone-card">
+          <div class="route-zone-card" data-zone="5">
             <div class="rzc-top">
               <span class="rzc-code">ZONE 05</span>
               <span class="rzc-badge">NORTH CORRIDOR</span>
@@ -4497,6 +4689,16 @@ function renderSubdivisionUniqueContent(route) {
             </ul>
           </div>
         </div>
+
+        <!-- NEW: Timetable & Pass Desk info -->
+        <div class="transport-timings-card" style="margin-top:28px; background:#f4f9f5; border:1px solid #cce5d5; border-radius:14px; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <div>
+            <span style="font-size:11px; font-weight:800; color:#007a40; text-transform:uppercase; letter-spacing:0.1em; display:block; margin-bottom:4px;">DAILY SCHEDULE &amp; TRANSIT DESK</span>
+            <strong style="color:#003822; font-size:16px; display:block; margin-bottom:4px;">Morning Campus Arrival: 08:15 AM &bull; Evening Departures: 04:45 PM &amp; 06:15 PM (Late Lab Scholars)</strong>
+            <p style="margin:0; font-size:13px; color:#406250;">For new bus pass requests, route changes, or transport concessions, visit the Transport Control Desk in Main Block Room 104.</p>
+          </div>
+          <a href="tel:04222369900" class="siet-tmpl-btn-outline" style="padding:10px 20px; font-size:13px; white-space:nowrap;">Call Transport Helpdesk</a>
+        </div>
       </div>
     `;
   }
@@ -4510,8 +4712,25 @@ function renderSubdivisionUniqueContent(route) {
           <span>CHAMPIONSHIP SPORTS ARENAS</span>
         </div>
         <h3 class="section-subheading">World-Class Athletic Arenas &amp; Training Complexes</h3>
+
+        <!-- Interactive Category Switcher -->
+        <div class="interactive-filter-strip sports-filter-tabs">
+          <button type="button" class="interactive-filter-pill sports-filter-pill is-active" data-sport-cat="all">
+            All Arenas (4 Complexes)
+          </button>
+          <button type="button" class="interactive-filter-pill sports-filter-pill" data-sport-cat="outdoor">
+            Outdoor Arenas
+          </button>
+          <button type="button" class="interactive-filter-pill sports-filter-pill" data-sport-cat="indoor">
+            Indoor Complex
+          </button>
+          <button type="button" class="interactive-filter-pill sports-filter-pill" data-sport-cat="gym">
+            Strength &amp; Conditioning
+          </button>
+        </div>
+
         <div class="sports-arenas-grid">
-          <div class="sport-arena-card">
+          <div class="sport-arena-card" data-sport-cat="outdoor">
             <div class="sac-media">
               <img src="/brand/campus-life/sports.png" alt="Olympic 400m Athletic Track" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">TRACK &amp; FIELD</span>
@@ -4522,7 +4741,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="sport-arena-card">
+          <div class="sport-arena-card" data-sport-cat="indoor">
             <div class="sac-media">
               <img src="/brand/campus-life/sports-team.png" alt="Indoor Badminton Complex" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">AIR-COOLED INDOOR</span>
@@ -4533,9 +4752,9 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="sport-arena-card">
+          <div class="sport-arena-card" data-sport-cat="outdoor">
             <div class="sac-media">
-              <img src="/brand/campus-life/student-life.png" alt="Basketball & Volleyball Arenas" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports.png" alt="Basketball & Volleyball Arenas" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">FLOODLIT ARENAS</span>
             </div>
             <div class="sac-content">
@@ -4544,9 +4763,9 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="sport-arena-card">
+          <div class="sport-arena-card" data-sport-cat="gym">
             <div class="sac-media">
-              <img src="/brand/campus-life/cultural.png" alt="Gymnasium & Conditioning" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports-gym.jpg" alt="Gymnasium & Conditioning" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">STRENGTH &amp; CONDITIONING</span>
             </div>
             <div class="sac-content">
@@ -4567,21 +4786,66 @@ function renderSubdivisionUniqueContent(route) {
             <span>🩺 Resident Sports Physiotherapist Support</span>
           </div>
         </div>
+
+        <!-- NEW: Recent Championships & Honors Strip -->
+        <div class="sports-trophies-strip" style="margin-top:30px; background:#ffffff; border:1px solid #dce8e0; border-radius:14px; padding:24px; box-shadow:0 4px 16px rgba(0,40,27,0.04);">
+          <span style="font-size:11px; font-weight:800; color:#007a40; text-transform:uppercase; letter-spacing:0.12em; display:block; margin-bottom:6px;">TOURNAMENT EXCELLENCE</span>
+          <h4 style="font-size:18px; font-weight:800; color:#002b1d; margin:0 0 16px;">Varsity Honors &amp; State Championship Trophies</h4>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px;">
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:14px 16px;">
+              <span style="font-size:20px; display:block; margin-bottom:4px;">🏏</span>
+              <strong style="font-size:14px; color:#003822; display:block;">Anna University Zonal Cricket</strong>
+              <span style="font-size:12.5px; color:#4a6b57;">Champions for 4 Consecutive Seasons</span>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:14px 16px;">
+              <span style="font-size:20px; display:block; margin-bottom:4px;">🏸</span>
+              <strong style="font-size:14px; color:#003822; display:block;">Inter-Collegiate Badminton</strong>
+              <span style="font-size:12.5px; color:#4a6b57;">State Gold Medals (Men &amp; Women)</span>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:14px 16px;">
+              <span style="font-size:20px; display:block; margin-bottom:4px;">🏃</span>
+              <strong style="font-size:14px; color:#003822; display:block;">CM Trophy Athletics Meet</strong>
+              <span style="font-size:12.5px; color:#4a6b57;">Multiple Medals in 100m, 400m &amp; Relays</span>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:14px 16px;">
+              <span style="font-size:20px; display:block; margin-bottom:4px;">🏀</span>
+              <strong style="font-size:14px; color:#003822; display:block;">South India Basketball Cup</strong>
+              <span style="font-size:12.5px; color:#4a6b57;">Silver Finalists &amp; Best Fair Play Trophy</span>
+            </div>
+          </div>
+        </div>
       </div>
     `;
   }
 
   if (route === 'clubs') {
     return `
-      <!-- UNIQUE: 26+ Student Societies Directory -->
+      <!-- UNIQUE: 26+ Student Societies Directory with Interactive Category Filter -->
       <div class="template-section-block subdivision-feature-block subdivision-clubs">
         <div class="section-tag-pill">
           <span class="tag-dot"></span>
           <span>STUDENT SOCIETIES &amp; CHAPTERS</span>
         </div>
         <h3 class="section-subheading">26+ Student-Led Societies: Code, Create, &amp; Lead</h3>
+
+        <!-- Interactive Category Switcher -->
+        <div class="interactive-filter-strip club-filter-tabs">
+          <button type="button" class="interactive-filter-pill club-filter-pill is-active" data-club-cat="all">
+            All Societies (26+)
+          </button>
+          <button type="button" class="interactive-filter-pill club-filter-pill" data-club-cat="tech">
+            Technical &amp; Coding
+          </button>
+          <button type="button" class="interactive-filter-pill club-filter-pill" data-club-cat="arts">
+            Arts &amp; Expression
+          </button>
+          <button type="button" class="interactive-filter-pill club-filter-pill" data-club-cat="impact">
+            Social &amp; Outreach
+          </button>
+        </div>
+
         <div class="clubs-directory-grid">
-          <div class="club-cat-card">
+          <div class="club-cat-card" data-club-cat="tech">
             <div class="ccc-header">
               <span class="ccc-tag">TECHNICAL &amp; CODING</span>
               <h4>Innovation &amp; Engineering Guilds</h4>
@@ -4606,7 +4870,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="club-cat-card">
+          <div class="club-cat-card" data-club-cat="arts">
             <div class="ccc-header">
               <span class="ccc-tag">ARTS &amp; EXPRESSION</span>
               <h4>Cultural &amp; Performing Arts</h4>
@@ -4631,7 +4895,7 @@ function renderSubdivisionUniqueContent(route) {
             </div>
           </div>
 
-          <div class="club-cat-card">
+          <div class="club-cat-card" data-club-cat="impact">
             <div class="ccc-header">
               <span class="ccc-tag">LEADERSHIP &amp; IMPACT</span>
               <h4>Social, Literary &amp; Outreach</h4>
@@ -4660,7 +4924,7 @@ function renderSubdivisionUniqueContent(route) {
         <div class="club-perks-banner">
           <div class="cpb-badge">WHY JOIN A CLUB?</div>
           <h4>Turning Ideas into Impactful Portfolios</h4>
-          <p>Every active club member receives access to project funding grants from the college, direct mentorship from senior alumni, and formal credits on their Co-Curricular Transcript.</p>
+          <p>Every active club member receives access to project funding grants up to ₹50,000 from the college, direct mentorship from senior alumni, and formal credits on their Co-Curricular Transcript.</p>
         </div>
       </div>
     `;
@@ -4922,6 +5186,7 @@ function internalPage(route) {
 
   return `<main class="internal-page enhanced-template-page ${isDepts ? 'departments-page departments-index-page' : ''}">
     ${getPageHeaderHtml()}
+    ${isCampus ? renderCampusQuickNav(route) : ''}
 
     <section class="page-content enhanced-page-content">
       <div class="template-main-column reveal">
@@ -7139,6 +7404,108 @@ function render() {
   scrollTo(0, 0);
 }
 
+function bindCampusEvents($, $$) {
+  // 1. Transport Stop Live Search
+  const stopSearch = $('#transport-stop-search');
+  if (stopSearch) {
+    const handleSearch = (e) => {
+      const q = (e.target.value || '').trim().toLowerCase();
+      const chips = $$('.stop-chip');
+      const cards = $$('.route-zone-card');
+      const countEl = $('#stop-search-count');
+      let matchCount = 0;
+
+      if (!q) {
+        chips.forEach(c => c.classList.remove('stop-highlight'));
+        cards.forEach(card => {
+          card.style.opacity = '1';
+          card.classList.remove('has-matching-stop');
+        });
+        if (countEl) countEl.style.display = 'none';
+        return;
+      }
+
+      chips.forEach(chip => {
+        const text = (chip.textContent || '').toLowerCase();
+        const isMatch = text.includes(q);
+        chip.classList.toggle('stop-highlight', isMatch);
+        if (isMatch) matchCount++;
+      });
+
+      cards.forEach(card => {
+        const hasMatch = card.querySelectorAll('.stop-chip.stop-highlight').length > 0;
+        card.style.opacity = hasMatch ? '1' : '0.35';
+        card.classList.toggle('has-matching-stop', hasMatch);
+      });
+
+      if (countEl) {
+        countEl.style.display = 'inline-block';
+        countEl.textContent = matchCount > 0 ? `Found ${matchCount} matching stop${matchCount > 1 ? 's' : ''}` : 'No matching stops found';
+      }
+    };
+    stopSearch.addEventListener('input', handleSearch);
+  }
+
+  // 2. Student Clubs Category Filter
+  $$('.club-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.club-filter-pill').forEach(b => b.classList.toggle('is-active', b === btn));
+      const cat = btn.dataset.clubCat;
+      $$('.club-cat-card').forEach(card => {
+        if (cat === 'all' || card.dataset.clubCat === cat) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 3. Hostel Dining Menu Day Switcher
+  $$('.hostel-menu-day-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.hostel-menu-day-btn').forEach(b => b.classList.toggle('is-active', b === btn));
+      const day = btn.dataset.day;
+      $$('.hostel-menu-pane').forEach(pane => {
+        pane.classList.toggle('is-active', pane.dataset.day === day);
+      });
+    });
+  });
+
+  // 4. Sports Arenas Category Filter
+  $$('.sports-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.sports-filter-pill').forEach(b => b.classList.toggle('is-active', b === btn));
+      const cat = btn.dataset.sportCat;
+      $$('.sport-arena-card').forEach(card => {
+        if (cat === 'all' || card.dataset.sportCat === cat) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 5. Facilities Category Filter
+  $$('.facility-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.facility-filter-pill').forEach(b => b.classList.toggle('is-active', b === btn));
+      const cat = btn.dataset.facilityCat;
+      $$('.facility-showcase-card').forEach(card => {
+        if (cat === 'all' || card.dataset.facilityCat === cat) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
 function bind() {
   if (route() === 'academics') {
     document.title = "Academic Overview | Sri Shakthi Institute of Engineering & Technology";
@@ -7193,6 +7560,7 @@ function bind() {
   bindCoeEvents($, $$);
   bindPlacementEvents($, $$);
   bindGovernanceEvents($, $$);
+  bindCampusEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";

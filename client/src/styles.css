@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=League+Spartan:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=League+Spartan:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 :root {
   --navy: #075b36;
@@ -53308,3 +53308,304 @@ button.coe-action-card {
   gap: 16px;
   margin-top: 10px;
 }
+
+/* ══════════════════════════════════════════════════════════
+   PLACEMENT DIVISIONS QUICK NAV STRIP
+   ══════════════════════════════════════════════════════════ */
+.siet-sp-quick-nav-strip {
+  background: #002216;
+  border-bottom: 1.5px solid rgba(243, 197, 21, 0.3);
+  padding: 10px 16px;
+  position: relative;
+  z-index: 20;
+}
+
+.siet-sp-quick-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  scrollbar-width: none;
+}
+
+.siet-sp-quick-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.siet-sp-nav-pill {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.siet-sp-nav-pill:not(.is-active):hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-color: rgba(243, 197, 21, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.siet-sp-nav-pill.is-active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(243, 197, 21, 0.35);
+}
+
+/* ══════════════════════════════════════════════════════════
+   CAMPUS SUITE QUICK NAVIGATION STRIP
+   ══════════════════════════════════════════════════════════ */
+.siet-campus-quick-nav-strip {
+  background: #002216;
+  border-bottom: 1.5px solid rgba(243, 197, 21, 0.3);
+  padding: 10px 16px;
+  position: relative;
+  z-index: 20;
+}
+
+.siet-campus-quick-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.siet-campus-quick-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.siet-campus-quick-nav-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #f3c515;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  padding-right: 6px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sc-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: scPulse 2s infinite ease-in-out;
+}
+
+@keyframes scPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.siet-campus-quick-nav-pills {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.siet-campus-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.siet-campus-nav-pill:not(.is-active):hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(243, 197, 21, 0.5);
+  transform: translateY(-1px);
+}
+
+.siet-campus-nav-pill.is-active {
+  background: #f3c515;
+  color: #00281b;
+  border-color: #f3c515;
+  font-weight: 800;
+  box-shadow: 0 3px 12px rgba(243, 197, 21, 0.35);
+}
+
+.siet-campus-nav-pill.is-active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(243, 197, 21, 0.45);
+}
+
+/* ══════════════════════════════════════════════════════════
+   INTERACTIVE SUBDIVISION FILTER STRIPS & PILLS
+   ══════════════════════════════════════════════════════════ */
+.interactive-filter-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.interactive-filter-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1.5px solid #d2e4d8;
+  background: #ffffff;
+  color: #1e3a2b;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-filter-pill:hover {
+  background: #eef7f1;
+  border-color: #00854a;
+  color: #005a36;
+}
+
+.interactive-filter-pill.is-active {
+  background: #005a36;
+  border-color: #005a36;
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 90, 54, 0.2);
+}
+
+/* ══════════════════════════════════════════════════════════
+   HOSTEL 7-DAY DINING MENU STYLES
+   ══════════════════════════════════════════════════════════ */
+.hostel-menu-day-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.hostel-menu-day-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #d2e4d8;
+  background: #f4f8f5;
+  color: #1e3a2b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hostel-menu-day-btn:hover {
+  background: #e6f2ea;
+  border-color: #007a40;
+}
+
+.hostel-menu-day-btn.is-active {
+  background: #005a36;
+  border-color: #005a36;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.hostel-menu-pane {
+  display: none;
+}
+
+.hostel-menu-pane.is-active {
+  display: block;
+  animation: sietFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes sietFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hostel-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.hm-slot {
+  background: #f7fbf8;
+  border: 1px solid #d8ebd9;
+  border-radius: 10px;
+  padding: 16px 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hm-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 40, 27, 0.05);
+}
+
+.hm-time {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #007a40;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hm-slot h5 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #00281b;
+  margin: 0 0 4px;
+}
+
+.hm-slot p {
+  font-size: 12.5px;
+  color: #475569;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.room-pill {
+  font-size: 11px;
+  font-weight: 800;
+  background: #eef6f0;
+  color: #005a36;
+  padding: 3px 9px;
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px solid #d2ebd9;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIVE TRANSPORT SEARCH HIGHLIGHTS
+   ══════════════════════════════════════════════════════════ */
+.stop-chip.stop-highlight {
+  background: #fef08a !important;
+  color: #00281b !important;
+  border-color: #eab308 !important;
+  font-weight: 800 !important;
+  transform: scale(1.06);
+  box-shadow: 0 2px 8px rgba(234, 179, 8, 0.35);
+}
+
+.route-zone-card {
+  transition: opacity 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.route-zone-card.has-matching-stop {
+  border-color: #00854a !important;
+  box-shadow: 0 8px 24px rgba(0, 133, 74, 0.16) !important;
+}
+

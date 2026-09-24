@@ -765,6 +765,35 @@ const vmIcon = (name) => {
   return icons[name] || icons.spark;
 };
 
+// Shared Placement Quick Nav Strip between Placements, EDC, Higher Education & Civil Services
+export function renderPlacementQuickNav(activeKey = 'jobs') {
+  const items = [
+    { key: 'jobs', label: 'Job Placements', href: '#/placements', icon: '★' },
+    { key: 'entrepreneurship', label: 'Entrepreneurship (E-Cell / EDC)', href: '#/placements/entrepreneurship' },
+    { key: 'higher-education', label: 'Higher Education & Admissions', href: '#/placements/higher-education' },
+    { key: 'government-services', label: 'Civil & Government Services', href: '#/placements/government-services' },
+  ];
+
+  const activeStyle = 'background:#f3c515; color:#00281b; font-weight:800; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; display:inline-flex; align-items:center; gap:6px; box-shadow:0 2px 8px rgba(243,197,21,0.25);';
+  const inactiveStyle = 'background:rgba(255,255,255,0.08); color:#e0ebe3; font-weight:700; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; border:1px solid rgba(255,255,255,0.15); display:inline-flex; align-items:center; gap:6px;';
+
+  return `
+    <!-- Placement Sub-sections Quick Nav Strip -->
+    <nav class="siet-sp-quick-nav-strip" aria-label="Placement Divisions" style="background:#002216; border-bottom:1.5px solid rgba(243,197,21,0.3); padding:10px 16px;">
+      <div class="siet-sp-quick-nav-inner" style="max-width:1240px; margin:0 auto; display:flex; gap:10px; overflow-x:auto; -webkit-overflow-scrolling:touch; align-items:center;">
+        ${items.map(item => {
+          const isActive = item.key === activeKey;
+          return `
+            <a href="${item.href}" class="siet-sp-nav-pill ${isActive ? 'is-active' : ''}" style="${isActive ? activeStyle : inactiveStyle}">
+              ${item.icon ? `<span>${item.icon}</span> ` : ''}${item.label}
+            </a>
+          `;
+        }).join('')}
+      </div>
+    </nav>
+  `;
+}
+
 export function entrepreneurshipPage() {
   const startupsCount = startupsData.length;
   const eventsCount = edcProgramsData.length;
@@ -788,11 +817,20 @@ export function entrepreneurshipPage() {
         <div class="siet-vm-hero-orb orb-one"></div>
         <div class="siet-vm-hero-orb orb-two"></div>
         <div class="siet-vm-shell siet-vm-hero-content reveal">
+          <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 16px;">
+            <a href="#/">Home</a>
+            <span class="sep">/</span>
+            <a href="#/placements">Placements</a>
+            <span class="sep">/</span>
+            <span class="cur">Entrepreneurship</span>
+          </nav>
           <p class="siet-vm-kicker"><i></i> SPECIAL INITIATIVE</p>
           <h1>Entrepreneurship <em>Development Cell</em></h1>
           <p class="siet-vm-intro">(Transforms innovative idea into a successful business model) &mdash; Headed by Shri Sheelan Thangavelu, Joint Secretary, Sri Shakthi Institute of Engineering Technology, Coimbatore.</p>
         </div>
       </section>
+
+      ${renderPlacementQuickNav('entrepreneurship')}
 
       <!-- CONTENT SHELL MATCHING ABOUT PAGE ARCHITECTURE -->
       <section class="siet-vm-content">
@@ -801,6 +839,10 @@ export function entrepreneurshipPage() {
           <!-- LEFT SIDEBAR COMPONENT IDENTICAL TO ABOUT PAGE SIDEBAR -->
           <aside class="siet-vm-sidebar reveal">
             <div class="siet-vm-sidebar-head">
+              <a href="#/placements" style="display:inline-flex; align-items:center; gap:6px; color:#167a39; font-size:12px; font-weight:700; text-decoration:none; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Placements
+              </a>
               <span>CAREER SUPPORT</span>
               <h2>Entrepreneurship</h2>
             </div>
@@ -814,13 +856,11 @@ export function entrepreneurshipPage() {
               <a class="siet-edc-side-tab ${isTabActive('startups') ? 'is-active' : ''}" data-tab="startups" href="#/placements/entrepreneurship?tab=startups" ${isTabActive('startups') ? 'aria-current="page"' : ''} aria-label="List of Start-ups">
                 <span class="siet-vm-nav-icon">${vmIcon('spark')}</span>
                 <b>List of Start-ups</b>
-                <span class="siet-edc-side-pill">${startupsCount}</span>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('events') ? 'is-active' : ''}" data-tab="events" href="#/placements/entrepreneurship?tab=events" ${isTabActive('events') ? 'aria-current="page"' : ''} aria-label="List of Events">
                 <span class="siet-vm-nav-icon">${vmIcon('calendar')}</span>
                 <b>List of Events</b>
-                <span class="siet-edc-side-pill">${eventsCount}</span>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('team') ? 'is-active' : ''}" data-tab="team" href="#/placements/entrepreneurship?tab=team" ${isTabActive('team') ? 'aria-current="page"' : ''} aria-label="Our Team Members">

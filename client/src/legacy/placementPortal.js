@@ -2,7 +2,7 @@
 // Sri Shakthi Institute of Engineering and Technology (Autonomous)
 // Bespoke Executive Hero & Template + Full Rich Placement Suite from campus/Nithiya
 
-import { entrepreneurshipPage, initEntrepreneurshipEvents } from './entrepreneurship.js';
+import { entrepreneurshipPage, initEntrepreneurshipEvents, renderPlacementQuickNav } from './entrepreneurship.js';
 
 const vmIcon = (name) => ({
   eye: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
@@ -413,68 +413,229 @@ function updateSuperstarsMarquee(tier) {
 function higherEducationPage() {
   return `
     <main class="siet-vm-page">
-      <section class="siet-vm-hero">
-        <div class="siet-vm-hero-grid"></div>
-        <div class="siet-vm-hero-orb orb-one"></div>
-        <div class="siet-vm-hero-orb orb-two"></div>
-        <div class="siet-vm-shell siet-vm-hero-content reveal">
-          <p class="siet-vm-kicker"><i></i> HIGHER EDUCATION</p>
-          <h1>Higher Education <em>&amp; Admissions</em></h1>
-          <p class="siet-vm-intro">Guiding graduates towards post-graduate admissions at premier international universities and Indian institutes.</p>
+      <section class="coe-exec-hero placement-exec-hero">
+        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
+        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+        <div class="coe-exec-shell">
+          <div class="coe-exec-topbar">
+            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
+              <a href="#/">Home</a>
+              <span class="sep">/</span>
+              <a href="#/placements">Placements</a>
+              <span class="sep">/</span>
+              <span class="cur">Higher Education</span>
+            </nav>
+            <div class="coe-exec-status-group">
+              <span class="coe-status-pill">
+                <span class="status-pulse"></span>
+                <span>GLOBAL ADMISSIONS &amp; RESEARCH CELL</span>
+              </span>
+              <span class="coe-status-tag">BATCH 2025–2026</span>
+            </div>
+          </div>
+
+          <div class="coe-exec-main">
+            <div class="coe-exec-content-col">
+              <div class="coe-exec-kicker-row">
+                <span class="coe-kicker-gold">CENTRE FOR HIGHER STUDIES</span>
+                <span class="coe-kicker-div">•</span>
+                <span class="coe-kicker-sub">GLOBAL PATHWAYS &amp; ADMISSIONS</span>
+              </div>
+              <h1 class="coe-exec-title">Higher Education &amp; Admissions</h1>
+              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
+              <div class="coe-exec-quote-card">
+                <p>
+                  "Mentoring ambitious graduates towards post-graduate admissions, full-tuition research fellowships, and master's degrees at Ivy League academies, premier international universities, and Indian Institutes of Technology."
+                </p>
+              </div>
+              <div class="coe-exec-pillars-row">
+                <div class="coe-pillar-chip"><span><b>Alumni Abroad:</b> 500+ Scholars</span></div>
+                <div class="coe-pillar-chip"><span><b>Free Coaching:</b> GATE, GRE, CAT, IELTS</span></div>
+                <div class="coe-pillar-chip"><span><b>Target Universities:</b> Top 100 QS Ranked</span></div>
+                <div class="coe-pillar-chip"><span><b>Scholarships:</b> Up to $40,000+ Won</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div class="siet-sp-lower-shell">
-        <div class="siet-tmpl-sub-grid">
-          <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-card-pattern"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">01 / ENTRANCE</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">IN-HOUSE COACHING</p><h2>GATE, GRE, CAT &amp; IELTS</h2><p>Structured preparation integrated into student schedules with faculty mentors and external trainers for national and global exams.</p></div>
-            <div class="siet-vm-card-footer"><span>Comprehensive Exam Training</span><i></i></div>
-          </article>
-          <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-mission-lines"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">02 / PREMIER INSTITUTES</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">INDIAN EXCELLENCE</p><h2>IISc, IITs, NITs &amp; IIMs</h2><p>Our students consistently qualify GATE and CAT to enter M.Tech, MS, and MBA programs at IISc Bangalore, IIT Madras, and top NITs.</p></div>
-            <div class="siet-vm-card-footer"><span>National Top-Rankers</span><i></i></div>
-          </article>
+      ${renderPlacementQuickNav('higher-education')}
 
-          <!-- INTERNATIONAL EDUCATION CARDS -->
-          <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-card-pattern"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">03 / USA</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United States</h2><p>Counselling provided for post graduate courses in Ivy League &amp; Top Tech Institutes.</p></div>
-            <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-          </article>
-
-          <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-mission-lines"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">04 / UK</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United Kingdom</h2><p>Counselling provided for post graduate courses in Russell Group Universities.</p></div>
-            <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-          </article>
-
-          <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-card-pattern"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">05 / CANADA</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Canada</h2><p>Counselling provided for post graduate courses in Leading Research Academies.</p></div>
-            <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-          </article>
-
-          <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-mission-lines"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">06 / AUSTRALIA</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Australia</h2><p>Counselling provided for post graduate courses in Group of Eight (Go8) Universities.</p></div>
-            <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-          </article>
-
-          <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-card-pattern"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">07 / GERMANY</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Germany</h2><p>Counselling provided for post graduate courses in TU9 Engineering Excellence institutes.</p></div>
-            <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-          </article>
+      <div class="siet-sp-lower-shell" style="max-width:1240px; margin:0 auto; padding:40px 20px 60px;">
+        
+        <!-- Interactive Pathway Filter Tabs -->
+        <div style="text-align:center; margin-bottom:32px;">
+          <span style="font-size:11.5px; font-weight:800; letter-spacing:0.14em; color:#00854a; text-transform:uppercase; display:block; margin-bottom:6px;">GLOBAL DESTINATION PATHWAYS</span>
+          <h2 style="font-size:clamp(24px, 2.5vw, 32px); font-weight:800; color:#00281b; margin:0 0 16px;">Where Our Graduates Excel</h2>
+          <div class="interactive-filter-strip" style="justify-content:center;">
+            <button type="button" class="interactive-filter-pill js-he-tab is-active" data-dest="all">All Pathways (6)</button>
+            <button type="button" class="interactive-filter-pill js-he-tab" data-dest="usa">USA &amp; Ivy League</button>
+            <button type="button" class="interactive-filter-pill js-he-tab" data-dest="uk">UK &amp; Europe</button>
+            <button type="button" class="interactive-filter-pill js-he-tab" data-dest="can-aus">Canada &amp; Australia</button>
+            <button type="button" class="interactive-filter-pill js-he-tab" data-dest="ger-asia">Germany &amp; Singapore</button>
+            <button type="button" class="interactive-filter-pill js-he-tab" data-dest="india">Premier Indian Institutes</button>
+          </div>
         </div>
+
+        <!-- Global Destination Cards Grid -->
+        <div class="siet-he-dest-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:22px; margin-bottom:48px;">
+          
+          <!-- USA -->
+          <article class="siet-vm-card siet-vm-card-vision js-he-card reveal" data-dest="usa" style="min-height:280px; padding:26px; border-top:4px solid #005a36;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('compass')}</span>
+              <span class="siet-vm-card-number">01 / USA</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">IVY LEAGUE &amp; TECH LEADING HUBS</p>
+              <h2>United States of America</h2>
+              <p>Specialized counselling for STEM MS &amp; PhD programmes in Computing, AI, Robotics, Embedded Systems, and VLSI.</p>
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Carnegie Mellon</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Georgia Tech</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Purdue</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">UT Austin</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Columbia</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>3-Year OPT &amp; STEM Extension Guidance</span><i></i></div>
+          </article>
+
+          <!-- UK -->
+          <article class="siet-vm-card siet-vm-card-mission js-he-card reveal" data-dest="uk" style="min-height:280px; padding:26px; border-top:4px solid #cca01d;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('compass')}</span>
+              <span class="siet-vm-card-number">02 / UK</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">RUSSELL GROUP &amp; ADVANCED RESEARCH</p>
+              <h2>United Kingdom</h2>
+              <p>Admissions counselling for 1-year and 2-year MSc programmes with access to the 2-Year UK Graduate Post-Study Work Visa.</p>
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Imperial College</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Univ of Oxford</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Edinburgh</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Manchester</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Chevening &amp; Commonwealth Mentorship</span><i></i></div>
+          </article>
+
+          <!-- Canada & Australia -->
+          <article class="siet-vm-card siet-vm-card-vision js-he-card reveal" data-dest="can-aus" style="min-height:280px; padding:26px; border-top:4px solid #005a36;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('compass')}</span>
+              <span class="siet-vm-card-number">03 / CAN &amp; AUS</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">U15 RESEARCH ACADEMIES &amp; GO8</p>
+              <h2>Canada &amp; Australia</h2>
+              <p>Pathways to research-intensive MASc and M.Eng degrees with transparent permanent residency immigration frameworks.</p>
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Univ of Toronto</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">UBC</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Melbourne</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">UNSW Sydney</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Co-Op Work Term Integration</span><i></i></div>
+          </article>
+
+          <!-- Germany & Singapore -->
+          <article class="siet-vm-card siet-vm-card-mission js-he-card reveal" data-dest="ger-asia" style="min-height:280px; padding:26px; border-top:4px solid #cca01d;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('compass')}</span>
+              <span class="siet-vm-card-number">04 / GER &amp; ASIA</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">TU9 GERMAN EXCELLENCE &amp; ASIAN HUBS</p>
+              <h2>Germany &amp; Singapore</h2>
+              <p>Tuition-free engineering master's in Germany (TU9 consortium) and world top-10 technology universities in Singapore.</p>
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">TU Munich</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">RWTH Aachen</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">NUS Singapore</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">NTU Singapore</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>DAAD Fellowship Assistance</span><i></i></div>
+          </article>
+
+          <!-- India Premier Institutes -->
+          <article class="siet-vm-card siet-vm-card-vision js-he-card reveal" data-dest="india" style="min-height:280px; padding:26px; border-top:4px solid #005a36; grid-column:span 2;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('education')}</span>
+              <span class="siet-vm-card-number">05 / INDIA PREMIER</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">NATIONAL INSTITUTES OF EXCELLENCE</p>
+              <h2>GATE &amp; CAT Pathways: IISc, IITs, NITs &amp; IIMs</h2>
+              <p>Rigorous departmental coaching modules integrated into academic timetables enabling graduates to crack GATE with top percentiles and secure M.Tech / MS by Research seats with MHRD monthly stipends.</p>
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">IISc Bangalore</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">IIT Madras</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">IIT Bombay</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">IIT Delhi</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">IIM Ahmedabad</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">NIT Trichy</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Monthly MHRD Fellowship: ₹12,400/pm</span><i></i></div>
+          </article>
+
+        </div>
+
+        <!-- 4-Stage Higher Studies Roadmap -->
+        <div class="siet-pj-header" style="text-align:center; max-width:780px; margin:0 auto 36px;">
+          <span class="siet-pj-kicker" style="color:#00854a; font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">STEP-BY-STEP ADMISSIONS ROADMAP</span>
+          <h2 class="siet-pj-title" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(24px, 2.5vw, 32px); font-weight:800; color:#00281b; margin:0 0 10px;">The 4-Stage Higher Studies Journey</h2>
+          <p class="siet-pj-desc" style="font-family:'Plus Jakarta Sans',sans-serif; font-size:14.5px; line-height:1.6; color:#475569; margin:0 auto;">A systematic roadmap from foundational undergraduate research to premier global post-graduate admissions.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:48px;">
+          <div style="background:#ffffff; border:1px solid #dce8e0; border-top:4px solid #005a36; border-radius:14px; padding:24px 20px; box-shadow:0 4px 16px rgba(0,40,27,0.04);">
+            <span style="font-size:11px; font-weight:800; color:#005a36; background:#eef6f0; padding:2px 8px; border-radius:6px; display:inline-block; margin-bottom:10px;">STAGE 01 &bull; SEM 3–4</span>
+            <h4 style="font-size:16px; font-weight:800; color:#00281b; margin:0 0 8px;">Profile &amp; Research Publications</h4>
+            <p style="font-size:13px; color:#475569; line-height:1.5; margin:0;">Undergraduate research mentorship in department CoEs, IEEE/Scopus conference publications, and GPA optimization.</p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #dce8e0; border-top:4px solid #005a36; border-radius:14px; padding:24px 20px; box-shadow:0 4px 16px rgba(0,40,27,0.04);">
+            <span style="font-size:11px; font-weight:800; color:#005a36; background:#eef6f0; padding:2px 8px; border-radius:6px; display:inline-block; margin-bottom:10px;">STAGE 02 &bull; SEM 5–6</span>
+            <h4 style="font-size:16px; font-weight:800; color:#00281b; margin:0 0 8px;">Free Exam Preparation Cell</h4>
+            <p style="font-size:13px; color:#475569; line-height:1.5; margin:0;">In-house training batches for GATE, GRE, CAT, IELTS, and TOEFL with mock computer-based test simulations.</p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #dce8e0; border-top:4px solid #005a36; border-radius:14px; padding:24px 20px; box-shadow:0 4px 16px rgba(0,40,27,0.04);">
+            <span style="font-size:11px; font-weight:800; color:#005a36; background:#eef6f0; padding:2px 8px; border-radius:6px; display:inline-block; margin-bottom:10px;">STAGE 03 &bull; SEM 6–7</span>
+            <h4 style="font-size:16px; font-weight:800; color:#00281b; margin:0 0 8px;">SOP &amp; Faculty Endorsements</h4>
+            <p style="font-size:13px; color:#475569; line-height:1.5; margin:0;">Personalized Statement of Purpose (SOP) drafting, academic resume building, and institutional Letters of Recommendation (LOR).</p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid #dce8e0; border-top:4px solid #f3c515; border-radius:14px; padding:24px 20px; box-shadow:0 4px 16px rgba(0,40,27,0.04);">
+            <span style="font-size:11px; font-weight:800; color:#00281b; background:#fef08a; padding:2px 8px; border-radius:6px; display:inline-block; margin-bottom:10px;">STAGE 04 &bull; SEM 7–8</span>
+            <h4 style="font-size:16px; font-weight:800; color:#00281b; margin:0 0 8px;">Admissions &amp; Visa Board</h4>
+            <p style="font-size:13px; color:#475569; line-height:1.5; margin:0;">Application fee waiver submissions, Research Assistantship (RA/TA) filings, and mock Embassy visa interviews.</p>
+          </div>
+        </div>
+
+        <!-- In-House Coaching Cell Schedule Banner -->
+        <div style="background:#f4f9f5; border:1.5px solid #cbe9d4; border-radius:16px; padding:26px 28px; margin-bottom:36px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+          <div>
+            <span style="font-size:11px; font-weight:800; color:#007a40; text-transform:uppercase; letter-spacing:0.12em; display:block; margin-bottom:4px;">IN-HOUSE HIGHER STUDIES CELL</span>
+            <h4 style="font-size:18px; font-weight:800; color:#003822; margin:0 0 6px;">Daily Free Coaching Batches for Pre-Final &amp; Final Years</h4>
+            <p style="font-size:13.5px; color:#406250; margin:0;">Classes conducted Monday to Friday, 04:45 PM – 06:15 PM in Tech Park Seminar Complex. Free library books &amp; online test series access.</p>
+          </div>
+          <a href="mailto:higherstudies@siet.ac.in" class="siet-tmpl-btn-outline" style="padding:10px 22px; font-size:13px; white-space:nowrap;">Enquire Higher Studies Cell</a>
+        </div>
+
+        <!-- Return to Main Placements CTA -->
+        <div style="text-align:center; margin-top:20px;">
+          <a href="#/placements" class="siet-sp-nav-pill is-active" style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; font-size:14px; font-weight:800; border-radius:30px; text-decoration:none; background:#005c3a; color:#fff; box-shadow:0 6px 20px rgba(0,92,58,0.25);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Explore Main Job Placements &amp; Star Achievers
+          </a>
+        </div>
+
       </div>
     </main>
   `;
@@ -483,62 +644,215 @@ function higherEducationPage() {
 function governmentServicesPage() {
   return `
     <main class="siet-vm-page">
-      <section class="siet-vm-hero">
-        <div class="siet-vm-hero-grid"></div>
-        <div class="siet-vm-hero-orb orb-one"></div>
-        <div class="siet-vm-hero-orb orb-two"></div>
-        <div class="siet-vm-shell siet-vm-hero-content reveal">
-          <p class="siet-vm-kicker"><i></i> GOVERNMENT SERVICES</p>
-          <h1>Civil Services <em>&amp; Public Sector</em></h1>
-          <p class="siet-vm-intro">Mentoring disciplined graduates for careers in Indian administrative services, defense research, and public enterprises.</p>
-        </div>
-      </section>
-
-      <!-- ALS IAS COACHING SECTION -->
-      <section class="siet-he-intl-section reveal" style="background:#fff; border-bottom:1px solid #eef5f0; padding:60px 20px;">
-        <div class="siet-he-intl-container" style="max-width: 1000px; text-align: center; margin: 0 auto;">
-          <h2 class="siet-he-quote-text" style="color:#138a36; margin-bottom:40px; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">
-            COACHING FOR CIVIL SERVICES EXAMINATIONS PROVIDED IN PARTNERSHIP WITH ALS
-          </h2>
-          
-          <div style="background:#fff; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow:hidden; border:2px solid #e5001a;">
-            <div style="background:#e5001a; color:#fff; padding:12px 24px; text-align:left; font-weight:bold; font-size:18px;">
-              Top IAS Coaching in Delhi
+      <section class="coe-exec-hero placement-exec-hero">
+        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
+        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+        <div class="coe-exec-shell">
+          <div class="coe-exec-topbar">
+            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
+              <a href="#/">Home</a>
+              <span class="sep">/</span>
+              <a href="#/placements">Placements</a>
+              <span class="sep">/</span>
+              <span class="cur">Civil Services</span>
+            </nav>
+            <div class="coe-exec-status-group">
+              <span class="coe-status-pill">
+                <span class="status-pulse"></span>
+                <span>CIVIL SERVICES &amp; DEFENSE WING</span>
+              </span>
+              <span class="coe-status-tag">BATCH 2025–2026</span>
             </div>
-            <div style="display:flex; align-items:center; padding:30px; flex-wrap:wrap; gap:20px;">
-              <div style="flex:1; min-width:150px; border-right:2px solid #eee; padding-right:20px; text-align:center;">
-                <span style="display:block; color:#0033a0; font-size:24px; font-weight:bold; font-style:italic;">Rank</span>
-                <span style="display:block; font-size:80px; font-weight:900; line-height:1; color:#0033a0; text-shadow:2px 2px 0px #fff, 4px 4px 0px rgba(0,51,160,0.1);">5</span>
+          </div>
+
+          <div class="coe-exec-main">
+            <div class="coe-exec-content-col">
+              <div class="coe-exec-kicker-row">
+                <span class="coe-kicker-gold">SRI SHAKTHI STUDY CIRCLE</span>
+                <span class="coe-kicker-div">•</span>
+                <span class="coe-kicker-sub">NATION FIRST &amp; PUBLIC SERVICE</span>
               </div>
-              <div style="flex:3; min-width:300px; padding:0 30px; text-align:center;">
-                <div style="background:#e5001a; display:inline-block; padding:20px 40px;">
-                  <span style="display:block; font-family:Georgia, serif; font-size:80px; color:#fff; font-weight:bold; line-height:1;">ALS</span>
-                  <span style="display:block; color:#fff; font-size:16px; margin-top:10px; border-top:1px solid rgba(255,255,255,0.5); padding-top:10px;">Training Steel pillars For the Nation</span>
-                </div>
+              <h1 class="coe-exec-title">Civil Services &amp; Public Sector</h1>
+              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
+              <div class="coe-exec-quote-card">
+                <p>
+                  "Inspiring and grooming disciplined technocrats for the Indian Administrative Service (IAS), Indian Police Service (IPS), Indian Engineering Services (IES), Defense Commissioning, and premier scientific research organizations."
+                </p>
               </div>
-              <div style="flex:2; min-width:200px; text-align:left; padding-left:20px;">
-                <span style="display:block; color:#0033a0; font-size:24px; font-weight:bold; margin-bottom:8px;">ALS IAS Academy</span>
-                <a href="http://www.alsias.net" target="_blank" rel="noopener" style="color:#0033a0; font-size:18px; font-weight:bold; text-decoration:none;">www.alsias.net</a>
+              <div class="coe-exec-pillars-row">
+                <div class="coe-pillar-chip"><span><b>Partner:</b> ALS IAS Academy (All India Rank 5)</span></div>
+                <div class="coe-pillar-chip"><span><b>Wings:</b> UPSC, IES, TNPSC &amp; PSUs</span></div>
+                <div class="coe-pillar-chip"><span><b>Facility:</b> 24/7 Dedicated Study Cabin</span></div>
+                <div class="coe-pillar-chip"><span><b>Mentorship:</b> Serving Civil Servants &amp; Officers</span></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <div class="siet-sp-lower-shell">
-        <div class="siet-tmpl-sub-grid">
-          <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-card-pattern"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">01 / ACADEMY</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">CIVIL SERVICES WING</p><h2>Sri Shakthi IAS Academy</h2><p>Foundation batches for UPSC Civil Services, TNPSC Group 1 &amp; 2, with regular mock test series and guest lectures by serving officers.</p></div>
+
+      ${renderPlacementQuickNav('government-services')}
+
+      <div class="siet-sp-lower-shell" style="max-width:1240px; margin:0 auto; padding:40px 20px 60px;">
+
+        <!-- ALS IAS ACADEMY EXECUTIVE PARTNERSHIP SHOWCASE -->
+        <section class="siet-als-exec-card" style="background:#ffffff; border:1.5px solid #dce8e0; border-top:4px solid #005a36; border-radius:18px; padding:32px 30px; box-shadow:0 8px 30px rgba(0,40,27,0.06); margin-bottom:44px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; border-bottom:1px solid #edf4ef; padding-bottom:24px; margin-bottom:24px;">
+            <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+              <div style="background:#003822; color:#cca01d; border-radius:12px; padding:12px 20px; text-align:center;">
+                <span style="font-size:11px; font-weight:800; letter-spacing:0.1em; display:block; color:#ffffff;">NATIONAL RANK</span>
+                <span style="font-size:36px; font-weight:900; line-height:1; display:block;">5</span>
+                <span style="font-size:10px; font-weight:700; color:#d6ebd9;">ALL INDIA</span>
+              </div>
+              <div>
+                <span style="font-size:11px; font-weight:800; letter-spacing:0.12em; color:#00854a; text-transform:uppercase; display:block; margin-bottom:4px;">EXCLUSIVE INSTITUTIONAL PARTNERSHIP</span>
+                <h3 style="font-size:22px; font-weight:800; color:#00281b; margin:0 0 4px;">ALS IAS Academy &bull; Training Steel Pillars for the Nation</h3>
+                <p style="font-size:13.5px; color:#4a6556; margin:0;">India's premier civil services coaching institute with over 3,400+ successful selections in UPSC examinations.</p>
+              </div>
+            </div>
+            <a href="http://www.alsias.net" target="_blank" rel="noopener noreferrer" class="siet-tmpl-btn-outline" style="padding:10px 22px; font-size:13px; font-weight:700; white-space:nowrap;">Visit ALS Portal ↗</a>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:18px;">
+            <div style="background:#f7fbf8; border:1px solid #d8ebd9; border-radius:10px; padding:16px 18px;">
+              <strong style="font-size:14.5px; color:#003822; display:block; margin-bottom:4px;">📡 Live Satellite Transmission</strong>
+              <p style="font-size:13px; color:#4a6556; line-height:1.5; margin:0;">Direct VSAT broadcast lectures from New Delhi's top faculty with real-time two-way audio doubt resolution.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d8ebd9; border-radius:10px; padding:16px 18px;">
+              <strong style="font-size:14.5px; color:#003822; display:block; margin-bottom:4px;">📚 Prelims + Mains Syllabus</strong>
+              <p style="font-size:13px; color:#4a6556; line-height:1.5; margin:0;">Complete coverage of General Studies Paper 1–4, Essay writing mastery, CSAT quantitative reasoning, and Ethics.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d8ebd9; border-radius:10px; padding:16px 18px;">
+              <strong style="font-size:14.5px; color:#003822; display:block; margin-bottom:4px;">📝 Evaluated Answer Writing</strong>
+              <p style="font-size:13px; color:#4a6556; line-height:1.5; margin:0;">Weekly answer submission with detailed line-by-line feedback and scoring rubrics by senior evaluators in Delhi.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d8ebd9; border-radius:10px; padding:16px 18px;">
+              <strong style="font-size:14.5px; color:#003822; display:block; margin-bottom:4px;">🎯 Mock Personality Board</strong>
+              <p style="font-size:13px; color:#4a6556; line-height:1.5; margin:0;">Simulated DAF interviews conducted by retired Ambassadors, Secretaries, and Lieutenant Generals.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Competitive Exam Tracks Filter -->
+        <div style="text-align:center; margin-bottom:32px;">
+          <span style="font-size:11.5px; font-weight:800; letter-spacing:0.14em; color:#00854a; text-transform:uppercase; display:block; margin-bottom:6px;">FOUR DISTINCT PUBLIC SERVICE DIVISIONS</span>
+          <h2 style="font-size:clamp(24px, 2.5vw, 32px); font-weight:800; color:#00281b; margin:0 0 16px;">Comprehensive Exam Streams</h2>
+          <div class="interactive-filter-strip" style="justify-content:center;">
+            <button type="button" class="interactive-filter-pill js-gov-tab is-active" data-track="all">All Tracks (4)</button>
+            <button type="button" class="interactive-filter-pill js-gov-tab" data-track="upsc">UPSC Civil Services</button>
+            <button type="button" class="interactive-filter-pill js-gov-tab" data-track="ies">Indian Engineering Services (IES)</button>
+            <button type="button" class="interactive-filter-pill js-gov-tab" data-track="tnpsc">TNPSC State Cadre</button>
+            <button type="button" class="interactive-filter-pill js-gov-tab" data-track="psu">Defense &amp; PSUs</button>
+          </div>
+        </div>
+
+        <div class="siet-gov-tracks-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:22px; margin-bottom:48px;">
+          
+          <!-- UPSC -->
+          <article class="siet-vm-card siet-vm-card-vision js-gov-card reveal" data-track="upsc" style="min-height:260px; padding:24px; border-top:4px solid #005a36;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('target')}</span>
+              <span class="siet-vm-card-number">01 / UPSC CSE</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">ALL INDIA CIVIL SERVICES</p>
+              <h2>IAS &bull; IPS &bull; IFS &bull; IRS</h2>
+              <p>Rigorous foundation modules for UPSC CSE Prelims and Mains. Complete coaching in history, polity, geography, economy, ethics, and current affairs.</p>
+              <div style="margin-top:12px;">
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Weekly Test Series</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">New Delhi Mentors</span>
+              </div>
+            </div>
             <div class="siet-vm-card-footer"><span>Officers in the Making</span><i></i></div>
           </article>
-          <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-            <div class="siet-vm-mission-lines"></div>
-            <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">02 / ENGINEERING</span></div>
-            <div class="siet-vm-card-copy"><p class="siet-vm-card-label">TECHNICAL SERVICES</p><h2>Indian Engineering Services (IES)</h2><p>Intensive coaching in core engineering disciplines for UPSC ESE, preparing graduates for central government engineering executive roles.</p></div>
-            <div class="siet-vm-card-footer"><span>Technical Civil Services</span><i></i></div>
+
+          <!-- IES -->
+          <article class="siet-vm-card siet-vm-card-mission js-gov-card reveal" data-track="ies" style="min-height:260px; padding:24px; border-top:4px solid #cca01d;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('education')}</span>
+              <span class="siet-vm-card-number">02 / IES</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">TECHNICAL CIVIL SERVICES</p>
+              <h2>Indian Engineering Services (UPSC ESE)</h2>
+              <p>Preparing engineering graduates for executive technical roles in Indian Railways, Central Public Works Dept (CPWD), Military Engineer Services (MES), and Telecom.</p>
+              <div style="margin-top:12px;">
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Civil &bull; Mech &bull; EEE &bull; ECE</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Class-I Gazetted</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Government Technical Leadership</span><i></i></div>
           </article>
+
+          <!-- TNPSC -->
+          <article class="siet-vm-card siet-vm-card-vision js-gov-card reveal" data-track="tnpsc" style="min-height:260px; padding:24px; border-top:4px solid #005a36;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('target')}</span>
+              <span class="siet-vm-card-number">03 / TNPSC</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">STATE ADMINISTRATIVE CADRE</p>
+              <h2>TNPSC Group 1 &amp; Group 2</h2>
+              <p>Specialized coaching for Tamil Nadu state administrative services: Deputy Collector, Deputy Superintendent of Police (DSP), Commercial Tax Officer, and Assistant Director.</p>
+              <div style="margin-top:12px;">
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">Tamil Nadu Administration</span>
+                <span class="stop-chip" style="background:#eef6f0; color:#005a36; border-color:#d2ebd9;">State Rank Focus</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Serving Tamil Nadu</span><i></i></div>
+          </article>
+
+          <!-- PSUs & Defense -->
+          <article class="siet-vm-card siet-vm-card-mission js-gov-card reveal" data-track="psu" style="min-height:260px; padding:24px; border-top:4px solid #cca01d;">
+            <div class="siet-vm-card-top">
+              <span class="siet-vm-card-icon">${vmIcon('spark')}</span>
+              <span class="siet-vm-card-number">04 / DEFENSE &amp; PSUs</span>
+            </div>
+            <div class="siet-vm-card-copy">
+              <p class="siet-vm-card-label">NAVRATNA PSUs &amp; ARMED FORCES</p>
+              <h2>ISRO &bull; DRDO &bull; BEL &bull; BHEL &bull; CDS</h2>
+              <p>Technical exams preparation for Scientist 'SC' positions in ISRO and DRDO, along with Combined Defense Services (CDS) and Air Force Common Admission Test (AFCAT).</p>
+              <div style="margin-top:12px;">
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">Scientific Officer 'SC'</span>
+                <span class="stop-chip" style="background:#fefbf0; color:#855d00; border-color:#faebbe;">SSB Interview Cell</span>
+              </div>
+            </div>
+            <div class="siet-vm-card-footer"><span>Defense &amp; Space Research</span><i></i></div>
+          </article>
+
         </div>
+
+        <!-- Sri Shakthi Study Circle Infrastructure Pillars -->
+        <div style="background:#ffffff; border:1px solid #dce8e0; border-radius:16px; padding:30px; box-shadow:0 4px 18px rgba(0,40,27,0.04); margin-bottom:36px;">
+          <span style="font-size:11px; font-weight:800; color:#007a40; text-transform:uppercase; letter-spacing:0.12em; display:block; margin-bottom:6px;">ACADEMIC ENCLAVE</span>
+          <h3 style="font-size:20px; font-weight:800; color:#00281b; margin:0 0 18px;">Sri Shakthi Study Circle Infrastructure</h3>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:16px;">
+              <strong style="color:#003822; font-size:14px; display:block; margin-bottom:4px;">📖 24/7 Dedicated Study Carrels</strong>
+              <p style="color:#4a6556; font-size:13px; line-height:1.5; margin:0;">Quiet air-conditioned study carrels in Central Library with reference collections of Yojana, Kurukshetra, and EPW.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:16px;">
+              <strong style="color:#003822; font-size:14px; display:block; margin-bottom:4px;">📰 Daily Hindu &amp; Express Analysis</strong>
+              <p style="color:#4a6556; font-size:13px; line-height:1.5; margin:0;">Morning peer group editorial discussions dissecting national policy and international geopolitical developments.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:16px;">
+              <strong style="color:#003822; font-size:14px; display:block; margin-bottom:4px;">🎖️ Serving Officer Masterclasses</strong>
+              <p style="color:#4a6556; font-size:13px; line-height:1.5; margin:0;">Weekend sessions hosted by serving District Collectors, Superintendents of Police, and retired IAS mentors.</p>
+            </div>
+            <div style="background:#f7fbf8; border:1px solid #d6ebd9; border-radius:10px; padding:16px;">
+              <strong style="color:#003822; font-size:14px; display:block; margin-bottom:4px;">✍️ Daily 1-Hour Mains Answer Writing</strong>
+              <p style="color:#4a6556; font-size:13px; line-height:1.5; margin:0;">Rigorous practice building concise, structured answers with diagrams and policy recommendations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Return to Main Placements CTA -->
+        <div style="text-align:center; margin-top:20px;">
+          <a href="#/placements" class="siet-sp-nav-pill is-active" style="display:inline-flex; align-items:center; gap:8px; padding:12px 28px; font-size:14px; font-weight:800; border-radius:30px; text-decoration:none; background:#005c3a; color:#fff; box-shadow:0 6px 20px rgba(0,92,58,0.25);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Explore Main Job Placements &amp; Star Achievers
+          </a>
+        </div>
+
       </div>
     </main>
   `;
@@ -664,22 +978,7 @@ export function placementsPortalPage(route) {
       </section>
 
       <!-- Placement Sub-sections Quick Nav Strip -->
-      <nav class="siet-sp-quick-nav-strip" aria-label="Placement Divisions" style="background:#002216; border-bottom:1.5px solid rgba(243,197,21,0.3); padding:10px 16px;">
-        <div style="max-width:1240px; margin:0 auto; display:flex; gap:10px; overflow-x:auto; -webkit-overflow-scrolling:touch; align-items:center;">
-          <a href="#/placements" class="siet-sp-nav-pill is-active" style="background:#f3c515; color:#00281b; font-weight:800; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; display:inline-flex; align-items:center; gap:6px;">
-            <span>★</span> Job Placements
-          </a>
-          <a href="#/placements/entrepreneurship" class="siet-sp-nav-pill" style="background:rgba(255,255,255,0.08); color:#e0ebe3; font-weight:700; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; border:1px solid rgba(255,255,255,0.15);">
-            Entrepreneurship (E-Cell / EDC)
-          </a>
-          <a href="#/placements/higher-education" class="siet-sp-nav-pill" style="background:rgba(255,255,255,0.08); color:#e0ebe3; font-weight:700; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; border:1px solid rgba(255,255,255,0.15);">
-            Higher Education &amp; Admissions
-          </a>
-          <a href="#/placements/government-services" class="siet-sp-nav-pill" style="background:rgba(255,255,255,0.08); color:#e0ebe3; font-weight:700; font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; white-space:nowrap; border:1px solid rgba(255,255,255,0.15);">
-            Civil &amp; Government Services
-          </a>
-        </div>
-      </nav>
+      ${renderPlacementQuickNav('jobs')}
 
       <!-- ══════════════════════════════════════════════════════════
            1. SUPERSTARS OF PLACEMENT SEASON 2025 - 2026 (Official Banner Data)
@@ -1306,6 +1605,38 @@ export function bindPlacementEvents($, $$) {
   placementEventsBound = true;
 
   document.addEventListener('click', (e) => {
+    // Higher Education Pathway Tabs
+    const heTab = e.target.closest('.js-he-tab');
+    if (heTab) {
+      const dest = heTab.dataset.dest;
+      document.querySelectorAll('.js-he-tab').forEach(t => t.classList.toggle('is-active', t === heTab));
+      document.querySelectorAll('.js-he-card').forEach(card => {
+        if (dest === 'all' || card.dataset.dest === dest) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      return;
+    }
+
+    // Government Services Exam Tabs
+    const govTab = e.target.closest('.js-gov-tab');
+    if (govTab) {
+      const track = govTab.dataset.track;
+      document.querySelectorAll('.js-gov-tab').forEach(t => t.classList.toggle('is-active', t === govTab));
+      document.querySelectorAll('.js-gov-card').forEach(card => {
+        if (track === 'all' || card.dataset.track === track) {
+          card.style.display = '';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      return;
+    }
+
     // Placement Stat Card Click Handler (filters superstars marquee)
     const kpiCard = e.target.closest('.js-kpi-card');
     if (kpiCard) {

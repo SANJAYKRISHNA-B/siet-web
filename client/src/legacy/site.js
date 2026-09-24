@@ -4,6 +4,7 @@ import { coePortalPage, coeResultPage, coeTranscriptPage, bindCoeEvents } from '
 import { placementsPortalPage, bindPlacementEvents } from './placementPortal.js';
 import {
   governancePage,
+  bindGovernanceEvents,
   mandatoryDisclosurePage,
   statutoryDeclarationPage,
   nirfPage,
@@ -7121,7 +7122,7 @@ function render() {
     r === 'coe-regulations' || r === 'regulations' ? coePortalPage('regulations') :
     r === 'coe-result' || r === 'result' ? coePortalPage('results') :
     r === 'coe-transcript' || r === 'transcript' ? coePortalPage('transcripts') :
-    r === 'governance' || r === 'committees' ? governancePage() :
+    r === 'governance' || r === 'committees' ? governancePage(routeParams().get('tab') || 'all') :
     r === 'mandatory-disclosure' || r === 'disclosure' ? mandatoryDisclosurePage() :
     r === 'statutory-declaration' || r === 'rti' ? statutoryDeclarationPage() :
     r === 'nirf' ? nirfPage() :
@@ -7184,6 +7185,7 @@ function bind() {
   }
   bindCoeEvents($, $$);
   bindPlacementEvents($, $$);
+  bindGovernanceEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";

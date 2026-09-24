@@ -1526,7 +1526,7 @@ export function ariiaPage() {
             </div>
           </div>
           <div class="coe-card-body">
-            <div class="accred-committees-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="accred-committees-grid">
               
               <div class="accred-comm-card">
                 <div class="comm-icon">

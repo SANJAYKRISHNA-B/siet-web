@@ -4092,37 +4092,6 @@ const campusMarqueeItems = [
   { img: '/brand/campus-life/cultural.png', tag: 'Festivals', title: 'Dhruva Mega Cultural Showcase', desc: 'Annual arts, choreography, and musical celebration.' },
 ];
 
-function renderCampusQuickNav(activeRoute) {
-  const tabs = [
-    { key: 'campus-life', label: 'Campus Life', icon: '🌿' },
-    { key: 'facilities', label: 'Facilities', icon: '🏛️' },
-    { key: 'hostel', label: 'Hostel', icon: '🛏️' },
-    { key: 'transport', label: 'Transport', icon: '🚌' },
-    { key: 'sports', label: 'Sports', icon: '🏆' },
-    { key: 'clubs', label: 'Student Clubs', icon: '🎭' },
-    { key: 'ncc', label: 'NCC & NSS', icon: '🎖️' }
-  ];
-
-  return `
-    <nav class="siet-campus-quick-nav-strip" aria-label="Campus Navigation">
-      <div class="siet-campus-quick-nav-inner">
-        <span class="siet-campus-quick-nav-label">
-          <span class="sc-pulse-dot"></span>
-          CAMPUS SUITE
-        </span>
-        <div class="siet-campus-quick-nav-pills">
-          ${tabs.map(t => `
-            <a href="#/${t.key}" class="siet-campus-nav-pill ${activeRoute === t.key ? 'is-active' : ''}">
-              <span class="scnp-icon">${t.icon}</span>
-              <span class="scnp-text">${t.label}</span>
-            </a>
-          `).join('')}
-        </div>
-      </div>
-    </nav>
-  `;
-}
-
 function renderSubdivisionUniqueContent(route) {
   if (route === 'campus-life') {
     return `
@@ -5186,7 +5155,6 @@ function internalPage(route) {
 
   return `<main class="internal-page enhanced-template-page ${isDepts ? 'departments-page departments-index-page' : ''}">
     ${getPageHeaderHtml()}
-    ${isCampus ? renderCampusQuickNav(route) : ''}
 
     <section class="page-content enhanced-page-content">
       <div class="template-main-column reveal">

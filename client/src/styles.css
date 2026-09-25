@@ -42933,6 +42933,11 @@ a.siet-curr-navlink {
   z-index: 2;
 }
 
+.coe-hero-content {
+  flex: 1;
+  width: 100%;
+}
+
 .coe-overview-crest img,
 .coe-hero-crest img {
   width: 100px;
@@ -45781,8 +45786,6 @@ button.coe-action-card {
   font-weight: 900;
   color: #ffffff;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 10px 0 20px 0;
   font-family: 'League Spartan', 'Montserrat', sans-serif;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
@@ -45790,13 +45793,14 @@ button.coe-action-card {
 .siet-table-wrapper-center {
   width: 100%;
   overflow-x: auto;
-  display: flex;
-  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  display: block;
   margin: 0 auto;
 }
 
 .siet-center-table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
   margin: 0 auto;
   font-size: 14.5px;
@@ -45806,41 +45810,83 @@ button.coe-action-card {
 .icc-table {
   border-top: 2.5px solid #ffd447;
   border-bottom: 2.5px solid #ffd447;
+  min-width: 620px;
 }
 
 .icc-table th {
   color: #ffd447;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 850;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  padding: 13px 16px;
+  padding: 13px 14px;
   text-align: center;
   border-bottom: 2px solid #ffd447;
   background: transparent;
+  vertical-align: middle;
 }
 
 .icc-table td {
-  padding: 13px 16px;
+  padding: 12px 14px;
   text-align: center;
   vertical-align: middle;
   border-bottom: 1.5px solid #d4a726;
   color: #ffffff;
-  font-size: 14.5px;
-  line-height: 1.55;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .icc-table tr:last-child td {
   border-bottom: none;
 }
 
-.icc-table td.cell-name {
+.icc-table td.cell-name,
+.antidrug-table td.cell-name,
+.siet-clean-grid-table td.cell-name,
+.siet-center-table td.cell-name {
   font-weight: 700;
   color: #ffffff;
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+  white-space: normal;
 }
 
-.icc-table td.cell-desig {
+.icc-table td.cell-desig,
+.antidrug-table td.cell-desig,
+.siet-clean-grid-table td.cell-desig,
+.siet-center-table td.cell-desig {
   color: #ffffff;
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+  white-space: normal;
+}
+
+.icc-table th.col-name,
+.antidrug-table th.col-name,
+.siet-clean-grid-table th.col-name,
+.siet-center-table th.col-name,
+.icc-table th:nth-child(2),
+.antidrug-table th:nth-child(2),
+.siet-clean-grid-table th:nth-child(2),
+.siet-center-table th:nth-child(2) {
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+}
+
+.icc-table th.col-desig,
+.antidrug-table th.col-desig,
+.siet-clean-grid-table th.col-desig,
+.siet-center-table th.col-desig,
+.icc-table th:nth-child(3),
+.antidrug-table th:nth-child(3),
+.siet-clean-grid-table th:nth-child(3),
+.siet-center-table th:nth-child(3) {
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
 }
 
 .icc-table td.cell-multiline {
@@ -45899,6 +45945,7 @@ button.coe-action-card {
 
 .antidrug-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
   border: 1.5px solid #111111;
   background: #ffffff;
@@ -45908,12 +45955,13 @@ button.coe-action-card {
 .antidrug-table th {
   background: #005a36;
   color: #ffffff;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 800;
   padding: 11px 14px;
   text-align: center;
   border: 1px solid #111111;
   letter-spacing: 0.02em;
+  vertical-align: middle;
 }
 
 .antidrug-table td {
@@ -45922,7 +45970,7 @@ button.coe-action-card {
   vertical-align: middle;
   border: 1px solid #111111;
   color: #111111;
-  font-size: 14.5px;
+  font-size: 14px;
   background: #ffffff;
 }
 
@@ -45933,6 +45981,10 @@ button.coe-action-card {
 .antidrug-table td.cell-name {
   font-weight: 700;
   color: #111111;
+}
+
+.antidrug-table td.cell-desig {
+  color: #222222;
 }
 
 .antidrug-table td.cell-contact a {
@@ -45953,6 +46005,7 @@ button.coe-action-card {
 /* Governing Council & Clean Grid Style (Green & Yellow) */
 .siet-clean-grid-table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
   border-top: 2.5px solid #ffd447;
   border-bottom: 2.5px solid #ffd447;
@@ -45995,12 +46048,16 @@ button.coe-action-card {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  display: block;
+}
+
+.siet-table-scroll-hint {
+  display: none;
 }
 
 .coe-table {
   width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
   margin: 0 auto;
   font-size: 14px;
@@ -46009,19 +46066,30 @@ button.coe-action-card {
 .coe-table th {
   background: #004d2e;
   color: #ffffff;
-  padding: 12px 14px;
-  font-weight: 750;
-  text-align: center;
+  padding: 13px 16px;
+  font-weight: 800;
+  text-align: left;
   border-bottom: 2px solid #003620;
   letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.coe-table th.col-center,
+.coe-table th:first-child {
+  text-align: center;
 }
 
 .coe-table td {
-  padding: 11px 14px;
+  padding: 12px 16px;
   border-bottom: 1px solid #e2ece6;
   color: #243d30;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
+}
+
+.coe-table td.cell-center,
+.coe-table td:first-child {
+  text-align: center;
 }
 
 .coe-table tr:hover td {
@@ -46029,8 +46097,27 @@ button.coe-action-card {
 }
 
 @media (max-width: 768px) {
+  .siet-table-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 750;
+    color: #ffd447;
+    margin: 0 auto 12px auto;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.95;
+  }
+  .siet-table-scroll-hint.dark-hint {
+    color: #005a36;
+  }
   .siet-official-table-card.icc-theme {
-    padding: 18px 12px 22px 12px;
+    padding: 18px 8px 22px 8px;
+  }
+  .siet-official-table-card.antidrug-theme {
+    padding: 18px 8px 22px 8px;
   }
   .siet-table-card-top {
     flex-direction: column;
@@ -46048,9 +46135,21 @@ button.coe-action-card {
   }
   .icc-table th, .icc-table td,
   .antidrug-table th, .antidrug-table td,
-  .siet-clean-grid-table th, .siet-clean-grid-table td {
-    padding: 8px 6px;
-    font-size: 12px;
+  .siet-clean-grid-table th, .siet-clean-grid-table td,
+  .coe-table th, .coe-table td {
+    padding: 10px 10px;
+    font-size: 12.5px;
+  }
+  .icc-table td.cell-name,
+  .antidrug-table td.cell-name,
+  .siet-clean-grid-table td.cell-name,
+  .siet-center-table td.cell-name,
+  .icc-table td.cell-desig,
+  .antidrug-table td.cell-desig,
+  .siet-clean-grid-table td.cell-desig,
+  .siet-center-table td.cell-desig {
+    padding-left: 12px !important;
+    padding-right: 8px !important;
   }
 }
 
@@ -53608,4 +53707,1704 @@ button.coe-action-card {
   border-color: #00854a !important;
   box-shadow: 0 8px 24px rgba(0, 133, 74, 0.16) !important;
 }
+
+/* ==========================================================================
+   MOBILE PHONE VIEW CENTERING: ACCELERATION, PLACEMENT & CAMPUS
+   Harmonized with Home and About mobile presentation (center aligned)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  /* ────────────────────────────────────────────────────────────
+     1. ACCELERATION / ENTREPRENEURSHIP (E-CELL) SECTION
+     ──────────────────────────────────────────────────────────── */
+  .siet-vm-page .siet-vm-hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-page .siet-vm-hero-content .coe-exec-breadcrumbs {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .siet-vm-page .siet-vm-kicker {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-vm-page .siet-vm-hero h1 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-page .siet-vm-intro {
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 640px !important;
+  }
+
+  /* EDC Sidebar Header & Navigation */
+  .siet-vm-sidebar {
+    text-align: center !important;
+  }
+
+  .siet-vm-sidebar .siet-vm-sidebar-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 16px 14px !important;
+  }
+
+  .siet-vm-sidebar .siet-vm-sidebar-head a {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-vm-sidebar .siet-vm-sidebar-head span,
+  .siet-vm-sidebar .siet-vm-sidebar-head h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-sidebar nav {
+    justify-content: center !important;
+    scrollbar-width: none !important;
+  }
+
+  /* Section Intros across EDC Panels */
+  .siet-edc-panel .siet-vm-section-intro {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto 24px !important;
+    width: 100% !important;
+  }
+
+  .siet-edc-panel .siet-vm-section-intro p,
+  .siet-edc-panel .siet-vm-section-intro h2,
+  .siet-edc-panel .siet-vm-section-intro span {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-heading-green-line {
+    margin: 10px auto 16px !important;
+  }
+
+  /* Search & Category Filter Controls */
+  .siet-edc-startup-controls {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .siet-edc-search-bar {
+    margin-inline: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .siet-edc-filter-group {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  /* Startup Category Headers & Cards */
+  .siet-startup-category-group .siet-dept-header {
+    text-align: center !important;
+    margin: 28px auto 14px !important;
+    width: 100% !important;
+  }
+
+  .siet-cb-card.siet-startup-cb-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 22px 18px !important;
+  }
+
+  .siet-startup-cb-card .siet-cb-indicator {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  .siet-startup-cb-card .siet-cb-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .siet-startup-cb-card .siet-cb-meta {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-product-pill {
+    text-align: center !important;
+    margin-inline: auto 10px !important;
+    width: fit-content !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-verbatim-text {
+    text-align: center !important;
+    padding-left: 0 !important;
+    margin-inline: auto !important;
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-verbatim-text .startup-bullet-dot {
+    display: none !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-footer-row {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin-top: 12px !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-grant-tag {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-startup-cb-card .siet-startup-view-details {
+    margin-inline: auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Team, Office-Bearers & Coordination Cards */
+  .siet-cv-grid {
+    justify-content: center !important;
+  }
+
+  .siet-cv-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .siet-cv-card .siet-cb-tag,
+  .siet-cv-card .siet-cb-kicker {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-cv-card h3,
+  .siet-cv-card p,
+  .siet-cv-card a {
+    text-align: center !important;
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .siet-cv-card .siet-cv-icon {
+    margin: 0 auto 12px !important;
+  }
+
+  .siet-cv-card .siet-cv-number {
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    top: 10px !important;
+    opacity: 0.15 !important;
+  }
+
+  /* Statement cards & Marks */
+  .siet-ph-statement {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-ph-statement p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-ph-quote {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .siet-ph-mark {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  /* Incubation Intake Form */
+  .siet-edc-form-grid label.full-col {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-cb-closing-cta {
+    margin-inline: auto !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     2. PLACEMENT SECTION
+     ──────────────────────────────────────────────────────────── */
+  .coe-exec-hero.placement-exec-hero .coe-exec-shell {
+    text-align: center !important;
+    align-items: center !important;
+    padding: 24px 16px 32px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-topbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-breadcrumbs {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-status-group {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-content-col {
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-kicker-row {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(24px, 6.5vw, 36px) !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-institution {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: 14px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-accreditation {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+    font-size: 11.5px !important;
+    gap: 6px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-quote-card {
+    text-align: center !important;
+    margin: 18px auto !important;
+    max-width: 640px !important;
+    border-left: 3px solid #f3c515 !important;
+    border-right: 3px solid #f3c515 !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-quote-card p {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: 13.5px !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-exec-pillars-row {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .coe-exec-hero.placement-exec-hero .coe-pillar-chip {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Superstars Section */
+  .siet-sp-gallery-controls {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .siet-sp-gallery-title-group {
+    text-align: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-sp-gallery-kicker {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-sp-gallery-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-sp-filter-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Placement Key Metrics Grid */
+  .siet-sp-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .siet-sp-stat-box {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 24px 14px 20px !important;
+  }
+
+  .siet-sp-stat-box .stat-icon {
+    margin: 0 auto 14px !important;
+  }
+
+  .siet-sp-stat-box h3,
+  .siet-sp-stat-box h3 span,
+  .siet-sp-stat-box p,
+  .siet-sp-stat-box .stat-subtitle {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Year-Wise Highlights & Trajectory */
+  .siet-yw-section .siet-vm-section-intro {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tmpl-year-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .siet-yw-card-audit .siet-vm-card-copy,
+  .siet-yw-card-chart .siet-vm-card-copy {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .siet-yw-card-audit .siet-vm-card-label,
+  .siet-yw-card-chart .siet-vm-card-label {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-yw-card-audit h2,
+  .siet-yw-card-chart h2,
+  .siet-yw-card-desc {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tmpl-stat-card {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .siet-tmpl-sc-header {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .siet-tmpl-sc-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-tmpl-sitem-lbl,
+  .siet-tmpl-sitem-val {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-yw-action-box {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tmpl-btn-primary {
+    margin-inline: auto !important;
+  }
+
+  .siet-chart-legend {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-chart-kpi-ribbon {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Top Recruiters Header & Stats */
+  .siet-tr-header-box {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tr-kicker {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tr-title,
+  .siet-tr-subtitle {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-tr-stats-bar {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  /* Placement Journey */
+  .siet-pj-header {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-pj-kicker,
+  .siet-pj-title,
+  .siet-pj-desc {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-pj-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .siet-pj-card {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 26px 18px 22px !important;
+  }
+
+  .siet-pj-icon {
+    margin: 0 auto 14px !important;
+  }
+
+  .siet-pj-card-title,
+  .siet-pj-card-desc {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-pj-pill {
+    margin-inline: auto !important;
+  }
+
+  .siet-pj-actions {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ────────────────────────────────────────────────────────────
+     3. CAMPUS & CAMPUS LIFE SECTIONS
+     ──────────────────────────────────────────────────────────── */
+  .template-overview-card.template-split-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 18px !important;
+    gap: 20px !important;
+  }
+
+  .t-hero-narrative {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .t-hero-narrative .section-tag-pill {
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .overview-heading {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .overview-highlight-text {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .overview-narrative-text {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .template-pills-row {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .template-hero-actions {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .t-hero-visual-col {
+    width: 100% !important;
+    min-height: 240px !important;
+  }
+
+  .thv-card {
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .thv-floating-badge {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .thv-bottom-ribbon {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .thv-ribbon-text {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Key Highlights & Pillars */
+  .template-section-block .section-tag-pill {
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .template-section-block .section-subheading {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .template-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .pillar-card {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 24px 20px !important;
+  }
+
+  .pillar-top {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .pillar-icon-wrap {
+    margin: 0 auto !important;
+  }
+
+  .pillar-badge {
+    margin: 0 auto !important;
+  }
+
+  .pillar-title,
+  .pillar-desc {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .pillar-accent-line {
+    margin: 14px auto 0 !important;
+  }
+
+  /* Bento Gallery */
+  .gallery-section-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  .gallery-section-header > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .gallery-section-header .section-tag-pill,
+  .gallery-section-header .section-subheading,
+  .gallery-badge-count {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .template-bento-gallery {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .bento-photo-card {
+    grid-column: span 12 !important;
+    align-items: center !important;
+  }
+
+  .bento-media {
+    width: 100% !important;
+  }
+
+  .bento-info {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .bento-details {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bento-details h5,
+  .bento-details p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Running Live Snapshots Block */
+  .running-gallery-header-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .running-gallery-header-row .section-tag-pill,
+  .running-gallery-badge {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  /* Campus Stats Strip */
+  .template-stats-strip {
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 24px 16px !important;
+  }
+
+  .template-stat-item {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .stat-number-wrap {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .stat-lbl {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Campus Life Subdivision */
+  .campus-life-timeline-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .cl-time-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .cl-time-badge {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .cl-time-content {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .cl-time-content h4,
+  .cl-time-content p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .campus-traditions-banner {
+    padding: 24px 18px !important;
+  }
+
+  .campus-traditions-banner .ctb-header {
+    text-align: center !important;
+    margin: 0 auto 20px !important;
+  }
+
+  .ctb-kicker,
+  .ctb-header h4,
+  .ctb-header p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .ctb-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .ctb-item {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .ctb-badge,
+  .ctb-item h5,
+  .ctb-item p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Facilities Subdivision */
+  .facility-filter-tabs {
+    justify-content: center !important;
+    margin-inline: auto 20px !important;
+  }
+
+  .facilities-interactive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .facility-showcase-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .fsc-badge {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .fsc-content {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .fsc-content h4,
+  .fsc-content p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .fsc-specs-row {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .facility-access-banner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .facility-access-banner div {
+    text-align: center !important;
+  }
+
+  /* Hostel Subdivision */
+  .hostel-experience-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .hostel-block-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .hbc-header {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .hbc-badge {
+    margin: 0 auto 8px !important;
+  }
+
+  .hbc-header h4 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hbc-features-list {
+    align-items: center !important;
+  }
+
+  .hbc-feature-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .hbc-feature-item strong,
+  .hbc-feature-item p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hostel-amenities-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .ha-item {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hostel-menu-showcase {
+    text-align: center !important;
+    padding: 22px 16px !important;
+  }
+
+  .hostel-menu-showcase > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .hostel-menu-showcase h4,
+  .hostel-menu-showcase p,
+  .hostel-menu-showcase span {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hostel-menu-day-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hostel-menu-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hm-slot {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .hm-time,
+  .hm-slot h5,
+  .hm-slot p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hostel-rooms-spec-block {
+    text-align: center !important;
+  }
+
+  .hostel-rooms-spec-block h4 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Transport Subdivision */
+  .transport-search-bar-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  .transport-search-bar-wrap label,
+  .transport-search-bar-wrap input {
+    text-align: center !important;
+  }
+
+  .transport-routes-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .route-zone-card {
+    align-items: center !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .rzc-top {
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .route-zone-card h4,
+  .rzc-lead {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rzc-stops {
+    justify-content: center !important;
+  }
+
+  .route-telematics-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .rtc-kicker,
+  .route-telematics-card h4 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rtc-list {
+    text-align: center !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+  }
+
+  .transport-timings-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+
+  .transport-timings-card div {
+    text-align: center !important;
+  }
+
+  /* Sports Subdivision */
+  .sports-filter-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .sports-arenas-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .sport-arena-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .sac-badge {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .sac-content {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .sac-content h4,
+  .sac-content p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .sports-scholarships-box {
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 18px !important;
+  }
+
+  .ssb-badge,
+  .sports-scholarships-box h4,
+  .sports-scholarships-box p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .ssb-badges-row {
+    justify-content: center !important;
+  }
+
+  .sports-trophies-strip {
+    text-align: center !important;
+    align-items: center !important;
+    padding: 20px 16px !important;
+  }
+
+  .sports-trophies-strip h4,
+  .sports-trophies-strip span {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .sports-trophies-strip > div {
+    text-align: center !important;
+  }
+
+  /* Clubs Subdivision */
+  .club-filter-tabs {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .clubs-directory-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .club-cat-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .ccc-header {
+    text-align: center !important;
+  }
+
+  .ccc-tag,
+  .ccc-header h4 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .ccc-list {
+    align-items: center !important;
+  }
+
+  .ccc-item {
+    text-align: center !important;
+  }
+
+  .ccc-item b,
+  .ccc-item p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .club-perks-banner {
+    text-align: center !important;
+    align-items: center !important;
+    padding: 24px 18px !important;
+  }
+
+  .cpb-badge,
+  .club-perks-banner h4,
+  .club-perks-banner p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* NCC & NSS Subdivision */
+  .ncc-wings-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .ncc-wing-card {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .nwc-badge,
+  .ncc-wing-card h4,
+  .nwc-lead {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .nwc-points {
+    align-items: center !important;
+  }
+
+  .nwc-point {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  .nwc-point strong,
+  .nwc-point p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .siet-sp-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .siet-sp-stat-box {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  }
+
+  .siet-sp-stat-box:last-child {
+    border-bottom: none !important;
+  }
+
+  .siet-tr-stats-bar {
+    flex-direction: column !important;
+    gap: 12px !important;
+    border-radius: 16px !important;
+    padding: 16px 20px !important;
+  }
+
+  .siet-tr-sbar-sep {
+    display: none !important;
+  }
+
+  .hostel-amenities-strip {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE CENTERING RULES: Governance, Mandatory Disclosure & Accreditations
+   ========================================================================== */
+@media (max-width: 900px) {
+  /* Metrics Strip & Info Cards (Screenshot 1 & Screenshot 3) */
+  .accred-info-strip {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .accred-info-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    border-left: 1px solid #dce8e0 !important;
+    border-top: 4.5px solid #005a36 !important;
+    border-radius: 12px !important;
+    padding: 18px 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .accred-info-card small {
+    display: block !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .accred-info-card b {
+    display: block !important;
+    text-align: center !important;
+    margin: 3px auto !important;
+    width: 100% !important;
+  }
+
+  .accred-info-card span {
+    display: block !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  /* Governance Quick Filter Tabs (Screenshot 3) */
+  .comm-quick-tabs-container {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto 24px auto !important;
+    width: 100% !important;
+  }
+
+  .comm-quick-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    padding: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .comm-quick-tab {
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 2px !important;
+  }
+
+  /* COE Card Header & Section Title (Screenshot 2) */
+  .coe-section-card .coe-card-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px 16px !important;
+    gap: 12px !important;
+  }
+
+  .coe-section-card .coe-card-header > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .coe-section-card .coe-card-header h3 {
+    text-align: center !important;
+    margin: 6px auto !important;
+    width: 100% !important;
+  }
+
+  .coe-section-card .coe-card-header p {
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 600px !important;
+    width: 100% !important;
+  }
+
+  .coe-section-card .coe-pill-badge,
+  .coe-section-card .coe-status-pill {
+    margin-inline: auto !important;
+    text-align: center !important;
+    align-self: center !important;
+  }
+
+  /* Official Regulation Citation Banner (Screenshot 2) */
+  .comm-regulation-banner {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 14px 16px 18px !important;
+    padding: 18px 16px !important;
+    border-left: 1px solid #dce8e0 !important;
+    border-top: 4px solid #005a36 !important;
+    border-radius: 12px !important;
+  }
+
+  .comm-regulation-banner .quote-icon {
+    margin: 0 auto 10px auto !important;
+    align-self: center !important;
+  }
+
+  .comm-regulation-banner p {
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .comm-regulation-banner p strong {
+    display: block !important;
+    margin-bottom: 6px !important;
+    text-align: center !important;
+  }
+
+  /* Police Akka & Bro Initiatives Grid & Cards (Screenshot 2) */
+  .comm-initiatives-grid {
+    grid-template-columns: 1fr !important;
+    margin: 0 16px 18px 16px !important;
+    gap: 14px !important;
+  }
+
+  .comm-initiative-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px 16px !important;
+    border-left: 1px solid #dce8e0 !important;
+    border-top: 4px solid #005a36 !important;
+    border-radius: 12px !important;
+  }
+
+  .comm-initiative-card .quote-icon {
+    margin: 0 auto 10px auto !important;
+    align-self: center !important;
+  }
+
+  .comm-initiative-card > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .comm-initiative-badge {
+    margin-inline: auto !important;
+    text-align: center !important;
+    align-self: center !important;
+  }
+
+  .comm-initiative-card h4 {
+    text-align: center !important;
+    margin: 0 auto 6px auto !important;
+    width: 100% !important;
+  }
+
+  .comm-initiative-card p {
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  /* Support Strips & Info Boxes */
+  .comm-info-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding: 16px !important;
+  }
+
+  .comm-info-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .comm-info-item span {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Committees & Downloads Grid Cards */
+  .accred-comm-card,
+  .coe-form-item,
+  .doc-download-card {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .accred-comm-card .card-top-header,
+  .coe-form-item .card-top-header,
+  .doc-download-card .card-top-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+
+  .accred-comm-card .card-top-badge,
+  .doc-download-card .card-top-badge,
+  .coe-form-item .form-badge {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .accred-comm-card .comm-icon,
+  .coe-form-item .comm-icon,
+  .coe-form-item .form-icon,
+  .doc-download-card .comm-icon {
+    margin-inline: auto !important;
+  }
+
+  .accred-comm-card h4,
+  .coe-form-item h4,
+  .doc-download-card h4,
+  .accred-comm-card p,
+  .coe-form-item p,
+  .doc-download-card p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .accred-comm-card .comm-contact,
+  .doc-download-card .doc-download-box,
+  .coe-form-item .doc-download-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 10px !important;
+  }
+
+  .doc-download-meta {
+    text-align: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .form-download-btn {
+    margin-inline: auto !important;
+    justify-content: center !important;
+    align-self: center !important;
+  }
+
+  /* Hero Content & Crest Centering */
+  .coe-hero-shell {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .coe-hero-crest {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .coe-hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .coe-hero-breadcrumb {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .coe-eyebrow {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .coe-hero-content h1,
+  .coe-hero-content h2,
+  .coe-hero-content p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .coe-badges-row {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* RTI & Statutory Cards */
+  .rti-card {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .rti-tag {
+    align-self: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rti-card h4,
+  .rti-designation {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rti-meta {
+    text-align: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* NAAC & NBA Portals */
+  .naac-grade-showcase {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+    padding: 24px 16px !important;
+  }
+
+  .grade-crest {
+    margin-inline: auto !important;
+  }
+
+  .grade-content {
+    text-align: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .grade-meta-row {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .accred-crit-item {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .crit-head {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    text-align: center !important;
+  }
+
+  .crit-tag {
+    margin-inline: auto !important;
+  }
+
+  .nba-accord-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding: 22px 16px !important;
+  }
+
+  .accord-icon {
+    margin-inline: auto !important;
+  }
+
+  .accord-content {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .nba-prog-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .nba-card-top {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .nba-card-meta {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .iqac-feature-box {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .iqac-feature-box h4,
+  .iqac-feature-box p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .comm-sync-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+
+  .comm-sync-bar .sync-badge {
+    margin-inline: auto !important;
+  }
+
+  .comm-sync-bar span,
+  .comm-sync-bar a {
+    text-align: center !important;
+  }
+}
+
 

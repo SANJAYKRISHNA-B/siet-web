@@ -3534,10 +3534,10 @@ const internalPageData = {
       { icon: 'heart', tag: 'STUDENT WELLNESS', title: 'Holistic Well-being & Social Spaces', desc: 'Green shaded study courtyards, community lounges, healthy multi-cuisine cafeterias, and dedicated counseling mentoring networks supporting student health.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/student-life.png', title: 'Dynamic Student Commons', caption: 'Lively community lounges and collaborative open-air study areas.' },
-      { img: '/brand/campus-life/cultural.png', title: 'Cultural Celebrations & Fests', caption: 'Annual mega fests featuring national music artists and performing arts ensembles.' },
-      { img: '/brand/campus-life/campus-generated.png', title: 'Eco-Friendly Campus Walkways', caption: 'Tree-lined pedestrian avenues and landscaped gardens promoting daily student well-being.' },
-      { img: '/brand/campus-life/learning-growth.png', title: 'Collaborative Learning Hub', caption: 'Interactive study commons and multidisciplinary peer mentoring forums.' }
+      { img: '/brand/campus-arch.jpg', title: 'Green Campus Avenues & Courtyards', caption: 'Lush, landscaped pedestrian walkways and open-air botanical garden study zones.' },
+      { img: '/brand/campus-life/cultural.png', title: 'Cultural Celebrations & Traditions', caption: 'Annual DHRUVA carnival, traditional Pongal Vizha, and collegiate arts festivals.' },
+      { img: '/brand/campus-life/learning-growth.png', title: 'Collaborative Learning Commons', caption: 'Interactive peer-study circles and multidisciplinary innovation huddles.' },
+      { img: '/brand/events/event-sangamam-hd.jpg', title: 'Signature Arts & Stage Extravaganza', caption: 'Live musical performances, choreography competitions, and celebrity concerts.' }
     ],
     metrics: [
       { val: '45', suffix: '+', label: 'Acres of Green Campus' },
@@ -3580,10 +3580,10 @@ const internalPageData = {
       { icon: 'masks', tag: 'AUDITORIUMS', title: 'Convention & Seminar Halls', desc: 'Fully air-conditioned 1,200-capacity auditorium and tiered symposium chambers for global conferences.' }
     ],
     gallery: [
-      { img: '/brand/techpark-hd.jpg', title: 'Tech Park Academic Complex', caption: 'Flagship academic infrastructure housing modern tech labs and departments.' },
-      { img: '/brand/special-labs/lab-ai-hd.jpg', title: 'Artificial Intelligence Lab', caption: 'High-compute workstations configured for machine learning and AI research.' },
-      { img: '/brand/special-labs/lab-robotics-hd.jpg', title: 'Robotics & Automation Suite', caption: 'Industrial robotic arms, mechatronics stations, and autonomous kits.' },
-      { img: '/brand/special-labs/lab-iot-hd.jpg', title: 'IoT & Embedded Systems Lab', caption: 'Sensors, microcontrollers, and wireless development testbeds.' }
+      { img: '/brand/special-labs/lab-ai-hd.jpg', title: 'High-Performance AI & Deep Learning Studio', caption: 'High-compute workstations configured for machine learning and AI research.' },
+      { img: '/brand/special-labs/lab-robotics-hd.jpg', title: 'Advanced Robotics & Automation Suite', caption: 'Industrial robotic arms, mechatronics stations, and autonomous kits.' },
+      { img: '/brand/special-labs/lab-iot-hd.jpg', title: 'IoT & Embedded Systems Sandbox', caption: 'Sensors, microcontrollers, and wireless development testbeds.' },
+      { img: '/brand/special-labs/lab-cyber-cloud-hd.jpg', title: 'Cyber Security & Cloud Datacenter', caption: 'Enterprise virtualization racks, ethical hacking sandbox, and network simulators.' }
     ],
     metrics: [
       { val: '50', suffix: '+', label: 'Specialized Tech Labs' },
@@ -3626,10 +3626,10 @@ const internalPageData = {
       { icon: 'shield', tag: 'SECURITY', title: 'Safety & Health Protocol', desc: 'Round-the-clock resident wardens, female security staff for girls blocks, and on-call medical doctors.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/hostel-room.jpg', title: 'Furnished Resident Bedroom', caption: 'Spacious 2 and 3-sharing rooms with individual wooden study desks, wardrobes, and bright natural lighting.' },
-      { img: '/brand/campus-life/hostel-dining.jpg', title: 'FSSAI-Certified Dining Hall', caption: 'Hygienic stainless-steel dining facility serving four balanced, nutritious meals daily.' },
-      { img: '/brand/campus-life/sports-gym.jpg', title: 'Resident Fitness Gym', caption: 'Dedicated morning and late-evening fitness gym exclusively accessible to hostel boarders.' },
-      { img: '/brand/campus-life/campus-generated.png', title: 'Serene Residential Enclave', caption: 'Lush, quiet residential courtyard ensuring a safe and distraction-free study environment.' }
+      { img: '/brand/campus-life/hostel-dining.jpg', title: 'FSSAI-Certified Steam Dining Hall', caption: 'Hygienic stainless-steel mechanized dining facility serving four balanced, nutritious meals daily.' },
+      { img: '/brand/library-interior.jpg', title: 'Resident Study Lounge & Quiet Pods', caption: 'Air-conditioned late-night reading spaces equipped with Wi-Fi and individual charging stations.' },
+      { img: '/brand/campus-arch.jpg', title: 'Lush Residential Courtyard', caption: 'Quiet landscaped inner quadrangle providing a safe, green study and leisure ambiance.' },
+      { img: '/brand/campus-life/sports-gym.jpg', title: 'Resident Fitness & Conditioning Gym', caption: 'Dedicated morning and late-evening fitness gym exclusively accessible to hostel boarders.' }
     ],
     metrics: [
       { val: '2500', suffix: '+', label: 'Resident Capacity' },
@@ -3672,10 +3672,10 @@ const internalPageData = {
       { icon: 'pin', tag: 'COVERAGE', title: 'Broad Regional Coverage', desc: 'Key stops across Coimbatore city, Annur, Avinashi, Palladam, Tirupur, and neighboring arterial corridors.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/transport-fleet.jpg', title: 'Sri Shakthi Dedicated Bus Fleet', caption: 'Modern, well-maintained bus fleet parked at the central boarding depot.' },
-      { img: '/brand/campus-life/campus-generated.png', title: 'Arrival & Departure Avenue', caption: 'Wide, tree-lined roads providing smooth entry and exit for buses.' },
-      { img: '/brand/campus-life/transport-fleet.jpg', title: 'Safety-Inspected Transit Fleet', caption: 'Regularly serviced GPS-tracked vehicles equipped with speed governors and emergency exits.' },
-      { img: '/brand/campus-life/campus-generated.png', title: 'Internal Campus Transit Corridors', caption: 'Dedicated vehicular bays ensuring safe student movement separated from pedestrian walkways.' }
+      { img: '/brand/campus-life/transport-route-map.svg', title: '5-Zone Transit Route Network', caption: 'Connecting 50+ commuter corridors across Coimbatore, Tirupur, Erode, and Pollachi.' },
+      { img: '/brand/campus-life/transport-telematics.svg', title: 'Live GPS Telematics & Speed Governors', caption: 'Real-time route telemetry and instant bus arrival notifications on the parent mobile app.' },
+      { img: '/brand/departments-campus.jpg', title: 'Dedicated Campus Transit Corridors', caption: 'Wide, tree-lined vehicular avenues separated from pedestrian walkways for student safety.' },
+      { img: '/brand/campus-life/transport-terminal.svg', title: 'Central Boarding Depot & Inspection Bay', caption: 'Covered passenger staging platforms with strict bi-annual RTO vehicular fitness checks.' }
     ],
     metrics: [
       { val: '60', suffix: '+', label: 'GPS-Tracked Buses' },
@@ -3708,8 +3708,8 @@ const internalPageData = {
     title: 'Sports, Physical Fitness & Games',
     subtitle: 'Nurturing champions and promoting physical fitness with Olympic-standard tracks, multi-sport courts, and professional coaching.',
     overviewLead: 'Physical fitness and team sports form a cornerstone of character development at Sri Shakthi. From zonal championships to all-India inter-university trophies, our athletes consistently bring pride to the institution.',
-    featuredImage: '/brand/campus-life/sports-team.png',
-    featuredBadge: 'Championship Teams',
+    featuredImage: '/brand/campus-life/sports-athletics.jpg',
+    featuredBadge: 'Championship Sports Arenas',
     featuredStat: '15+ Sports Disciplines',
     pillars: [
       { icon: 'runner', tag: 'OUTDOOR ARENA', title: 'Multi-Sport Outdoor Arena', desc: 'Regulation cricket pitch, standard football ground, 400m athletic track, and synthetic basketball courts.' },
@@ -3718,10 +3718,10 @@ const internalPageData = {
       { icon: 'medal', tag: 'SPONSORSHIP', title: 'Tournament Sponsorship', desc: 'Full institutional travel, accommodation, and kit support for university, zonal, and national championships.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/sports-team.png', title: 'Varsity Champions & Squads', caption: 'Our victorious university championship teams across cricket, athletics, and basketball.' },
-      { img: '/brand/campus-life/sports.png', title: 'Athletic Track & Field Grounds', caption: 'Olympic standard 400-meter track surrounded by green campus vistas.' },
+      { img: '/brand/campus-life/sports-badminton.jpg', title: 'Air-Cooled Indoor Badminton Stadium', caption: '4 international BWF-standard wooden courts with anti-glare overhead high-bay lighting.' },
+      { img: '/brand/campus-life/sports-basketball.jpg', title: 'Championship Basketball & Volleyball Courts', caption: 'Multiple acrylic hard-court surfaces with high-intensity LED floodlighting.' },
       { img: '/brand/campus-life/sports-gym.jpg', title: 'High-Performance Conditioning Gym', caption: 'Commercial power racks, Olympic barbells, cardio treadmills, and dedicated trainers.' },
-      { img: '/brand/campus-life/sports.png', title: 'Multi-Sport Outdoor Arena', caption: 'Regulation sports grounds equipped with high-intensity LED floodlighting for evening practice.' }
+      { img: '/brand/campus-life/sports-team.png', title: 'Varsity Championship Trophy Squads', caption: 'Our victorious university championship teams across cricket, athletics, and basketball.' }
     ],
     metrics: [
       { val: '10', suffix: '+', label: 'Acres Sports Arena' },
@@ -3764,10 +3764,10 @@ const internalPageData = {
       { icon: 'leaf', tag: 'COMMUNITY', title: 'Social Outreach & Green Clubs', desc: 'Rotaract Club, Eco-warriors initiative, community health drives, and village educational programs.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/clubs.png', title: 'Club Exhibitions & Showcase', caption: 'Student societies demonstrating live hardware and software innovations.' },
+      { img: '/brand/campus-life/innovation.png', title: 'Hackathons & Coding Competitions', caption: 'Overnight hackathons, coding sprints, and competitive programming challenges.' },
       { img: '/brand/campus-life/cultural.png', title: 'Music & Performing Arts Ensemble', caption: 'College orchestra and dance troupes performing live on festival stages.' },
-      { img: '/brand/campus-life/innovation.png', title: 'Hackathon & Coding Competitions', caption: 'Overnight hackathons and competitive programming challenges.' },
-      { img: '/brand/campus-life/learning-growth.png', title: 'Student Seminars & Workshops', caption: 'Peer-to-peer technical learning seminars and guest tech talks.' }
+      { img: '/brand/events/featured-technovate-hd.jpg', title: 'National Tech Symposium & Project Expo', caption: 'Annual student engineering showcase with live hardware and software innovations.' },
+      { img: '/brand/campus-life/learning-growth.png', title: 'Peer Mentorship & Leadership Seminars', caption: 'Peer-to-peer technical learning seminars, design bootcamps, and guest tech talks.' }
     ],
     metrics: [
       { val: '26', suffix: '+', label: 'Active Student Clubs' },
@@ -3810,10 +3810,10 @@ const internalPageData = {
       { icon: 'compass', tag: 'CAREERS', title: 'Armed Forces Mentorship', desc: 'Direct guidance from defense veterans for CDS, AFCAT, and SSB interview preparation.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/ncc-cadets.jpg', title: 'NCC 4(TN) BN Ceremonial Guard', caption: 'Impeccable squad drill and saluting guard presented during institutional ceremonies.' },
-      { img: '/brand/campus-life/ncc-cadets.jpg', title: 'Military Drill & Obstacle Course', caption: 'Cadets undergoing rigorous parade inspection, weapon handling, and obstacle course training.' },
-      { img: '/brand/campus-life/learning-growth.png', title: 'NSS Community Health & Literacy Drive', caption: 'Student volunteers conducting rural health surveys, sanitation education, and medical camps.' },
-      { img: '/brand/campus-life/campus-generated.png', title: 'Eco-Protection & Green Belt Drives', caption: 'Cadets and NSS volunteers planting native trees and championing environmental conservation.' }
+      { img: '/brand/events/event-sports-meet-hd.jpg', title: 'Ceremonial March Past & Guard of Honor', caption: 'Impeccable squad drill and saluting guard presented during institutional ceremonies.' },
+      { img: '/brand/campus-life/ncc-obstacle-course.svg', title: 'Obstacle Training & Weapon Drills', caption: 'Cadets undergoing rigorous obstacle course training, firing range, and map reading.' },
+      { img: '/brand/campus-life/nss-community-drive.svg', title: 'NSS Community Health & Literacy Drive', caption: 'Student volunteers conducting rural health surveys, sanitation education, and medical camps.' },
+      { img: '/brand/departments-campus.jpg', title: 'Green Belt Plantation & Conservation', caption: 'Cadets and NSS volunteers planting native trees and championing environmental conservation.' }
     ],
     metrics: [
       { val: '160', suffix: '+', label: 'Enrolled Cadets & Volunteers' },
@@ -3902,10 +3902,10 @@ const internalPageData = {
       { icon: 'leaf', tag: 'NEED-BASED', title: 'Economic Need Assistance', desc: 'Need-based institutional trust stipends ensuring underprivileged students complete their degrees uninterrupted.' }
     ],
     gallery: [
-      { img: '/brand/campus-life/learning-growth.png', title: 'Empowering Student Scholars', caption: 'Recognition ceremony for institutional academic scholarship recipients.' },
+      { img: '/brand/curriculum-hero.jpg', title: 'Merit Felicitation Ceremony', caption: 'Recognition ceremony for institutional academic scholarship recipients.' },
       { img: '/brand/campus-life/student-life.png', title: 'Bright Minds on Campus', caption: 'A collaborative, inclusive learning environment for aspiring engineers.' },
       { img: '/brand/campus-life/sports-team.png', title: 'Sports Quota Awardees', caption: 'Athletes receiving special equipment, training grants, and academic support.' },
-      { img: '/brand/curriculum-hero.jpg', title: 'Academic Excellence Honors', caption: 'Top rankers honored with certificate of honors and research grants.' }
+      { img: '/brand/events/featured-technovate-hd.jpg', title: 'Academic Excellence Honors', caption: 'Top rankers honored with certificate of honors and research grants.' }
     ],
     metrics: [
       { val: '2.5', suffix: ' Cr+', label: 'Annual Scholarship Fund' },
@@ -3938,7 +3938,7 @@ const internalPageData = {
     title: 'Eligibility Criteria & Entry Requirements',
     subtitle: 'Comprehensive criteria for B.E. / B.Tech first year admissions, lateral entry, and postgraduate engineering programs.',
     overviewLead: 'Sri Shakthi admits students through Tamil Nadu Engineering Admissions (TNEA Single Window Counselling - College Code 2764) as well as through institutional Merit Management Quota in compliance with Anna University norms.',
-    featuredImage: '/brand/techpark-hd.jpg',
+    featuredImage: '/brand/campus-arch.jpg',
     featuredBadge: 'TNEA Counseling Code: 2764',
     featuredStat: 'Anna Univ & AICTE Approved',
     pillars: [
@@ -3949,7 +3949,7 @@ const internalPageData = {
     ],
     gallery: [
       { img: '/brand/techpark-hd.jpg', title: 'Admissions & Counseling Center', caption: 'Dedicated counseling desk for student enrollment and document verification.' },
-      { img: '/brand/campus-arch.jpg', title: 'Main Administration Block', caption: 'Central institutional administrative chambers and registrar desk.' },
+      { img: '/brand/departments-campus.jpg', title: 'Main Administration Block', caption: 'Central institutional administrative chambers and registrar desk.' },
       { img: '/brand/curriculum-hero.jpg', title: 'Classroom Experience', caption: 'Modern multimedia lecture theaters engineered for collaborative learning.' },
       { img: '/brand/campus-life/student-life.png', title: 'Student Life Overview', caption: 'Vibrant student community welcoming candidates from all over India.' }
     ],
@@ -3984,7 +3984,7 @@ const internalPageData = {
     title: 'Fee Structure & Transparent Policies',
     subtitle: 'Affordable, government-regulated fee schedules with convenient installment options and zero hidden charges.',
     overviewLead: 'Sri Shakthi maintains a transparent fee structure aligned strictly with the Fee Fixation Committee of the Government of Tamil Nadu. We offer flexible payment plans, rapid bank loan processing letters, and direct merit fee concessions.',
-    featuredImage: '/brand/techpark-hd.jpg',
+    featuredImage: '/brand/hero-techpark-latest.png',
     featuredBadge: 'Affordable & Transparent',
     featuredStat: 'Easy Installment Facilities',
     pillars: [
@@ -4082,14 +4082,18 @@ function getInternalPageMeta(route, data) {
 const campusMarqueeItems = [
   { img: '/brand/techpark-hd.jpg', tag: 'Academic Hub', title: 'Tech Park Towers', desc: 'Flagship smart computing labs and department studios.' },
   { img: '/brand/campus-life/student-life.png', tag: 'Student Life', title: 'Campus Commons & Courtyards', desc: 'Lively community lounges and collaborative student spaces.' },
-  { img: '/brand/campus-life/sports-team.png', tag: 'Championships', title: 'Varsity Sports Squad', desc: 'Victorious inter-university championship winning athletes.' },
+  { img: '/brand/campus-life/sports-athletics.jpg', tag: 'Athletics', title: '400m Olympic Athletic Track', desc: 'Regulation synthetic track and sports arena for varsity sprinters.' },
   { img: '/brand/campus-life/transport-fleet.jpg', tag: 'Transit Fleet', title: '60+ College Buses', desc: 'GPS-tracked transit connecting Coimbatore, Tirupur & Palakkad.' },
   { img: '/brand/campus-life/clubs.png', tag: 'Student Guilds', title: '26+ Co-Curricular Clubs', desc: 'Technical hackathons, fine arts, drama, and literary societies.' },
   { img: '/brand/campus-life/ncc-cadets.jpg', tag: 'National Service', title: 'NCC Cadets & Guard of Honor', desc: 'Elite military discipline, obstacle drills, and community service.' },
   { img: '/brand/special-labs/lab-ai-hd.jpg', tag: 'Advanced Labs', title: 'Artificial Intelligence Studio', desc: 'High-compute GPU workstations for machine learning and computer vision.' },
   { img: '/brand/library-study-hall.jpg', tag: 'Knowledge Hub', title: 'Central Knowledge Library', desc: '50,000+ volumes, air-conditioned reading halls, and IEEE databases.' },
-  { img: '/brand/campus-arch.jpg', tag: 'Residences', title: 'Modern Student Hostels', desc: 'Comfortable living with nutritious multi-cuisine dining & 24/7 security.' },
+  { img: '/brand/campus-life/hostel-room.jpg', tag: 'Residences', title: 'Modern Student Hostels', desc: 'Comfortable furnished rooms with nutritious dining & 24/7 security.' },
   { img: '/brand/campus-life/cultural.png', tag: 'Festivals', title: 'Dhruva Mega Cultural Showcase', desc: 'Annual arts, choreography, and musical celebration.' },
+  { img: '/brand/campus-life/sports-badminton.jpg', tag: 'Indoor Sports', title: 'Indoor Badminton Arena', desc: '4 international BWF wooden courts with overhead sports lighting.' },
+  { img: '/brand/campus-life/sports-basketball.jpg', tag: 'Floodlit Arena', title: 'Championship Basketball Courts', desc: 'Synthetic acrylic outdoor courts with high-intensity LED floodlights.' },
+  { img: '/brand/events/event-sangamam-hd.jpg', tag: 'Traditions', title: 'Sangamam Cultural Festival', desc: 'Celebrated cultural extravaganza with live music and theater ensembles.' },
+  { img: '/brand/special-labs/lab-robotics-hd.jpg', tag: 'Robotics Suite', title: 'Industrial Robotics & Automation', desc: '6-axis articulated arms, mechatronics stations, and autonomous kits.' },
 ];
 
 function renderCampusQuickNav(activeRoute) {
@@ -4148,7 +4152,7 @@ function renderSubdivisionUniqueContent(route) {
           <div class="cl-time-card">
             <div class="cl-time-badge">12:45 PM</div>
             <div class="cl-time-media">
-              <img src="/brand/campus-life/student-life.png" alt="Courtyard & Food Court" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/hostel-dining.jpg" alt="Courtyard & Food Court" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="cl-time-tag">COMMUNITY LIVING</span>
             </div>
             <div class="cl-time-content">
@@ -4170,7 +4174,7 @@ function renderSubdivisionUniqueContent(route) {
           <div class="cl-time-card">
             <div class="cl-time-badge">05:15 PM</div>
             <div class="cl-time-media">
-              <img src="/brand/campus-life/sports.png" alt="Athletics & Sunset Fest" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports-basketball.jpg" alt="Athletics & Sunset Fest" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="cl-time-tag">RECREATION</span>
             </div>
             <div class="cl-time-content">
@@ -4311,7 +4315,7 @@ function renderSubdivisionUniqueContent(route) {
 
           <div class="facility-showcase-card" data-facility-cat="library">
             <div class="fsc-media">
-              <img src="/brand/techpark-hd.jpg" alt="Convention Center & Auditoriums" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/events/event-industry-connect-hd.jpg" alt="Convention Center & Auditoriums" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">1,200 SEAT AUDITORIUM</span>
             </div>
             <div class="fsc-content">
@@ -4327,7 +4331,7 @@ function renderSubdivisionUniqueContent(route) {
 
           <div class="facility-showcase-card" data-facility-cat="green">
             <div class="fsc-media">
-              <img src="/brand/campus-arch.jpg" alt="Green Energy Microgrid" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/departments-campus.jpg" alt="Green Energy Microgrid" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="fsc-badge">100% ECO CAMPUS</span>
             </div>
             <div class="fsc-content">
@@ -4732,7 +4736,7 @@ function renderSubdivisionUniqueContent(route) {
         <div class="sports-arenas-grid">
           <div class="sport-arena-card" data-sport-cat="outdoor">
             <div class="sac-media">
-              <img src="/brand/campus-life/sports.png" alt="Olympic 400m Athletic Track" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports-athletics.jpg" alt="Olympic 400m Athletic Track" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">TRACK &amp; FIELD</span>
             </div>
             <div class="sac-content">
@@ -4743,7 +4747,7 @@ function renderSubdivisionUniqueContent(route) {
 
           <div class="sport-arena-card" data-sport-cat="indoor">
             <div class="sac-media">
-              <img src="/brand/campus-life/sports-team.png" alt="Indoor Badminton Complex" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports-badminton.jpg" alt="Indoor Badminton Complex" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">AIR-COOLED INDOOR</span>
             </div>
             <div class="sac-content">
@@ -4754,7 +4758,7 @@ function renderSubdivisionUniqueContent(route) {
 
           <div class="sport-arena-card" data-sport-cat="outdoor">
             <div class="sac-media">
-              <img src="/brand/campus-life/sports.png" alt="Basketball & Volleyball Arenas" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+              <img src="/brand/campus-life/sports-basketball.jpg" alt="Basketball & Volleyball Arenas" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
               <span class="sac-badge">FLOODLIT ARENAS</span>
             </div>
             <div class="sac-content">

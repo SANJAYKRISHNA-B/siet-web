@@ -209,9 +209,6 @@ function accreditationHero(title, subtitle, breadcrumb = '', badges = []) {
   return `
     <section class="coe-hero-strip accred-unified-hero">
       <div class="coe-hero-shell">
-        <div class="coe-hero-crest">
-          <img src="/brand/siet-logo.png" alt="Sri Shakthi emblem">
-        </div>
         <div class="coe-hero-content">
           <div class="coe-hero-breadcrumb">
             <a href="#/">Home</a><span>/</span><a href="#/accreditations">Accreditation</a><span>/</span><b>${breadcrumb || title}</b>
@@ -370,14 +367,16 @@ export function governancePage(initialTab = 'all') {
               <!-- Centered White Header -->
               <h3 class="siet-table-title">INTERNAL COMPLAINT COMMITTEE</h3>
 
+              <div class="siet-table-scroll-hint"><span>⇄ Swipe table horizontally to view full details</span></div>
+
               <!-- Center-Aligned Table with 4 Columns matching Reference Image 1 -->
               <div class="siet-table-wrapper-center">
                 <table class="siet-center-table icc-table">
                   <thead>
                     <tr>
                       <th style="width: 10%;">S.No</th>
-                      <th style="width: 28%;">Name</th>
-                      <th style="width: 42%;">Designation</th>
+                      <th class="col-name" style="width: 28%; text-align: left;">Name</th>
+                      <th class="col-desig" style="width: 42%; text-align: left;">Designation</th>
                       <th style="width: 20%;">Contact Number</th>
                     </tr>
                   </thead>
@@ -491,14 +490,16 @@ export function governancePage(initialTab = 'all') {
                 <p class="siet-table-subtitle">CONSTITUTED UNDER GUIDANCE OF COIMBATORE CITY POLICE · AY 2024–25</p>
               </div>
 
+              <div class="siet-table-scroll-hint dark-hint"><span>⇄ Swipe table horizontally to view full details</span></div>
+
               <!-- Center-Aligned Crisp Grid Table matching Reference Image 2 -->
               <div class="siet-table-wrapper-center">
                 <table class="antidrug-table">
                   <thead>
                     <tr>
                       <th style="width: 10%;">S.No</th>
-                      <th style="width: 38%;">Name of the Members</th>
-                      <th style="width: 26%;">Designation</th>
+                      <th class="col-name" style="width: 38%; text-align: left;">Name of the Members</th>
+                      <th class="col-desig" style="width: 26%; text-align: left;">Designation</th>
                       <th style="width: 26%;">Phone Number</th>
                     </tr>
                   </thead>
@@ -506,37 +507,37 @@ export function governancePage(initialTab = 'all') {
                     <tr>
                       <td>1.</td>
                       <td class="cell-name">Dr. N. K. Sakthivel</td>
-                      <td>Principal</td>
+                      <td class="cell-desig">Principal</td>
                       <td class="cell-contact"><a href="tel:9486244579" title="Call Dr. N. K. Sakthivel">9486244579</a></td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td class="cell-name">Dr.R.RanjithKumar</td>
-                      <td>Professor/ECE</td>
+                      <td class="cell-desig">Professor/ECE</td>
                       <td class="cell-contact"><a href="tel:8317375756" title="Call Dr.R.RanjithKumar">8317375756</a></td>
                     </tr>
                     <tr>
                       <td>3.</td>
                       <td class="cell-name">Dr.K.E.Kannammal</td>
-                      <td>HoD/CSE</td>
+                      <td class="cell-desig">HoD/CSE</td>
                       <td class="cell-contact"><a href="tel:9843633389" title="Call Dr.K.E.Kannammal">9843633389</a></td>
                     </tr>
                     <tr>
                       <td>4.</td>
                       <td class="cell-name">Ms.Anburani</td>
-                      <td>Police Akka</td>
+                      <td class="cell-desig">Police Akka</td>
                       <td class="cell-contact"><a href="tel:9498173268" title="Call Ms.Anburani">9498173268</a></td>
                     </tr>
                     <tr>
                       <td>5.</td>
                       <td class="cell-name">Ms.Baby Rosy</td>
-                      <td>Police Akka</td>
+                      <td class="cell-desig">Police Akka</td>
                       <td class="cell-contact"><a href="tel:9498172220" title="Call Ms.Baby Rosy">9498172220</a></td>
                     </tr>
                     <tr>
                       <td>6.</td>
                       <td class="cell-name">Mr.Kuralarasan</td>
-                      <td>Police Bro</td>
+                      <td class="cell-desig">Police Bro</td>
                       <td class="cell-contact"><a href="tel:8508325075" title="Call Mr.Kuralarasan">8508325075</a></td>
                     </tr>
                   </tbody>
@@ -620,14 +621,16 @@ export function governancePage(initialTab = 'all') {
                 CONSTITUTED UNDER UGC GUIDELINES &amp; ANNA UNIVERSITY AUTONOMOUS STATUTES
               </p>
 
+              <div class="siet-table-scroll-hint"><span>⇄ Swipe table horizontally to view full details</span></div>
+
               <!-- Center-Aligned Table with 5 Columns matching Green & Yellow Reference -->
               <div class="siet-table-wrapper-center">
                 <table class="siet-center-table icc-table">
                   <thead>
                     <tr>
                       <th style="width: 8%;">S.No</th>
-                      <th style="width: 26%;">Name of the Member</th>
-                      <th style="width: 36%;">Designation &amp; Organization</th>
+                      <th class="col-name" style="width: 28%; text-align: left;">Name of the Member</th>
+                      <th class="col-desig" style="width: 34%; text-align: left;">Designation &amp; Organization</th>
                       <th style="width: 15%;">Category</th>
                       <th style="width: 15%;">Role</th>
                     </tr>
@@ -891,39 +894,40 @@ export function mandatoryDisclosurePage() {
             </div>
           </div>
           <div class="coe-card-body" style="padding: 0;">
+            <div class="siet-table-scroll-hint dark-hint" style="padding: 14px 16px 0 16px;"><span>⇄ Swipe table horizontally to view full details</span></div>
             <div class="coe-table-responsive">
               <table class="coe-table">
                 <thead>
                   <tr>
-                    <th style="width: 60px; text-align: center;">S.No</th>
-                    <th>Degree &amp; Programme Name</th>
-                    <th>Level</th>
-                    <th style="text-align: center;">Sanctioned Intake</th>
-                    <th style="text-align: center;">Accreditation Status</th>
+                    <th style="width: 54px; text-align: center;">S.No</th>
+                    <th style="text-align: left; padding-left: 18px;">Degree &amp; Programme Name</th>
+                    <th style="text-align: center; width: 140px;">Level</th>
+                    <th style="text-align: center; width: 130px;">Sanctioned Intake</th>
+                    <th style="text-align: center; width: 160px;">Accreditation Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   ${nbaProgrammes.map((p, idx) => `
                     <tr>
                       <td style="text-align: center; font-weight: 700;">${idx + 1}</td>
-                      <td><strong>${p.name}</strong></td>
-                      <td><span class="coe-table-tag">Undergraduate (UG)</span></td>
-                      <td style="text-align: center; font-weight: 700; color: #003c24;">${p.sanctionedIntake}</td>
+                      <td style="text-align: left; padding-left: 18px;"><strong>${p.name}</strong></td>
+                      <td style="text-align: center;"><span class="coe-table-tag">Undergraduate (UG)</span></td>
+                      <td style="text-align: center; font-weight: 750; color: #004d2e;">${p.sanctionedIntake} Seats</td>
                       <td style="text-align: center;"><span class="coe-status-pill verified">NBA Tier-I Accredited</span></td>
                     </tr>
                   `).join('')}
                   <tr>
                     <td style="text-align: center; font-weight: 700;">9</td>
-                    <td><strong>B.Tech. Artificial Intelligence and Data Science</strong></td>
-                    <td><span class="coe-table-tag">Undergraduate (UG)</span></td>
-                    <td style="text-align: center; font-weight: 700; color: #003c24;">120</td>
+                    <td style="text-align: left; padding-left: 18px;"><strong>B.Tech. Artificial Intelligence and Data Science</strong></td>
+                    <td style="text-align: center;"><span class="coe-table-tag">Undergraduate (UG)</span></td>
+                    <td style="text-align: center; font-weight: 750; color: #004d2e;">120 Seats</td>
                     <td style="text-align: center;"><span class="coe-status-pill">AICTE Approved</span></td>
                   </tr>
                   <tr>
                     <td style="text-align: center; font-weight: 700;">10</td>
-                    <td><strong>B.E. CSE (Cyber Security)</strong></td>
-                    <td><span class="coe-table-tag">Undergraduate (UG)</span></td>
-                    <td style="text-align: center; font-weight: 700; color: #003c24;">60</td>
+                    <td style="text-align: left; padding-left: 18px;"><strong>B.E. CSE (Cyber Security)</strong></td>
+                    <td style="text-align: center;"><span class="coe-table-tag">Undergraduate (UG)</span></td>
+                    <td style="text-align: center; font-weight: 750; color: #004d2e;">60 Seats</td>
                     <td style="text-align: center;"><span class="coe-status-pill">AICTE Approved</span></td>
                   </tr>
                 </tbody>
@@ -1402,22 +1406,23 @@ export function iqacPage() {
             </div>
           </div>
           <div class="coe-card-body" style="padding: 0;">
+            <div class="siet-table-scroll-hint dark-hint" style="padding: 14px 16px 0 16px;"><span>⇄ Swipe table horizontally to view full details</span></div>
             <div class="coe-table-responsive">
               <table class="coe-table">
                 <thead>
                   <tr>
-                    <th style="width: 60px; text-align: center;">S.No</th>
-                    <th>Name</th>
-                    <th>Designation &amp; Department</th>
-                    <th style="text-align: center;">Role in IQAC</th>
+                    <th style="width: 54px; text-align: center;">S.No</th>
+                    <th style="text-align: left; padding-left: 18px;">Member Name</th>
+                    <th style="text-align: left; padding-left: 18px;">Designation &amp; Department</th>
+                    <th style="text-align: center; width: 180px;">Role in IQAC</th>
                   </tr>
                 </thead>
                 <tbody>
                   ${iqacCommitteeMembers.map(m => `
                     <tr>
                       <td style="text-align: center; font-weight: 700;">${m.sno}</td>
-                      <td><strong>${m.name}</strong></td>
-                      <td>${m.designation}</td>
+                      <td style="text-align: left; padding-left: 18px;"><strong>${m.name}</strong></td>
+                      <td style="text-align: left; padding-left: 18px;">${m.designation}</td>
                       <td style="text-align: center;"><span class="coe-status-pill ${m.role.includes('Chair') || m.role.includes('Coord') ? 'verified' : ''}">${m.role}</span></td>
                     </tr>
                   `).join('')}

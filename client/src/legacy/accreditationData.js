@@ -201,10 +201,6 @@ export const iqacCommitteeMembers = [
   { sno: 11, name: 'Student Council President', designation: 'Final Year Engineering Student', role: 'Student Representative' }
 ];
 
-function accreditationPageNav(activeItem = 'governance') {
-  return '';
-}
-
 function accreditationHero(title, subtitle, breadcrumb = '', badges = []) {
   return `
     <section class="coe-hero-strip accred-unified-hero">
@@ -239,7 +235,6 @@ export function governancePage(initialTab = 'all') {
       'Governance / Committees'
     )}
 
-    ${accreditationPageNav('governance')}
 
     <!-- Main Content Container -->
     <section class="coe-content-area" style="padding-top: 36px;">
@@ -818,7 +813,6 @@ export function mandatoryDisclosurePage() {
       'Mandatory Disclosure'
     )}
 
-    ${accreditationPageNav('mandatory-disclosure')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -952,7 +946,6 @@ export function statutoryDeclarationPage() {
       'Statutory Declaration'
     )}
 
-    ${accreditationPageNav('statutory-declaration')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1050,7 +1043,6 @@ export function nirfPage() {
       'NIRF'
     )}
 
-    ${accreditationPageNav('nirf')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1155,7 +1147,6 @@ export function naacPage() {
       'NAAC'
     )}
 
-    ${accreditationPageNav('naac')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1261,7 +1252,6 @@ export function nbaPage() {
       'NBA'
     )}
 
-    ${accreditationPageNav('nba')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1368,7 +1358,6 @@ export function iqacPage() {
       'IQAC'
     )}
 
-    ${accreditationPageNav('iqac')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1492,7 +1481,6 @@ export function ariiaPage() {
       'ARIIA Report'
     )}
 
-    ${accreditationPageNav('ariia')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -1625,7 +1613,6 @@ export function accreditationsOverviewPage() {
       'Overview'
     )}
 
-    ${accreditationPageNav('')}
 
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">

@@ -1,0 +1,101 @@
+import { icon, vmIcon } from '../../components/common/SvgIcons.js';
+
+const slugify = s => s.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and').replaceAll('/', '-');
+
+export function AboutHero() { return `<section class="siet-vm-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR INSTITUTIONAL PURPOSE</p><h1>Vision <em>&amp;</em> Mission</h1><p class="siet-vm-intro">Shaping capable engineers through an enduring commitment to education, innovation, research and excellence.</p></div></section>` }
+export function AboutSidebar(active = 'vision-mission') { const links = [['vision-mission', 'Vision and Mission', 'eye'], ['core-beliefs', 'Core Beliefs', 'compass'], ['program-outcomes', 'Program Outcomes of the Institution', 'target'], ['core-values', 'Core Values of the Institution', 'spark'], ['philosophy', 'Philosophy', 'education']]; return `<aside class="siet-vm-sidebar reveal"><div class="siet-vm-sidebar-head"><span>VISION &amp; MISSION</span><h2>Explore our<br>foundation.</h2></div><nav aria-label="Vision and Mission navigation">${links.map(([slug, label, iconName]) => `<a class="${slug === active ? 'is-active' : ''}" href="#/${slug}" ${slug === active ? 'aria-current="page"' : `aria-label="Visit ${label}"`}><span class="siet-vm-nav-icon">${vmIcon(iconName)}</span><b>${label}</b><span class="siet-vm-nav-arrow">${vmIcon('arrow')}</span></a>`).join('')}</nav><div class="siet-vm-sidebar-note"><span>EST. 2006</span><p>Learning with purpose. Leading with impact.</p></div></aside>` }
+export function VisionCard() { return `<article class="siet-vm-card siet-vm-card-vision reveal"><div class="siet-vm-card-pattern"></div><div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('eye')}</span><span class="siet-vm-card-number">01 / VISION</span></div><div class="siet-vm-card-copy"><p class="siet-vm-card-label">OUR VISION</p><h2>Engineering a future without limits.</h2><p>To make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p></div><div class="siet-vm-card-footer"><span>Nationally rooted. Globally respected.</span><i></i></div></article>` }
+export function MissionCard() { return `<article class="siet-vm-card siet-vm-card-mission reveal"><div class="siet-vm-mission-lines"></div><div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">02 / MISSION</span></div><div class="siet-vm-card-copy"><p class="siet-vm-card-label">OUR MISSION</p><h2>Inspiring minds to solve what matters.</h2><p>To provide an encouraging environment to develop the intellectual capacity, critical thinking, creativity and problem solving ability of the students.</p></div><div class="siet-vm-card-footer"><span>Curiosity into capability.</span><i></i></div></article>` }
+export function visionPage() { return `<main class="siet-vm-page">${AboutHero()}<section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar()}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>WHAT GUIDES US</p><h2>Purpose, made <em>practical.</em></h2><span>Our vision sets the horizon. Our mission shapes the everyday learning experience that carries students towards it.</span></div><div class="siet-vm-card-grid">${VisionCard()}${MissionCard()}</div></div></div></section></main>` }
+const programmeOutcomes = [
+  ['PO 01', 'Engineering knowledge', 'Apply mathematics, science and engineering fundamentals to solve complex engineering problems.'],
+  ['PO 02', 'Problem analysis', 'Identify, formulate, review research literature and analyse complex engineering problems.'],
+  ['PO 03', 'Design & development', 'Design solutions for complex problems with appropriate consideration for public health and safety.'],
+  ['PO 04', 'Investigation', 'Use research-based knowledge, methods and data analysis to reach valid conclusions.'],
+  ['PO 05', 'Modern tool usage', 'Select and apply appropriate techniques, resources and modern engineering tools.'],
+  ['PO 06', 'Engineer & society', 'Assess societal, health, safety, legal and cultural responsibilities in engineering practice.'],
+  ['PO 07', 'Environment & sustainability', 'Understand and evaluate the impact of engineering solutions in environmental contexts.'],
+  ['PO 08', 'Ethics', 'Apply ethical principles and commit to professional responsibilities and norms.'],
+  ['PO 09', 'Individual & team work', 'Function effectively as an individual and as a member or leader in diverse teams.'],
+  ['PO 10', 'Communication', 'Communicate engineering activities effectively with the engineering community and society.'],
+  ['PO 11', 'Project management & finance', 'Apply engineering and management principles to manage projects in multidisciplinary environments.'],
+  ['PO 12', 'Life-long learning', 'Recognise the need for and engage in independent, life-long learning in a changing world.']
+];
+export function programOutcomesPage() { return `<main class="siet-vm-page siet-po-page"><section class="siet-vm-hero siet-po-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUTCOME-BASED EDUCATION</p><h1>Program <em>Outcomes</em></h1><p class="siet-vm-intro">Building engineering graduates with the knowledge, mindset and responsibility to create meaningful impact.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('program-outcomes')}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>THE SIET GRADUATE</p><h2>Ready to think.<br><em>Ready to build.</em></h2><span>Our programme outcomes define the capabilities every SIET graduate develops through rigorous learning, real-world practice and a commitment to responsible innovation.</span></div><div class="siet-po-grid">${programmeOutcomes.map(([number, title, copy], index) => `<article class="siet-po-card reveal"><span class="siet-po-index">${String(index + 1).padStart(2, '0')}</span><span class="siet-po-code">${number}</span><span class="siet-po-icon">${vmIcon(index % 3 === 0 ? 'target' : index % 3 === 1 ? 'spark' : 'compass')}</span><h3>${title}</h3><p>${copy}</p><span class="siet-po-line"></span></article>`).join('')}</div></div></div></section></main>` }
+const coreValues = [
+  ['01', 'Excellence', 'We pursue high standards in learning, research and every contribution we make.', 'target'],
+  ['02', 'Integrity', 'We act with honesty, accountability and respect in every decision and relationship.', 'compass'],
+  ['03', 'Innovation', 'We nurture curiosity and the courage to turn ideas into meaningful solutions.', 'spark'],
+  ['04', 'Inclusivity', 'We create a welcoming community where every learner can contribute and thrive.', 'eye'],
+  ['05', 'Collaboration', 'We grow through shared knowledge, multidisciplinary teamwork and industry connection.', 'education'],
+  ['06', 'Social responsibility', 'We use engineering knowledge to serve people, society and the planet.', 'target']
+];
+export function coreValuesPage() { return `<main class="siet-vm-page siet-cv-page"><section class="siet-vm-hero siet-cv-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> THE SIET WAY</p><h1>Core <em>Values</em></h1><p class="siet-vm-intro">The shared principles that guide how we learn, lead, innovate and contribute to the world around us.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('core-values')}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>OUR COMMON COMPASS</p><h2>Values that shape<br><em>every possibility.</em></h2><span>At SIET, technical mastery is strengthened by character. These values create an environment where ambition is grounded in purpose.</span></div><div class="siet-cv-grid">${coreValues.map(([number, title, copy, iconName]) => `<article class="siet-cv-card reveal"><span class="siet-cv-number">${number}</span><span class="siet-cv-icon">${vmIcon(iconName)}</span><h3>${title}</h3><p>${copy}</p><span class="siet-cv-corner"></span></article>`).join('')}</div></div></div></section></main>` }
+export function philosophyPage() { const principles = [['Learn by doing', 'Learning becomes lasting when ideas are tested, made and improved through purposeful practice.', '01'], ['Think beyond disciplines', 'The most valuable solutions emerge when engineering connects with people, society and the wider world.', '02'], ['Grow with responsibility', 'Knowledge carries purpose. We prepare students to use it ethically, sustainably and for public good.', '03']]; return `<main class="siet-vm-page siet-ph-page"><section class="siet-vm-hero siet-ph-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR EDUCATIONAL BELIEF</p><h1>Learning with <em>purpose.</em></h1><p class="siet-vm-intro">An education that builds confident thinkers, capable creators and responsible citizens for a changing world.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('philosophy')}<div class="siet-vm-main"><article class="siet-ph-statement reveal"><span class="siet-ph-quote">“</span><p>We believe education should do more than prepare students for a profession. It should inspire them to question, create, collaborate and use their capabilities to make a meaningful difference.</p><span class="siet-ph-mark"><i></i> SRI SHAKTHI PHILOSOPHY</span></article><div class="siet-ph-principles">${principles.map(([title, copy, number], index) => `<article class="siet-ph-principle reveal"><span class="siet-ph-principle-no">${number}</span><span class="siet-ph-principle-icon">${vmIcon(index === 0 ? 'education' : index === 1 ? 'spark' : 'compass')}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div><div class="siet-ph-closing reveal"><div><p>OUR PROMISE</p><h2>Knowledge in action.<br><em>Character in leadership.</em></h2></div><span>Every SIET experience is designed to turn potential into a positive force for the future.</span></div></div></div></section></main>` }
+const coreBeliefs = [
+  ['01', 'GATEWAY', 'Achieving 100% academic success pass for our students is only the <mark class="siet-cb-highlight">GATEWAY</mark> to success', 'Academic excellence is the threshold. We empower every student with deep subject mastery and strong conceptual foundations.', 'ACADEMIC FOUNDATION'],
+  ['02', 'MILESTONE', 'Breeding 100% employable and entrepreneurial engineers is the first <mark class="siet-cb-highlight">MILESTONE</mark>', 'Bridging the gap between academia and industry through hands-on practice, multidisciplinary projects, and entrepreneurial mindsets.', 'PROFESSIONAL READINESS'],
+  ['03', 'DESTINATION', 'Creating 100% confident citizens who will uphold the pride and cultural ethos of our great nation is our <mark class="siet-cb-highlight">DESTINATION</mark>', 'Nurturing grounded character, cultural values, integrity, and a lifelong commitment to societal contribution.', 'NATION BUILDING'],
+  ['04', 'WILLPOWER', 'Discipline is the bridge between goals and accomplishment as it provides all the necessary <mark class="siet-cb-highlight">WILLPOWER</mark>', 'Cultivating focus, resilience, and personal responsibility as the fundamental driving forces behind lasting achievement.', 'CHARACTER & DRIVE'],
+  ['05', 'CHANGE THE WORLD', 'Education is the most powerful weapon to <mark class="siet-cb-highlight">CHANGE THE WORLD</mark>', 'Leveraging technology, innovation, and ethical engineering to create transformative, human-centric impact across the globe.', 'GLOBAL IMPACT']
+];
+export function coreBeliefsPage() {
+  return `<main class="siet-vm-page siet-cb-page">
+  <section class="siet-vm-hero siet-cb-hero">
+    <div class="siet-vm-hero-grid"></div>
+    <div class="siet-vm-hero-orb orb-one"></div>
+    <div class="siet-vm-hero-orb orb-two"></div>
+    <div class="siet-vm-shell siet-vm-hero-content reveal">
+      <div class="siet-cb-breadcrumbs"><a href="#/">Home</a><span>/</span><b>Core Beliefs</b></div>
+      <p class="siet-vm-kicker"><i></i> INSTITUTIONAL PHILOSOPHY</p>
+      <h1>Core <em>Beliefs</em></h1>
+      <p class="siet-vm-intro">The foundational convictions that guide our culture, inspire student excellence, and power our enduring commitment to the nation.</p>
+    </div>
+  </section>
+  <section class="siet-vm-content">
+    <div class="siet-vm-shell siet-vm-layout">
+      ${AboutSidebar('core-beliefs')}
+      <div class="siet-vm-main">
+        <div class="siet-vm-section-intro reveal">
+          <p>WHAT WE BELIEVE</p>
+          <h2>CORE <em>BELIEFS</em></h2>
+          <span>Our educational philosophy is anchored in five essential convictions — from gateway academic success to world-changing leadership.</span>
+        </div>
+        <div class="siet-cb-list">
+          ${coreBeliefs.map(([num, tag, text, desc, kicker], index) => `
+            <article class="siet-cb-card reveal" style="transition-delay:${index * 0.08}s">
+              <span class="siet-cb-accent-bar"></span>
+              <div class="siet-cb-indicator">
+                <div class="siet-cb-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+                <span class="siet-cb-num">${num}</span>
+              </div>
+              <div class="siet-cb-body">
+                <div class="siet-cb-meta">
+                  <span class="siet-cb-kicker">${kicker}</span>
+                  <span class="siet-cb-tag">${tag}</span>
+                </div>
+                <p class="siet-cb-text">${text}</p>
+                <p class="siet-cb-desc">${desc}</p>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+        <div class="siet-cb-closing reveal">
+          <div class="siet-cb-closing-text">
+            <h3>Powering the Youth, Empowering the Nation</h3>
+            <p>At Sri Shakthi, these beliefs are practiced every day across our classrooms, research laboratories, innovation centres, and community initiatives.</p>
+          </div>
+          <a class="siet-cb-closing-cta" href="#/admission-enquiry">Explore Admissions ${icon('arrow')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ </main>`;
+}
+
+export function chairmanPage() { return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>` }
+
+export function principalPage() { return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>` }
+

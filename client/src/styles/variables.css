@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=League+Spartan:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root {
+  /* Institutional Brand Palette */
+  --navy: #075b36;
+  --deep: #043f27;
+  --blue: #0b7a48;
+  --mint: #dff3e5;
+  --paper: #fffef8;
+  --coral: #f3c515;
+  --ink: #173226;
+
+  /* Extended UI Tokens */
+  --surface-white: #ffffff;
+  --surface-offwhite: #f8faf8;
+  --surface-alt: #f1f7f3;
+  --surface-dark: #032a19;
+  --border-light: #e4eee7;
+  --border-subtle: #d2e4d8;
+  --border-focus: #0b7a48;
+
+  /* Feedback Colors */
+  --success: #0b7a48;
+  --success-bg: #eaf7ef;
+  --error: #b3261e;
+  --error-bg: #fdf2f2;
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+
+  /* Typography */
+  --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'League Spartan', 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-script: 'Caveat', cursive;
+
+  /* Border Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Elevation Shadows */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 24px 60px rgba(7, 91, 54, 0.16);
+
+  /* Animation Easing & Timing */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

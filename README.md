@@ -2,26 +2,69 @@
 
 A MERN application for Sri Shakthi Institute of Engineering & Technology.
 
-## Project structure
+## Architecture & Project Structure
+
+The project has been refactored into a scalable, domain-driven structure decoupling state, data, reusable components, and route pages:
 
 ```text
 SIET_WEB/
-├── client/                 # React + Vite frontend
-│   ├── public/             # Brand, media and template assets
+├── client/                     # Modern React + Vite Frontend
+│   ├── public/                 # Brand assets, PDFs (downloads/ & download/), and icons
+│   │   ├── brand/              # Logos, campus imagery, and institutional photography
+│   │   └── downloads/          # Official regulatory PDFs and forms (with parity mirror)
 │   └── src/
-│       ├── App.jsx         # React application shell
-│       ├── main.jsx        # React entry point
-│       ├── styles.css      # Site styles
-│       └── legacy/site.js  # Existing routes and page renderer
-├── server/                 # Node.js + Express API
-│   ├── config/             # MySQL connection pool and environment
-│   ├── controllers/        # Request handlers
-│   ├── middleware/         # API middleware
-│   ├── migrations/         # Versioned MySQL schema
-│   ├── repositories/       # Parameterized SQL queries
-│   └── routes/             # Express routes
-├── legacy/template-pages/  # Archived source template pages
-└── package.json            # Root development orchestration
+│       ├── App.jsx             # React application mount
+│       ├── app.js              # Master SPA router & event orchestrator
+│       ├── main.jsx            # Application entry point
+│       ├── styles/
+│       │   └── variables.css   # Institutional design tokens (palette, spacing, typography)
+│       ├── styles.css          # Core CSS stylesheet
+│       ├── utils/              # Pure utilities (DOM, router, animations, forms, modals)
+│       │   ├── dom.js          # DOM query, titleCase, escapeHtml, slugify, counter
+│       │   ├── router.js       # Hash router, query parser, navigateTo, scroll handling
+│       │   ├── modalScroll.js  # iOS/Desktop scroll lock & modal trap
+│       │   ├── animations.js   # IntersectionObserver & metric counter animator
+│       │   └── formSubmit.js   # Shared async AJAX submission & notification toasts
+│       ├── data/               # Institutional datasets decoupled from presentation
+│       │   ├── navigationData.js    # Header & footer sitemaps, page copy
+│       │   ├── programmesData.js    # 14 UG and 7 PG degree programmes
+│       │   ├── departmentsData.js   # 21 department curriculum profiles & facilities
+│       │   ├── campusData.js        # Campus life, hostel, sports, transport data
+│       │   ├── placementData.js     # Tier analytics (₹10 LPA+, ₹6 LPA+, ₹4 LPA+)
+│       │   ├── careerData.js        # College, School & Lab career opportunities
+│       │   ├── curriculumData.js    # Autonomous R2021 & R2025 curriculum specifications
+│       │   ├── accreditationData.js # NAAC, NBA, NIRF, IQAC, ARIIA compliance records
+│       │   ├── coeData.js           # Controller of Examinations portal datasets
+│       │   └── libraryData.js       # Central library OPAC & digital repositories
+│       ├── components/         # Modular, reusable UI components
+│       │   ├── common/         # Header, Footer, HudHeader, Modals, SvgIcons
+│       │   └── cards/          # Programme cards, department cards
+│       ├── sections/           # Large reusable layout sections (PlacementSection, etc.)
+│       ├── pages/              # Domain-organized route page controllers
+│       │   ├── Home/           # Landing page with hero, stats, recruiter marquee
+│       │   ├── About/          # Vision, Mission, Beliefs, Values, Chairman, Principal
+│       │   ├── Academics/      # Programmes, Departments, Curriculum, Calendar, Library
+│       │   ├── Campus/         # Campus Life, Facilities, Hostel, Transport, Sports, Clubs, NCC
+│       │   ├── Admissions/     # Apply Portal, Admission Enquiry, Referral
+│       │   ├── Placements/     # Placement Portal, Recruiters, Entrepreneurship E-Cell
+│       │   ├── COE/            # Controller of Examinations, Downloads, Regulations
+│       │   ├── Accreditation/  # NAAC, NBA, NIRF, IQAC, ARIIA, Governance
+│       │   ├── Careers/        # Careers @ SIET, Openings, Application form
+│       │   └── Contact/        # Contact directory, Google Map integration, enquiry
+│       ├── layouts/            # Layout shells (MainLayout, ApplyLayout)
+│       └── legacy/             # Backwards-compatibility re-export facades
+├── server/                     # Node.js + Express API
+│   ├── config/                 # MySQL pool & environment configuration
+│   ├── controllers/            # Enquiry, Admission, News controllers
+│   ├── middleware/             # Error handling, CORS, rate limiting
+│   ├── migrations/             # Versioned MySQL DDL scripts
+│   ├── repositories/           # Parameterized SQL queries
+│   └── routes/                 # Express API routes (/api/enquiries, /api/admission-enquiries)
+├── scripts/                    # Build, mirror, and test orchestration
+│   ├── test_pages.mjs          # Comprehensive test suite validating all 41 pages
+│   └── mirror-dist.js          # Dist post-build mirroring script
+├── legacy/template-assets/     # Archived unused raw template assets
+└── package.json                # Root workspaces orchestration
 ```
 
 ## Run locally

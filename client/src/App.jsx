@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { mountSite } from './legacy/site.js';
+import { mountSite } from './app.js';
 
 export default function App() {
   const siteRoot = useRef(null);

@@ -1,0 +1,386 @@
+/* ==========================================================================
+   SIET Design System — Animations, Keyframes & Utility Helpers
+   ========================================================================== */
+
+@keyframes playPulse {
+  70% {
+    box-shadow: 0 0 0 18px #fff0
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 #fff0
+  }
+}
+
+@keyframes noticeScroll {
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+@keyframes tourSpin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes heroDrift {
+  from {
+    transform: scale(1.08)
+  }
+
+  to {
+    transform: scale(1.015)
+  }
+}
+
+@keyframes scrollBounce {
+  50% {
+    transform: translateY(5px)
+  }
+}
+
+@keyframes statusPulse {
+  50% {
+    box-shadow: 0 0 0 12px #19ad6300
+  }
+}
+@keyframes programmeAmbient {
+
+  0%,
+  100% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+}
+
+@keyframes programmeBreathe {
+
+  0%,
+  100% {
+    box-shadow: 0 8px 24px rgba(0, 70, 40, .045);
+    border-left-color: #f5c400
+  }
+
+  50% {
+    box-shadow: 0 14px 30px rgba(0, 100, 62, .12);
+    border-left-color: #ffd83d
+  }
+}
+
+@keyframes programmeIconFloat {
+
+  0%,
+  100% {
+    translate: 0 0
+  }
+
+  50% {
+    translate: 0 -5px
+  }
+}
+
+@keyframes programmeArrowPulse {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    box-shadow: 0 0 0 0 rgba(0, 100, 62, .14)
+  }
+
+  50% {
+    transform: translateX(4px);
+    box-shadow: 0 0 0 7px rgba(0, 100, 62, 0)
+  }
+}
+
+@keyframes programmeCountGlow {
+
+  0%,
+  100% {
+    opacity: .72;
+    letter-spacing: 2px
+  }
+
+  50% {
+    opacity: 1;
+    letter-spacing: 2.6px
+  }
+}
+
+@keyframes programmeSweep {
+  0% {
+    translate: -160% 0;
+    opacity: 0
+  }
+
+  18% {
+    opacity: .3
+  }
+
+  45%,
+  100% {
+    translate: 250% 0;
+    opacity: 0
+  }
+}
+@keyframes placementMarqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes departmentPaneIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes departmentTitleEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes departmentPanelEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes departmentHeaderSweep {
+  0% {
+    background-position: 0 0, 0 0, 0 0
+  }
+
+  50% {
+    background-position: 0 0, 105px 0, 40px 0
+  }
+
+  100% {
+    background-position: 0 0, 210px 0, 0 0
+  }
+}
+
+@keyframes departmentStatusPulse {
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 241, 161, 0)
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 241, 161, 0)
+  }
+}
+
+@keyframes departmentHudSweep {
+  0% {
+    background-position: 0 0, 0 0, 0 0
+  }
+
+  50% {
+    background-position: 0 0, 105px 0, 18px 8px
+  }
+
+  100% {
+    background-position: 0 0, 210px 0, 0 0
+  }
+}
+
+@keyframes hudPulse {
+  50% {
+    opacity: .35;
+    transform: scale(.65)
+  }
+}
+
+@keyframes orbitMark {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes pmBackdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pmBackdropFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes pmWindowScaleIn {
+  from { opacity: 0; transform: scale(0.94) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes pmWindowScaleOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to { opacity: 0; transform: scale(0.95) translateY(8px); }
+}
+
+@keyframes curriculumRegulationIn {
+  from { opacity: .25; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRegField {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseLiveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.75); }
+}
+
+@keyframes applyShimmerGlow {
+  0% { left: -60%; }
+  35% { left: 140%; }
+  100% { left: 140%; }
+}
+
+@keyframes fadeInApplyPane {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes academicSealFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -8px; }
+}
+
+@keyframes coeFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGreen {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes runningGalleryLeftToRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes coePulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes sietSuperstarsMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 11px));
+  }
+}
+
+@keyframes sietModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes sietTopRecruiterScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes edcFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes edcModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes sietFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

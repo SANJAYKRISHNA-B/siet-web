@@ -1,0 +1,848 @@
+/* ==========================================================================
+   SIET Page — NAAC, NBA, NIRF, IQAC, ARIIA & Statutory Governance
+   ========================================================================== */
+
+.accreditation-strip {
+  padding: 25px 6vw;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 24px;
+  border-block: 1px solid #d4e2d7
+}
+
+.accreditation-strip>div {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 20px;
+  border-right: 1px solid #d5e3d9
+}
+
+.accreditation-strip img {
+  width: 210px;
+  max-width: 70%;
+  height: 80px;
+  object-fit: contain
+}
+
+.accreditation-strip strong {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--navy)
+}
+
+.approval-copy {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center
+}
+
+.approval-copy b {
+  font: 800 18px 'Manrope';
+  color: var(--navy)
+}
+
+.approval-copy span {
+  font-size: 12px;
+  margin-top: 8px
+}
+
+@media (max-width:1100px) {
+
+  .accreditation-strip {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .approval-copy {
+    grid-column: 1/3;
+    border-top: 1px solid #d5e3d9;
+    border-right: 0 !important
+  }
+}
+
+@media (max-width:700px) {
+
+  .accreditation-strip {
+    grid-template-columns: 1fr
+  }
+
+  .accreditation-strip>div {
+    border-right: 0;
+    border-bottom: 1px solid #d5e3d9
+  }
+
+  .approval-copy {
+    grid-column: auto
+  }
+
+  .accreditation-strip img {
+    width: 180px
+  }
+}
+
+.campus-intro-stage>.accreditation-strip {
+  width: calc(100% - clamp(40px, 6vw, 110px));
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  background: #ffffffd9;
+  border: 1px solid #e2dfcf;
+  border-radius: 20px;
+  box-shadow: 0 16px 45px #614b0712;
+  backdrop-filter: blur(12px)
+}
+
+.campus-intro-stage>.accreditation-strip>div {
+  min-width: 0;
+  min-height: 105px;
+  padding: 14px clamp(13px, 1.4vw, 25px);
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  gap: 15px;
+  border: 0;
+  border-right: 1px solid #e0ddca
+}
+
+.campus-intro-stage>.accreditation-strip>div:last-child {
+  border-right: 0
+}
+
+.campus-intro-stage .accreditation-strip img {
+  width: clamp(58px, 5vw, 82px);
+  height: 68px;
+  max-width: none;
+  flex: none;
+  object-fit: contain
+}
+
+.campus-intro-stage .accreditation-strip svg {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  padding: 9px;
+  border-radius: 50%;
+  background: #eef6e9;
+  color: #075b36
+}
+
+.campus-intro-stage .accreditation-strip span {
+  min-width: 0;
+  margin: 0
+}
+
+.campus-intro-stage .accreditation-strip b,
+.campus-intro-stage .accreditation-strip small {
+  display: block
+}
+
+.campus-intro-stage .accreditation-strip b {
+  font: 800 clamp(13px, 1vw, 17px)/1.25 'Plus Jakarta Sans';
+  color: #075b36
+}
+
+.campus-intro-stage .accreditation-strip small {
+  margin-top: 6px;
+  font-size: clamp(9px, .72vw, 12px);
+  line-height: 1.4;
+  color: #53645c
+}
+
+@media(max-width:1200px) {
+  .campus-intro-stage>.accreditation-strip {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 12px
+  }
+
+  .campus-intro-stage>.accreditation-strip>div {
+    border-bottom: 1px solid #e0ddca
+  }
+
+  .campus-intro-stage>.accreditation-strip>div:nth-child(3) {
+    border-right: 0
+  }
+
+  .campus-intro-stage>.accreditation-strip>div:nth-child(4),
+  .campus-intro-stage>.accreditation-strip>div:nth-child(5) {
+    border-bottom: 0
+  }
+
+  .campus-intro-stage>.accreditation-strip>div:nth-child(5) {
+    border-right: 0
+  }
+}
+
+@media (max-width:700px) {
+
+  .campus-intro-stage>.accreditation-strip {
+    width: 90%;
+    grid-template-columns: 1fr;
+    padding: 8px 16px;
+    border-radius: 16px
+  }
+
+  .campus-intro-stage>.accreditation-strip>div {
+    min-height: 88px;
+    padding: 12px 5px;
+    border-right: 0 !important;
+    border-bottom: 1px solid #e0ddca !important
+  }
+
+  .campus-intro-stage>.accreditation-strip>div:last-child {
+    border-bottom: 0 !important
+  }
+
+  .campus-intro-stage .accreditation-strip img {
+    width: 62px;
+    height: 58px
+  }
+
+  .campus-intro-stage .accreditation-strip svg {
+    width: 43px;
+    height: 43px
+  }
+
+  .campus-intro-stage .accreditation-strip b {
+    font-size: 14px
+  }
+
+  .campus-intro-stage .accreditation-strip small {
+    font-size: 10px
+  }
+}
+
+@media (min-width:1051px) {
+
+  .campus-intro-stage>.accreditation-strip {
+    min-height: 130px;
+    margin-top: 0;
+    padding-block: 12px
+  }
+
+  .campus-intro-stage>.accreditation-strip>div {
+    min-height: 90px
+  }
+}
+
+@media (max-width:1023px) {
+
+  .institution-nba,
+  .institution-naac,
+  .institution-divider {
+    display: none !important
+  }
+}
+
+.institution-nba {
+  height: 220px;
+  margin: 2px 9px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #eeeadd;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff, #fffdf5)
+}
+
+.institution-nba img {
+  width: 130px;
+  height: 84px;
+  object-fit: contain
+}
+
+.institution-nba i {
+  width: 56px;
+  height: 2px;
+  margin: 15px 0;
+  background: #d9aa22
+}
+
+.institution-nba p {
+  margin: 0;
+  color: #26352e;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.55
+}
+
+.institution-naac {
+  display: grid;
+  place-items: center
+}
+
+.institution-naac img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  mix-blend-mode: multiply
+}
+
+@media (max-width:1450px) {
+
+  .institution-nba {
+    height: 195px
+  }
+
+  .institution-nba img {
+    width: 105px
+  }
+
+  .institution-naac img {
+    width: 115px;
+    height: 115px
+  }
+}
+
+@media (max-width:1023px) {
+
+  .institution-nba,
+  .institution-divider,
+  .institution-naac {
+    display: none
+  }
+}
+.committee-roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.committee-member-card {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 45, 28, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.committee-member-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #005a36, #cca01d);
+}
+
+.committee-member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 45, 28, 0.08);
+}
+
+.committee-member-card h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 750;
+  color: #003c24;
+}
+
+.comm-sync-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 22px;
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-radius: 12px;
+  margin-top: 32px;
+  font-size: 13px;
+  color: #4b5563;
+  box-shadow: 0 2px 10px rgba(0, 45, 28, 0.03);
+}
+
+.comm-sync-bar a {
+  color: #005a36;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.comm-sync-bar .sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+}
+.siet-official-table-card.icc-theme {
+  background: #005a36;
+  color: #ffffff;
+  padding: 28px 24px 32px 24px;
+  border: 3px solid #00472b;
+}
+
+.siet-icc-left-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.siet-icc-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.siet-icc-motto-wrap {
+  margin-top: 4px;
+  font-size: 8.5px;
+  font-weight: 750;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.siet-icc-motto-wrap span {
+  display: block;
+}
+
+.siet-naac-medallion {
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icc-table {
+  border-top: 2.5px solid #ffd447;
+  border-bottom: 2.5px solid #ffd447;
+  min-width: 620px;
+}
+
+.icc-table th {
+  color: #ffd447;
+  font-size: 14px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 13px 14px;
+  text-align: center;
+  border-bottom: 2px solid #ffd447;
+  background: transparent;
+  vertical-align: middle;
+}
+
+.icc-table td {
+  padding: 12px 14px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1.5px solid #d4a726;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.icc-table tr:last-child td {
+  border-bottom: none;
+}
+
+.icc-table td.cell-name,
+.antidrug-table td.cell-name,
+.siet-clean-grid-table td.cell-name,
+.siet-center-table td.cell-name {
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+  white-space: normal;
+}
+
+.icc-table td.cell-desig,
+.antidrug-table td.cell-desig,
+.siet-clean-grid-table td.cell-desig,
+.siet-center-table td.cell-desig {
+  color: #ffffff;
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+  white-space: normal;
+}
+
+.icc-table th.col-name,
+.antidrug-table th.col-name,
+.siet-clean-grid-table th.col-name,
+.siet-center-table th.col-name,
+.icc-table th:nth-child(2),
+.antidrug-table th:nth-child(2),
+.siet-clean-grid-table th:nth-child(2),
+.siet-center-table th:nth-child(2) {
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+}
+
+.icc-table th.col-desig,
+.antidrug-table th.col-desig,
+.siet-clean-grid-table th.col-desig,
+.siet-center-table th.col-desig,
+.icc-table th:nth-child(3),
+.antidrug-table th:nth-child(3),
+.siet-clean-grid-table th:nth-child(3),
+.siet-center-table th:nth-child(3) {
+  text-align: left !important;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+}
+
+.icc-table td.cell-multiline {
+  line-height: 1.55;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.icc-table td.cell-contact a {
+  color: #ffffff;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.icc-table td.cell-contact a:hover {
+  background: #ffd447;
+  color: #003c24;
+}
+
+@media (max-width: 768px) {
+  .siet-official-table-card.icc-theme {
+    padding: 18px 8px 22px 8px;
+  }
+  .icc-table td.cell-name,
+  .antidrug-table td.cell-name,
+  .siet-clean-grid-table td.cell-name,
+  .siet-center-table td.cell-name,
+  .icc-table td.cell-desig,
+  .antidrug-table td.cell-desig,
+  .siet-clean-grid-table td.cell-desig,
+  .siet-center-table td.cell-desig {
+    padding-left: 12px !important;
+    padding-right: 8px !important;
+  }
+}
+.accred-rti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.rti-card {
+  background: #fff;
+  border: 1px solid #e0ebe3;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rti-card.appellate {
+  border-top: 4px solid #cca01d;
+  background: linear-gradient(180deg, #fdfbf5 0%, #fff 100%);
+}
+
+.rti-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #005a36;
+  background: #e8f5ed;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.rti-card h4 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003c24;
+}
+
+.rti-designation {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.rti-meta {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #edf2ef;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.rti-meta p {
+  margin: 0;
+}
+
+.rti-meta a {
+  color: #005a36;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.naac-grade-showcase {
+  background: linear-gradient(135deg, #003c24 0%, #005a36 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 12px 36px rgba(0, 45, 28, 0.22);
+}
+.nba-accord-box {
+  background: linear-gradient(135deg, #0b452e 0%, #003c24 100%);
+  border: 1px solid #a3d9bc;
+  border-radius: 16px;
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 45, 28, 0.16);
+}
+
+.nba-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.nba-prog-card {
+  background: #fff;
+  border: 1px solid #dfe9e2;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 3px 12px rgba(0, 45, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.nba-prog-card:hover {
+  transform: translateY(-3px);
+  border-color: #005a36;
+}
+
+.nba-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nba-prog-code {
+  font-size: 12px;
+  font-weight: 800;
+  color: #003c24;
+  background: #e6f4ed;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.nba-prog-card h4 {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 750;
+  color: #003c24;
+  flex-grow: 1;
+}
+
+.nba-card-meta {
+  padding-top: 10px;
+  border-top: 1px solid #edf2ee;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12.5px;
+  color: #4b5563;
+}
+
+.nba-card-meta small {
+  color: #6b7280;
+}
+.accred-iqac-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.iqac-feature-box {
+  background: #fff;
+  border: 1px solid #e0ebe3;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+}
+
+.iqac-feature-box .feature-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.iqac-feature-box h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003c24;
+}
+
+.iqac-feature-box ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .naac-grade-showcase,
+  .nba-accord-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .committee-member-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .committee-member-card h4,
+  .cm-desig {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .rti-card {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .rti-tag {
+    align-self: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rti-card h4,
+  .rti-designation {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rti-meta {
+    text-align: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .naac-grade-showcase {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+    padding: 24px 16px !important;
+  }
+
+  .nba-accord-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding: 22px 16px !important;
+  }
+
+  .nba-prog-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .nba-card-top {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .nba-card-meta {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .iqac-feature-box {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .iqac-feature-box h4,
+  .iqac-feature-box p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .comm-sync-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+
+  .comm-sync-bar .sync-badge {
+    margin-inline: auto !important;
+  }
+
+  .comm-sync-bar span,
+  .comm-sync-bar a {
+    text-align: center !important;
+  }
+}

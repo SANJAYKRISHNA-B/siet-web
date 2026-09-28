@@ -1,0 +1,9 @@
+import { pageGroups } from '../../data/navigationData.js';
+
+export function footer() {
+  return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}<div class="footer-link-group"><b>COE</b><a href="#/coe"><span>›</span>COE Portal</a><a href="#/coe?tab=forms"><span>›</span>Downloads &amp; Forms</a><a href="#/coe?tab=regulations"><span>›</span>Regulations</a><a href="#/coe?tab=results"><span>›</span>Results</a><a href="#/coe?tab=transcripts"><span>›</span>Transcripts</a><a href="#/coe?tab=schedules"><span>›</span>Exam Schedules</a></div></div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>`;
+}
+
+export function bottomDecor() {
+  return `<div class="siet-curr-bottom-decor" aria-hidden="true"><div class="siet-curr-bottom-wave"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none"><path d="M0,100 L0,25 C200,85 450,95 720,60 C980,25 1200,35 1440,0 L1440,100 Z" fill="#073b21"/><path d="M0,100 L0,45 C240,92 480,102 760,70 C1020,38 1240,48 1440,20 L1440,100 Z" fill="#0b522f"/><path d="M0,100 L0,70 C280,105 520,108 800,82 C1060,56 1280,68 1440,45 L1440,100 Z" fill="#eab308"/></svg></div></div>`;
+}

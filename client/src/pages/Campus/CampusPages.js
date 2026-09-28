@@ -1,0 +1,439 @@
+import { pageCopy } from '../../data/navigationData.js';
+import { getInternalPageMeta, renderSubdivisionUniqueContent, campusMarqueeItems } from '../../data/campusData.js';
+import { sietHudHeader, programSelectHtml } from '../../components/common/HudHeader.js';
+import { departmentPage } from '../Academics/DepartmentDetailPage.js';
+import { icon, deptIcon, vmIcon } from '../../components/common/SvgIcons.js';
+import { ugPrograms as programs } from '../../data/programmesData.js';
+import { slugify } from '../../utils/dom.js';
+
+export function internalPage(route) {
+  const isDept = route.startsWith('department/');
+  const deptName = isDept ? titleCase(route.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ') : '';
+  if (isDept && typeof departmentPage === 'function') return departmentPage(deptName);
+  const data = isDept ? [deptName, `Department of ${deptName}`, 'Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.'] : (pageCopy[route] || ['Sri Shakthi', 'Institutional information', 'Explore Sri Shakthi Institute of Engineering and Technology.']);
+  const isDepts = route === 'departments';
+  const isCampus = ['campus-life', 'facilities', 'hostel', 'transport', 'sports', 'clubs', 'ncc'].includes(route);
+  const isAcademics = ['academics', 'departments', 'curriculum', 'academic-calendar', 'library'].includes(route);
+  const isAdmissions = ['programmes', 'admission-enquiry', 'apply', 'admission-referral', 'referral', 'eligibility', 'scholarships', 'fees'].includes(route);
+  const pageMeta = getInternalPageMeta(route, data);
+
+  const deptExtras = isDepts ? `
+  <div class="dept-quick-summary-grid">
+    <div class="dept-summary-card">
+      <span class="dept-summary-num">14+</span>
+      <b>Specialized Disciplines</b>
+      <p>Covering artificial intelligence, core engineering, computing, biomedical and agricultural sciences.</p>
+    </div>
+    <div class="dept-summary-card">
+      <span class="dept-summary-num">100%</span>
+      <b>Outcome-Based Learning</b>
+      <p>Curricula mapped to Bloom's taxonomy with continuous lab integration and industry mentoring.</p>
+    </div>
+    <div class="dept-summary-card">
+      <span class="dept-summary-num">30+</span>
+      <b>Advanced Laboratories</b>
+      <p>Equipped with industry-standard platforms, simulation suites, robotics kits and R&amp;D testbeds.</p>
+    </div>
+  </div>
+  <div class="dept-key-laboratories">
+    <div class="section-no">RESEARCH &amp; PRACTICE INFRASTRUCTURE</div>
+    <h3>Department Laboratories &amp; Specialized Workspaces</h3>
+    <p>Every engineering department at Sri Shakthi is anchored by modern practical laboratories designed to translate classroom theory into hands-on technical proficiency.</p>
+    <div class="dept-labs-list">
+      <div class="dept-lab-item"><b>Advanced Computing &amp; AI Studio</b><p>High-performance workstations configured for machine learning, data engineering and deep learning workloads.</p></div>
+      <div class="dept-lab-item"><b>Precision Electronics &amp; VLSI Lab</b><p>FPGA design toolchains, spectrum analyzers, oscilloscopes and embedded development boards.</p></div>
+      <div class="dept-lab-item"><b>Smart Agriculture &amp; Bioenergy Testbed</b><p>Drone mapping facilities, soil nutrient analyzers, renewable energy setups and farm automation systems.</p></div>
+      <div class="dept-lab-item"><b>Biotechnology &amp; Bioprocess Engineering Lab</b><p>Bioreactors, laminar air flow workstations, PCR machines and microbiological analytical gear.</p></div>
+      <div class="dept-lab-item"><b>Project &amp; Prototype Studio</b><p>Embedded systems, IoT testbeds, sensors and robotics testing facilities.</p></div>
+      <div class="dept-lab-item"><b>Industry Collaboration Center</b><p>Dedicated workspaces co-developed with leading technology partners.</p></div>
+    </div>
+  </div>` : '';
+
+  function getPageHeaderHtml() {
+    if (route === 'placements') {
+      return `
+      <!-- Executive Placement Hero Header (Referencing COE Template) -->
+      <section class="coe-exec-hero placement-exec-hero">
+        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
+        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
+        
+        <div class="coe-exec-shell">
+          <!-- Top Metadata & Navigation Bar -->
+          <div class="coe-exec-topbar">
+            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
+              <a href="#/">Home</a>
+              <span class="sep">/</span>
+              <span class="cur">Placements</span>
+            </nav>
+            
+            <div class="coe-exec-status-group">
+              <span class="coe-status-pill">
+                <span class="status-pulse"></span>
+                <span>CORPORATE RELATIONS &amp; RECRUITMENT CELL</span>
+              </span>
+              <span class="coe-status-tag">BATCH 2025–2026</span>
+            </div>
+          </div>
+
+          <!-- Main Executive Presentation Banner -->
+          <div class="coe-exec-main">
+            <div class="coe-exec-content-col">
+              <div class="coe-exec-kicker-row">
+                <span class="coe-kicker-gold">CENTRE FOR CAREER DEVELOPMENT</span>
+                <span class="coe-kicker-div">•</span>
+                <span class="coe-kicker-sub">INDUSTRY-ALIGNED IMMERSION</span>
+              </div>
+
+              <h1 class="coe-exec-title">Training &amp; Placement Cell</h1>
+              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
+              <p class="coe-exec-accreditation">
+                <span>Autonomous Institution Affiliated to Anna University, Chennai</span>
+                <span class="dot">•</span>
+                <span>Approved by AICTE, New Delhi</span>
+                <span class="dot">•</span>
+                <span class="naac-highlight">NAAC 'A' Grade</span>
+                <span class="dot">•</span>
+                <span>NBA Accredited Programmes</span>
+              </p>
+
+              <div class="coe-exec-quote-card">
+                <p>
+                  "Empowering young innovators with industry-aligned skillsets, hands-on experiential learning, and premier career opportunities across global technology leaders, multinationals, and Fortune 500 enterprises."
+                </p>
+              </div>
+
+              <!-- Executive Placement Pillar Chips -->
+              <div class="coe-exec-pillars-row">
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                  <span><b>Highest CTC:</b> ₹24+ LPA Top Offer</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span><b>Recruiters:</b> 200+ Global Partners</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  <span><b>Tiers:</b> ₹10 LPA+, ₹6 LPA+, ₹4 LPA+, ₹3 LPA+</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <span><b>Sectors:</b> Product, IT, AI &amp; Core</span>
+                </div>
+                <div class="coe-pillar-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <span><b>Placement Rate:</b> 90%+ Consistent Record</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+    }
+    if (isAcademics) {
+      return sietHudHeader(data[0], data[0], 'Academics', '#/academics', 'SYSTEM ONLINE / ACADEMIC PROFILE / SIET-OS');
+    }
+    if (isAdmissions) {
+      return sietHudHeader(data[0], data[0], 'Admissions', '#/programmes', 'SYSTEM ONLINE / ADMISSION PROFILE / SIET-OS');
+    }
+    if (isCampus) {
+      return sietHudHeader(data[0], data[0], 'Campus', '#/campus-life', 'SYSTEM ONLINE / CAMPUS PROFILE / SIET-OS');
+    }
+    return `
+      <section class="page-hero enhanced-page-hero">
+        <div class="hero-backdrop-pattern" aria-hidden="true"></div>
+        <div class="hero-radial-glow" aria-hidden="true"></div>
+        
+        <div class="hero-inner-container">
+          <img class="page-crest" src="/brand/siet-logo.png" alt="Sri Shakthi Emblem" width="320" height="320">
+          <nav class="hero-breadcrumbs" aria-label="Breadcrumb">
+            <a href="#/">Home</a>
+            <span class="bc-sep">/</span>
+            <span>${pageMeta.category}</span>
+            <span class="bc-sep">/</span>
+            <strong class="bc-current">${data[0]}</strong>
+          </nav>
+
+          <div class="eyebrow enhanced-eyebrow">
+            <span class="eyebrow-accent-line"></span>
+            <span class="eyebrow-tag">SRI SHAKTHI</span>
+            <span class="eyebrow-bullet">•</span>
+            <span class="eyebrow-kicker">${pageMeta.category.toUpperCase()}</span>
+          </div>
+
+          <h1 class="page-hero-title reveal">${data[0].toUpperCase()}</h1>
+          <p class="page-hero-subtitle">${data[1]}</p>
+
+          <div class="hero-pills-row reveal">
+            ${(pageMeta.heroPills || []).map(p => `
+              <div class="hero-pill-badge">
+                <span class="pill-icon">${icon(p.icon || 'leaf')}</span>
+                <span class="pill-text">${p.label}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </section>
+      <div class="hero-gold-trim-bar" aria-hidden="true"></div>
+    `;
+  }
+
+  return `<main class="internal-page enhanced-template-page ${isDepts ? 'departments-page departments-index-page' : ''}">
+    ${getPageHeaderHtml()}
+
+    <section class="page-content enhanced-page-content">
+      <div class="template-main-column reveal">
+        
+        <!-- 1. Interactive Split Overview Hero (Narrative + Visual Showcase Card) -->
+        <article class="template-card template-overview-card template-split-hero">
+          <div class="t-hero-narrative">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>${pageMeta.category ? pageMeta.category.toUpperCase() : 'OVERVIEW'}</span>
+            </div>
+            <h2 class="overview-heading">${pageMeta.title || data[1]}</h2>
+            <p class="overview-highlight-text">${pageMeta.subtitle || data[2]}</p>
+            <p class="overview-narrative-text">${pageMeta.overviewLead}</p>
+            <div class="template-pills-row">
+              ${(pageMeta.heroPills || []).map(p => `
+                <span class="template-pill-chip">
+                  <span class="pill-chip-icon">${icon(p.icon || 'star')}</span>
+                  <span>${p.label}</span>
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="t-hero-visual-col">
+            <div class="thv-card">
+              <img src="${pageMeta.featuredImage || '/brand/campus-arch.jpg'}" alt="${data[0]}" class="thv-img" loading="eager" onerror="this.src='/brand/campus-arch.jpg'" />
+              <div class="thv-overlay"></div>
+              <div class="thv-floating-badge">
+                <span class="thv-pulse-dot"></span>
+                <span>${pageMeta.featuredBadge || 'Autonomous Excellence'}</span>
+              </div>
+              <div class="thv-bottom-ribbon">
+                <span class="thv-ribbon-icon">${icon('crown')}</span>
+                <div class="thv-ribbon-text">
+                  <strong>${pageMeta.featuredStat || 'SIET Campus Standard'}</strong>
+                  <small>Excellence in Engineering &amp; Innovation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Core Pillars (4 Feature Cards Grid) -->
+        <div class="template-section-block">
+          <div class="section-tag-pill">
+            <span class="tag-dot"></span>
+            <span>KEY HIGHLIGHTS &amp; PILLARS</span>
+          </div>
+          <h3 class="section-subheading">What Distinguishes Sri Shakthi</h3>
+          <div class="template-pillars-grid">
+            ${pageMeta.pillars.map((pil, idx) => `
+              <div class="pillar-card">
+                <span class="pillar-watermark">0${idx + 1}</span>
+                <div class="pillar-top">
+                  <span class="pillar-icon-wrap">${icon(pil.icon || 'star')}</span>
+                  <span class="pillar-badge">${pil.tag}</span>
+                </div>
+                <h4 class="pillar-title">${pil.title}</h4>
+                <p class="pillar-desc">${pil.desc}</p>
+                <div class="pillar-accent-line"></div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 3. Distinct Subdivision-Specific Creative Showcase -->
+        ${renderSubdivisionUniqueContent(route)}
+
+        <!-- 4. Photo Showcase Bento Grid -->
+        ${pageMeta.gallery && pageMeta.gallery.length ? `
+          <div class="template-section-block">
+            <div class="gallery-section-header">
+              <div>
+                <div class="section-tag-pill">
+                  <span class="tag-dot"></span>
+                  <span>PHOTO TOUR &amp; CAMPUS SPACES</span>
+                </div>
+                <h3 class="section-subheading">Visual Showcase &amp; Environment</h3>
+              </div>
+              <span class="gallery-badge-count">Verified Campus Spaces</span>
+            </div>
+            <div class="template-bento-gallery">
+              ${pageMeta.gallery.map((g, idx) => `
+                <div class="bento-photo-card bento-card-${idx + 1}">
+                  <div class="bento-media">
+                    <img src="${g.img}" alt="${g.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                    <span class="bento-tag">${pageMeta.category || 'Campus'}</span>
+                  </div>
+                  <div class="bento-info">
+                    <span class="bento-index">0${idx + 1}</span>
+                    <div class="bento-details">
+                      <h5>${g.title}</h5>
+                      <p>${g.caption}</p>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 3.5. Running Live Campus Photo Marquee -->
+        <div class="template-running-gallery-block">
+          <div class="running-gallery-header-row">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>LIVE CAMPUS SNAPSHOTS</span>
+            </div>
+            <span class="running-gallery-badge">
+              <span class="rg-badge-pulse"></span>
+              <span>45-Acre Smart Eco Campus &bull; Autonomous Hub</span>
+            </span>
+          </div>
+          <div class="running-gallery-viewport">
+            <div class="running-gallery-track">
+              <div class="running-gallery-group">
+                ${campusMarqueeItems.map(item => `
+                  <div class="running-gallery-card">
+                    <div class="rg-image-box">
+                      <img src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                      <div class="rg-card-overlay"></div>
+                      <span class="rg-pill-tag">${item.tag}</span>
+                      <div class="rg-card-meta">
+                        <h5 class="rg-card-title">${item.title}</h5>
+                        <p class="rg-card-desc">${item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              <div class="running-gallery-group" aria-hidden="true">
+                ${campusMarqueeItems.map(item => `
+                  <div class="running-gallery-card">
+                    <div class="rg-image-box">
+                      <img src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                      <div class="rg-card-overlay"></div>
+                      <span class="rg-pill-tag">${item.tag}</span>
+                      <div class="rg-card-meta">
+                        <h5 class="rg-card-title">${item.title}</h5>
+                        <p class="rg-card-desc">${item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Key Metrics Strip -->
+        <div class="template-section-block">
+          <div class="template-stats-strip">
+            ${pageMeta.metrics.map(m => `
+              <div class="template-stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-val">${m.val}</span>
+                  <span class="stat-sfx">${m.suffix}</span>
+                </div>
+                <span class="stat-lbl">${m.label}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 5. Highlights Grid -->
+        ${pageMeta.highlights && pageMeta.highlights.length ? `
+          <div class="template-section-block">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>SPECIAL HIGHLIGHTS</span>
+            </div>
+            <h3 class="section-subheading">What Sets Our Experience Apart</h3>
+            <div class="template-highlights-grid">
+              ${pageMeta.highlights.map(h => `
+                <div class="highlight-detail-card">
+                  <div class="hdc-top">
+                    <span class="hdc-icon-wrap">${icon('check')}</span>
+                    <h4 class="hdc-title">${h.title}</h4>
+                  </div>
+                  <p class="hdc-desc">${h.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 6. Interactive FAQs -->
+        ${pageMeta.faqs && pageMeta.faqs.length ? `
+          <div class="template-section-block">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            <h3 class="section-subheading">Common Inquiries</h3>
+            <div class="template-faq-list">
+              ${pageMeta.faqs.map((faq, i) => `
+                <details class="template-faq-item" ${i === 0 ? 'open' : ''}>
+                  <summary class="faq-summary">
+                    <span class="faq-question">${faq.q}</span>
+                    <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="faq-answer">
+                    <p>${faq.a}</p>
+                  </div>
+                </details>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 7. Department Extras if departments route -->
+        ${deptExtras}
+
+        <!-- 8. Contact Panel if contact route -->
+        ${route === 'contact' ? `
+          <div class="contact-details-grid">
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('pin')}</span>
+              <b>Campus Address</b>
+              <p>Sri Shakthi Nagar, L&amp;T By-Pass, Chinniyampalayam, Coimbatore – 641062, Tamil Nadu, India</p>
+            </div>
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('connect')}</span>
+              <b>Helpline &amp; Email</b>
+              <p>Phone: +91 422 2369900<br>Mobile: +91 73737 44444<br>Email: info@siet.ac.in</p>
+            </div>
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('clock')}</span>
+              <b>Office Working Hours</b>
+              <p>Monday to Saturday: 8:30 AM – 5:00 PM<br>Admissions Desk open on all working days.</p>
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 9. Bottom CTA Banner -->
+        <div class="template-cta-banner">
+          <div class="cta-inner-glow"></div>
+          <span class="cta-kicker">JOIN OUR COMMUNITY</span>
+          <h3>${pageMeta.ctaTitle || 'Ready to Experience Sri Shakthi?'}</h3>
+          <p>${pageMeta.ctaSubtitle || 'Explore admission pathways, merit scholarships, and autonomous engineering curriculum designed for real-world impact.'}</p>
+          <div class="cta-btn-group">
+            <a href="#/admission-enquiry" class="button cta-primary-btn">Enquire for Admission ${icon('arrow')}</a>
+            <a href="#/programmes" class="button cta-secondary-btn">Explore Programmes ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    ${['departments', 'programmes'].includes(route) ? `<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n, d, img]) => `<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>` : ''}
+  </main>`;
+}
+
+const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase());
+

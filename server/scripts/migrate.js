@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import mysql from 'mysql2/promise';
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
-const sql = await fs.readFile(path.resolve(scriptDirectory, '../migrations/001_create_enquiry_tables.sql'), 'utf8');
+const migrationsDirectory = path.resolve(scriptDirectory, '../migrations');
 const requiredVariables = ['MYSQL_HOST', 'MYSQL_USER', 'MYSQL_DATABASE'];
 const missingVariables = requiredVariables.filter(name => !process.env[name]);
 if (missingVariables.length) {
@@ -23,8 +23,15 @@ const connection = await mysql.createConnection({
 });
 
 try {
-  await connection.query(sql);
-  console.log('MySQL enquiry migrations completed.');
+  const migrationFiles = (await fs.readdir(migrationsDirectory))
+    .filter(file => file.endsWith('.sql'))
+    .sort();
+  for (const migrationFile of migrationFiles) {
+    const sql = await fs.readFile(path.join(migrationsDirectory, migrationFile), 'utf8');
+    await connection.query(sql);
+    console.log(`Applied ${migrationFile}`);
+  }
+  console.log('MySQL migrations completed.');
 } finally {
   await connection.end();
 }

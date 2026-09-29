@@ -45,7 +45,7 @@ export async function createAdmissionEnquiry(req, res, next) {
     if (!course) throw validationError('Course level is required.');
     if (!department) throw validationError('Preferred department is required.');
 
-    const { enquiry, duplicate } = await saveAdmissionEnquiry({
+    const { enquiry, duplicate, call } = await saveAdmissionEnquiry({
       studentName, mobileNumber, email, course, department, city, source, remarks, status: 'new'
     });
 
@@ -54,7 +54,11 @@ export async function createAdmissionEnquiry(req, res, next) {
       message: duplicate
         ? 'This admission enquiry was already saved recently.'
         : 'Admission enquiry saved successfully',
-      data: { id: enquiry.id, mobileNumber: enquiry.mobileNumber },
+      data: {
+        id: enquiry.id,
+        mobileNumber: enquiry.mobileNumber,
+        callStatus: duplicate ? 'not_requested' : (call?.status || 'not_configured')
+      },
       duplicate
     });
   } catch (error) {

@@ -78,18 +78,18 @@ export const nbaProgrammes = [
 ];
 
 export const governingCouncilMembers = [
-  { sno: 1, name: 'Dr. S. Thangavelu', designation: 'Chairman, Sri Shakthi Trust', role: 'Chairman', category: 'Management' },
-  { sno: 2, name: 'Er. S. Deepan', designation: 'Secretary, SIET', role: 'Member', category: 'Management' },
-  { sno: 3, name: 'Er. D. Sheelan', designation: 'Joint Secretary, SIET', role: 'Member', category: 'Management' },
-  { sno: 4, name: 'Mrs. T. Vasanthi', designation: 'Trustee, Sri Shakthi Trust', role: 'Member', category: 'Management' },
-  { sno: 5, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Member Secretary (Ex-Officio)', category: 'Principal' },
-  { sno: 6, name: 'University Grants Commission Nominee', designation: 'Professor & Dean, Central University', role: 'Member', category: 'UGC Nominee' },
-  { sno: 7, name: 'State Government / DOTE Nominee', designation: 'Principal, Government College of Technology', role: 'Member', category: 'State Govt.' },
-  { sno: 8, name: 'Anna University Nominee', designation: 'Senior Professor, Anna University, Chennai', role: 'Member', category: 'University' },
-  { sno: 9, name: 'Mr. C. R. Swaminathan', designation: 'Former President, CODISSIA & Industrialist', role: 'Member', category: 'Industrialist' },
-  { sno: 10, name: 'Mr. K. Ilango', designation: 'Managing Director, RSM Autokast Pvt. Ltd.', role: 'Member', category: 'Technologist' },
-  { sno: 11, name: 'Dr. K. E. Kannammal', designation: 'HOD / CSE, Controller of Examinations', role: 'Member', category: 'Faculty' },
-  { sno: 12, name: 'Dr. P. Sivakumar', designation: 'Professor & Head, Department of ECE', role: 'Member', category: 'Faculty' }
+  { sno: 1, name: 'Dr. S. Thangavelu', designation: 'Chairman, Sri Shakthi Trust', role: 'Chairman', category: 'Management', categoryGroup: 'management' },
+  { sno: 2, name: 'Er. S. Deepan', designation: 'Secretary, SIET', role: 'Member', category: 'Management', categoryGroup: 'management' },
+  { sno: 3, name: 'Er. D. Sheelan', designation: 'Joint Secretary, SIET', role: 'Member', category: 'Management', categoryGroup: 'management' },
+  { sno: 4, name: 'Mrs. T. Vasanthi', designation: 'Trustee, Sri Shakthi Trust', role: 'Member', category: 'Management', categoryGroup: 'management' },
+  { sno: 5, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Member Secretary (Ex-Officio)', category: 'Principal', categoryGroup: 'academic' },
+  { sno: 6, name: 'University Grants Commission Nominee', designation: 'Professor & Dean, Central University (UGC Nominated)', role: 'Member', category: 'UGC Nominee', categoryGroup: 'statutory' },
+  { sno: 7, name: 'State Government / DOTE Nominee', designation: 'Principal, Government College of Technology, Coimbatore', role: 'Member', category: 'State Govt.', categoryGroup: 'statutory' },
+  { sno: 8, name: 'Anna University Nominee', designation: 'Senior Professor, Anna University, Chennai', role: 'Member', category: 'University', categoryGroup: 'statutory' },
+  { sno: 9, name: 'Mr. C. R. Swaminathan', designation: 'Former President, CODISSIA & Industrialist', role: 'Member', category: 'Industrialist', categoryGroup: 'industry' },
+  { sno: 10, name: 'Mr. K. Ilango', designation: 'Managing Director, RSM Autokast Pvt. Ltd.', role: 'Member', category: 'Technologist', categoryGroup: 'industry' },
+  { sno: 11, name: 'Dr. K. E. Kannammal', designation: 'HOD / CSE, Controller of Examinations', role: 'Member', category: 'Faculty', categoryGroup: 'academic' },
+  { sno: 12, name: 'Dr. P. Sivakumar', designation: 'Professor & Head, Department of ECE', role: 'Member', category: 'Faculty', categoryGroup: 'academic' }
 ];
 
 // Official Data from https://www.siet.ac.in/committees.php
@@ -131,7 +131,7 @@ export const internalComplaintsCommitteeMembers = [
     name: 'Dr. G. P. Godhanavalli',
     designation: 'Family and Student Counsellor-Coimbatore, Coimbatore City Police (Kaakkum Kaarangal), Coimbatore District Family Court',
     contact: '9952255533',
-    role: 'External Expert / Counsellor',
+    role: 'External Expert / Legal & Police Counsellor',
     category: 'Police & District Family Court'
   }
 ];
@@ -187,6 +187,137 @@ export const antiDrugClubMembers = [
   }
 ];
 
+export const antiRaggingCommitteeMembers = [
+  { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Chairman', category: 'Head of Institution', contact: '9486244579' },
+  { sno: 2, name: 'Revenue Divisional Officer / Tahsildar', designation: 'Coimbatore South Revenue Division', role: 'Member', category: 'Civil Administration', contact: '0422-2300250' },
+  { sno: 3, name: 'Inspector of Police', designation: 'Chinnaiyampalayam Police Station, Coimbatore', role: 'Member', category: 'Police Administration', contact: '0422-2627100' },
+  { sno: 4, name: 'Representative of Local Media', designation: 'Senior Bureau Correspondent, Coimbatore', role: 'Member', category: 'Local Media', contact: '0422-2212345' },
+  { sno: 5, name: 'Representative of Youth Welfare NGO', designation: 'Trustee, Youth Reform & Social Welfare Foundation', role: 'Member', category: 'NGO', contact: '9842211223' },
+  { sno: 6, name: 'Dr. P. Sivakumar', designation: 'Professor & Head / ECE', role: 'Squad In-Charge', category: 'Faculty', contact: '9842650819' },
+  { sno: 7, name: 'Dr. A. Kavitha', designation: 'Professor & Head / Science & Humanities', role: 'Faculty Member', category: 'Faculty', contact: '9842650820' },
+  { sno: 8, name: 'Dr. K. E. Kannammal', designation: 'HoD / CSE & Controller of Examinations', role: 'Nodal Officer', category: 'Institutional Nodal', contact: '9843633389' },
+  { sno: 9, name: 'Parent Representative (First Year)', designation: 'Parent of B.E. Computer Science Student', role: 'Parent Member', category: 'Parents', contact: '9443012345' },
+  { sno: 10, name: 'Parent Representative (Senior Year)', designation: 'Parent of B.E. ECE Student', role: 'Parent Member', category: 'Parents', contact: '9443067890' },
+  { sno: 11, name: 'Student Representative (Senior Wing)', designation: 'Final Year Student Council Member', role: 'Student Member', category: 'Students', contact: 'Campus Ext.' },
+  { sno: 12, name: 'Student Representative (Fresher Wing)', designation: 'First Year Engineering Student', role: 'Student Member', category: 'Students', contact: 'Campus Ext.' }
+];
+
+export const grievanceRedressalMembers = [
+  { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Chairman', category: 'Head of Institution', contact: 'principal@siet.ac.in' },
+  { sno: 2, name: 'Dr. Subasree S', designation: 'Dean (Academics)', role: 'Convener & Member', category: 'Academic Leadership', contact: 'dean.academics@siet.ac.in' },
+  { sno: 3, name: 'Dr. S. Prakash', designation: 'Dean (Student Affairs) & HOD - IT', role: 'Member Coordinator', category: 'Student Affairs', contact: 'dean.studentaffairs@siet.ac.in' },
+  { sno: 4, name: 'Dr. G. Sundar', designation: 'Professor & Head / EEE', role: 'Member', category: 'Senior Faculty', contact: 'hod.eee@siet.ac.in' },
+  { sno: 5, name: 'Dr. K. R. Remya', designation: 'Professor / ECE', role: 'Member (Women Faculty)', category: 'Senior Faculty', contact: 'remya.ece@siet.ac.in' },
+  { sno: 6, name: 'Hon’ble District Judge (Retd.)', designation: 'Ombudsperson, Anna University Appointed', role: 'Independent Ombudsperson', category: 'Judiciary / Appellate', contact: 'ombudsperson@siet.ac.in' },
+  { sno: 7, name: 'President, Student Council', designation: 'Final Year Student Representative', role: 'Special Invitee (Student)', category: 'Student Body', contact: 'grievance@siet.ac.in' }
+];
+
+export const academicCouncilMembers = [
+  { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Chairman', category: 'Head of Institution' },
+  { sno: 2, name: 'Dr. K. E. Kannammal', designation: 'Controller of Examinations & HoD / CSE', role: 'Member Secretary', category: 'Examination & Faculty' },
+  { sno: 3, name: 'Dr. Subasree S', designation: 'Dean (Academics)', role: 'Member', category: 'Academic Leadership' },
+  { sno: 4, name: 'Dr. S. Prakash', designation: 'Dean (Student Affairs) & HOD - IT', role: 'Member', category: 'Academic Leadership' },
+  { sno: 5, name: 'Anna University Nominee 1', designation: 'Professor, Department of Computer Technology, MIT Campus, Anna University', role: 'University Nominee', category: 'Anna University' },
+  { sno: 6, name: 'Anna University Nominee 2', designation: 'Professor, Department of ECE, CEG Campus, Anna University', role: 'University Nominee', category: 'Anna University' },
+  { sno: 7, name: 'Anna University Nominee 3', designation: 'Professor, Department of Mechanical Engineering, Anna University', role: 'University Nominee', category: 'Anna University' },
+  { sno: 8, name: 'Dr. P. Sivakumar', designation: 'Professor & Head / ECE', role: 'Member', category: 'Board of Studies (ECE)' },
+  { sno: 9, name: 'Dr. G. Sundar', designation: 'Professor & Head / EEE', role: 'Member', category: 'Board of Studies (EEE)' },
+  { sno: 10, name: 'Mr. C. R. Swaminathan', designation: 'Former President, CODISSIA & Industrialist', role: 'Expert Member', category: 'Industry Expert' },
+  { sno: 11, name: 'Mr. K. Ilango', designation: 'Managing Director, RSM Autokast Pvt. Ltd.', role: 'Expert Member', category: 'Industry Expert' },
+  { sno: 12, name: 'Dr. A. Kavitha', designation: 'Professor & Head / Science & Humanities', role: 'Member', category: 'Board of Studies (S&H)' }
+];
+
+export const equalOpportunityCellMembers = [
+  { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Patron', category: 'Head of Institution' },
+  { sno: 2, name: 'Dr. G. Sundar', designation: 'Professor & Head / EEE', role: 'Convener & Liaison Officer', category: 'Liaison Officer' },
+  { sno: 3, name: 'Dr. R. RanjithKumar', designation: 'Professor / ECE', role: 'Member', category: 'Faculty' },
+  { sno: 4, name: 'Dr. A. Kavitha', designation: 'Professor & Head / Science & Humanities', role: 'Member', category: 'Faculty' },
+  { sno: 5, name: 'Ms. T. Dhanalakshmi', designation: 'Assistant Professor / CSE', role: 'Member', category: 'Faculty' },
+  { sno: 6, name: 'Student Representative (UG)', designation: 'Pre-Final Year Engineering Student', role: 'Student Member', category: 'Student Welfare' },
+  { sno: 7, name: 'Student Representative (PG)', designation: 'Postgraduate Engineering Scholar', role: 'Student Member', category: 'Student Welfare' }
+];
+
+export const financeCommitteeMembers = [
+  { sno: 1, name: 'Dr. S. Thangavelu', designation: 'Chairman, Sri Shakthi Trust', role: 'Chairman', category: 'Trust Management' },
+  { sno: 2, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Member', category: 'Institutional Head' },
+  { sno: 3, name: 'Finance Officer', designation: 'Sri Shakthi Trust & Educational Institutions', role: 'Member Secretary', category: 'Finance Administration' },
+  { sno: 4, name: 'State Government / DOTE Nominee', designation: 'Accounts Officer, Directorate of Technical Education', role: 'Member', category: 'Government Nominee' },
+  { sno: 5, name: 'Dr. K. E. Kannammal', designation: 'Controller of Examinations & Professor / CSE', role: 'Member', category: 'Senior Faculty' }
+];
+
+export const examinationCommitteeMembers = [
+  { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal', role: 'Chief Controller of Examinations', category: 'Head of Institution' },
+  { sno: 2, name: 'Dr. K. E. Kannammal', designation: 'Professor & Head / CSE', role: 'Controller of Examinations (COE)', category: 'Executive Authority' },
+  { sno: 3, name: 'Dr. Subasree S', designation: 'Dean (Academics)', role: 'Member', category: 'Academic Leadership' },
+  { sno: 4, name: 'Dr. S. Prakash', designation: 'Dean (Student Affairs) & HOD - IT', role: 'Member', category: 'Academic Leadership' },
+  { sno: 5, name: 'Dr. P. Sivakumar', designation: 'Professor & Head / ECE', role: 'Valuation & Assessment Coordinator', category: 'Senior Faculty' },
+  { sno: 6, name: 'Dr. G. Sundar', designation: 'Professor & Head / EEE', role: 'Question Paper Scrutiny Convener', category: 'Senior Faculty' },
+  { sno: 7, name: 'External Chief Superintendent', designation: 'Senior Professor, Government / Autonomous Institution', role: 'External Observer', category: 'External Expert' }
+];
+
+export const governanceWelfareClubs = [
+  {
+    id: 'antidrug',
+    name: 'Anti-Drug Club & Student Safety Wing',
+    badge: 'Coimbatore Police Initiative',
+    category: 'Campus Vigilance & Welfare',
+    lead: 'Dr. N. K. Sakthivel (Principal) & Coimbatore City Police',
+    desc: 'Joint campus-police vigilance initiative promoting zero-tolerance towards narcotics, female student mentorship under Police Akka, and youth advocacy under Police Bro.',
+    keyInitiatives: ['Police Akka Project (Female Safety & Mentorship)', 'Police Bro Anti-Drug Advocacy & Peer Support', 'Direct Campus Police Liaison: 9498173268', 'Chinnaiyampalayam Jurisdiction 24/7 Desk'],
+    ctaText: 'View Anti-Drug Club Roster',
+    ctaTab: 'antidrug',
+    icon: '🛡️'
+  },
+  {
+    id: 'women-empowerment',
+    name: 'Women Empowerment Club',
+    badge: 'Gender Equity & Safety',
+    category: 'Student Empowerment',
+    lead: 'Dr. Subasree S (Dean Academics) & Faculty Team',
+    desc: 'Empowering female engineering students with leadership incubation, self-defense masterclasses, POSH awareness, entrepreneurship mentoring, and women-in-tech symposiums.',
+    keyInitiatives: ['Self-Defense & Personal Safety Masterclasses', 'Women in Engineering Leadership Summits', 'Mental Health & Wellness Circles', 'Confidential Peer Support Network'],
+    ctaText: 'Explore Initiatives',
+    ctaTab: 'clubs',
+    icon: '🌸'
+  },
+  {
+    id: 'red-ribbon',
+    name: 'Red Ribbon Club (RRC)',
+    badge: 'TNSACS & NACO Certified',
+    category: 'Health & Humanitarian',
+    lead: 'Senior Faculty Coordinator / NSS Unit',
+    desc: 'Instilling voluntary blood donation consciousness, life-skills education, HIV/AIDS prevention awareness, and healthy civic lifestyle among youth in Tamil Nadu.',
+    keyInitiatives: ['Annual Mega Voluntary Blood Donation Drives', 'Life Skills & Peer Health Counseling', 'World AIDS Day Awareness Rallies', 'Community Health Screening Camps'],
+    ctaText: 'Explore Initiatives',
+    ctaTab: 'clubs',
+    icon: '🎗️'
+  },
+  {
+    id: 'youth-red-cross',
+    name: 'Youth Red Cross (YRC)',
+    badge: 'Indian Red Cross Society',
+    category: 'First Aid & Disaster Relief',
+    lead: 'Dr. A. Kavitha & YRC Programme Officers',
+    desc: 'Fostering humanitarian service, disaster preparedness, emergency first-aid proficiency, health hygiene promotion, and community fellowship among Shakthians.',
+    keyInitiatives: ['Certified Emergency First Aid & CPR Training', 'Disaster Mitigation & Evacuation Drills', 'Rural School & Orphanage Outreach', 'Clean Campus Eco-Sanitation Drives'],
+    ctaText: 'Explore Initiatives',
+    ctaTab: 'clubs',
+    icon: '➕'
+  },
+  {
+    id: 'rotaract',
+    name: 'Rotaract Club of SIET',
+    badge: 'Rotary International Dist. 3201',
+    category: 'Civic Leadership',
+    lead: 'Student President & Faculty Advisor',
+    desc: 'Developing young leaders through professional development, high-impact community welfare projects, tree plantations, and collegiate fellowship across Coimbatore.',
+    keyInitiatives: ['Village Adoption & Digital Literacy Drives', 'Green Shakthi Campus Afforestation', 'Rotary Youth Leadership Awards (RYLA)', 'Career Readiness & Public Speaking Guild'],
+    ctaText: 'Explore Initiatives',
+    ctaTab: 'clubs',
+    icon: '⚙️'
+  }
+];
+
 export const iqacCommitteeMembers = [
   { sno: 1, name: 'Dr. N. K. Sakthivel', designation: 'Principal, SIET', role: 'Chairperson' },
   { sno: 2, name: 'Dr. K. E. Kannammal', designation: 'Professor & Head / CSE, COE', role: 'Director / Coordinator' },
@@ -235,7 +366,6 @@ export function governancePage(initialTab = 'all') {
       'Governance / Committees'
     )}
 
-
     <!-- Main Content Container -->
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
@@ -258,7 +388,7 @@ export function governancePage(initialTab = 'all') {
             <span>Coimbatore Police Akka &amp; Bro Initiative</span>
           </div>
           <div class="accred-info-card">
-            <small>DISCIPLINARY STANDARD</small>
+            <small>DISCIPLINARY SAFEGUARDS</small>
             <b>Zero Tolerance</b>
             <span>Anti-Ragging Squad &amp; Online GRC</span>
           </div>
@@ -268,33 +398,135 @@ export function governancePage(initialTab = 'all') {
         <div class="comm-quick-tabs-container reveal">
           <div class="comm-quick-tabs" role="tablist" aria-label="Governance and Committees Filter">
             <button type="button" class="comm-quick-tab ${initialTab === 'all' ? 'active' : ''}" data-comm-tab="all" role="tab" aria-selected="${initialTab === 'all'}">
-              <span>🏛️ All Committees &amp; Bodies</span>
-            </button>
-            <button type="button" class="comm-quick-tab ${initialTab === 'icc' ? 'active' : ''}" data-comm-tab="icc" role="tab" aria-selected="${initialTab === 'icc'}">
-              <span>⚖️ Internal Complaints Committee (ICC)</span>
-              <span class="tab-count">5 Members</span>
-            </button>
-            <button type="button" class="comm-quick-tab ${initialTab === 'antidrug' ? 'active' : ''}" data-comm-tab="antidrug" role="tab" aria-selected="${initialTab === 'antidrug'}">
-              <span>🛡️ Anti-Drug Club</span>
-              <span class="tab-count">6 Members</span>
+              <span>🏛️ All Governance &amp; Bodies</span>
             </button>
             <button type="button" class="comm-quick-tab ${initialTab === 'council' ? 'active' : ''}" data-comm-tab="council" role="tab" aria-selected="${initialTab === 'council'}">
               <span>🎓 Governing Council</span>
               <span class="tab-count">12 Members</span>
             </button>
+            <button type="button" class="comm-quick-tab ${initialTab === 'icc' ? 'active' : ''}" data-comm-tab="icc" role="tab" aria-selected="${initialTab === 'icc'}">
+              <span>⚖️ Internal Complaints (ICC)</span>
+              <span class="tab-count">5 Members</span>
+            </button>
+            <button type="button" class="comm-quick-tab ${initialTab === 'antidrug' ? 'active' : ''}" data-comm-tab="antidrug" role="tab" aria-selected="${initialTab === 'antidrug'}">
+              <span>🛡️ Anti-Drug Club &amp; Safety</span>
+              <span class="tab-count">6 Members</span>
+            </button>
             <button type="button" class="comm-quick-tab ${initialTab === 'statutory' ? 'active' : ''}" data-comm-tab="statutory" role="tab" aria-selected="${initialTab === 'statutory'}">
-              <span>📋 Statutory &amp; Welfare Cells</span>
-              <span class="tab-count">6 Cells</span>
+              <span>📋 Statutory &amp; Regulatory Cells</span>
+              <span class="tab-count">6 Bodies</span>
+            </button>
+            <button type="button" class="comm-quick-tab ${initialTab === 'clubs' ? 'active' : ''}" data-comm-tab="clubs" role="tab" aria-selected="${initialTab === 'clubs'}">
+              <span>🤝 Welfare &amp; Governance Clubs</span>
+              <span class="tab-count">5 Clubs</span>
             </button>
           </div>
         </div>
 
-        <!-- Section: Internal Complaints Committee (Official siet.ac.in/committees.php) -->
+        <!-- ==============================================================
+             SECTION 1: APEX GOVERNING COUNCIL (UNIQUE BOARDROOM TEMPLATE)
+             ============================================================== -->
+        <div id="governing-council" class="coe-section-card reveal comm-section-pane" data-section="council" style="margin-bottom: 32px;">
+          <div class="siet-council-executive-card">
+            <!-- Header Crest -->
+            <div class="council-header-crest">
+              <div class="council-crest-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="council-header-content">
+                <span class="council-kicker">APEX STATUTORY AUTHORITY · UGC &amp; ANNA UNIVERSITY AUTONOMOUS STATUTE</span>
+                <h3 class="council-main-title">Governing Council (Apex Governing Body)</h3>
+                <p class="council-sub-title">Supreme executive and policy-formulating council of Sri Shakthi Institute of Engineering and Technology, responsible for autonomous strategy, academic vision, financial stewardship, and institutional development.</p>
+              </div>
+            </div>
+
+            <!-- Executive Council Metrics Strip -->
+            <div class="council-metrics-grid">
+              <div class="council-metric-tile">
+                <b>4</b>
+                <span>Management Trustees</span>
+              </div>
+              <div class="council-metric-tile">
+                <b>3</b>
+                <span>Statutory &amp; Govt. Nominees</span>
+              </div>
+              <div class="council-metric-tile">
+                <b>2</b>
+                <span>Industry Magnates</span>
+              </div>
+              <div class="council-metric-tile">
+                <b>3</b>
+                <span>Academic Leadership</span>
+              </div>
+            </div>
+
+            <!-- Category Filter Bar -->
+            <div class="council-category-filters" role="tablist" aria-label="Council Category Filter">
+              <button type="button" class="council-filter-btn active" data-council-filter="all">All 12 Members</button>
+              <button type="button" class="council-filter-btn" data-council-filter="management">Trust Management (4)</button>
+              <button type="button" class="council-filter-btn" data-council-filter="statutory">Statutory &amp; University (3)</button>
+              <button type="button" class="council-filter-btn" data-council-filter="industry">Industry Leaders (2)</button>
+              <button type="button" class="council-filter-btn" data-council-filter="academic">Academic &amp; Faculty (3)</button>
+            </div>
+
+            <div class="siet-table-scroll-hint" style="color: #ffd447; margin-bottom: 12px;"><span>⇄ Swipe table horizontally to view full council details</span></div>
+
+            <!-- Executive Board Table -->
+            <div class="siet-table-wrapper-center">
+              <table class="council-executive-table">
+                <thead>
+                  <tr>
+                    <th style="width: 7%; text-align: center;">S.No</th>
+                    <th style="width: 32%;">Name of the Member</th>
+                    <th style="width: 33%;">Designation &amp; Organization</th>
+                    <th style="width: 15%;">Category</th>
+                    <th style="width: 13%;">Council Role</th>
+                  </tr>
+                </thead>
+                <tbody id="councilTableBody">
+                  ${governingCouncilMembers.map(m => `
+                    <tr class="council-row" data-council-group="${m.categoryGroup}">
+                      <td>${m.sno}</td>
+                      <td>
+                        <span class="council-member-name">${m.name}</span>
+                      </td>
+                      <td>
+                        <span class="council-member-desig">${m.designation}</span>
+                      </td>
+                      <td>
+                        <span class="council-cat-badge">${m.category}</span>
+                      </td>
+                      <td>
+                        <span class="council-role-badge ${m.role.includes('Chairman') ? 'chairman' : m.role.includes('Secretary') ? 'member-sec' : 'member'}">${m.role}</span>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Council Statutory Mandate Strip -->
+            <div class="council-mandate-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <div>
+                <strong>Autonomous Executive Governance:</strong> The Governing Council convenes biannually to ratify Academic Council resolutions, sanction institutional operating budgets, approve new engineering departments, and ensure strict compliance with UGC and Anna University autonomous statutes.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==============================================================
+             SECTION 2: INTERNAL COMPLAINTS COMMITTEE (UNIQUE AICTE 2016 TEMPLATE)
+             ============================================================== -->
         <div id="internalcomplaints" class="coe-section-card reveal comm-section-pane" data-section="icc" style="margin-bottom: 32px;">
           <div class="coe-card-header">
             <div>
               <span class="coe-pill-badge" style="background: #eaf6ee; color: #005a36;">AICTE REGULATION 2016 COMPLIANCE · AY 2024–25</span>
-              <h3>Internal Complaints Committee (ICC)</h3>
+              <h3>Internal Complaints Committee (ICC / POSH Cell)</h3>
               <p>Statutory body constituted to foster a secure, gender-sensitized campus with zero-tolerance towards sexual harassment.</p>
             </div>
             <div>
@@ -310,7 +542,7 @@ export function governancePage(initialTab = 'all') {
             <div class="quote-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <p><strong>Official Statutory Mandate:</strong> As per Regulation Section 4 of AICTE (Gender Sensitization, Prevention and Prohibition of Sexual Harassment of Women Employees and Students and Redressal Grievances in Technical Institutions). Regulation 2016, the Internal Complaint Committee has been established to deal with the complaints relating to Sexual harassment at the institution for 2024-25. The Internal Complaint Committee comprises of the following members:</p>
+            <p><strong>Official Statutory Mandate:</strong> As per Regulation Section 4 of AICTE (Gender Sensitization, Prevention and Prohibition of Sexual Harassment of Women Employees and Students and Redressal Grievances in Technical Institutions) Regulation 2016, the Internal Complaint Committee has been established to deal with complaints relating to sexual harassment at the institution for 2024–25. The Internal Complaint Committee comprises the following members:</p>
           </div>
 
           <div class="coe-card-body" style="padding: 24px 16px;">
@@ -376,40 +608,14 @@ export function governancePage(initialTab = 'all') {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td class="cell-name">Dr.S.Prakash</td>
-                      <td class="cell-desig">HOD - IT</td>
-                      <td class="cell-contact"><a href="tel:9942650818" title="Call Dr.S.Prakash">9942650818</a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td class="cell-name">Dr.K.E.Kannammal</td>
-                      <td class="cell-desig">HOD - CSE</td>
-                      <td class="cell-contact"><a href="tel:9843633389" title="Call Dr.K.E.Kannammal">9843633389</a></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td class="cell-name">Dr.G.Sundar</td>
-                      <td class="cell-desig">HOD - EEE</td>
-                      <td class="cell-contact"><a href="tel:9842781393" title="Call Dr.G.Sundar">9842781393</a></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td class="cell-name">Dr.Subasree S</td>
-                      <td class="cell-desig">Dean (Academics)</td>
-                      <td class="cell-contact"><a href="tel:9486646623" title="Call Dr.Subasree S">9486646623</a></td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td class="cell-name">Dr.G.P.Godhanavalli</td>
-                      <td class="cell-desig cell-multiline">
-                        Family and Student Counsellor-Coimbatore<br>
-                        Coimbatore City Police (Kaakkum Kaarangal)<br>
-                        Coimbatore District Family Court
-                      </td>
-                      <td class="cell-contact"><a href="tel:9952255533" title="Call Dr.G.P.Godhanavalli">9952255533</a></td>
-                    </tr>
+                    ${internalComplaintsCommitteeMembers.map(m => `
+                      <tr>
+                        <td>${m.sno}</td>
+                        <td class="cell-name">${m.name}</td>
+                        <td class="cell-desig ${m.sno === 5 ? 'cell-multiline' : ''}">${m.designation.replace(/\n/g, '<br>')}</td>
+                        <td class="cell-contact"><a href="tel:${m.contact}" title="Call ${m.name}">${m.contact}</a></td>
+                      </tr>
+                    `).join('')}
                   </tbody>
                 </table>
               </div>
@@ -419,23 +625,25 @@ export function governancePage(initialTab = 'all') {
             <div class="comm-info-box">
               <div class="comm-info-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                <span><strong>Strict Confidentiality:</strong> All representations submitted to ICC are handled under sealed statutory privacy protocols.</span>
+                <span><strong>Strict Statutory Confidentiality:</strong> All complaints submitted to the ICC are handled under sealed statutory privacy protocols with preliminary scrutiny conducted within 7 working days.</span>
               </div>
               <div class="comm-info-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <span><strong>External Oversight:</strong> Regular counseling sessions supervised with Coimbatore City Police &amp; Family Court counsellor.</span>
+                <span><strong>Independent External Oversight:</strong> Regular counseling sessions supervised with Coimbatore City Police (Kaakkum Kaarangal) &amp; Coimbatore District Family Court counsellor.</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Section: Anti-Drug Club (Official siet.ac.in/committees.php) -->
+        <!-- ==============================================================
+             SECTION 3: ANTI-DRUG CLUB (UNIQUE POLICE PARTNERSHIP TEMPLATE)
+             ============================================================== -->
         <div id="antidrug" class="coe-section-card reveal comm-section-pane" data-section="antidrug" style="margin-bottom: 32px;">
           <div class="coe-card-header">
             <div>
               <span class="coe-pill-badge" style="background: #eef4ff; color: #1d4ed8;">COIMBATORE CITY POLICE INITIATIVE · AY 2024–25</span>
               <h3>Anti-Drug Club &amp; Student Safety Wing</h3>
-              <p>Promoting a drug-free, mentally healthy, and completely secure campus community in partnership with the City Police Department.</p>
+              <p>Promoting a drug-free, mentally healthy, and completely secure campus community in partnership with the Coimbatore City Police Department.</p>
             </div>
             <div>
               <span class="coe-status-pill verified" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">
@@ -449,7 +657,7 @@ export function governancePage(initialTab = 'all') {
             <div class="quote-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <p><strong>Official Police Partnership Directive:</strong> As per the guidance of Coimbatore City Police, the Anti-Drug is constituted recommending the launch of the 'Police Akka' project for the safety of female students in colleges, and the 'Police Bro' project , as an anti-drug initiative engaging male students. The members of the club for the year 2024-25 comprise:</p>
+            <p><strong>Official Police Partnership Directive:</strong> As per the guidance of Coimbatore City Police, the Anti-Drug Club is constituted recommending the launch of the 'Police Akka' project for the safety of female students in colleges, and the 'Police Bro' project, as an anti-drug initiative engaging male students. The members of the club for the year 2024–25 comprise:</p>
           </div>
 
           <!-- Police Akka & Police Bro Initiative Details -->
@@ -461,7 +669,10 @@ export function governancePage(initialTab = 'all') {
               <div>
                 <span class="comm-initiative-badge">Police Akka Initiative</span>
                 <h4>Safety &amp; Support for Female Students</h4>
-                <p>Designated female police officers serve as approachable mentors and points of contact to resolve safety concerns, prevent harassment, provide guidance on digital security, and ensure personal wellbeing.</p>
+                <p>Designated female police officers serve as approachable mentors and direct points of contact to resolve safety concerns, prevent cyber harassment, provide guidance on digital security, and ensure personal wellbeing.</p>
+                <div style="margin-top: 8px; font-size: 12.5px; color: #be185d; font-weight: 750;">
+                  Officers: Ms. Anburani (<a href="tel:9498173268" style="color: inherit; text-decoration: underline;">9498173268</a>) &amp; Ms. Baby Rosy (<a href="tel:9498172220" style="color: inherit; text-decoration: underline;">9498172220</a>)
+                </div>
               </div>
             </div>
 
@@ -472,13 +683,16 @@ export function governancePage(initialTab = 'all') {
               <div>
                 <span class="comm-initiative-badge">Police Bro Initiative</span>
                 <h4>Anti-Drug Vigilance &amp; Youth Advocacy</h4>
-                <p>Engaging young men against illicit substances and narcotics through peer workshops, direct counselor connectivity, open dialogue, and wholesome lifestyle development.</p>
+                <p>Engaging young men against illicit substances and narcotics through peer workshops, direct counselor connectivity, open dialogue, sports engagement, and wholesome lifestyle development.</p>
+                <div style="margin-top: 8px; font-size: 12.5px; color: #1e40af; font-weight: 750;">
+                  Officer: Mr. Kuralarasan (<a href="tel:8508325075" style="color: inherit; text-decoration: underline;">8508325075</a>)
+                </div>
               </div>
             </div>
           </div>
 
           <div class="coe-card-body" style="padding: 24px 16px;">
-            <!-- Official White & Green Table Card: Anti-Drug Club (Matching Reference Image 2) -->
+            <!-- Official Table Card: Anti-Drug Club (Matching Reference Image 2) -->
             <div class="siet-official-table-card antidrug-theme">
               <div class="siet-table-header-bar">
                 <h3 class="siet-table-title">ANTI-DRUG CLUB</h3>
@@ -499,238 +713,465 @@ export function governancePage(initialTab = 'all') {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1.</td>
-                      <td class="cell-name">Dr. N. K. Sakthivel</td>
-                      <td class="cell-desig">Principal</td>
-                      <td class="cell-contact"><a href="tel:9486244579" title="Call Dr. N. K. Sakthivel">9486244579</a></td>
-                    </tr>
-                    <tr>
-                      <td>2.</td>
-                      <td class="cell-name">Dr.R.RanjithKumar</td>
-                      <td class="cell-desig">Professor/ECE</td>
-                      <td class="cell-contact"><a href="tel:8317375756" title="Call Dr.R.RanjithKumar">8317375756</a></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td class="cell-name">Dr.K.E.Kannammal</td>
-                      <td class="cell-desig">HoD/CSE</td>
-                      <td class="cell-contact"><a href="tel:9843633389" title="Call Dr.K.E.Kannammal">9843633389</a></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td class="cell-name">Ms.Anburani</td>
-                      <td class="cell-desig">Police Akka</td>
-                      <td class="cell-contact"><a href="tel:9498173268" title="Call Ms.Anburani">9498173268</a></td>
-                    </tr>
-                    <tr>
-                      <td>5.</td>
-                      <td class="cell-name">Ms.Baby Rosy</td>
-                      <td class="cell-desig">Police Akka</td>
-                      <td class="cell-contact"><a href="tel:9498172220" title="Call Ms.Baby Rosy">9498172220</a></td>
-                    </tr>
-                    <tr>
-                      <td>6.</td>
-                      <td class="cell-name">Mr.Kuralarasan</td>
-                      <td class="cell-desig">Police Bro</td>
-                      <td class="cell-contact"><a href="tel:8508325075" title="Call Mr.Kuralarasan">8508325075</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Anti-Drug Emergency Desk Strip -->
-            <div class="comm-info-box">
-              <div class="comm-info-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span><strong>Coimbatore City Police Station:</strong> Chinnaiyampalayam Jurisdiction | Helpline: 100 / 112</span>
-              </div>
-              <div class="comm-info-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span><strong>Instant Assistance:</strong> Contact Principal's desk (+91 9486244579) or Police Liaison (+91 9498173268 / +91 8508325075).</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section: Governing Council -->
-        <div id="governing-council" class="coe-section-card reveal comm-section-pane" data-section="council" style="margin-bottom: 32px;">
-          <div class="coe-card-header">
-            <div>
-              <span class="coe-pill-badge">APEX STATUTORY BODY</span>
-              <h3>Governing Council (Governing Body)</h3>
-              <p>The Governing Council is the apex executive body overseeing policy formulation, financial governance, strategic expansion, and autonomous academic development under UGC guidelines.</p>
-            </div>
-          </div>
-          <div class="coe-card-body" style="padding: 24px 16px;">
-            <!-- Official Institutional Center Table Card: Governing Council (Green & Yellow Institutional Theme) -->
-            <div class="siet-official-table-card icc-theme">
-              <!-- Top Institutional Banner with Logo, Gold Typography and UGC Autonomous Medallion -->
-              <div class="siet-table-card-top">
-                <div class="siet-icc-left-brand">
-                  <img src="/brand/siet-logo.png" alt="Sri Shakthi Logo" class="siet-icc-logo" width="58" height="58">
-                  <div class="siet-icc-motto-wrap">
-                    <span>POWERING THE YOUTH</span>
-                    <span>EMPOWERING THE NATION</span>
-                  </div>
-                </div>
-
-                <div class="siet-table-brand-center">
-                  <h2 class="siet-brand-gold-title">SRI SHAKTHI</h2>
-                  <div class="siet-brand-gold-sub">INSTITUTE OF ENGINEERING AND TECHNOLOGY</div>
-                </div>
-
-                <div class="siet-table-badge">
-                  <div class="siet-naac-medallion" title="UGC Autonomous Institution">
-                    <svg width="68" height="68" viewBox="0 0 100 100" aria-label="Apex Governing Body">
-                      <defs>
-                        <path id="govArc" d="M 18 48 A 32 32 0 0 1 82 48" />
-                        <radialGradient id="govGoldGrad" cx="50%" cy="40%" r="50%">
-                          <stop offset="0%" stop-color="#ffe680"/>
-                          <stop offset="70%" stop-color="#d49b14"/>
-                          <stop offset="100%" stop-color="#9a6c02"/>
-                        </radialGradient>
-                        <linearGradient id="govRibbon" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stop-color="#005a36"/>
-                          <stop offset="100%" stop-color="#002d1b"/>
-                        </linearGradient>
-                      </defs>
-                      <circle cx="50" cy="46" r="40" fill="url(#govGoldGrad)" stroke="#7c5300" stroke-width="1.5"/>
-                      <circle cx="50" cy="46" r="34" fill="#ffffff" stroke="#c99210" stroke-width="1.5"/>
-                      <text font-size="4.8" font-weight="900" fill="#7a4f00" letter-spacing="0.3">
-                        <textPath href="#govArc" startOffset="50%" text-anchor="middle">APEX EXECUTIVE BODY</textPath>
-                      </text>
-                      <polygon points="50,33 66,41 50,49 34,41" fill="#005a36"/>
-                      <path d="M 60 45 V 53 C 60 56 50 60 50 60 C 50 60 40 56 40 53 V 45" fill="#ffd447" stroke="#005a36" stroke-width="1"/>
-                      <path d="M 12 70 L 26 62 L 74 62 L 88 70 L 82 82 L 50 78 L 18 82 Z" fill="url(#govRibbon)" stroke="#ffd447" stroke-width="1"/>
-                      <text x="50" y="74" font-size="8" font-weight="900" fill="#ffd447" text-anchor="middle" letter-spacing="1.2" font-family="'Montserrat', Arial, sans-serif">AUTONOMOUS</text>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Centered White Header -->
-              <h3 class="siet-table-title">GOVERNING COUNCIL (GOVERNING BODY)</h3>
-              <p style="text-align: center; color: #ffd447; font-size: 13.5px; font-weight: 750; margin: -10px 0 20px 0; letter-spacing: 0.04em;">
-                CONSTITUTED UNDER UGC GUIDELINES &amp; ANNA UNIVERSITY AUTONOMOUS STATUTES
-              </p>
-
-              <div class="siet-table-scroll-hint"><span>⇄ Swipe table horizontally to view full details</span></div>
-
-              <!-- Center-Aligned Table with 5 Columns matching Green & Yellow Reference -->
-              <div class="siet-table-wrapper-center">
-                <table class="siet-center-table icc-table">
-                  <thead>
-                    <tr>
-                      <th style="width: 8%;">S.No</th>
-                      <th class="col-name" style="width: 28%; text-align: left;">Name of the Member</th>
-                      <th class="col-desig" style="width: 34%; text-align: left;">Designation &amp; Organization</th>
-                      <th style="width: 15%;">Category</th>
-                      <th style="width: 15%;">Role</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${governingCouncilMembers.map(m => `
+                    ${antiDrugClubMembers.map(m => `
                       <tr>
-                        <td style="font-weight: 700;">${m.sno}</td>
+                        <td>${m.sno}.</td>
                         <td class="cell-name">${m.name}</td>
                         <td class="cell-desig">${m.designation}</td>
-                        <td><span style="display: inline-block; padding: 3px 10px; border-radius: 6px; background: rgba(255, 212, 71, 0.18); color: #ffd447; border: 1px solid #ffd447; font-size: 12px; font-weight: 750;">${m.category}</span></td>
-                        <td><span style="display: inline-block; padding: 4px 11px; border-radius: 6px; background: #ffd447; color: #003c24; font-weight: 850; font-size: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">${m.role}</span></td>
+                        <td class="cell-contact"><a href="tel:${m.contact}" title="Call ${m.name}">${m.contact}</a></td>
                       </tr>
                     `).join('')}
                   </tbody>
                 </table>
               </div>
             </div>
+
+            <!-- Interactive Drug-Free Campus Pledge -->
+            <div class="drug-pledge-card">
+              <div class="drug-pledge-info">
+                <span class="drug-pledge-tag">CAMPUS COMMITMENT</span>
+                <h4 class="drug-pledge-title">Take the Drug-Free Shakthian Pledge</h4>
+                <p class="drug-pledge-desc">Join thousands of students and faculty committed to a drug-free, mentally healthy, and empowered academic journey.</p>
+              </div>
+              <div>
+                <button type="button" id="takeDrugPledgeBtn" class="drug-pledge-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Take the Drug-Free Pledge</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Anti-Drug Emergency Desk Strip -->
+            <div class="comm-info-box" style="margin-top: 20px;">
+              <div class="comm-info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span><strong>Coimbatore City Police Station:</strong> Chinnaiyampalayam Jurisdiction | Police Helpline: 100 / 112</span>
+              </div>
+              <div class="comm-info-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span><strong>Campus Anti-Drug Desk:</strong> Principal's desk (+91 9486244579) or Police Liaison (+91 9498173268 / +91 8508325075).</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Section: Statutory & Regulatory Committees Grid -->
+        <!-- ==============================================================
+             SECTION 4: STATUTORY & REGULATORY COMMITTEES (MULTI-PANEL DIRECTORY)
+             ============================================================== -->
         <div id="statutory-committees" class="coe-section-card reveal comm-section-pane" data-section="statutory" style="margin-bottom: 32px;">
           <div class="coe-card-header">
             <div>
-              <span class="coe-pill-badge">CAMPUS ADMINISTRATION</span>
+              <span class="coe-pill-badge">CAMPUS ADMINISTRATION &amp; RIGHTS</span>
               <h3>Statutory &amp; Regulatory Committees</h3>
-              <p>Specialized institutional committees actively operating to ensure zero-tolerance policies, grievance resolution, and academic excellence.</p>
+              <p>Mandated institutional bodies operating under AICTE, UGC, and Anna University regulations to protect student welfare, guarantee fairness, and uphold institutional integrity.</p>
             </div>
           </div>
-          <div class="coe-card-body">
-            <div class="accred-committees-grid">
+          <div class="coe-card-body" style="padding: 24px;">
+            <div class="statutory-detailed-grid">
               
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <!-- 1. Anti-Ragging Committee -->
+              <div class="stat-panel-card ragging">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">UGC / AICTE MANDATE · ZERO TOLERANCE</span>
+                    <h4 class="stat-panel-title">Anti-Ragging Committee &amp; Squad</h4>
+                  </div>
                 </div>
-                <h4>Anti-Ragging Committee &amp; Squad</h4>
-                <p>Ensures 100% ragging-free campus. Chaired by the Principal with representatives from civil administration, police department, media, NGOs, faculty, and student parents.</p>
-                <div class="comm-contact">
-                  <strong>Emergency Helpline: +91 422 2369900</strong>
-                  <small>Toll-Free National Helpline: 1800-180-5522 | antiragging@siet.ac.in</small>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">Ensures a 100% ragging-free campus with proactive round-the-clock hostel, transit, and laboratory surveillance by flying squads under Principal chairmanship.</p>
+                  <ul class="stat-highlights-list">
+                    <li>Multi-tier squad with Revenue, Police, NGO, media, parents, and student members</li>
+                    <li>Mandatory online undertaking submission at <a href="https://www.antiragging.in" target="_blank" rel="noopener noreferrer" style="color: #005a36; text-decoration: underline;">antiragging.in</a></li>
+                    <li>Immediate suspension and inquiry protocols upon report</li>
+                  </ul>
                 </div>
-              </div>
-
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>National Helpline: 1800-180-5522 (Toll Free)</strong>
+                    <span>Campus Desk: +91 422 2369900 | antiragging@siet.ac.in</span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="ragging">
+                    <span>View Roster (12)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
                 </div>
-                <h4>Grievance Redressal Committee (GRC)</h4>
-                <p>Provides a fair, transparent mechanism for prompt resolution of grievances received from students, parents, and employees. Includes an active online portal linked to AICTE.</p>
-                <div class="comm-contact">
-                  <strong>Coordinator: Dean Student Affairs</strong>
-                  <small>Online Submission: grievance@siet.ac.in</small>
-                </div>
-              </div>
-
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                </div>
-                <h4>Academic Council &amp; Board of Studies (BoS)</h4>
-                <p>Governs all autonomous academic curricula, assessment regulations, industry electives, and examination modalities. Meets biannually with Anna University and industrial experts.</p>
-                <div class="comm-contact">
-                  <strong>Chairman: Dr. N. K. Sakthivel (Principal)</strong>
-                  <small>Member Secretary: Dr. K. E. Kannammal (COE)</small>
-                </div>
-              </div>
-
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <h4>SC / ST Committee &amp; Equal Opportunity Cell</h4>
-                <p>Dedicated to promoting the socio-economic empowerment and academic integration of students from disadvantaged communities through focused scholarships, mentoring, and skill tracks.</p>
-                <div class="comm-contact">
-                  <strong>Convener: Senior Faculty Member</strong>
-                  <small>Email: equalopportunity@siet.ac.in</small>
-                </div>
-              </div>
-
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <h4>Finance Committee</h4>
-                <p>Plans, allocates, and audits institutional capital expenditures, laboratory research modernization budgets, scholarships, and infrastructure expansion in accordance with UGC standards.</p>
-                <div class="comm-contact">
-                  <strong>Finance Officer &amp; Principal</strong>
-                  <small>Approved by Governing Council</small>
-                </div>
-              </div>
-
-              <div class="accred-comm-card">
-                <div class="comm-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </div>
-                <h4>Examination Committee</h4>
-                <p>Supervises autonomous Continuous Internal Evaluation (CIE), End Semester Examinations (ESE), confidential valuation, and malpractice inquiries under Office of the COE.</p>
-                <div class="comm-contact">
-                  <strong>Controller of Examinations (COE)</strong>
-                  <small><a href="#/coe?tab=committee" style="color: #00472b; font-weight: 700; text-decoration: underline;">View Full Examination Committee →</a></small>
+                <!-- Inline Roster Pane -->
+                <div id="roster-ragging" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Role</th>
+                          <th>Contact</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${antiRaggingCommitteeMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td class="m-role">${m.role}</td>
+                            <td>${m.contact}</td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
+              <!-- 2. Grievance Redressal Committee -->
+              <div class="stat-panel-card grc">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">AICTE REGULATION 2019 · OMBUDSPERSON</span>
+                    <h4 class="stat-panel-title">Grievance Redressal Committee (GRC)</h4>
+                  </div>
+                </div>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">A formal multi-tier resolution framework guaranteeing fair, transparent, and prompt disposal of grievances received from students, parents, and staff within 15 working days.</p>
+                  <ul class="stat-highlights-list">
+                    <li>Supervised by Dean (Student Affairs) with independent University Ombudsperson oversight</li>
+                    <li>Online confidential grievance submission portal linked with AICTE</li>
+                    <li>Sealed grievance boxes located across Academic Block and hostels</li>
+                  </ul>
+                </div>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>Coordinator: Dean Student Affairs</strong>
+                    <span>Online Filing: grievance@siet.ac.in</span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="grc">
+                    <span>View Roster (7)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+                <!-- Inline Roster Pane -->
+                <div id="roster-grc" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Role</th>
+                          <th>Email Desk</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${grievanceRedressalMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td class="m-role">${m.role}</td>
+                            <td><a href="mailto:${m.contact}" style="color: #0284c7; text-decoration: underline;">${m.contact}</a></td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Academic Council & Board of Studies -->
+              <div class="stat-panel-card academic">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">AUTONOMOUS CURRICULUM AUTHORITY</span>
+                    <h4 class="stat-panel-title">Academic Council &amp; Board of Studies</h4>
+                  </div>
+                </div>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">Governs all autonomous academic frameworks, Regulations 2025 curricula, multidisciplinary electives, assessment schemes, and examination modalities with Anna University experts.</p>
+                  <ul class="stat-highlights-list">
+                    <li>3 Anna University professorial nominees and leading industrial technologists</li>
+                    <li>Biannual curriculum revisions aligned with industry 5.0 and ABET guidelines</li>
+                    <li>Ratification of Board of Studies (BoS) recommendations across 21 programmes</li>
+                  </ul>
+                </div>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>Chairman: Dr. N. K. Sakthivel (Principal)</strong>
+                    <span>Member Secretary: Dr. K. E. Kannammal (COE)</span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="academic">
+                    <span>View Roster (12)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+                <!-- Inline Roster Pane -->
+                <div id="roster-academic" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Category</th>
+                          <th>Role</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${academicCouncilMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td>${m.category}</td>
+                            <td class="m-role">${m.role}</td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. SC / ST Committee & Equal Opportunity Cell -->
+              <div class="stat-panel-card equal">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">CONSTITUTIONAL RIGHTS &amp; INCLUSION</span>
+                    <h4 class="stat-panel-title">SC / ST &amp; Equal Opportunity Cell</h4>
+                  </div>
+                </div>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">Dedicated to ensuring social justice, preventing discrimination, facilitating Government scholarships, and providing specialized academic and career mentoring for underrepresented learners.</p>
+                  <ul class="stat-highlights-list">
+                    <li>Zero-tolerance policy towards caste-based discrimination or bias</li>
+                    <li>Dedicated Post-Matric Scholarship liaison desk with Tamil Nadu DOTE</li>
+                    <li>Remedial academic classes and personalized skill development tracks</li>
+                  </ul>
+                </div>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>Liaison Officer: Dr. G. Sundar (HoD / EEE)</strong>
+                    <span>Email: equalopportunity@siet.ac.in</span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="equal">
+                    <span>View Roster (7)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+                <!-- Inline Roster Pane -->
+                <div id="roster-equal" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Category</th>
+                          <th>Role</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${equalOpportunityCellMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td>${m.category}</td>
+                            <td class="m-role">${m.role}</td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Finance Committee -->
+              <div class="stat-panel-card finance">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">UGC AUTONOMOUS FISCAL FRAMEWORK</span>
+                    <h4 class="stat-panel-title">Finance Committee</h4>
+                  </div>
+                </div>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">Plans, allocates, and audits institutional capital expenditures, laboratory research modernization budgets, scholarships, and infrastructure expansion in accordance with UGC standards.</p>
+                  <ul class="stat-highlights-list">
+                    <li>State Government / Directorate of Technical Education Accounts Officer oversight</li>
+                    <li>Statutory audited balance sheets and annual financial projections</li>
+                    <li>Sanction of major laboratory equipment and R&amp;D centre grants</li>
+                  </ul>
+                </div>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>Chairman: Dr. S. Thangavelu (Trust Chairman)</strong>
+                    <span>Approved by Governing Council &amp; UGC</span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="finance">
+                    <span>View Roster (5)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+                <!-- Inline Roster Pane -->
+                <div id="roster-finance" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Category</th>
+                          <th>Role</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${financeCommitteeMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td>${m.category}</td>
+                            <td class="m-role">${m.role}</td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Examination Committee -->
+              <div class="stat-panel-card exam">
+                <div class="stat-panel-header">
+                  <div class="stat-panel-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </div>
+                  <div class="stat-panel-header-text">
+                    <span class="stat-kicker-tag">OFFICE OF THE COE · ANNA UNIVERSITY</span>
+                    <h4 class="stat-panel-title">Examination Committee</h4>
+                  </div>
+                </div>
+                <div class="stat-panel-body">
+                  <p class="stat-panel-desc">Supervises autonomous Continuous Internal Evaluation (CIE), End Semester Examinations (ESE), confidential central valuation, question scrutiny, and malpractice inquiry boards under Office of the COE.</p>
+                  <ul class="stat-highlights-list">
+                    <li>Autonomous examination policy and Anna University external question setters</li>
+                    <li>Secure double valuation and computer-generated encrypted grade cards</li>
+                    <li>Official transcript issuance and international WES credential evaluation</li>
+                  </ul>
+                </div>
+                <div class="stat-panel-footer">
+                  <div class="stat-contact-info">
+                    <strong>Chief Controller: Dr. N. K. Sakthivel (Principal)</strong>
+                    <span>COE: Dr. K. E. Kannammal | <a href="#/coe?tab=committee" style="color: #005a36; text-decoration: underline; font-weight: 750;">Full COE Portal →</a></span>
+                  </div>
+                  <button type="button" class="stat-roster-toggle-btn" data-roster-toggle="exam">
+                    <span>View Roster (7)</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+                <!-- Inline Roster Pane -->
+                <div id="roster-exam" class="stat-roster-pane">
+                  <div class="siet-table-scroll-hint" style="margin-bottom: 8px;"><span>⇄ Swipe table horizontally to view full details</span></div>
+                  <div class="siet-table-wrapper-center">
+                    <table class="stat-inline-table">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>Designation</th>
+                          <th>Role</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        ${examinationCommitteeMembers.map(m => `
+                          <tr>
+                            <td>${m.sno}</td>
+                            <td class="m-name">${m.name}</td>
+                            <td>${m.designation}</td>
+                            <td class="m-role">${m.role}</td>
+                          </tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ==============================================================
+             SECTION 5: CAMPUS WELFARE & STUDENT GOVERNANCE CLUBS
+             ============================================================== -->
+        <div id="governance-clubs" class="coe-section-card reveal comm-section-pane" data-section="clubs" style="margin-bottom: 32px;">
+          <div class="coe-card-header">
+            <div>
+              <span class="coe-pill-badge" style="background: #fdf2f8; color: #9d174d;">STUDENT WELFARE &amp; CIVIC GUILDS</span>
+              <h3>Campus Welfare &amp; Student Governance Clubs</h3>
+              <p>Active co-curricular and safety clubs empowering students to lead community drives, emergency response, women leadership, and narcotics-free lifestyle advocacy.</p>
+            </div>
+            <div>
+              <a href="#/clubs" class="comm-phone-btn" title="Explore all 26+ Student Clubs">
+                Explore All 26+ Student Clubs →
+              </a>
+            </div>
+          </div>
+          <div class="coe-card-body" style="padding: 24px;">
+            <div class="gov-clubs-grid">
+              ${governanceWelfareClubs.map(c => `
+                <div class="gov-club-card" id="club-${c.id}">
+                  <div class="gov-club-top">
+                    <span class="gov-club-icon">${c.icon}</span>
+                    <span class="gov-club-badge">${c.badge}</span>
+                  </div>
+                  <h4 class="gov-club-title">${c.name}</h4>
+                  <div class="gov-club-lead">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>Lead: <strong>${c.lead}</strong></span>
+                  </div>
+                  <p class="gov-club-desc">${c.desc}</p>
+                  <ul class="gov-club-initiatives">
+                    ${c.keyInitiatives.map(ki => `<li>${ki}</li>`).join('')}
+                  </ul>
+                  <div class="gov-club-action">
+                    <span style="font-size: 11.5px; color: #6b7280; font-weight: 750;">${c.category}</span>
+                    ${c.id === 'antidrug' ? `
+                      <button type="button" class="gov-club-nav-btn" data-goto-tab="antidrug">
+                        ${c.ctaText} →
+                      </button>
+                    ` : `
+                      <a href="#/clubs" class="gov-club-link">
+                        ${c.ctaText} →
+                      </a>
+                    `}
+                  </div>
+                </div>
+              `).join('')}
             </div>
           </div>
         </div>
@@ -744,9 +1185,12 @@ export function governancePage(initialTab = 'all') {
             </span>
             <span>Synchronized with official portal data at <a href="https://www.siet.ac.in/committees.php" target="_blank" rel="noopener noreferrer">siet.ac.in/committees.php</a> (AY 2024–25).</span>
           </div>
-          <div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <a href="#/mandatory-disclosure" class="comm-phone-btn">
               AICTE Mandatory Disclosure →
+            </a>
+            <a href="#/statutory-declaration" class="comm-phone-btn" style="background: #ffffff; color: #005a36; border: 1.5px solid #005a36;">
+              RTI Statutory Declaration →
             </a>
           </div>
         </div>
@@ -1674,7 +2118,7 @@ export function bindGovernanceEvents($, $$) {
 
     if (shouldScroll) {
       if (tabKey === 'all') {
-        const topEl = $('#internalcomplaints', container) || sectionPanes[0];
+        const topEl = $('#governing-council', container) || sectionPanes[0];
         topEl?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
         const targetPane = sectionPanes.find(p => p.dataset.section === tabKey);
@@ -1693,7 +2137,78 @@ export function bindGovernanceEvents($, $$) {
     });
   });
 
-  // Handle URL hash / params on initial load
+  // 1. Council Category Filter Bar
+  const councilFilterBtns = $$('.council-filter-btn', container);
+  const councilRows = $$('.council-row', container);
+  councilFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      councilFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.councilFilter || 'all';
+      councilRows.forEach(row => {
+        if (filter === 'all' || row.dataset.councilGroup === filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 2. Interactive Drug-Free Campus Pledge
+  const pledgeBtn = $('#takeDrugPledgeBtn', container);
+  if (pledgeBtn) {
+    pledgeBtn.addEventListener('click', () => {
+      if (pledgeBtn.classList.contains('pledged')) return;
+      pledgeBtn.classList.add('pledged');
+      pledgeBtn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>✓ Pledged! Certified Drug-Free Shakthian</span>
+      `;
+      const desc = $('.drug-pledge-desc', container);
+      if (desc) {
+        desc.innerHTML = '<strong style="color: #6ee7b7;">Congratulations!</strong> You have officially taken the Drug-Free Campus Pledge for AY 2024–25. Keep inspiring your peers!';
+      }
+    });
+  }
+
+  // 3. Statutory Committee Roster Toggles
+  const rosterToggles = $$('[data-roster-toggle]', container);
+  rosterToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.rosterToggle;
+      const pane = $(`#roster-${targetId}`, container);
+      if (!pane) return;
+      const isOpen = pane.classList.contains('open');
+      pane.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      const labelSpan = btn.querySelector('span');
+      if (labelSpan) {
+        const countMatch = labelSpan.textContent.match(/\(\d+\)/);
+        const countStr = countMatch ? ` ${countMatch[0]}` : '';
+        labelSpan.textContent = !isOpen ? `Hide Roster${countStr}` : `View Roster${countStr}`;
+      }
+      const icon = btn.querySelector('svg');
+      if (icon) {
+        icon.style.transform = !isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        icon.style.transition = 'transform 0.2s ease';
+      }
+    });
+  });
+
+  // 4. Clubs Section In-Page Navigation to Anti-Drug tab
+  const clubNavBtns = $$('[data-goto-tab]', container);
+  clubNavBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = btn.dataset.gotoTab || 'all';
+      activateTab(tab, true);
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', `#/governance?tab=${tab}`);
+      }
+    });
+  });
+
+  // 5. Handle URL hash / query params on initial load
   const hash = location.hash || '';
   if (hash.includes('internalcomplaints') || hash.includes('tab=icc')) {
     activateTab('icc', false);
@@ -1703,12 +2218,14 @@ export function bindGovernanceEvents($, $$) {
     activateTab('council', false);
   } else if (hash.includes('statutory') || hash.includes('tab=statutory')) {
     activateTab('statutory', false);
+  } else if (hash.includes('clubs') || hash.includes('tab=clubs')) {
+    activateTab('clubs', false);
   } else {
     const qIdx = hash.indexOf('?');
     if (qIdx !== -1) {
       const params = new URLSearchParams(hash.slice(qIdx + 1));
       const tabParam = params.get('tab');
-      if (tabParam && ['icc', 'antidrug', 'council', 'statutory', 'all'].includes(tabParam)) {
+      if (tabParam && ['icc', 'antidrug', 'council', 'statutory', 'clubs', 'all'].includes(tabParam)) {
         activateTab(tabParam, false);
       }
     }

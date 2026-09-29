@@ -282,6 +282,29 @@ button.coe-action-card {
   padding: 0 24px;
 }
 
+.coe-content-area {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 64px;
+  box-sizing: border-box;
+}
+
+.coe-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .coe-content-area {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+  }
+}
+
 .coe-portal-layout {
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr);

@@ -53427,3 +53427,187 @@ button.coe-action-card {
   border-color: #00854a !important;
   box-shadow: 0 8px 24px rgba(0, 133, 74, 0.16) !important;
 }
+
+/* ── Sri Shakthi Brand Bar (above existing navbar) ─────────────────── */
+.siet-brand-bar {
+  width: 100%;
+  background: linear-gradient(135deg, #013d22 0%, #025c33 60%, #013d22 100%);
+  border-bottom: 2px solid rgba(255, 208, 56, 0.35);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+}
+
+.siet-brand-bar-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+}
+
+.siet-brand-bar-logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.4));
+  flex-shrink: 0;
+}
+
+.siet-brand-bar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.siet-brand-bar-name {
+  font-family: 'League Spartan', 'Montserrat', 'Arial Black', sans-serif;
+  font-size: clamp(26px, 2.5vw, 38px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.siet-brand-bar-sub {
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.siet-brand-bar-motto {
+  font-size: clamp(10px, 0.8vw, 12.5px);
+  font-weight: 700;
+  color: #ffd438;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.siet-brand-bar-motto em {
+  font-style: normal;
+  color: rgba(255, 212, 56, 0.5);
+  margin: 0 5px;
+}
+
+@media (max-width: 640px) {
+  .siet-brand-bar {
+    padding: 10px 16px;
+  }
+  .siet-brand-bar-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ── Sri Shakthi Inline Brand (inside existing navbar, left side) ─── */
+
+/* Remove the gap/radius that separated the navbar from the header image */
+.exact-image-header .institution-navbar {
+  margin-top: 0 !important;
+  border-radius: 0 !important;
+  min-height: 72px !important;
+}
+
+/* The inline brand link — left side of the navbar */
+.siet-inline-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px 0 16px;
+  text-decoration: none !important;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background 0.2s;
+}
+
+.siet-inline-brand:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.siet-inline-brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+  flex-shrink: 0;
+}
+
+.siet-inline-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.siet-inline-brand-name {
+  font-family: 'League Spartan', 'Montserrat', 'Arial Black', sans-serif;
+  font-size: clamp(17px, 1.4vw, 22px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.siet-inline-brand-sub {
+  font-size: clamp(9px, 0.7vw, 11.5px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.siet-inline-brand-motto {
+  font-size: clamp(8px, 0.6vw, 10px);
+  font-weight: 700;
+  color: #ffd438;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.siet-inline-brand-motto em {
+  font-style: normal;
+  color: rgba(255, 212, 56, 0.45);
+  margin: 0 4px;
+}
+
+/* Hide the home-icon on desktop since brand now serves that role,
+   but keep it visible for mobile fallback */
+.exact-image-header .institution-home {
+  display: none !important;
+}
+
+@media (max-width: 960px) {
+  .siet-inline-brand {
+    display: none !important;
+  }
+  .exact-image-header .institution-home {
+    display: grid !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .siet-inline-brand-sub {
+    display: none;
+  }
+  .siet-inline-brand-motto {
+    display: none;
+  }
+  .siet-inline-brand-name {
+    font-size: clamp(14px, 1.2vw, 18px);
+  }
+  .siet-inline-brand {
+    padding: 0 12px 0 12px;
+    gap: 10px;
+  }
+  .siet-inline-brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+

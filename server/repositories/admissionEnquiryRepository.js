@@ -25,3 +25,15 @@ export async function insertAdmissionEnquiry(data) {
   );
   return { id: result.insertId, mobileNumber: data.mobileNumber };
 }
+
+export async function insertAdmissionEnquiryCall(data) {
+  const db = requireDatabase();
+  const [result] = await db.execute(
+    `INSERT INTO admission_enquiry_calls
+      (admission_enquiry_id, provider_call_sid, student_number, counsellor_number, call_status, error_message)
+     VALUES (?, ?, ?, ?, ?, ?)`,
+    [data.enquiryId, data.callSid || null, data.studentNumber, data.counsellorNumber,
+      data.status || 'requested', data.errorMessage || null]
+  );
+  return { id: result.insertId };
+}

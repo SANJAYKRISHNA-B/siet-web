@@ -32,3 +32,11 @@ test('MySQL migration defines persistent enquiry fields and string mobile storag
   assert.match(sql, /updated_at TIMESTAMP/i);
   assert.doesNotMatch(sql, /UNIQUE\s*\([^)]*mobile_number/i);
 });
+
+test('MySQL migration defines an Exotel call audit table', () => {
+  const testDirectory = path.dirname(fileURLToPath(import.meta.url));
+  const sql = fs.readFileSync(path.resolve(testDirectory, '../migrations/002_create_admission_enquiry_calls.sql'), 'utf8');
+  assert.match(sql, /CREATE TABLE IF NOT EXISTS admission_enquiry_calls/i);
+  assert.match(sql, /provider_call_sid VARCHAR\(100\)/i);
+  assert.match(sql, /FOREIGN KEY \(admission_enquiry_id\)/i);
+});

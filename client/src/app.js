@@ -634,6 +634,12 @@ function bind() {
 
 
   const mobile = $('.mobile-nav'), backdrop = $('.mobile-nav-backdrop'), toggle = $('.institution-mobile-toggle'), closeBtn = $('.mobile-nav-close');
+  const syncHeaderScroll = () => $('.premium-header')?.classList.toggle('is-scrolled', window.scrollY > 36);
+  syncHeaderScroll();
+  if (!window.__sietHeaderScrollBound) {
+    window.addEventListener('scroll', syncHeaderScroll, { passive: true });
+    window.__sietHeaderScrollBound = true;
+  }
   const closeMenu = () => { mobile?.classList.remove('open'); backdrop?.classList.remove('open'); if (toggle) toggle.innerHTML = icon('menu'); document.body.style.overflow = '' };
   const openMenu = () => { mobile?.classList.add('open'); backdrop?.classList.add('open'); if (toggle) toggle.innerHTML = icon('close'); document.body.style.overflow = 'hidden' };
   toggle?.addEventListener('click', e => { e.stopPropagation(); mobile?.classList.contains('open') ? closeMenu() : openMenu() });

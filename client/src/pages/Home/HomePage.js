@@ -1,74 +1,29 @@
 import { icon, deptIcon } from '../../components/common/SvgIcons.js';
 import { ugPrograms, pgPrograms, bottomBannerHtml } from '../../data/programmesData.js';
 import { programmeCards } from '../../components/cards/ProgrammeCard.js';
-import { placementHighlightsCardInner, placementMarqueeSection } from '../../sections/PlacementSection.js';
 
 const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
 export function homePage() {
-  return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
-  <div class="placement-v2-backdrop" aria-hidden="true">
-    <div class="placement-v2-building-photo"></div>
-    <div class="placement-v2-photo-overlay"></div>
-    <svg class="placement-hero-wave-svg" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
-      <path d="M0 0H740C790 140 690 260 670 360C640 460 760 520 840 590C920 660 920 740 820 800H0V0Z" fill="url(#heroYellowWaveGrad)"/>
-      <defs>
-        <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="800" y2="800" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#ffcd29"/>
-          <stop offset="55%" stop-color="#fbbd18"/>
-          <stop offset="100%" stop-color="#f5a60e"/>
-        </linearGradient>
-      </defs>
-    </svg>
-    <div class="placement-hero-top-mint-arc"></div>
-  </div>
-  <div class="placement-v2-container">
-    <div class="placement-v2-copy reveal">
-      <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
-      <div class="placement-v2-pill">CLASS OF 2027</div>
-      <h1 class="placement-v2-title">
-        <span>POWERING</span>
-        <span>THE YOUTH</span>
-        <span class="title-second-part">EMPOWERING</span>
-        <span class="title-second-part">THE NATION</span>
-      </h1>
-      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a <br> vibrant placement ecosystem that transforms <br> engineering potential into meaningful careers.</p>
-      <div class="placement-v2-actions-area">
-        <div class="placement-v2-actions">
-          <button type="button" class="placement-v2-btn primary js-explore-placements">Explore Placements ${icon('arrow')}</button>
-          <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
-        </div>
-      </div>
-    </div>
-    <div class="placement-right-section reveal" id="placement-highlights">
-      ${placementHighlightsCardInner()}
+  return `<main class="home-page"><section class="home-impact-hero">
+  <div class="home-impact-photo" aria-hidden="true"></div>
+  <div class="home-impact-shade" aria-hidden="true"></div>
+  <div class="home-impact-content reveal">
+    <div class="home-impact-kicker"><span>LEARN</span><i></i><span>ACHIEVE</span></div>
+    <h1>
+      <span>POWERING</span>
+      <strong>THE YOUTH</strong>
+      <span>EMPOWERING</span>
+      <strong>THE NATION</strong>
+    </h1>
+    <div class="home-impact-rule" aria-hidden="true"></div>
+    <p>Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
+    <div class="home-impact-actions">
+      <a class="home-impact-primary" href="#/apply">Apply Now ${icon('arrow')}</a>
+      <a class="home-impact-secondary" href="#/campus-life">Explore Campus <span>${icon('play')}</span></a>
     </div>
   </div>
-  <div class="placement-hero-bottom-strip reveal">
-    <div class="placement-bottom-features">
-      <div class="bottom-feature-item">
-        <span class="feature-icon">${icon('ps-building')}</span>
-        <span>Industry Ready Workforce</span>
-      </div>
-      <span class="feature-bar-divider" aria-hidden="true"></span>
-      <div class="bottom-feature-item">
-        <span class="feature-icon">${icon('star')}</span>
-        <span>Strong Corporate Connect</span>
-      </div>
-      <span class="feature-bar-divider" aria-hidden="true"></span>
-      <div class="bottom-feature-item">
-        <span class="feature-icon">${icon('chart')}</span>
-        <span>Consistent Placement Growth</span>
-      </div>
-    </div>
-    <div class="placement-bottom-script" aria-hidden="true">
-      <span>Empower</span>
-      <span>Change</span>
-      <span>Lead</span>
-    </div>
-  </div>
-</div></section>
- ${placementMarqueeSection()}
+</section>
 <section class="about-premium">
   <div class="about-glow glow-one" aria-hidden="true"></div>
   <div class="about-glow glow-two" aria-hidden="true"></div>
@@ -646,4 +601,3 @@ export function homePage() {
   </div>
 </section>
 </main>`}
-

@@ -2,21 +2,27 @@ import { route } from '../../utils/router.js';
 import { icon } from './SvgIcons.js';
 import { pageGroups } from '../../data/navigationData.js';
 
+const admissionNoticeItems = `<span class="home-notice-open"><b aria-hidden="true">⌁</b><strong>2026–27 NOW OPEN</strong></span><i></i><span>Applications are invited for undergraduate and postgraduate engineering programmes</span><i></i><span>Begin your journey at Sri Shakthi</span><i></i><span>TNEA Counselling Code: 2727</span><i></i>`;
+const announcementBar = () => `<div class="notice notice-home"><div class="home-notice-track"><div class="home-notice-group">${admissionNoticeItems}</div><div class="home-notice-group" aria-hidden="true">${admissionNoticeItems}</div></div></div>`;
+
 export function header() {
   const currentRoute = route();
   const isCoeActive = currentRoute === 'coe' || currentRoute === 'coe-portal' || currentRoute === 'examinations' || currentRoute === 'coe-result' || currentRoute === 'result' || currentRoute === 'coe-transcript' || currentRoute === 'transcript';
   const isPlacementActive = currentRoute === 'placements' || currentRoute === 'placement' || currentRoute.startsWith('placements') || currentRoute === 'entrepreneurship';
+  const notice = announcementBar();
 
-  return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
-<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell">
+  return `${notice}
+<header class="institution-header-v4 exact-image-header premium-header"><div class="institution-header-shell">
   <nav class="institution-navbar" aria-label="Main navigation">
 
     <!-- Brand identity embedded in the left of the navbar -->
     <a class="siet-inline-brand" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home">
-      <img src="/brand/siet-logo.png" alt="Sri Shakthi" class="siet-inline-brand-logo">
+      <span class="siet-inline-brand-logo-wrap">
+        <img src="/brand/siet-logo.png" alt="Sri Shakthi" class="siet-inline-brand-logo">
+      </span>
       <div class="siet-inline-brand-text">
-        <span class="siet-inline-brand-name">Sri Shakthi</span>
-        <span class="siet-inline-brand-sub">Institute of Engineering and Technology</span>
+        <span class="siet-inline-brand-name">SRI SHAKTHI</span>
+        <span class="siet-inline-brand-sub">INSTITUTE OF ENGINEERING AND TECHNOLOGY</span>
         <span class="siet-inline-brand-motto">Learn <em>|</em> Innovate <em>|</em> Excel</span>
       </div>
     </a>
@@ -28,6 +34,7 @@ export function header() {
   const isGroupActive = g.items.some(([s]) => s === currentRoute || (s === 'governance' && currentRoute === 'committees') || (s === 'ariia' && currentRoute === 'ariia-report') || (g.label === 'Accreditation' && currentRoute === 'accreditations'));
   return `${g.label === 'Accreditation' ? `<a class="institution-nav-link ${isCoeActive ? 'is-active-nav' : ''}" href="#/coe">COE</a>` : ''}${g.label === 'Explore' ? `<a class="institution-nav-link ${isPlacementActive ? 'is-active-nav' : ''}" href="#/placements">Placements</a>` : ''}<div class="institution-nav-group"><button type="button" class="${isGroupActive ? 'is-active-nav' : ''}">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`;
 }).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div>
+    <button class="home-header-search" type="button" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button>
     <a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a>
 
   </nav>
@@ -37,5 +44,5 @@ export function header() {
 }
 
 export function applyHeader() {
-  return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div><header class="institution-header-v4 exact-image-header apply-portal-header"><div class="institution-header-shell"><nav class="institution-navbar"><a class="siet-inline-brand" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="siet-inline-brand-logo"><div class="siet-inline-brand-text"><span class="siet-inline-brand-name">Sri Shakthi</span><span class="siet-inline-brand-sub">Institute of Engineering and Technology</span><span class="siet-inline-brand-motto">Learn <em>|</em> Innovate <em>|</em> Excel</span></div></a><a class="institution-nav-apply" href="#/">← Back to Home</a></nav></div></header>`;
+  return `${announcementBar()}<header class="institution-header-v4 exact-image-header premium-header apply-portal-header"><div class="institution-header-shell"><nav class="institution-navbar"><a class="siet-inline-brand" href="#/"><span class="siet-inline-brand-logo-wrap"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="siet-inline-brand-logo"></span><div class="siet-inline-brand-text"><span class="siet-inline-brand-name">SRI SHAKTHI</span><span class="siet-inline-brand-sub">INSTITUTE OF ENGINEERING AND TECHNOLOGY</span><span class="siet-inline-brand-motto">Learn <em>|</em> Innovate <em>|</em> Excel</span></div></a><a class="institution-nav-apply" href="#/">← Back to Home</a></nav></div></header>`;
 }

@@ -270,12 +270,7 @@
     justify-content: center !important;
   }
 }
-.apply-portal-header {
-  position: relative;
-  z-index: 100;
-  background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+/* .apply-portal-header removed */
 
 .apply-tabs {
   display: flex;

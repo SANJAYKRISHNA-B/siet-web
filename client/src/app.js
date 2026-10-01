@@ -640,10 +640,26 @@ function bind() {
     window.addEventListener('scroll', syncHeaderScroll, { passive: true });
     window.__sietHeaderScrollBound = true;
   }
-  const closeMenu = () => { mobile?.classList.remove('open'); backdrop?.classList.remove('open'); if (toggle) toggle.innerHTML = icon('menu'); document.body.style.overflow = '' };
-  const openMenu = () => { mobile?.classList.add('open'); backdrop?.classList.add('open'); if (toggle) toggle.innerHTML = icon('close'); document.body.style.overflow = 'hidden' };
-  toggle?.addEventListener('click', e => { e.stopPropagation(); mobile?.classList.contains('open') ? closeMenu() : openMenu() });
-  closeBtn?.addEventListener('click', e => { e.stopPropagation(); closeMenu() });
+  const closeMenu = () => {
+    mobile?.classList.remove('open');
+    backdrop?.classList.remove('open');
+    if (toggle) {
+      toggle.innerHTML = icon('menu');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    document.body.style.overflow = '';
+  };
+  const openMenu = () => {
+    mobile?.classList.add('open');
+    backdrop?.classList.add('open');
+    if (toggle) {
+      toggle.innerHTML = icon('close');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    document.body.style.overflow = 'hidden';
+  };
+  toggle?.addEventListener('click', e => { e.stopPropagation(); mobile?.classList.contains('open') ? closeMenu() : openMenu(); });
+  closeBtn?.addEventListener('click', e => { e.stopPropagation(); closeMenu(); });
   backdrop?.addEventListener('click', closeMenu);
   $$('.mobile-nav a').forEach(a => a.addEventListener('click', closeMenu));
   $$('.mobile-nav-group-toggle').forEach(btn => btn.addEventListener('click', e => {

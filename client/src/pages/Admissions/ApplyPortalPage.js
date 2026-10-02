@@ -7,15 +7,14 @@ export function referralPage() { return `<main class="enquiry-page-v3 referral-p
 export function applyPortalPage(activeTab = 'enquiry') {
   const isRef = (activeTab === 'referral');
   return `<main class="enquiry-page-v3 apply-portal-page">
-    <section class="department-detail-header siet-hud-header">
-      <div class="department-detail-title">
-        <div class="hud-title-group">
-          <span class="hud-diamond" aria-hidden="true">◈</span>
-          <h1 id="apply-hud-title">${isRef ? 'STUDENT ADMISSION REFERRAL' : 'APPLY FOR SRI SHAKTHI'}</h1>
-        </div>
-        <div class="department-breadcrumb">
-          <a href="#/">← Back to Home</a><span>/</span><b id="apply-hud-breadcrumb">${isRef ? 'Referral' : 'Apply'}</b>
-        </div>
+    <section class="siet-vm-hero">
+      <div class="siet-vm-hero-grid"></div>
+      <div class="siet-vm-hero-orb orb-one"></div>
+      <div class="siet-vm-hero-orb orb-two"></div>
+      <div class="siet-vm-shell siet-vm-hero-content reveal">
+        <p class="siet-vm-kicker"><i></i> ADMISSIONS &amp; ENROLMENT</p>
+        <h1 id="apply-hud-title">${isRef ? 'Student Admission <em>Referral</em>' : 'Apply for <em>Sri Shakthi</em>'}</h1>
+        <p class="siet-vm-intro">Begin your engineering journey at Sri Shakthi Institute of Engineering and Technology.</p>
       </div>
     </section>
 

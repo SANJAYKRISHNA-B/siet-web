@@ -1709,3 +1709,2259 @@
   }
 }
 
+
+
+/* ==========================================================================
+   ACCREDITATION & COMPLIANCE PORTAL STYLES
+   ========================================================================== */
+/* Key Institution Highlights & Governance Metrics Grid */
+.accred-info-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.accred-info-card {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-left: 4.5px solid #005a36;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accred-info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 45, 28, 0.1);
+  border-color: #005a36;
+}
+
+.accred-info-card small {
+  font-size: 11px;
+  font-weight: 850;
+  color: #005a36;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.accred-info-card b {
+  font-size: 20px;
+  font-weight: 850;
+  color: #111827;
+}
+
+.accred-info-card span {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+/* Statutory & Regulatory Committees Grid & Document Downloads Grid (Matching Photo 2 Reference) */
+.accred-committees-grid,
+.coe-forms-grid,
+.doc-downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+@media (max-width: 1080px) {
+  .accred-committees-grid,
+  .coe-forms-grid,
+  .doc-downloads-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .accred-committees-grid,
+  .coe-forms-grid,
+  .doc-downloads-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+}
+
+.accred-comm-card,
+.coe-form-item,
+.doc-download-card {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-top: 3.5px solid #005a36;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.accred-comm-card:hover,
+.coe-form-item:hover,
+.doc-download-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 45, 28, 0.08);
+  border-color: #005a36;
+}
+
+.accred-comm-card .comm-icon,
+.coe-form-item .comm-icon,
+.coe-form-item .form-icon,
+.doc-download-card .comm-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #eaf6ee;
+  color: #005a36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.card-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.card-top-badge,
+.coe-form-item .form-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 850;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.accred-comm-card h4,
+.coe-form-item h4,
+.doc-download-card h4 {
+  margin: 0;
+  font-size: 17.5px;
+  font-weight: 800;
+  color: #00472b;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.accred-comm-card p,
+.coe-form-item p,
+.doc-download-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4b5563;
+  flex-grow: 1;
+}
+
+.accred-comm-card .comm-contact,
+.doc-download-card .doc-download-box,
+.coe-form-item .doc-download-box {
+  background: #f0f7f3;
+  border: 1px solid #dce8e0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.doc-download-card .doc-download-box,
+.coe-form-item .doc-download-box {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.doc-download-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.doc-download-meta strong {
+  font-size: 12.5px;
+  color: #00472b;
+  font-weight: 800;
+}
+
+.doc-download-meta small {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.accred-comm-card .comm-contact strong {
+  font-size: 13px;
+  color: #00472b;
+}
+
+.accred-comm-card .comm-contact small {
+  font-size: 11.5px;
+  color: #6b7280;
+}
+
+.accred-comm-card .comm-contact small a {
+  color: #005a36 !important;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Download action button */
+.form-download-btn {
+  background: #005a36 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 750;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 45, 28, 0.12);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.form-download-btn:hover {
+  background: #00472b !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 45, 28, 0.2);
+}
+
+.form-download-btn svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  flex-shrink: 0;
+}
+
+/* Fallback for legacy .coe-form-item markup */
+.coe-form-item .form-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.coe-form-item .form-actions {
+  margin-top: auto;
+  background: #f0f7f3;
+  border: 1px solid #dce8e0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .doc-download-card .doc-download-box,
+  .coe-form-item .doc-download-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .form-download-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+/* Committees & Governance Enhanced Portal Styles */
+.comm-quick-tabs-container {
+  margin-bottom: 28px;
+}
+
+.comm-section-pane {
+  scroll-margin-top: 130px;
+}
+
+.comm-quick-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #d8e5dd;
+  box-shadow: 0 2px 12px rgba(0, 45, 28, 0.05);
+}
+
+.comm-quick-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 750;
+  color: #1e3a2b;
+  background: #f8faf9;
+  border: 1px solid #e1ece5;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.comm-quick-tab:hover {
+  background: #e8f5ed;
+  color: #005a36;
+  border-color: #005a36;
+}
+
+.comm-quick-tab.active {
+  background: #005a36;
+  color: #ffffff;
+  border-color: #005a36;
+  box-shadow: 0 4px 12px rgba(0, 90, 54, 0.25);
+}
+
+.comm-quick-tab .tab-count {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: rgba(0, 90, 54, 0.1);
+  color: #005a36;
+  transition: all 0.2s ease;
+}
+
+.comm-quick-tab.active .tab-count {
+  background: #ffd447;
+  color: #003c24;
+}
+
+.comm-regulation-banner {
+  background: #f0f7f3;
+  border-left: 5px solid #005a36;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 18px 24px 22px 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 45, 28, 0.04);
+  border: 1px solid #dce8e0;
+  border-left: 5px solid #005a36;
+}
+
+.comm-regulation-banner.police-theme {
+  background: #f0f7f3;
+  border-left-color: #005a36;
+}
+
+.comm-regulation-banner .quote-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #005a36;
+  color: #ffd447;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comm-regulation-banner.police-theme .quote-icon {
+  background: #005a36;
+  color: #ffd447;
+}
+
+.comm-regulation-banner p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #1e3a2b;
+}
+
+.comm-regulation-banner p strong {
+  color: #00472b;
+}
+
+.comm-regulation-banner.police-theme p {
+  color: #1e3a2b;
+}
+
+.comm-regulation-banner.police-theme p strong {
+  color: #00472b;
+}
+
+.comm-initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 0 24px 22px 24px;
+}
+
+.comm-initiative-card {
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #dce8e0;
+  border-top: 3.5px solid #005a36;
+  background: #ffffff;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 2px 10px rgba(0, 45, 28, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comm-initiative-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 45, 28, 0.08);
+  border-color: #005a36;
+}
+
+.comm-initiative-card.akka,
+.comm-initiative-card.bro {
+  border: 1px solid #dce8e0;
+  border-top: 3.5px solid #005a36;
+  background: #ffffff;
+}
+
+.comm-initiative-badge {
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 6px;
+  background: #eaf6ee !important;
+  color: #005a36 !important;
+  border: 1px solid #bce2cb;
+}
+
+.comm-initiative-card h4 {
+  margin: 0 0 5px;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #00472b;
+}
+
+.comm-initiative-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.comm-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 12.5px;
+  font-weight: 750;
+  color: #00472b;
+  background: #eaf6ee;
+  border: 1px solid #bce2cb;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 45, 28, 0.04);
+}
+
+.comm-phone-btn:hover {
+  background: #005a36;
+  color: #ffffff;
+  border-color: #005a36;
+  transform: scale(1.03);
+}
+
+.comm-phone-btn.police-tel {
+  color: #00472b;
+  background: #eaf6ee;
+  border-color: #bce2cb;
+}
+
+.comm-phone-btn.police-tel:hover {
+  background: #005a36;
+  color: #ffffff;
+  border-color: #005a36;
+}
+
+.comm-member-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 850;
+  font-size: 12px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.comm-member-avatar.police-av {
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+}
+
+.comm-info-box {
+  background: #fbfdfc;
+  border-top: 1px solid #e2ece6;
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  color: #374151;
+}
+
+.comm-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.comm-info-item strong {
+  color: #00472b;
+}
+
+.comm-info-item svg {
+  color: #005a36;
+  flex-shrink: 0;
+}
+
+.comm-sync-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 22px;
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-radius: 12px;
+  margin-top: 32px;
+  font-size: 13px;
+  color: #4b5563;
+  box-shadow: 0 2px 10px rgba(0, 45, 28, 0.03);
+}
+
+.comm-sync-bar a {
+  color: #005a36;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.comm-sync-bar .sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+}
+
+/* Institutional Card Framing (Clean White Background for full site visibility) */
+.coe-section-card {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-top: 4px solid #005a36;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 45, 28, 0.05);
+  margin-bottom: 32px;
+}
+
+.coe-section-card .coe-card-header {
+  padding: 24px 28px;
+  background: #fbfdfc;
+  border-bottom: 1px solid #e2ece6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.coe-section-card .coe-card-header h3 {
+  margin: 6px 0 4px 0;
+  font-size: 22px;
+  font-weight: 850;
+  color: #00472b;
+  letter-spacing: 0.02em;
+}
+
+.coe-section-card .coe-card-header p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.coe-section-card .coe-pill-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 850;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .comm-regulation-banner {
+    margin: 14px 16px 16px 16px;
+    padding: 14px 16px;
+  }
+  .comm-initiatives-grid {
+    margin: 0 16px 16px 16px;
+  }
+  .comm-info-box {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comm-regulation-banner {
+    margin: 14px 16px 16px 16px;
+    padding: 14px 16px;
+  }
+  .comm-initiatives-grid {
+    margin: 0 16px 16px 16px;
+  }
+  .comm-info-box {
+    padding: 14px 16px;
+  }
+}
+
+/* ==========================================================================
+   OFFICIAL SHOWCASE CENTER-ALIGNED TABLE CARDS (Matching SIET Reference)
+   ========================================================================== */
+.siet-table-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.siet-official-table-card {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 36px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(0, 45, 28, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ICC Theme: Exact Green & Gold Institutional Style matching Image 1 */
+.siet-official-table-card.icc-theme {
+  background: #005a36;
+  color: #ffffff;
+  padding: 28px 24px 32px 24px;
+  border: 3px solid #00472b;
+}
+
+.siet-table-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  gap: 16px;
+}
+
+.siet-icc-left-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.siet-icc-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.siet-icc-motto-wrap {
+  margin-top: 4px;
+  font-size: 8.5px;
+  font-weight: 750;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.siet-icc-motto-wrap span {
+  display: block;
+}
+
+.siet-table-brand-center {
+  flex: 1;
+  text-align: center;
+}
+
+.siet-brand-gold-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffd447;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.1;
+  text-align: center;
+  font-family: 'League Spartan', 'Montserrat', Arial Black, sans-serif;
+}
+
+.siet-brand-gold-sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 850;
+  color: #ffd447;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.siet-table-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+
+.siet-naac-medallion {
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siet-table-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 10px 0 20px 0;
+  font-family: 'League Spartan', 'Montserrat', sans-serif;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.siet-table-wrapper-center {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.siet-center-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 14.5px;
+}
+
+/* Specific ICC Gold Table matching Image 1 */
+.icc-table {
+  border-top: 2.5px solid #ffd447;
+  border-bottom: 2.5px solid #ffd447;
+}
+
+.icc-table th {
+  color: #ffd447;
+  font-size: 15px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 13px 16px;
+  text-align: center;
+  border-bottom: 2px solid #ffd447;
+  background: transparent;
+}
+
+.icc-table td {
+  padding: 13px 16px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1.5px solid #d4a726;
+  color: #ffffff;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.icc-table tr:last-child td {
+  border-bottom: none;
+}
+
+.icc-table td.cell-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.icc-table td.cell-desig {
+  color: #ffffff;
+}
+
+.icc-table td.cell-multiline {
+  line-height: 1.55;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+.icc-table td.cell-contact a {
+  color: #ffffff;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.icc-table td.cell-contact a:hover {
+  background: #ffd447;
+  color: #003c24;
+}
+
+/* Anti-Drug Club: The White Section (Matching Reference Image 2) */
+.siet-official-table-card.antidrug-theme {
+  background: #ffffff;
+  border: 1.5px solid #c7dcce;
+  border-radius: 12px;
+  padding: 26px 24px;
+  box-shadow: 0 4px 18px rgba(0, 45, 28, 0.06);
+}
+
+.siet-official-table-card.antidrug-theme .siet-table-header-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.siet-official-table-card.antidrug-theme .siet-table-title {
+  color: #00472b;
+  margin: 0 0 6px 0;
+  text-shadow: none;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  font-family: 'League Spartan', 'Montserrat', Arial Black, sans-serif;
+}
+
+.siet-official-table-card.antidrug-theme .siet-table-subtitle {
+  margin: 0;
+  font-size: 13.5px;
+  color: #4b6354;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.antidrug-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid #111111;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+.antidrug-table th {
+  background: #005a36;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 800;
+  padding: 11px 14px;
+  text-align: center;
+  border: 1px solid #111111;
+  letter-spacing: 0.02em;
+}
+
+.antidrug-table td {
+  padding: 10px 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #111111;
+  color: #111111;
+  font-size: 14.5px;
+  background: #ffffff;
+}
+
+.antidrug-table tr:hover td {
+  background: #f4faf6;
+}
+
+.antidrug-table td.cell-name {
+  font-weight: 700;
+  color: #111111;
+}
+
+.antidrug-table td.cell-contact a {
+  color: #111111;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.antidrug-table td.cell-contact a:hover {
+  background: #005a36;
+  color: #ffffff;
+}
+
+/* Governing Council & Clean Grid Style (Green & Yellow) */
+.siet-clean-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2.5px solid #ffd447;
+  border-bottom: 2.5px solid #ffd447;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.siet-clean-grid-table th {
+  background: transparent;
+  color: #ffd447;
+  font-size: 14.5px;
+  font-weight: 850;
+  padding: 13px 16px;
+  text-align: center;
+  border-bottom: 2px solid #ffd447;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.siet-clean-grid-table td {
+  padding: 12px 14px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1.5px solid #d4a726;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.siet-clean-grid-table tr:last-child td {
+  border-bottom: none;
+}
+
+.siet-clean-grid-table tr:hover td {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* General Responsive Wrapper & Standard COE Table Alignment */
+.coe-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.coe-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.coe-table th {
+  background: #004d2e;
+  color: #ffffff;
+  padding: 12px 14px;
+  font-weight: 750;
+  text-align: center;
+  border-bottom: 2px solid #003620;
+  letter-spacing: 0.02em;
+}
+
+.coe-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #e2ece6;
+  color: #243d30;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.coe-table tr:hover td {
+  background: #f4faf6;
+}
+
+@media (max-width: 768px) {
+  .siet-official-table-card.icc-theme {
+    padding: 18px 12px 22px 12px;
+  }
+  .siet-table-card-top {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .siet-brand-gold-title {
+    font-size: 24px;
+  }
+  .siet-brand-gold-sub {
+    font-size: 11px;
+  }
+  .siet-table-title {
+    font-size: 18px;
+  }
+  .icc-table th, .icc-table td,
+  .antidrug-table th, .antidrug-table td,
+  .siet-clean-grid-table th, .siet-clean-grid-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+
+/* RTI Cards Grid */
+.accred-rti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.rti-card {
+  background: #fff;
+  border: 1px solid #e0ebe3;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rti-card.appellate {
+  border-top: 4px solid #cca01d;
+  background: linear-gradient(180deg, #fdfbf5 0%, #fff 100%);
+}
+
+.rti-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #005a36;
+  background: #e8f5ed;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.rti-card h4 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003c24;
+}
+
+.rti-designation {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.rti-meta {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #edf2ef;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.rti-meta p {
+  margin: 0;
+}
+
+.rti-meta a {
+  color: #005a36;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* NAAC Grade Showcase */
+.naac-grade-showcase {
+  background: linear-gradient(135deg, #003c24 0%, #005a36 100%);
+  border-radius: 16px;
+  padding: 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  box-shadow: 0 12px 36px rgba(0, 45, 28, 0.22);
+}
+
+.grade-crest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #efbf24;
+  border-radius: 16px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.grade-letter {
+  font-size: 56px;
+  font-weight: 900;
+  color: #efbf24;
+  line-height: 1;
+}
+
+.grade-crest span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #e6f4ed;
+}
+
+.grade-content {
+  flex-grow: 1;
+}
+
+.grade-content h3 {
+  margin: 8px 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.grade-content p {
+  margin: 0 0 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #cce3d6;
+}
+
+.grade-meta-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #e6f4ed;
+}
+
+.grade-meta-row span b {
+  color: #efbf24;
+}
+
+/* 7 NAAC Criteria Grid */
+.accred-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.accred-crit-item {
+  background: #fdfefe;
+  border: 1px solid #e3ede6;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 45, 28, 0.03);
+}
+
+.crit-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.crit-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #00472b;
+  background: #e8f5ed;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.accred-crit-item h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 750;
+  color: #003c24;
+}
+
+.accred-crit-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+/* NBA Cards Grid & Washington Accord */
+.nba-accord-box {
+  background: linear-gradient(135deg, #0b452e 0%, #003c24 100%);
+  border: 1px solid #a3d9bc;
+  border-radius: 16px;
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 45, 28, 0.16);
+}
+
+.accord-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(239, 191, 36, 0.18);
+  color: #efbf24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.accord-content h3 {
+  margin: 8px 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #efbf24;
+}
+
+.accord-content p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #d8ede0;
+}
+
+.nba-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.nba-prog-card {
+  background: #fff;
+  border: 1px solid #dfe9e2;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 3px 12px rgba(0, 45, 28, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.nba-prog-card:hover {
+  transform: translateY(-3px);
+  border-color: #005a36;
+}
+
+.nba-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nba-prog-code {
+  font-size: 12px;
+  font-weight: 800;
+  color: #003c24;
+  background: #e6f4ed;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.nba-prog-card h4 {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 750;
+  color: #003c24;
+  flex-grow: 1;
+}
+
+.nba-card-meta {
+  padding-top: 10px;
+  border-top: 1px solid #edf2ee;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12.5px;
+  color: #4b5563;
+}
+
+.nba-card-meta small {
+  color: #6b7280;
+}
+
+/* IQAC Features */
+.accred-iqac-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.iqac-feature-box {
+  background: #fff;
+  border: 1px solid #e0ebe3;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+}
+
+.iqac-feature-box .feature-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.iqac-feature-box h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003c24;
+}
+
+.iqac-feature-box ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Hub Grid (for /accreditations overview) */
+.accred-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.accred-hub-card {
+  background: #fff;
+  border: 1px solid #e0ebe3;
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 4px 14px rgba(0, 45, 28, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.accred-hub-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 45, 28, 0.1);
+  border-color: #005a36;
+}
+
+.hub-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.hub-text h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 750;
+  color: #003c24;
+}
+
+.hub-text p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #55606d;
+}
+
+.hub-link-arrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #005a36;
+}
+
+@media (max-width: 768px) {
+  .naac-grade-showcase,
+  .nba-accord-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .grade-crest,
+  .accord-icon {
+    margin: 0 auto;
+  }
+  .grade-meta-row {
+    justify-content: center;
+  }
+}
+
+
+/* =====================================================================
+   BESPOKE UNIQUE TEMPLATES FOR GOVERNANCE, COMMITTEES & WELFARE CLUBS
+   ===================================================================== */
+
+/* 1. APEX GOVERNING COUNCIL — EXECUTIVE BOARDROOM TEMPLATE */
+.siet-council-executive-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 36px auto;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #012416 0%, #003e23 60%, #022a18 100%);
+  border: 2px solid #005a36;
+  box-shadow: 0 14px 40px rgba(0, 32, 18, 0.28), 0 0 0 1px rgba(255, 212, 71, 0.15);
+  color: #ffffff;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.siet-council-executive-card::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 212, 71, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.council-header-crest {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1.5px solid rgba(255, 212, 71, 0.25);
+  margin-bottom: 26px;
+}
+
+.council-crest-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffd447 0%, #caa01d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.council-crest-icon svg {
+  width: 34px;
+  height: 34px;
+  color: #00361f;
+}
+
+.council-header-content {
+  flex: 1;
+}
+
+.council-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffd447;
+  margin-bottom: 6px;
+}
+
+.council-main-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  font-family: 'League Spartan', 'Montserrat', Arial Black, sans-serif;
+  line-height: 1.2;
+}
+
+.council-sub-title {
+  margin: 6px 0 0 0;
+  font-size: 13.5px;
+  color: #d1fae5;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+/* Executive Council Metrics Strip */
+.council-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.council-metric-tile {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 212, 71, 0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.council-metric-tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffd447;
+  transform: translateY(-2px);
+}
+
+.council-metric-tile b {
+  display: block;
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffd447;
+  line-height: 1.1;
+  font-family: 'League Spartan', 'Montserrat', sans-serif;
+}
+
+.council-metric-tile span {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #e2f6ea;
+  margin-top: 4px;
+}
+
+/* Category Filter Bar for Council */
+.council-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.council-filter-btn {
+  background: transparent;
+  border: none;
+  color: #e5e7eb;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.council-filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd447;
+}
+
+.council-filter-btn.active {
+  background: #ffd447;
+  color: #00361f;
+  font-weight: 850;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Executive Council Table */
+.council-executive-table {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-bottom: 24px;
+}
+
+.council-executive-table thead tr th {
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffd447;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 212, 71, 0.3);
+}
+
+.council-executive-table tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.council-executive-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+.council-executive-table tbody td {
+  padding: 13px 14px;
+  font-size: 13.5px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.council-executive-table tbody td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-weight: 800;
+  color: #ffd447;
+  text-align: center;
+  width: 50px;
+}
+
+.council-executive-table tbody td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.council-member-name {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+}
+
+.council-member-desig {
+  font-size: 12.5px;
+  color: #d1fae5;
+  margin-top: 3px;
+  line-height: 1.45;
+}
+
+.council-cat-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  background: rgba(255, 212, 71, 0.15);
+  color: #ffd447;
+  border: 1px solid rgba(255, 212, 71, 0.4);
+}
+
+.council-role-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 850;
+  text-align: center;
+}
+
+.council-role-badge.chairman {
+  background: #ffd447;
+  color: #003822;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.council-role-badge.member-sec {
+  background: #008751;
+  color: #ffffff;
+  border: 1px solid #34d399;
+}
+
+.council-role-badge.member {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+}
+
+/* Council Powers Strip */
+.council-mandate-box {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 212, 71, 0.25);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #e2f6ea;
+}
+
+.council-mandate-box svg {
+  width: 26px;
+  height: 26px;
+  color: #ffd447;
+  flex-shrink: 0;
+}
+
+/* 2. DRUG-FREE CAMPUS PLEDGE BANNER (ANTI-DRUG CLUB) */
+.drug-pledge-card {
+  background: linear-gradient(135deg, #022e1b 0%, #064e32 60%, #0a5c3d 100%) !important;
+  border: 2px solid #eab308 !important;
+  border-radius: 14px !important;
+  padding: 22px 24px !important;
+  margin-top: 24px !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 18px !important;
+  box-shadow: 0 6px 24px rgba(2, 46, 27, 0.25) !important;
+}
+
+.drug-pledge-info {
+  flex: 1 !important;
+  min-width: 280px !important;
+}
+
+.drug-pledge-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: rgba(234, 179, 8, 0.16) !important;
+  color: #facc15 !important;
+  border: 1px solid rgba(234, 179, 8, 0.5) !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+  font-size: 11px !important;
+  font-weight: 850 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 6px !important;
+}
+
+.drug-pledge-title {
+  margin: 0 0 4px !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+.drug-pledge-desc {
+  margin: 0 !important;
+  font-size: 13.5px !important;
+  color: #d1fae5 !important;
+  line-height: 1.5 !important;
+}
+
+.drug-pledge-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%) !important;
+  color: #022e1b !important;
+  border: none !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  padding: 11px 22px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(234, 179, 8, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.drug-pledge-btn:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #facc15 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.45) !important;
+}
+
+.drug-pledge-btn.pledged {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* 3. BESPOKE MULTI-PANEL STATUTORY & REGULATORY COMMITTEES */
+.statutory-detailed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 22px;
+}
+
+.stat-panel-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #dce8e0;
+  box-shadow: 0 4px 18px rgba(0, 45, 28, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.stat-panel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(0, 45, 28, 0.09);
+}
+
+.stat-panel-card.ragging {
+  border-top: 4.5px solid #dc2626;
+}
+
+.stat-panel-card.grc {
+  border-top: 4.5px solid #0284c7;
+}
+
+.stat-panel-card.academic {
+  border-top: 4.5px solid #6366f1;
+}
+
+.stat-panel-card.equal {
+  border-top: 4.5px solid #d97706;
+}
+
+.stat-panel-card.finance {
+  border-top: 4.5px solid #059669;
+}
+
+.stat-panel-card.exam {
+  border-top: 4.5px solid #334155;
+}
+
+.stat-panel-header {
+  padding: 20px 22px 14px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.stat-panel-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-panel-card.ragging .stat-panel-icon { background: #fee2e2; color: #dc2626; }
+.stat-panel-card.grc .stat-panel-icon { background: #e0f2fe; color: #0284c7; }
+.stat-panel-card.academic .stat-panel-icon { background: #e0e7ff; color: #6366f1; }
+.stat-panel-card.equal .stat-panel-icon { background: #fef3c7; color: #d97706; }
+.stat-panel-card.finance .stat-panel-icon { background: #d1fae5; color: #059669; }
+.stat-panel-card.exam .stat-panel-icon { background: #f1f5f9; color: #334155; }
+
+.stat-panel-header-text {
+  flex: 1;
+}
+
+.stat-kicker-tag {
+  font-size: 10.5px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.stat-panel-card.ragging .stat-kicker-tag { color: #dc2626; }
+.stat-panel-card.grc .stat-kicker-tag { color: #0284c7; }
+.stat-panel-card.academic .stat-kicker-tag { color: #6366f1; }
+.stat-panel-card.equal .stat-kicker-tag { color: #d97706; }
+.stat-panel-card.finance .stat-kicker-tag { color: #059669; }
+.stat-panel-card.exam .stat-kicker-tag { color: #334155; }
+
+.stat-panel-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.stat-panel-body {
+  padding: 0 22px 18px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-panel-desc {
+  margin: 0 0 16px 0;
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.stat-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-highlights-list li {
+  font-size: 12.5px;
+  color: #374151;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.stat-highlights-list li::before {
+  content: '✓';
+  font-weight: 900;
+  color: #005a36;
+  flex-shrink: 0;
+}
+
+.stat-panel-footer {
+  padding: 14px 22px;
+  background: #f9fafb;
+  border-top: 1px solid #edf2f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stat-contact-info {
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.stat-contact-info strong {
+  display: block;
+  color: #111827;
+  font-size: 12.5px;
+}
+
+.stat-roster-toggle-btn {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 750;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-roster-toggle-btn:hover {
+  background: #005a36;
+  color: #ffffff;
+  border-color: #005a36;
+}
+
+.stat-roster-pane {
+  display: none;
+  padding: 16px 22px 20px 22px;
+  background: #fdfefe;
+  border-top: 1px dashed #d1d5db;
+}
+
+.stat-roster-pane.open {
+  display: block;
+  animation: fadeInPane 0.25s ease forwards;
+}
+
+@keyframes fadeInPane {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-inline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.stat-inline-table th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 800;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1.5px solid #d1d5db;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-inline-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.stat-inline-table tr:last-child td {
+  border-bottom: none;
+}
+
+.stat-inline-table td.m-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-inline-table td.m-role {
+  font-weight: 750;
+  color: #005a36;
+}
+
+/* 4. CAMPUS WELFARE & STUDENT GOVERNANCE CLUBS TEMPLATE */
+.gov-clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.gov-club-card {
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 45, 28, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gov-club-card:hover {
+  transform: translateY(-3px);
+  border-color: #005a36;
+  box-shadow: 0 10px 28px rgba(0, 45, 28, 0.08);
+}
+
+.gov-club-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.gov-club-icon {
+  font-size: 32px;
+}
+
+.gov-club-badge {
+  font-size: 10.5px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+  padding: 4px 9px;
+  border-radius: 20px;
+}
+
+.gov-club-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #003c24;
+}
+
+.gov-club-lead {
+  font-size: 12.5px;
+  font-weight: 750;
+  color: #6b7280;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gov-club-lead strong {
+  color: #111827;
+}
+
+.gov-club-desc {
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+  flex: 1;
+}
+
+.gov-club-initiatives {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.gov-club-initiatives li {
+  font-size: 12.5px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.gov-club-initiatives li::before {
+  content: '•';
+  color: #005a36;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.gov-club-action {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf2f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gov-club-action a,
+.gov-club-action button {
+  background: #eaf6ee;
+  color: #005a36;
+  border: 1px solid #bce2cb;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gov-club-action a:hover,
+.gov-club-action button:hover {
+  background: #005a36;
+  color: #ffffff;
+  border-color: #005a36;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .siet-council-executive-card {
+    padding: 24px 18px;
+  }
+
+  .council-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .council-header-crest {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .council-header-content {
+    text-align: center;
+  }
+
+  .drug-pledge-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .drug-pledge-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .council-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statutory-detailed-grid,
+  .gov-clubs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   ACCREDITATION HERO SUBTITLE WIDTH & BALANCED 2-LINE FORMATTING
+   ============================================================ */
+.siet-accred-hero .siet-vm-hero-content,
+.accreditation-subpage .siet-vm-hero-content {
+  max-width: 100% !important;
+}
+
+.siet-accred-hero h1,
+.accreditation-subpage .siet-vm-hero h1 {
+  max-width: 1220px !important;
+}
+
+.siet-accred-hero .siet-vm-intro,
+.accreditation-subpage .siet-vm-intro,
+.siet-accred-intro {
+  max-width: 1220px !important;
+  font-size: clamp(16px, 1.22vw, 19.5px) !important;
+  line-height: 1.62 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-wrap: balance !important;
+}
+
+

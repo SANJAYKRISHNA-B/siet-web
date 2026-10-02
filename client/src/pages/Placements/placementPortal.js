@@ -413,49 +413,14 @@ function updateSuperstarsMarquee(tier) {
 function higherEducationPage() {
   return `
     <main class="siet-vm-page">
-      <section class="coe-exec-hero placement-exec-hero">
-        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
-        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
-        <div class="coe-exec-shell">
-          <div class="coe-exec-topbar">
-            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
-              <a href="#/">Home</a>
-              <span class="sep">/</span>
-              <a href="#/placements">Placements</a>
-              <span class="sep">/</span>
-              <span class="cur">Higher Education</span>
-            </nav>
-            <div class="coe-exec-status-group">
-              <span class="coe-status-pill">
-                <span class="status-pulse"></span>
-                <span>GLOBAL ADMISSIONS &amp; RESEARCH CELL</span>
-              </span>
-              <span class="coe-status-tag">BATCH 2025–2026</span>
-            </div>
-          </div>
-
-          <div class="coe-exec-main">
-            <div class="coe-exec-content-col">
-              <div class="coe-exec-kicker-row">
-                <span class="coe-kicker-gold">CENTRE FOR HIGHER STUDIES</span>
-                <span class="coe-kicker-div">•</span>
-                <span class="coe-kicker-sub">GLOBAL PATHWAYS &amp; ADMISSIONS</span>
-              </div>
-              <h1 class="coe-exec-title">Higher Education &amp; Admissions</h1>
-              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
-              <div class="coe-exec-quote-card">
-                <p>
-                  "Mentoring ambitious graduates towards post-graduate admissions, full-tuition research fellowships, and master's degrees at Ivy League academies, premier international universities, and Indian Institutes of Technology."
-                </p>
-              </div>
-              <div class="coe-exec-pillars-row">
-                <div class="coe-pillar-chip"><span><b>Alumni Abroad:</b> 500+ Scholars</span></div>
-                <div class="coe-pillar-chip"><span><b>Free Coaching:</b> GATE, GRE, CAT, IELTS</span></div>
-                <div class="coe-pillar-chip"><span><b>Target Universities:</b> Top 100 QS Ranked</span></div>
-                <div class="coe-pillar-chip"><span><b>Scholarships:</b> Up to $40,000+ Won</span></div>
-              </div>
-            </div>
-          </div>
+      <section class="siet-vm-hero">
+        <div class="siet-vm-hero-grid"></div>
+        <div class="siet-vm-hero-orb orb-one"></div>
+        <div class="siet-vm-hero-orb orb-two"></div>
+        <div class="siet-vm-shell siet-vm-hero-content reveal">
+          <p class="siet-vm-kicker"><i></i> GLOBAL ADMISSIONS &amp; RESEARCH CELL</p>
+          <h1>Higher Education <em>&amp; Global Admissions</em></h1>
+          <p class="siet-vm-intro">Guiding ambitious engineers toward premier master's and doctoral programs at world-leading universities across the globe.</p>
         </div>
       </section>
 
@@ -644,49 +609,14 @@ function higherEducationPage() {
 function governmentServicesPage() {
   return `
     <main class="siet-vm-page">
-      <section class="coe-exec-hero placement-exec-hero">
-        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
-        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
-        <div class="coe-exec-shell">
-          <div class="coe-exec-topbar">
-            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
-              <a href="#/">Home</a>
-              <span class="sep">/</span>
-              <a href="#/placements">Placements</a>
-              <span class="sep">/</span>
-              <span class="cur">Civil Services</span>
-            </nav>
-            <div class="coe-exec-status-group">
-              <span class="coe-status-pill">
-                <span class="status-pulse"></span>
-                <span>CIVIL SERVICES &amp; DEFENSE WING</span>
-              </span>
-              <span class="coe-status-tag">BATCH 2025–2026</span>
-            </div>
-          </div>
-
-          <div class="coe-exec-main">
-            <div class="coe-exec-content-col">
-              <div class="coe-exec-kicker-row">
-                <span class="coe-kicker-gold">SRI SHAKTHI STUDY CIRCLE</span>
-                <span class="coe-kicker-div">•</span>
-                <span class="coe-kicker-sub">NATION FIRST &amp; PUBLIC SERVICE</span>
-              </div>
-              <h1 class="coe-exec-title">Civil Services &amp; Public Sector</h1>
-              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
-              <div class="coe-exec-quote-card">
-                <p>
-                  "Inspiring and grooming disciplined technocrats for the Indian Administrative Service (IAS), Indian Police Service (IPS), Indian Engineering Services (IES), Defense Commissioning, and premier scientific research organizations."
-                </p>
-              </div>
-              <div class="coe-exec-pillars-row">
-                <div class="coe-pillar-chip"><span><b>Partner:</b> ALS IAS Academy (All India Rank 5)</span></div>
-                <div class="coe-pillar-chip"><span><b>Wings:</b> UPSC, IES, TNPSC &amp; PSUs</span></div>
-                <div class="coe-pillar-chip"><span><b>Facility:</b> 24/7 Dedicated Study Cabin</span></div>
-                <div class="coe-pillar-chip"><span><b>Mentorship:</b> Serving Civil Servants &amp; Officers</span></div>
-              </div>
-            </div>
-          </div>
+      <section class="siet-vm-hero">
+        <div class="siet-vm-hero-grid"></div>
+        <div class="siet-vm-hero-orb orb-one"></div>
+        <div class="siet-vm-hero-orb orb-two"></div>
+        <div class="siet-vm-shell siet-vm-hero-content reveal">
+          <p class="siet-vm-kicker"><i></i> CIVIL SERVICES &amp; DEFENSE WING</p>
+          <h1>Civil Services <em>&amp; Public Sector</em></h1>
+          <p class="siet-vm-intro">Inspiring and grooming disciplined technocrats for IAS, IPS, IES, Defense Commissioning, and public sector engineering leadership.</p>
         </div>
       </section>
 
@@ -897,83 +827,14 @@ export function placementsPortalPage(route) {
   return `
     <main class="siet-pe-page">
 
-      <!-- ══════════════════════════════════════════════════════════
-           EXECUTIVE HERO HEADER (Kept Exactly as Screenshot & COE Template)
-           ══════════════════════════════════════════════════════════ -->
-      <section class="coe-exec-hero placement-exec-hero">
-        <div class="coe-exec-hero-glow" aria-hidden="true"></div>
-        <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
-        
-        <div class="coe-exec-shell">
-          <!-- Top Metadata & Navigation Bar -->
-          <div class="coe-exec-topbar">
-            <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
-              <a href="#/">Home</a>
-              <span class="sep">/</span>
-              <span class="cur">Placements</span>
-            </nav>
-            
-            <div class="coe-exec-status-group">
-              <span class="coe-status-pill">
-                <span class="status-pulse"></span>
-                <span>CORPORATE RELATIONS &amp; RECRUITMENT CELL</span>
-              </span>
-              <span class="coe-status-tag">BATCH 2025–2026</span>
-            </div>
-          </div>
-
-          <!-- Main Executive Presentation Banner -->
-          <div class="coe-exec-main">
-            <div class="coe-exec-content-col">
-              <div class="coe-exec-kicker-row">
-                <span class="coe-kicker-gold">CENTRE FOR CAREER DEVELOPMENT</span>
-                <span class="coe-kicker-div">•</span>
-                <span class="coe-kicker-sub">INDUSTRY-ALIGNED IMMERSION</span>
-              </div>
-
-              <h1 class="coe-exec-title">Training &amp; Placement Cell</h1>
-              <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
-              <p class="coe-exec-accreditation">
-                <span>Autonomous Institution Affiliated to Anna University, Chennai</span>
-                <span class="dot">•</span>
-                <span>Approved by AICTE, New Delhi</span>
-                <span class="dot">•</span>
-                <span class="naac-highlight">NAAC 'A' Grade</span>
-                <span class="dot">•</span>
-                <span>NBA Accredited Programmes</span>
-              </p>
-
-              <div class="coe-exec-quote-card">
-                <p>
-                  "Empowering young innovators with industry-aligned skillsets, hands-on experiential learning, and premier career opportunities across global technology leaders, multinationals, and Fortune 500 enterprises."
-                </p>
-              </div>
-
-              <!-- Executive Placement Pillar Chips -->
-              <div class="coe-exec-pillars-row">
-                <div class="coe-pillar-chip">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                  <span><b>Highest CTC:</b> ₹33 LPA Top Offer</span>
-                </div>
-                <div class="coe-pillar-chip">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  <span><b>Recruiters:</b> 213+ Global Partners</span>
-                </div>
-                <div class="coe-pillar-chip">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                  <span><b>Tiers:</b> ₹10 LPA+, ₹6 LPA+, ₹4 LPA+, ₹3 LPA+</span>
-                </div>
-                <div class="coe-pillar-chip">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  <span><b>Sectors:</b> Product, IT, AI &amp; Core</span>
-                </div>
-                <div class="coe-pillar-chip">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <span><b>Placement Rate:</b> 98% Consistent Record</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <section class="siet-vm-hero">
+        <div class="siet-vm-hero-grid"></div>
+        <div class="siet-vm-hero-orb orb-one"></div>
+        <div class="siet-vm-hero-orb orb-two"></div>
+        <div class="siet-vm-shell siet-vm-hero-content reveal">
+          <p class="siet-vm-kicker"><i></i> CENTRE FOR CAREER DEVELOPMENT</p>
+          <h1>Training <em>&amp;</em> Placement Cell</h1>
+          <p class="siet-vm-intro">Empowering young innovators with industry-aligned skillsets, premier corporate recruitments, and premier career pathways across Fortune 500 enterprises.</p>
         </div>
       </section>
 

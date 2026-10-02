@@ -7,12 +7,15 @@ export function contactPage() {
   }[type]);
 
   return `<main class="contact-pro-page">
-    <section class="contact-pro-hero">
-      <div class="contact-pro-shell contact-pro-hero-grid">
+    <section class="siet-vm-hero contact-pro-hero">
+      <div class="siet-vm-hero-grid"></div>
+      <div class="siet-vm-hero-orb orb-one"></div>
+      <div class="siet-vm-hero-orb orb-two"></div>
+      <div class="siet-vm-shell contact-pro-hero-grid">
         <div class="contact-pro-hero-copy reveal">
-          <p class="contact-pro-kicker"><span></span> CONTACT SRI SHAKTHI</p>
+          <p class="siet-vm-kicker"><i></i> CONTACT SRI SHAKTHI</p>
           <h1>Let’s start a meaningful <em>conversation.</em></h1>
-          <p>Whether you are planning your studies, visiting our campus or seeking institutional support, the right team is ready to help.</p>
+          <p class="siet-vm-intro">Whether you are planning your studies, visiting our campus or seeking institutional support, the right team is ready to help.</p>
         </div>
         <div class="contact-pro-hero-meta reveal">
           <span>INSTITUTION CODE</span><strong>2727</strong><small>Autonomous Institution<br>Affiliated to Anna University</small>

@@ -477,12 +477,15 @@ export function academicOverviewPage() {
   ];
 
   return `<main class="academic-new">
-    <section class="academic-new-hero">
-      <div class="academic-new-shell academic-new-hero-grid">
+    <section class="siet-vm-hero academic-new-hero">
+      <div class="siet-vm-hero-grid"></div>
+      <div class="siet-vm-hero-orb orb-one"></div>
+      <div class="siet-vm-hero-orb orb-two"></div>
+      <div class="siet-vm-shell academic-new-hero-grid">
         <div class="academic-new-hero-copy reveal">
-          <p class="academic-new-kicker"><span></span> ACADEMIC OVERVIEW</p>
+          <p class="siet-vm-kicker"><i></i> ACADEMIC OVERVIEW</p>
           <h1>Where knowledge becomes <em>capability.</em></h1>
-          <p class="academic-new-intro">An autonomous engineering education built around strong foundations, purposeful experimentation and the confidence to solve real problems.</p>
+          <p class="siet-vm-intro">An autonomous engineering education built around strong foundations, purposeful experimentation and the confidence to solve real problems.</p>
           <div class="academic-new-actions">
             <a class="academic-new-primary" href="#/programmes">Explore programmes <span>↗</span></a>
             <a class="academic-new-text-link" href="#/curriculum">View R2025 curriculum <span>→</span></a>

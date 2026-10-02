@@ -46,7 +46,6 @@ export function coreBeliefsPage() {
     <div class="siet-vm-hero-orb orb-one"></div>
     <div class="siet-vm-hero-orb orb-two"></div>
     <div class="siet-vm-shell siet-vm-hero-content reveal">
-      <div class="siet-cb-breadcrumbs"><a href="#/">Home</a><span>/</span><b>Core Beliefs</b></div>
       <p class="siet-vm-kicker"><i></i> INSTITUTIONAL PHILOSOPHY</p>
       <h1>Core <em>Beliefs</em></h1>
       <p class="siet-vm-intro">The foundational convictions that guide our culture, inspire student excellence, and power our enduring commitment to the nation.</p>

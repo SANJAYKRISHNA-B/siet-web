@@ -25,7 +25,5 @@ import './pages/COE/Coe.css';
 import './pages/Contact/Contact.css';
 import './pages/Placements/Placements.css';
 
-/* Site-wide Overrides & Navigation Layout */
-import './styles.css';
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);

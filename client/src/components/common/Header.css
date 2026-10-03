@@ -414,8 +414,8 @@
     padding: 0 clamp(10px, 3vw, 16px);
     display: flex !important;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 12px;
   }
 
   /* Hide desktop menu & header Apply Now on mobile/tablet */
@@ -424,8 +424,43 @@
     display: none !important;
   }
 
-  /* Logo + Brand Text on the left */
+  /* Three-Line (Hamburger) Menu Button on the top left */
+  .institution-mobile-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    min-width: 44px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    border: 1.5px solid rgba(255, 201, 40, 0.45);
+    border-radius: 8px;
+    background: rgba(0, 34, 22, 0.65);
+    color: #ffc928;
+    cursor: pointer;
+    flex-shrink: 0;
+    order: 1;
+    transition: background .2s, border-color .2s, transform .15s;
+  }
+
+  .institution-mobile-toggle:hover,
+  .institution-mobile-toggle:active {
+    background: rgba(255, 201, 40, 0.15);
+    border-color: #ffc928;
+    transform: scale(1.04);
+  }
+
+  .institution-mobile-toggle svg,
+  .menu-svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ffc928 !important;
+  }
+
+  /* Logo + Brand Text on the left beside menu toggle */
   .siet-inline-brand {
+    order: 2;
     display: inline-flex !important;
     align-items: center;
     gap: 10px;
@@ -448,39 +483,6 @@
 
   .siet-brand-sub {
     font-size: clamp(8.5px, 2.3vw, 10.5px) !important;
-  }
-
-  /* Three-Line (Hamburger) Menu Button on the right */
-  .institution-mobile-toggle {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    min-width: 46px;
-    height: 44px;
-    margin-left: auto;
-    padding: 0;
-    border: 1.5px solid rgba(255, 201, 40, 0.45);
-    border-radius: 8px;
-    background: rgba(0, 34, 22, 0.65);
-    color: #ffc928;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background .2s, border-color .2s, transform .15s;
-  }
-
-  .institution-mobile-toggle:hover,
-  .institution-mobile-toggle:active {
-    background: rgba(255, 201, 40, 0.15);
-    border-color: #ffc928;
-    transform: scale(1.04);
-  }
-
-  .institution-mobile-toggle svg,
-  .menu-svg {
-    width: 24px;
-    height: 24px;
-    stroke: #ffc928 !important;
   }
 }
 

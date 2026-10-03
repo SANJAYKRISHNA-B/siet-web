@@ -17,6 +17,11 @@ export function header() {
   <div class="institution-header-shell">
     <nav class="institution-navbar" aria-label="Main navigation">
 
+      <!-- Mobile: Three-Line (Hamburger) Menu Button on the left top -->
+      <button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        ${icon('menu')}
+      </button>
+
       <!-- Institutional Branding: [ Logo ] [ SRI SHAKTHI / AUTONOMOUS INSTITUTION ] -->
       <a class="siet-inline-brand" href="#/" aria-label="Sri Shakthi Autonomous Institution">
         <img src="/brand/siet-logo.png" alt="Sri Shakthi Logo" class="siet-brand-logo">
@@ -40,11 +45,6 @@ export function header() {
       <a class="institution-nav-apply ${isApplyActive ? 'is-active-apply' : ''}" href="#/apply" aria-label="Apply Now for Admissions">
         Apply Now ${icon('arrow')}
       </a>
-
-      <!-- Mobile: Three-Line (Hamburger) Menu Button on the right -->
-      <button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button" aria-expanded="false" aria-controls="mobile-nav-drawer">
-        ${icon('menu')}
-      </button>
 
     </nav>
   </div>

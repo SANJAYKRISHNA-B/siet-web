@@ -5,5 +5,6 @@ import './styles/variables.css';
 import './pages/Home/Home.css';
 import './styles.css';
 import './components/common/Header.css';
+import './pages/Accreditation/Accreditation.css';
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);

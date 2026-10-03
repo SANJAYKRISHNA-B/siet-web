@@ -240,284 +240,134 @@ export function renderHudHeader(title, breadcrumbName = title, kicker = 'SYSTEM 
 }
 
 export function coePortalPage(activeTab = 'about') {
+  const tabTitles = {
+    about: 'About COE',
+    results: 'Results',
+    transcripts: 'Official Transcripts',
+    schedules: 'Exam Schedule',
+    forms: 'Downloads & Forms',
+    regulations: 'Regulation & Curriculum',
+    responsibilities: 'Responsibilities',
+    committee: 'Committee',
+    contact: 'Contact & Grievance Cell'
+  };
+  const activeTabTitle = tabTitles[activeTab] || 'About COE';
+  const activeTabIcon = coeIcons[activeTab] || coeIcons.about;
+
   return `
   <main class="siet-coe-page">
-    <!-- Bespoke Executive Autonomous COE Hero Template -->
-    <section class="coe-exec-hero">
-      <div class="coe-exec-hero-glow" aria-hidden="true"></div>
-      <div class="coe-exec-hero-pattern" aria-hidden="true"></div>
-
-      <!-- Flowing Decorative Ribbon Vectors & Dot Grids -->
-      <svg class="coe-hero-deco-svg" viewBox="0 0 1440 460" fill="none" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="coeGoldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#cca01d" stop-opacity="0.6"/>
-            <stop offset="50%" stop-color="#10b981" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#f6ce62" stop-opacity="0.7"/>
-          </linearGradient>
-          <linearGradient id="coeGreenRibbon" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#059669" stop-opacity="0.5"/>
-            <stop offset="100%" stop-color="#cca01d" stop-opacity="0.2"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Top Left Ribbon Accents -->
-        <path d="M-80,180 C40,120 80,40 160,-20" stroke="url(#coeGoldRibbon)" stroke-width="26" stroke-linecap="round" opacity="0.4" />
-        <path d="M-60,220 C60,160 120,60 220,-20" stroke="url(#coeGreenRibbon)" stroke-width="12" stroke-linecap="round" opacity="0.3" />
-
-        <!-- Bottom Right Flowing Ribbons -->
-        <path d="M1020,480 C1140,400 1220,280 1480,140" stroke="url(#coeGoldRibbon)" stroke-width="32" stroke-linecap="round" opacity="0.5" />
-        <path d="M1080,490 C1200,420 1290,320 1490,210" stroke="url(#coeGreenRibbon)" stroke-width="16" stroke-linecap="round" opacity="0.4" />
-        <path d="M1160,490 C1260,450 1340,360 1490,290" stroke="url(#coeGoldRibbon)" stroke-width="8" stroke-linecap="round" opacity="0.3" />
-
-        <!-- Left Dot Matrix Grid (5x4) -->
-        <g class="coe-deco-dots" fill="#22c55e" opacity="0.4">
-          <circle cx="50" cy="90" r="2.5"/><circle cx="65" cy="90" r="2.5"/><circle cx="80" cy="90" r="2.5"/><circle cx="95" cy="90" r="2.5"/>
-          <circle cx="50" cy="105" r="2.5"/><circle cx="65" cy="105" r="2.5"/><circle cx="80" cy="105" r="2.5"/><circle cx="95" cy="105" r="2.5"/>
-          <circle cx="50" cy="120" r="2.5"/><circle cx="65" cy="120" r="2.5"/><circle cx="80" cy="120" r="2.5"/><circle cx="95" cy="120" r="2.5"/>
-          <circle cx="50" cy="135" r="2.5"/><circle cx="65" cy="135" r="2.5"/><circle cx="80" cy="135" r="2.5"/><circle cx="95" cy="135" r="2.5"/>
-          <circle cx="50" cy="150" r="2.5"/><circle cx="65" cy="150" r="2.5"/><circle cx="80" cy="150" r="2.5"/><circle cx="95" cy="150" r="2.5"/>
-        </g>
-
-        <!-- Right Dot Matrix Grid (5x4) -->
-        <g class="coe-deco-dots" fill="#22c55e" opacity="0.35">
-          <circle cx="1380" cy="160" r="2.5"/><circle cx="1395" cy="160" r="2.5"/><circle cx="1410" cy="160" r="2.5"/><circle cx="1425" cy="160" r="2.5"/>
-          <circle cx="1380" cy="175" r="2.5"/><circle cx="1395" cy="175" r="2.5"/><circle cx="1410" cy="175" r="2.5"/><circle cx="1425" cy="175" r="2.5"/>
-          <circle cx="1380" cy="190" r="2.5"/><circle cx="1395" cy="190" r="2.5"/><circle cx="1410" cy="190" r="2.5"/><circle cx="1425" cy="190" r="2.5"/>
-          <circle cx="1380" cy="205" r="2.5"/><circle cx="1395" cy="205" r="2.5"/><circle cx="1410" cy="205" r="2.5"/><circle cx="1425" cy="205" r="2.5"/>
-          <circle cx="1380" cy="220" r="2.5"/><circle cx="1395" cy="220" r="2.5"/><circle cx="1410" cy="220" r="2.5"/><circle cx="1425" cy="220" r="2.5"/>
-        </g>
-      </svg>
-      
-      <div class="coe-exec-shell">
-        <!-- Top Metadata & Navigation Bar -->
-        <div class="coe-exec-topbar">
-          <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb">
-            <a href="#/" class="coe-breadcrumb-home">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-              <span>Home</span>
-            </a>
-            <span class="sep">/</span>
-            <a href="#/curriculum">Academics</a>
-            <span class="sep">/</span>
-            <span class="cur">Controller of Examinations</span>
-          </nav>
-          
-          <div class="coe-exec-status-group">
-            <span class="coe-status-pill">
-              <span class="status-pulse"></span>
-              <span>AUTONOMOUS EXAMINATION PORTAL</span>
-            </span>
-            <span class="coe-status-tag coe-tag-gold">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <span>ESTD. 2019</span>
-            </span>
-          </div>
-        </div>
-
-        <!-- Main Executive Presentation Banner -->
-        <div class="coe-exec-main">
-          <div class="coe-exec-content-col">
-            <!-- Kicker with horizontal accent bar -->
-            <div class="coe-exec-kicker-row">
-              <span class="coe-kicker-bar"></span>
-              <span class="coe-kicker-gold">OFFICIAL ACADEMIC GOVERNANCE</span>
-              <span class="coe-kicker-div">•</span>
-              <span class="coe-kicker-gold">CONFERMENT OF AUTONOMY SEP 2019</span>
-            </div>
-
-            <!-- Two-tone stacked Title -->
-            <h1 class="coe-exec-title">
-              <span class="coe-title-main">Office of the Controller</span>
-              <span class="coe-title-gold">of Examinations</span>
-            </h1>
-
-            <!-- Subtitle Institution -->
-            <p class="coe-exec-institution">Sri Shakthi Institute of Engineering and Technology</p>
-
-            <!-- 4-Column Accreditation Badges Strip -->
-            <div class="coe-exec-accred-strip">
-              <div class="coe-accred-item">
-                <div class="coe-accred-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
-                </div>
-                <div class="coe-accred-text">
-                  <span class="coe-accred-title">Autonomous Institution</span>
-                  <span class="coe-accred-sub">Affiliated to Anna University, Chennai</span>
-                </div>
-              </div>
-
-              <div class="coe-accred-divider" aria-hidden="true"></div>
-
-              <div class="coe-accred-item">
-                <div class="coe-accred-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                </div>
-                <div class="coe-accred-text">
-                  <span class="coe-accred-title">Approved by AICTE</span>
-                  <span class="coe-accred-sub">New Delhi</span>
-                </div>
-              </div>
-
-              <div class="coe-accred-divider" aria-hidden="true"></div>
-
-              <div class="coe-accred-item">
-                <div class="coe-accred-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
-                </div>
-                <div class="coe-accred-text">
-                  <span class="coe-accred-title coe-naac-highlight">NAAC 'A' Grade</span>
-                </div>
-              </div>
-
-              <div class="coe-accred-divider" aria-hidden="true"></div>
-
-              <div class="coe-accred-item">
-                <div class="coe-accred-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                </div>
-                <div class="coe-accred-text">
-                  <span class="coe-accred-title">NBA Accredited Programmes</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quote & CTA Button Row -->
-            <div class="coe-exec-quote-cta-row">
-              <div class="coe-exec-quote-card">
-                <div class="coe-quote-mark" aria-hidden="true">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="#cca01d"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                </div>
-                <p>
-                  "The Office of the Controller of Examinations plays an essential role in the academic activities of the college and is an important part of the autonomy. The CoE office is responsible to assess the continuous learning process of the students at defined intervals and publish the outcome for the students ensuring confidentiality."
-                </p>
-              </div>
-
-              <div class="coe-exec-cta-col">
-                <button type="button" class="coe-exec-cta-btn js-coe-tab-jump" data-target-tab="results" id="coeHeroPortalBtn">
-                  <span>Open Examination Portal</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- 5 Executive Accreditation & Credential Badges -->
-            <div class="coe-exec-pillars-row">
-              <div class="coe-pillar-chip">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <div class="coe-chip-meta">
-                  <span class="coe-chip-label">Autonomy:</span>
-                  <span class="coe-chip-val">Sep 2019 Conferment</span>
-                </div>
-              </div>
-
-              <div class="coe-pillar-chip">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l9-4 9 4"/><line x1="9" y1="21" x2="9" y2="12"/><line x1="15" y1="21" x2="15" y2="12"/></svg>
-                <div class="coe-chip-meta">
-                  <span class="coe-chip-label">Affiliated:</span>
-                  <span class="coe-chip-val">Anna University</span>
-                </div>
-              </div>
-
-              <div class="coe-pillar-chip">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-                <div class="coe-chip-meta">
-                  <span class="coe-chip-label">Counselling Code:</span>
-                  <span class="coe-chip-val">TNEA 2727</span>
-                </div>
-              </div>
-
-              <div class="coe-pillar-chip">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <div class="coe-chip-meta">
-                  <span class="coe-chip-label">Confidentiality:</span>
-                  <span class="coe-chip-val">Barcoded Papers &amp; Blind Valuation</span>
-                </div>
-              </div>
-
-              <div class="coe-pillar-chip">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f6ce62" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                <div class="coe-chip-meta">
-                  <span class="coe-chip-label">Regulations:</span>
-                  <span class="coe-chip-val">R2025 (OBE) &amp; R2021 (CBCS)</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Unified Institutional Hero Template (Identical to Accreditation) -->
+    <section class="siet-vm-hero siet-accred-hero">
+      <div class="siet-vm-hero-grid"></div>
+      <div class="siet-vm-hero-orb orb-one"></div>
+      <div class="siet-vm-hero-orb orb-two"></div>
+      <div class="siet-vm-shell siet-vm-hero-content reveal">
+        <p class="siet-vm-kicker"><i></i> AUTONOMOUS EXAMINATION PORTAL &bull; OFFICE OF THE COE</p>
+        <h1>Office of the Controller <em>of Examinations</em></h1>
+        <p class="siet-vm-intro siet-accred-intro">Governing continuous student assessment, confidential evaluation systems, end-semester examinations, and timely publication of official results under autonomous academic regulations.</p>
+        <div class="coe-badges-row" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+          <a href="#coe-main-tabs" class="coe-hero-portal-btn js-coe-tab-jump" data-target-tab="about" id="coeHeroPortalBtn" style="background: #eab308; color: #022e1b; font-weight: 800; border: none; padding: 6px 16px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.22); transition: all 0.2s ease;">
+            <span>Access Examination Portal</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">NAAC 'A' Grade</b> · Accredited</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">8 NBA Programmes</b> · Washington Accord</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">Autonomous</b> · Anna University</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">AICTE Approved</b> · ID 1-4165501</span>
         </div>
       </div>
     </section>
 
-
-
     <!-- Main Vertical Navigation Layout Section -->
-    <section class="coe-main-tabs-section">
+    <section class="coe-main-tabs-section" id="coe-main-tabs">
       <div class="coe-portal-layout">
         <!-- Left Vertical Navigation Sidebar -->
-        <aside class="coe-vertical-sidebar">
+        <aside class="coe-vertical-sidebar" id="coe-vertical-sidebar">
+          <!-- Mobile Trigger Button (visible only on mobile/tablet <= 980px) -->
+          <button type="button" class="coe-mobile-sections-toggle" id="coe-mobile-sections-toggle" aria-expanded="false" aria-controls="coe-sidebar-collapsible" aria-label="Portal Sections - Click to select and view section">
+            <div class="cmst-left">
+              <span class="cmst-kicker">EXAMINATION PORTAL</span>
+              <div class="cmst-title-group">
+                <span class="cmst-title">Portal Sections</span>
+                <span class="cmst-active-tag">
+                  <span class="cmst-current-icon" id="coe-mobile-current-icon">${activeTabIcon}</span>
+                  <span class="cmst-current-title" id="coe-mobile-current-title">${activeTabTitle}</span>
+                </span>
+              </div>
+            </div>
+            <div class="cmst-action">
+              <span class="cmst-action-text" id="coe-mobile-action-text">Click to View Section</span>
+              <span class="cmst-chevron" aria-hidden="true">▾</span>
+            </div>
+          </button>
+
+          <!-- Desktop Sidebar Header (visible on desktop >= 981px) -->
           <div class="coe-sidebar-header">
             <span class="coe-sidebar-kicker">EXAMINATION PORTAL</span>
             <h3 class="coe-sidebar-title">Portal Sections</h3>
           </div>
 
-          <nav class="coe-vertical-nav" role="tablist" aria-label="COE Sections Navigation">
-            <button type="button" class="coe-tab-btn ${activeTab === 'about' ? 'active' : ''}" data-tab="about" role="tab" aria-selected="${activeTab === 'about'}">
-              <span class="tab-icon">${coeIcons.about}</span>
-              <span class="tab-title">About COE</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'results' ? 'active' : ''}" data-tab="results" role="tab" aria-selected="${activeTab === 'results'}">
-              <span class="tab-icon">${coeIcons.results}</span>
-              <span class="tab-title">Results</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'transcripts' ? 'active' : ''}" data-tab="transcripts" role="tab" aria-selected="${activeTab === 'transcripts'}">
-              <span class="tab-icon">${coeIcons.transcripts}</span>
-              <span class="tab-title">Official Transcripts</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'schedules' ? 'active' : ''}" data-tab="schedules" role="tab" aria-selected="${activeTab === 'schedules'}">
-              <span class="tab-icon">${coeIcons.schedules}</span>
-              <span class="tab-title">Exam Schedule</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'forms' ? 'active' : ''}" data-tab="forms" role="tab" aria-selected="${activeTab === 'forms'}">
-              <span class="tab-icon">${coeIcons.forms}</span>
-              <span class="tab-title">Downloads &amp; Forms</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'regulations' ? 'active' : ''}" data-tab="regulations" role="tab" aria-selected="${activeTab === 'regulations'}">
-              <span class="tab-icon">${coeIcons.regulations}</span>
-              <span class="tab-title">Regulation &amp; Curriculum</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'responsibilities' ? 'active' : ''}" data-tab="responsibilities" role="tab" aria-selected="${activeTab === 'responsibilities'}">
-              <span class="tab-icon">${coeIcons.responsibilities}</span>
-              <span class="tab-title">Responsibilities</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'committee' ? 'active' : ''}" data-tab="committee" role="tab" aria-selected="${activeTab === 'committee'}">
-              <span class="tab-icon">${coeIcons.committee}</span>
-              <span class="tab-title">Committee</span>
-              <span class="tab-chevron">›</span>
-            </button>
-            <button type="button" class="coe-tab-btn ${activeTab === 'contact' ? 'active' : ''}" data-tab="contact" role="tab" aria-selected="${activeTab === 'contact'}">
-              <span class="tab-icon">${coeIcons.contact}</span>
-              <span class="tab-title">Contact &amp; Grievance Cell</span>
-              <span class="tab-chevron">›</span>
-            </button>
-          </nav>
+          <!-- Collapsible Navigation & Helpline Container -->
+          <div class="coe-sidebar-collapsible" id="coe-sidebar-collapsible">
+            <nav class="coe-vertical-nav" role="tablist" aria-label="COE Sections Navigation">
+              <button type="button" class="coe-tab-btn ${activeTab === 'about' ? 'active' : ''}" data-tab="about" role="tab" aria-selected="${activeTab === 'about'}">
+                <span class="tab-icon">${coeIcons.about}</span>
+                <span class="tab-title">About COE</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'results' ? 'active' : ''}" data-tab="results" role="tab" aria-selected="${activeTab === 'results'}">
+                <span class="tab-icon">${coeIcons.results}</span>
+                <span class="tab-title">Results</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'transcripts' ? 'active' : ''}" data-tab="transcripts" role="tab" aria-selected="${activeTab === 'transcripts'}">
+                <span class="tab-icon">${coeIcons.transcripts}</span>
+                <span class="tab-title">Official Transcripts</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'schedules' ? 'active' : ''}" data-tab="schedules" role="tab" aria-selected="${activeTab === 'schedules'}">
+                <span class="tab-icon">${coeIcons.schedules}</span>
+                <span class="tab-title">Exam Schedule</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'forms' ? 'active' : ''}" data-tab="forms" role="tab" aria-selected="${activeTab === 'forms'}">
+                <span class="tab-icon">${coeIcons.forms}</span>
+                <span class="tab-title">Downloads &amp; Forms</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'regulations' ? 'active' : ''}" data-tab="regulations" role="tab" aria-selected="${activeTab === 'regulations'}">
+                <span class="tab-icon">${coeIcons.regulations}</span>
+                <span class="tab-title">Regulation &amp; Curriculum</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'responsibilities' ? 'active' : ''}" data-tab="responsibilities" role="tab" aria-selected="${activeTab === 'responsibilities'}">
+                <span class="tab-icon">${coeIcons.responsibilities}</span>
+                <span class="tab-title">Responsibilities</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'committee' ? 'active' : ''}" data-tab="committee" role="tab" aria-selected="${activeTab === 'committee'}">
+                <span class="tab-icon">${coeIcons.committee}</span>
+                <span class="tab-title">Committee</span>
+                <span class="tab-chevron">›</span>
+              </button>
+              <button type="button" class="coe-tab-btn ${activeTab === 'contact' ? 'active' : ''}" data-tab="contact" role="tab" aria-selected="${activeTab === 'contact'}">
+                <span class="tab-icon">${coeIcons.contact}</span>
+                <span class="tab-title">Contact &amp; Grievance Cell</span>
+                <span class="tab-chevron">›</span>
+              </button>
+            </nav>
 
-          <!-- Sidebar Quick Helpline Box -->
-          <div class="coe-sidebar-helpline">
-            <div class="csh-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div class="csh-content">
-              <span class="csh-label">EXAMINATION HELPLINE</span>
-              <a href="tel:04224099859" class="csh-phone">0422 – 4099859</a>
-              <a href="tel:9442110336" class="csh-phone-alt">Mobile: 94421 10336</a>
-              <span class="csh-time">Mon – Sat · 9:00 AM – 5:00 PM</span>
+            <!-- Sidebar Quick Helpline Box -->
+            <div class="coe-sidebar-helpline">
+              <div class="csh-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="csh-content">
+                <span class="csh-label">EXAMINATION HELPLINE</span>
+                <a href="tel:04224099859" class="csh-phone">0422 – 4099859</a>
+                <a href="tel:9442110336" class="csh-phone-alt">Mobile: 94421 10336</a>
+                <span class="csh-time">Mon – Sat · 9:00 AM – 5:00 PM</span>
+              </div>
             </div>
           </div>
         </aside>
@@ -1315,6 +1165,47 @@ export function bindCoeEvents($, $$) {
     });
   });
 
+  // Mobile Sections Toggle Button
+  const mobileToggle = $('#coe-mobile-sections-toggle');
+  const sidebar = $('#coe-vertical-sidebar');
+  const actionText = $('#coe-mobile-action-text');
+
+  if (mobileToggle && sidebar) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = sidebar.classList.toggle('mobile-menu-open');
+      mobileToggle.classList.toggle('open', isExpanded);
+      mobileToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      if (actionText) {
+        actionText.textContent = isExpanded ? 'Close Sections' : 'Click to View Section';
+      }
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+      if (sidebar.classList.contains('mobile-menu-open') && !sidebar.contains(e.target)) {
+        sidebar.classList.remove('mobile-menu-open');
+        mobileToggle.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        if (actionText) {
+          actionText.textContent = 'Click to View Section';
+        }
+      }
+    });
+  }
+
+  const tabTitles = {
+    about: 'About COE',
+    results: 'Results',
+    transcripts: 'Official Transcripts',
+    schedules: 'Exam Schedule',
+    forms: 'Downloads & Forms',
+    regulations: 'Regulation & Curriculum',
+    responsibilities: 'Responsibilities',
+    committee: 'Committee',
+    contact: 'Contact & Grievance Cell'
+  };
+
   // COE Tabs Switching
   $$('.coe-tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1330,6 +1221,35 @@ export function bindCoeEvents($, $$) {
       $$('.coe-tab-pane').forEach(pane => {
         pane.classList.toggle('is-active', pane.id === `coe-pane-${targetTab}`);
       });
+
+      // Update mobile button label & icon
+      const titleEl = $('#coe-mobile-current-title');
+      const iconEl = $('#coe-mobile-current-icon');
+      if (titleEl && tabTitles[targetTab]) titleEl.textContent = tabTitles[targetTab];
+      const btnIcon = btn.querySelector('.tab-icon');
+      if (iconEl && btnIcon) iconEl.innerHTML = btnIcon.innerHTML;
+
+      // Close mobile menu on tab select
+      if (sidebar && sidebar.classList.contains('mobile-menu-open')) {
+        sidebar.classList.remove('mobile-menu-open');
+        if (mobileToggle) {
+          mobileToggle.classList.remove('open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+        if (actionText) {
+          actionText.textContent = 'Click to View Section';
+        }
+      }
+
+      // Smooth scroll on mobile to view the section with offset for sticky navbar
+      if (window.innerWidth <= 980) {
+        const targetPane = document.getElementById(`coe-pane-${targetTab}`);
+        if (targetPane) {
+          const yOffset = -135;
+          const y = targetPane.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+        }
+      }
     });
   });
 

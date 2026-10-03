@@ -110,7 +110,7 @@ function render() {
     r === 'nba' ? nbaPage() :
     r === 'iqac' ? iqacPage() :
     r === 'ariia' || r === 'ariia-report' ? ariiaPage() :
-    r === 'accreditations' ? accreditationsOverviewPage() :
+    r === 'accreditations' || r === 'accreditation' || r === 'approvals' ? accreditationsOverviewPage() :
     r === 'placements' || r === 'placement' || r.startsWith('placements/') || r === 'entrepreneurship' || r === 'career-support/entrepreneurship' ? placementsPortalPage(r) :
     internalPage(r);
 
@@ -259,7 +259,7 @@ function bind() {
   if (route() === 'ariia' || route() === 'ariia-report') {
     document.title = "ARIIA Ranking & Innovation Cell | Sri Shakthi Institute of Engineering & Technology";
   }
-  if (route() === 'accreditations') {
+  if (route() === 'accreditations' || route() === 'accreditation' || route() === 'approvals') {
     document.title = "Approvals & Accreditations | Sri Shakthi Institute of Engineering & Technology";
   }
   if (route() === 'placements' || route() === 'placement' || route()?.startsWith('placements') || route() === 'entrepreneurship') {
@@ -324,7 +324,7 @@ function bind() {
       const titleEl = $('#apply-hud-title');
       const breadcrumbEl = $('#apply-hud-breadcrumb');
       if (titleEl) {
-        titleEl.textContent = tab === 'referral' ? 'STUDENT ADMISSION REFERRAL' : 'APPLY FOR SRI SHAKTHI';
+        titleEl.innerHTML = tab === 'referral' ? 'Student Admission <em>Referral</em>' : 'Apply for <em>Sri Shakthi</em>';
       }
       if (breadcrumbEl) {
         breadcrumbEl.textContent = tab === 'referral' ? 'Referral' : 'Apply';

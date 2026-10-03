@@ -332,24 +332,36 @@ export const iqacCommitteeMembers = [
   { sno: 11, name: 'Student Council President', designation: 'Final Year Engineering Student', role: 'Student Representative' }
 ];
 
+function formatAccredTitle(title) {
+  if (!title) return '';
+  if (title.includes('<em>')) return title;
+  if (title.includes('&amp;')) return title.replace(/&amp;/g, '<em>&amp;</em>');
+  if (title.includes('&')) return title.replace(/&/g, '<em>&amp;</em>');
+  const words = title.trim().split(/\s+/);
+  if (words.length > 1) {
+    const lastWord = words.pop();
+    return `${words.join(' ')} <em>${lastWord}</em>`;
+  }
+  return `<em>${title}</em>`;
+}
+
 function accreditationHero(title, subtitle, breadcrumb = '', badges = []) {
+  const formattedTitle = formatAccredTitle(title);
   return `
-    <section class="coe-hero-strip accred-unified-hero">
-      <div class="coe-hero-shell">
-        <div class="coe-hero-content">
-          <div class="coe-hero-breadcrumb">
-            <a href="#/">Home</a><span>/</span><a href="#/accreditations">Accreditation</a><span>/</span><b>${breadcrumb || title}</b>
-          </div>
-          <span class="coe-eyebrow">QUALITY ASSURANCE &amp; REGULATORY COMPLIANCE</span>
-          <h1>${title}</h1>
-          <p>${subtitle}</p>
-          <div class="coe-badges-row">
-            <span class="coe-badge"><b>NAAC 'A' Grade</b> · Accredited</span>
-            <span class="coe-badge"><b>8 NBA Programmes</b> · Tier-I Washington Accord</span>
-            <span class="coe-badge"><b>Autonomous</b> · Anna University Affiliated</span>
-            <span class="coe-badge"><b>AICTE Approved</b> · ID 1-4165501</span>
-            ${badges.map(b => `<span class="coe-badge">${b}</span>`).join('')}
-          </div>
+    <section class="siet-vm-hero siet-accred-hero">
+      <div class="siet-vm-hero-grid"></div>
+      <div class="siet-vm-hero-orb orb-one"></div>
+      <div class="siet-vm-hero-orb orb-two"></div>
+      <div class="siet-vm-shell siet-vm-hero-content reveal">
+        <p class="siet-vm-kicker"><i></i> QUALITY ASSURANCE &amp; REGULATORY COMPLIANCE</p>
+        <h1>${formattedTitle}</h1>
+        ${subtitle ? `<p class="siet-vm-intro siet-accred-intro">${subtitle}</p>` : ''}
+        <div class="coe-badges-row" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px;">
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">NAAC 'A' Grade</b> · Accredited</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">8 NBA Programmes</b> · Washington Accord</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">Autonomous</b> · Anna University</span>
+          <span class="coe-badge" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.28); color: #ffffff; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px); display: inline-flex; align-items: center; gap: 5px;"><b style="color: #ffd447;">AICTE Approved</b> · ID 1-4165501</span>
+          ${(badges || []).map(b => `<span class="coe-badge" style="background: rgba(246, 206, 98, 0.18); border: 1px solid rgba(246, 206, 98, 0.45); color: #ffe082; padding: 6px 14px; border-radius: 20px; font-size: 11.5px; font-weight: 750; backdrop-filter: blur(6px);">${b}</span>`).join('')}
         </div>
       </div>
     </section>
@@ -2061,7 +2073,8 @@ export function accreditationsOverviewPage() {
     <section class="coe-content-area" style="padding-top: 36px;">
       <div class="coe-container">
 
-        <div class="coe-section-card reveal">
+        <!-- 1. Explore Accreditation & Governance Portals -->
+        <div class="coe-section-card reveal" style="margin-bottom: 32px;">
           <div class="coe-card-header">
             <div>
               <span class="coe-pill-badge">8 COMPLIANCE PILLARS</span>
@@ -2081,6 +2094,41 @@ export function accreditationsOverviewPage() {
                   </div>
                 </a>
               `).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Institutional Standing & Regulatory Certifications -->
+        <div class="coe-section-card reveal" style="margin-bottom: 32px;">
+          <div class="coe-card-header">
+            <div>
+              <span class="coe-pill-badge" style="background: #eefbf3; color: #046a38;">STATUTORY BENCHMARKS</span>
+              <h3>Institutional Accreditation &amp; Standing Overview</h3>
+              <p>Certified autonomous academic governance benchmarks under UGC, AICTE, NAAC, NBA, and Anna University.</p>
+            </div>
+          </div>
+          <div class="coe-card-body">
+            <div class="accred-info-strip" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 0;">
+              <div class="accred-info-card" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+                <small style="color: #047857; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;">NAAC ACCREDITED</small>
+                <b style="font-size: 19px; color: #0f172a; margin: 4px 0 2px;">Grade ‘A’ Standing</b>
+                <span style="font-size: 12.5px; color: #475569;">Validated 7 Criteria Institutional Excellence across Teaching &amp; Research</span>
+              </div>
+              <div class="accred-info-card" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+                <small style="color: #047857; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;">WASHINGTON ACCORD</small>
+                <b style="font-size: 19px; color: #0f172a; margin: 4px 0 2px;">8 NBA Programmes</b>
+                <span style="font-size: 12.5px; color: #475569;">Tier-I Global Mobility Certification for B.E. / B.Tech Engineering Degrees</span>
+              </div>
+              <div class="accred-info-card" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+                <small style="color: #047857; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;">UGC CONFERMENT</small>
+                <b style="font-size: 19px; color: #0f172a; margin: 4px 0 2px;">Autonomous Institution</b>
+                <span style="font-size: 12.5px; color: #475569;">Conferred Sep 2019 · Affiliated to Anna University, Chennai</span>
+              </div>
+              <div class="accred-info-card" style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 18px;">
+                <small style="color: #047857; font-weight: 800; font-size: 11px; letter-spacing: 0.5px;">AICTE APPROVAL</small>
+                <b style="font-size: 19px; color: #0f172a; margin: 4px 0 2px;">Permanent ID 1-4165501</b>
+                <span style="font-size: 12.5px; color: #475569;">Approved by All India Council for Technical Education, New Delhi</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2210,24 +2258,26 @@ export function bindGovernanceEvents($, $$) {
 
   // 5. Handle URL hash / query params on initial load
   const hash = location.hash || '';
+  let initialTabKey = 'all';
   if (hash.includes('internalcomplaints') || hash.includes('tab=icc')) {
-    activateTab('icc', false);
+    initialTabKey = 'icc';
   } else if (hash.includes('antidrug') || hash.includes('tab=antidrug')) {
-    activateTab('antidrug', false);
-  } else if (hash.includes('council') || hash.includes('tab=council')) {
-    activateTab('council', false);
-  } else if (hash.includes('statutory') || hash.includes('tab=statutory')) {
-    activateTab('statutory', false);
-  } else if (hash.includes('clubs') || hash.includes('tab=clubs')) {
-    activateTab('clubs', false);
+    initialTabKey = 'antidrug';
+  } else if (hash.includes('tab=council') || hash.includes('#governing-council')) {
+    initialTabKey = 'council';
+  } else if (hash.includes('tab=statutory') || hash.includes('#statutory-regulatory')) {
+    initialTabKey = 'statutory';
+  } else if (hash.includes('tab=clubs') || hash.includes('#governance-clubs')) {
+    initialTabKey = 'clubs';
   } else {
     const qIdx = hash.indexOf('?');
     if (qIdx !== -1) {
       const params = new URLSearchParams(hash.slice(qIdx + 1));
       const tabParam = params.get('tab');
       if (tabParam && ['icc', 'antidrug', 'council', 'statutory', 'clubs', 'all'].includes(tabParam)) {
-        activateTab(tabParam, false);
+        initialTabKey = tabParam;
       }
     }
   }
+  activateTab(initialTabKey, false);
 }

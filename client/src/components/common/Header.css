@@ -273,13 +273,13 @@
     top: calc(100% - 2px);
     left: 50%;
     transform: translateX(-50%);
-    min-width: 220px;
-    background: #013423;
-    border: 1px solid rgba(255, 216, 61, 0.25);
-    border-top: 3px solid #ffc928;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-    border-radius: 0 0 8px 8px;
-    padding: 8px 0;
+    min-width: 225px;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 45, 25, 0.12) !important;
+    border-top: 3px solid #ffc928 !important;
+    box-shadow: 0 16px 36px rgba(0, 32, 20, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 0 0 10px 10px;
+    padding: 8px 6px;
     z-index: 1002;
   }
 
@@ -296,17 +296,20 @@
 
   .institution-nav-group > div a {
     display: block;
-    padding: 10px 18px;
-    color: #edf7f2;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #0b3d2c !important;
     font-size: 13.5px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    transition: background .2s, color .2s;
+    white-space: nowrap;
+    transition: background .18s ease, color .18s ease, padding-left .18s ease;
   }
 
   .institution-nav-group > div a:hover {
-    background: rgba(255, 216, 61, 0.12);
-    color: #ffd83d;
+    background: #edf7f1 !important;
+    color: #005a36 !important;
+    padding-left: 20px;
   }
 
   /* Desktop Apply Now Button */

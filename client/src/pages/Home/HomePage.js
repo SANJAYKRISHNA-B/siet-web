@@ -19,8 +19,12 @@ export function homePage() {
     <div class="home-impact-rule" aria-hidden="true"></div>
     <p>Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
     <div class="home-impact-actions">
-      <a class="home-impact-primary" href="#/apply">Apply Now ${icon('arrow')}</a>
       <a class="home-impact-secondary" href="#/campus-life">Explore Campus <span>${icon('play')}</span></a>
+      <button type="button" class="home-impact-360-btn js-open-techpark-360" aria-label="Explore Tech Park 360 View">
+        <span class="impact-360-badge">360°</span>
+        <span>Explore Tech Park 360°</span>
+        <span class="impact-360-arrow" aria-hidden="true">→</span>
+      </button>
     </div>
   </div>
 </section>

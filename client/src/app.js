@@ -7,6 +7,7 @@ import { renderMainLayout } from './layouts/MainLayout.js';
 import { renderApplyLayout } from './layouts/ApplyLayout.js';
 import { icon } from './components/common/SvgIcons.js';
 import { videoModal, placementDetailsModal } from './components/common/Modals.js';
+import { openTechPark360 } from './components/TechPark360/TechPark360.js';
 import { programmeCards } from './components/cards/ProgrammeCard.js';
 
 import { homePage } from './pages/Home/HomePage.js';
@@ -895,6 +896,13 @@ function bind() {
   $('.js-scroll-programmes')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-discover-btn')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-explore-campus')?.addEventListener('click', () => { $('.campus-gallery')?.scrollIntoView({ behavior: 'smooth' }) });
+  $$('.js-open-techpark-360').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const vpid = btn.dataset.vpid || 'hero-skyline';
+      openTechPark360(vpid);
+    });
+  });
   $$('.campus-gallery .gallery-card').forEach(card => {
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click() }

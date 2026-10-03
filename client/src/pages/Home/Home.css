@@ -132,17 +132,20 @@
   flex-wrap: wrap;
 }
 
-.home-impact-actions > a {
+.home-impact-actions > a,
+.home-impact-actions > button {
   min-height: 56px;
   padding: 0 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
   border-radius: 999px;
-  font: 800 clamp(14px, 1vw, 18px)/1 'Montserrat', sans-serif;
+  font: 800 clamp(14px, 1vw, 17px)/1 'Montserrat', sans-serif;
   text-decoration: none;
-  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .home-impact-primary {
@@ -153,7 +156,7 @@
 }
 
 .home-impact-secondary {
-  min-width: 245px;
+  min-width: 230px;
   border: 2px solid rgba(255, 255, 255, .92);
   color: #fff;
   background: rgba(0, 49, 34, .38);
@@ -168,6 +171,7 @@
   border-radius: 50%;
   background: #fff;
   color: #003f2c;
+  transition: transform .2s ease;
 }
 
 .home-impact-secondary svg {
@@ -175,7 +179,53 @@
   height: 16px;
 }
 
-.home-impact-actions > a:hover {
+.home-impact-360-btn {
+  min-width: 250px;
+  background: linear-gradient(135deg, rgba(0, 68, 44, 0.9) 0%, rgba(2, 48, 30, 0.95) 100%);
+  border: 2px solid #ffd12e;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(0, 35, 22, 0.35), 0 0 18px rgba(255, 209, 46, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.home-impact-360-btn:hover {
+  background: linear-gradient(135deg, #ffd12e 0%, #f5b300 100%);
+  color: #002e1f;
+  box-shadow: 0 14px 34px rgba(245, 179, 0, 0.42);
+  border-color: #ffd12e;
+}
+
+.impact-360-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #ffd12e;
+  color: #002e1f;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.home-impact-360-btn:hover .impact-360-badge {
+  background: #002e1f;
+  color: #ffd12e;
+}
+
+.impact-360-arrow {
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.home-impact-360-btn:hover .impact-360-arrow {
+  transform: translateX(4px);
+}
+
+.home-impact-actions > a:hover,
+.home-impact-actions > button:hover {
   transform: translateY(-3px);
 }
 

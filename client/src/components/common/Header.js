@@ -24,10 +24,13 @@ export function header() {
 
       <!-- Institutional Branding: [ Logo ] [ SRI SHAKTHI / AUTONOMOUS INSTITUTION ] -->
       <a class="siet-inline-brand" href="#/" aria-label="Sri Shakthi Autonomous Institution">
-        <img src="/brand/siet-logo.png" alt="Sri Shakthi Logo" class="siet-brand-logo">
+        <span class="siet-brand-emblem">
+          <img src="/brand/siet-institution-logo.png" alt="Sri Shakthi Logo" class="siet-brand-logo">
+        </span>
         <div class="siet-brand-text">
           <span class="siet-brand-name">SRI SHAKTHI</span>
-          <span class="siet-brand-sub">AUTONOMOUS INSTITUTION</span>
+          <span class="siet-brand-sub">INSTITUTE OF ENGINEERING</span>
+          <span class="siet-brand-sub">AND TECHNOLOGY</span>
         </div>
       </a>
 

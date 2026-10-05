@@ -21,7 +21,11 @@
 .home-impact-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(620px, 72vh, 760px);
+  min-height: calc(100vh - 120px);
+  min-height: calc(100dvh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   background: #003f2c;
 }
@@ -63,7 +67,7 @@
   width: min(calc(100% - 10vw), 1540px);
   min-height: inherit;
   margin: 0 auto;
-  padding: clamp(54px, 7vh, 82px) 0 clamp(46px, 6vh, 68px);
+  padding: clamp(36px, 4.5vh, 64px) 0 clamp(32px, 4vh, 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,7 +244,8 @@
 
 @media (max-width: 900px) {
   .home-impact-hero {
-    min-height: 660px;
+    min-height: max(600px, calc(100vh - 104px));
+    min-height: max(600px, calc(100dvh - 104px));
   }
 
   .home-impact-photo {
@@ -259,7 +264,8 @@
 
 @media (max-width: 560px) {
   .home-impact-hero {
-    min-height: 620px;
+    min-height: max(560px, calc(100vh - 100px));
+    min-height: max(560px, calc(100dvh - 100px));
   }
 
   .home-impact-photo {

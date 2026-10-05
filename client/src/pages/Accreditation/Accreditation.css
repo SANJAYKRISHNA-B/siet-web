@@ -3956,11 +3956,14 @@
 
 .siet-accred-hero .siet-vm-intro,
 .accreditation-subpage .siet-vm-intro,
-.siet-accred-intro {
-  max-width: 1220px !important;
-  font-size: clamp(16px, 1.22vw, 19.5px) !important;
-  line-height: 1.62 !important;
-  color: rgba(255, 255, 255, 0.92) !important;
+.siet-accred-intro,
+.siet-coe-page .siet-vm-intro {
+  max-width: 820px !important;
+  font-size: clamp(14px, 1.05vw, 16px) !important;
+  line-height: 1.55 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-top: 10px !important;
+  margin-bottom: 4px !important;
   text-wrap: balance !important;
 }
 

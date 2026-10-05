@@ -264,7 +264,7 @@ export function coePortalPage(activeTab = 'about') {
       <div class="siet-vm-shell siet-vm-hero-content reveal">
         <p class="siet-vm-kicker"><i></i> AUTONOMOUS EXAMINATION PORTAL &bull; OFFICE OF THE COE</p>
         <h1>Office of the Controller <em>of Examinations</em></h1>
-        <p class="siet-vm-intro siet-accred-intro">Governing continuous student assessment, confidential evaluation systems, end-semester examinations, and timely publication of official results under autonomous academic regulations.</p>
+        <p class="siet-vm-intro siet-accred-intro">Autonomous assessments, end-semester examinations, and certified academic records.</p>
         <div class="coe-badges-row" style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
           <a href="#coe-main-tabs" class="coe-hero-portal-btn js-coe-tab-jump" data-target-tab="about" id="coeHeroPortalBtn" style="background: #eab308; color: #022e1b; font-weight: 800; border: none; padding: 6px 16px; border-radius: 20px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.22); transition: all 0.2s ease;">
             <span>Access Examination Portal</span>

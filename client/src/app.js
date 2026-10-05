@@ -64,10 +64,6 @@ function render() {
   unlockModalScroll();
   if (!appRoot) return;
   const r = route();
-  if (r === 'academics') {
-    location.replace('#/curriculum');
-    return;
-  }
   const isApply = (r === 'apply' || r === 'admission-enquiry' || r === 'admission-referral' || r === 'referral');
 
   if (isApply) {
@@ -113,6 +109,8 @@ function render() {
     r === 'ariia' || r === 'ariia-report' ? ariiaPage() :
     r === 'accreditations' || r === 'accreditation' || r === 'approvals' ? accreditationsOverviewPage() :
     r === 'placements' || r === 'placement' || r.startsWith('placements/') || r === 'entrepreneurship' || r === 'career-support/entrepreneurship' ? placementsPortalPage(r) :
+    r === 'campus' || r === 'campus-life' ? internalPage('campus-life') :
+    r === 'explore' || r === 'centres-of-excellence' ? internalPage('centres-of-excellence') :
     internalPage(r);
 
   appRoot.innerHTML = renderMainLayout(content, r);
@@ -678,7 +676,7 @@ function bind() {
     }
     $$('.institution-nav-group').forEach(x => {
       x.classList.remove('open');
-      x.querySelector('button')?.setAttribute('aria-expanded', 'false');
+      x.querySelector('button, a')?.setAttribute('aria-expanded', 'false');
     });
   };
 
@@ -690,17 +688,17 @@ function bind() {
     $$('.institution-nav-group').forEach(x => {
       if (x !== group) {
         x.classList.remove('open');
-        x.querySelector('button')?.setAttribute('aria-expanded', 'false');
+        x.querySelector('button, a')?.setAttribute('aria-expanded', 'false');
       }
     });
     if (group) {
       group.classList.add('open');
-      group.querySelector('button')?.setAttribute('aria-expanded', 'true');
+      group.querySelector('button, a')?.setAttribute('aria-expanded', 'true');
     }
   };
 
   $$('.institution-nav-group').forEach(group => {
-    const btn = group.querySelector('button');
+    const trigger = group.querySelector('button, a');
 
     group.addEventListener('mouseenter', () => {
       openNavGroup(group);
@@ -710,17 +708,17 @@ function bind() {
       if (navCloseTimer) clearTimeout(navCloseTimer);
       navCloseTimer = setTimeout(() => {
         group.classList.remove('open');
-        btn?.setAttribute('aria-expanded', 'false');
+        trigger?.setAttribute('aria-expanded', 'false');
       }, 140);
     });
 
-    btn?.addEventListener('click', e => {
-      e.stopPropagation();
+    trigger?.addEventListener('click', e => {
+      // If clicking the link directly, let the link navigate
       const isCurrentlyOpen = group.classList.contains('open');
       if (navCloseTimer) clearTimeout(navCloseTimer);
       if (isCurrentlyOpen) {
         group.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
+        trigger.setAttribute('aria-expanded', 'false');
       } else {
         openNavGroup(group);
       }
@@ -733,7 +731,7 @@ function bind() {
     group.addEventListener('focusout', e => {
       if (!group.contains(e.relatedTarget)) {
         group.classList.remove('open');
-        btn?.setAttribute('aria-expanded', 'false');
+        trigger?.setAttribute('aria-expanded', 'false');
       }
     });
   });

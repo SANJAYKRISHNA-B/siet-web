@@ -374,7 +374,7 @@ export function governancePage(initialTab = 'all') {
   <main class="siet-coe-page accreditation-subpage siet-governance-portal">
     ${accreditationHero(
       'Governance & Statutory Committees',
-      'Sri Shakthi maintains an exemplary governance ecosystem anchored by statutory councils, autonomous boards, and student-welfare committees committed to academic integrity, institutional transparency, zero-tolerance safeguards, and continuous empowerment.',
+      'Statutory councils and committees ensuring academic integrity, transparency, and student welfare.',
       'Governance / Committees'
     )}
 
@@ -1265,7 +1265,7 @@ export function mandatoryDisclosurePage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'AICTE Mandatory Disclosure',
-      'Comprehensive public disclosure of institutional parameters, governing trust, faculty profiles, sanctioned student intake, infrastructure assets, and audited statements in full compliance with AICTE Regulations.',
+      'Official institutional compliance disclosures under AICTE and Anna University regulations.',
       'Mandatory Disclosure'
     )}
 
@@ -1398,7 +1398,7 @@ export function statutoryDeclarationPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'Statutory Declaration (RTI Act 2005)',
-      'Official statutory declaration under Section 4(1)(b) of the Right to Information Act 2005, affirming institutional transparency, public authorities, and compliance with statutory regulatory standards.',
+      'Statutory declaration under Section 4(1)(b) of the Right to Information Act 2005.',
       'Statutory Declaration'
     )}
 
@@ -1494,10 +1494,10 @@ export function nirfPage() {
   return `
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
-      'National Institutional Ranking Framework (NIRF)',
-      'Official institutional data submitted to the Ministry of Education, Government of India, detailing academic parameters, student strength, research performance, and graduation outcomes.',
-      'NIRF'
-    )}
+       'National Institutional Ranking Framework (NIRF)',
+       'Official data submissions under the National Institutional Ranking Framework (NIRF), Ministry of Education.',
+       'NIRF'
+     )}
 
 
     <section class="coe-content-area" style="padding-top: 36px;">
@@ -1599,7 +1599,7 @@ export function naacPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'NAAC Grade ‘A’ Accreditation',
-      'Sri Shakthi has been evaluated and accredited with Grade ‘A’ by the National Assessment and Accreditation Council (NAAC), validating sustained excellence across teaching, research, and governance.',
+      'Grade ‘A’ institutional accreditation validating curriculum, research, and academic excellence.',
       'NAAC'
     )}
 
@@ -1704,7 +1704,7 @@ export function nbaPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'NBA Tier-I Accreditation',
-      'Eight undergraduate engineering programmes at Sri Shakthi are accredited by the National Board of Accreditation (NBA) under Tier-I, certifying Washington Accord international engineering equivalency.',
+      '8 undergraduate engineering programmes accredited under the Washington Accord Tier-I standard.',
       'NBA'
     )}
 
@@ -1810,7 +1810,7 @@ export function iqacPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'Internal Quality Assurance Cell (IQAC)',
-      'The IQAC at Sri Shakthi acts as a nodal agency for coordinating quality benchmarks across academic and administrative operations, fostering an enduring culture of continuous self-enhancement.',
+      'Internal Quality Assurance Cell sustaining academic standards and institutional benchmarks.',
       'IQAC'
     )}
 
@@ -1933,7 +1933,7 @@ export function ariiaPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'ARIIA Report & Innovation Rankings',
-      'Atal Ranking of Institutions on Innovation Achievements (ARIIA) and Ministry of Education Innovation Cell (MIC) indicators related to innovation, startup incubation, and student entrepreneurship.',
+      'Atal Ranking of Institutions on Innovation Achievements and MIC recognitions.',
       'ARIIA Report'
     )}
 
@@ -2065,7 +2065,7 @@ export function accreditationsOverviewPage() {
   <main class="siet-coe-page accreditation-subpage">
     ${accreditationHero(
       'Approvals & Accreditations',
-      'Sri Shakthi is an autonomous institution approved by AICTE, affiliated to Anna University, accredited with Grade ‘A’ by NAAC, and with eight eligible undergraduate engineering disciplines accredited under the prestigious NBA Tier-I Washington Accord framework.',
+      'Autonomous institution approved by AICTE, affiliated to Anna University, accredited with Grade ‘A’ by NAAC, and 8 NBA Tier-I programmes.',
       'Overview'
     )}
 

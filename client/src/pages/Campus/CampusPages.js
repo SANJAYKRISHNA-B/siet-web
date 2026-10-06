@@ -1,10 +1,12 @@
 import { pageCopy } from '../../data/navigationData.js';
-import { getInternalPageMeta, renderSubdivisionUniqueContent, campusMarqueeItems } from '../../data/campusData.js';
+import { getInternalPageMeta, renderSubdivisionUniqueContent, campusMarqueeItems, internalPageData } from '../../data/campusData.js';
 import { sietHudHeader, programSelectHtml } from '../../components/common/HudHeader.js';
 import { departmentPage } from '../Academics/DepartmentDetailPage.js';
 import { icon, deptIcon, vmIcon } from '../../components/common/SvgIcons.js';
 import { ugPrograms as programs } from '../../data/programmesData.js';
 import { slugify } from '../../utils/dom.js';
+import { campusExperiencePage } from './CampusExperiencePage.js';
+import { renderTransportCreativePage, renderNccNssCreativePage } from './creativeCampusPages.js';
 
 export function internalPage(route) {
   const isDept = route.startsWith('department/');
@@ -16,6 +18,16 @@ export function internalPage(route) {
   const isAcademics = ['academics', 'departments', 'curriculum', 'academic-calendar', 'library'].includes(route);
   const isAdmissions = ['programmes', 'admission-enquiry', 'apply', 'admission-referral', 'referral', 'eligibility', 'scholarships', 'fees'].includes(route);
   const pageMeta = getInternalPageMeta(route, data);
+
+  if (isCampus && internalPageData[route]) {
+    if (route === 'transport') {
+      return `<main class="internal-page campus-template-page campus-template-transport siet-fullwidth-template">${sietHudHeader('Transport Fleet & Mobility Network', 'Transport', 'Campus', '#/campus-life', 'SYSTEM ONLINE / LOGISTICS & MOBILITY / SIET-TRANSIT')}${renderTransportCreativePage(internalPageData[route], data[0])}</main>`;
+    }
+    if (route === 'ncc') {
+      return `<main class="internal-page campus-template-page campus-template-ncc siet-fullwidth-template">${sietHudHeader('NCC Army Wing & NSS Corps', 'NCC & NSS', 'Campus', '#/campus-life', 'SYSTEM ONLINE / NATIONAL SERVICE & DEFENCE / SIET-REGIMENTAL')}${renderNccNssCreativePage(internalPageData[route], data[0])}</main>`;
+    }
+    return `<main class="internal-page campus-template-page campus-template-${route}">${sietHudHeader(data[0], data[0], 'Campus', '#/campus-life', 'SYSTEM ONLINE / CAMPUS PROFILE / SIET-OS')}${campusExperiencePage(route, internalPageData[route], data[0])}</main>`;
+  }
 
   const deptExtras = isDepts ? `
   <div class="dept-quick-summary-grid">

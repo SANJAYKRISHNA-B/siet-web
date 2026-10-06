@@ -30,6 +30,7 @@ import { academicOverviewPage } from './pages/Academics/AcademicOverviewPage.js'
 import { libraryPage } from './pages/Academics/LibraryPage.js';
 
 import { internalPage } from './pages/Campus/CampusPages.js';
+import { initTransportCreativePage, initNccNssCreativePage } from './pages/Campus/creativeCampusPages.js';
 import { applyPortalPage } from './pages/Admissions/ApplyPortalPage.js';
 import { careersPage } from './pages/Careers/CareersPage.js';
 import { contactPage } from './pages/Contact/ContactPage.js';
@@ -276,6 +277,12 @@ function bind() {
   bindPlacementEvents($, $$);
   bindGovernanceEvents($, $$);
   bindCampusEvents($, $$);
+  if (route() === 'transport') {
+    initTransportCreativePage();
+  }
+  if (route() === 'ncc') {
+    initNccNssCreativePage();
+  }
   bindCurriculumEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");

@@ -242,7 +242,7 @@ footer>small {
 
 .footer-reference .footer-brand .mark > img {
   display: block;
-  width: clamp(180px, 14vw, 230px);
+  width: clamp(125px, 9vw, 165px);
   height: auto;
   max-width: 100%;
   object-fit: contain;

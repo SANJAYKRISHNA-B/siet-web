@@ -742,8 +742,14 @@ export function coePortalPage(activeTab = 'about') {
                   <p style="font-size: 14px; line-height: 1.6; color: #1e3a2b; margin: 8px 0 16px;">
                     Enter your <b>Register Number</b> and <b>Date of Birth</b> to retrieve and verify your autonomous Continuous Internal Assessment (CIE) and End Semester Examination (ESE) results.
                   </p>
+
+                  <a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener noreferrer" class="button coe-open-result-page" style="width: 100%; justify-content: center; font-size: 14px; font-weight: 800; padding: 13px 18px; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; text-decoration: none;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span>Open Examination Results Page</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
                   
-                  <form class="coe-result-lookup-form js-coe-result-form" style="background: #ffffff; padding: 18px; border-radius: 10px; border: 1px solid #d2e4d9; margin-bottom: 14px;">
+                  <form hidden class="coe-result-lookup-form js-coe-result-form" style="background: #ffffff; padding: 18px; border-radius: 10px; border: 1px solid #d2e4d9; margin-bottom: 14px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
                       <div>
                         <label style="display: block; font-size: 12px; font-weight: 700; color: #004d2e; margin-bottom: 6px;">Register Number *</label>
@@ -770,7 +776,7 @@ export function coePortalPage(activeTab = 'about') {
                     </div>
                   </form>
 
-                  <div class="js-coe-result-output" style="display: none; background: #ffffff; border: 1.5px solid #005a36; border-radius: 10px; padding: 18px; margin-top: 14px;">
+                  <div hidden class="js-coe-result-output" style="display: none; background: #ffffff; border: 1.5px solid #005a36; border-radius: 10px; padding: 18px; margin-top: 14px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e1eee4; padding-bottom: 10px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
                       <div>
                         <span style="font-size: 11px; font-weight: 800; color: #cca01d; letter-spacing: 0.8px;">PROVISIONAL GRADE STATEMENT</span>
@@ -863,7 +869,7 @@ export function coePortalPage(activeTab = 'about') {
                   <span class="ci-icon">🌐</span>
                   <div>
                     <strong>Online Results System</strong>
-                    <p><a href="#/coe?tab=results">Internal Autonomous Result Portal</a></p>
+                    <p><a href="https://www.siet.ac.in/Result/" target="_blank" rel="noopener noreferrer">Internal Autonomous Result Portal</a></p>
                   </div>
                 </div>
               </div>

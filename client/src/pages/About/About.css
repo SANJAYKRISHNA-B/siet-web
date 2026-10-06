@@ -3558,3 +3558,11 @@ article.chairman-message,
     margin-inline: auto !important;
   }
 }
+
+/* Use the highlighted quote's editorial typeface throughout both leadership pages. */
+.chairman-page,
+.chairman-page *,
+.principal-page,
+.principal-page * {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}

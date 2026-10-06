@@ -8293,6 +8293,115 @@ button.button.js-explore-campus {
   font-family: inherit !important;
 }
 
+/* Initial college-emblem splash preloader. */
+.siet-logo-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 42%, #08704a 0%, #004d34 42%, #002f21 100%);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity .3s ease, transform .42s cubic-bezier(.22, 1, .36, 1), filter .3s ease;
+  will-change: opacity, transform, filter;
+}
+
+.siet-logo-splash.is-exiting {
+  opacity: 0;
+  transform: translateY(-2%) scale(1.035);
+  filter: blur(7px);
+  pointer-events: none;
+}
+
+.siet-logo-preloader {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(148px, 17vw, 220px);
+  aspect-ratio: 1;
+}
+
+.siet-logo-preloader::before,
+.siet-logo-preloader::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, .15);
+  border-top-color: #f3c515;
+  animation: siet-splash-spin 1s linear infinite;
+}
+
+.siet-logo-preloader::after {
+  inset: 10px;
+  border-width: 1px;
+  border-top-color: rgba(255, 255, 255, .9);
+  animation-direction: reverse;
+  animation-duration: 1.4s;
+}
+
+.siet-logo-preloader img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .28));
+  animation: siet-splash-pulse 1.2s ease-in-out infinite alternate;
+  transition: transform .3s cubic-bezier(.22, 1, .36, 1), opacity .25s ease;
+}
+
+.siet-logo-splash.is-exiting .siet-logo-preloader {
+  transform: scale(1.12);
+  opacity: 0;
+  transition: transform .3s cubic-bezier(.22, 1, .36, 1), opacity .24s ease;
+}
+
+.site-application {
+  min-height: 100vh;
+  transform-origin: 50% 15%;
+  transition: opacity .5s ease, transform .65s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
+}
+
+.site-application.is-splash-loading {
+  opacity: .68;
+  transform: scale(1.018);
+  filter: blur(5px);
+}
+
+.site-application.is-splash-loading.is-splash-exiting,
+.site-application.is-splash-ready {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+@keyframes siet-splash-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes siet-splash-pulse {
+  from { transform: scale(.96); opacity: .88; }
+  to { transform: scale(1.03); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .siet-logo-preloader::before,
+  .siet-logo-preloader::after,
+  .siet-logo-preloader img {
+    animation: none;
+  }
+
+  .siet-logo-splash,
+  .siet-logo-preloader,
+  .site-application {
+    transition-duration: .01ms !important;
+  }
+}
+
 .card-floating-badge.badge-green {
   background: #064e32;
   color: #ffffff;

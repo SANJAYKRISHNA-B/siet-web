@@ -34,7 +34,7 @@ import { applyPortalPage } from './pages/Admissions/ApplyPortalPage.js';
 import { careersPage } from './pages/Careers/CareersPage.js';
 import { contactPage } from './pages/Contact/ContactPage.js';
 
-import { coePortalPage, bindCoeEvents } from './pages/COE/CoePages.js';
+import { coePortalPage, coeResultPage, bindCoeEvents } from './pages/COE/CoePages.js';
 import {
   governancePage,
   mandatoryDisclosurePage,
@@ -97,7 +97,7 @@ function render() {
     r === 'coe' || r === 'coe-portal' || r === 'examinations' ? coePortalPage(routeParams().get('tab') || 'about') :
     r === 'coe-downloads' || r === 'downloads' || r === 'download' || r === 'forms' ? coePortalPage('forms') :
     r === 'coe-regulations' || r === 'regulations' ? coePortalPage('regulations') :
-    r === 'coe-result' || r === 'result' ? coePortalPage('results') :
+    r === 'coe-result' || r === 'result' ? coeResultPage() :
     r === 'coe-transcript' || r === 'transcript' ? coePortalPage('transcripts') :
     r === 'governance' || r === 'committees' ? governancePage(routeParams().get('tab') || 'all') :
     r === 'mandatory-disclosure' || r === 'disclosure' ? mandatoryDisclosurePage() :
@@ -995,7 +995,35 @@ async function submitForm(e) {
     if (btn) { btn.disabled = false; btn.innerHTML = originalButtonContent || 'Submit'; }
   }
 }
-function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target, reduce); observer.unobserve(entry.target) }), { threshold: .01, rootMargin: '120px 0px 60px 0px' }); $$('.reveal,.js-counter').forEach(el => { const rect = el.getBoundingClientRect(); if (reduce || (rect.top < window.innerHeight + 100 && rect.bottom > -100)) { el.classList.add('is-visible'); if (el.classList.contains('js-counter')) animateCounter(el, reduce); } else { observer.observe(el); } }); }
+function observe() {
+  const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  // Give every homepage section its own ordered reveal sequence.
+  $$('.home-page section').forEach(section => {
+    const revealItems = [...section.querySelectorAll('.reveal')];
+    revealItems.forEach((item, index) => {
+      const delayStep = Math.min(index, 7);
+      item.style.setProperty('--home-reveal-delay', `${delayStep * 90}ms`);
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-visible');
+    if (entry.target.classList.contains('js-counter')) animateCounter(entry.target, reduce);
+    observer.unobserve(entry.target);
+  }), { threshold: .08, rootMargin: '0px 0px -6% 0px' });
+
+  $$('.reveal,.js-counter').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (reduce || (rect.top < window.innerHeight + 40 && rect.bottom > -40)) {
+      el.classList.add('is-visible');
+      if (el.classList.contains('js-counter')) animateCounter(el, reduce);
+    } else {
+      observer.observe(el);
+    }
+  });
+}
 function animateCounter(el, instant = false) { if (el.dataset.counted === 'true') return; el.dataset.counted = 'true'; const to = Number(el.dataset.to), suffix = el.dataset.suffix || ''; if (instant) { el.textContent = to.toLocaleString('en-IN') + suffix; return; } const start = performance.now(), duration = 1650; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
 const handleEscape = e => {
   if (e.key === 'Escape') {

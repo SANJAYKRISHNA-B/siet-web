@@ -4,8 +4,11 @@ import { sietHudHeader } from '../../components/common/HudHeader.js';
 import { renderCurriculumTable } from './CurriculumPage.js';
 
 export function departmentPage(dept) {
+  const normalize = (s) => (s || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
   const cleanDept = (dept || '').trim().toLowerCase();
+  const normDept = normalize(dept);
   const detailKey = Object.keys(departmentDetails).find(k => k.toLowerCase() === cleanDept)
+    || Object.keys(departmentDetails).find(k => normalize(k) === normDept)
     || Object.keys(departmentDetails).find(k => k.toLowerCase().replace(/[^a-z0-9]/g, '') === cleanDept.replace(/[^a-z0-9]/g, ''))
     || dept;
   const detail = departmentDetails[detailKey] || departmentDetails.default;

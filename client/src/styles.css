@@ -27564,6 +27564,7 @@ button.button.js-explore-campus {
   background: #064e32;
   color: #ffffff;
   font: 800 13px 'Montserrat', sans-serif;
+  text-decoration: none;
   cursor: pointer;
   box-shadow: 0 8px 22px rgba(6, 78, 50, 0.28);
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
@@ -31664,9 +31665,8 @@ button.button.js-explore-campus {
 
 .siet-vm-hero {
   position: relative;
-  min-height: 300px;
-  padding-top: 40px;
-  padding-bottom: 0.75rem;
+  min-height: auto;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   display: flex;
   align-items: center;
   isolation: isolate;
@@ -31722,7 +31722,7 @@ button.button.js-explore-campus {
 }
 
 .siet-vm-hero-content {
-  padding: 24px 0 22px
+  padding: 0
 }
 
 .siet-vm-kicker {
@@ -31977,26 +31977,41 @@ button.button.js-explore-campus {
   padding: clamp(22px, 2.5vw, 34px);
   isolation: isolate;
   overflow: hidden;
-  border: 1px solid var(--vm-line);
+  border: 1.5px solid #deebe3;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0 15px 35px rgba(0, 64, 39, .07);
-  transition: transform .38s cubic-bezier(.2, .8, .2, 1), box-shadow .38s ease
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s ease, border-color .25s ease;
 }
 
 .siet-vm-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 42px rgba(0, 64, 39, .12)
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 64, 39, .12), 0 0 0 1px #cca01d;
+  border-color: #cca01d;
 }
 
 .siet-vm-card-vision {
-  background: linear-gradient(145deg, #fff 0%, #f0f8ed 100%)
+  background: linear-gradient(145deg, #fff 0%, #f0f8ed 100%);
+  border: 1.5px solid #deebe3;
+}
+
+.siet-vm-card-vision:hover {
+  border-color: #cca01d !important;
+  box-shadow: 0 16px 36px rgba(0, 64, 39, .12), 0 0 0 1px #cca01d !important;
+  transform: translateY(-4px);
 }
 
 .siet-vm-card-mission {
   color: #fff;
-  border-color: transparent;
-  background: linear-gradient(145deg, #03442e, #087b4d)
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(145deg, #03442e, #087b4d);
+}
+
+.siet-vm-card-mission:hover {
+  border-color: #cca01d !important;
+  box-shadow: 0 18px 40px rgba(0, 45, 25, 0.28), 0 0 0 1.5px #cca01d !important;
+  transform: translateY(-4px);
 }
 
 .siet-vm-card-pattern {
@@ -32173,12 +32188,11 @@ button.button.js-explore-campus {
 @media(max-width:780px) {
   .siet-vm-hero {
     min-height: auto;
-    padding-top: 24px;
-    padding-bottom: 0.5rem
+    padding: clamp(18px, 2.5vw, 24px) 0;
   }
 
   .siet-vm-hero-content {
-    padding: 20px 0
+    padding: 0
   }
 
   .siet-vm-layout {
@@ -32223,12 +32237,11 @@ button.button.js-explore-campus {
 
   .siet-vm-hero {
     min-height: auto;
-    padding-top: 18px;
-    padding-bottom: 0.5rem
+    padding: 18px 0;
   }
 
   .siet-vm-hero-content {
-    padding: 18px 0
+    padding: 0
   }
 
   .siet-vm-kicker {
@@ -32321,9 +32334,8 @@ button.button.js-explore-campus {
 /* Program Outcomes — shares the About visual system while using an outcome grid. */
 .siet-po-hero {
   position: relative;
-  min-height: 300px;
-  padding-top: 40px;
-  padding-bottom: 0.75rem;
+  min-height: auto;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   display: flex;
   align-items: center;
   background: linear-gradient(116deg, #00281b 0%, #003f2c 48%, #005a39 78%, #00854a 100%)
@@ -32482,9 +32494,8 @@ button.button.js-explore-campus {
 /* Core Values — a warm, editorial treatment within the shared About layout. */
 .siet-cv-hero {
   position: relative;
-  min-height: 300px;
-  padding-top: 40px;
-  padding-bottom: 0.75rem;
+  min-height: auto;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   display: flex;
   align-items: center;
   background: linear-gradient(116deg, #00281b 0%, #003f2c 48%, #005a39 78%, #00854a 100%)
@@ -32620,9 +32631,8 @@ button.button.js-explore-campus {
 /* Philosophy — a quieter, narrative-led page within the shared About system. */
 .siet-ph-hero {
   position: relative;
-  min-height: 300px;
-  padding-top: 40px;
-  padding-bottom: 0.75rem;
+  min-height: auto;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   display: flex;
   align-items: center;
   background: linear-gradient(116deg, #00281b 0%, #003f2c 48%, #005a39 78%, #00854a 100%)
@@ -32866,9 +32876,8 @@ button.button.js-explore-campus {
 /* Core Beliefs — guided five-pillar roadmap within the About visual system */
 .siet-cb-hero {
   position: relative;
-  min-height: 300px;
-  padding-top: 40px;
-  padding-bottom: 0.75rem;
+  min-height: auto;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   display: flex;
   align-items: center;
   background: linear-gradient(116deg, #00281b 0%, #003f2c 48%, #005a39 78%, #00854a 100%)
@@ -36513,8 +36522,7 @@ button.button.js-explore-campus {
   /* Vision & Mission, Core Beliefs, Values, Philosophy */
   .siet-vm-hero {
     min-height: auto !important;
-    padding-top: 24px !important;
-    padding-bottom: 12px !important;
+    padding: clamp(18px, 2.5vw, 24px) 0 !important;
   }
 
   .siet-vm-hero-content {
@@ -36524,7 +36532,7 @@ button.button.js-explore-campus {
     text-align: center !important;
     margin-inline: auto !important;
     width: 100% !important;
-    padding: 16px 0 !important;
+    padding: 0 !important;
   }
 
   .siet-vm-hero-content .siet-cb-breadcrumbs {
@@ -44048,6 +44056,9 @@ button.coe-action-card {
   display: flex;
   gap: 10px;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .form-download-btn {
@@ -44061,11 +44072,20 @@ button.coe-action-card {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  max-width: 100%;
+  box-sizing: border-box;
   transition: background 0.2s ease;
 }
 
 .form-download-btn:hover {
   background: #01331f;
+}
+
+.form-download-btn span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .form-online-btn {
@@ -45253,7 +45273,8 @@ button.coe-action-card {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 2px 6px rgba(0, 45, 28, 0.12);
   transition: all 0.2s ease;
   flex-shrink: 0;

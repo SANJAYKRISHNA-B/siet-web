@@ -258,6 +258,8 @@
   }
 }
 .programme-card-v2 {
+  text-decoration: none !important;
+  color: inherit !important;
   background: #ffffff !important;
   border: 1px solid rgba(0, 75, 45, 0.08) !important;
   border-radius: 18px !important;

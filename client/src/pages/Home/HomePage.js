@@ -19,7 +19,6 @@ export function homePage() {
     <div class="home-impact-rule" aria-hidden="true"></div>
     <p>Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
     <div class="home-impact-actions">
-      <a class="home-impact-secondary" href="#/campus-life">Explore Campus <span>${icon('play')}</span></a>
       <button type="button" class="home-impact-360-btn js-open-techpark-360" aria-label="Explore Tech Park 360 View">
         <span class="impact-360-badge">360°</span>
         <span>Explore Tech Park 360°</span>
@@ -45,10 +44,6 @@ export function homePage() {
         <span class="about-small-title">OUR PURPOSE</span>
         <p>Sri Shakthi Institute of Engineering and Technology is an autonomous institution in Coimbatore, approved by AICTE and affiliated to Anna University.</p>
         <p>Our industry-driven ecosystem brings engineering out of textbooks and into the real world.</p>
-        <button type="button" class="discover-link js-discover-btn">
-          <span>Discover our vision</span>
-          <span class="arrow-circle">${icon('arrow')}</span>
-        </button>
       </div>
     </div>
     <div class="stats-grid">
@@ -139,7 +134,7 @@ export function homePage() {
       <p class="campus-desc">Explore learning, innovation, celebrations and everyday campus experiences from the Sri Shakthi community.</p>
       
       <div class="campus-actions">
-        <button type="button" class="campus-btn-primary js-explore-campus">Explore campus ${icon('arrow')}</button>
+        <a href="#/campus-life" class="campus-btn-primary js-explore-campus" aria-label="Explore Campus">Explore campus ${icon('arrow')}</a>
         <button type="button" class="campus-video-btn js-video">
           <span class="video-circle-icon">${icon('play')}</span>
           <span class="video-label-text">Watch<br>our story</span>
@@ -152,7 +147,7 @@ export function homePage() {
       </div>
     </aside>
 
-    <main class="campus-content">
+    <div class="campus-content">
       <div class="campus-gallery-v2">
         <!-- Card 01: Student Life -->
         <article class="campus-card-v2 card-01 reveal" role="button" tabindex="0">
@@ -300,7 +295,7 @@ export function homePage() {
     </aside>
 
     <!-- Right Column: Top Bar + 8-Card 4x2 Grid + Bottom Stats Row -->
-    <main class="labs-content">
+    <div class="labs-content">
       <!-- 8-Card 4x2 Gallery Grid -->
       <div class="labs-gallery-grid">
         <!-- Card 01: AI Lab -->

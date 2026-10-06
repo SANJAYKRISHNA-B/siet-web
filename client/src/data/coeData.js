@@ -513,7 +513,7 @@ export function coePortalPage(activeTab = 'about') {
                   <div class="download-card-bottom">
                     <a href="${sch.file}" target="_blank" rel="noopener" download="${sch.filename}" class="form-download-btn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                      <span>Download (${sch.filename})</span>
+                      <span>Download Schedule (PDF)</span>
                     </a>
                   </div>
                 </div>
@@ -543,7 +543,7 @@ export function coePortalPage(activeTab = 'about') {
                   <div class="download-card-bottom">
                     <a href="${form.file}" target="_blank" rel="noopener" download="${form.filename}" class="form-download-btn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                      <span>Download (${form.filename})</span>
+                      <span>Download Form (PDF)</span>
                     </a>
                   </div>
                 </div>
@@ -562,9 +562,9 @@ export function coePortalPage(activeTab = 'about') {
             </div>
 
             <!-- Featured Regulation 2025 vs 2021 Overview Cards -->
-            <div class="coe-reg-cards-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 28px;">
+            <div class="coe-reg-cards-container">
               <!-- R2025 Card -->
-              <div class="coe-reg-hero-card" style="background: linear-gradient(180deg, #f7faf8 0%, #edf6f0 100%); border: 1.5px solid #005a36; border-radius: 14px; padding: 22px; position: relative;">
+              <div class="coe-reg-hero-card coe-reg-card-2025">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
                   <span style="font-size: 11px; font-weight: 800; background: #005a36; color: #fff; padding: 3px 10px; border-radius: 14px; letter-spacing: 0.5px;">LATEST · R2025</span>
                   <span style="font-size: 12px; font-weight: 700; color: #cca01d;">168-Credit Framework</span>
@@ -582,7 +582,7 @@ export function coePortalPage(activeTab = 'about') {
               </div>
 
               <!-- R2021 Card -->
-              <div class="coe-reg-hero-card" style="background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%); border: 1.5px solid #d8e8dd; border-radius: 14px; padding: 22px; position: relative;">
+              <div class="coe-reg-hero-card coe-reg-card-2021">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
                   <span style="font-size: 11px; font-weight: 800; background: #2c4d38; color: #fff; padding: 3px 10px; border-radius: 14px; letter-spacing: 0.5px;">R2021 UG</span>
                   <span style="font-size: 12px; font-weight: 700; color: #005a36;">Choice Based Credit System</span>
@@ -615,7 +615,7 @@ export function coePortalPage(activeTab = 'about') {
                   <div class="download-card-bottom">
                     <a href="${reg.file}" target="_blank" rel="noopener" ${reg.file.endsWith('.pdf') ? `download="${reg.filename}"` : ''} class="form-download-btn">
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                      <span>${reg.file.endsWith('.pdf') ? `Download (${reg.filename})` : 'Open Regulations View'}</span>
+                      <span>${reg.file.endsWith('.pdf') ? 'Download Gazette (PDF)' : 'Open Regulations View'}</span>
                     </a>
                   </div>
                 </div>
@@ -682,7 +682,7 @@ export function coePortalPage(activeTab = 'about') {
                     <div class="download-card-bottom">
                       <a href="/download/Transcript application form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Download (Transcript application form.pdf)</span>
+                        <span>Download Application Form (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -697,7 +697,7 @@ export function coePortalPage(activeTab = 'about') {
                     <div class="download-card-bottom">
                       <a href="/download/Duplicate Certificate Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        <span>Download (Duplicate Certificate Form.pdf)</span>
+                        <span>Download Duplicate Form (PDF)</span>
                       </a>
                     </div>
                   </div>
@@ -963,7 +963,7 @@ export function coeResultPage() {
                 <div class="download-card-bottom">
                   <a href="/download/PhotoCopy-form.pdf" target="_blank" rel="noopener" download="PhotoCopy-form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <span>Download (PhotoCopy-form.pdf)</span>
+                    <span>Download Photocopy Form (PDF)</span>
                   </a>
                 </div>
               </div>
@@ -978,7 +978,7 @@ export function coeResultPage() {
                 <div class="download-card-bottom">
                   <a href="/download/Revaluation form.pdf" target="_blank" rel="noopener" download="Revaluation form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <span>Download (Revaluation form.pdf)</span>
+                    <span>Download Revaluation Form (PDF)</span>
                   </a>
                 </div>
               </div>
@@ -1061,7 +1061,7 @@ export function coeTranscriptPage() {
                 <div class="download-card-bottom">
                   <a href="/download/Transcript application form.pdf" target="_blank" rel="noopener" download="Transcript application form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <span>Download (Transcript application form.pdf)</span>
+                    <span>Download Application Form (PDF)</span>
                   </a>
                 </div>
               </div>
@@ -1076,7 +1076,7 @@ export function coeTranscriptPage() {
                 <div class="download-card-bottom">
                   <a href="/download/Duplicate Certificate Form.pdf" target="_blank" rel="noopener" download="Duplicate Certificate Form.pdf" class="form-download-btn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    <span>Download (Duplicate Certificate Form.pdf)</span>
+                    <span>Download Duplicate Form (PDF)</span>
                   </a>
                 </div>
               </div>

@@ -8,7 +8,7 @@ import { renderApplyLayout } from './layouts/ApplyLayout.js';
 import { icon } from './components/common/SvgIcons.js';
 import { videoModal, placementDetailsModal } from './components/common/Modals.js';
 import { openTechPark360 } from './components/TechPark360/TechPark360.js';
-import { programmeCards } from './components/cards/ProgrammeCard.js';
+import { programmeCards, getDeptSlug } from './components/cards/ProgrammeCard.js';
 
 import { homePage } from './pages/Home/HomePage.js';
 import {
@@ -24,7 +24,7 @@ import {
 import { programmesPage } from './pages/Academics/ProgrammesPage.js';
 import { departmentsPage } from './pages/Academics/DepartmentsPage.js';
 import { departmentPage } from './pages/Academics/DepartmentDetailPage.js';
-import { curriculumPage, getCurrModalData } from './pages/Academics/CurriculumPage.js';
+import { curriculumPage, getCurrModalData, bindCurriculumEvents } from './pages/Academics/CurriculumPage.js';
 import { academicCalendarPage } from './pages/Academics/AcademicCalendarPage.js';
 import { academicOverviewPage } from './pages/Academics/AcademicOverviewPage.js';
 import { libraryPage } from './pages/Academics/LibraryPage.js';
@@ -276,6 +276,7 @@ function bind() {
   bindPlacementEvents($, $$);
   bindGovernanceEvents($, $$);
   bindCampusEvents($, $$);
+  bindCurriculumEvents($, $$);
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";
@@ -499,139 +500,6 @@ function bind() {
     attachModalScrollTrap(modal);
   });
 
-  // Department switcher helper
-  const updateActiveDept = (deptId) => {
-    const dept = getDeptCurriculum(deptId, currActiveRegulation);
-    if (!dept) return;
-    currActiveDept = dept.id;
-
-    $$('.curr-dept-tab').forEach(tab => {
-      const isSelected = tab.dataset.dept === dept.id;
-      tab.classList.toggle('is-active', isSelected);
-      tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
-    });
-
-    const titleEl = $('#curr-dept-title');
-    const descEl = $('#curr-dept-desc');
-    if (titleEl) titleEl.textContent = `${dept.degree} ${dept.name}`;
-    if (descEl) descEl.textContent = dept.desc;
-
-    const tableArea = $('#curr-table-area');
-    if (tableArea) {
-      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
-    }
-
-    document.title = `${dept.degree} ${dept.name} Curriculum | SIET`;
-    if (window.history && window.history.replaceState) {
-      window.history.replaceState(null, '', `#/curriculum?dept=${dept.id}&regulation=${currActiveRegulation}`);
-    }
-  };
-
-  $$('.curr-dept-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const deptId = tab.dataset.dept;
-      if (deptId) updateActiveDept(deptId);
-    });
-  });
-
-  const updateActiveSem = (semNum) => {
-    const sem = Math.max(1, Math.min(8, Number(semNum) || 1));
-    currActiveSem = sem;
-
-    $$('.curr-sem-tab').forEach(tab => {
-      const isSelected = Number(tab.dataset.sem) === sem;
-      tab.classList.toggle('is-active', isSelected);
-      tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
-    });
-
-    const tableArea = $('#curr-table-area');
-    if (tableArea) {
-      tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
-    }
-  };
-
-  $$('.curr-sem-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const sem = Number(tab.dataset.sem);
-      if (sem) updateActiveSem(sem);
-    });
-  });
-
-  $$('.curr-regulation-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const regulation = button.dataset.regulation;
-      if (!['r2021', 'r2025'].includes(regulation) || regulation === currActiveRegulation) return;
-      currActiveRegulation = regulation;
-
-      $$('.curr-regulation-btn').forEach(item => {
-        const isSelected = item.dataset.regulation === regulation;
-        item.classList.toggle('is-active', isSelected);
-        item.setAttribute('aria-selected', isSelected ? 'true' : 'false');
-      });
-
-      const dept = getDeptCurriculum(currActiveDept, currActiveRegulation);
-      const descEl = $('#curr-dept-desc');
-      const tableArea = $('#curr-table-area');
-      if (descEl) descEl.textContent = dept.desc;
-      if (tableArea) {
-        tableArea.classList.remove('is-switching');
-        void tableArea.offsetWidth;
-        tableArea.classList.add('is-switching');
-        tableArea.innerHTML = renderCurriculumTable(currActiveDept, currActiveSem, currActiveRegulation);
-      }
-      if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, '', `#/curriculum?dept=${currActiveDept}&regulation=${currActiveRegulation}`);
-      }
-    });
-  });
-
-  $$('.js-curr-modal-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
-      const modal = $('.js-curr-modal');
-      const titleEl = $('.js-curr-modal-title');
-      const bodyEl = $('.js-curr-modal-body');
-      if (!modal || !titleEl || !bodyEl) return;
-      const data = getCurrModalData(target, currActiveDept);
-      titleEl.textContent = data.title;
-      bodyEl.innerHTML = data.content;
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-      lockModalScroll();
-      attachModalScrollTrap(modal);
-    });
-  });
-
-  $('.js-curr-modal-close')?.addEventListener('click', () => {
-    const modal = $('.js-curr-modal');
-    if (modal) {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      unlockModalScroll();
-    }
-  });
-
-  $('.js-curr-modal')?.addEventListener('click', e => {
-    const tabBtn = e.target.closest('.js-reg-tab-btn');
-    if (tabBtn) {
-      const target = tabBtn.dataset.target;
-      const titleEl = $('.js-curr-modal-title');
-      const bodyEl = $('.js-curr-modal-body');
-      if (titleEl && bodyEl && target) {
-        const data = getCurrModalData(target, currActiveDept);
-        titleEl.textContent = data.title;
-        bodyEl.innerHTML = data.content;
-      }
-      return;
-    }
-    if (e.target.classList.contains('js-curr-modal')) {
-      e.target.classList.remove('open');
-      e.target.setAttribute('aria-hidden', 'true');
-      unlockModalScroll();
-    }
-  });
-
-
   const mobile = $('.mobile-nav'), backdrop = $('.mobile-nav-backdrop'), toggle = $('.institution-mobile-toggle'), closeBtn = $('.mobile-nav-close');
   const syncHeaderScroll = () => $('.premium-header')?.classList.toggle('is-scrolled', window.scrollY > 36);
   syncHeaderScroll();
@@ -793,7 +661,20 @@ function bind() {
   }, true);
   bindCareerForm(careerForm, careerUnits, updateCareerUnit);
   if (careerForm) updateCareerUnit('college');
-  $$('.js-video').forEach(b => b.addEventListener('click', () => { document.body.insertAdjacentHTML('beforeend', videoModal()); document.body.style.overflow = 'hidden'; const modal = $('.video-modal'); const close = () => { modal?.remove(); document.body.style.overflow = '' }; modal?.addEventListener('click', e => e.target === modal && close()); $('.video-close', modal)?.addEventListener('click', close) }));
+  $$('.js-video').forEach(b => b.addEventListener('click', () => {
+    document.body.insertAdjacentHTML('beforeend', videoModal());
+    document.body.style.overflow = 'hidden';
+    const modal = $('.video-modal');
+    const onEsc = (e) => { if (e.key === 'Escape') close(); };
+    const close = () => {
+      window.removeEventListener('keydown', onEsc);
+      modal?.remove();
+      document.body.style.overflow = '';
+    };
+    window.addEventListener('keydown', onEsc);
+    modal?.addEventListener('click', e => e.target === modal && close());
+    $('.video-close', modal)?.addEventListener('click', close);
+  }));
   $$('.toggle-btn').forEach(b => b.addEventListener('click', () => {
     $$('.toggle-btn').forEach(x => x.classList.toggle('active', x === b));
     const isUG = b.dataset.level === 'UG';
@@ -811,8 +692,10 @@ function bind() {
   progGrid?.addEventListener('click', e => {
     const card = e.target.closest('.programme-card-v2, .programme-card');
     if (!card) return;
-    const course = card.dataset.course;
-    location.hash = '#/admission-enquiry';
+    const slug = card.dataset.slug || (typeof getDeptSlug === 'function' ? getDeptSlug(card.dataset.course) : '');
+    if (slug) {
+      location.hash = '#/department/' + slug;
+    }
   });
   progGrid?.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -893,7 +776,13 @@ function bind() {
 
   $('.js-scroll-programmes')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-discover-btn')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
-  $('.js-explore-campus')?.addEventListener('click', () => { $('.campus-gallery')?.scrollIntoView({ behavior: 'smooth' }) });
+  $$('.js-explore-campus').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.hash = '#/campus-life';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
   $$('.js-open-techpark-360').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();

@@ -2678,14 +2678,12 @@
     gap: 14px !important;
   }
 }
-.home-page .campus-section,
-.home-page .special-labs-section {
+.home-page .campus-section {
   box-sizing: border-box;
   padding-inline: clamp(24px, 4vw, 72px) !important;
 }
 
-.home-page .campus-container,
-.home-page .labs-container {
+.home-page .campus-container {
   width: min(100%, 1560px) !important;
   max-width: 1560px !important;
   margin-inline: auto !important;
@@ -2698,14 +2696,12 @@
   align-items: start !important;
 }
 
-.home-page .campus-left,
-.home-page .labs-left {
+.home-page .campus-left {
   min-width: 0;
   padding-block: clamp(8px, 1vw, 16px);
 }
 
-.home-page .campus-content,
-.home-page .labs-content {
+.home-page .campus-content {
   min-width: 0;
   box-sizing: border-box;
   padding: clamp(14px, 1.3vw, 22px);
@@ -2729,8 +2725,7 @@
   align-self: stretch;
 }
 
-.home-page .campus-card-v2 img,
-.home-page .lab-card img {
+.home-page .campus-card-v2 img {
   image-rendering: auto;
   image-rendering: -webkit-optimize-contrast;
   backface-visibility: hidden;
@@ -2741,21 +2736,18 @@
   align-items: stretch;
 }
 
-.home-page .campus-stats-pill,
-.home-page .labs-stats-pill {
+.home-page .campus-stats-pill {
   box-sizing: border-box;
   min-height: 66px;
 }
 
 @media (max-width: 1200px) {
-  .home-page .campus-container,
-  .home-page .labs-container {
+  .home-page .campus-container {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 30px !important;
   }
 
-  .home-page .campus-left,
-  .home-page .labs-left {
+  .home-page .campus-left {
     width: min(100%, 780px);
     max-width: 780px !important;
     padding-block: 0;
@@ -2763,8 +2755,7 @@
 }
 
 @media (max-width: 900px) {
-  .home-page .campus-section,
-  .home-page .special-labs-section {
+  .home-page .campus-section {
     padding-inline: clamp(16px, 4vw, 32px) !important;
   }
 
@@ -2772,32 +2763,27 @@
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
-  .home-page .campus-content,
-  .home-page .labs-content {
+  .home-page .campus-content {
     padding: 14px;
     border-radius: 22px;
   }
 }
 
 @media (max-width: 580px) {
-  .home-page .campus-section,
-  .home-page .special-labs-section {
+  .home-page .campus-section {
     padding-inline: 14px !important;
   }
 
-  .home-page .campus-container,
-  .home-page .labs-container {
+  .home-page .campus-container {
     gap: 24px !important;
   }
 
-  .home-page .campus-content,
-  .home-page .labs-content {
+  .home-page .campus-content {
     padding: 10px;
     border-radius: 18px;
   }
 
-  .home-page .campus-gallery-v2,
-  .home-page .labs-gallery-grid {
+  .home-page .campus-gallery-v2 {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 14px !important;
   }
@@ -3011,8 +2997,7 @@
     min-height: 0 !important;
   }
 }
-.home-page .campus-section,
-.home-page .special-labs-section {
+.home-page .campus-section {
   width: 100%;
   max-width: 100%;
   overflow: hidden !important;
@@ -3024,20 +3009,17 @@
 }
 
 @media (min-width: 961px) and (max-width: 1400px) {
-  .home-page .campus-section,
-  .home-page .special-labs-section {
+  .home-page .campus-section {
     padding-inline: clamp(24px, 3vw, 44px) !important;
   }
 
-  .home-page .campus-container,
-  .home-page .labs-container {
+  .home-page .campus-container {
     grid-template-columns: minmax(270px, 320px) minmax(0, 1fr) !important;
     gap: clamp(28px, 3vw, 44px) !important;
     align-items: center !important;
   }
 
-  .home-page .campus-content,
-  .home-page .labs-content {
+  .home-page .campus-content {
     padding: clamp(14px, 1.5vw, 20px);
   }
 
@@ -3048,15 +3030,13 @@
 }
 
 @media (max-width: 960px) {
-  .home-page .campus-container,
-  .home-page .labs-container {
+  .home-page .campus-container {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 26px !important;
     align-items: start !important;
   }
 
-  .home-page .campus-left,
-  .home-page .labs-left {
+  .home-page .campus-left {
     width: min(100%, 760px);
     max-width: 760px !important;
     margin: 0 !important;
@@ -3064,13 +3044,11 @@
 }
 
 @media (max-width: 580px) {
-  .home-page .campus-section,
-  .home-page .special-labs-section {
+  .home-page .campus-section {
     padding-inline: 14px !important;
   }
 
-  .home-page .campus-gallery-v2,
-  .home-page .labs-gallery-grid {
+  .home-page .campus-gallery-v2 {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 }

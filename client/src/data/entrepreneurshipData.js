@@ -817,13 +817,6 @@ export function entrepreneurshipPage() {
         <div class="siet-vm-hero-orb orb-one"></div>
         <div class="siet-vm-hero-orb orb-two"></div>
         <div class="siet-vm-shell siet-vm-hero-content reveal">
-          <nav class="coe-exec-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 16px;">
-            <a href="#/">Home</a>
-            <span class="sep">/</span>
-            <a href="#/placements">Placements</a>
-            <span class="sep">/</span>
-            <span class="cur">Entrepreneurship</span>
-          </nav>
           <p class="siet-vm-kicker"><i></i> SPECIAL INITIATIVE</p>
           <h1>Entrepreneurship <em>Development Cell</em></h1>
           <p class="siet-vm-intro">(Transforms innovative idea into a successful business model) &mdash; Headed by Shri Sheelan Thangavelu, Joint Secretary, Sri Shakthi Institute of Engineering Technology, Coimbatore.</p>

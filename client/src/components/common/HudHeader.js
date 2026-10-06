@@ -12,19 +12,14 @@ export function formatVmTitle(title) {
     return title.replace(/&/g, '<em>&amp;</em>');
   }
 
-  const lower = title.toLowerCase().trim();
-  if (lower === 'departments') return 'Academic <em>Departments</em>';
-  if (lower === 'library') return 'Central <em>Library</em>';
-  if (lower === 'careers') return 'Careers <em>at Sri Shakthi</em>';
-  if (lower === 'curriculum') return 'Autonomous <em>Curriculum</em>';
-
   const words = title.trim().split(/\s+/);
   if (words.length > 1) {
     const lastWord = words.pop();
     return `${words.join(' ')} <em>${lastWord}</em>`;
   }
 
-  return `<em>${title}</em>`;
+  // Single word: clean white normal format without gold italic <em> accent
+  return title.trim();
 }
 
 function getDefaultSubtitle(title, section) {

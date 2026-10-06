@@ -230,6 +230,58 @@ footer>small {
   border-right: 1px solid #ffffff25
 }
 
+.footer-reference .footer-brand .mark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-reference .footer-brand .mark > img {
+  display: block;
+  width: clamp(180px, 14vw, 230px);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.footer-reference .footer-brand .mark > span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 310px;
+}
+
+.footer-reference .footer-brand .mark b,
+.footer-reference .footer-brand .mark small,
+.footer-reference .footer-brand .mark em {
+  display: block;
+  position: static;
+  margin: 0;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.footer-reference .footer-brand .mark b {
+  font-size: clamp(22px, 1.7vw, 30px);
+  letter-spacing: .025em;
+}
+
+.footer-reference .footer-brand .mark small {
+  font-size: clamp(10px, .78vw, 13px);
+  font-weight: 700;
+}
+
+.footer-reference .footer-brand .mark em {
+  color: #f3c515;
+  font-size: clamp(10px, .72vw, 12px);
+  font-weight: 700;
+}
+
 .footer-reference .footer-brand>p {
   margin: 0;
   color: #fff;

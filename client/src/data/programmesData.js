@@ -56,4 +56,4 @@ export const pgProgramsDetailed = [
   { code: 'M-FARM', degree: 'M.Tech', name: 'Farm Machinery', fullName: 'M.Tech - Farm Machinery', desc: 'Advanced agricultural power machinery, precision agro-robotics, bio-energy engineering and automated harvesting systems.', duration: '2 Years', img: '/assets/images/category/cat1.jpg', deptSlug: 'agricultural-engineering' }
 ];
 
-export const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class="bottom-banner-cap">${deptIcon('grad')}</div><div class="bottom-banner-text"><h4>Choose a programme.</h4><p>Shape a better tomorrow.</p></div><div class="bottom-banner-line"></div><div class="bottom-banner-script">Engineers for a Better Tomorrow</div></div>`;
+export const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class="bottom-banner-cap">${deptIcon('grad')}</div><div class="bottom-banner-text"><h4>Choose a programme.</h4><p>Shape a better tomorrow.</p></div><div class="bottom-banner-line"></div></div>`;

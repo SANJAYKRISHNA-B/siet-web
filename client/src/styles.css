@@ -54322,3 +54322,91 @@ button.coe-action-card {
     line-height: 1.48 !important;
   }
 }
+
+/* Base institution-header-v4: fixed 95px frame with responsive children. */
+.institution-header-v4 {
+  width: 100% !important;
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.institution-header-v4 .institution-header-shell,
+.institution-header-v4 .institution-navbar {
+  width: 100% !important;
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+  margin: 0 !important;
+  padding-block: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.institution-header-v4 .institution-navbar {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.institution-header-v4 .siet-inline-brand,
+.institution-header-v4 .institution-menu,
+.institution-header-v4 .institution-nav-group,
+.institution-header-v4 .institution-nav-group > button,
+.institution-header-v4 .institution-nav-link {
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+  box-sizing: border-box !important;
+}
+
+.institution-header-v4 .siet-inline-brand {
+  min-width: 0 !important;
+  align-items: center !important;
+}
+
+.institution-header-v4 .institution-menu {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+  align-items: stretch !important;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .institution-header-v4 .siet-inline-brand {
+    flex: 0 1 365px !important;
+    padding-inline: 16px !important;
+  }
+
+  .institution-header-v4 .institution-menu {
+    gap: clamp(6px, .8vw, 12px) !important;
+    padding-inline: 8px !important;
+  }
+
+  .institution-header-v4 .institution-nav-group > button,
+  .institution-header-v4 .institution-nav-link {
+    padding-inline: clamp(4px, .5vw, 8px) !important;
+    font-size: clamp(12px, 1vw, 14px) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .institution-header-v4 .institution-navbar {
+    align-items: center !important;
+    padding-inline: clamp(10px, 3vw, 20px) !important;
+  }
+
+  .institution-header-v4 .institution-menu,
+  .institution-header-v4 .siet-inline-brand {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .institution-header-v4 .institution-mobile-toggle,
+  .institution-header-v4 .institution-mobile-logo,
+  .institution-header-v4 .institution-nav-apply {
+    flex: 0 0 auto !important;
+  }
+}

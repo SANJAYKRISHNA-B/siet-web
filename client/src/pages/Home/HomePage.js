@@ -67,7 +67,6 @@ export function homePage() {
   <div class="bottom-gold-line" aria-hidden="true"></div>
 </section>
 <section class="programmes-showcase programmes-section">
-  <div class="watermark-script bottom-script" aria-hidden="true">Engineers for a Better Tomorrow</div>
   <div class="programmes-container">
     <div class="programmes-hero-v2">
       <div class="programmes-left-col reveal">

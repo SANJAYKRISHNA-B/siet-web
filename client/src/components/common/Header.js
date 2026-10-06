@@ -60,7 +60,7 @@ export function header() {
 <aside class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
   <div class="mobile-nav-header">
     <a href="#/" class="mobile-nav-brand" aria-label="Sri Shakthi Home">
-      <img src="/brand/siet-logo.png" alt="Sri Shakthi Logo">
+      <img src="/brand/siet-institution-logo.png" alt="Sri Shakthi Logo">
       <div>
         <strong>SRI SHAKTHI</strong>
         <small>AUTONOMOUS INSTITUTION</small>
@@ -105,4 +105,3 @@ export function header() {
 export function applyHeader() {
   return header();
 }
-

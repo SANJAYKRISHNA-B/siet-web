@@ -1,5 +1,5 @@
 export function route() {
-  const raw = decodeURIComponent(location.hash.replace(/^#\/?/, '')).replace(/\/$/, '');
+  const raw = decodeURIComponent((location.hash || '').replace(/^[#/]+/, '')).replace(/\/$/, '');
   return raw.split('?')[0];
 }
 

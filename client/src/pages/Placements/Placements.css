@@ -10768,8 +10768,23 @@ body:has(.siet-edc-sidebar) {
 }
 
 .siet-yw-card-audit h2 em,
-.siet-vm-card-vision h2 em,
-.siet-yw-copy h2 em {
-  color: #B45309 !important; /* Deep visible gold/amber with high contrast */
+.siet-vm-card-vision h2 em {
+  color: #B45309 !important; /* Deep visible gold/amber with high contrast on white card */
   font-weight: 700 !important;
 }
+
+/* Growth Card on Deep Green Background: All heading text must be pure white */
+.siet-yw-card-growth h2,
+.siet-yw-card-growth h2 em,
+.siet-vm-card-mission.siet-yw-card-growth h2,
+.siet-vm-card-mission.siet-yw-card-growth h2 em {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure The Placement Journey heading in hero section is white */
+.siet-pj-hero-section .siet-pj-title,
+.siet-pj-hero-section .siet-pj-title em {
+  color: #ffffff !important;
+}
+

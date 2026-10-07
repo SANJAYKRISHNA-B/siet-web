@@ -430,7 +430,7 @@ export function placementsDashboardPage(route) {
               </div>
               <div class="siet-vm-card-copy siet-yw-copy">
                 <p class="siet-vm-card-label">TREND ANALYSIS (LAST 4 YEARS)</p>
-                <h2 style="color:#ffffff;">Placement Growth <em>&amp; Trajectory.</em></h2>
+                <h2 style="color:#ffffff !important;">Placement Growth <em style="color:#ffffff !important;">&amp; Trajectory.</em></h2>
                 <p class="siet-yw-card-desc" style="color:rgba(255,255,255,0.85);">Sustained upward progression in multi-tier recruiting partnerships and offer volumes.</p>
 
                 <!-- Legend Bar -->
@@ -639,7 +639,7 @@ export function placementsDashboardPage(route) {
         <div class="siet-pj-shell">
           <div class="siet-pj-head">
             <div class="siet-pj-kicker"><i></i> STRUCTURED CAREER ROADMAP</div>
-            <h2 class="siet-pj-title">The Placement <em>Journey</em></h2>
+            <h2 class="siet-pj-title" style="color: #ffffff !important;">The Placement <em style="color: #ffffff !important;">Journey</em></h2>
             <p class="siet-pj-subtitle">Transforming raw potential into industry-ready leaders through our comprehensive 6-stage training and recruitment pipeline.</p>
           </div>
 

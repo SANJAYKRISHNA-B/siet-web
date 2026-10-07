@@ -49,6 +49,9 @@ import {
   bindGovernanceEvents
 } from './pages/Accreditation/AccreditationPages.js';
 import { placementsPortalPage, bindPlacementEvents } from './pages/Placements/PlacementsPages.js';
+import { labDetailPage } from './pages/Labs/LabDetailPage.js';
+import { labsPage } from './pages/Labs/LabsPage.js';
+import { getLabBySlug } from './data/labData.js';
 
 import { careerUnits } from './data/careerData.js';
 import { careerFormFields, bindCareerForm } from './pages/Careers/careerForm.js';
@@ -65,6 +68,8 @@ function render() {
   unlockModalScroll();
   if (!appRoot) return;
   const r = route();
+  const isSpecialLabs = (r === 'special-labs');
+  const isHome = (!r || isSpecialLabs);
   const isApply = (r === 'apply' || r === 'admission-enquiry' || r === 'admission-referral' || r === 'referral');
 
   if (isApply) {
@@ -79,7 +84,7 @@ function render() {
     return;
   }
 
-  let content = !r ? homePage() :
+  let content = isHome ? homePage() :
     r === 'vision-mission' || r === 'about' ? visionPage() :
     r === 'core-beliefs' ? coreBeliefsPage() :
     r === 'program-outcomes' ? programOutcomesPage() :
@@ -110,14 +115,39 @@ function render() {
     r === 'ariia' || r === 'ariia-report' ? ariiaPage() :
     r === 'accreditations' || r === 'accreditation' || r === 'approvals' ? accreditationsOverviewPage() :
     r === 'placements' || r === 'placement' || r.startsWith('placements/') || r === 'entrepreneurship' || r === 'career-support/entrepreneurship' ? placementsPortalPage(r) :
+    r === 'labs' || r === 'all-labs' ? labsPage() :
+    r.startsWith('labs/') || r.startsWith('lab/') ? labDetailPage(r.replace(/^labs?\//, '')) :
     r === 'campus' || r === 'campus-life' ? internalPage('campus-life') :
     r === 'explore' || r === 'centres-of-excellence' ? internalPage('centres-of-excellence') :
     internalPage(r);
 
   appRoot.innerHTML = renderMainLayout(content, r);
-  document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`;
+  const currentLab = (r.startsWith('labs/') || r.startsWith('lab/')) ? getLabBySlug(r.replace(/^labs?\//, '')) : null;
+  document.title = currentLab ? `${currentLab.name} | Specialized Laboratories | SIET` : (r === 'labs' ? 'Specialized Laboratories | Sri Shakthi (SIET)' : `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`);
   bind();
-  scrollTo(0, 0);
+
+  if (isHome) {
+    if (r === 'special-labs') {
+      const scrollToLabs = () => {
+        const labsSec = document.getElementById('special-labs');
+        if (labsSec) {
+          const headerOffset = 95;
+          const elementPosition = labsSec.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition > 0 ? offsetPosition : 0,
+            behavior: 'smooth'
+          });
+        }
+      };
+      setTimeout(scrollToLabs, 60);
+      setTimeout(scrollToLabs, 250);
+    } else {
+      scrollTo(0, 0);
+    }
+  } else {
+    scrollTo(0, 0);
+  }
 }
 
 function bindCampusEvents($, $$) {
@@ -809,7 +839,7 @@ function bind() {
   $$('.lab-pill-btn').forEach(btn => btn.addEventListener('click', () => {
     $$('.lab-pill-btn').forEach(x => x.classList.toggle('active', x === btn));
     const cat = btn.dataset.cat;
-    $$('.lab-card').forEach(card => {
+    $$$('.lab-card').forEach(card => {
       if (cat === 'all' || card.dataset.cat === cat) {
         card.style.display = '';
         card.style.opacity = '1';
@@ -819,9 +849,46 @@ function bind() {
     });
   }));
   $$('.lab-card').forEach(card => {
-    card.addEventListener('click', () => { location.hash = '#/centres-of-excellence'; });
+    const slug = card.dataset.slug;
+    const targetHash = slug ? `#/labs/${slug}` : '#/centres-of-excellence';
+    card.addEventListener('click', () => {
+      location.hash = targetHash;
+    });
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/centres-of-excellence'; }
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        location.hash = targetHash;
+      }
+    });
+  });
+
+  $$('.lab-dir-filter-pill').forEach(btn => btn.addEventListener('click', () => {
+    $$('.lab-dir-filter-pill').forEach(b => b.classList.toggle('active', b === btn));
+    const filter = btn.dataset.filter;
+    $$('.labs-dir-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }));
+
+  $$('.js-lab-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const statusEl = form.querySelector('.lab-form-status');
+      const submitBtn = form.querySelector('.btn-submit-enquiry');
+      if (submitBtn) submitBtn.disabled = true;
+      if (statusEl) {
+        statusEl.className = 'lab-form-status success';
+        statusEl.textContent = '✓ Thank you! Your enquiry has been received. Our laboratory coordinator will get in touch with you shortly.';
+      }
+      form.reset();
+      setTimeout(() => {
+        if (submitBtn) submitBtn.disabled = false;
+      }, 3000);
     });
   });
   $('.labs-nav-arrows .prev-btn')?.addEventListener('click', () => {
@@ -1052,6 +1119,24 @@ const handleDocClick = e => {
       g.classList.remove('open');
       g.querySelector('button')?.setAttribute('aria-expanded', 'false');
     });
+  }
+
+  const specialLabsLink = e.target.closest('a[href*="special-labs"], .lab-back-btn');
+  if (specialLabsLink) {
+    const currentRoute = route();
+    if (!currentRoute || currentRoute === 'special-labs') {
+      e.preventDefault();
+      const labsSec = document.getElementById('special-labs');
+      if (labsSec) {
+        const headerOffset = 95;
+        const elementPosition = labsSec.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition > 0 ? offsetPosition : 0,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 };
 

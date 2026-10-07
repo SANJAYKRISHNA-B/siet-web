@@ -1092,7 +1092,7 @@ export function placementsPortalPage(route) {
               </div>
               <div class="siet-vm-card-copy siet-yw-copy">
                 <p class="siet-vm-card-label">INSTITUTIONAL METRIC ASCENT</p>
-                <h2 style="color:#ffffff;">Placement Growth <em>&amp; Trajectory.</em></h2>
+                <h2 style="color:#ffffff !important;">Placement Growth <em style="color:#ffffff !important;">&amp; Trajectory.</em></h2>
                 <p class="siet-yw-card-desc" style="color:rgba(255,255,255,0.85);">Visual trendline demonstrating consistent upward trajectory in campus offers, company partnerships, and top package tiers over 4 academic cycles.</p>
 
                 <!-- Chart Legend -->

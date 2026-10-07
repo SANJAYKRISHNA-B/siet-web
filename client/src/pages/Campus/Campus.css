@@ -7826,30 +7826,37 @@
 }
 
 .sncc-hero-block .sft-hero-heading {
-  color: #ffffff !important;
+  color: #064e3b !important;
   text-shadow: none !important;
 }
 
 .sncc-hero-block .sft-hero-lead {
-  color: #e2e8f0 !important;
+  color: #334155 !important;
 }
 
 .sncc-hero-block .sft-hero-lead strong {
-  color: #ffffff !important;
-  background: none !important;
-  padding: 0 !important;
-  border: none !important;
+  color: #064e3b !important;
+  background: #e6f4ea !important;
+  padding: 2px 7px !important;
+  border-radius: 5px !important;
 }
 
 .sncc-hero-block .sft-hero-pills span {
-  background: rgba(255, 255, 255, 0.09) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.sncc-hero-block .sft-hero-pills span:hover {
+  border-color: #0b6946 !important;
+  color: #0b6946 !important;
+  box-shadow: 0 6px 14px rgba(11, 105, 70, 0.12) !important;
 }
 
 .sncc-hero-block .sft-check-icon {
-  background: #f4c515 !important;
-  color: #032e1e !important;
+  background: #0b6946 !important;
+  color: #ffffff !important;
 }
 
 @media (max-width: 1024px) {

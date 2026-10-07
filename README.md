@@ -17,8 +17,9 @@ SIET_WEB/
 │       ├── app.js              # Master SPA router & event orchestrator
 │       ├── main.jsx            # Application entry point
 │       ├── styles/
-│       │   └── variables.css   # Institutional design tokens (palette, spacing, typography)
-│       ├── styles.css          # Core CSS stylesheet
+│       │   ├── variables.css   # Institutional design tokens (palette, spacing, typography)
+│       │   ├── global.css      # Core global resets, typography and layout defaults
+│       │   └── utilities.css   # Layout utilities, animations, and elevation helpers
 │       ├── utils/              # Pure utilities (DOM, router, animations, forms, modals)
 │       │   ├── dom.js          # DOM query, titleCase, escapeHtml, slugify, counter
 │       │   ├── router.js       # Hash router, query parser, navigateTo, scroll handling

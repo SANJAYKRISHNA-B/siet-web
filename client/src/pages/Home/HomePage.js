@@ -298,44 +298,44 @@ export function homePage() {
       <!-- 8-Card 4x2 Gallery Grid -->
       <div class="labs-gallery-grid">
         <!-- Card 01: AI Lab -->
-        <article class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="01 AI Lab - Explore intelligent solutions for tomorrow.">
+        <a href="#/labs/ai-lab" class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging" data-slug="ai-lab" aria-label="01 AI Lab - Explore intelligent solutions for tomorrow.">
           <img src="/brand/special-labs/lab-ai-hd.jpg" alt="01 AI Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 02: Cyber & Cloud Lab -->
-        <article class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="02 Cyber & Cloud Lab - Secure today. Scale tomorrow.">
+        <a href="#/labs/cyber-cloud-lab" class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging" data-slug="cyber-cloud-lab" aria-label="02 Cyber & Cloud Lab - Secure today. Scale tomorrow.">
           <img src="/brand/special-labs/lab-cyber-cloud-hd.jpg" alt="02 Cyber & Cloud Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 03: VLSI Lab -->
-        <article class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core" aria-label="03 VLSI Lab - Designing the next generation chips.">
+        <a href="#/labs/vlsi-lab" class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core" data-slug="vlsi-lab" aria-label="03 VLSI Lab - Designing the next generation chips.">
           <img src="/brand/special-labs/lab-vlsi-hd.jpg" alt="03 VLSI Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 04: Embedded Systems Lab -->
-        <article class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core" aria-label="04 Embedded Systems Lab - Build. Integrate. Innovate.">
+        <a href="#/labs/embedded-systems-lab" class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core" data-slug="embedded-systems-lab" aria-label="04 Embedded Systems Lab - Build. Integrate. Innovate.">
           <img src="/brand/special-labs/lab-embedded-hd.jpg" alt="04 Embedded Systems Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 05: IoT Lab -->
-        <article class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="05 IoT Lab - Connect ideas to a smarter world.">
+        <a href="#/labs/iot-lab" class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging" data-slug="iot-lab" aria-label="05 IoT Lab - Connect ideas to a smarter world.">
           <img src="/brand/special-labs/lab-iot-hd.jpg" alt="05 IoT Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 06: AR & VR Lab -->
-        <article class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design" aria-label="06 AR & VR Lab - Experience. Create. Go Beyond.">
+        <a href="#/labs/ar-vr-lab" class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design" data-slug="ar-vr-lab" aria-label="06 AR & VR Lab - Experience. Create. Go Beyond.">
           <img src="/brand/special-labs/lab-ar-vr-hd.jpg" alt="06 AR & VR Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 07: PCB Design & Assembly Lab -->
-        <article class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core" aria-label="07 PCB Design & Assembly Lab - From design to real-world prototypes.">
+        <a href="#/labs/pcb-design-assembly-lab" class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core" data-slug="pcb-design-assembly-lab" aria-label="07 PCB Design & Assembly Lab - From design to real-world prototypes.">
           <img src="/brand/special-labs/lab-pcb-hd.jpg" alt="07 PCB Design & Assembly Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
 
         <!-- Card 08: Robotics & Automation Lab -->
-        <article class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design" aria-label="08 Robotics & Automation Lab - Ideate. Build. Automate.">
+        <a href="#/labs/robotics-automation-lab" class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design" data-slug="robotics-automation-lab" aria-label="08 Robotics & Automation Lab - Ideate. Build. Automate.">
           <img src="/brand/special-labs/lab-robotics-hd.jpg" alt="08 Robotics & Automation Lab" loading="lazy" decoding="async">
-        </article>
+        </a>
       </div>
 
       <!-- Bottom Floating Stats Row (Centered underneath the 4-column gallery) -->

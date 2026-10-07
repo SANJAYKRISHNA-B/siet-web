@@ -1,16 +1,25 @@
-import { sietHudHeader } from '../../components/common/HudHeader.js';
 import { ugProgramsDetailed, pgProgramsDetailed } from '../../data/programmesData.js';
-import { renderAcademicsSidebar, renderAcademicsModal } from './CurriculumPage.js';
 import { departmentCurricula } from '../../data/curriculumData.js';
 
-export function academicOverviewPageLegacy() {
+export function academicOverviewPage() {
   // Dynamic metrics directly derived from existing project data
   const totalCredits = departmentCurricula['cse']
     ? Object.values(departmentCurricula['cse'].semesters).reduce((sum, s) => sum + (s.credits || 0), 0)
     : 168;
-  const totalDisciplines = ugProgramsDetailed.length + pgProgramsDetailed.length;
   const ugCount = ugProgramsDetailed.length;
   const pgCount = pgProgramsDetailed.length;
+  const totalDisciplines = ugCount + pgCount;
+
+  const labs = [
+    { num: '01', name: 'AI Lab', slug: 'ai-lab', desc: 'GPU-accelerated deep learning, computer vision, and neural network experimentation.' },
+    { num: '02', name: 'Cyber & Cloud Lab', slug: 'cyber-cloud-lab', desc: 'Enterprise cybersecurity, ethical penetration testing, and multi-cloud virtual testbeds.' },
+    { num: '03', name: 'VLSI Lab', slug: 'vlsi-lab', desc: 'Industry-standard EDA cadence suites for ASIC synthesis, FPGA prototyping, and layout verification.' },
+    { num: '04', name: 'Embedded Systems Lab', slug: 'embedded-systems-lab', desc: 'Real-time operating systems, ARM Cortex silicon microcontrollers, and firmware development.' },
+    { num: '05', name: 'IoT Lab', slug: 'iot-lab', desc: 'Connected edge sensors, industrial wireless mesh protocols, and smart telemetry gateways.' },
+    { num: '06', name: 'AR & VR Lab', slug: 'ar-vr-lab', desc: 'Spatial computing, immersive 3D simulation engines, and virtual training simulations.' },
+    { num: '07', name: 'PCB Design Lab', slug: 'pcb-design-lab', desc: 'Precision PCB prototyping, surface-mount soldering, and RF high-frequency circuit analysis.' },
+    { num: '08', name: 'Robotics Lab', slug: 'robotics-lab', desc: 'Multi-axis articulated robotic arms, autonomous mobile robots (AMRs), and PLC industrial automation.' }
+  ];
 
   return `<main class="siet-acad-overview">
     <section class="acad-ov-unified-section" aria-label="Academic Overview">
@@ -22,12 +31,12 @@ export function academicOverviewPageLegacy() {
         <div class="acad-ov-decor-ring ring-2"></div>
       </div>
 
-      <!-- TOP HERO COMPOSITION (Deep Green #003F32) -->
+      <!-- TOP HERO COMPOSITION (Deep Green Dominant) -->
       <div class="acad-ov-hero-container">
         <div class="acad-ov-shell">
           <div class="acad-ov-hero-grid">
             
-            <!-- LEFT COLUMN -->
+            <!-- LEFT COLUMN: TITLE, INTRO, ACTIONS & INSTITUTIONAL CREDENTIALS -->
             <div class="acad-ov-hero-left reveal">
               <div class="acad-ov-kicker-wrap">
                 <span class="acad-ov-kicker">ACADEMIC OVERVIEW</span>
@@ -35,12 +44,28 @@ export function academicOverviewPageLegacy() {
               </div>
 
               <h1 class="acad-ov-main-heading">
-                Outcome-Driven <span class="acad-ov-accent-text">Engineering Education</span> Grounded in Excellence.
+                Where Knowledge Translates into <span class="acad-ov-accent-text">Capability.</span>
               </h1>
 
               <p class="acad-ov-hero-desc">
-                Sri Shakthi Institute of Engineering and Technology delivers an agile, forward-looking academic ecosystem anchored in our Autonomous Regulations 2025 (R2025) ${totalCredits}-credit framework. Spanning ${totalDisciplines} undergraduate and postgraduate engineering disciplines, our outcome-based model seamlessly integrates foundational sciences with continuous laboratory immersion, multidisciplinary electives, and industry-partnered capstone innovation.
+                Sri Shakthi Institute of Engineering and Technology delivers an autonomous, outcome-driven academic ecosystem built around our Autonomous Regulations 2025 (R2025) ${totalCredits}-credit framework. Across ${totalDisciplines} undergraduate and postgraduate engineering disciplines, students cultivate deep theoretical foundations coupled with continuous laboratory immersion, multidisciplinary electives, and industry capstone innovation.
               </p>
+
+              <!-- HERO ACTION BUTTONS -->
+              <div class="acad-ov-hero-actions">
+                <a href="#/programmes" class="acad-ov-hero-btn primary" id="btn-acad-programmes">
+                  <span>Explore Programmes</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                </a>
+                <a href="#/curriculum" class="acad-ov-hero-btn secondary" id="btn-acad-curriculum">
+                  <span>View R2025 Curriculum</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="#/labs" class="acad-ov-hero-btn ghost" id="btn-acad-labs">
+                  <span>8 Specialized Labs</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
 
               <!-- INSTITUTIONAL BADGE ROW -->
               <div class="acad-ov-inst-badges" aria-label="Institutional credentials and affiliations">
@@ -92,7 +117,7 @@ export function academicOverviewPageLegacy() {
               </div>
             </div>
 
-            <!-- RIGHT COLUMN: CAMPUS / ACADEMIC IMAGE -->
+            <!-- RIGHT COLUMN: UNOBSTRUCTED HIGH-DEFINITION CAMPUS FRAME -->
             <div class="acad-ov-hero-right reveal">
               <div class="acad-ov-campus-frame">
                 <img src="/brand/techpark-local.png" alt="Sri Shakthi Campus &amp; Academic Innovation Hub" class="acad-ov-campus-img" loading="eager" decoding="async">
@@ -113,7 +138,7 @@ export function academicOverviewPageLegacy() {
         </div>
       </div>
 
-      <!-- ORGANIC CURVED TRANSITION (From Deep Green into Cream #FFF8DF) -->
+      <!-- ORGANIC CURVED TRANSITION (From Deep Green into Warm Cream #FFF8DF) -->
       <div class="acad-ov-curved-transition" aria-hidden="true">
         <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
           <path d="M0,45 C320,115 680,15 1060,85 C1240,115 1360,95 1440,75 L1440,120 L0,120 Z" fill="#FFC928" opacity="0.45"/>
@@ -156,7 +181,7 @@ export function academicOverviewPageLegacy() {
               <p class="acad-ov-card-desc">${ugCount} UG &amp; ${pgCount} PG Academic Programmes</p>
             </article>
 
-            <!-- CARD 3: OUTCOME BASED -->
+            <!-- CARD 3: CONTINUOUS ASSESSMENT -->
             <article class="acad-ov-card reveal">
               <div class="acad-ov-card-icon-area" aria-hidden="true">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -165,9 +190,9 @@ export function academicOverviewPageLegacy() {
                   <circle cx="12" cy="12" r="2"/>
                 </svg>
               </div>
-              <div class="acad-ov-card-value">100%</div>
-              <div class="acad-ov-card-label">OUTCOME BASED</div>
-              <p class="acad-ov-card-desc">Bloom’s Taxonomy &amp; Experiential Learning Model</p>
+              <div class="acad-ov-card-value">40%</div>
+              <div class="acad-ov-card-label">CONTINUOUS ASSESSMENT</div>
+              <p class="acad-ov-card-desc">Feedback-Led Evaluation &amp; Practical Mastery</p>
             </article>
 
             <!-- CARD 4: ACCREDITATION -->
@@ -227,7 +252,7 @@ export function academicOverviewPageLegacy() {
                 <div class="pillar-marker">03</div>
                 <div class="pillar-body">
                   <h3>Autonomous Regulations 2025 (R2025)</h3>
-                  <p>The 168-credit autonomous curriculum gives students agility: combining disciplinary specialization with open multidisciplinary electives, minor degree tracks, continuous internal evaluations (40%), and fast-track capstone pathways.</p>
+                  <p>The ${totalCredits}-credit autonomous curriculum gives students agility: combining disciplinary specialization with open multidisciplinary electives, minor degree tracks, continuous internal evaluations (40%), and fast-track capstone pathways.</p>
                 </div>
               </div>
 
@@ -261,6 +286,40 @@ export function academicOverviewPageLegacy() {
         </div>
       </div>
 
+      <!-- SECTION 02: SPECIALIZED LABORATORIES SPOTLIGHT -->
+      <div class="acad-ov-labs-wrapper" aria-label="Specialized Laboratories">
+        <div class="acad-ov-shell">
+          <div class="acad-ov-section-head reveal">
+            <span class="acad-ov-section-tag">02 / EXPERIMENTAL EXCELLENCE</span>
+            <h2 class="acad-ov-section-title light">8 Dedicated <em>Specialized Laboratories</em></h2>
+            <p class="acad-ov-section-desc light">
+              Theory is tested and transformed into tangible prototypes across purpose-built research centers equipped with enterprise silicon, computing clusters, and precision prototyping instruments.
+            </p>
+          </div>
+
+          <div class="acad-ov-labs-grid">
+            ${labs.map(lab => `
+              <a href="#/labs/${lab.slug}" class="acad-ov-lab-card reveal" id="acad-lab-${lab.slug}">
+                <span class="acad-ov-lab-number">${lab.num} &bull; SPECIALIZED LAB</span>
+                <h3 class="acad-ov-lab-name">${lab.name}</h3>
+                <p class="acad-ov-lab-desc">${lab.desc}</p>
+                <span class="acad-ov-lab-link">
+                  Explore Facility
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </span>
+              </a>
+            `).join('')}
+          </div>
+
+          <div class="acad-ov-labs-footer reveal">
+            <a href="#/labs" class="acad-ov-labs-viewall" id="btn-view-all-labs">
+              <span>View All 8 Laboratory Dedicated Pages</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- ORGANIC CURVED TRANSITION (Deep Green into Cream #FFF8DF) -->
       <div class="acad-ov-curved-transition to-cream" aria-hidden="true">
         <svg class="acad-ov-wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
@@ -269,11 +328,11 @@ export function academicOverviewPageLegacy() {
         </svg>
       </div>
 
-      <!-- SECTION 02: THE LEARNING EXPERIENCE (Cream #FFF8DF) -->
+      <!-- SECTION 03: THE LEARNING EXPERIENCE (Cream #FFF8DF) -->
       <div class="acad-ov-experience-wrapper">
         <div class="acad-ov-shell">
           <div class="acad-ov-section-head reveal">
-            <span class="acad-ov-section-tag dark">02 / LEARNING EXPERIENCE</span>
+            <span class="acad-ov-section-tag dark">03 / LEARNING EXPERIENCE</span>
             <h2 class="acad-ov-section-title dark">The Student Journey: <em>From Fundamentals to Capstone Mastery</em></h2>
             <p class="acad-ov-section-desc dark">
               How students experience academics at Sri Shakthi: a progressive, guided trajectory designed to cultivate independent inquiry, technical proficiency, and professional confidence.
@@ -357,11 +416,11 @@ export function academicOverviewPageLegacy() {
         </svg>
       </div>
 
-      <!-- SECTION 03: ACADEMIC PHILOSOPHY & OUTCOMES (Deep Green #003F32) -->
+      <!-- SECTION 04: ACADEMIC PHILOSOPHY & OUTCOMES (Deep Green #003F32) -->
       <div class="acad-ov-philosophy-wrapper">
         <div class="acad-ov-shell">
           <div class="acad-ov-section-head reveal">
-            <span class="acad-ov-section-tag">03 / PHILOSOPHY &amp; OUTCOMES</span>
+            <span class="acad-ov-section-tag">04 / PHILOSOPHY &amp; OUTCOMES</span>
             <h2 class="acad-ov-section-title light">Knowledge in Action. <em>Character in Leadership.</em></h2>
             <p class="acad-ov-section-desc light">
               Rooted in our enduring institutional beliefs, the academic experience develops four complementary dimensions of graduate capability.
@@ -408,9 +467,9 @@ export function academicOverviewPageLegacy() {
               <h3>Ready to explore the full academic structure?</h3>
               <p>Review semester-wise course syllabi, credit distribution, elective tracks, and autonomous regulations.</p>
             </div>
-            <a href="#/curriculum" class="acad-ov-curriculum-btn">
+            <a href="#/curriculum" class="acad-ov-curriculum-btn" id="btn-acad-view-curriculum">
               <span>View Autonomous Curriculum Structure</span>
-              <span class="acad-ov-btn-arrow" aria-hidden="true">→</span>
+              <span class="acad-ov-btn-arrow" aria-hidden="true">&rarr;</span>
             </a>
           </div>
 
@@ -441,117 +500,4 @@ export function academicOverviewPageLegacy() {
   </main>`;
 }
 
-export function academicOverviewPage() {
-  const totalCredits = departmentCurricula['cse']
-    ? Object.values(departmentCurricula['cse'].semesters).reduce((sum, semester) => sum + (semester.credits || 0), 0)
-    : 168;
-  const ugCount = ugProgramsDetailed.length;
-  const pgCount = pgProgramsDetailed.length;
-  const totalDisciplines = ugCount + pgCount;
-
-  const metrics = [
-    [totalCredits, '', 'Curriculum credits', 'Autonomous R2025 framework'],
-    [totalDisciplines, '', 'Specialised disciplines', `${ugCount} UG and ${pgCount} PG programmes`],
-    [40, '%', 'Continuous assessment', 'Feedback-led learning and evaluation'],
-    [8, '', 'NBA-accredited programmes', 'Alongside institutional NAAC A accreditation']
-  ];
-
-  const pillars = [
-    ['01', 'Learn the principles', 'Build mathematical, scientific and computational foundations through connected classroom instruction.'],
-    ['02', 'Test every idea', 'Move continuously between theory, laboratories, design studios and industry-grade simulation environments.'],
-    ['03', 'Choose your direction', 'Shape a distinctive pathway through minors, multidisciplinary electives and emerging technology tracks.'],
-    ['04', 'Build for the world', 'Turn knowledge into prototypes, research, internships and an industry-partnered capstone project.']
-  ];
-
-  const journey = [
-    ['Year 01', 'Discover', 'Foundational sciences, engineering practices, programming and communication.'],
-    ['Years 02–03', 'Deepen', 'Core specialisation, continuous labs, mini-projects and design thinking.'],
-    ['Year 04', 'Deliver', 'Advanced electives, industry internship, research and capstone innovation.']
-  ];
-
-  const outcomes = [
-    ['01', 'Conceptual mastery', 'Understand systems from first principles and reason with confidence.'],
-    ['02', 'Applied intelligence', 'Translate complex challenges into practical engineering responses.'],
-    ['03', 'Creative responsibility', 'Design ethical, sustainable and human-centred technology.'],
-    ['04', 'Professional readiness', 'Communicate, collaborate and adapt in a changing global workplace.']
-  ];
-
-  return `<main class="academic-new">
-    <section class="siet-vm-hero academic-new-hero">
-      <div class="siet-vm-hero-grid"></div>
-      <div class="siet-vm-hero-orb orb-one"></div>
-      <div class="siet-vm-hero-orb orb-two"></div>
-      <div class="siet-vm-shell academic-new-hero-grid">
-        <div class="academic-new-hero-copy reveal">
-          <p class="siet-vm-kicker"><i></i> ACADEMIC OVERVIEW</p>
-          <h1>Where knowledge becomes <em>capability.</em></h1>
-          <p class="siet-vm-intro">An autonomous engineering education built around strong foundations, purposeful experimentation and the confidence to solve real problems.</p>
-          <div class="academic-new-actions">
-            <a class="academic-new-primary" href="#/programmes">Explore programmes <span>↗</span></a>
-            <a class="academic-new-text-link" href="#/curriculum">View R2025 curriculum <span>→</span></a>
-          </div>
-          <div class="academic-new-credentials">
-            <span>Autonomous Institution</span><i></i><span>Anna University</span><i></i><span>TNEA 2727</span>
-          </div>
-        </div>
-        <div class="academic-new-hero-media reveal">
-          <div class="academic-new-photo-main"><img src="/brand/techpark-local.png" alt="Sri Shakthi academic campus"></div>
-          <div class="academic-new-photo-small"><img src="/brand/departments-campus.jpg" alt="Students learning in a collaborative engineering environment"></div>
-          <div class="academic-new-seal"><strong>R2025</strong><span>Autonomous<br>Curriculum</span></div>
-          <p class="academic-new-image-note">Learning designed for<br><strong>depth + application</strong></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="academic-new-metrics" aria-label="Academic highlights">
-      <div class="academic-new-shell academic-new-metrics-grid">
-        ${metrics.map(([value, suffix, label, note], index) => `<article class="academic-new-metric reveal"><span class="academic-new-metric-index">0${index + 1}</span><strong><span class="js-counter" data-to="${value}" data-suffix="${suffix}">0${suffix}</span></strong><h2>${label}</h2><p>${note}</p><i class="academic-new-metric-rule"></i></article>`).join('')}
-      </div>
-    </section>
-
-    <section class="academic-new-model">
-      <div class="academic-new-shell">
-        <div class="academic-new-section-intro reveal">
-          <p class="academic-new-kicker dark"><span></span> THE SRI SHAKTHI MODEL</p>
-          <div><h2>Education is not a straight line.</h2><p>It is a cycle of understanding, experimenting, choosing and creating. Every part of our academic model is designed to keep that cycle moving.</p></div>
-        </div>
-        <div class="academic-new-model-layout">
-          <div class="academic-new-model-visual reveal">
-            <img src="/brand/departments-campus.jpg" alt="Engineering laboratory learning at Sri Shakthi">
-            <div class="academic-new-vertical-word">EXPERIENCE</div>
-          </div>
-          <div class="academic-new-pillars">
-            ${pillars.map(([number, title, text]) => `<article class="academic-new-pillar reveal"><span>${number}</span><div><h3>${title}</h3><p>${text}</p></div><b>↗</b></article>`).join('')}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="academic-new-journey">
-      <div class="academic-new-shell">
-        <div class="academic-new-journey-head reveal"><p>YOUR FOUR-YEAR JOURNEY</p><h2>From curious learner<br>to confident engineer.</h2></div>
-        <div class="academic-new-timeline reveal">
-          ${journey.map(([year, title, text], index) => `<article class="academic-new-stage reveal"><div class="academic-new-stage-dot"><span>${index + 1}</span></div><p>${year}</p><h3>${title}</h3><div>${text}</div></article>`).join('')}
-        </div>
-        <blockquote class="academic-new-quote reveal"><span>“</span><p>Education should inspire students to question, create, collaborate and use their capabilities to make a meaningful difference.</p><footer>Sri Shakthi Academic Philosophy</footer></blockquote>
-      </div>
-    </section>
-
-    <section class="academic-new-outcomes">
-      <div class="academic-new-shell academic-new-outcomes-layout">
-        <div class="academic-new-outcomes-copy reveal"><p class="academic-new-kicker"><span></span> GRADUATE OUTCOMES</p><h2>Ready for work.<br>Ready for life.</h2><p>Our graduates leave with more than a degree. They carry four complementary capabilities into every challenge.</p></div>
-        <div class="academic-new-outcomes-grid">
-          ${outcomes.map(([number, title, text]) => `<article class="academic-new-outcome reveal"><span>${number}</span><h3>${title}</h3><p>${text}</p></article>`).join('')}
-        </div>
-      </div>
-    </section>
-
-    <section class="academic-new-cta">
-      <div class="academic-new-shell academic-new-cta-inner reveal">
-        <div><p>THE COMPLETE ACADEMIC BLUEPRINT</p><h2>See how every semester builds momentum.</h2></div>
-        <a href="#/curriculum">Explore the curriculum <span>→</span></a>
-      </div>
-    </section>
-  </main>`;
-}
-
+export const academicOverviewPageLegacy = academicOverviewPage;

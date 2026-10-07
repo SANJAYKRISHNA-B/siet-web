@@ -22,6 +22,15 @@ import {
   accreditationsOverviewPage 
 } from '../client/src/pages/Accreditation/AccreditationPages.js';
 import { placementsPortalPage } from '../client/src/pages/Placements/PlacementsPages.js';
+import { labsPage } from '../client/src/pages/Labs/LabsPage.js';
+import { aiLabPage } from '../client/src/pages/Labs/AILab.js';
+import { cyberCloudLabPage } from '../client/src/pages/Labs/CyberCloudLab.js';
+import { vlsiLabPage } from '../client/src/pages/Labs/VLSILab.js';
+import { embeddedSystemsLabPage } from '../client/src/pages/Labs/EmbeddedSystemsLab.js';
+import { iotLabPage } from '../client/src/pages/Labs/IoTLab.js';
+import { arVrLabPage } from '../client/src/pages/Labs/ARVRLab.js';
+import { pcbDesignAssemblyLabPage } from '../client/src/pages/Labs/PCBDesignAssemblyLab.js';
+import { roboticsAutomationLabPage } from '../client/src/pages/Labs/RoboticsAutomationLab.js';
 import { renderMainLayout } from '../client/src/layouts/MainLayout.js';
 import { renderApplyLayout } from '../client/src/layouts/ApplyLayout.js';
 
@@ -75,7 +84,16 @@ const pagesToTest = [
   { name: 'Governance Page', fn: () => governancePage('all'), layout: 'main' },
   { name: 'Accreditation Overview', fn: () => accreditationsOverviewPage(), layout: 'main' },
   { name: 'Placements Portal', fn: () => placementsPortalPage('placements'), layout: 'main' },
-  { name: 'Entrepreneurship Portal', fn: () => placementsPortalPage('entrepreneurship'), layout: 'main' }
+  { name: 'Entrepreneurship Portal', fn: () => placementsPortalPage('entrepreneurship'), layout: 'main' },
+  { name: 'Labs Directory Page', fn: () => labsPage(), layout: 'main' },
+  { name: '01 AI Lab Page', fn: () => aiLabPage(), layout: 'main' },
+  { name: '02 Cyber & Cloud Lab Page', fn: () => cyberCloudLabPage(), layout: 'main' },
+  { name: '03 VLSI Lab Page', fn: () => vlsiLabPage(), layout: 'main' },
+  { name: '04 Embedded Systems Lab Page', fn: () => embeddedSystemsLabPage(), layout: 'main' },
+  { name: '05 IoT Lab Page', fn: () => iotLabPage(), layout: 'main' },
+  { name: '06 AR & VR Lab Page', fn: () => arVrLabPage(), layout: 'main' },
+  { name: '07 PCB Design Lab Page', fn: () => pcbDesignAssemblyLabPage(), layout: 'main' },
+  { name: '08 Robotics Lab Page', fn: () => roboticsAutomationLabPage(), layout: 'main' }
 ];
 
 let passed = 0;

@@ -1092,8 +1092,8 @@ export function renderNccNssCreativePage(meta, title) {
         <div class="sft-container">
           <div class="sft-hero-content">
             <span class="sft-formal-tag sncc-gold-tag">REGIMENTAL CORPS &amp; NATIONAL SERVICE · 4(TN) BN NCC ARMY WING</span>
-            <h1 class="sft-hero-heading" style="color: #ffffff;">National Cadet Corps (NCC) &amp; NSS Units</h1>
-            <p class="sft-hero-lead" style="color: #e2e8f0;">
+            <h1 class="sft-hero-heading">National Cadet Corps (NCC) &amp; NSS Units</h1>
+            <p class="sft-hero-lead">
               Sri Shakthi fosters unyielding discipline, patriotic duty, moral fortitude, and selfless community leadership through its accredited <strong>4(TN) BN NCC Senior Division Army Wing</strong> and <strong>NSS Units I &amp; II</strong>. We nurture young leaders equipped with military precision and deep social empathy.
             </p>
             

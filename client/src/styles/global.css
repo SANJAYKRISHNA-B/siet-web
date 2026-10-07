@@ -19256,3 +19256,12 @@ button.button.js-explore-campus {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
 }
+
+/* Ensure The Placement Journey heading in hero section is white */
+.siet-pj-hero-section .siet-pj-title {
+  color: #ffffff !important;
+}
+
+.siet-pj-hero-section .siet-pj-title em {
+  color: #ffffff !important;
+}

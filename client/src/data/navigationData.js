@@ -98,6 +98,8 @@ export const pageCopy = {
   'centres-of-excellence': ['Centres of Excellence', 'Advanced tools. Industry contexts.', 'Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'],
   accreditations: ['Approvals & Accreditations', 'Quality recognised. Standards sustained.', 'An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'],
   alumni: ['Alumni', 'Shakthians around the world.', 'A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'],
-  iqac: ['IQAC & NAAC', 'Quality as a continuous practice.', 'The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'],
-  contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.']
+  contact: ['Contact Us', 'We are here to help.', 'Visit the campus, speak with admissions, or connect with the institute office using the details below.'],
+  'privacy-policy': ['Privacy Policy', 'Data Protection & Student Privacy Standards', 'Sri Shakthi Institute of Engineering and Technology is dedicated to safeguarding user information, student academic privacy, and data security.'],
+  terms: ['Terms of Use', 'Institutional Portal & Website Usage Guidelines', 'Terms, fair use conditions, intellectual property guidelines, and code of conduct governing access to Sri Shakthi digital services.'],
+  sitemap: ['Institutional Sitemap', 'Comprehensive Directory of Sri Shakthi Digital Portals', 'Quick overview and direct navigation to all academic, admission, examination, laboratory, and campus services across SIET.']
 };

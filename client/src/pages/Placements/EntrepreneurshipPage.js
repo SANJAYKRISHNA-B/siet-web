@@ -1448,7 +1448,7 @@ export function entrepreneurshipPage() {
                   <h2 style="color: #ffffff !important;">Submit Your Venture Proposal</h2>
                   <p>Students and young alumni can register innovative ideas for pre-incubation, intellectual property support, and prototype grants.</p>
                   
-                  <form class="siet-edc-form-grid" onsubmit="event.preventDefault(); alert('Proposal received! The E-Cell incubation team will contact you within 48 hours.');">
+                  <form class="siet-edc-form-grid" onsubmit="event.preventDefault(); const s=this.querySelector('.edc-form-status'); if(s){ s.style.display='block'; this.reset(); setTimeout(() => s.style.display='none', 6000); }">
                     <label>
                       <span>Founder Full Name *</span>
                       <input type="text" required placeholder="e.g. John Doe">
@@ -1502,6 +1502,9 @@ export function entrepreneurshipPage() {
                       <button type="submit" class="siet-cb-closing-cta" style="border:none;cursor:pointer;">
                         Submit Incubation Application &rarr;
                       </button>
+                      <div class="edc-form-status" style="display:none; margin-top:14px; padding:12px 16px; background:#e8f5e9; border:1px solid #4caf50; border-radius:8px; color:#1b5e20; font-weight:600; font-size:14px;">
+                        ✓ Venture proposal received! The E-Cell incubation team will review your submission and contact you within 48 hours.
+                      </div>
                     </div>
                   </form>
                 </div>

@@ -8,7 +8,8 @@ import { slugify } from '../../utils/dom.js';
 import { campusExperiencePage } from './CampusExperiencePage.js';
 import { renderTransportCreativePage, renderNccNssCreativePage } from './creativeCampusPages.js';
 
-export function internalPage(route) {
+export function internalPage(rawRoute) {
+  const route = (rawRoute === 'club' || (rawRoute || '').startsWith('club/')) ? 'clubs' : rawRoute;
   const isDept = route.startsWith('department/');
   const deptName = isDept ? titleCase(route.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ') : '';
   if (isDept && typeof departmentPage === 'function') return departmentPage(deptName);

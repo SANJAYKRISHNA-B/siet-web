@@ -6,7 +6,8 @@ export function campusExperiencePage(route, meta, title) {
   const metrics = (meta.metrics || []).map(m => `<div><b>${m.val}<sup>${m.suffix}</sup></b><small>${m.label}</small></div>`).join('');
   const features = (meta.pillars || []).map((p, i) => {
     const card = `<article>${p.image ? `<img class="ce-club-entry-image" src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'">` : ''}<span class="ce-icon">${icon(p.icon || 'star')}</span><em>0${i + 1} · ${p.tag}</em><h3>${p.title}</h3><p>${p.desc}</p>${route === 'clubs' ? '<span class="ce-club-card-action">View club details <b>-&gt;</b></span>' : ''}</article>`;
-    return route === 'clubs' ? `<a class="ce-club-card-link" href="#/club/${slugify(p.title)}">${card}</a>` : card;
+    const catSlug = p.tag === 'INNOVATION' ? 'tech' : (p.tag === 'PERFORMING ARTS' ? 'arts' : 'impact');
+    return route === 'clubs' ? `<div class="ce-club-card-link" style="cursor:pointer;" onclick="const pill = document.querySelector('.club-filter-pill[data-club-cat=\\'${catSlug}\\']'); if (pill) pill.click(); const grid = document.querySelector('.clubs-directory-grid'); if (grid) grid.scrollIntoView({behavior:'smooth'});">${card}</div>` : card;
   }).join('');
   const gallery = (meta.gallery || []).map((g, i) => `<figure><img src="${g.img}" alt="${g.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'"><figcaption><b>0${i + 1} / ${g.title}</b><span>${g.caption}</span></figcaption></figure>`).join('');
   const highlights = (meta.highlights || []).map((h, i) => `<li><span>0${i + 1}</span><div><b>${h.title}</b><p>${h.desc}</p></div></li>`).join('');

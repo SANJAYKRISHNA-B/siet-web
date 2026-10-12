@@ -839,7 +839,7 @@ function bind() {
   $$('.lab-pill-btn').forEach(btn => btn.addEventListener('click', () => {
     $$('.lab-pill-btn').forEach(x => x.classList.toggle('active', x === btn));
     const cat = btn.dataset.cat;
-    $$$('.lab-card').forEach(card => {
+    $$('.lab-card').forEach(card => {
       if (cat === 'all' || card.dataset.cat === cat) {
         card.style.display = '';
         card.style.opacity = '1';

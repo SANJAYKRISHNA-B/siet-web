@@ -1287,4 +1287,49 @@ export function bindCoeEvents($, $$) {
       }
     }
   }
+
+  // Handle COE Result Verification Form
+  const resultForm = $('.js-coe-result-form');
+  if (resultForm) {
+    resultForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const regno = (resultForm.querySelector('input[name="regno"]')?.value || '').trim();
+      const dob = (resultForm.querySelector('input[name="dob"]')?.value || '').trim();
+      const session = resultForm.querySelector('select[name="session"]')?.value || 'Nov / Dec 2024 End Semester Examinations (Autonomous)';
+      const output = $('.js-coe-result-output');
+      const details = $('.js-coe-result-details');
+      if (output && details) {
+        output.style.display = 'block';
+        details.innerHTML = `
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; background: #f0f7f3; padding: 12px 16px; border-radius: 8px;">
+            <div><span style="color:#527361;font-size:11px;font-weight:700;display:block;">REGISTER NUMBER</span><b>${regno || '714021104001'}</b></div>
+            <div><span style="color:#527361;font-size:11px;font-weight:700;display:block;">DATE OF BIRTH</span><b>${dob || 'Verified'}</b></div>
+            <div><span style="color:#527361;font-size:11px;font-weight:700;display:block;">SESSION</span><b>${session}</b></div>
+            <div><span style="color:#527361;font-size:11px;font-weight:700;display:block;">RESULT STATUS</span><b style="color:#0b7a48;">PASS (GPA: 8.75)</b></div>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px;">
+            <thead>
+              <tr style="background: #e8f3ec; text-align: left; color: #004d2e;">
+                <th style="padding: 8px 10px; border: 1px solid #cbe0d3;">Course Code</th>
+                <th style="padding: 8px 10px; border: 1px solid #cbe0d3;">Course Title</th>
+                <th style="padding: 8px 10px; border: 1px solid #cbe0d3; text-align: center;">Credits</th>
+                <th style="padding: 8px 10px; border: 1px solid #cbe0d3; text-align: center;">Grade</th>
+                <th style="padding: 8px 10px; border: 1px solid #cbe0d3; text-align: center;">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS501</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">Design and Analysis of Algorithms</td><td style="text-align: center; border: 1px solid #e1eee4;">4</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">A+</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS502</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">Database Management Systems</td><td style="text-align: center; border: 1px solid #e1eee4;">4</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">S</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS503</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">Operating Systems &amp; System Programming</td><td style="text-align: center; border: 1px solid #e1eee4;">3</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">A</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS504</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">Computer Networks &amp; Security</td><td style="text-align: center; border: 1px solid #e1eee4;">3</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">A+</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS581</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">DBMS &amp; Web Technologies Laboratory</td><td style="text-align: center; border: 1px solid #e1eee4;">2</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">S</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+              <tr><td style="padding: 8px 10px; border: 1px solid #e1eee4;">21CS582</td><td style="padding: 8px 10px; border: 1px solid #e1eee4;">Algorithms &amp; Micro-Projects Lab</td><td style="text-align: center; border: 1px solid #e1eee4;">2</td><td style="text-align: center; border: 1px solid #e1eee4; font-weight:700; color:#0b7a48;">A+</td><td style="text-align: center; border: 1px solid #e1eee4; color:#0b7a48;">PASS</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 14px; font-size: 12px; color: #537563; font-style: italic;">Note: This provisional statement of grades is published for immediate information of examinees and does not constitute a certified legal grade certificate. Official grade cards will be issued through the academic office.</p>
+        `;
+        output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  }
 }

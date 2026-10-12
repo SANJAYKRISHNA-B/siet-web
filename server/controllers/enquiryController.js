@@ -12,7 +12,17 @@ export async function createEnquiry(req,res,next) {
     const email = clean(req.body.email || req.body.referrer_email || req.body.candidate_email, 255).toLowerCase();
     const phone = clean(req.body.phone || req.body.referrer_phone || req.body.candidate_phone, 30);
     const course = clean(req.body.course || req.body.category || req.body.position || req.body.candidate_course, 180);
-    const message = clean(req.body.message || req.body.remarks || (req.body.referrer_relation ? `Relationship: ${req.body.referrer_relation}${req.body.referrer_reg_no ? ` | Reg No: ${req.body.referrer_reg_no}` : ''}` : ''), 2000);
+    const messageParts = [];
+    if (req.body.referrer_relation) {
+      messageParts.push(`Relationship: ${req.body.referrer_relation}${req.body.referrer_reg_no ? ` | Reg No: ${req.body.referrer_reg_no}` : ''}`);
+    }
+    if (req.body.candidate_qualification) {
+      messageParts.push(`Qualification: ${req.body.candidate_qualification}`);
+    }
+    if (req.body.message || req.body.remarks) {
+      messageParts.push(req.body.message || req.body.remarks);
+    }
+    const message = clean(messageParts.join(' | '), 2000);
     if(!name||!email||!phone||!course) return res.status(400).json({success:false,message:'Please complete all required fields.'});
     
     const enquiryType = req.body.referrer_name ? 'referral' : (req.body.category ? 'career' : 'general');

@@ -1767,6 +1767,32 @@
   background: #f7fbf8;
 }
 
+.department-copy .dept-data-table th.center-align,
+.department-copy .dept-data-table td.center-align {
+  text-align: center;
+}
+
+.department-copy .faculty-passport-img {
+  width: 58px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #d0d7de;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto;
+  background: #f5f5f5;
+}
+
+.dept-faculty-title {
+  text-align: center;
+  color: #167a39;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
 .department-placeholder {
   padding-top: 70px;
   border-top: 1px solid #e4eee6;
@@ -5123,10 +5149,12 @@ a.siet-curr-navlink {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
   box-shadow: 0 4px 18px rgba(0, 74, 45, 0.04);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  outline: none;
 }
 
 .siet-prog-card::before {
@@ -5138,6 +5166,7 @@ a.siet-curr-navlink {
   height: 4px;
   background: #0b3d20;
   opacity: 0.7;
+  transition: opacity 0.2s ease, height 0.2s ease;
 }
 
 .siet-prog-card.pg-card::before {
@@ -5150,9 +5179,35 @@ a.siet-curr-navlink {
   box-shadow: 0 16px 36px rgba(0, 74, 45, 0.12);
 }
 
+.siet-prog-card:hover::before {
+  opacity: 1;
+  height: 5px;
+}
+
+.siet-prog-card:hover .siet-prog-card-body h3 {
+  color: #0b5329;
+}
+
+.siet-prog-card:hover .siet-prog-link {
+  color: #b86200;
+}
+
+.siet-prog-card:hover .siet-prog-link span {
+  transform: translateX(5px);
+}
+
+.siet-prog-card:focus-visible {
+  outline: 2px solid #0b3d20;
+  outline-offset: 3px;
+}
+
 .siet-prog-card.pg-card:hover {
   border-color: #a85800;
   box-shadow: 0 16px 36px rgba(168, 88, 0, 0.14);
+}
+
+.siet-prog-card.pg-card:hover .siet-prog-card-body h3 {
+  color: #a85800;
 }
 
 .siet-prog-card-top {
@@ -5214,11 +5269,18 @@ a.siet-curr-navlink {
   transition: color 0.2s ease;
 }
 
+.siet-prog-link span {
+  display: inline-block;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .siet-prog-link:hover {
   color: #b86200;
 }
 
 .siet-prog-btn-apply {
+  position: relative;
+  z-index: 2;
   font-size: 12px;
   font-weight: 750;
   background: #0b3d20;
@@ -5226,7 +5288,11 @@ a.siet-curr-navlink {
   padding: 7px 15px;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.siet-prog-btn-apply:hover {
+  transform: scale(1.04);
 }
 
 .siet-prog-btn-apply:hover {

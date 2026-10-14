@@ -25,6 +25,7 @@ import './pages/COE/Coe.css';
 import './pages/Contact/Contact.css';
 import './pages/Placements/Placements.css';
 import './pages/Labs/Labs.css';
+import './styles/FacultyDirectory.css';
 
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);

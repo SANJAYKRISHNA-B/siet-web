@@ -4,7 +4,7 @@ import { sietHudHeader, programSelectHtml } from '../../components/common/HudHea
 import { departmentPage } from '../Academics/DepartmentDetailPage.js';
 import { icon, deptIcon, vmIcon } from '../../components/common/SvgIcons.js';
 import { ugPrograms as programs } from '../../data/programmesData.js';
-import { slugify } from '../../utils/dom.js';
+import { slugify, titleCase } from '../../utils/dom.js';
 import { campusExperiencePage } from './CampusExperiencePage.js';
 import { renderTransportCreativePage, renderNccNssCreativePage } from './creativeCampusPages.js';
 
@@ -325,5 +325,4 @@ export function internalPage(rawRoute) {
   </main>`;
 }
 
-const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase());
 

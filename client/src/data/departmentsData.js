@@ -5,6 +5,136 @@ export const departmentDetails = {
     courses: [['B.E - Agricultural Engineering', '60'], ['M.Tech - Farm Machinery', '18']],
     overview: 'The department of Agricultural Engineering was started in Sri Shakthi Institute of Engineering and Technology (SSIET), Coimbatore, in 2015. The Chairman, Dr. S Thangavelu, is himself an Agricultural Engineer and a Ph. D. degree holder in Bio Energy from Tamil Nadu Agricultural University (TNAU), Coimbatore, and worked as a faculty for 28 years in TNAU. During the past years, the department has been in the journey with SSIET to fulfil the motto, ‘Powering the Youth, Empowering the Nation’. The department offers B. E. Agriculture Engineering, focussing on widening the practical knowledge of the students thus encouraging them to solve different practical difficulties in small-landholdings. Well-qualified faculty members are the strength of the department. The department constitutes experienced and dedicated faculty and supporting staff members with excellent academic research and industrial work experience to promote research and intervention in the existing methods. Presently, the faculty consists of experts from farm machinery and power, soil and water conservation engineering, agricultural processing, civil engineering, mechanical engineering, food technology and agriculture. Further, the practical knowledge gained by them during practical field works and industrial visits has been added advantage for new technology and innovations. The department is new in offering the degree program in the institute. Despite, about 30 students have been graduated during 2019 from the department and are well placed. At present there are 375 students are admitted in the degree program, and the department is envisage more students in the future.',
     sections: {
+      'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2653261981</td>
+                <td class="center-align">1-456603189</td>
+                <td><strong>Dr.Ibrahim Sheriff K A</strong></td>
+                <td>Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/ibrahim-sheriff.png" alt="Dr.Ibrahim Sheriff K A" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2655821995</td>
+                <td class="center-align">1-44024258070</td>
+                <td><strong>Dr.Vijay Aravinth K</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/vijay-aravinth.png" alt="Dr.Vijay Aravinth K" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2678731996</td>
+                <td class="center-align">1-7602353714</td>
+                <td><strong>Mr.Mohammed Thousiff S</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/mohammed-thousiff.png" alt="Mr.Mohammed Thousiff S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2664721989</td>
+                <td class="center-align">1-2292695694</td>
+                <td><strong>Mr.Muthusamy K</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/muthusamy.png" alt="Mr.Muthusamy K" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2691781981</td>
+                <td class="center-align">1-38102668142</td>
+                <td><strong>Mrs.Priyanka R</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/priyanka.png" alt="Mrs.Priyanka R" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2694772000</td>
+                <td class="center-align">1-43781638268</td>
+                <td><strong>Ms.Srijavijayalakshmi A</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/srijavijayalakshmi.png" alt="Ms.Srijavijayalakshmi A" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2677542000</td>
+                <td class="center-align">1-43727589118</td>
+                <td><strong>Ms.Durga G</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Agricultural Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/durga.png" alt="Ms.Durga G" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2672311999</td>
+                <td class="center-align">1-47950476362</td>
+                <td><strong>Mrs.Saranya J</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/saranya.png" alt="Mrs.Saranya J" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2699892000</td>
+                <td class="center-align">1-44716276390</td>
+                <td><strong>Ms.Poojha J</strong></td>
+                <td>Assistant Professor</td>
+                <td>PG-Farm Machinery</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/poojha.png" alt="Ms.Poojha J" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2688101995</td>
+                <td class="center-align">1-44967602972</td>
+                <td><strong>Dr.Kommanaboyina Raju Yadav</strong></td>
+                <td>Assistant Professor</td>
+                <td>PG-Farm Machinery</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/agri_faculty_photos/raju-yadav.png" alt="Dr.Kommanaboyina Raju Yadav" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
       'Why Agricultural Engineering at SIET': `
         <h2>Why Agricultural Engineering at SIET</h2>
         <ol class="dept-custom-list">
@@ -142,6 +272,345 @@ export const departmentDetails = {
     courses: [['B.Tech - Artificial Intelligence and Data Science', '240']],
     overview: `<p>Artificial Intelligence and Data Science was established in 2021 with the aim of enabling students to acquire specialized knowledge. This Department offers a 4 year B.Tech (Artificial Intelligence and Data Science) Programme. It has a heartfelt team of dedicated faculty members with a sound knowledge in various areas and has the state-of-art facilities for various laboratories and supports smart class learning.</p><p style="margin-top: 16px;">The job market for data science and AI professionals is booming across the world, making it a desirable career choice. AI engineers and data scientists are both intertwined job roles and have the potential to help a professional leverage rewarding career growth opportunities.</p>`,
     sections: {
+      'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551976</td>
+                <td class="center-align">1-4533208180</td>
+                <td><strong>Dr.V.Kamalaveni</strong></td>
+                <td>Professor & Head</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/kamalaveni-v-vanji-gounder.png" alt="Dr.V.Kamalaveni" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961981</td>
+                <td class="center-align">1-3358044470</td>
+                <td><strong>Dr.Bala Kumar Natarajan</strong></td>
+                <td>Associate Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/bala-kumar-natarajan.png" alt="Dr.Bala Kumar Natarajan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041983</td>
+                <td class="center-align">1-723065185</td>
+                <td><strong>Dr.Buvaneswaran Balamani</strong></td>
+                <td>Associate Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/buvaneswaran-balamani.png" alt="Dr.Buvaneswaran Balamani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631986</td>
+                <td class="center-align">1-3654896415</td>
+                <td><strong>Dr.Dhashinamoorthy Thavamani</strong></td>
+                <td>Associate Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/dhashinamoorthy-thavamani.png" alt="Dr.Dhashinamoorthy Thavamani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941993</td>
+                <td class="center-align">1-1406772315</td>
+                <td><strong>Mrs.Ambika</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/ambika.png" alt="Mrs.Ambika" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491992</td>
+                <td class="center-align">1-3698712520</td>
+                <td><strong>Mr.Barath Kumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/barath-kumar.png" alt="Mr.Barath Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821998</td>
+                <td class="center-align">1-43381987080</td>
+                <td><strong>Mr.Dhinaharan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/dhinaharan.png" alt="Mr.Dhinaharan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627292001</td>
+                <td class="center-align">1-11622715940</td>
+                <td><strong>Mrs.M.Dhivya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/dhivya-m.png" alt="Mrs.M.Dhivya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665862000</td>
+                <td class="center-align">1-43381753530</td>
+                <td><strong>Mrs.S.P.Dhivya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/dhivya-sp.png" alt="Mrs.S.P.Dhivya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991996</td>
+                <td class="center-align">1-44049412940</td>
+                <td><strong>Ms.Gayathiri</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/gayathiri.png" alt="Ms.Gayathiri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681995</td>
+                <td class="center-align">1-44749288875</td>
+                <td><strong>Mrs.S.Geethanjali</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/geethanjali-s.png" alt="Mrs.S.Geethanjali" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561995</td>
+                <td class="center-align">1-43381753905</td>
+                <td><strong>Ms.J.Hari Priya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/hari-priya-j.png" alt="Ms.J.Hari Priya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991997</td>
+                <td class="center-align">1-44749287925</td>
+                <td><strong>Mr.Jayabala Surya Narayana Moorthy</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/jayabala-surya-narayana-moorthy.png" alt="Mr.Jayabala Surya Narayana Moorthy" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2632322004</td>
+                <td class="center-align">1-44749289125</td>
+                <td><strong>Mr.Krishna Satheesh</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/krishna-satheesh.png" alt="Mr.Krishna Satheesh" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2614141989</td>
+                <td class="center-align">1-44123595220</td>
+                <td><strong>Mrs.M.Logeshwari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/logeshwari-m.png" alt="Mrs.M.Logeshwari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2619301978</td>
+                <td class="center-align">1-45332080555</td>
+                <td><strong>Mr.Mayank Chauhan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/mayank-chauhan.png" alt="Mr.Mayank Chauhan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2624761994</td>
+                <td class="center-align">1-4795532275</td>
+                <td><strong>Mr.Mugesh Chandran</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/mugesh-chandran.png" alt="Mr.Mugesh Chandran" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2696692000</td>
+                <td class="center-align">1-44748929615</td>
+                <td><strong>Mrs.Priya Dharshini Rajan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/priya-dharshini-rajan.png" alt="Mrs.Priya Dharshini Rajan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2662342004</td>
+                <td class="center-align">1-44073171810</td>
+                <td><strong>Mrs.Priya Rajaendran</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/priya-rajaendran.png" alt="Mrs.Priya Rajaendran" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2672221994</td>
+                <td class="center-align">1-46907261560</td>
+                <td><strong>Mrs.Revathi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/revathi.png" alt="Mrs.Revathi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2620762007</td>
+                <td class="center-align">1-46905827860</td>
+                <td><strong>Mrs.Samlin Jenifer</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/samlin-jenifer.png" alt="Mrs.Samlin Jenifer" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2659611994</td>
+                <td class="center-align">1-44816211555</td>
+                <td><strong>Ms.A.Sangamithara</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/sangamithara-a.png" alt="Ms.A.Sangamithara" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">23</td>
+                <td class="center-align">2622412000</td>
+                <td class="center-align">1-4647070190</td>
+                <td><strong>Mrs.Saranya Devi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/saranya-devi.png" alt="Mrs.Saranya Devi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">24</td>
+                <td class="center-align">2655071994</td>
+                <td class="center-align">1-47948889395</td>
+                <td><strong>Mrs.Saranya Subaramani</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/saranya-subaramani.png" alt="Mrs.Saranya Subaramani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">25</td>
+                <td class="center-align">2677481994</td>
+                <td class="center-align">1-12145504765</td>
+                <td><strong>Mrs.Sini Prabhakar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/sini-prabhakar.png" alt="Mrs.Sini Prabhakar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">26</td>
+                <td class="center-align">2654391995</td>
+                <td class="center-align">1-2299912275</td>
+                <td><strong>Ms.Sivadharsini</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/sivadharsini.png" alt="Ms.Sivadharsini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">27</td>
+                <td class="center-align">2660932001</td>
+                <td class="center-align">1-44072931060</td>
+                <td><strong>Mrs.Subhasri Selvaraj</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/subhasri-selvaraj.png" alt="Mrs.Subhasri Selvaraj" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">28</td>
+                <td class="center-align">2646841997</td>
+                <td class="center-align">1-9316597230</td>
+                <td><strong>Ms.Swetha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/swetha.png" alt="Ms.Swetha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">29</td>
+                <td class="center-align">2654562005</td>
+                <td class="center-align">1-45332080565</td>
+                <td><strong>Mr.Vijayakumar Bala Subaramani</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Data Science</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aids-faculty-images/vijayakumar-bala-subaramani.png" alt="Mr.Vijayakumar Bala Subaramani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
       'Why Artificial Intelligence and Data Science at SIET': `
         <h2>Why Artificial Intelligence and Data Science at SIET</h2>
         <ol class="dept-custom-list">
@@ -415,34 +884,263 @@ export const departmentDetails = {
         </ul>
       `,
       'Faculty Profile': `
-        <h2>Faculty List</h2>
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
         <div class="dept-table-wrapper">
-          <table class="dept-data-table">
+          <table class="dept-data-table faculty-profile-table">
             <thead>
               <tr>
-                <th style="width: 70px;">S.No</th>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
                 <th>Name</th>
                 <th>Designation</th>
-                <th style="width: 140px;">Qualification</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>1</td><td>Dr. RANJITH KUMAR R</td><td>Professor and Head</td><td>Ph.D.</td></tr>
-              <tr><td>2</td><td>Mr. MAGESHKUMAR C</td><td>Professor</td><td>Ph.D.</td></tr>
-              <tr><td>3</td><td>Mrs. GAYATHRI N</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>4</td><td>Mrs. NIRANCHANA C</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>5</td><td>Mrs. KAVITHA D</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>6</td><td>Mrs. PRIYADHARSHINI B</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>7</td><td>Mr. MADHAN KSP</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>8</td><td>Ms. JANANI K</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>9</td><td>Mrs. PUSHPA KUMARI R</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>10</td><td>Mrs. BENAZIR T A</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>11</td><td>Mr. ARUN PRASANTH G</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>12</td><td>Mrs. RAMITHA DEVI R</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>13</td><td>Ms. KARUNAMVIGI V</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>14</td><td>Mrs. KALAIYARASI C</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>15</td><td>Mrs. PUNNAGAI N</td><td>Assistant Professor</td><td>M.E.</td></tr>
-              <tr><td>16</td><td>Mrs. KIRTHIGA R</td><td>Assistant Professor</td><td>M.E.</td></tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551979</td>
+                <td class="center-align">1-4533208190</td>
+                <td><strong>Dr.G.Arulvadivu</strong></td>
+                <td>Professor & Head</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/arulvadivu-g.png" alt="Dr.G.Arulvadivu" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961983</td>
+                <td class="center-align">1-3358044480</td>
+                <td><strong>Dr.Anshuman Sinha</strong></td>
+                <td>Associate Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/anshuman-sinha.png" alt="Dr.Anshuman Sinha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041984</td>
+                <td class="center-align">1-723065195</td>
+                <td><strong>Mrs.D.Ansline Lidiya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/ansline-lidiya-d.png" alt="Mrs.D.Ansline Lidiya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631987</td>
+                <td class="center-align">1-3654896425</td>
+                <td><strong>Mr.G.Arun Prasanth</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/arun-prasanth-g.png" alt="Mr.G.Arun Prasanth" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941995</td>
+                <td class="center-align">1-1406772325</td>
+                <td><strong>Mrs.T.A.Benazir</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/benazir-t-a.png" alt="Mrs.T.A.Benazir" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491993</td>
+                <td class="center-align">1-3698712530</td>
+                <td><strong>Mrs.N.Gayathri</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/gayathri-n.png" alt="Mrs.N.Gayathri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821999</td>
+                <td class="center-align">1-43381987090</td>
+                <td><strong>Mrs.S.Hemalatha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/hemalatha-s.png" alt="Mrs.S.Hemalatha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627292002</td>
+                <td class="center-align">1-11622715950</td>
+                <td><strong>Mr.Karthikeyan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/karthikeyan.png" alt="Mr.Karthikeyan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665862001</td>
+                <td class="center-align">1-43381753540</td>
+                <td><strong>Mrs.M.Keerthana</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/keerthana-m.png" alt="Mrs.M.Keerthana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991997</td>
+                <td class="center-align">1-44049412950</td>
+                <td><strong>Mrs.R.Kirthiga</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/kirthiga-r.png" alt="Mrs.R.Kirthiga" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681996</td>
+                <td class="center-align">1-44749288885</td>
+                <td><strong>Mr.K.S.P.Madhan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/madhan-ksp.png" alt="Mr.K.S.P.Madhan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561996</td>
+                <td class="center-align">1-43381753915</td>
+                <td><strong>Ms.Narmatha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/narmatha.png" alt="Ms.Narmatha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991998</td>
+                <td class="center-align">1-44749287935</td>
+                <td><strong>Mrs.C.Niranchana</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/niranchana-c.png" alt="Mrs.C.Niranchana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2632322005</td>
+                <td class="center-align">1-44749289135</td>
+                <td><strong>Ms.S.Nivedha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/nivedha-s.png" alt="Ms.S.Nivedha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2614141990</td>
+                <td class="center-align">1-44123595230</td>
+                <td><strong>Ms.N.Pavethra</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/pavethra-n.png" alt="Ms.N.Pavethra" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2619301979</td>
+                <td class="center-align">1-45332080565</td>
+                <td><strong>Mrs.M.Perachiselvi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/perachiselvi-m.png" alt="Mrs.M.Perachiselvi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2624761995</td>
+                <td class="center-align">1-4795532285</td>
+                <td><strong>Mrs.M.Priya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/priya-m.png" alt="Mrs.M.Priya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2696692001</td>
+                <td class="center-align">1-44748929625</td>
+                <td><strong>Ms.K.Priyanka</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/priyanka-k.png" alt="Ms.K.Priyanka" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2662342005</td>
+                <td class="center-align">1-44073171820</td>
+                <td><strong>Mrs.R.Pushpa Kumari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/pushpa-kumari-r.png" alt="Mrs.R.Pushpa Kumari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2672221995</td>
+                <td class="center-align">1-46907261570</td>
+                <td><strong>Mrs.R.Ramitha Devi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/ramitha-devi-r.png" alt="Mrs.R.Ramitha Devi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2620762008</td>
+                <td class="center-align">1-46905827870</td>
+                <td><strong>Mrs.T.Ranjitham</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/ranjitham-t.png" alt="Mrs.T.Ranjitham" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2659611995</td>
+                <td class="center-align">1-44816211565</td>
+                <td><strong>Mr.T.Vijay</strong></td>
+                <td>Assistant Professor</td>
+                <td>Artificial Intelligence and Machine Learning</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/aiml-faculty-images/vijay-t.png" alt="Mr.T.Vijay" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -702,61 +1400,141 @@ export const departmentDetails = {
         </div>
       `,
       'Faculty Profile': `
-        <h2 style="text-align: center; color: #167a39;"><u>FACULTY PROFILE</u></h2>
-        <p style="margin-bottom: 20px;">Our department is led by experienced faculty members with doctorates and master degrees from premier institutions, specializing in clinical diagnosis, biosensors, and medical instrumentation.</p>
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
         <div class="dept-table-wrapper">
-          <table class="dept-data-table">
+          <table class="dept-data-table faculty-profile-table">
             <thead>
               <tr>
-                <th style="width: 60px;">S.No</th>
-                <th>Faculty Name</th>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
                 <th>Designation</th>
-                <th>Qualification</th>
-                <th>Area of Specialization</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="text-align: center; font-weight: 600;">1</td>
-                <td><strong>Dr. R. Malathi</strong></td>
-                <td>Professor &amp; Head</td>
-                <td>Ph.D., M.E.</td>
-                <td>Medical Image Processing &amp; Healthcare AI</td>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551977</td>
+                <td class="center-align">1-4533208170</td>
+                <td><strong>Dr.Lekshmi V Nair</strong></td>
+                <td>Professor & Head</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/lekshmi-v-nair.png" alt="Dr.Lekshmi V Nair" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">2</td>
-                <td><strong>Dr. S. Vignesh</strong></td>
-                <td>Associate Professor</td>
-                <td>Ph.D., M.Tech</td>
-                <td>Biomedical Instrumentation &amp; Biosensors</td>
-              </tr>
-              <tr>
-                <td style="text-align: center; font-weight: 600;">3</td>
-                <td><strong>Mr. K. Arun Kumar</strong></td>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961986</td>
+                <td class="center-align">1-3358044460</td>
+                <td><strong>Ms.A.M.Vishali</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.E.</td>
-                <td>Physiological Signal Processing &amp; Telemedicine</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/am-vishali.png" alt="Ms.A.M.Vishali" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">4</td>
-                <td><strong>Mrs. P. Priya Dharshini</strong></td>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041987</td>
+                <td class="center-align">1-723065175</td>
+                <td><strong>Mr.Balaji</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
-                <td>Biomechanics &amp; Biomaterials</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/balaji.png" alt="Mr.Balaji" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">5</td>
-                <td><strong>Mr. M. Praveen</strong></td>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631993</td>
+                <td class="center-align">1-3654896405</td>
+                <td><strong>Ms.Divya</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.E.</td>
-                <td>Medical Electronics &amp; Healthcare IoT</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/divya.png" alt="Ms.Divya" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">6</td>
-                <td><strong>Mrs. S. Deepa</strong></td>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941994</td>
+                <td class="center-align">1-1406772305</td>
+                <td><strong>Mr.Jasonraj</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.E.</td>
-                <td>Medical Device Technology &amp; Rehabilitation Robotics</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/jasonraj.png" alt="Mr.Jasonraj" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491991</td>
+                <td class="center-align">1-3698712510</td>
+                <td><strong>Mr.Manoj Prabu</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/manoj-prabu.png" alt="Mr.Manoj Prabu" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821997</td>
+                <td class="center-align">1-43381987070</td>
+                <td><strong>Mrs.Nirmalakumari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/nirmalakumari.png" alt="Mrs.Nirmalakumari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627292000</td>
+                <td class="center-align">1-11622715930</td>
+                <td><strong>Ms.Pavithra</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/pavithra.png" alt="Ms.Pavithra" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861999</td>
+                <td class="center-align">1-43381753520</td>
+                <td><strong>Ms.Priyavarthini</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/priyavarthini.png" alt="Ms.Priyavarthini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991995</td>
+                <td class="center-align">1-44049412930</td>
+                <td><strong>Mrs.Rajalaxmi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/rajalaxmi.png" alt="Mrs.Rajalaxmi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681994</td>
+                <td class="center-align">1-44749288865</td>
+                <td><strong>Ms.Sowkaarthiga</strong></td>
+                <td>Assistant Professor</td>
+                <td>Biomedical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/bme-faculty-images/sowkaarthiga.png" alt="Ms.Sowkaarthiga" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1273,89 +2051,152 @@ export const departmentDetails = {
         </ul>
       `,
       'Faculty Profile': `
-        <h2 style="text-align: center; color: #167a39;"><u>FACULTY LIST</u></h2>
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
         <div class="dept-table-wrapper">
-          <table class="dept-data-table">
+          <table class="dept-data-table faculty-profile-table">
             <thead>
               <tr>
-                <th style="width: 60px; text-align: center;">S.No</th>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
                 <th>Name</th>
                 <th>Designation</th>
-                <th>Qualification</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="text-align: center; font-weight: 600;">1</td>
-                <td><strong>Dr. J. Bindhu</strong></td>
-                <td>Associate Professor &amp; Head</td>
-                <td>M.Tech., Ph.D</td>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2662111987</td>
+                <td class="center-align">1-3540958174</td>
+                <td><strong>Dr.Bindhu Jayaprakash</strong></td>
+                <td>Associate Professor</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/bindhu-jayaprakash.png" alt="Dr.Bindhu Jayaprakash" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">2</td>
-                <td><strong>Dr. J. Srimathi Devi</strong></td>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2661141998</td>
+                <td class="center-align">1-46790691233</td>
+                <td><strong>Dr.Hari Lakshmi S</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech., Ph.D</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/hari-lakshmi-s.png" alt="Dr.Hari Lakshmi S" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">3</td>
-                <td><strong>Dr. T. Sharmila Raj</strong></td>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2617261990</td>
+                <td class="center-align">1-43369141004</td>
+                <td><strong>Dr.Arthe Rajarajan</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech., Ph.D</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/arthe-rajarajan.png" alt="Dr.Arthe Rajarajan" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">4</td>
-                <td><strong>Dr. S. Hari Lakshmi</strong></td>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2746421982</td>
+                <td class="center-align">1-47934735002</td>
+                <td><strong>Dr.Chandrasekar P</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech., Ph.D</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/chandrasekar-p.png" alt="Dr.Chandrasekar P" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">5</td>
-                <td><strong>Dr. S. Ramya</strong></td>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2630041993</td>
+                <td class="center-align">1-43369141046</td>
+                <td><strong>Mrs.Vinitha S</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Sc., Ph.D</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/vinitha-s.png" alt="Mrs.Vinitha S" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">6</td>
-                <td><strong>Ms. Divya Nair</strong></td>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2694161998</td>
+                <td class="center-align">1-11330081282</td>
+                <td><strong>Ms.Geethanjali K</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/geethanjali-k.png" alt="Ms.Geethanjali K" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">7</td>
-                <td><strong>Mrs. S. Vinitha</strong></td>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2642691986</td>
+                <td class="center-align">1-43369141096</td>
+                <td><strong>Ms.Divya Nair</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/divya-nair.png" alt="Ms.Divya Nair" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">8</td>
-                <td><strong>Ms. K. Geethanjali</strong></td>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2658751999</td>
+                <td class="center-align">1-43369141141</td>
+                <td><strong>Ms.Akshaya Arulkumar</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/akshaya-arulkumar.png" alt="Ms.Akshaya Arulkumar" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">9</td>
-                <td><strong>Ms. A. Akshaya</strong></td>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2668082001</td>
+                <td class="center-align">1-44639133301</td>
+                <td><strong>Mrs.Yuvarani S</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/yuvarani-s.png" alt="Mrs.Yuvarani S" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">10</td>
-                <td><strong>Mrs. S. Yuvarani</strong></td>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2773972002</td>
+                <td class="center-align">1-47948817528</td>
+                <td><strong>Ms.Amuthavalli Nayaki</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/amuthavalli-nayaki.png" alt="Ms.Amuthavalli Nayaki" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">11</td>
-                <td><strong>Ms. N. Snega</strong></td>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2721871996</td>
+                <td class="center-align">1-47948848557</td>
+                <td><strong>Dr.Preethi Saravanan</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>UG-Biotechnology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/preethi-saravanan.png" alt="Dr.Preethi Saravanan" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
               <tr>
-                <td style="text-align: center; font-weight: 600;">12</td>
-                <td><strong>Ms. J. Jenstina</strong></td>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2614121998</td>
+                <td class="center-align">1-47948817754</td>
+                <td><strong>Dr.Ramya S</strong></td>
                 <td>Assistant Professor</td>
-                <td>M.Tech</td>
+                <td>General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/biotech-faculty-images/ramya-s.png" alt="Dr.Ramya S" class="faculty-passport-img" loading="lazy" />
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1672,7 +2513,554 @@ export const departmentDetails = {
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>Graduates will demonstrate the ability to effectively apply their Computer Science and Engineering principles to solve real-world problems and advance in their careers.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>Graduates will contribute to the development and application of innovative solutions in their professional practice, demonstrating critical thinking and problem-solving abilities.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>Graduates will possess professional and ethical attitude, effective communication skills, team working skills, multi-disciplinary approach, and an ability to relate engineering issues to broader social contexts.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>Graduates will possess an attitude of lifelong learning to adapt to changes in technology as well as in the environment.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> Ability to understand the core principles of the theory of computing, programming and data organization and to make use of them in designing, developing and testing software systems with assured quality.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> The ability to use software engineering practices and tools in developing complete software based solutions for identified real world problems with the help of acquired knowledge in computer networking and World Wide Web.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> The ability to learn new technologies and acquire new skill sets to adapt to the changing requirements in the career and to pursue entrepreneurship.</div>\n          </li>\n        </ul>\n    ",
         "Programme Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME OUTCOMES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n        \n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 001</span>\n          <p><strong>PO1: Engineering Knowledge:</strong> Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 002</span>\n          <p><strong>PO2: Problem Analysis:</strong> Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 003</span>\n          <p><strong>PO3: Design/Development of Solutions:</strong> Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, cultural, societal, and environmental considerations.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 004</span>\n          <p><strong>PO4: Conduct Investigations of Complex Problems:</strong> Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of information to provide valid conclusions.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 005</span>\n          <p><strong>PO5: Modern Tool Usage:</strong> Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of limitations.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 006</span>\n          <p><strong>PO6: The Engineer and Society:</strong> Apply reasoning informed by contextual knowledge to assess societal, health, safety, legal and cultural issues and consequent responsibilities relevant to professional engineering practice.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 007</span>\n          <p><strong>PO7: Environment and Sustainability:</strong> Understand the impact of professional engineering solutions in societal and environmental contexts, and demonstrate knowledge of and need for sustainable development.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 008</span>\n          <p><strong>PO8: Ethics:</strong> Apply ethical principles and commit to professional ethics and responsibilities and norms of engineering practice.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 009</span>\n          <p><strong>PO9: Individual and Team Work:</strong> Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 010</span>\n          <p><strong>PO10: Communication:</strong> Communicate effectively on complex engineering activities with the engineering community and society at large.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 011</span>\n          <p><strong>PO11: Project Management and Finance:</strong> Demonstrate knowledge and understanding of engineering and management principles and apply these to manage projects in multidisciplinary environments.</p>\n        </div>\n\n        <div class=\"dept-obj-card\">\n          <span class=\"dept-obj-num\">PO 012</span>\n          <p><strong>PO12: Life-long Learning:</strong> Recognize the need for, and have preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p>\n        </div>\n      </div>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.K.E.Kannammal</strong></td>\n                <td>Professor &amp; Head</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.S.Prakash</strong></td>\n                <td>Professor</td>\n                <td>M.E., Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.Y.Baby Kalpana</strong></td>\n                <td>Professor</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.N.K.Sakthivel</strong></td>\n                <td>Professor</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Dr.S.Subasree</strong></td>\n                <td>Professor</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Dr.N.Yuvaraj</strong></td>\n                <td>Professor</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Dr.R.Malathi</strong></td>\n                <td>Associate Professor</td>\n                <td>Ph.D.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr.K.Satheeshkumar</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mrs.P.Suvitha Vani</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mrs.S.Hemalatha</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Mrs.N.Nalini</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Mr.E.Subramanian</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>Mrs.A.Mohana Priya</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>Ms.P.Sasikala</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>Ms.M.Mohanapriya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>Mrs.C.Agjelia Lydia</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">17</td>\n                <td><strong>Mr.T.Manojpraphakar</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">18</td>\n                <td><strong>Mrs.S.Dhivya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">19</td>\n                <td><strong>M rs.M.Sabeetha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">20</td>\n                <td><strong>Mr.R.Karthiban</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">21</td>\n                <td><strong>Ms.S.Nivedha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,(Ph.D).,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">22</td>\n                <td><strong>Mrs.R.Dharshini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">23</td>\n                <td><strong>Mrs.R.Nandhini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">24</td>\n                <td><strong>Mr.R.Nandha kumar</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">25</td>\n                <td><strong>Ms.S.Vinitha Sri</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">26</td>\n                <td><strong>Mrs.R.Jenifer</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">27</td>\n                <td><strong>Mrs.G.S.Nandhini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">28</td>\n                <td><strong>Mrs.G.Arul vadivu</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">29</td>\n                <td><strong>Mrs.G.Hemaprabha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">30</td>\n                <td><strong>Mrs.M.Manimegala</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">31</td>\n                <td><strong>Mrs.P.Sharmila</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">32</td>\n                <td><strong>Mrs.S.V.Hemalatha</strong></td>\n                <td>AssociateProfessor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">33</td>\n                <td><strong>Mrs.S.Nandhini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">34</td>\n                <td><strong>Mr.B.Sanjay Krishna</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">35</td>\n                <td><strong>Mrs.P.Deepthi Nair</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">36</td>\n                <td><strong>Ms.M.Haritha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">37</td>\n                <td><strong>Ms.V.Gayathri</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">38</td>\n                <td><strong>Mrs.R.Kalaiyarasi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">39</td>\n                <td><strong>Mr.A.Vinod Kanna</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">40</td>\n                <td><strong>Mrs.J.Kanya Devi</strong></td>\n                <td>AssociateProfessor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">41</td>\n                <td><strong>Mrs.Sri Sakthi Hamrish Srinivasan</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">42</td>\n                <td><strong>Mrs.S.Evangeline Aishwarya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.,</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2682771971</td>
+                <td class="center-align">1-452910121</td>
+                <td><strong>Dr.K.E.Kannammal</strong></td>
+                <td>Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/k-e-kannammal.png" alt="Dr.K.E.Kannammal" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2626041979</td>
+                <td class="center-align">1-723065113</td>
+                <td><strong>Dr.S.Prakash</strong></td>
+                <td>Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-prakash.png" alt="Dr.S.Prakash" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2622971978</td>
+                <td class="center-align">1-3175720234</td>
+                <td><strong>Dr N.M.Saravanakumar</strong></td>
+                <td>Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/n-m-saravanakumar.png" alt="Dr N.M.Saravanakumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631991</td>
+                <td class="center-align">1-3654896347</td>
+                <td><strong>Mr.R.Karthiban</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/r-karthiban.png" alt="Mr.R.Karthiban" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941989</td>
+                <td class="center-align">1-1406772246</td>
+                <td><strong>Mrs.A.Mohoana Priya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/a-mohoana-priya.png" alt="Mrs.A.Mohoana Priya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491984</td>
+                <td class="center-align">1-3698712461</td>
+                <td><strong>Mr.E.Subramanian</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/e-subramanian.png" alt="Mr.E.Subramanian" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821994</td>
+                <td class="center-align">1-43381987018</td>
+                <td><strong>Mrs.S.Vinithasri</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-vinithasri.png" alt="Mrs.S.Vinithasri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627291998</td>
+                <td class="center-align">1-11622715882</td>
+                <td><strong>Ms.P.Sasikala</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/p-sasikala.png" alt="Ms.P.Sasikala" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861999</td>
+                <td class="center-align">1-43381753471</td>
+                <td><strong>Ms.T.Divya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/t-divya.png" alt="Ms.T.Divya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991991</td>
+                <td class="center-align">1-44049412881</td>
+                <td><strong>Mrs.M.Sabeetha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-sabeetha.png" alt="Mrs.M.Sabeetha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681992</td>
+                <td class="center-align">1-44749288815</td>
+                <td><strong>Mrs.R.Jenifer</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/r-jenifer.png" alt="Mrs.R.Jenifer" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561990</td>
+                <td class="center-align">1-43381753858</td>
+                <td><strong>Mr.R.Nandhakumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/r-nandhakumar.png" alt="Mr.R.Nandhakumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991992</td>
+                <td class="center-align">1-44749287878</td>
+                <td><strong>Mrs.A.Saranya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/a-saranya.png" alt="Mrs.A.Saranya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2632321999</td>
+                <td class="center-align">1-44749289088</td>
+                <td><strong>Ms.M.Haritha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-haritha.png" alt="Ms.M.Haritha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2614141981</td>
+                <td class="center-align">1-44123595185</td>
+                <td><strong>Mrs.J.Kanya Devi</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/j-kanya-devi.png" alt="Mrs.J.Kanya Devi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2619301969</td>
+                <td class="center-align">1-45332080516</td>
+                <td><strong>Mrs.S.V.Hemalatha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-v-hemalatha.png" alt="Mrs.S.V.Hemalatha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2624761989</td>
+                <td class="center-align">1-4795532246</td>
+                <td><strong>Mr.A.Vinod kanna</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/a-vinod-kanna.png" alt="Mr.A.Vinod kanna" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2696691995</td>
+                <td class="center-align">1-44748929594</td>
+                <td><strong>Mrs.R.Gayathri</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/r-gayathri.png" alt="Mrs.R.Gayathri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2662341999</td>
+                <td class="center-align">1-44073171788</td>
+                <td><strong>Ms.S.Evangeline Aishwarya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-evangeline-aishwarya.png" alt="Ms.S.Evangeline Aishwarya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2672221989</td>
+                <td class="center-align">1-46907261538</td>
+                <td><strong>Mrs.M.Karthika</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-karthika.png" alt="Mrs.M.Karthika" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2620762002</td>
+                <td class="center-align">1-46905827840</td>
+                <td><strong>Ms.V.Gayathri</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/v-gayathri.png" alt="Ms.V.Gayathri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2659611989</td>
+                <td class="center-align">1-44816211534</td>
+                <td><strong>Mrs.P.Brindha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/p-brindha.png" alt="Mrs.P.Brindha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">23</td>
+                <td class="center-align">2622411995</td>
+                <td class="center-align">1-4647070169</td>
+                <td><strong>Mrs.K.B.Sangavi</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/k-b-sangavi.png" alt="Mrs.K.B.Sangavi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">24</td>
+                <td class="center-align">2655071989</td>
+                <td class="center-align">1-47948889372</td>
+                <td><strong>Mrs.P.Keerthana</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/p-keerthana.png" alt="Mrs.P.Keerthana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">25</td>
+                <td class="center-align">2677481989</td>
+                <td class="center-align">1-12145504742</td>
+                <td><strong>Dr.N.Yuvaraj</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/n-yuvaraj.png" alt="Dr.N.Yuvaraj" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">26</td>
+                <td class="center-align">2654391991</td>
+                <td class="center-align">1-2299912255</td>
+                <td><strong>Mrs.M.Soundarya Devi</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-soundarya-devi.png" alt="Mrs.M.Soundarya Devi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">27</td>
+                <td class="center-align">2660931998</td>
+                <td class="center-align">1-44072931041</td>
+                <td><strong>Mrs.Sri Sakthi Hamrish</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/sri-sakthi-hamrish.png" alt="Mrs.Sri Sakthi Hamrish" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">28</td>
+                <td class="center-align">2646841993</td>
+                <td class="center-align">1-9316597212</td>
+                <td><strong>Mrs.S.Abinaya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-abinaya.png" alt="Mrs.S.Abinaya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">29</td>
+                <td class="center-align">2654562001</td>
+                <td class="center-align">1-45332080547</td>
+                <td><strong>Mr.B.Sanjay Krishna</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/b-sanjay-krishna.png" alt="Mr.B.Sanjay Krishna" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">30</td>
+                <td class="center-align">2652261991</td>
+                <td class="center-align">1-43417997639</td>
+                <td><strong>Mrs.P.Deepthi Nair</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/p-deepthi-nair.png" alt="Mrs.P.Deepthi Nair" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">31</td>
+                <td class="center-align">2614441994</td>
+                <td class="center-align">1-43386747891</td>
+                <td><strong>Mrs.S.Nandhini</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-nandhini.png" alt="Mrs.S.Nandhini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">32</td>
+                <td class="center-align">2663791992</td>
+                <td class="center-align">1-44749288483</td>
+                <td><strong>Mrs.S.Valarmathi</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-valarmathi.png" alt="Mrs.S.Valarmathi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">33</td>
+                <td class="center-align">2697991973</td>
+                <td class="center-align">1-43389549712</td>
+                <td><strong>Mrs.R.Nandhini</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/r-nandhini.png" alt="Mrs.R.Nandhini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">34</td>
+                <td class="center-align">2649931990</td>
+                <td class="center-align">1-43368439084</td>
+                <td><strong>Mrs.M.Manimegala</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-manimegala.png" alt="Mrs.M.Manimegala" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">35</td>
+                <td class="center-align">2644001990</td>
+                <td class="center-align">1-47950596094</td>
+                <td><strong>Mrs.S.Subhasri</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-subhasri.png" alt="Mrs.S.Subhasri" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">36</td>
+                <td class="center-align">2617131991</td>
+                <td class="center-align">1-47950596102</td>
+                <td><strong>Mrs.D.Brindha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/d-brindha.png" alt="Mrs.D.Brindha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">37</td>
+                <td class="center-align">2752201992</td>
+                <td class="center-align">1-44816249884</td>
+                <td><strong>Mr.UnniKuttan K S</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/unnikuttan-k-s.png" alt="Mr.UnniKuttan K S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">38</td>
+                <td class="center-align">2771372001</td>
+                <td class="center-align">1-47948879938</td>
+                <td><strong>Mr.Subham Kumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/subham-kumar.png" alt="Mr.Subham Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">39</td>
+                <td class="center-align">2630071990</td>
+                <td class="center-align">1-7515105037</td>
+                <td><strong>Mrs.G.Hemaprabha</strong></td>
+                <td>Assistant Professor</td>
+                <td>General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/g-hemaprabha.png" alt="Mrs.G.Hemaprabha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">40</td>
+                <td class="center-align">2687311992</td>
+                <td class="center-align">1-44743789610</td>
+                <td><strong>Mrs.P.Sharmila</strong></td>
+                <td>Assistant Professor</td>
+                <td>General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/p-sharmila.png" alt="Mrs.P.Sharmila" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">41</td>
+                <td class="center-align">2628872002</td>
+                <td class="center-align">1-47948776640</td>
+                <td><strong>Ms.S.Shanmathi</strong></td>
+                <td>Assistant Professor</td>
+                <td>General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-shanmathi.png" alt="Ms.S.Shanmathi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">42</td>
+                <td class="center-align">2720492003</td>
+                <td class="center-align">1-47948880509</td>
+                <td><strong>Ms.S.Abishree</strong></td>
+                <td>Assistant Professor</td>
+                <td>General Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/s-abishree.png" alt="Ms.S.Abishree" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">43</td>
+                <td class="center-align">2682911990</td>
+                <td class="center-align">1-46907261722</td>
+                <td><strong>Mr.C.Rajesh Kumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/c-rajesh-kumar.png" alt="Mr.C.Rajesh Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">44</td>
+                <td class="center-align">2629471994</td>
+                <td class="center-align">1-47948880512</td>
+                <td><strong>Mrs.Kousalya A</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/kousalya-a.png" alt="Mrs.Kousalya A" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">45</td>
+                <td class="center-align">2639181992</td>
+                <td class="center-align">1-47948880518</td>
+                <td><strong>Mr.T.Jayasarangan</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/t-jayasarangan.png" alt="Mr.T.Jayasarangan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">46</td>
+                <td class="center-align">2635961974</td>
+                <td class="center-align">1-3358044396</td>
+                <td><strong>Dr.Y.Baby Kalpana</strong></td>
+                <td>Professor</td>
+                <td>PG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/y-baby-kalpana.png" alt="Dr.Y.Baby Kalpana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">47</td>
+                <td class="center-align">2630511975</td>
+                <td class="center-align">1-7521833420</td>
+                <td><strong>Mr.K.Satheesh Kumar</strong></td>
+                <td>Associate Professor</td>
+                <td>PG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/k-satheesh-kumar.png" alt="Mr.K.Satheesh Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">48</td>
+                <td class="center-align">2680561997</td>
+                <td class="center-align">1-10608216484</td>
+                <td><strong>Mrs.M.Mohana Priya</strong></td>
+                <td>Assistant Professor</td>
+                <td>PG-Computer Science and Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cse-faculty-images/m-mohana-priya.png" alt="Mrs.M.Mohana Priya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "PAC Members": "<h2 style=\"text-align: center; color: #167a39;\"><u>PAC MEMBERS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Status / Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.K.E.Kannammal</strong></td>\n                <td>Professor and Head, Department of Computer Science and Engineering, Sri Shakthi InstituteEngineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Chairperson</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.K.Umamaheswari</strong></td>\n                <td>Professor and Head, Department Information Technology,PSG Technology, Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Academic Expert</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Mr.R.Karthiban</strong></td>\n                <td>ASP &amp; Head,Department of CSE(Cyber Security), Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Mrs.S.Hemalatha</strong></td>\n                <td>ASP &amp; Head,Department of CSE(Cyber Security), Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Ms.Suvithavani</strong></td>\n                <td>ASP, Department of Computer Scienceand Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Ms.Geethanjaly</strong></td>\n                <td>M.T Alumni, (2019-23 batch),Developer, Ducen, Chennai</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry Expert</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mrs.S.Dhivya</strong></td>\n                <td>AP,Department of Computer Science Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Dr.J.Jasmine</strong></td>\n                <td>Prof.,Department of Computer Science and Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Dr.A.Sakthivel</strong></td>\n                <td>Prof.,Department of Computer Scienceand Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Ms.M.Banupriya</strong></td>\n                <td>AP,Department of Computer Science Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Mr.K.Vevek,</strong></td>\n                <td>AVP Data science and Analytics Heptagon Technologies, Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry Expert</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Kuzhali Tamizhiniyal.P</strong></td>\n                <td>IIIA,Department of Computer Science Engineering, Sri Shakthi Institute Engineering and Technology,Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Student Representatives</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Open Electives and Verticals</h3>\n        <p class=\"dept-lead-text\">The department offers specialized industry-aligned curriculum including Open Electives and Verticals in emerging computing areas such as Cloud Computing, Artificial Intelligence, Full-Stack Development, Cyber Security, and Big Data Engineering.</p>\n        <h3 style=\"color: #167a39; margin-top: 24px; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.E. Computer Science and Engineering:</strong> Autonomous Regulations 2021, Regulations 2020, and Regulations 2019.</div>\n          </li>\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M.E. Computer Science and Engineering:</strong> Autonomous Regulations 2021 and Regulations 2020.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Rently</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Hyperverge</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Eunimart</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Zoho</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Comcast</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Infirna</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kaar Tech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">GRL Software</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Codemonk</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">VVDN</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Vuram Technology</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Thoughtworks</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aspire Systems</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CES</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Capgemini</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Calypso</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Wipro</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Guardian Link</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Coding Mart</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aptean</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Tata Consultancy Services</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amazon web services</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">HTC Global Services</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">OLA Cabs</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Virtusa</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Intel Corporation</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">L&amp;T InfoTech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Cisco</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Tech Mahindra</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">IBM</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Skava Tech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">FlipKart</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Full Creative</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Examly</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amphisoft</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Payoda</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Nationstar</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Squash Apps</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Springrole</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Infosys</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Sirius Software Solutions</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CTS</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
@@ -1706,7 +3094,301 @@ export const departmentDetails = {
         "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">To be a globally recognized centre of excellence in Information Technology education, research, innovation, and entrepreneurship. The goal is to nurture highly skilled IT professionals, advance cutting-edge research, and develop impactful technological solutions that drive societal progress. By fostering industry collaborations, promoting entrepreneurship, and embracing emerging technologies, the aim is to become the preferred destination for students, researchers, and industry leaders seeking IT expertise.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M1:</strong> Excellence in Education & Research: Deliver industry-aligned education, foster hands-on learning, and drive cutting-edge research in emerging technologies.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M2:</strong> Industry & Entrepreneurship Focus: Strengthen industry collaborations, support student startups through incubation and mentorship, and promote innovation-driven initiatives.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M3:</strong> Global & Ethical Impact: Equip students with technical expertise, global certifications, and ethical responsibility to create socially conscious and globally competitive IT professionals.</div>\n          </li>\n        </ul>\n    ",
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>Core Competency & Lifelong Learning: Equip graduates with a strong foundation in Information Technology, enabling them to analyze, design, and implement innovative solutions while adapting to evolving technologies through lifelong learning.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>Research, Innovation & Entrepreneurship: Encourage graduates to engage in cutting-edge research, develop innovative IT solutions, and pursue entrepreneurial ventures through incubation, mentorship, and industry collaborations.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>Industry Readiness & Global Competence: Prepare graduates for successful careers by fostering technical expertise, problem-solving skills, professional certifications, and hands-on experience through internships, projects, and industry-driven training.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>Ethical, Social & Leadership Responsibilities: Instill professional ethics, teamwork, leadership, and a sense of social responsibility, ensuring graduates contribute to sustainable technological advancements and societal well-being.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> Software Development & Emerging Technologies: Apply core computing principles, programming skills, and knowledge of emerging technologies like AI, IoT, and cloud computing to design and develop efficient IT solutions.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> Research, Innovation & Entrepreneurship: Analyze real-world challenges, conduct research, and develop innovative, market-driven IT products and solutions while fostering an entrepreneurial mindset.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> Industry Readiness & Ethical IT Practices: Demonstrate proficiency in industry-relevant tools, project management, and cybersecurity best practices while upholding ethical, legal, and social responsibilities in professional IT solutions.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.S.Prakash</strong></td>\n                <td>Professor &amp; Head</td>\n                <td>M.E,Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr. V.Kamalaveni</strong></td>\n                <td>Professor</td>\n                <td>M.E,Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.R.P.S.Manikandan</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E,Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.M.Deepa</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E,Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>B.Varun kumar</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>M.Kirubadevi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>T.Sathya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>M.Buvana</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>K.Sugashini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>S.Ashokkumar</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>I.A.Jannathul Firthous</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.Tech</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>S.Pavithra</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>P.Anitha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>N.G.Dharaniya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>M.Gayathri Devi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>B.Sandhiya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">17</td>\n                <td><strong>M.Sathya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">18</td>\n                <td><strong>T.Esther</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">19</td>\n                <td><strong>V.Suganya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">20</td>\n                <td><strong>M.Aruna</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">21</td>\n                <td><strong>E.Premalatha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">22</td>\n                <td><strong>P.Sathyavathy</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">23</td>\n                <td><strong>J.Pradeep</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">24</td>\n                <td><strong>B.Dhanushgodi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">25</td>\n                <td><strong>K.R.Nishmitha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">26</td>\n                <td><strong>C.Ambika</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">27</td>\n                <td><strong>M.A.Hemalatha</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">28</td>\n                <td><strong>Mayank Chauhan</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.Tech</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">29</td>\n                <td><strong>R.Sabarinath</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.Tech</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">30</td>\n                <td><strong>M.Saranya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">31</td>\n                <td><strong>K.Iyswarya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">32</td>\n                <td><strong>S.Kiruba</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">33</td>\n                <td><strong>S.Vijay</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">34</td>\n                <td><strong>S.Vijayalakshmi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2615691979</td>
+                <td class="center-align">1-10678375904</td>
+                <td><strong>Dr.Deepa.M</strong></td>
+                <td>Associate Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/deepa-m.png" alt="Dr.Deepa.M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2643111988</td>
+                <td class="center-align">1-10678375904</td>
+                <td><strong>Dr.Manikandan.R.P.S</strong></td>
+                <td>Associate Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/manikandan-r-p-s.png" alt="Dr.Manikandan.R.P.S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2684171983</td>
+                <td class="center-align">1-3557741791</td>
+                <td><strong>Mr.Varun Kumar.B</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/varun-kumar-b.png" alt="Mr.Varun Kumar.B" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2687691990</td>
+                <td class="center-align">1-3363625760</td>
+                <td><strong>Ms.Sathya Thangavel</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sathya-thangavel.png" alt="Ms.Sathya Thangavel" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2619831984</td>
+                <td class="center-align">1-44743789448</td>
+                <td><strong>Ms.Jannathul firthous</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/jannathul-firthous.png" alt="Ms.Jannathul firthous" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2647841991</td>
+                <td class="center-align">1-231145612</td>
+                <td><strong>Ms.Pavithra.S</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/pavithra-s.png" alt="Ms.Pavithra.S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2649401992</td>
+                <td class="center-align">1-221478563</td>
+                <td><strong>Ms.Anitha.P</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/anitha-p.png" alt="Ms.Anitha.P" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2679941998</td>
+                <td class="center-align">1-11622715958</td>
+                <td><strong>Ms.Sugashini.K</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sugashini-k.png" alt="Ms.Sugashini.K" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2622241994</td>
+                <td class="center-align">1-214789654</td>
+                <td><strong>Ms.Buvana.M</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/buvana-m.png" alt="Ms.Buvana.M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2662321984</td>
+                <td class="center-align">1-43382443881</td>
+                <td><strong>Ms.Brinda.A</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/brinda-a.png" alt="Ms.Brinda.A" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2690461987</td>
+                <td class="center-align">1-489351743</td>
+                <td><strong>Mr.Ashok Kumar.S</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/ashok-kumar-s.png" alt="Mr.Ashok Kumar.S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2619091980</td>
+                <td class="center-align">1-2665623273</td>
+                <td><strong>Ms.Premalatha.E</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/premalatha-e.png" alt="Ms.Premalatha.E" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2615361988</td>
+                <td class="center-align">1-1475679933</td>
+                <td><strong>Ms.Sathyavathy.P</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sathyavathy-p.png" alt="Ms.Sathyavathy.P" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2685951993</td>
+                <td class="center-align">1-45239718938</td>
+                <td><strong>Ms.Aruna.M</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/aruna-m.png" alt="Ms.Aruna.M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2624591993</td>
+                <td class="center-align">1-45239718949</td>
+                <td><strong>Ms.Suganya.V</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/suganya-v.png" alt="Ms.Suganya.V" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2638241993</td>
+                <td class="center-align">1-3557985427</td>
+                <td><strong>Ms.Sandhiya.B</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sandhiya-b.png" alt="Ms.Sandhiya.B" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2690901989</td>
+                <td class="center-align">1-44924886356</td>
+                <td><strong>Mr.Sadhish Chinnapan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sadhish-chinnapan.png" alt="Mr.Sadhish Chinnapan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2648422001</td>
+                <td class="center-align">1-44749288897</td>
+                <td><strong>Ms.Vijalakshmi.S</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/vijalakshmi-s.png" alt="Ms.Vijalakshmi.S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2678121983</td>
+                <td class="center-align">1-7440866358</td>
+                <td><strong>Dr.Esther.T</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/esther-t.png" alt="Dr.Esther.T" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2672031993</td>
+                <td class="center-align">1-231456327</td>
+                <td><strong>Ms.Dharaniya N G</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/dharaniya-n-g.png" alt="Ms.Dharaniya N G" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2677742001</td>
+                <td class="center-align">1-45239719019</td>
+                <td><strong>Ms.Nishmitha K R</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/nishmitha-k-r.png" alt="Ms.Nishmitha K R" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2622521992</td>
+                <td class="center-align">1-45239719030</td>
+                <td><strong>Mrs.Saranya M</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/saranya-m.png" alt="Mrs.Saranya M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">23</td>
+                <td class="center-align">2645291996</td>
+                <td class="center-align">1-46911815993</td>
+                <td><strong>Ms.Kiruba.S</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/kiruba-s.png" alt="Ms.Kiruba.S" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">24</td>
+                <td class="center-align">2658931994</td>
+                <td class="center-align">1-4829663262</td>
+                <td><strong>Ms.Gayathri Devi.M</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/gayathri-devi-m.png" alt="Ms.Gayathri Devi.M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">25</td>
+                <td class="center-align">2656791995</td>
+                <td class="center-align">1-254696325</td>
+                <td><strong>Ms.Sathya.M</strong></td>
+                <td>Assistant Professor</td>
+                <td>Information Technology</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/it-faculty-images/sathya-m.png" alt="Ms.Sathya.M" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Open Electives and Verticals</h3>\n        <p class=\"dept-lead-text\">The department provides cutting-edge open electives and vertical specializations in Cloud Engineering, DevOps Automation, Mobile Architecture, Artificial Intelligence, and Big Data Analytics.</p>\n        <h3 style=\"color: #167a39; margin-top: 24px; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.Tech. Information Technology:</strong> Autonomous Regulations 2021, Regulations 2020, and Regulations 2019.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Examly</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Future Generalic</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Skava Tech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Talentio</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Full Creative</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Fourentech</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Doodleblue</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CYGNUS SOFTWARE</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Nationstar</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CTS</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Springrole</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Codingmart</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Softcrylic</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Sopra Steria</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Focus Edumatic</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Excelacom</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Dotworld Technologies</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aspire Systems</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Iexceed</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">TCS</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ducen IT</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Rently</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Virtusa</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Bibox</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">NDOT Technologies</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Maximl Labs</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amazon</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Bluebird</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Feedback": "<h2 style=\"text-align: center; color: #167a39;\"><u>FEEDBACK</u></h2>\n        <p class=\"dept-lead-text\" style=\"text-align: center; margin-bottom: 24px;\">We value your constructive feedback to continuously enhance our academic quality and learning ecosystem.</p>\n        <form class=\"dept-feedback-form\" onsubmit=\"event.preventDefault(); this.querySelector('.feedback-success').style.display='block'; this.reset();\">\n          <div class=\"dept-form-group\">\n            <label>Full Name *</label>\n            <input type=\"text\" required placeholder=\"Enter your full name\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Stakeholder Category *</label>\n            <select required>\n              <option value=\"\">Select your category</option>\n              <option value=\"student\">Current Student</option>\n              <option value=\"alumni\">Alumnus / Alumna</option>\n              <option value=\"parent\">Parent</option>\n              <option value=\"employer\">Employer / Industry Partner</option>\n              <option value=\"faculty\">Academician / Expert</option>\n            </select>\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Email Address *</label>\n            <input type=\"email\" required placeholder=\"Enter your email address\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Your Feedback / Suggestions *</label>\n            <textarea rows=\"4\" required placeholder=\"Please provide your feedback or suggestions for Information Technology...\"></textarea>\n          </div>\n          <button type=\"submit\" class=\"button button-primary dept-feedback-submit\" style=\"margin-top: 16px;\">Submit Feedback</button>\n          <div class=\"feedback-success\" style=\"display:none; margin-top:16px; padding:14px 18px; background:#e8f5e9; border:1px solid #4caf50; border-radius:8px; color:#2e7d32; font-weight:600;\">\n            ✓ Thank you! Your feedback has been submitted successfully to the Information Technology department.\n          </div>\n        </form>"
@@ -1746,7 +3428,158 @@ export const departmentDetails = {
         "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">To be a global leader in mechanical engineering education and research by promoting innovation, industrial collaboration, and entrepreneurial skills to address sustainable global challenges.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M1:</strong> To cultivate a research-driven environment that encourages creative problem-solving and the development of cutting-edge technologies in mechanical engineering.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M2:</strong> To build strong partnerships with industry leaders to align academic efforts with real-world needs, ensuring relevant and impactful research and education.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M3:</strong> To empower students and researchers with the mindset and tools to transform ideas into viable solutions, startups, and sustainable ventures.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M4:</strong> To integrate sustainability principles into education and research to develop solutions that positively impact society and the environment worldwide.</div>\n          </li>\n        </ul>\n    ",
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>Graduates will apply mechanical engineering knowledge to drive innovation and conduct impactful research.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>Graduates will align with industry needs through practical exposure and collaborative engagement.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>Graduates will transform ideas into sustainable solutions and lead entrepreneurial ventures.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>Graduates will develop eco-friendly technologies that address global and societal challenges.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> Advanced Engineering and Analytical Skills: Apply advanced engineering principles, computational modeling, and modern tools to analyze, design, and optimize mechanical systems, considering sustainability, ethical constraints, and industry standards.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> Professional Excellence and Entrepreneurship: Demonstrate proficiency in automation, additive manufacturing, and emerging technologies to enhance productivity, foster innovation, and develop entrepreneurial capabilities in mechanical engineering.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.S.GNANASEKARAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.P.ARIVALAGAN</strong></td>\n                <td>Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.G.PERUMALSAMY</strong></td>\n                <td>Associate Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.P.ARULPANDIAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Dr.T.SATHISHKUMAR</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Dr.R.KARTHIKEYAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph.D.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mr.K.MOHANKUMAR</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr.V.VIGNESH</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mr.S.CHANDRASEKARAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mr.N.GANESH</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Mr.BM BALAKRISHNAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Mr.M.KARTHIK</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>MR.G.DHARANIDHARAN</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>Mr.N.SIVAPRAKASH</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>Mr.M.SASIKUMAR</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>Mr.P.NAGARAJ</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E.</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551978</td>
+                <td class="center-align">1-4533208111</td>
+                <td><strong>Dr.S.Gnanasekaran</strong></td>
+                <td>Professor & Head</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/s-gnanasekaran.png" alt="Dr.S.Gnanasekaran" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961980</td>
+                <td class="center-align">1-3358044399</td>
+                <td><strong>Dr.P.Arivalagan</strong></td>
+                <td>Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/p-arivalagan.png" alt="Dr.P.Arivalagan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041982</td>
+                <td class="center-align">1-723065120</td>
+                <td><strong>Dr.G.Perumalsamy</strong></td>
+                <td>Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/g-perumalsamy.png" alt="Dr.G.Perumalsamy" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631985</td>
+                <td class="center-align">1-3654896350</td>
+                <td><strong>Dr.B.M.Balakrishnan</strong></td>
+                <td>Associate Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/b-m-balakrishnan.png" alt="Dr.B.M.Balakrishnan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941988</td>
+                <td class="center-align">1-1406772255</td>
+                <td><strong>Mr.B.Saravanan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/b-saravanan.png" alt="Mr.B.Saravanan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491986</td>
+                <td class="center-align">1-3698712470</td>
+                <td><strong>Mr.G.Mahesh</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/g-mahesh.png" alt="Mr.G.Mahesh" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821992</td>
+                <td class="center-align">1-43381987030</td>
+                <td><strong>Mr.M.Pradeepkumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/m-pradeepkumar.png" alt="Mr.M.Pradeepkumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627291995</td>
+                <td class="center-align">1-11622715890</td>
+                <td><strong>Mr.M.Sasikumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/m-sasikumar.png" alt="Mr.M.Sasikumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861996</td>
+                <td class="center-align">1-43381753480</td>
+                <td><strong>Mr.N.Sivaprakash</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/n-sivaprakash.png" alt="Mr.N.Sivaprakash" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991988</td>
+                <td class="center-align">1-44049412890</td>
+                <td><strong>Mr.R.Karthikeyan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/r-karthikeyan.png" alt="Mr.R.Karthikeyan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681990</td>
+                <td class="center-align">1-44749288825</td>
+                <td><strong>Mr.T.Sathishkumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/t-sathishkumar.png" alt="Mr.T.Sathishkumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561988</td>
+                <td class="center-align">1-43381753868</td>
+                <td><strong>Mr.V.Vignesh</strong></td>
+                <td>Assistant Professor</td>
+                <td>Mechanical Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/mech-faculty-images/v-vignesh.png" alt="Mr.V.Vignesh" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "PAC Members": "<h2 style=\"text-align: center; color: #167a39;\"><u>PAC MEMBERS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Status / Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.M.Bhuvaneshwaran</strong></td>\n                <td>Associate Professor &amp; Head, Department of Mechanical Engineering</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Coordinator/Chairperson</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.S.GNANASEKARAN</strong></td>\n                <td>Associate Professor, Mechanical</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty Members</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Mr. VIGNESH V</strong></td>\n                <td>Associate Professor, Mechanical</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty Members</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.P.Arulpandian</strong></td>\n                <td>Associate Professor, Mechanical</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty Members</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Mr.M.Karthi</strong></td>\n                <td>Associate Professor, Mechanical</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Assessment Coordinator</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mr.G.Santhosh</strong></td>\n                <td>IV – Mech.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Student Representative</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mr.N.Sasidharan</strong></td>\n                <td>Managing Director, Freezeton Technologies, Coimbatore.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Alumni Representative</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr. Prabhu Dharmarajan</strong></td>\n                <td>CEO, Origin CADD Info Tech.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry or Employer Representative</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.E. Mechanical Engineering:</strong> Autonomous Regulations 2019 and Regulations 2021.</div>\n          </li>\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M.E. CAD/CAM:</strong> Autonomous Regulations 2021.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Examly</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Professional Technologies</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Autoprint</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Weg Industry</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Stanadyne</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">KR Power</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Admatic</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CADD Global Center</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">PHA Indian Pvt Ltd</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">TCS</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Emerson</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Acadekraft</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Auto Med</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">FACE Academy</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Macincoss</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Focus Edumatics</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Unitech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Chain Sys</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Taro Pumps</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Generic CNC Engineer</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Atherm Thermal Solutions</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Designeers Lab</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Skill Lync</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Redland Industries</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Toppr</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Worksbot</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Zifo</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Texmo Pumps</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Hyundai Glovis</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Outsourcing Inc Japan</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aspire Systems</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Annamalais Toyota</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">ACC Pvt Ltd</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">KM Medical</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Maximl</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amazon CSA</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Hyoseong</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CTS</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Vidya Toolings</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Faurecia</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">V Tork Controls</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Quest Global</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Valure Ingredients</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Design Tech</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CRI Pumps</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Go Speedy Go</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Pinkblue</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\"></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
@@ -1787,7 +3620,169 @@ export const departmentDetails = {
         "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">The Civil Engineering Department will excel in undergraduate and graduate instruction, in research in all sub-areas of civil engineering, and in service to the public consistent with the land-grant mission of the college. The Department will make significant contributions to the economic development of the state, region and nation.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <p class=\"dept-lead-text\">The mission of the Department of Civil Engineering is to provide quality education to prepare nationally competitive undergraduate students for a successful career in civil engineering; to provide advanced skills and knowledge in state-of-the-art research and design in sub-areas of civil engineering for graduate students; and to provide service to the engineering profession and the public.</p>\n    ",
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>To develop students for successful careers in reinforced concrete elements field that meets the needs of Indian and multinational companies.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>To develop the confidence and ability among students to synthesize data and technical concepts and thereby apply it in real world problems.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>To promote students to use modern techniques, skills, and mathematical engineering tools for solving problems in reinforced concrete elements.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>To achieve students with a sound foundation in mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyse engineering problems and prepare them for graduate studies.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 05</span>\n            <p>To enable students to work collaboratively on multi-disciplinary projects and engage in life-long learning throughout their professional life.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> The broad education necessary to understand civil engineering solutions in global and social context to improve the construction industry.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> An ability to solve complex survey related Civil Engineering problems using GPS and GIS.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> Understanding of social awareness and environmental necessity along with ethical responsibility to have a successful career and zeal for real-world applications using optimum resources as an entrepreneur.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr. Madheswaran K, M.E., Ph.D.,</strong></td>\n                <td>HoD &amp; Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr. Priyanaka Prabhakar, M.E., Ph.D.,</strong></td>\n                <td>Associate Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Mr. Saravanakuumar K, M.E.,</strong></td>\n                <td>Associate Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Mr. Nagarajan N, M.E.,</strong></td>\n                <td>Associate Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Mr. Sri Ruban D, M.E.,</strong></td>\n                <td>Associate Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mr. Sureshkumar P, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mrs. Nithya K, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr. Mohammed Ashik M, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mr. Muthukumar P, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mrs. Saranya C V, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Mr. Hariprasanth J, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Mr. Dharmaprakash R, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>Mr. Samuel Abraham D, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>Mrs. Deepika S, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>Mr. Sre Adethya V, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>Mr. Karthik S, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">17</td>\n                <td><strong>Mr. Raguraman V, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">18</td>\n                <td><strong>Mr. Sivasanthosh C, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">19</td>\n                <td><strong>Mr. Tamilselvan N, M.E.,</strong></td>\n                <td>Assistant Professor</td>\n                <td>-</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551975</td>
+                <td class="center-align">1-4533208120</td>
+                <td><strong>Dr.K.Madheswaran</strong></td>
+                <td>Professor & Head</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/madheswaran-k.png" alt="Dr.K.Madheswaran" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961985</td>
+                <td class="center-align">1-3358044410</td>
+                <td><strong>Mr.K.Saravanakumar</strong></td>
+                <td>Associate Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/saravana-kumar-k.png" alt="Mr.K.Saravanakumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041988</td>
+                <td class="center-align">1-723065130</td>
+                <td><strong>Mr.A.Gokul</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/gokul-a.png" alt="Mr.A.Gokul" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631989</td>
+                <td class="center-align">1-3654896360</td>
+                <td><strong>Mr.D.Jenickson</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/jenickson-d.png" alt="Mr.D.Jenickson" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941991</td>
+                <td class="center-align">1-1406772265</td>
+                <td><strong>Mr.S.Lakshminarayanan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/lakhminarayanan-s.png" alt="Mr.S.Lakshminarayanan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491990</td>
+                <td class="center-align">1-3698712480</td>
+                <td><strong>Mr.R.Praveen</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/praveen-r.png" alt="Mr.R.Praveen" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821995</td>
+                <td class="center-align">1-43381987040</td>
+                <td><strong>Mr.Ranjithkumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/ranjithkumar.png" alt="Mr.Ranjithkumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627291997</td>
+                <td class="center-align">1-11622715900</td>
+                <td><strong>Mr.D.Samuel Abraham</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/samuel-abraham-d.png" alt="Mr.D.Samuel Abraham" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861998</td>
+                <td class="center-align">1-43381753490</td>
+                <td><strong>Mrs.C.V.Saranya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/saranya-c-v.png" alt="Mrs.C.V.Saranya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991992</td>
+                <td class="center-align">1-44049412900</td>
+                <td><strong>Mr.Sathyakumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/sathyakumar.png" alt="Mr.Sathyakumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681995</td>
+                <td class="center-align">1-44749288835</td>
+                <td><strong>Mr.V.Sre Adethya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/sre-adethya-v.png" alt="Mr.V.Sre Adethya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561993</td>
+                <td class="center-align">1-43381753878</td>
+                <td><strong>Mr.D.Sri Ruban</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/sri-ruban-d.png" alt="Mr.D.Sri Ruban" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991994</td>
+                <td class="center-align">1-44749287895</td>
+                <td><strong>Mr.P.Suresh Kumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Civil Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/civil-faculty-images/suresh-kumar-p.png" alt="Mr.P.Suresh Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "PAC Members": "<h2 style=\"text-align: center; color: #167a39;\"><u>PAC MEMBERS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Status / Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr. K. Madheswaran</strong></td>\n                <td>Associate Professor &amp; Head, Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Chairperson</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr. R. Saraswathi,</strong></td>\n                <td>Professor, Department of Civil Engineering, Coimbatore Institute of Technology, Coimbatore.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Academic Expert</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Mr. Sabari,</strong></td>\n                <td>Managing Director, Anussam Infra Pvt Ltd, Coimbatore.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry Expert</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Mr. K. Saravanakumar</strong></td>\n                <td>Associate Professor, Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Assessment Coordinator</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Mr. V. Sre Adethya</strong></td>\n                <td>Assistant Professor, Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mr. D. Sri Ruban</strong></td>\n                <td>Assistant Professor, Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mrs. S. Deepika</strong></td>\n                <td>Assistant Professor, Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Internal Faculty Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr. Ashiwnkumar Civil - Year</strong></td>\n                <td>Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Student Representatives</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mr. R. Gururaj, Civil - III Year.</strong></td>\n                <td>Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Student Representatives</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mr. Ramankishore Civil - IV Year</strong></td>\n                <td>Department of Civil Engineering, Sri Shakthi Institute of Engineering and Technology</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Student Representatives</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.E. Civil Engineering:</strong> Autonomous Regulations 2019 and Regulations 2021.</div>\n          </li>\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M.E. Structural Engineering:</strong> Autonomous Regulations 2021.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Extramarks</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Cysler</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CADD Global Centre</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Savvy Soft</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ethnus</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">ITC</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Professional Technologies</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kay Cee Infra</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Varma Ready Mix</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Dhan Foundation</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Paavai Geotech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Think &amp; Learn</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Sood Tower</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Acadekraft</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Rani Nithya Construction</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kajaria Bathware</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Buoyancy Consultant</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Teemage Precast In</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Hettich</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CSR Builders</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
@@ -1827,7 +3822,202 @@ export const departmentDetails = {
         "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">To become the center of excellence in the area of electrical and electronics engineering and technology, and the transmitter of moral values with focus on the development of society and rural masses.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M1:</strong> Equip the students with advanced knowledge in the field of Electrical and Electronics Engineering as well as professional skills necessary to face the challenges of the future.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M2:</strong> Enable students to become responsible citizens of the country with a willingness to serve the society.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M3:</strong> Encourage the Students to engage in research activities leading to innovative applications of technology for the benefit of mankind.</div>\n          </li>\n        </ul>\n    ",
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>To provide the students with fundamental knowledge, methodologies and use of cutting-edge technologies.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>To provide the students with an awareness of skills-in, life-long learning and self-education.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>To cultivate team work, technical writing and oral communication skills.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>To provide students with an appreciation of engineering impact on society and professional responsibilities of engineers.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> To gain a promising knowledge on basic engineering science with hands on training that would enhance students in designing technical concepts and furnish knowledge on real-time applications in Electrical and Electronics Engineering.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> To enrich students' competence with analysis, synthesis and development capabilities using latest methodologies in Electrical and Electronics Engineering.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> Ability to adapt in multidisciplinary environment and expertise students' skills in advanced technologies and creating engineering solutions for technical and non-technical aspects.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO4:</strong> Graduates will be talented to innovate, create applications and provide solutions for complex problems related to society.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.G.Sundar</strong></td>\n                <td>Professor &amp; Head</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.B.Tharani</strong></td>\n                <td>Professor</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.R.Senthil Kumar</strong></td>\n                <td>Professor</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.V.Sampath Kumar</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Dr.C.Infant Vinoth</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Dr.R.Madhuvanthani</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E, Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mr.P.Kalidass</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mrs.M.Janani</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mrs.S.Ruby</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mrs.C.Madhivadhana</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Ms.M.Priyanka Ganadhi</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Mrs.S.Abirami Sree</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>Mr.K.Hari</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>Mr.G.Ananda Babu</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>Mrs.N.Rajarajeswari</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>Mr.R.Kathiresan</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">17</td>\n                <td><strong>Mr.S.Saran Karthick</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551972</td>
+                <td class="center-align">1-4533208135</td>
+                <td><strong>Dr.G.Sundar</strong></td>
+                <td>Professor & Head</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/g-sundar.png" alt="Dr.G.Sundar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961978</td>
+                <td class="center-align">1-3358044425</td>
+                <td><strong>Dr.V.Sampath Kumar</strong></td>
+                <td>Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/vankadara-sampath-kumar.png" alt="Dr.V.Sampath Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041985</td>
+                <td class="center-align">1-723065145</td>
+                <td><strong>Mr.C.Infant Vinoth</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/c-infant-vinoth.png" alt="Mr.C.Infant Vinoth" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631988</td>
+                <td class="center-align">1-3654896375</td>
+                <td><strong>Mrs.C.Madhivadhana</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/c-madhivadhana.png" alt="Mrs.C.Madhivadhana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941990</td>
+                <td class="center-align">1-1406772275</td>
+                <td><strong>Mr.G.Ananda Babu</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/g-ananda-babu.png" alt="Mr.G.Ananda Babu" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491989</td>
+                <td class="center-align">1-3698712490</td>
+                <td><strong>Mr.K.Hari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/k-hari.png" alt="Mr.K.Hari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821996</td>
+                <td class="center-align">1-43381987050</td>
+                <td><strong>Ms.M.A.Varsha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/m-a-varsha.png" alt="Ms.M.A.Varsha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627291999</td>
+                <td class="center-align">1-11622715910</td>
+                <td><strong>Ms.M.Janani</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/m-janani.png" alt="Ms.M.Janani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861997</td>
+                <td class="center-align">1-43381753500</td>
+                <td><strong>Mrs.M.Priyanka Gandhi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/m-priyanka-gandhi.png" alt="Mrs.M.Priyanka Gandhi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991994</td>
+                <td class="center-align">1-44049412910</td>
+                <td><strong>Mrs.N.Rajarajeswari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/n-rajarajeswari.png" alt="Mrs.N.Rajarajeswari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681993</td>
+                <td class="center-align">1-44749288845</td>
+                <td><strong>Mr.P.Kalidass</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/p-kalidass.png" alt="Mr.P.Kalidass" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561991</td>
+                <td class="center-align">1-43381753888</td>
+                <td><strong>Mr.R.Kathiresan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/r-kathiresan.png" alt="Mr.R.Kathiresan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991995</td>
+                <td class="center-align">1-44749287905</td>
+                <td><strong>Mrs.R.Madhuvanthani</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/r-madhuvanthani.png" alt="Mrs.R.Madhuvanthani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2632322002</td>
+                <td class="center-align">1-44749289105</td>
+                <td><strong>Ms.S.Abirami Sree</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/s-abirami-sree.png" alt="Ms.S.Abirami Sree" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2614141988</td>
+                <td class="center-align">1-44123595200</td>
+                <td><strong>Mrs.S.Ruby</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/s-ruby.png" alt="Mrs.S.Ruby" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2619301976</td>
+                <td class="center-align">1-45332080535</td>
+                <td><strong>Mr.S.Saran Karthick</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electrical and Electronics Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/eee-faculty-images/s-saran-karthick.png" alt="Mr.S.Saran Karthick" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.E. Electrical and Electronics Engineering:</strong> Autonomous Regulations 2019 and Regulations 2021.</div>\n          </li>\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M.E. Embedded System Technologies:</strong> Autonomous Regulations 2021.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amazon</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Intel</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Byju's</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Rently</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kaar Technologies</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Coding Mart</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Embed UR</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Eunimart</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">IVTL Infoview</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ducent IT Solutions</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">IBM</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Admatic</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CTS</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">TrueChips</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Capgemini</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Max Eye Technologies</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">TCS</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Skava Technologies</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aspire Systems</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ducom Instruments</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Seoyon Electronics</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Payoda</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Technosphere India Pvt ltd</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Wipro</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Pactron</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Weg Industries</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kalycito</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Mak Control</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CRI Pumps</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Zentron</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Feedback": "<h2 style=\"text-align: center; color: #167a39;\"><u>FEEDBACK</u></h2>\n        <p class=\"dept-lead-text\" style=\"text-align: center; margin-bottom: 24px;\">We value your constructive feedback to continuously enhance our academic quality and learning ecosystem.</p>\n        <form class=\"dept-feedback-form\" onsubmit=\"event.preventDefault(); this.querySelector('.feedback-success').style.display='block'; this.reset();\">\n          <div class=\"dept-form-group\">\n            <label>Full Name *</label>\n            <input type=\"text\" required placeholder=\"Enter your full name\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Stakeholder Category *</label>\n            <select required>\n              <option value=\"\">Select your category</option>\n              <option value=\"student\">Current Student</option>\n              <option value=\"alumni\">Alumnus / Alumna</option>\n              <option value=\"parent\">Parent</option>\n              <option value=\"employer\">Employer / Industry Partner</option>\n              <option value=\"faculty\">Academician / Expert</option>\n            </select>\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Email Address *</label>\n            <input type=\"email\" required placeholder=\"Enter your email address\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Your Feedback / Suggestions *</label>\n            <textarea rows=\"4\" required placeholder=\"Please provide your feedback or suggestions for Electrical and Electronics Engineering...\"></textarea>\n          </div>\n          <button type=\"submit\" class=\"button button-primary dept-feedback-submit\" style=\"margin-top: 16px;\">Submit Feedback</button>\n          <div class=\"feedback-success\" style=\"display:none; margin-top:16px; padding:14px 18px; background:#e8f5e9; border:1px solid #4caf50; border-radius:8px; color:#2e7d32; font-weight:600;\">\n            ✓ Thank you! Your feedback has been submitted successfully to the Electrical and Electronics Engineering department.\n          </div>\n        </form>"
@@ -1865,7 +4055,345 @@ export const departmentDetails = {
         "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">To be recognised as centre of excellence in higher learning and research in the fields of Electronics and Communication Engineering with national and international repute.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M1:</strong> Provide a supportive learning experience to students in the field of Electronics and Communication Engineering by emphasizing activity-based Learning with Research focus to prepare them for professional careers.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M2:</strong> Enable students to develop skills to solve Engineering problems with their creativity to cater to societal needs keeping in pace with technological advancements.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M3:</strong> To provide Students with ethical and human values to thereby promote social activities.</div>\n          </li>\n        </ul>\n    ",
         "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>Graduates to have profound knowledge on software skills, core-engineering concepts to analyze and design electronics and communication products and develop solutions for real-life applications.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>Create Graduates capable to solve problems in electronics and communication through creativity, critical thinking, intellectual capacity and social responsibilities.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>Create Graduates with system thinking capability, professional and ethical attitude, empathy, teamwork skills, leadership, and work in multidisciplinary environments.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 04</span>\n            <p>Create Graduates capable of successful professional careers & life-long learning with an impressive academic environment.</p>\n          </div>\n        </div>\n    ",
         "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> Professional Skills: Potential Knowledge to understand and relate basic concepts to develop innovative design and implementation of complex systems in the fields of Electronics, Communication, VLSI, Embedded systems etc.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> Problem Solving Skills: An ability to solve complex Electronics and Communication Engineering problems using latest hardware and software tools along with analytical skills to arrive at cost effective and proper solutions.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> Successful Career and Entrepreneurship: An understanding of social awareness and environmental-wisdom along with ethical responsibility to have a successful career and nurture passion for real-world applications as an entrepreneur.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.P.SIVAKUMAR,</strong></td>\n                <td>HoD &amp; Professor</td>\n                <td>ME , Ph. D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.A.Senthil kumar,</strong></td>\n                <td>Professor</td>\n                <td>ME , Ph. D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr. Bindu Salim</strong></td>\n                <td>Professor</td>\n                <td>ME , Ph. D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.C. Aravind</strong></td>\n                <td>Professor</td>\n                <td>M.S,Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Dr. R Jamuna,</strong></td>\n                <td>Professor</td>\n                <td>ME , Ph. D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mrs.R.Sudha,</strong></td>\n                <td>Associate Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mr.T.Maheswaran</strong></td>\n                <td>Associate Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mrs.R.Ramalakshmi</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mrs.S.Yogitha</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Ms.K.B.Sangavi</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Ms. A.Ashna</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Ms.S.Jeevitha</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">13</td>\n                <td><strong>Mr.Mohamed Yas Nivisan</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">14</td>\n                <td><strong>Mrs. Saranya. S</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">15</td>\n                <td><strong>Mrs. Subhashini</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">16</td>\n                <td><strong>Ms. R.Deeksha</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">17</td>\n                <td><strong>Ms.Prasanna Maria</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">18</td>\n                <td><strong>Ms.Senbagapriya S</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">19</td>\n                <td><strong>Mr.K.Sivaprasath</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">20</td>\n                <td><strong>Ms.T.Renita Pearlin</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">21</td>\n                <td><strong>Ms.M.Madhuvarshini</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">22</td>\n                <td><strong>Mrs.Sridevi K</strong></td>\n                <td>Assistant professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">23</td>\n                <td><strong>Mrs Prema.C</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">24</td>\n                <td><strong>Ms Hemalatha S</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">25</td>\n                <td><strong>Mr. J Manokaran</strong></td>\n                <td>Assistant Professor</td>\n                <td>ME</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">26</td>\n                <td><strong>Mrs. Pricilla Sofia. P</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.Tech</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">27</td>\n                <td><strong>Dr. Priyadharshini</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph. D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">28</td>\n                <td><strong>Dr. J. Grace Jency Gnanammal</strong></td>\n                <td>Assistant Professor</td>\n                <td>Ph.D</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
+        'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551970</td>
+                <td class="center-align">1-4533208150</td>
+                <td><strong>Dr.P.Sivakumar</strong></td>
+                <td>Professor & Head</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/sivakumar-p.png" alt="Dr.P.Sivakumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961976</td>
+                <td class="center-align">1-3358044440</td>
+                <td><strong>Dr.K.R.Remya</strong></td>
+                <td>Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/remya-k-r.png" alt="Dr.K.R.Remya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041986</td>
+                <td class="center-align">1-723065155</td>
+                <td><strong>Mr.Akarsh S. Kumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/akarsh-s-kumar.png" alt="Mr.Akarsh S. Kumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631987</td>
+                <td class="center-align">1-3654896385</td>
+                <td><strong>Mr.L.Arun</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/arun-l.png" alt="Mr.L.Arun" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941989</td>
+                <td class="center-align">1-1406772285</td>
+                <td><strong>Mr.S.Boopathy</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/boopathy-s.png" alt="Mr.S.Boopathy" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2677491988</td>
+                <td class="center-align">1-3698712498</td>
+                <td><strong>Mrs.P.Brinda</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/brinda-p.png" alt="Mrs.P.Brinda" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2628821993</td>
+                <td class="center-align">1-43381987060</td>
+                <td><strong>Mr.P.Dhilipkumar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/dhilipkumar-p.png" alt="Mr.P.Dhilipkumar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2627291997</td>
+                <td class="center-align">1-11622715920</td>
+                <td><strong>Mrs.P.Eswari</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/eswari-p.png" alt="Mrs.P.Eswari" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2665861996</td>
+                <td class="center-align">1-43381753510</td>
+                <td><strong>Mrs.S.Hemalatha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/hemalatha-s.png" alt="Mrs.S.Hemalatha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2616991993</td>
+                <td class="center-align">1-44049412920</td>
+                <td><strong>Mr.Karthikeyan Vairavel</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/karthikeyan-vairavel.png" alt="Mr.Karthikeyan Vairavel" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2624681991</td>
+                <td class="center-align">1-44749288855</td>
+                <td><strong>Mr.R.Mahendar</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/mahendar-r.png" alt="Mr.R.Mahendar" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2633561989</td>
+                <td class="center-align">1-43381753898</td>
+                <td><strong>Mr.T.Maheswaran</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/maheswaran-t.png" alt="Mr.T.Maheswaran" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2694991993</td>
+                <td class="center-align">1-44749287915</td>
+                <td><strong>Mr.M.Mohamed Naufal</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/mohamed-naufal-m.png" alt="Mr.M.Mohamed Naufal" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2632322000</td>
+                <td class="center-align">1-44749289115</td>
+                <td><strong>Mrs.K.Packiyam</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/packiyam-k.png" alt="Mrs.K.Packiyam" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2614141986</td>
+                <td class="center-align">1-44123595210</td>
+                <td><strong>Mrs.K.Parimaladevi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/parimaladevi-k.png" alt="Mrs.K.Parimaladevi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2619301974</td>
+                <td class="center-align">1-45332080545</td>
+                <td><strong>Mr.G.Prabhu</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/prabhu-g.png" alt="Mr.G.Prabhu" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2624761991</td>
+                <td class="center-align">1-4795532265</td>
+                <td><strong>Mrs.L.Prasanna Mariya</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/prasanna-mariya-l.png" alt="Mrs.L.Prasanna Mariya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2696691997</td>
+                <td class="center-align">1-44748929605</td>
+                <td><strong>Mrs.C.Prema</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/prema-c.png" alt="Mrs.C.Prema" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2662342001</td>
+                <td class="center-align">1-44073171800</td>
+                <td><strong>Mrs.R.Sudha</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/r-sudha.png" alt="Mrs.R.Sudha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2672221991</td>
+                <td class="center-align">1-46907261550</td>
+                <td><strong>Mrs.R.Ramalakshmi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/ramalakshmi-r.png" alt="Mrs.R.Ramalakshmi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2620762004</td>
+                <td class="center-align">1-46905827850</td>
+                <td><strong>Mr.S.V.Ramanan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/ramanan-s-v.png" alt="Mr.S.V.Ramanan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2659611991</td>
+                <td class="center-align">1-44816211545</td>
+                <td><strong>Mrs.T.Renita Pearlin</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/renita-pearlin-t.png" alt="Mrs.T.Renita Pearlin" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">23</td>
+                <td class="center-align">2622411997</td>
+                <td class="center-align">1-4647070180</td>
+                <td><strong>Mrs.A.Renukadevi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/renukadevi-a.png" alt="Mrs.A.Renukadevi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">24</td>
+                <td class="center-align">2655071991</td>
+                <td class="center-align">1-47948889385</td>
+                <td><strong>Mr.Sankar Ganesh</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/sankar-ganesh.png" alt="Mr.Sankar Ganesh" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">25</td>
+                <td class="center-align">2677481991</td>
+                <td class="center-align">1-12145504755</td>
+                <td><strong>Mrs.K.Sridevi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/sridevi-k.png" alt="Mrs.K.Sridevi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">26</td>
+                <td class="center-align">2654391993</td>
+                <td class="center-align">1-2299912265</td>
+                <td><strong>Mrs.C.S.Thaarani</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/thaarani-c-s.png" alt="Mrs.C.S.Thaarani" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">27</td>
+                <td class="center-align">2660932000</td>
+                <td class="center-align">1-44072931050</td>
+                <td><strong>Mr.S.Thirumurugan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/thirumurugan-s.png" alt="Mr.S.Thirumurugan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">28</td>
+                <td class="center-align">2646841995</td>
+                <td class="center-align">1-9316597220</td>
+                <td><strong>Mr.Thirumurugan</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/thirumurugan.png" alt="Mr.Thirumurugan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">29</td>
+                <td class="center-align">2654562003</td>
+                <td class="center-align">1-45332080555</td>
+                <td><strong>Mrs.R.Vasanthi</strong></td>
+                <td>Assistant Professor</td>
+                <td>Electronics and Communication Engineering</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-faculty-images/vasanthi-r.png" alt="Mrs.R.Vasanthi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
         "PAC Members": "<h2 style=\"text-align: center; color: #167a39;\"><u>PAC MEMBERS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Status / Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Dr.P.Sivakumar Professor &amp; Head/ECE</strong></td>\n                <td>HoD</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;\">Chairman</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.K.R.Remya Professor/ECE</strong></td>\n                <td>Department IQAC &amp; R&amp;D Member</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.A.Senthikumar Professor/ECE</strong></td>\n                <td>Professor</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.Tamilarasi Professor/ ECE</strong></td>\n                <td>PAC Co Ordinator</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Dr.Jamuna Professor/ECE</strong></td>\n                <td>Department Exam Cell In- charge</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mr.S.Sivaprasath AP/ECE</strong></td>\n                <td>Accreditation Coordinator</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Dr.A.Kavitha</strong></td>\n                <td>HoD/S&amp; H</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Dr.P.Manimegalai Professor</strong></td>\n                <td>Professor/ECE,Karunya University</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">External Member</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Mr.Dinesh</strong></td>\n                <td>Managing Director Tech UC Automation Coimbatore</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Alumni</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
         "Curriculum": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>CURRICULUM &amp; SYLLABUS</u></h2>\n      <div style=\"margin-top: 24px;\">\n        <h3 style=\"color: #167a39; margin-bottom: 12px;\">Curriculum &amp; Syllabi Regulations</h3>\n        <ul class=\"dept-mission-list\">\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>B.E. Electronics and Communication Engineering:</strong> Autonomous Regulations 2019 and Regulations 2021.</div>\n          </li>\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>M.E. VLSI Design:</strong> Autonomous Regulations 2021.</div>\n          </li>\n        </ul>\n      </div>\n    ",
         "Placements - Key Companies": "<h2 style=\"text-align: center; color: #167a39;\"><u>PLACEMENTS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th colspan=\"2\" style=\"text-align: center; font-size: 16px; background: #167a39; color: white;\">List of key companies visited so far for placement</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Softcrylic</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Virtusa</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Amazon</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">TCS</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Skava Tech</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Bibox</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Talentio</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Full Creative</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Bluebird</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ducen IT</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">VVDN</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Cialfor</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Wipro</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">G10X</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Ethunus</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Springrole</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Kambaa</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">IBM</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Outsourcing Inc Japan</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Appranix</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Aspire Systems</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">MantraLab</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">CTS</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Technosphere</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Examly</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Unimart</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Felix healthcare</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">DxC Technlogy</td>\n              </tr>\n\n              <tr>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Caliber Interconnect Solutions</td>\n                <td style=\"width: 50%; font-weight: 600; padding: 10px 18px;\">Macincons</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
@@ -1916,36 +4444,503 @@ export const departmentDetails = {
     }
 },
   'Computer Science and Engineering (Cyber Security)': {
-    "courses": [
-        [
-            "B.E - Cyber Security",
-            "120"
-        ]
+    courses: [
+      ['B.E - Computer Science and Engineering (Cyber Security)', '120']
     ],
-    "overview": "<p>Established in 2022, the Computer Science and Engineering (Cyber Security) Department is dedicated to equipping students with specialized knowledge in the rapidly evolving field of cybersecurity. We offer a comprehensive 4-year B.E. Computer Science and Engineering (Cyber Security) program designed to provide both theoretical and practical expertise.</p><p>Our department boasts a passionate team of faculty members with extensive experience across various cybersecurity domains and features state-of-the-art facilities for hands-on learning and smart classroom experiences.</p>",
-    "sectionsList": [
-        "About the Department",
-        "Why Cyber Security at SIET",
-        "Unique Facilities",
-        "Vision & Mission",
-        "Programme Educational Objectives",
-        "Programme Specific Outcomes",
-        "Faculty Profile",
-        "PAC Members",
-        "Feedback"
+    overview: '<p>Established in 2022, the Computer Science and Engineering (Cyber Security) Department is dedicated to equipping students with specialized knowledge in the rapidly evolving field of cybersecurity. We offer a comprehensive 4-year B.E. Computer Science and Engineering (Cyber Security) program designed to provide both theoretical and practical expertise.</p><p>Our department boasts a passionate team of faculty members with extensive experience across various cybersecurity domains and features state-of-the-art facilities for hands-on learning and smart classroom experiences.</p><p>As the global demand for cybersecurity professionals continues to soar, our graduates are well-positioned to take advantage of a thriving job market. The intersection of cybersecurity with fields like AI and data science further enhances career prospects, providing students with numerous opportunities for rewarding and dynamic career growth.</p>',
+    sectionsList: [
+      'About the Department',
+      'Why Cyber Security at SIET',
+      'Unique Facilities',
+      'Vision & Mission',
+      'Programme Educational Objectives',
+      'Programme Specific Outcomes',
+      'Faculty Profile',
+      'PAC Members',
+      'Curriculum',
+      'Feedback'
     ],
-    "sections": {
-        "About the Department": "\n      <div style=\"display: flex; justify-content: flex-end; margin-bottom: 20px;\">\n          <div style=\"border: 2px solid #167a39; overflow: hidden; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);\">\n            <table style=\"border-collapse: collapse; margin: 0; min-width: 280px;\">\n              <thead>\n                <tr style=\"background: #167a39; color: white;\">\n                  <th style=\"padding: 8px 16px; font-weight: 700; font-size: 14px; border-right: 1px solid rgba(255,255,255,0.3); text-align: center;\">Course Offered</th>\n                  <th style=\"padding: 8px 16px; font-weight: 700; font-size: 14px; text-align: center;\">Intake</th>\n                </tr>\n              </thead>\n              <tbody>\n                \n                <tr style=\"background: #fff;\">\n                  <td style=\"padding: 8px 16px; font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; text-align: center;\">B.E - Cyber Security</td>\n                  <td style=\"padding: 8px 16px; font-size: 14px; font-weight: 600; text-align: center;\">120</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      <h2 style=\"text-align: center; color: #167a39;\"><u>ABOUT THE DEPARTMENT</u></h2>\n      <p>Established in 2022, the Computer Science and Engineering (Cyber Security) Department is dedicated to equipping students with specialized knowledge in the rapidly evolving field of cybersecurity. We offer a comprehensive 4-year B.E. Computer Science and Engineering (Cyber Security) program designed to provide both theoretical and practical expertise.</p>\n      <p>Our department boasts a passionate team of faculty members with extensive experience across various cybersecurity domains and features state-of-the-art facilities for hands-on learning and smart classroom experiences.</p>\n      <p>As the global demand for cybersecurity professionals continues to soar, our graduates are well-positioned to take advantage of a thriving job market. The intersection of cybersecurity with fields like AI and data science further enhances career prospects, providing students with numerous opportunities for rewarding and dynamic career growth.</p>\n    ",
-        "Why Cyber Security at SIET": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>WHY CYBER SECURITY AT SIET</u></h2>\n      <ol class=\"dept-custom-list\">\n          <li>100% Placement assistance every year.</li>\n          <li>Industry-oriented rich curriculum, supported with subject-wise industrial visits, engineering exploration labs, skill development courses, and internships.</li>\n          <li>Specialized labs for Ethical Hacking, Threat Intelligence, and Network Security Defense.</li>\n          <li>Hands-on Capture The Flag (CTF) competitions and vulnerability assessment training.</li>\n          <li>Collaborations with leading cybersecurity companies for certified training.</li>\n        </ol>\n    ",
-        "Unique Facilities": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>UNIQUE FACILITIES</u></h2>\n      <ol class=\"dept-custom-list\">\n          <li>Using online platform for Programming Practice.</li>\n          <li>Industry Training for faculty members.</li>\n          <li>Certification Courses with industry Collaboration — Software Testing with Virtusa and Data Analytics with Ducen.</li>\n        </ol>\n    ",
-        "Vision & Mission": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>VISION</u></h2>\n      <p class=\"dept-lead-text\" style=\"text-align: center;\">To become a global leader in cyber security education and research, being a preferred choice for students, practitioners, and employers seeking top-tier cyber security expertise. To be at the forefront of cybersecurity excellence, safeguarding digital frontiers with cutting-edge research, innovative education, and ethical leadership.</p>\n      <h2 style=\"text-align: center; color: #167a39; margin-top: 36px;\"><u>MISSION</u></h2>\n      <p class=\"dept-lead-text\">To equip students with the knowledge, skills, and ethical foundation to excel in the dynamic field of cybersecurity through rigorous academic programs, hands-on training, and active research. Prepare future leaders who can effectively defend against cyber threats, contribute to the field's advancement, and promote a safer digital environment.</p>\n    ",
-        "Programme Educational Objectives": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>\n      <div class=\"dept-objectives-grid\" style=\"margin-top: 24px;\">\n          \n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 01</span>\n            <p>To develop disciplined, high profile, value-added cyber security specialists for lucrative professions in their linked industries that give them international renown.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 02</span>\n            <p>To systematically educate the necessity to understand the impact of cyber crimes and threats with solutions in a global and societal context.</p>\n          </div>\n\n          <div class=\"dept-obj-card\">\n            <span class=\"dept-obj-num\">PEO 03</span>\n            <p>To select suitable ethical principles and commit to professional responsibilities and human values and contribute value and wealth for the benefit of the society.</p>\n          </div>\n        </div>\n    ",
-        "Programme Specific Outcomes": "\n      <h2 style=\"text-align: center; color: #167a39;\"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>\n      <ul class=\"dept-mission-list\" style=\"margin-top: 20px;\">\n          \n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO1:</strong> Ethically demonstrate the capability to use standard tools, practices, and technologies to analyze, design, develop, and implement Cybersecurity solutions that are innovative and optimal without compromising privacy needs.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO2:</strong> Use entrepreneurial skills to combat security risks and software and hardware threats in the computing sector.</div>\n          </li>\n\n          <li>\n            <span class=\"dept-mission-badge\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span>\n            <div><strong>PSO3:</strong> Ability to do research and development in contemporary issues through cutting edge technologies and bring awareness to the society in the field of cyber security.</div>\n          </li>\n        </ul>\n    ",
-        "Faculty Profile": "<h2 style=\"text-align: center; color: #167a39;\"><u>FACULTY LIST</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Qualification</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Mr.R.Karthiban</strong></td>\n                <td>Associate Professor &amp; Head</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.R.SenthilKumar</strong></td>\n                <td>Professor</td>\n                <td>Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.S.Anitha</strong></td>\n                <td>Professor</td>\n                <td>Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Dr.C.Infant Vinoth</strong></td>\n                <td>Associate Professor</td>\n                <td>Ph.D</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Mr.P.Balaji</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Mr.E.Subramaniyan</strong></td>\n                <td>Associate Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Mrs.J.Varshini</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Ms.K.Dhivya</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Ms.J.Haris Mita</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Mr.S.Yaswanthraj</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Mrs.N.Punnagai</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Mr.G.Samuvelraj</strong></td>\n                <td>Assistant Professor</td>\n                <td>M.E</td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
-        "PAC Members": "<h2 style=\"text-align: center; color: #167a39;\"><u>PAC MEMBERS</u></h2>\n        <div class=\"dept-table-wrapper\">\n          <table class=\"dept-data-table\">\n            <thead>\n              <tr>\n                <th style=\"width: 60px; text-align: center;\">S.No</th>\n                <th>Name</th>\n                <th>Designation</th>\n                <th>Status / Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              \n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">1</td>\n                <td><strong>Mr.R.Karthiban</strong></td>\n                <td>Associate Professor &amp; Head</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">2</td>\n                <td><strong>Dr.K.E.Kannammal</strong></td>\n                <td>Professor &amp; Head</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">3</td>\n                <td><strong>Dr.R.SenthilKumar</strong></td>\n                <td>Professor</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">4</td>\n                <td><strong>Mr.E.Subramaniyan</strong></td>\n                <td>Associate Professor</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">5</td>\n                <td><strong>Mr.S.Yaswanthraj</strong></td>\n                <td>Assistant Professor</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Faculty</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">6</td>\n                <td><strong>Gowtham M G</strong></td>\n                <td>Mobile Lead Uni cards &amp; Powerup Money</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Alumni</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">7</td>\n                <td><strong>Alphin Jude</strong></td>\n                <td>Designer &amp; Developer ZyNerd</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Alumni</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">8</td>\n                <td><strong>Mr.Saravanan</strong></td>\n                <td>Senior Software Engineer Ducen Ind. Pvt. Ltd.</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">9</td>\n                <td><strong>Sankarraj Subramanian</strong></td>\n                <td>CEO, Prompt Infotech</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Industry</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">10</td>\n                <td><strong>Senthil Kumar</strong></td>\n                <td>Business</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Parent</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">11</td>\n                <td><strong>Selva Kumar</strong></td>\n                <td>Business</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Parent</span></td>\n              </tr>\n\n              <tr>\n                <td style=\"text-align: center; font-weight: 600;\">12</td>\n                <td><strong>Baskaran S</strong></td>\n                <td>Civil Engineer</td>\n                <td><span style=\"display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;\">Parent</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>",
-        "Feedback": "<h2 style=\"text-align: center; color: #167a39;\"><u>FEEDBACK</u></h2>\n        <p class=\"dept-lead-text\" style=\"text-align: center; margin-bottom: 24px;\">We value your constructive feedback to continuously enhance our academic quality and learning ecosystem.</p>\n        <form class=\"dept-feedback-form\" onsubmit=\"event.preventDefault(); this.querySelector('.feedback-success').style.display='block'; this.reset();\">\n          <div class=\"dept-form-group\">\n            <label>Full Name *</label>\n            <input type=\"text\" required placeholder=\"Enter your full name\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Stakeholder Category *</label>\n            <select required>\n              <option value=\"\">Select your category</option>\n              <option value=\"student\">Current Student</option>\n              <option value=\"alumni\">Alumnus / Alumna</option>\n              <option value=\"parent\">Parent</option>\n              <option value=\"employer\">Employer / Industry Partner</option>\n              <option value=\"faculty\">Academician / Expert</option>\n            </select>\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Email Address *</label>\n            <input type=\"email\" required placeholder=\"Enter your email address\" />\n          </div>\n          <div class=\"dept-form-group\">\n            <label>Your Feedback / Suggestions *</label>\n            <textarea rows=\"4\" required placeholder=\"Please provide your feedback or suggestions for Computer Science (Cyber Security)...\"></textarea>\n          </div>\n          <button type=\"submit\" class=\"button button-primary dept-feedback-submit\" style=\"margin-top: 16px;\">Submit Feedback</button>\n          <div class=\"feedback-success\" style=\"display:none; margin-top:16px; padding:14px 18px; background:#e8f5e9; border:1px solid #4caf50; border-radius:8px; color:#2e7d32; font-weight:600;\">\n            ✓ Thank you! Your feedback has been submitted successfully to the Computer Science (Cyber Security) department.\n          </div>\n        </form>"
+    sections: {
+      'About the Department': `
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+          <div style="border: 2px solid #167a39; overflow: hidden; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <table style="border-collapse: collapse; margin: 0; min-width: 280px;">
+              <thead>
+                <tr style="background: #167a39; color: white;">
+                  <th style="padding: 8px 16px; font-weight: 700; font-size: 14px; border-right: 1px solid rgba(255,255,255,0.3); text-align: center;">Course Offered</th>
+                  <th style="padding: 8px 16px; font-weight: 700; font-size: 14px; text-align: center;">Intake</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background: #fff;">
+                  <td style="padding: 8px 16px; font-size: 14px; font-weight: 600; border-right: 1px solid #ddd; text-align: center;">B.E - Computer Science and Engineering (Cyber Security)</td>
+                  <td style="padding: 8px 16px; font-size: 14px; font-weight: 600; text-align: center; color: #167a39;">120</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h2 style="text-align: center; color: #167a39;"><u>ABOUT THE DEPARTMENT</u></h2>
+        <p>Established in 2022, the Computer Science and Engineering (Cyber Security) Department is dedicated to equipping students with specialized knowledge in the rapidly evolving field of cybersecurity. We offer a comprehensive 4-year B.E. Computer Science and Engineering (Cyber Security) program designed to provide both theoretical and practical expertise.</p>
+        <p>Our department boasts a passionate team of faculty members with extensive experience across various cybersecurity domains and features state-of-the-art facilities for hands-on learning and smart classroom experiences.</p>
+        <p>As the global demand for cybersecurity professionals continues to soar, our graduates are well-positioned to take advantage of a thriving job market. The intersection of cybersecurity with fields like AI and data science further enhances career prospects, providing students with numerous opportunities for rewarding and dynamic career growth.</p>
+      `,
+      'Why Cyber Security at SIET': `
+        <h2 style="text-align: center; color: #167a39;"><u>WHY CYBER SECURITY AT SIET</u></h2>
+        <ol class="dept-custom-list">
+          <li><strong>100% Placement Assistance:</strong> Dedicated industry training and campus recruitment drives with premier IT and cybersecurity recruiters every year.</li>
+          <li><strong>Rich Autonomous Curriculum:</strong> Industry-oriented curriculum supported by subject-wise industrial visits, engineering exploration labs, skill development courses, and corporate internships.</li>
+          <li><strong>Specialized Defense Labs:</strong> Cutting-edge laboratories for Ethical Hacking, Threat Intelligence, SOC Operations, and Network Defense.</li>
+          <li><strong>Hands-on CTF Competitions:</strong> Regular Capture The Flag (CTF) hackathons, penetration testing drills, and vulnerability assessment bootcamps.</li>
+          <li><strong>Industry-Certified Training:</strong> Direct corporate collaborations with leading cybersecurity organizations for certified training (CEH, CompTIA Security+, Cisco CyberOps).</li>
+        </ol>
+      `,
+      'Unique Facilities': `
+        <h2 style="text-align: center; color: #167a39;"><u>UNIQUE FACILITIES</u></h2>
+        <ol class="dept-custom-list">
+          <li><strong>Security Operations Center (SOC) Simulation Lab:</strong> Real-time threat monitoring, SIEM log analysis, and incident response drill infrastructure.</li>
+          <li><strong>Ethical Hacking & Penetration Testing Sandbox:</strong> Isolated malware analysis lab, web application security testing suites, and reverse engineering platforms.</li>
+          <li><strong>Global Industry Certification Tracks:</strong> Integrated training for Certified Ethical Hacker (CEH), CompTIA Security+, and Cisco CyberOps certifications.</li>
+          <li><strong>Continuous Programming & CTF Platform:</strong> Dedicated online competitive platform for programming practice, algorithmic security challenges, and cryptography.</li>
+          <li><strong>Industry Centers of Excellence:</strong> Active collaboration with Prompt Infotech, Virtusa, and leading cybersecurity corporate partners for live industrial projects.</li>
+        </ol>
+      `,
+      'Vision & Mission': `
+        <h2 style="text-align: center; color: #167a39;"><u>VISION</u></h2>
+        <p class="dept-lead-text" style="text-align: center;">To become a global leader in cyber security education and research, being a preferred choice for students, practitioners, and employers seeking top-tier cyber security expertise. To be at the forefront of cybersecurity excellence, safeguarding digital frontiers with cutting-edge research, innovative education, and ethical leadership.</p>
+        
+        <h2 style="text-align: center; color: #167a39; margin-top: 36px;"><u>MISSION</u></h2>
+        <ul class="dept-mission-list">
+          <li>
+            <span class="dept-mission-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            <div><strong>M1:</strong> To equip students with the knowledge, skills, and ethical foundation to excel in the dynamic field of cybersecurity through rigorous academic programs, hands-on training, and active research.</div>
+          </li>
+          <li>
+            <span class="dept-mission-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            <div><strong>M2:</strong> Prepare future leaders who can effectively defend against cyber threats, contribute to the field's advancement, and promote a safer digital environment.</div>
+          </li>
+        </ul>
+      `,
+      'Programme Educational Objectives': `
+        <h2 style="text-align: center; color: #167a39;"><u>PROGRAMME EDUCATIONAL OBJECTIVES</u></h2>
+        <div class="dept-objectives-grid" style="margin-top: 24px;">
+          <div class="dept-obj-card">
+            <span class="dept-obj-num">PEO 01</span>
+            <p>To develop disciplined, high profile, value-added cyber security specialists for lucrative professions in their linked industries that give them international renown.</p>
+          </div>
+          <div class="dept-obj-card">
+            <span class="dept-obj-num">PEO 02</span>
+            <p>To systematically educate the necessity to understand the impact of cyber crimes and threats with solutions in a global and societal context.</p>
+          </div>
+          <div class="dept-obj-card">
+            <span class="dept-obj-num">PEO 03</span>
+            <p>To select suitable ethical principles and commit to professional responsibilities and human values and contribute value and wealth for the benefit of the society.</p>
+          </div>
+        </div>
+      `,
+      'Programme Specific Outcomes': `
+        <h2 style="text-align: center; color: #167a39;"><u>PROGRAMME SPECIFIC OUTCOMES</u></h2>
+        <ul class="dept-mission-list" style="margin-top: 20px;">
+          <li>
+            <span class="dept-mission-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            <div><strong>PSO1:</strong> Ethically demonstrate the capability to use standard tools, practices, and technologies to analyze, design, develop, and implement Cybersecurity solutions that are innovative and optimal without compromising privacy needs.</div>
+          </li>
+          <li>
+            <span class="dept-mission-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            <div><strong>PSO2:</strong> Use entrepreneurial skills to combat security risks and software and hardware threats in the computing sector.</div>
+          </li>
+          <li>
+            <span class="dept-mission-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
+            <div><strong>PSO3:</strong> Ability to do research and development in contemporary issues through cutting edge technologies and bring awareness to the society in the field of cyber security.</div>
+          </li>
+        </ul>
+      `,
+      'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2682772005</td>
+                <td class="center-align">1-452910125</td>
+                <td><strong>Dr.S.Sureshu</strong></td>
+                <td>Professor & Head</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/sureshu-s.png" alt="Dr.S.Sureshu" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2655941992</td>
+                <td class="center-align">1-1406772250</td>
+                <td><strong>Mrs.N.Punnagai</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/punnagai-n.png" alt="Mrs.N.Punnagai" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2677491988</td>
+                <td class="center-align">1-3698712465</td>
+                <td><strong>Mr.S.Robert Kingsly</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/robert-kingsly-s.png" alt="Mr.S.Robert Kingsly" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628821998</td>
+                <td class="center-align">1-43381987022</td>
+                <td><strong>Mrs.S.Geetha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/geetha-s.png" alt="Mrs.S.Geetha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2627292002</td>
+                <td class="center-align">1-11622715886</td>
+                <td><strong>Mrs.K.Dhivya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/dhivya-k.png" alt="Mrs.K.Dhivya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">6</td>
+                <td class="center-align">2665862003</td>
+                <td class="center-align">1-43381753475</td>
+                <td><strong>Mrs.Elamathy</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/elamathy.png" alt="Mrs.Elamathy" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">7</td>
+                <td class="center-align">2616991995</td>
+                <td class="center-align">1-44049412885</td>
+                <td><strong>Ms.S.Hari Priya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/hari-priya-s.png" alt="Ms.S.Hari Priya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">8</td>
+                <td class="center-align">2624681996</td>
+                <td class="center-align">1-44749288819</td>
+                <td><strong>Mr.A.Harish</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/harish-a.png" alt="Mr.A.Harish" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">9</td>
+                <td class="center-align">2633561994</td>
+                <td class="center-align">1-43381753862</td>
+                <td><strong>Mrs.M.Hemalatha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/hemalatha-m.png" alt="Mrs.M.Hemalatha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">10</td>
+                <td class="center-align">2694991996</td>
+                <td class="center-align">1-44749287882</td>
+                <td><strong>Mrs.J.Kiruba Sobana</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/kiruba-sobana-j.png" alt="Mrs.J.Kiruba Sobana" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">11</td>
+                <td class="center-align">2632322003</td>
+                <td class="center-align">1-44749289092</td>
+                <td><strong>Ms.M.Madhuvarshini</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/madhuvarshini-m.png" alt="Ms.M.Madhuvarshini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">12</td>
+                <td class="center-align">2614141985</td>
+                <td class="center-align">1-44123595189</td>
+                <td><strong>Mr.Mathivanan</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/mathivanan.png" alt="Mr.Mathivanan" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">13</td>
+                <td class="center-align">2619301973</td>
+                <td class="center-align">1-45332080520</td>
+                <td><strong>Mr.M.Mithun</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/mithun-m.png" alt="Mr.M.Mithun" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">14</td>
+                <td class="center-align">2624761993</td>
+                <td class="center-align">1-4795532250</td>
+                <td><strong>Ms.A.Pavithra</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/pavithra-a.png" alt="Ms.A.Pavithra" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">15</td>
+                <td class="center-align">2696691999</td>
+                <td class="center-align">1-44748929598</td>
+                <td><strong>Mrs.K.Sabitha</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/sabitha-k.png" alt="Mrs.K.Sabitha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">16</td>
+                <td class="center-align">2662342003</td>
+                <td class="center-align">1-44073171792</td>
+                <td><strong>Ms.Sai Mounishadevi</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/sai-mounishadevi.png" alt="Ms.Sai Mounishadevi" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">17</td>
+                <td class="center-align">2672221993</td>
+                <td class="center-align">1-46907261542</td>
+                <td><strong>Mrs.S.Saranya</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/saranya-s.png" alt="Mrs.S.Saranya" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">18</td>
+                <td class="center-align">2620762006</td>
+                <td class="center-align">1-46905827844</td>
+                <td><strong>Mr.S.Siva</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/siva-s.png" alt="Mr.S.Siva" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">19</td>
+                <td class="center-align">2659611993</td>
+                <td class="center-align">1-44816211538</td>
+                <td><strong>Ms.G.Sneka</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/sneka-g.png" alt="Ms.G.Sneka" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">20</td>
+                <td class="center-align">2622411999</td>
+                <td class="center-align">1-4647070173</td>
+                <td><strong>Mr.N.Sri Thejas</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/sri-thejas-n.png" alt="Mr.N.Sri Thejas" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">21</td>
+                <td class="center-align">2655071993</td>
+                <td class="center-align">1-47948889376</td>
+                <td><strong>Ms.J.Varshini</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/varshini-j.png" alt="Ms.J.Varshini" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">22</td>
+                <td class="center-align">2677481993</td>
+                <td class="center-align">1-12145504746</td>
+                <td><strong>Mr.K.Vinoth</strong></td>
+                <td>Assistant Professor</td>
+                <td>UG-Cyber Security</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/cyber-faculty-images/vinoth-k.png" alt="Mr.K.Vinoth" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
+      'PAC Members': `
+        <h2 style="text-align: center; color: #167a39;"><u>PROGRAMME ADVISORY COMMITTEE (PAC)</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table">
+            <thead>
+              <tr>
+                <th style="width: 60px; text-align: center;">S.No</th>
+                <th>Name</th>
+                <th>Designation / Organization</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">1</td>
+                <td><strong>Mr. R. Karthiban</strong></td>
+                <td>Associate Professor &amp; Head</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;">Chairman / Faculty</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">2</td>
+                <td><strong>Dr. K. E. Kannammal</strong></td>
+                <td>Professor &amp; Head</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;">Faculty</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">3</td>
+                <td><strong>Dr. R. SenthilKumar</strong></td>
+                <td>Professor</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;">Faculty</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">4</td>
+                <td><strong>Mr. E. Subramaniyan</strong></td>
+                <td>Associate Professor</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;">Faculty</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">5</td>
+                <td><strong>Mr. S. Yaswanthraj</strong></td>
+                <td>Assistant Professor</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#e8f5e9; color:#2e7d32; border:1px solid #a5d6a7;">Faculty</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">6</td>
+                <td><strong>Gowtham M G</strong></td>
+                <td>Mobile Lead, Uni cards &amp; Powerup Money</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;">Alumni</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">7</td>
+                <td><strong>Alphin Jude</strong></td>
+                <td>Designer &amp; Developer, ZyNerd</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;">Alumni</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">8</td>
+                <td><strong>Mr. Saravanan</strong></td>
+                <td>Senior Software Engineer, Ducen Ind. Pvt. Ltd.</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#fff3e0; color:#e65100; border:1px solid #ffcc80;">Industry Expert</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">9</td>
+                <td><strong>Sankarraj Subramanian</strong></td>
+                <td>CEO, Prompt Infotech</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#fff3e0; color:#e65100; border:1px solid #ffcc80;">Industry Expert</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">10</td>
+                <td><strong>Senthil Kumar</strong></td>
+                <td>Business</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;">Parent</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">11</td>
+                <td><strong>Selva Kumar</strong></td>
+                <td>Business</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;">Parent</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 600;">12</td>
+                <td><strong>Baskaran S</strong></td>
+                <td>Civil Engineer</td>
+                <td><span style="display:inline-block; padding:3px 10px; border-radius:4px; font-weight:700; font-size:12px; background:#f5f5f5; color:#424242; border:1px solid #e0e0e0;">Parent</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
+      'Feedback': `
+        <h2 style="text-align: center; color: #167a39;"><u>FEEDBACK</u></h2>
+        <p class="dept-lead-text" style="text-align: center; margin-bottom: 24px;">We value your constructive feedback to continuously enhance our academic quality and cybersecurity learning ecosystem.</p>
+        <form class="dept-feedback-form" onsubmit="event.preventDefault(); this.querySelector('.feedback-success').style.display='block'; this.reset();">
+          <div class="dept-form-group">
+            <label>Full Name *</label>
+            <input type="text" required placeholder="Enter your full name" />
+          </div>
+          <div class="dept-form-group">
+            <label>Stakeholder Category *</label>
+            <select required>
+              <option value="">Select your category</option>
+              <option value="student">Current Student</option>
+              <option value="alumni">Alumnus / Alumna</option>
+              <option value="parent">Parent</option>
+              <option value="employer">Employer / Industry Partner</option>
+              <option value="faculty">Academician / Expert</option>
+            </select>
+          </div>
+          <div class="dept-form-group">
+            <label>Email Address *</label>
+            <input type="email" required placeholder="Enter your email address" />
+          </div>
+          <div class="dept-form-group">
+            <label>Your Feedback / Suggestions *</label>
+            <textarea rows="4" required placeholder="Please provide your feedback or suggestions for Computer Science (Cyber Security)..."></textarea>
+          </div>
+          <button type="submit" class="button button-primary dept-feedback-submit" style="margin-top: 16px;">Submit Feedback</button>
+          <div class="feedback-success" style="display:none; margin-top:16px; padding:14px 18px; background:#e8f5e9; border:1px solid #4caf50; border-radius:8px; color:#2e7d32; font-weight:600;">
+            ✓ Thank you! Your feedback has been submitted successfully to the Computer Science (Cyber Security) department.
+          </div>
+        </form>
+      `
     }
-},
+  },
   'VLSI Design': {
     courses: [['B.E - Electronics Engineering (VLSI Design and Technology)', '60'], ['M.E - VLSI Design', '18']],
     overview: '<p>The Department of VLSI Design and Technology specializes in semiconductor microelectronics, analog/digital CMOS integrated circuit design, FPGA synthesis, physical verification and System-on-Chip (SoC) architectures in state-of-the-art Advanced VLSI and Freescale laboratories.</p>',
@@ -1955,10 +4950,86 @@ export const departmentDetails = {
       'Unique Facilities',
       'Vision & Mission',
       'Programme Educational Objectives',
-      'Curriculum',
+      'Faculty Profile',
+        'Curriculum',
       'Feedback'
     ],
     sections: {
+      'Faculty Profile': `
+        <h2 class="dept-faculty-title"><u>FACULTY LIST</u></h2>
+        <div class="dept-table-wrapper">
+          <table class="dept-data-table faculty-profile-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;" class="center-align">S.No</th>
+                <th style="width: 110px;" class="center-align">AU-FIN</th>
+                <th style="width: 130px;" class="center-align">AICTE ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport Size)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">1</td>
+                <td class="center-align">2631551974</td>
+                <td class="center-align">1-4533208160</td>
+                <td><strong>Dr.M.Thamarai</strong></td>
+                <td>Professor & Head</td>
+                <td>VLSI Design</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-vlsi-ug-new-faculty-images/m-thamarai.png" alt="Dr.M.Thamarai" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">2</td>
+                <td class="center-align">2635961982</td>
+                <td class="center-align">1-3358044450</td>
+                <td><strong>Mrs.S.Jeevitha</strong></td>
+                <td>Assistant Professor</td>
+                <td>VLSI Design</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-vlsi-ug-new-faculty-images/jeevitha-s.png" alt="Mrs.S.Jeevitha" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">3</td>
+                <td class="center-align">2626041989</td>
+                <td class="center-align">1-723065165</td>
+                <td><strong>Mrs.Padmapriya Kiruthika</strong></td>
+                <td>Assistant Professor</td>
+                <td>VLSI Design</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-vlsi-ug-new-faculty-images/padmapriya-kiruthika.png" alt="Mrs.Padmapriya Kiruthika" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">4</td>
+                <td class="center-align">2628631990</td>
+                <td class="center-align">1-3654896395</td>
+                <td><strong>Mr.T.V.Pravin</strong></td>
+                <td>Assistant Professor</td>
+                <td>VLSI Design</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-vlsi-ug-new-faculty-images/pravin-tv.png" alt="Mr.T.V.Pravin" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+              <tr>
+                <td class="center-align" style="font-weight: 600;">5</td>
+                <td class="center-align">2655941992</td>
+                <td class="center-align">1-1406772295</td>
+                <td><strong>Mrs.Priscilla Sophia</strong></td>
+                <td>Assistant Professor</td>
+                <td>VLSI Design</td>
+                <td class="center-align faculty-photo-cell">
+                  <img src="/faculty/ece-vlsi-ug-new-faculty-images/priscilla-sophia.png" alt="Mrs.Priscilla Sophia" class="faculty-passport-img" loading="lazy" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `,
       'About the Department': `
         <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
           <div style="border: 2px solid #167a39; overflow: hidden; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
@@ -2097,6 +5168,9 @@ departmentDetails['CSE (Cyber Security)'] = departmentDetails['Computer Science 
 departmentDetails['Cyber Security'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
 departmentDetails['Computer Science (Cyber Security)'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
 departmentDetails['Computer Science and Engineering ( Cyber Security )'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
+departmentDetails['Cse Cyber Security'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
+departmentDetails['CSE-Cyber Security'] = departmentDetails['Computer Science and Engineering (Cyber Security)'];
+
 departmentDetails['Cad Cam'] = departmentDetails['Mechanical Engineering'];
 departmentDetails['CAD/CAM'] = departmentDetails['Mechanical Engineering'];
 departmentDetails['Cad/Cam'] = departmentDetails['Mechanical Engineering'];

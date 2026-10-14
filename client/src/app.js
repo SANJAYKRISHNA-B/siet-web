@@ -23,7 +23,9 @@ import {
 
 import { programmesPage } from './pages/Academics/ProgrammesPage.js';
 import { departmentsPage } from './pages/Academics/DepartmentsPage.js';
-import { departmentPage } from './pages/Academics/DepartmentDetailPage.js';
+import { departmentPage, bindDepartmentEvents } from './pages/Academics/DepartmentDetailPage.js';
+import { facultyProfilePage } from './pages/Academics/FacultyProfilePage.js';
+import { getFacultyById } from './data/faculty/index.js';
 import { curriculumPage, getCurrModalData, bindCurriculumEvents } from './pages/Academics/CurriculumPage.js';
 import { academicCalendarPage } from './pages/Academics/AcademicCalendarPage.js';
 import { academicOverviewPage } from './pages/Academics/AcademicOverviewPage.js';
@@ -119,11 +121,19 @@ function render() {
     r.startsWith('labs/') || r.startsWith('lab/') ? labDetailPage(r.replace(/^labs?\//, '')) :
     r === 'campus' || r === 'campus-life' ? internalPage('campus-life') :
     r === 'explore' || r === 'centres-of-excellence' ? internalPage('centres-of-excellence') :
+    r.startsWith('faculty/') ? facultyProfilePage(r.slice(8)) :
+    r.startsWith('department/') ? departmentPage(titleCase(r.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ')) :
     internalPage(r);
 
   appRoot.innerHTML = renderMainLayout(content, r);
   const currentLab = (r.startsWith('labs/') || r.startsWith('lab/')) ? getLabBySlug(r.replace(/^labs?\//, '')) : null;
-  document.title = currentLab ? `${currentLab.name} | Specialized Laboratories | SIET` : (r === 'labs' ? 'Specialized Laboratories | Sri Shakthi (SIET)' : `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`);
+  const currentFaculty = r.startsWith('faculty/') ? getFacultyById(r.slice(8)) : null;
+  const isDept = r.startsWith('department/');
+  let currentDeptName = isDept ? titleCase(r.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ') : '';
+  if (currentDeptName.toLowerCase().includes('cyber')) {
+    currentDeptName = 'Computer Science and Engineering (Cyber Security)';
+  }
+  document.title = currentFaculty ? `${currentFaculty.name} - Faculty Profile | SIET` : currentLab ? `${currentLab.name} | Specialized Laboratories | SIET` : (r === 'labs' ? 'Specialized Laboratories | Sri Shakthi (SIET)' : isDept ? `Department of ${currentDeptName} | Sri Shakthi (SIET)` : `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`);
   bind();
 
   if (isHome) {
@@ -440,6 +450,37 @@ function bind() {
       } else if (filter === 'pg') {
         if (ugSec) ugSec.style.display = 'none';
         if (pgSec) pgSec.style.display = '';
+      }
+    });
+  });
+
+  // Department detail page tabs and interactions
+  bindDepartmentEvents($, $$);
+
+  // Click entire programme card box to explore department
+  $$('.siet-prog-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // If clicking Apply Now or any interactive button with data-no-card-nav, do not override
+      if (e.target.closest('.siet-prog-btn-apply, [data-no-card-nav]')) {
+        return;
+      }
+      const href = card.dataset.href;
+      if (href) {
+        e.preventDefault();
+        location.hash = href;
+      }
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('.siet-prog-btn-apply, [data-no-card-nav]')) {
+          return;
+        }
+        e.preventDefault();
+        const href = card.dataset.href;
+        if (href) {
+          location.hash = href;
+        }
       }
     });
   });

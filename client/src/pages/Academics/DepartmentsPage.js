@@ -31,7 +31,7 @@ export function departmentsPage() {
         </div>
         <div class="siet-prog-grid">
           ${ugProgramsDetailed.map(p => `
-            <article class="siet-prog-card">
+            <article class="siet-prog-card" data-href="#/department/${p.deptSlug}" tabindex="0" role="link" aria-label="Explore Department of ${p.fullName}">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">4 Years &bull; Full Time</span>
@@ -40,14 +40,12 @@ export function departmentsPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2025</span>
-                  <span>Industry CoEs</span>
-                  <span>Placement Focus</span>
+                  ${(p.tags || ['Autonomous R2025', 'Industry CoEs', 'Placement Focus']).map(t => `<span>${t}</span>`).join('')}
                 </div>
               </div>
               <div class="siet-prog-card-footer">
                 <a href="#/department/${p.deptSlug}" class="siet-prog-link">Explore Department <span>&rarr;</span></a>
-                <a href="#/apply" class="siet-prog-btn-apply">Apply Now</a>
+                <a href="#/apply" class="siet-prog-btn-apply" data-no-card-nav="true">Apply Now</a>
               </div>
             </article>
           `).join('')}
@@ -66,7 +64,7 @@ export function departmentsPage() {
         </div>
         <div class="siet-prog-grid">
           ${pgProgramsDetailed.map(p => `
-            <article class="siet-prog-card pg-card">
+            <article class="siet-prog-card pg-card" data-href="#/department/${p.deptSlug}" tabindex="0" role="link" aria-label="Explore Department of ${p.fullName}">
               <div class="siet-prog-card-top">
                 <span class="siet-degree-badge pg ${p.degree.toLowerCase().replace('.', '')}">${p.degree}</span>
                 <span class="siet-duration-badge">2 Years &bull; Full Time</span>
@@ -75,14 +73,12 @@ export function departmentsPage() {
                 <h3>${p.fullName}</h3>
                 <p>${p.desc}</p>
                 <div class="siet-prog-tags">
-                  <span>Autonomous R2025</span>
-                  <span>Research Labs</span>
-                  <span>Industry CoEs</span>
+                  ${(p.tags || ['Autonomous R2025', 'Research Labs', 'Industry CoEs']).map(t => `<span>${t}</span>`).join('')}
                 </div>
               </div>
               <div class="siet-prog-card-footer">
                 <a href="#/department/${p.deptSlug}" class="siet-prog-link">Explore Department <span>&rarr;</span></a>
-                <a href="#/apply" class="siet-prog-btn-apply">Apply Now</a>
+                <a href="#/apply" class="siet-prog-btn-apply" data-no-card-nav="true">Apply Now</a>
               </div>
             </article>
           `).join('')}
@@ -104,4 +100,3 @@ export function departmentsPage() {
     </section>
   </main>`;
 }
-

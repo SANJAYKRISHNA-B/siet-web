@@ -2,6 +2,7 @@ import { departmentDetails } from '../../data/departmentsData.js';
 import { getDeptCurriculum } from '../../data/curriculumData.js';
 import { sietHudHeader } from '../../components/common/HudHeader.js';
 import { renderCurriculumTable } from './CurriculumPage.js';
+import { renderFacultyDirectory, bindFacultyDirectoryEvents } from '../../components/faculty/FacultyDirectory.js';
 
 export function departmentPage(dept) {
   const normalize = (s) => (s || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
@@ -12,24 +13,36 @@ export function departmentPage(dept) {
     || Object.keys(departmentDetails).find(k => k.toLowerCase().replace(/[^a-z0-9]/g, '') === cleanDept.replace(/[^a-z0-9]/g, ''))
     || dept;
   const detail = departmentDetails[detailKey] || departmentDetails.default;
-  const courses = detail.courses && detail.courses.length ? detail.courses : [['B.E - ' + dept, '60']];
-  const sections = detail.sectionsList || [
+  const displayTitle = (detailKey && detailKey !== 'default' && detailKey !== 'Cse Cyber Security')
+    ? detailKey
+    : (dept.toLowerCase().includes('cyber') ? 'Computer Science and Engineering (Cyber Security)' : dept);
+
+  const courses = detail.courses && detail.courses.length ? detail.courses : [['B.E - ' + displayTitle, '60']];
+  let sections = detail.sectionsList ? [...detail.sectionsList] : [
     'About the Department',
-    'Why ' + dept + ' at SIET',
+    'Why ' + displayTitle + ' at SIET',
     'Unique Facilities',
     'Achievements',
     'Vision & Mission',
     'Programme Educational Objectives',
     'Programme Specific Outcomes',
+    'Faculty Profile',
     'Curriculum',
     'Feedback'
   ];
+  if (detail.sections && detail.sections['Faculty Profile'] && !sections.includes('Faculty Profile')) {
+    const insertIdx = sections.includes('Curriculum') ? sections.indexOf('Curriculum') : (sections.includes('Feedback') ? sections.indexOf('Feedback') : sections.length);
+    sections.splice(insertIdx, 0, 'Faculty Profile');
+  }
   const deptCurriculum = getDeptCurriculum(dept);
-  return `<main class="department-detail-page">${sietHudHeader(dept, dept)}<div class="department-detail-layout"><aside class="department-detail-nav" aria-label="Department sections">${sections.map((section, index) => `<button class="${index === 0 ? 'active' : ''}" type="button" data-section="department-section-${index}">${section}</button>`).join('')}</aside><article class="department-detail-content">${sections.map((section, index) => {
+  return `<main class="department-detail-page">${sietHudHeader(displayTitle, displayTitle)}<div class="department-detail-layout"><aside class="department-detail-nav" aria-label="Department sections">${sections.map((section, index) => `<button class="${index === 0 ? 'active' : ''}" type="button" data-section="department-section-${index}">${section}</button>`).join('')}</aside><article class="department-detail-content">${sections.map((section, index) => {
     const sectionId = `department-section-${index}`;
     const isOpen = index === 0 ? ' is-open' : '';
     if (section === 'Curriculum') {
-      return `<section id="${sectionId}" class="department-copy department-curriculum-section${isOpen}"><h2>Curriculum</h2><div class="dept-curriculum-banner"><div><span class="curr-badge">AUTONOMOUS R2025</span><h2>${dept} Curriculum Structure</h2><p>Explore the full 8-semester course curriculum, subject codes, lecture/practical hours and credits designed for ${dept}.</p></div><a href="#/curriculum?dept=${deptCurriculum.id}" class="dept-curriculum-action">Open Full 8-Semester Interactive Curriculum →</a></div><div class="curr-table-wrapper">${renderCurriculumTable(deptCurriculum.id, 1)}</div></section>`;
+      return `<section id="${sectionId}" class="department-copy department-curriculum-section${isOpen}"><h2>Curriculum</h2><div class="dept-curriculum-banner"><div><span class="curr-badge">AUTONOMOUS R2025</span><h2>${displayTitle} Curriculum Structure</h2><p>Explore the full 8-semester course curriculum, subject codes, lecture/practical hours and credits designed for ${displayTitle}.</p></div><a href="#/curriculum?dept=${deptCurriculum.id}" class="dept-curriculum-action">Open Full 8-Semester Interactive Curriculum →</a></div><div class="curr-table-wrapper">${renderCurriculumTable(deptCurriculum.id, 1)}</div></section>`;
+    }
+    if (section === 'Faculty Profile') {
+      return `<section id="${sectionId}" class="department-copy department-faculty-section${isOpen}">${renderFacultyDirectory(displayTitle, detailKey)}</section>`;
     }
     if (section === 'About the Department') {
       let overviewText = detail.overview || '';
@@ -53,11 +66,55 @@ export function departmentPage(dept) {
       detail.sections[section] ||
       detail.sections[section.replaceAll(' & ', ' and ')] ||
       detail.sections[section.replaceAll(' and ', ' & ')] ||
+      detail.sections[section.replace(displayTitle, '').trim()] ||
       detail.sections[section.replace(dept, '').trim()]
     );
     if (customContent) {
       return `<section id="${sectionId}" class="department-copy${isOpen}">${customContent}</section>`;
     }
-    return `<section id="${sectionId}" class="department-copy department-placeholder${isOpen}"><h2>${section}</h2><p>${section} information for ${dept} will be updated by the department office.</p></section>`;
+    return `<section id="${sectionId}" class="department-copy department-placeholder${isOpen}"><h2>${section}</h2><p>${section} information for ${displayTitle} will be updated by the department office.</p></section>`;
   }).join('')}</article></div></main>`;
+}
+
+export function bindDepartmentEvents($, $$) {
+  const navButtons = $$('.department-detail-nav button');
+  if (!navButtons || !navButtons.length) return;
+
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.section;
+      if (!targetId) return;
+
+      navButtons.forEach(b => {
+        const isActive = (b === btn);
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      $$('.department-copy').forEach(sec => {
+        sec.classList.toggle('is-open', sec.id === targetId);
+      });
+    });
+  });
+
+  const feedbackForm = $('.dept-feedback-form');
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = feedbackForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Feedback Submitted Successfully!';
+        submitBtn.style.backgroundColor = '#0b3d20';
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          feedbackForm.reset();
+        }, 3000);
+      }
+    });
+  }
+
+  bindFacultyDirectoryEvents($, $$);
 }

@@ -7,7 +7,7 @@ export const allDepartments = [
   { id: 'aids', code: 'AI and DS', degree: 'B.Tech.', name: 'Artificial Intelligence and Data Science', desc: 'Cutting-edge curriculum fusing mathematical foundations, predictive analytics, deep neural models, big data computing and applied intelligence.' },
   { id: 'aiml', code: 'AI and ML', degree: 'B.E.', name: 'Artificial Intelligence and Machine Learning', desc: 'Specialized syllabus centered on autonomous intelligence, computer vision, generative AI, natural language processing and robotics.' },
   { id: 'it', code: 'IT', degree: 'B.Tech.', name: 'Information Technology', desc: 'Industry-aligned programme emphasizing enterprise full-stack development, cloud architecture, DevOps, network engineering and cyber infrastructure.' },
-  { id: 'cyber', code: 'Cyber Security', degree: 'B.E.', name: 'CSE (Cyber Security)', desc: 'Rigorous cybersecurity curriculum encompassing digital forensics, ethical hacking, cryptographic protocols, cloud security and SOC threat response.' },
+  { id: 'cyber', code: 'Cyber Security', degree: 'B.E.', name: 'Computer Science and Engineering (Cyber Security)', desc: 'Rigorous cybersecurity curriculum encompassing digital forensics, ethical hacking, cryptographic protocols, cloud security and SOC threat response.' },
   { id: 'ece', code: 'ECE', degree: 'B.E.', name: 'Electronics and Communication Engineering', desc: 'Core engineering curriculum connecting semiconductor microelectronics, 5G RF communications, embedded IoT systems and signal processing.' },
   { id: 'eee', code: 'EEE', degree: 'B.E.', name: 'Electrical and Electronics Engineering', desc: 'Progressive syllabus focused on smart grid architectures, electric mobility (EVs), renewable energy conversion and high-efficiency power electronics.' },
   { id: 'mech', code: 'MECH', degree: 'B.E.', name: 'Mechanical Engineering', desc: 'Broad-based curriculum covering thermodynamics, finite element analysis, computational fluid dynamics, robotics, additive manufacturing and smart materials.' },
@@ -1120,7 +1120,7 @@ export const departmentCurricula = {
     }
   },
 
-  // 13. CSE (Cyber Security)
+  // 13. Computer Science and Engineering (Cyber Security)
   'cyber': {
     ...allDepartments[4],
     semesters: {

@@ -2,7 +2,7 @@ import { deptIcon } from '../common/SvgIcons.js';
 import { slugify } from '../../utils/dom.js';
 
 const DEPT_SLUG_MAP = {
-  'CSE (Cyber Security)': 'cse-cyber-security',
+  'Computer Science and Engineering (Cyber Security)': 'cyber-security',
   'M.E. CAD / CAM': 'cad-cam',
   'M.E. Computer Science and Engineering': 'computer-science-and-engineering',
   'M.E. Embedded Systems': 'embedded-system-technologies',

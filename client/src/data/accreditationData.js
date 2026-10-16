@@ -1375,7 +1375,7 @@ export function mandatoryDisclosurePage() {
                   </tr>
                   <tr>
                     <td style="text-align: center; font-weight: 700;">10</td>
-                    <td style="text-align: left; padding-left: 18px;"><strong>B.E. CSE (Cyber Security)</strong></td>
+                    <td style="text-align: left; padding-left: 18px;"><strong>B.E. Computer Science and Engineering (Cyber Security)</strong></td>
                     <td style="text-align: center;"><span class="coe-table-tag">Undergraduate (UG)</span></td>
                     <td style="text-align: center; font-weight: 750; color: #004d2e;">60 Seats</td>
                     <td style="text-align: center;"><span class="coe-status-pill">AICTE Approved</span></td>

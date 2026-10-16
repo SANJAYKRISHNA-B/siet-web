@@ -22,15 +22,7 @@ export function renderFacultyGrid(facultyList) {
     <div class="faculty-cards-grid" id="faculty-cards-grid">
       ${cardsHtml}
     </div>
-    <div class="faculty-load-more-wrapper" id="faculty-load-more-wrapper" style="display: none;">
-      <button type="button" class="faculty-load-more-btn" id="faculty-load-more-btn" aria-label="Load more faculty members">
-        <span>Load More Faculty</span>
-        <span class="load-more-count" id="faculty-load-more-count"></span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </button>
-    </div>
+    <div class="faculty-pagination-wrapper" id="faculty-pagination-wrapper" style="display: none;" role="navigation" aria-label="Faculty directory pagination"></div>
     <div class="faculty-no-results" id="faculty-no-results" style="display: none;">
       <div class="no-results-icon">🔍</div>
       <h3>No matching faculty found</h3>

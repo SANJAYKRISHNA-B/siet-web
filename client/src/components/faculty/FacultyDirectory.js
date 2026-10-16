@@ -38,11 +38,6 @@ export function renderFacultyDirectory(deptTitle, deptKey) {
             onerror="this.onerror=null; this.src='${defaultAvatar}';"
           />
         </td>
-        <td class="center-align">
-          <button type="button" class="table-view-btn" data-action="view-faculty-profile" data-faculty-id="${f.id}">
-            View
-          </button>
-        </td>
       </tr>
     `;
   }).join('');
@@ -87,7 +82,6 @@ export function renderFacultyDirectory(deptTitle, deptKey) {
                 <th>Designation</th>
                 <th>Department</th>
                 <th style="width: 100px;" class="center-align">Photo<br><small style="font-size:11px; font-weight:normal;">(Passport)</small></th>
-                <th style="width: 80px;" class="center-align">Profile</th>
               </tr>
             </thead>
             <tbody id="faculty-table-body">
@@ -125,15 +119,97 @@ export function bindFacultyDirectoryEvents($, $$) {
   if (!cardsContainer && !tableContainer) return;
 
   const PAGE_SIZE = 9;
-  let visibleBatchLimit = PAGE_SIZE;
+  let currentPage = 1;
   let currentFilter = 'all';
   let currentQuery = '';
 
-  const loadMoreWrapper = $('#faculty-load-more-wrapper');
-  const loadMoreBtn = $('#faculty-load-more-btn');
-  const loadMoreCount = $('#faculty-load-more-count');
+  const paginationWrapper = $('#faculty-pagination-wrapper');
 
-  function applyFilters() {
+  function updatePaginationControls(totalMatches) {
+    if (!paginationWrapper) return;
+
+    const totalPages = Math.ceil(totalMatches / PAGE_SIZE);
+
+    if (totalMatches <= PAGE_SIZE || totalPages <= 1) {
+      paginationWrapper.style.display = 'none';
+      paginationWrapper.innerHTML = '';
+      return;
+    }
+
+    paginationWrapper.style.display = 'flex';
+
+    // Build page number sequence with ellipsis for clean navigation
+    const pages = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      if (currentPage <= 4) {
+        pages.push(1, 2, 3, 4, 5, '...', totalPages);
+      } else if (currentPage >= totalPages - 3) {
+        pages.push(1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+      }
+    }
+
+    const prevDisabled = currentPage === 1;
+    const nextDisabled = currentPage === totalPages;
+
+    const buttonsHtml = pages.map(p => {
+      if (p === '...') {
+        return `<span class="faculty-page-ellipsis" aria-hidden="true">&hellip;</span>`;
+      }
+      const isActive = p === currentPage;
+      return `
+        <button 
+          type="button" 
+          class="faculty-page-btn ${isActive ? 'is-active' : ''}" 
+          data-page="${p}" 
+          ${isActive ? 'aria-current="page"' : ''}
+          aria-label="Go to page ${p}">
+          ${p}
+        </button>
+      `;
+    }).join('');
+
+    const startItem = (currentPage - 1) * PAGE_SIZE + 1;
+    const endItem = Math.min(currentPage * PAGE_SIZE, totalMatches);
+
+    paginationWrapper.innerHTML = `
+      <div class="faculty-pagination-controls">
+        <button 
+          type="button" 
+          class="faculty-page-btn faculty-page-nav-btn prev-btn" 
+          data-page="${currentPage - 1}" 
+          ${prevDisabled ? 'disabled aria-disabled="true"' : ''} 
+          aria-label="Previous page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>Prev</span>
+        </button>
+
+        ${buttonsHtml}
+
+        <button 
+          type="button" 
+          class="faculty-page-btn faculty-page-nav-btn next-btn" 
+          data-page="${currentPage + 1}" 
+          ${nextDisabled ? 'disabled aria-disabled="true"' : ''} 
+          aria-label="Next page">
+          <span>Next</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="faculty-pagination-info">
+        Showing <strong>${startItem}–${endItem}</strong> of <strong>${totalMatches}</strong> faculty members (Page ${currentPage} of ${totalPages})
+      </div>
+    `;
+  }
+
+  function applyFilters(shouldScroll = false) {
     const cards = $$('.siet-faculty-card');
     const tableRows = $$('.faculty-table-row');
     const q = currentQuery.trim().toLowerCase();
@@ -160,31 +236,40 @@ export function bindFacultyDirectoryEvents($, $$) {
       }
     });
 
-    // 2. Display cards up to visibleBatchLimit (9 by default in a 3x3 grid)
-    let visibleCardsCount = 0;
+    const totalMatch = matchingCards.length;
+    const totalPages = Math.ceil(totalMatch / PAGE_SIZE) || 1;
+
+    // Keep currentPage within valid boundary
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    // 2. Display exactly 9 cards per page (3x3 grid)
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const endIndex = Math.min(startIndex + PAGE_SIZE, totalMatch);
+
     matchingCards.forEach((card, index) => {
-      if (index < visibleBatchLimit) {
+      if (index >= startIndex && index < endIndex) {
         card.style.display = 'flex';
-        visibleCardsCount++;
       } else {
         card.style.display = 'none';
       }
     });
 
-    // 3. Update Load More button
-    const remainingCards = matchingCards.length - visibleCardsCount;
-    if (loadMoreWrapper) {
-      if (remainingCards > 0) {
-        loadMoreWrapper.style.display = 'flex';
-        if (loadMoreCount) {
-          loadMoreCount.textContent = `(+${remainingCards} remaining)`;
-        }
-      } else {
-        loadMoreWrapper.style.display = 'none';
-      }
+    // 3. Update Pagination Component
+    updatePaginationControls(totalMatch);
+
+    // 4. Smooth scroll back up to the cards grid on page change
+    if (shouldScroll && cardsGrid) {
+      const headerOffset = 130;
+      const elementPosition = cardsGrid.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth'
+      });
     }
 
-    // 4. Filter Table Rows (Table view shows all matching rows)
+    // 5. Filter Table Rows (Table view shows all matching rows)
     let tableMatchCount = 0;
     tableRows.forEach(row => {
       const text = row.textContent.toLowerCase();
@@ -203,11 +288,12 @@ export function bindFacultyDirectoryEvents($, $$) {
     });
 
     const isTableView = tableContainer && tableContainer.style.display !== 'none';
-    const displayCount = isTableView ? tableMatchCount : visibleCardsCount;
-    const totalMatch = matchingCards.length;
+    const displayCount = isTableView 
+      ? tableMatchCount 
+      : (totalMatch === 0 ? '0' : `${startIndex + 1}–${endIndex}`);
 
     if (visibleCountEl) visibleCountEl.textContent = displayCount;
-    if (totalCountEl) totalCountEl.textContent = totalMatch;
+    if (totalCountEl) totalCountEl.textContent = isTableView ? tableMatchCount : totalMatch;
     if (noResultsEl) noResultsEl.style.display = (totalMatch === 0) ? 'block' : 'none';
     if (cardsGrid) cardsGrid.style.display = (totalMatch === 0) ? 'none' : 'grid';
   }
@@ -216,9 +302,9 @@ export function bindFacultyDirectoryEvents($, $$) {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentQuery = e.target.value || '';
-      visibleBatchLimit = PAGE_SIZE;
+      currentPage = 1;
       if (clearBtn) clearBtn.style.display = currentQuery ? 'block' : 'none';
-      applyFilters();
+      applyFilters(false);
     });
   }
 
@@ -228,9 +314,9 @@ export function bindFacultyDirectoryEvents($, $$) {
       if (searchInput) {
         searchInput.value = '';
         currentQuery = '';
-        visibleBatchLimit = PAGE_SIZE;
+        currentPage = 1;
         clearBtn.style.display = 'none';
-        applyFilters();
+        applyFilters(false);
         searchInput.focus();
       }
     });
@@ -241,11 +327,11 @@ export function bindFacultyDirectoryEvents($, $$) {
     resetBtn.addEventListener('click', () => {
       currentFilter = 'all';
       currentQuery = '';
-      visibleBatchLimit = PAGE_SIZE;
+      currentPage = 1;
       if (searchInput) searchInput.value = '';
       if (clearBtn) clearBtn.style.display = 'none';
       filterPills.forEach(p => p.classList.toggle('is-active', p.getAttribute('data-filter') === 'all'));
-      applyFilters();
+      applyFilters(false);
     });
   }
 
@@ -255,16 +341,21 @@ export function bindFacultyDirectoryEvents($, $$) {
       filterPills.forEach(p => p.classList.remove('is-active'));
       pill.classList.add('is-active');
       currentFilter = pill.getAttribute('data-filter') || 'all';
-      visibleBatchLimit = PAGE_SIZE;
-      applyFilters();
+      currentPage = 1;
+      applyFilters(false);
     });
   });
 
-  // 5. Load More Button
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', () => {
-      visibleBatchLimit += PAGE_SIZE;
-      applyFilters();
+  // 5. Pagination Click Delegation
+  if (paginationWrapper) {
+    paginationWrapper.addEventListener('click', (e) => {
+      const pageBtn = e.target.closest('.faculty-page-btn');
+      if (!pageBtn || pageBtn.hasAttribute('disabled') || pageBtn.classList.contains('is-active')) return;
+      const targetPage = parseInt(pageBtn.getAttribute('data-page'), 10);
+      if (targetPage && !isNaN(targetPage) && targetPage !== currentPage) {
+        currentPage = targetPage;
+        applyFilters(true);
+      }
     });
   }
 
@@ -299,8 +390,8 @@ export function bindFacultyDirectoryEvents($, $$) {
     });
   }
 
-  // Initial filter application to enforce 9 cards (3x3 grid) and Load More button
-  applyFilters();
+  // Initial filter application to enforce 9 cards (3x3 grid) and pagination
+  applyFilters(false);
 
   // 6. Modal Profile View
   function openProfile(facultyId) {

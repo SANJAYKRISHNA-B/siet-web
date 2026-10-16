@@ -78,6 +78,14 @@ export function applyPortalPage(activeTab = 'enquiry') {
               </label>
             </div>
 
+            <!-- CONSENT CHECKBOX (Required for Contact Actions) -->
+            <div class="form-step-section form-consent-section">
+              <label class="consent-checkbox-wrap">
+                <input type="checkbox" name="consent" id="apply-consent-checkbox" required checked>
+                <span>I give consent to Sri Shakthi Institute of Engineering and Technology to contact me regarding admissions and academic counseling via automated calls, SMS, and WhatsApp. <b>*</b></span>
+              </label>
+            </div>
+
             <div class="form-submit-footer">
               <div class="confidential-badge">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
@@ -87,6 +95,9 @@ export function applyPortalPage(activeTab = 'enquiry') {
             </div>
             <p class="status" aria-live="polite"></p>
           </form>
+
+          <!-- Call Simulation Tracker Mount Point -->
+          <div id="apply-call-tracker-mount"></div>
         </div>
       </div>
 
@@ -157,6 +168,8 @@ export function applyPortalPage(activeTab = 'enquiry') {
         </div>
       </div>
     </section>
+    <!-- Admin Console Modal Mount Container -->
+    <div id="admin-console-modal-mount"></div>
   </main>`;
 }
 

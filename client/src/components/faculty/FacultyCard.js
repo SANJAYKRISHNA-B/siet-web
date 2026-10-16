@@ -46,19 +46,6 @@ export function renderFacultyCard(faculty) {
           ${faculty.auFin && faculty.auFin !== 'Available on request' ? `<span class="compliance-chip" title="Anna University Faculty ID"><small>AU-FIN:</small> <strong>${faculty.auFin}</strong></span>` : ''}
           ${faculty.aicteId && faculty.aicteId !== 'Available on request' ? `<span class="compliance-chip" title="AICTE Identification"><small>AICTE:</small> <strong>${faculty.aicteId}</strong></span>` : ''}
         </div>
-
-        <button 
-          type="button" 
-          class="faculty-view-profile-btn" 
-          data-action="view-faculty-profile" 
-          data-faculty-id="${faculty.id}"
-          aria-label="View verified profile of ${faculty.name}">
-          <span>View Full Profile</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
       </div>
     </div>
   `;

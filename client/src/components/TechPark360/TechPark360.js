@@ -52,7 +52,7 @@ export function openTechPark360(initialViewpointId = 'hero-skyline') {
   if (activeInstance) {
     activeInstance.close();
   }
-  const headers = document.querySelectorAll('.institution-header-v4, .notice, #site-header');
+  const headers = document.querySelectorAll('.institution-header-v4, .notice, #site-header, .siet-fixed-header-wrapper');
   headers.forEach(el => {
     el.setAttribute('data-tp360-prev-vis', el.style.visibility || '');
     el.style.visibility = 'hidden';
@@ -586,7 +586,7 @@ class TechPark360Viewer {
       cancelAnimationFrame(this.animFrameId);
     }
 
-    const headers = document.querySelectorAll('.institution-header-v4, .notice, #site-header');
+    const headers = document.querySelectorAll('.institution-header-v4, .notice, #site-header, .siet-fixed-header-wrapper');
     headers.forEach(el => {
       const prev = el.getAttribute('data-tp360-prev-vis');
       el.style.visibility = prev !== null ? prev : '';

@@ -6,15 +6,7 @@
 export function renderFacultyFilters() {
   return `
     <div class="faculty-controls-bar">
-      <div class="faculty-filter-pills" role="tablist" aria-label="Filter by designation">
-        <button type="button" class="faculty-filter-pill is-active" data-filter="all">All Faculty</button>
-        <button type="button" class="faculty-filter-pill" data-filter="head">Head of Department</button>
-        <button type="button" class="faculty-filter-pill" data-filter="professor">Professors</button>
-        <button type="button" class="faculty-filter-pill" data-filter="associate">Associate Professors</button>
-        <button type="button" class="faculty-filter-pill" data-filter="assistant">Assistant Professors</button>
-      </div>
-
-      <div class="faculty-view-toggle-wrapper">
+      <div class="faculty-view-toggle-wrapper" style="margin-left: auto;">
         <span class="view-toggle-label">View:</span>
         <div class="faculty-view-toggle">
           <button type="button" id="toggle-cards-view" class="view-toggle-btn is-active" title="Card Grid View" aria-label="Switch to card view">

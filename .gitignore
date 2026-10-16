@@ -9,3 +9,5 @@ dist/
 plans/responsiveness_fix_plan.md
 test-results/
 .playwright/
+server/data/
+*.sqlite*

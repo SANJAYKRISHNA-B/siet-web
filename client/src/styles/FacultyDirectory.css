@@ -539,6 +539,56 @@
 }
 
 /* --- Table View Styling --- */
+.department-faculty-section .dept-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.department-faculty-section .faculty-profile-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  font-size: clamp(9px, .72vw, 13px);
+}
+
+.department-faculty-section .faculty-profile-table th,
+.department-faculty-section .faculty-profile-table td {
+  padding: clamp(4px, .55vw, 9px);
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  vertical-align: middle;
+}
+
+.department-faculty-section .faculty-profile-table th:nth-child(1) { width: 5% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(2) { width: 12% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(3) { width: 14% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(4) { width: 20% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(5) { width: 16% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(6) { width: 23% !important; }
+.department-faculty-section .faculty-profile-table th:nth-child(7) { width: 10% !important; }
+
+.department-faculty-section .faculty-profile-table td:nth-child(2),
+.department-faculty-section .faculty-profile-table td:nth-child(3) {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.02em;
+}
+
+.department-faculty-section .faculty-profile-table .table-desig-tag {
+  max-width: 100%;
+  padding: 3px 5px;
+  font-size: clamp(8px, .65vw, 11px);
+  line-height: 1.25;
+  white-space: normal;
+}
+
+.department-faculty-section .faculty-profile-table .faculty-passport-img {
+  width: clamp(34px, 3.4vw, 52px);
+  height: auto;
+  aspect-ratio: 4 / 5;
+}
+
 .table-legend-banner {
   display: flex;
   align-items: center;
@@ -895,6 +945,38 @@
 }
 
 @media (max-width: 640px) {
+  .department-copy.department-faculty-section {
+    padding-inline: 8px;
+  }
+
+  .department-faculty-section .faculty-profile-table {
+    font-size: clamp(7px, 2vw, 9px);
+  }
+
+  .department-faculty-section .faculty-profile-table th,
+  .department-faculty-section .faculty-profile-table td {
+    padding: 3px 2px;
+    border-width: 1px;
+    line-height: 1.25;
+  }
+
+  .department-faculty-section .faculty-profile-table .faculty-passport-img {
+    width: clamp(24px, 8vw, 34px);
+  }
+
+  .department-faculty-section .faculty-profile-table td > div {
+    font-size: 7px !important;
+  }
+
+  .table-legend-banner {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .table-legend-banner .legend-icon {
+    display: none;
+  }
+
   .faculty-cards-grid {
     grid-template-columns: 1fr;
     gap: 12px;

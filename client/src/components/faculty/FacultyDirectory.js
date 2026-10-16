@@ -91,6 +91,9 @@ export function renderFacultyDirectory(deptTitle, deptKey) {
         </div>
       </div>
 
+      <!-- Shared pagination for both Card and Table views -->
+      <div class="faculty-pagination-wrapper" id="faculty-pagination-wrapper" style="display: none;" role="navigation" aria-label="Faculty directory pagination"></div>
+
       <!-- Modal Container -->
       <div id="faculty-modal-root"></div>
     </div>
@@ -258,10 +261,13 @@ export function bindFacultyDirectoryEvents($, $$) {
     // 3. Update Pagination Component
     updatePaginationControls(totalMatch);
 
-    // 4. Smooth scroll back up to the cards grid on page change
-    if (shouldScroll && cardsGrid) {
+    // 4. Smooth scroll back to the active results view on page change
+    const activeResultsView = tableContainer && tableContainer.style.display !== 'none'
+      ? tableContainer
+      : cardsGrid;
+    if (shouldScroll && activeResultsView) {
       const headerOffset = 130;
-      const elementPosition = cardsGrid.getBoundingClientRect().top;
+      const elementPosition = activeResultsView.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       window.scrollTo({
         top: Math.max(0, offsetPosition),
@@ -269,8 +275,8 @@ export function bindFacultyDirectoryEvents($, $$) {
       });
     }
 
-    // 5. Filter Table Rows (Table view shows all matching rows)
-    let tableMatchCount = 0;
+    // 5. Filter and paginate Table Rows using the same page as Card view
+    const matchingRows = [];
     tableRows.forEach(row => {
       const text = row.textContent.toLowerCase();
       const desig = (row.getAttribute('data-designation') || '').toLowerCase();
@@ -282,18 +288,20 @@ export function bindFacultyDirectoryEvents($, $$) {
       else if (currentFilter === 'assistant') matchesFilter = desig.includes('assistant');
 
       const matchesSearch = !q || text.includes(q);
-      const isVisible = matchesFilter && matchesSearch;
-      row.style.display = isVisible ? '' : 'none';
-      if (isVisible) tableMatchCount++;
+      const isMatch = matchesFilter && matchesSearch;
+      if (isMatch) matchingRows.push(row);
+      row.style.display = 'none';
+    });
+
+    matchingRows.forEach((row, index) => {
+      row.style.display = index >= startIndex && index < endIndex ? '' : 'none';
     });
 
     const isTableView = tableContainer && tableContainer.style.display !== 'none';
-    const displayCount = isTableView 
-      ? tableMatchCount 
-      : (totalMatch === 0 ? '0' : `${startIndex + 1}–${endIndex}`);
+    const displayCount = totalMatch === 0 ? '0' : `${startIndex + 1}–${endIndex}`;
 
     if (visibleCountEl) visibleCountEl.textContent = displayCount;
-    if (totalCountEl) totalCountEl.textContent = isTableView ? tableMatchCount : totalMatch;
+    if (totalCountEl) totalCountEl.textContent = totalMatch;
     if (noResultsEl) noResultsEl.style.display = (totalMatch === 0) ? 'block' : 'none';
     if (cardsGrid) cardsGrid.style.display = (totalMatch === 0) ? 'none' : 'grid';
   }

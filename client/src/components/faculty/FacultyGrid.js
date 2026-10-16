@@ -22,7 +22,6 @@ export function renderFacultyGrid(facultyList) {
     <div class="faculty-cards-grid" id="faculty-cards-grid">
       ${cardsHtml}
     </div>
-    <div class="faculty-pagination-wrapper" id="faculty-pagination-wrapper" style="display: none;" role="navigation" aria-label="Faculty directory pagination"></div>
     <div class="faculty-no-results" id="faculty-no-results" style="display: none;">
       <div class="no-results-icon">🔍</div>
       <h3>No matching faculty found</h3>
